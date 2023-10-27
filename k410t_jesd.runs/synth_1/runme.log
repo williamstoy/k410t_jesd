@@ -1,0 +1,540 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8310-AU25P/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8310-AU25P/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/TI204C-IP-Release-v1.10'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.3'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/cad/xilinx/Vivado/2019.2/data/ip'.
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1748.188 ; gain = 189.809 ; free physical = 255472 ; free virtual = 484210
+Command: synth_design -top design_1_wrapper -part xc7k410tffg676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410t'
+INFO: [Common 17-1540] The version limit for your license is '2020.01' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Device 21-403] Loading part xc7k410tffg676-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 82159 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2147.629 ; gain = 198.652 ; free physical = 254901 ; free virtual = 483636
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_frontpanel_0_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_frontpanel_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_frontpanel_0_0' (1#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_frontpanel_0_0_stub.v:5]
+WARNING: [Synth 8-7023] instance 'frontpanel_0' of module 'design_1_frontpanel_0_0' has 11 connections declared, but only 10 given [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/synth/design_1.v:105]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/synth/design_1.v:116]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (2#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_jesd204_0_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_jesd204_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_jesd204_0_0' (3#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_jesd204_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'jesd204_0' of module 'design_1_jesd204_0_0' has 35 connections declared, but only 30 given [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/synth/design_1.v:121]
+INFO: [Synth 8-6157] synthesizing module 'design_1_okAXI4LiteInterface_0_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_okAXI4LiteInterface_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_okAXI4LiteInterface_0_0' (4#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_okAXI4LiteInterface_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'okAXI4LiteInterface_0' of module 'design_1_okAXI4LiteInterface_0_0' has 25 connections declared, but only 24 given [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/synth/design_1.v:152]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_0' (5#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_0' (6#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_2_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_util_ds_buf_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_2_0' (7#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_util_ds_buf_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wireoutbreakout_0_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_wireoutbreakout_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wireoutbreakout_0_0' (8#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/.Xil/Vivado-81738-bioeebeanie.bioeelocal/realtime/design_1_wireoutbreakout_0_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'jesd204_0'. This will prevent further optimization [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/synth/design_1.v:121]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/synth/design_1.v:116]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (9#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (10#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2213.359 ; gain = 264.383 ; free physical = 254934 ; free virtual = 483671
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2216.320 ; gain = 267.344 ; free physical = 254928 ; free virtual = 483664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2216.320 ; gain = 267.344 ; free physical = 254928 ; free virtual = 483664
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2216.320 ; gain = 0.000 ; free physical = 254922 ; free virtual = 483658
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc] for cell 'design_1_i/frontpanel_0'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc] for cell 'design_1_i/frontpanel_0'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0/design_1_jesd204_0_0_in_context.xdc] for cell 'design_1_i/jesd204_0'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0/design_1_jesd204_0_0_in_context.xdc] for cell 'design_1_i/jesd204_0'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_okAXI4LiteInterface_0_0/design_1_okAXI4LiteInterface_0_0/design_1_okAXI4LiteInterface_0_0_in_context.xdc] for cell 'design_1_i/okAXI4LiteInterface_0'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_okAXI4LiteInterface_0_0/design_1_okAXI4LiteInterface_0_0/design_1_okAXI4LiteInterface_0_0_in_context.xdc] for cell 'design_1_i/okAXI4LiteInterface_0'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_0'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_0'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0_in_context.xdc] for cell 'design_1_i/wireoutbreakout_0'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0_in_context.xdc] for cell 'design_1_i/wireoutbreakout_0'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_1'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_1'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0/design_1_util_ds_buf_1_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_2'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0/design_1_util_ds_buf_1_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_2'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Only unconnected ports may be specified. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:1]
+CRITICAL WARNING: [Common 17-69] Command failed: Only unconnected ports may be specified. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:2]
+CRITICAL WARNING: [Common 17-69] Command failed: Only unconnected ports may be specified. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:3]
+CRITICAL WARNING: [Common 17-69] Command failed: Only unconnected ports may be specified. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:4]
+CRITICAL WARNING: [Common 17-69] Command failed: Only unconnected ports may be specified. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:5]
+CRITICAL WARNING: [Coretcl 2-95] Port 'CLK_LAO_0P' not found. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:6]
+CRITICAL WARNING: [Common 17-69] Command failed: Only unconnected ports may be specified. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:7]
+CRITICAL WARNING: [Coretcl 2-95] Port 'SYNCbABP' not found. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:8]
+CRITICAL WARNING: [Coretcl 2-95] Port 'SYNCbCDP' not found. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:27]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:34]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[1]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:35]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[2]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:36]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[3]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:37]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:38]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[1]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:39]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[2]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:40]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[3]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:41]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'JESD_SYNC' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:42]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_CLKP' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:46]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_CLKM' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:51]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_SYSREFP' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:52]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_SYSREFM' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:54]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbABP[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:56]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbABM[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:58]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbCDP[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:60]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbCDM[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:62]
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2283.027 ; gain = 0.000 ; free physical = 254834 ; free virtual = 483571
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2283.027 ; gain = 0.000 ; free physical = 254834 ; free virtual = 483571
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/ila_0' at clock pin 'clk' is different from the actual clock period '6.400', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/util_ds_buf_1' at clock pin 'OBUF_IN[0]' is different from the actual clock period '9.920', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/util_ds_buf_2' at clock pin 'OBUF_IN[0]' is different from the actual clock period '9.920', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254858 ; free virtual = 483594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k410tffg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254858 ; free virtual = 483594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okaa. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okaa. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okhu[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okhu[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okhu[1]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okhu[1]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okhu[2]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okhu[2]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[10]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[10]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[11]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[11]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[12]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[12]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[13]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[13]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[14]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[14]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[15]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[15]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[16]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[16]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[17]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[17]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[18]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[18]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[19]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[19]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[1]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[1]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[20]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[20]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[21]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[21]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[22]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[22]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[23]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[23]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[24]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[24]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[25]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[25]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[26]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[26]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[27]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[27]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[28]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[28]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[29]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[29]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[2]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 55).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[2]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[30]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 57).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[30]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[31]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 59).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[31]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[3]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 61).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[3]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[4]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 63).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[4]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[5]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 65).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[5]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[6]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 67).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[6]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[7]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 69).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[7]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[8]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 71).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[8]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuhu[9]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 73).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuhu[9]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuh[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 75).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuh[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuh[1]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 77).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuh[1]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuh[2]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 79).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuh[2]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuh[3]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 81).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuh[3]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for host_interface_okuh[4]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 83).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for host_interface_okuh[4]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0/design_1_frontpanel_0_0_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for FPGA_JESD_CLKM. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0/design_1_jesd204_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FPGA_JESD_CLKM. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0/design_1_jesd204_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for FPGA_JESD_CLKP. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0/design_1_jesd204_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FPGA_JESD_CLKP. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0/design_1_jesd204_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for FPGA_JESD_SYSREFM. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FPGA_JESD_SYSREFM. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for FPGA_JESD_SYSREFP. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FPGA_JESD_SYSREFP. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for SYNCbABM[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for SYNCbABM[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for SYNCbABP[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for SYNCbABP[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for SYNCbCDM[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0/design_1_util_ds_buf_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for SYNCbCDM[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0/design_1_util_ds_buf_1_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for SYNCbCDP[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0/design_1_util_ds_buf_1_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for SYNCbCDP[0]. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0/design_1_util_ds_buf_1_0_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/frontpanel_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/jesd204_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/okAXI4LiteInterface_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/util_ds_buf_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/wireoutbreakout_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/util_ds_buf_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/util_ds_buf_2. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254858 ; free virtual = 483594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254852 ; free virtual = 483589
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1540 (col length:140)
+BRAMs: 1590 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254842 ; free virtual = 483582
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:33 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254794 ; free virtual = 483534
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:33 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254793 ; free virtual = 483533
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:33 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254783 ; free virtual = 483523
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254784 ; free virtual = 483524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254784 ; free virtual = 483524
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254784 ; free virtual = 483524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254784 ; free virtual = 483524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254784 ; free virtual = 483524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254784 ; free virtual = 483524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------------+----------+
+|      |BlackBox name                    |Instances |
++------+---------------------------------+----------+
+|1     |design_1_frontpanel_0_0          |         1|
+|2     |design_1_ila_0_0                 |         1|
+|3     |design_1_jesd204_0_0             |         1|
+|4     |design_1_okAXI4LiteInterface_0_0 |         1|
+|5     |design_1_util_ds_buf_0_0         |         1|
+|6     |design_1_util_ds_buf_1_0         |         1|
+|7     |design_1_util_ds_buf_2_0         |         1|
+|8     |design_1_wireoutbreakout_0_0     |         1|
++------+---------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------+------+
+|      |Cell                             |Count |
++------+---------------------------------+------+
+|1     |design_1_frontpanel_0_0          |     1|
+|2     |design_1_ila_0_0                 |     1|
+|3     |design_1_jesd204_0_0             |     1|
+|4     |design_1_okAXI4LiteInterface_0_0 |     1|
+|5     |design_1_util_ds_buf_0_0         |     1|
+|6     |design_1_util_ds_buf_1_0         |     1|
+|7     |design_1_util_ds_buf_2_0         |     1|
+|8     |design_1_wireoutbreakout_0_0     |     1|
+|9     |IBUF                             |     8|
+|10    |OBUF                             |     1|
++------+---------------------------------+------+
+
+Report Instance Areas: 
++------+-------------+---------+------+
+|      |Instance     |Module   |Cells |
++------+-------------+---------+------+
+|1     |top          |         |   391|
+|2     |  design_1_i |design_1 |   382|
++------+-------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254784 ; free virtual = 483524
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 2283.027 ; gain = 267.344 ; free physical = 254838 ; free virtual = 483578
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2283.027 ; gain = 334.051 ; free physical = 254838 ; free virtual = 483578
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2283.027 ; gain = 0.000 ; free physical = 254910 ; free virtual = 483649
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2292.770 ; gain = 0.000 ; free physical = 254845 ; free virtual = 483585
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 32 Warnings, 46 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:51 . Memory (MB): peak = 2292.770 ; gain = 544.582 ; free physical = 254972 ; free virtual = 483712
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2292.770 ; gain = 0.000 ; free physical = 254972 ; free virtual = 483712
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 26 15:36:33 2023...

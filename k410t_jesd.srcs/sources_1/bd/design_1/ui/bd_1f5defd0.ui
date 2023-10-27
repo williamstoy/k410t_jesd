@@ -1,0 +1,104 @@
+{
+   "ActiveEmotionalView":"Reduced Jogs",
+   "Default View_ScaleFactor":"1.03",
+   "Default View_TopLeft":"610,80",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/okAXI4LiteInterface_0_m_axi_aclk:false|/jesd204_0_rx_core_clk_out:false|/wireoutbreakout_0_rx_reset:false|/okAXI4LiteInterface_0_m_axi_aresetn:false|/util_ds_buf_0_IBUF_OUT:false|",
+   "Interfaces View_ScaleFactor":"0.909232",
+   "Interfaces View_TopLeft":"-201,-236",
+   "No Loops_ScaleFactor":"0.71946",
+   "No Loops_TopLeft":"-202,-234",
+   "Reduced Jogs_ExpandedHierarchyInLayout":"",
+   "Reduced Jogs_Layers":"/okAXI4LiteInterface_0_m_axi_aclk:true|/jesd204_0_rx_core_clk_out:true|/wireoutbreakout_0_rx_reset:true|/okAXI4LiteInterface_0_m_axi_aresetn:true|/util_ds_buf_0_IBUF_OUT:true|",
+   "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port host_interface -pg 1 -lvl 0 -x -40 -y 80 -defaultsOSRD
+preplace port FPGA_JESD_CLKP -pg 1 -lvl 0 -x -40 -y 340 -defaultsOSRD
+preplace port FPGA_JESD_CLKM -pg 1 -lvl 0 -x -40 -y 360 -defaultsOSRD
+preplace port FPGA_JESD_SYSREFP -pg 1 -lvl 0 -x -40 -y 480 -defaultsOSRD
+preplace port FPGA_JESD_SYSREFM -pg 1 -lvl 0 -x -40 -y 500 -defaultsOSRD
+preplace port JESD_SYNC -pg 1 -lvl 5 -x 1440 -y 200 -defaultsOSRD
+preplace portBus rxp -pg 1 -lvl 0 -x -40 -y 380 -defaultsOSRD
+preplace portBus rxn -pg 1 -lvl 0 -x -40 -y 400 -defaultsOSRD
+preplace portBus SYNCbABP -pg 1 -lvl 5 -x 1440 -y 340 -defaultsOSRD
+preplace portBus SYNCbABM -pg 1 -lvl 5 -x 1440 -y 360 -defaultsOSRD
+preplace portBus SYNCbCDP -pg 1 -lvl 5 -x 1440 -y 500 -defaultsOSRD
+preplace portBus SYNCbCDM -pg 1 -lvl 5 -x 1440 -y 520 -defaultsOSRD
+preplace inst frontpanel_0 -pg 1 -lvl 1 -x 180 -y 80 -swap {0 1 2 3 4 9 6 7 8 5 10 11 12 13 14} -defaultsOSRD -pinY host_interface 0L -pinY wirein00 180R -pinY wireout20 20R -pinY btpipein80 0R -pinY okClk 200R
+preplace inst jesd204_0 -pg 1 -lvl 3 -x 970 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 24 28 23 21 22 26 25 27 29 30 32 33 34 36 35 31} -defaultsOSRD -pinY s_axi 0L -pinY m_axis_rx 0R -pinY m_axis_rx.rx_tdata 20R -pinY m_axis_rx.rx_tvalid 40R -pinY refclk_p 120L -pinY refclk_n 340L -pinY rx_core_clk_out 60R -pinY s_axi_aclk 20L -pinY s_axi_aresetn 40L -pinY rx_reset 200L -pinBusY rxp 140L -pinBusY rxn 320L -pinY rx_aresetn 80R -pinBusY rx_start_of_frame 100R -pinBusY rx_end_of_frame 160R -pinBusY rx_start_of_multiframe 180R -pinBusY rx_end_of_multiframe 200R -pinBusY rx_frame_error 220R -pinY rx_sysref 400L -pinY rx_sync 140R
+preplace inst okAXI4LiteInterface_0 -pg 1 -lvl 2 -x 560 -y 60 -defaultsOSRD -pinY btpipein_DATA 20L -pinY wireout_READDATA 40L -pinY m_axi 0R -pinY okClkIn 60L -pinY m_axi_aclk 20R -pinY m_axi_aresetn 40R -pinY activity_mon 60R
+preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 560 -y 460 -defaultsOSRD -pinY CLK_IN_D 0L -pinY CLK_IN_D.IBUF_DS_P 20L -pinY CLK_IN_D.IBUF_DS_N 40L -pinBusY IBUF_OUT 0R
+preplace inst ila_0 -pg 1 -lvl 4 -x 1280 -y 80 -swap {2 1 0 3} -defaultsOSRD -pinY clk 40L -pinBusY probe0 20L -pinBusY probe1 0L -pinBusY probe2 60L
+preplace inst wireoutbreakout_0 -pg 1 -lvl 2 -x 560 -y 260 -defaultsOSRD -pinY wirein_READDATA 0L -pinY rx_reset 0R
+preplace inst util_ds_buf_1 -pg 1 -lvl 4 -x 1280 -y 340 -defaultsOSRD -pinBusY OBUF_IN 0L -pinBusY OBUF_DS_P 0R -pinBusY OBUF_DS_N 20R
+preplace inst util_ds_buf_2 -pg 1 -lvl 4 -x 1280 -y 500 -defaultsOSRD -pinBusY OBUF_IN 0L -pinBusY OBUF_DS_P 0R -pinBusY OBUF_DS_N 20R
+preplace netloc frontpanel_0_okClk 1 1 1 340 120n
+preplace netloc okAXI4LiteInterface_0_m_axi_aresetn 1 2 1 N 100
+preplace netloc okAXI4LiteInterface_0_m_axi_aclk 1 2 1 N 80
+preplace netloc rxp_1 1 0 3 NJ 380 360J 180 760J
+preplace netloc rxn_1 1 0 3 0J 340 380J 200 740J
+preplace netloc FPGA_JESD_CLKP_1 1 0 3 -20J 0 NJ 0 780J
+preplace netloc FPGA_JESD_CLKM_1 1 0 3 20J 400 NJ 400 NJ
+preplace netloc util_ds_buf_0_IBUF_OUT 1 2 1 N 460
+preplace netloc FPGA_JESD_SYSREFP_1 1 0 2 NJ 480 NJ
+preplace netloc FPGA_JESD_SYSREFM_1 1 0 2 NJ 500 NJ
+preplace netloc jesd204_0_rx_sync 1 3 2 1140J 200 NJ
+preplace netloc jesd204_0_rx_core_clk_out 1 3 1 N 120
+preplace netloc jesd204_0_rx_tvalid 1 3 1 N 100
+preplace netloc wireoutbreakout_0_rx_reset 1 2 1 NJ 260
+preplace netloc jesd204_0_rx_tdata 1 3 1 N 80
+preplace netloc jesd204_0_rx_aresetn 1 3 1 N 140
+preplace netloc util_ds_buf_1_OBUF_DS_P 1 4 1 N 340
+preplace netloc util_ds_buf_1_OBUF_DS_N 1 4 1 N 360
+preplace netloc util_ds_buf_2_OBUF_DS_P 1 4 1 N 500
+preplace netloc util_ds_buf_2_OBUF_DS_N 1 4 1 N 520
+preplace netloc host_interface_1 1 0 1 NJ 80
+preplace netloc frontpanel_0_wireout20 1 1 1 N 100
+preplace netloc frontpanel_0_btpipein80 1 1 1 N 80
+preplace netloc okAXI4LiteInterface_0_m_axi 1 2 1 N 60
+preplace netloc frontpanel_0_wirein00 1 1 1 N 260
+levelinfo -pg 1 -40 180 560 970 1280 1440
+pagesize -pg 1 -db -bbox -sgen -250 -20 1610 580
+",
+   "Reduced Jogs_ScaleFactor":"0.693902",
+   "Reduced Jogs_TopLeft":"-121,-252",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port host_interface -pg 1 -lvl 0 -x -10 -y 340 -defaultsOSRD
+preplace port FPGA_JESD_CLKP -pg 1 -lvl 0 -x -10 -y 290 -defaultsOSRD
+preplace port FPGA_JESD_CLKM -pg 1 -lvl 0 -x -10 -y 310 -defaultsOSRD
+preplace port FPGA_JESD_SYSREFP -pg 1 -lvl 0 -x -10 -y 620 -defaultsOSRD
+preplace port FPGA_JESD_SYSREFM -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
+preplace port JESD_SYNC -pg 1 -lvl 6 -x 1620 -y 430 -defaultsOSRD
+preplace portBus rxp -pg 1 -lvl 0 -x -10 -y 390 -defaultsOSRD
+preplace portBus rxn -pg 1 -lvl 0 -x -10 -y 410 -defaultsOSRD
+preplace inst frontpanel_0 -pg 1 -lvl 2 -x 480 -y 340 -defaultsOSRD
+preplace inst jesd204_0 -pg 1 -lvl 4 -x 1220 -y 370 -defaultsOSRD
+preplace inst okAXI4LiteInterface_0 -pg 1 -lvl 3 -x 840 -y 340 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x 160 -y 620 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 5 -x 1500 -y 170 -defaultsOSRD
+preplace netloc frontpanel_0_okClk 1 2 1 N 360
+preplace netloc okAXI4LiteInterface_0_m_axi_aresetn 1 3 1 1020 350n
+preplace netloc okAXI4LiteInterface_0_m_axi_aclk 1 3 1 1030 330n
+preplace netloc rxp_1 1 0 4 NJ 390 320 430 NJ 430 1020
+preplace netloc rxn_1 1 0 4 NJ 410 310 440 NJ 440 1040
+preplace netloc FPGA_JESD_CLKP_1 1 0 4 NJ 290 320 250 NJ 250 1030
+preplace netloc FPGA_JESD_CLKM_1 1 0 4 10J 240 N 240 NJ 240 1040
+preplace netloc util_ds_buf_0_IBUF_OUT 1 1 3 NJ 620 NJ 620 1030
+preplace netloc FPGA_JESD_SYSREFP_1 1 0 1 N 620
+preplace netloc FPGA_JESD_SYSREFM_1 1 0 1 N 640
+preplace netloc jesd204_0_rx_sync 1 4 2 1400 430 N
+preplace netloc jesd204_0_rx_core_clk_out 1 4 1 1390 160n
+preplace netloc jesd204_0_rx_tvalid 1 4 1 1400 180n
+preplace netloc host_interface_1 1 0 2 N 340 N
+preplace netloc frontpanel_0_wireout20 1 2 1 640 320n
+preplace netloc frontpanel_0_btpipein80 1 2 1 650 320n
+preplace netloc okAXI4LiteInterface_0_m_axi 1 3 1 1020 290n
+levelinfo -pg 1 -10 160 480 840 1220 1500 1620
+pagesize -pg 1 -db -bbox -sgen -220 -40 1750 700
+"
+}
+
