@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Oct 26 15:29:54 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct 27 17:56:00 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -743,7 +743,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="3"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="4"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -3883,6 +3883,11 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_sync"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4086,6 +4091,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="JESD_SYNC"/>
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_IN"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

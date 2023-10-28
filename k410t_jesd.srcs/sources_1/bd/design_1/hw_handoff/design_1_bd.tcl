@@ -184,6 +184,8 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.BTPI.ADDR_0 {0x80} \
    CONFIG.BTPI.COUNT {1} \
+   CONFIG.TI.ADDR_0 {0xff} \
+   CONFIG.TI.COUNT {0} \
    CONFIG.WI.ADDR_0 {0x00} \
    CONFIG.WI.COUNT {1} \
    CONFIG.WO.ADDR_0 {0x20} \
@@ -197,7 +199,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {3} \
+   CONFIG.C_NUM_OF_PROBES {4} \
    CONFIG.C_PROBE1_WIDTH {128} \
  ] $ila_0
 
@@ -264,7 +266,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins frontpanel_0/okClk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins ila_0/probe2] [get_bd_pins jesd204_0/rx_aresetn]
   connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins ila_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out]
-  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
+  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
   connect_bd_net -net jesd204_0_rx_tdata [get_bd_pins ila_0/probe1] [get_bd_pins jesd204_0/rx_tdata]
   connect_bd_net -net jesd204_0_rx_tvalid [get_bd_pins ila_0/probe0] [get_bd_pins jesd204_0/rx_tvalid]
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aclk [get_bd_pins jesd204_0/s_axi_aclk] [get_bd_pins okAXI4LiteInterface_0/m_axi_aclk]

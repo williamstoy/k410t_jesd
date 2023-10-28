@@ -138,6 +138,12 @@
           "BTPI.COUNT": {
             "value": "1"
           },
+          "TI.ADDR_0": {
+            "value": "0xff"
+          },
+          "TI.COUNT": {
+            "value": "0"
+          },
           "WI.ADDR_0": {
             "value": "0x00"
           },
@@ -468,7 +474,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "3"
+            "value": "4"
           },
           "C_PROBE1_WIDTH": {
             "value": "128"
@@ -524,22 +530,10 @@
       }
     },
     "interface_nets": {
-      "frontpanel_0_wirein00": {
+      "frontpanel_0_wireout20": {
         "interface_ports": [
-          "wireoutbreakout_0/wirein_READDATA",
-          "frontpanel_0/wirein00"
-        ]
-      },
-      "frontpanel_0_btpipein80": {
-        "interface_ports": [
-          "frontpanel_0/btpipein80",
-          "okAXI4LiteInterface_0/btpipein_DATA"
-        ]
-      },
-      "host_interface_1": {
-        "interface_ports": [
-          "host_interface",
-          "frontpanel_0/host_interface"
+          "frontpanel_0/wireout20",
+          "okAXI4LiteInterface_0/wireout_READDATA"
         ]
       },
       "okAXI4LiteInterface_0_m_axi": {
@@ -548,10 +542,22 @@
           "jesd204_0/s_axi"
         ]
       },
-      "frontpanel_0_wireout20": {
+      "host_interface_1": {
         "interface_ports": [
-          "frontpanel_0/wireout20",
-          "okAXI4LiteInterface_0/wireout_READDATA"
+          "host_interface",
+          "frontpanel_0/host_interface"
+        ]
+      },
+      "frontpanel_0_btpipein80": {
+        "interface_ports": [
+          "frontpanel_0/btpipein80",
+          "okAXI4LiteInterface_0/btpipein_DATA"
+        ]
+      },
+      "frontpanel_0_wirein00": {
+        "interface_ports": [
+          "wireoutbreakout_0/wirein_READDATA",
+          "frontpanel_0/wirein00"
         ]
       }
     },
@@ -621,7 +627,8 @@
           "jesd204_0/rx_sync",
           "JESD_SYNC",
           "util_ds_buf_1/OBUF_IN",
-          "util_ds_buf_2/OBUF_IN"
+          "util_ds_buf_2/OBUF_IN",
+          "ila_0/probe3"
         ]
       },
       "jesd204_0_rx_core_clk_out": {

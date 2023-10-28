@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Thu Oct 26 15:29:28 2023
+//Date        : Fri Oct 27 17:55:50 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -117,7 +117,8 @@ module design_1
        (.clk(jesd204_0_rx_core_clk_out),
         .probe0(jesd204_0_rx_tvalid),
         .probe1(jesd204_0_rx_tdata),
-        .probe2(jesd204_0_rx_aresetn));
+        .probe2(jesd204_0_rx_aresetn),
+        .probe3(jesd204_0_rx_sync));
   design_1_jesd204_0_0 jesd204_0
        (.refclk_n(FPGA_JESD_CLKM_1),
         .refclk_p(FPGA_JESD_CLKP_1),
