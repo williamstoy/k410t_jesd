@@ -17,11 +17,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 26 19:29:47 UTC 2023</spirit:value>
+            <spirit:value>Mon Oct 30 18:30:52 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:692f3661</spirit:value>
+            <spirit:value>9:b4e2b7a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -32,7 +32,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:692f3661</spirit:value>
+            <spirit:value>9:b4e2b7a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -48,11 +48,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 26 19:29:47 UTC 2023</spirit:value>
+            <spirit:value>Mon Oct 30 18:30:52 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:692f3661</spirit:value>
+            <spirit:value>9:b4e2b7a7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -67,11 +67,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 26 19:29:47 UTC 2023</spirit:value>
+            <spirit:value>Mon Oct 30 18:30:52 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4dad871e</spirit:value>
+            <spirit:value>9:37d0af2a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -87,11 +87,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Oct 26 19:29:47 UTC 2023</spirit:value>
+            <spirit:value>Mon Oct 30 18:30:52 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4dad871e</spirit:value>
+            <spirit:value>9:37d0af2a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -142,11 +142,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>identical_val_tx_line_rate</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.identical_val_tx_line_rate">6.25</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.identical_val_tx_line_rate">6.00</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>identical_val_tx_reference_clock</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.identical_val_tx_reference_clock">156.250</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.identical_val_tx_reference_clock">150.000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>identical_val_no_tx</spirit:name>
@@ -154,11 +154,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>identical_val_rx_line_rate</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.identical_val_rx_line_rate">6.25</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.identical_val_rx_line_rate">6.00</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>identical_val_rx_reference_clock</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.identical_val_rx_reference_clock">156.250</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.identical_val_rx_reference_clock">150.000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>identical_val_no_rx</spirit:name>
@@ -634,7 +634,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>gt0_val_tx_line_rate</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gt0_val_tx_line_rate">6.25</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gt0_val_tx_line_rate">6.00</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>gt0_val_tx_data_width</spirit:name>
@@ -650,7 +650,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>gt0_val_tx_reference_clock</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gt0_val_tx_reference_clock">156.250</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gt0_val_tx_reference_clock">150.000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>gt0_val_cpll_fbdiv_45</spirit:name>
@@ -678,7 +678,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>gt0_val_rx_line_rate</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gt0_val_rx_line_rate">6.25</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gt0_val_rx_line_rate">6.00</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>gt0_val_rx_data_width</spirit:name>
@@ -694,7 +694,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>gt0_val_rx_reference_clock</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gt0_val_rx_reference_clock">156.250</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.gt0_val_rx_reference_clock">150.000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>gt0_val_cpll_rxout_div</spirit:name>
@@ -2552,6 +2552,20 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
+      <spirit:name>choice_list_05cc48f2</spirit:name>
+      <spirit:enumeration>120.000</spirit:enumeration>
+      <spirit:enumeration>150.000</spirit:enumeration>
+      <spirit:enumeration>187.500</spirit:enumeration>
+      <spirit:enumeration>200.000</spirit:enumeration>
+      <spirit:enumeration>240.000</spirit:enumeration>
+      <spirit:enumeration>250.000</spirit:enumeration>
+      <spirit:enumeration>300.000</spirit:enumeration>
+      <spirit:enumeration>375.000</spirit:enumeration>
+      <spirit:enumeration>400.000</spirit:enumeration>
+      <spirit:enumeration>500.000</spirit:enumeration>
+      <spirit:enumeration>600.000</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_11c8f0f1</spirit:name>
       <spirit:enumeration>TXOUTCLK</spirit:enumeration>
       <spirit:enumeration>RXOUTCLK</spirit:enumeration>
@@ -2608,20 +2622,6 @@
       <spirit:enumeration>12</spirit:enumeration>
       <spirit:enumeration>13</spirit:enumeration>
       <spirit:enumeration>14</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_77c72842</spirit:name>
-      <spirit:enumeration>125.000</spirit:enumeration>
-      <spirit:enumeration>156.250</spirit:enumeration>
-      <spirit:enumeration>195.313</spirit:enumeration>
-      <spirit:enumeration>208.333</spirit:enumeration>
-      <spirit:enumeration>250.000</spirit:enumeration>
-      <spirit:enumeration>260.417</spirit:enumeration>
-      <spirit:enumeration>312.500</spirit:enumeration>
-      <spirit:enumeration>390.625</spirit:enumeration>
-      <spirit:enumeration>416.667</spirit:enumeration>
-      <spirit:enumeration>520.833</spirit:enumeration>
-      <spirit:enumeration>625.000</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_97e83fc8</spirit:name>
@@ -3068,7 +3068,7 @@
     <spirit:parameter>
       <spirit:name>identical_val_tx_line_rate</spirit:name>
       <spirit:displayName>Identical Val Tx Line Rate</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.identical_val_tx_line_rate" spirit:order="8" spirit:minimum="0.5" spirit:maximum="8">6.25</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.identical_val_tx_line_rate" spirit:order="8" spirit:minimum="0.5" spirit:maximum="8">6.00</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>identical_val_no_tx</spirit:name>
@@ -3076,7 +3076,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>identical_val_rx_line_rate</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.identical_val_rx_line_rate" spirit:order="10" spirit:minimum="0.5" spirit:maximum="8">6.25</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.identical_val_rx_line_rate" spirit:order="10" spirit:minimum="0.5" spirit:maximum="8">6.00</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>identical_val_no_rx</spirit:name>
@@ -3825,12 +3825,12 @@
     <spirit:parameter>
       <spirit:name>identical_val_tx_reference_clock</spirit:name>
       <spirit:displayName>Identical Val Tx Reference Clock</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.identical_val_tx_reference_clock" spirit:choiceRef="choice_list_77c72842" spirit:order="239">156.250</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.identical_val_tx_reference_clock" spirit:choiceRef="choice_list_05cc48f2" spirit:order="239">150.000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>identical_val_rx_reference_clock</spirit:name>
       <spirit:displayName>Identical Val Rx Reference Clock</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.identical_val_rx_reference_clock" spirit:choiceRef="choice_list_77c72842" spirit:order="240">156.250</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.identical_val_rx_reference_clock" spirit:choiceRef="choice_list_05cc48f2" spirit:order="240">150.000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>gt0_val_protocol_file</spirit:name>
@@ -3847,7 +3847,7 @@
     <spirit:parameter>
       <spirit:name>gt0_val_tx_line_rate</spirit:name>
       <spirit:displayName>Gt0 Val Tx Line Rate</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.gt0_val_tx_line_rate" spirit:order="244" spirit:minimum="0.5" spirit:maximum="6.6">6.25</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.gt0_val_tx_line_rate" spirit:order="244" spirit:minimum="0.5" spirit:maximum="6.6">6.00</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>gt0_val_tx_data_width</spirit:name>
@@ -3867,12 +3867,12 @@
     <spirit:parameter>
       <spirit:name>gt0_val_tx_reference_clock</spirit:name>
       <spirit:displayName>Gt0 Val Tx Reference Clock</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gt0_val_tx_reference_clock" spirit:choiceRef="choice_list_77c72842" spirit:order="248">156.250</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gt0_val_tx_reference_clock" spirit:choiceRef="choice_list_05cc48f2" spirit:order="248">150.000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>gt0_val_rx_line_rate</spirit:name>
       <spirit:displayName>Gt0 Val Rx Line Rate</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.gt0_val_rx_line_rate" spirit:order="249" spirit:minimum="0.5" spirit:maximum="6.6">6.25</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.gt0_val_rx_line_rate" spirit:order="249" spirit:minimum="0.5" spirit:maximum="6.6">6.00</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>gt0_val_rx_data_width</spirit:name>
@@ -3892,7 +3892,7 @@
     <spirit:parameter>
       <spirit:name>gt0_val_rx_reference_clock</spirit:name>
       <spirit:displayName>Gt0 Val Rx Reference Clock</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gt0_val_rx_reference_clock" spirit:choiceRef="choice_list_77c72842" spirit:order="253">156.250</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gt0_val_rx_reference_clock" spirit:choiceRef="choice_list_05cc48f2" spirit:order="253">150.000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>gt0_val_cpll_fbdiv_45</spirit:name>

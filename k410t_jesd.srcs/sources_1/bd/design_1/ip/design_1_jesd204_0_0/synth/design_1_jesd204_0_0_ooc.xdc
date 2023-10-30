@@ -6,7 +6,7 @@
 #######################################################################
 # Clock frequencies for OOC flow - maximum supported                  #
 #######################################################################
-# Set Reference to 156.250MHz
-create_clock -period 6.40  [get_ports refclk_p]
+# Set Reference to 150.000MHz
+create_clock -period 6.67  [get_ports refclk_p]
 # Set AXI-Lite Clock to 100.8MHz by default
 create_clock -period 9.921 -name design_1_jesd204_0_0_axi_aclk [get_ports s_axi_aclk]

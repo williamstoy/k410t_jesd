@@ -211,6 +211,9 @@ proc create_root_design { parentCell } {
    CONFIG.C_LANES {4} \
    CONFIG.C_NODE_IS_TRANSMIT {0} \
    CONFIG.DRPCLK_FREQ {100.8} \
+   CONFIG.GT_Line_Rate {6.00} \
+   CONFIG.GT_REFCLK_FREQ {150.000} \
+   CONFIG.Global_clk_sel {false} \
    CONFIG.SupportLevel {1} \
  ] $jesd204_0
 

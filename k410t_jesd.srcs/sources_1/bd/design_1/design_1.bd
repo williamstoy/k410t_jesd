@@ -180,6 +180,15 @@
           "C_NODE_IS_TRANSMIT": {
             "value": "0"
           },
+          "GT_Line_Rate": {
+            "value": "6.00"
+          },
+          "GT_REFCLK_FREQ": {
+            "value": "150.000"
+          },
+          "Global_clk_sel": {
+            "value": "false"
+          },
           "SupportLevel": {
             "value": "1"
           }

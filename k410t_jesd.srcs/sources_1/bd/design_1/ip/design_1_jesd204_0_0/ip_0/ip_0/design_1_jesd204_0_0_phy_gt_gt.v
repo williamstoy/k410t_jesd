@@ -356,8 +356,8 @@ wire            rxstartofseq_float_i;
             .TERM_RCAL_CFG                          (5'b10000),
             .TERM_RCAL_OVRD                         (1'b0),
             .TST_RSV                                (32'h00000000),
-            .RX_CLK25_DIV                           (7),
-            .TX_CLK25_DIV                           (7),
+            .RX_CLK25_DIV                           (6),
+            .TX_CLK25_DIV                           (6),
             .UCODEER_CLR                            (1'b0),
 
            //-------------------------PCI Express Attributes----------------------------
