@@ -599,7 +599,7 @@ input           gt3_data_valid_in,
 
 
     //Typical CDRLOCK Time is 50,000UI, as per DS183
-    localparam RX_CDRLOCK_TIME      = (EXAMPLE_SIMULATION == 1) ? 1000 : 100000/6.00;
+    localparam RX_CDRLOCK_TIME      = (EXAMPLE_SIMULATION == 1) ? 1000 : 100000/4.9152;
        
     localparam integer   WAIT_TIME_CDRLOCK    = RX_CDRLOCK_TIME / STABLE_CLOCK_PERIOD;      
 

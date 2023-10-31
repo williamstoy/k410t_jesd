@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 31 15:45:58 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 31 18:50:43 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -4156,8 +4156,8 @@
         <PARAMETER NAME="C_USE_JSPAT" VALUE="false"/>
         <PARAMETER NAME="C_TransceiverControl" VALUE="true"/>
         <PARAMETER NAME="c_sub_core_name" VALUE="design_1_jesd204_0_0_phy"/>
-        <PARAMETER NAME="C_GT_Line_Rate" VALUE="6.00"/>
-        <PARAMETER NAME="C_GT_REFCLK_FREQ" VALUE="150.000"/>
+        <PARAMETER NAME="C_GT_Line_Rate" VALUE="4.9152"/>
+        <PARAMETER NAME="C_GT_REFCLK_FREQ" VALUE="122.880"/>
         <PARAMETER NAME="C_DRPCLK_FREQ" VALUE="100.8"/>
         <PARAMETER NAME="C_SYSREF_SAMPLING_EDGE" VALUE="0"/>
         <PARAMETER NAME="C_PLL_SELECTION" VALUE="0"/>
@@ -4175,8 +4175,8 @@
         <PARAMETER NAME="USE_RPAT" VALUE="false"/>
         <PARAMETER NAME="USE_JSPAT" VALUE="false"/>
         <PARAMETER NAME="TransceiverControl" VALUE="true"/>
-        <PARAMETER NAME="GT_Line_Rate" VALUE="6.00"/>
-        <PARAMETER NAME="GT_REFCLK_FREQ" VALUE="150.000"/>
+        <PARAMETER NAME="GT_Line_Rate" VALUE="4.9152"/>
+        <PARAMETER NAME="GT_REFCLK_FREQ" VALUE="122.880"/>
         <PARAMETER NAME="DRPCLK_FREQ" VALUE="100.8"/>
         <PARAMETER NAME="Global_clk_sel" VALUE="false"/>
         <PARAMETER NAME="AXICLK_FREQ" VALUE="100.8"/>

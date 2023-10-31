@@ -10668,11 +10668,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 30 18:30:55 UTC 2023</spirit:value>
+            <spirit:value>Mon Oct 30 22:11:33 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:dd633ad2</spirit:value>
+            <spirit:value>9:3dfa85cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -10687,11 +10687,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 30 22:11:24 UTC 2023</spirit:value>
+            <spirit:value>Tue Oct 31 22:50:33 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3a436c35</spirit:value>
+            <spirit:value>9:cd2edf71</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -10702,7 +10702,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3a436c35</spirit:value>
+            <spirit:value>9:cd2edf71</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -10718,11 +10718,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 30 22:11:25 UTC 2023</spirit:value>
+            <spirit:value>Tue Oct 31 22:50:33 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3a436c35</spirit:value>
+            <spirit:value>9:cd2edf71</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -10737,11 +10737,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 30 22:11:24 UTC 2023</spirit:value>
+            <spirit:value>Tue Oct 31 22:50:33 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3602b3fc</spirit:value>
+            <spirit:value>9:231e1ee4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -10757,11 +10757,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Oct 30 22:11:25 UTC 2023</spirit:value>
+            <spirit:value>Tue Oct 31 22:50:33 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3602b3fc</spirit:value>
+            <spirit:value>9:231e1ee4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31096,11 +31096,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_GT_Line_Rate</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GT_Line_Rate">6.00</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GT_Line_Rate">4.9152</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_GT_REFCLK_FREQ</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GT_REFCLK_FREQ">150.000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_GT_REFCLK_FREQ">122.880</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_DRPCLK_FREQ</spirit:name>
@@ -31112,11 +31112,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_RX_GT_Line_Rate</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_GT_Line_Rate">6.00</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_GT_Line_Rate">4.9152</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_RX_GT_REFCLK_FREQ</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_GT_REFCLK_FREQ">150.000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_GT_REFCLK_FREQ">122.880</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_RX_PLL_SELECTION</spirit:name>
@@ -31220,11 +31220,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_Min_Line_Rate</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_Min_Line_Rate">6.0</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_Min_Line_Rate">4.9152</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_Max_Line_Rate</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_Max_Line_Rate">6.0</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_Max_Line_Rate">4.9152</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_GT_ENUM</spirit:name>
@@ -31234,18 +31234,19 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_list_05cc48f2</spirit:name>
-      <spirit:enumeration>120.000</spirit:enumeration>
-      <spirit:enumeration>150.000</spirit:enumeration>
-      <spirit:enumeration>187.500</spirit:enumeration>
-      <spirit:enumeration>200.000</spirit:enumeration>
-      <spirit:enumeration>240.000</spirit:enumeration>
-      <spirit:enumeration>250.000</spirit:enumeration>
-      <spirit:enumeration>300.000</spirit:enumeration>
-      <spirit:enumeration>375.000</spirit:enumeration>
-      <spirit:enumeration>400.000</spirit:enumeration>
-      <spirit:enumeration>500.000</spirit:enumeration>
-      <spirit:enumeration>600.000</spirit:enumeration>
+      <spirit:name>choice_list_01f302eb</spirit:name>
+      <spirit:enumeration>98.304</spirit:enumeration>
+      <spirit:enumeration>122.880</spirit:enumeration>
+      <spirit:enumeration>153.600</spirit:enumeration>
+      <spirit:enumeration>163.840</spirit:enumeration>
+      <spirit:enumeration>196.608</spirit:enumeration>
+      <spirit:enumeration>204.800</spirit:enumeration>
+      <spirit:enumeration>245.760</spirit:enumeration>
+      <spirit:enumeration>307.200</spirit:enumeration>
+      <spirit:enumeration>327.680</spirit:enumeration>
+      <spirit:enumeration>409.600</spirit:enumeration>
+      <spirit:enumeration>491.520</spirit:enumeration>
+      <spirit:enumeration>614.400</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_070fff2f</spirit:name>
@@ -31289,9 +31290,8 @@
       <spirit:enumeration spirit:text="Dynamic Line Rate">1</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_pairs_90a9ffe3</spirit:name>
+      <spirit:name>choice_pairs_ab2f6b5e</spirit:name>
       <spirit:enumeration spirit:text="CPLL">0</spirit:enumeration>
-      <spirit:enumeration spirit:text="QPLL">3</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
   <spirit:fileSets>
@@ -31639,7 +31639,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GT_Line_Rate</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.GT_Line_Rate" spirit:order="7">6.00</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.GT_Line_Rate" spirit:order="7">4.9152</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -31650,7 +31650,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GT_REFCLK_FREQ</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.GT_REFCLK_FREQ" spirit:choiceRef="choice_list_05cc48f2" spirit:order="8">150.000</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.GT_REFCLK_FREQ" spirit:choiceRef="choice_list_01f302eb" spirit:order="8">122.880</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -31673,7 +31673,7 @@
     <spirit:parameter>
       <spirit:name>C_PLL_SELECTION</spirit:name>
       <spirit:displayName>PLL Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_PLL_SELECTION" spirit:choiceRef="choice_pairs_90a9ffe3" spirit:order="10">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_PLL_SELECTION" spirit:choiceRef="choice_pairs_ab2f6b5e" spirit:order="10">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -31684,7 +31684,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_GT_Line_Rate</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_GT_Line_Rate" spirit:order="11">6.00</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_GT_Line_Rate" spirit:order="11">4.9152</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -31695,7 +31695,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RX_GT_REFCLK_FREQ</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_GT_REFCLK_FREQ" spirit:choiceRef="choice_list_05cc48f2" spirit:order="12">150.000</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.RX_GT_REFCLK_FREQ" spirit:choiceRef="choice_list_01f302eb" spirit:order="12">122.880</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -31707,7 +31707,7 @@
     <spirit:parameter>
       <spirit:name>RX_PLL_SELECTION</spirit:name>
       <spirit:displayName>PLL Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_PLL_SELECTION" spirit:choiceRef="choice_pairs_90a9ffe3" spirit:order="13">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.RX_PLL_SELECTION" spirit:choiceRef="choice_pairs_ab2f6b5e" spirit:order="13">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -31861,7 +31861,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Min_Line_Rate</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.Min_Line_Rate" spirit:order="27">6.0</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.Min_Line_Rate" spirit:order="27">4.9152</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -31872,7 +31872,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Max_Line_Rate</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.Max_Line_Rate" spirit:order="28">6.0</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.Max_Line_Rate" spirit:order="28">4.9152</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

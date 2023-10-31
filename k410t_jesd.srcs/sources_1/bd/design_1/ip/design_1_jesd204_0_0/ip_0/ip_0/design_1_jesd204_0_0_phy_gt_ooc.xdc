@@ -76,10 +76,10 @@
 create_clock -period 9.921 [get_ports sysclk_in]
 
 ####################### GT reference clock constraints #########################
-create_clock -period 6.667 [get_ports gt0_gtrefclk0_in]
-create_clock -period 6.667 [get_ports gt1_gtrefclk0_in]
-create_clock -period 6.667 [get_ports gt2_gtrefclk0_in]
-create_clock -period 6.667 [get_ports gt3_gtrefclk0_in]
+create_clock -period 8.138 [get_ports gt0_gtrefclk0_in]
+create_clock -period 8.138 [get_ports gt1_gtrefclk0_in]
+create_clock -period 8.138 [get_ports gt2_gtrefclk0_in]
+create_clock -period 8.138 [get_ports gt3_gtrefclk0_in]
 
 
 ################################################################################

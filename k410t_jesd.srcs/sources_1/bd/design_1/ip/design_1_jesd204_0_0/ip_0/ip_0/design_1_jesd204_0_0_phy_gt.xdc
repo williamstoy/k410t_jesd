@@ -69,10 +69,10 @@
 
 
 # User Clock Constraints
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]] -to [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*TXOUTCLK}]]
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*TXOUTCLK}]] -to [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]]
 
@@ -80,10 +80,10 @@ create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objec
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*RXOUTCLK}]] -to [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]]
 
 
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]] -to [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*TXOUTCLK}]]
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*TXOUTCLK}]] -to [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]]
 
@@ -91,10 +91,10 @@ create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objec
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*RXOUTCLK}]] -to [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]]
 
 
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]] -to [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*TXOUTCLK}]]
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*TXOUTCLK}]] -to [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]]
 
@@ -102,10 +102,10 @@ create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objec
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*RXOUTCLK}]] -to [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]]
 
 
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
-create_clock -period 6.667 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLKFABRIC} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
+create_clock -period 8.138 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*}]]
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]] -to [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*TXOUTCLK}]]
 #set_false_path -from [get_clocks -include_generated_clocks -of_objects [get_pins -hier -filter {name=~*gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*TXOUTCLK}]] -to [get_clocks -include_generated_clocks -of_objects [get_ports sysclk_in]]
 
@@ -121,10 +121,10 @@ set_false_path -to [get_cells -hierarchical -filter {NAME =~ *data_sync_reg1}]
 ####################### GT reference clock constraints #########################
 
 
-#create_clock -name GT0_GTREFCLK0_IN -period 6.667 [get_pins -hier -filter {name=~*gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*GTREFCLK0}]
-#create_clock -name GT1_GTREFCLK0_IN -period 6.667 [get_pins -hier -filter {name=~*gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*GTREFCLK0}]
-#create_clock -name GT2_GTREFCLK0_IN -period 6.667 [get_pins -hier -filter {name=~*gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*GTREFCLK0}]
-#create_clock -name GT3_GTREFCLK0_IN -period 6.667 [get_pins -hier -filter {name=~*gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*GTREFCLK0}]
+#create_clock -name GT0_GTREFCLK0_IN -period 8.138 [get_pins -hier -filter {name=~*gt0_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*GTREFCLK0}]
+#create_clock -name GT1_GTREFCLK0_IN -period 8.138 [get_pins -hier -filter {name=~*gt1_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*GTREFCLK0}]
+#create_clock -name GT2_GTREFCLK0_IN -period 8.138 [get_pins -hier -filter {name=~*gt2_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*GTREFCLK0}]
+#create_clock -name GT3_GTREFCLK0_IN -period 8.138 [get_pins -hier -filter {name=~*gt3_design_1_jesd204_0_0_phy_gt_i*gtxe2_i*GTREFCLK0}]
 
 ################################# RefClk Location constraints (Can be uncommented) ##################### 
 ## set_property LOC H5 [get_ports  Q0_CLK0_GTREFCLK_PAD_N_IN ] 

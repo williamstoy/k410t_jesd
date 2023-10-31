@@ -194,10 +194,10 @@
             "value": "0"
           },
           "GT_Line_Rate": {
-            "value": "6.00"
+            "value": "4.9152"
           },
           "GT_REFCLK_FREQ": {
-            "value": "150.000"
+            "value": "122.880"
           },
           "Global_clk_sel": {
             "value": "false"
