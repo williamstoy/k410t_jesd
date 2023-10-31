@@ -199,8 +199,10 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {4} \
+   CONFIG.C_NUM_OF_PROBES {6} \
    CONFIG.C_PROBE1_WIDTH {128} \
+   CONFIG.C_PROBE4_WIDTH {16} \
+   CONFIG.C_PROBE5_WIDTH {128} \
  ] $ila_0
 
   # Create instance: jesd204_0, and set properties
@@ -215,6 +217,7 @@ proc create_root_design { parentCell } {
    CONFIG.GT_REFCLK_FREQ {150.000} \
    CONFIG.Global_clk_sel {false} \
    CONFIG.SupportLevel {1} \
+   CONFIG.TransceiverControl {true} \
  ] $jesd204_0
 
   # Create instance: okAXI4LiteInterface_0, and set properties
@@ -267,6 +270,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net FPGA_JESD_SYSREFM_1 [get_bd_ports FPGA_JESD_SYSREFM] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
   connect_bd_net -net FPGA_JESD_SYSREFP_1 [get_bd_ports FPGA_JESD_SYSREFP] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins frontpanel_0/okClk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
+  connect_bd_net -net jesd204_0_gt_rxcharisk [get_bd_pins ila_0/probe4] [get_bd_pins jesd204_0/gt_rxcharisk]
+  connect_bd_net -net jesd204_0_gt_rxdata [get_bd_pins ila_0/probe5] [get_bd_pins jesd204_0/gt_rxdata]
   connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins ila_0/probe2] [get_bd_pins jesd204_0/rx_aresetn]
   connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins ila_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out]
   connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]

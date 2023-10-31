@@ -191,6 +191,9 @@
           },
           "SupportLevel": {
             "value": "1"
+          },
+          "TransceiverControl": {
+            "value": "true"
           }
         }
       },
@@ -483,9 +486,15 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "4"
+            "value": "6"
           },
           "C_PROBE1_WIDTH": {
+            "value": "128"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE5_WIDTH": {
             "value": "128"
           }
         }
@@ -692,6 +701,18 @@
         "ports": [
           "util_ds_buf_2/OBUF_DS_N",
           "SYNCbCDM"
+        ]
+      },
+      "jesd204_0_gt_rxdata": {
+        "ports": [
+          "jesd204_0/gt_rxdata",
+          "ila_0/probe5"
+        ]
+      },
+      "jesd204_0_gt_rxcharisk": {
+        "ports": [
+          "jesd204_0/gt_rxcharisk",
+          "ila_0/probe4"
         ]
       }
     },

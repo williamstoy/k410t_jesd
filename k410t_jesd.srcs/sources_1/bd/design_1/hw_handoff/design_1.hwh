@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 30 14:30:56 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 30 18:11:35 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -743,7 +743,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="4"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="6"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -758,7 +758,7 @@
         <PARAMETER NAME="C_RAM_STYLE" VALUE="SUBCORE"/>
         <PARAMETER NAME="C_TRIGOUT_EN" VALUE="0"/>
         <PARAMETER NAME="C_TRIGIN_EN" VALUE="0"/>
-        <PARAMETER NAME="C_SLOT_0_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_SLOT_0_AXIS_TUSER_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_SLOT_0_AXIS_TDEST_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXIS_TID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ID_WIDTH" VALUE="1"/>
@@ -771,8 +771,8 @@
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="1"/>
@@ -3888,6 +3888,16 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_sync"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="15" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxcharisk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="gt_rxcharisk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="gt_rxdata"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -3905,7 +3915,7 @@
         <PARAMETER NAME="C_SupportLevel" VALUE="1"/>
         <PARAMETER NAME="C_USE_RPAT" VALUE="false"/>
         <PARAMETER NAME="C_USE_JSPAT" VALUE="false"/>
-        <PARAMETER NAME="C_TransceiverControl" VALUE="false"/>
+        <PARAMETER NAME="C_TransceiverControl" VALUE="true"/>
         <PARAMETER NAME="c_sub_core_name" VALUE="design_1_jesd204_0_0_phy"/>
         <PARAMETER NAME="C_GT_Line_Rate" VALUE="6.00"/>
         <PARAMETER NAME="C_GT_REFCLK_FREQ" VALUE="150.000"/>
@@ -3925,7 +3935,7 @@
         <PARAMETER NAME="SupportLevel" VALUE="1"/>
         <PARAMETER NAME="USE_RPAT" VALUE="false"/>
         <PARAMETER NAME="USE_JSPAT" VALUE="false"/>
-        <PARAMETER NAME="TransceiverControl" VALUE="false"/>
+        <PARAMETER NAME="TransceiverControl" VALUE="true"/>
         <PARAMETER NAME="GT_Line_Rate" VALUE="6.00"/>
         <PARAMETER NAME="GT_REFCLK_FREQ" VALUE="150.000"/>
         <PARAMETER NAME="DRPCLK_FREQ" VALUE="100.8"/>
@@ -3936,6 +3946,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x00000FFF"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" LEFT="2" NAME="loopback" RIGHT="0" SIGIS="undef"/>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="refclk_p" SIGIS="clk" SIGNAME="External_Ports_FPGA_JESD_CLKP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="FPGA_JESD_CLKP"/>
@@ -4094,6 +4105,182 @@
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="gt0_txresetdone_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt0_rxresetdone_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_txresetdone_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_rxresetdone_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_txresetdone_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_rxresetdone_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_txresetdone_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_rxresetdone_out" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="8" NAME="gt0_drpaddr_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_drpen_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="gt0_drpdi_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="gt0_drpdo_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_drpwe_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt0_drprdy_out" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="8" NAME="gt1_drpaddr_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_drpen_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="gt1_drpdi_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="gt1_drpdo_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_drpwe_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_drprdy_out" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="8" NAME="gt2_drpaddr_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_drpen_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="gt2_drpdi_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="gt2_drpdo_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_drpwe_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_drprdy_out" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="8" NAME="gt3_drpaddr_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_drpen_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="gt3_drpdi_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="gt3_drpdo_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_drpwe_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_drprdy_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="127" NAME="gt_rxdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="gt_rxcharisk" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxcharisk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="gt_rxdisperr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="gt_rxnotintable" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt0_rxpd_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt0_txpd_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt1_rxpd_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt1_txpd_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt2_rxpd_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt2_txpd_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt3_rxpd_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt3_txpd_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt0_eyescandataerror_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_eyescantrigger_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_eyescanreset_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_eyescandataerror_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_eyescantrigger_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_eyescanreset_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_eyescandataerror_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_eyescantrigger_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_eyescanreset_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_eyescandataerror_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_eyescantrigger_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_eyescanreset_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt0_rxprbserr_out" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="gt0_rxprbssel_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_rxprbscntreset_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_rxprbserr_out" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="gt1_rxprbssel_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_rxprbscntreset_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_rxprbserr_out" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="gt2_rxprbssel_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_rxprbscntreset_in" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_rxprbserr_out" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="gt3_rxprbssel_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_rxprbscntreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_txprbsforceerr_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_txprbsforceerr_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_txprbsforceerr_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_txprbsforceerr_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_rxbufreset_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="gt0_rxbufstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="gt0_rxstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt0_rxbyteisaligned_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt0_rxbyterealign_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt0_rxcommadet_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="6" NAME="gt0_rxmonitorout_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt0_rxmonitorsel_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_txpmareset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_txpcsreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_rxpmareset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_rxpcsreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_rxlpmen_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_rxdfelpmreset_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="gt0_txbufstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt0_cplllock_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_rxcdrhold_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="gt0_dmonitorout_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_rxbufreset_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="gt1_rxbufstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="gt1_rxstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_rxbyteisaligned_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_rxbyterealign_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_rxcommadet_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="6" NAME="gt1_rxmonitorout_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt1_rxmonitorsel_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_txpmareset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_txpcsreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_rxpmareset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_rxpcsreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_rxlpmen_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_rxdfelpmreset_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="gt1_txbufstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt1_cplllock_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_rxcdrhold_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="gt1_dmonitorout_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_rxbufreset_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="gt2_rxbufstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="gt2_rxstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_rxbyteisaligned_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_rxbyterealign_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_rxcommadet_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="6" NAME="gt2_rxmonitorout_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt2_rxmonitorsel_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_txpmareset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_txpcsreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_rxpmareset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_rxpcsreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_rxlpmen_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_rxdfelpmreset_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="gt2_txbufstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt2_cplllock_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_rxcdrhold_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="gt2_dmonitorout_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_rxbufreset_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="gt3_rxbufstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="gt3_rxstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_rxbyteisaligned_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_rxbyterealign_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_rxcommadet_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="6" NAME="gt3_rxmonitorout_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gt3_rxmonitorsel_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_txpmareset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_txpcsreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_rxpmareset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_rxpcsreset_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_rxlpmen_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_rxdfelpmreset_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="gt3_txbufstatus_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="gt3_cplllock_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_rxcdrhold_in" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="gt3_dmonitorout_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_rxpolarity_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_txpolarity_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt0_txinhibit_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="gt0_txpostcursor_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="gt0_txprecursor_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="gt0_txdiffctrl_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_rxpolarity_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_txpolarity_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt1_txinhibit_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="gt1_txpostcursor_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="gt1_txprecursor_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="gt1_txdiffctrl_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_rxpolarity_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_txpolarity_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt2_txinhibit_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="gt2_txpostcursor_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="gt2_txprecursor_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="gt2_txdiffctrl_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_rxpolarity_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_txpolarity_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="gt3_txinhibit_in" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="gt3_txpostcursor_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="gt3_txprecursor_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="gt3_txdiffctrl_in" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="okAXI4LiteInterface_0_m_axi" DATAWIDTH="32" NAME="s_axi" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -4165,6 +4352,202 @@
           <PORTMAPS>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="rx_tdata"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="rx_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="gt_drp0" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DADDR" PHYSICAL="gt0_drpaddr_in"/>
+            <PORTMAP LOGICAL="DEN" PHYSICAL="gt0_drpen_in"/>
+            <PORTMAP LOGICAL="DI" PHYSICAL="gt0_drpdi_in"/>
+            <PORTMAP LOGICAL="DO" PHYSICAL="gt0_drpdo_out"/>
+            <PORTMAP LOGICAL="DRDY" PHYSICAL="gt0_drprdy_out"/>
+            <PORTMAP LOGICAL="DWE" PHYSICAL="gt0_drpwe_in"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="gt_drp1" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DADDR" PHYSICAL="gt1_drpaddr_in"/>
+            <PORTMAP LOGICAL="DEN" PHYSICAL="gt1_drpen_in"/>
+            <PORTMAP LOGICAL="DI" PHYSICAL="gt1_drpdi_in"/>
+            <PORTMAP LOGICAL="DO" PHYSICAL="gt1_drpdo_out"/>
+            <PORTMAP LOGICAL="DRDY" PHYSICAL="gt1_drprdy_out"/>
+            <PORTMAP LOGICAL="DWE" PHYSICAL="gt1_drpwe_in"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="gt_drp2" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DADDR" PHYSICAL="gt2_drpaddr_in"/>
+            <PORTMAP LOGICAL="DEN" PHYSICAL="gt2_drpen_in"/>
+            <PORTMAP LOGICAL="DI" PHYSICAL="gt2_drpdi_in"/>
+            <PORTMAP LOGICAL="DO" PHYSICAL="gt2_drpdo_out"/>
+            <PORTMAP LOGICAL="DRDY" PHYSICAL="gt2_drprdy_out"/>
+            <PORTMAP LOGICAL="DWE" PHYSICAL="gt2_drpwe_in"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="gt_drp3" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DADDR" PHYSICAL="gt3_drpaddr_in"/>
+            <PORTMAP LOGICAL="DEN" PHYSICAL="gt3_drpen_in"/>
+            <PORTMAP LOGICAL="DI" PHYSICAL="gt3_drpdi_in"/>
+            <PORTMAP LOGICAL="DO" PHYSICAL="gt3_drpdo_out"/>
+            <PORTMAP LOGICAL="DRDY" PHYSICAL="gt3_drprdy_out"/>
+            <PORTMAP LOGICAL="DWE" PHYSICAL="gt3_drpwe_in"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="transceiver_debug0" TYPE="INITIATOR" VLNV="xilinx.com:display_jesd204:transceiver_debug:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="cplllock_out" PHYSICAL="gt0_cplllock_out"/>
+            <PORTMAP LOGICAL="dmonitorout_out" PHYSICAL="gt0_dmonitorout_out"/>
+            <PORTMAP LOGICAL="eyescandataerror_out" PHYSICAL="gt0_eyescandataerror_out"/>
+            <PORTMAP LOGICAL="eyescanreset_in" PHYSICAL="gt0_eyescanreset_in"/>
+            <PORTMAP LOGICAL="eyescantrigger_in" PHYSICAL="gt0_eyescantrigger_in"/>
+            <PORTMAP LOGICAL="rxbufreset_in" PHYSICAL="gt0_rxbufreset_in"/>
+            <PORTMAP LOGICAL="rxbufstatus_out" PHYSICAL="gt0_rxbufstatus_out"/>
+            <PORTMAP LOGICAL="rxbyteisaligned_out" PHYSICAL="gt0_rxbyteisaligned_out"/>
+            <PORTMAP LOGICAL="rxbyterealign_out" PHYSICAL="gt0_rxbyterealign_out"/>
+            <PORTMAP LOGICAL="rxcdrhold_in" PHYSICAL="gt0_rxcdrhold_in"/>
+            <PORTMAP LOGICAL="rxcommadet_out" PHYSICAL="gt0_rxcommadet_out"/>
+            <PORTMAP LOGICAL="rxdfelpmreset_in" PHYSICAL="gt0_rxdfelpmreset_in"/>
+            <PORTMAP LOGICAL="rxlpmen_in" PHYSICAL="gt0_rxlpmen_in"/>
+            <PORTMAP LOGICAL="rxmonitorout_out" PHYSICAL="gt0_rxmonitorout_out"/>
+            <PORTMAP LOGICAL="rxmonitorsel_in" PHYSICAL="gt0_rxmonitorsel_in"/>
+            <PORTMAP LOGICAL="rxpcsreset_in" PHYSICAL="gt0_rxpcsreset_in"/>
+            <PORTMAP LOGICAL="rxpd_in" PHYSICAL="gt0_rxpd_in"/>
+            <PORTMAP LOGICAL="rxpmareset_in" PHYSICAL="gt0_rxpmareset_in"/>
+            <PORTMAP LOGICAL="rxpolarity_in" PHYSICAL="gt0_rxpolarity_in"/>
+            <PORTMAP LOGICAL="rxprbscntreset_in" PHYSICAL="gt0_rxprbscntreset_in"/>
+            <PORTMAP LOGICAL="rxprbserr_out" PHYSICAL="gt0_rxprbserr_out"/>
+            <PORTMAP LOGICAL="rxprbssel_in" PHYSICAL="gt0_rxprbssel_in"/>
+            <PORTMAP LOGICAL="rxresetdone_out" PHYSICAL="gt0_rxresetdone_out"/>
+            <PORTMAP LOGICAL="rxstatus_out" PHYSICAL="gt0_rxstatus_out"/>
+            <PORTMAP LOGICAL="txbufstatus_out" PHYSICAL="gt0_txbufstatus_out"/>
+            <PORTMAP LOGICAL="txdiffctrl_in" PHYSICAL="gt0_txdiffctrl_in"/>
+            <PORTMAP LOGICAL="txinhibit_in" PHYSICAL="gt0_txinhibit_in"/>
+            <PORTMAP LOGICAL="txpcsreset_in" PHYSICAL="gt0_txpcsreset_in"/>
+            <PORTMAP LOGICAL="txpd_in" PHYSICAL="gt0_txpd_in"/>
+            <PORTMAP LOGICAL="txpmareset_in" PHYSICAL="gt0_txpmareset_in"/>
+            <PORTMAP LOGICAL="txpolarity_in" PHYSICAL="gt0_txpolarity_in"/>
+            <PORTMAP LOGICAL="txpostcursor_in" PHYSICAL="gt0_txpostcursor_in"/>
+            <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt0_txprbsforceerr_in"/>
+            <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt0_txprecursor_in"/>
+            <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt0_txresetdone_out"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="transceiver_debug1" TYPE="INITIATOR" VLNV="xilinx.com:display_jesd204:transceiver_debug:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="cplllock_out" PHYSICAL="gt1_cplllock_out"/>
+            <PORTMAP LOGICAL="dmonitorout_out" PHYSICAL="gt1_dmonitorout_out"/>
+            <PORTMAP LOGICAL="eyescandataerror_out" PHYSICAL="gt1_eyescandataerror_out"/>
+            <PORTMAP LOGICAL="eyescanreset_in" PHYSICAL="gt1_eyescanreset_in"/>
+            <PORTMAP LOGICAL="eyescantrigger_in" PHYSICAL="gt1_eyescantrigger_in"/>
+            <PORTMAP LOGICAL="rxbufreset_in" PHYSICAL="gt1_rxbufreset_in"/>
+            <PORTMAP LOGICAL="rxbufstatus_out" PHYSICAL="gt1_rxbufstatus_out"/>
+            <PORTMAP LOGICAL="rxbyteisaligned_out" PHYSICAL="gt1_rxbyteisaligned_out"/>
+            <PORTMAP LOGICAL="rxbyterealign_out" PHYSICAL="gt1_rxbyterealign_out"/>
+            <PORTMAP LOGICAL="rxcdrhold_in" PHYSICAL="gt1_rxcdrhold_in"/>
+            <PORTMAP LOGICAL="rxcommadet_out" PHYSICAL="gt1_rxcommadet_out"/>
+            <PORTMAP LOGICAL="rxdfelpmreset_in" PHYSICAL="gt1_rxdfelpmreset_in"/>
+            <PORTMAP LOGICAL="rxlpmen_in" PHYSICAL="gt1_rxlpmen_in"/>
+            <PORTMAP LOGICAL="rxmonitorout_out" PHYSICAL="gt1_rxmonitorout_out"/>
+            <PORTMAP LOGICAL="rxmonitorsel_in" PHYSICAL="gt1_rxmonitorsel_in"/>
+            <PORTMAP LOGICAL="rxpcsreset_in" PHYSICAL="gt1_rxpcsreset_in"/>
+            <PORTMAP LOGICAL="rxpd_in" PHYSICAL="gt1_rxpd_in"/>
+            <PORTMAP LOGICAL="rxpmareset_in" PHYSICAL="gt1_rxpmareset_in"/>
+            <PORTMAP LOGICAL="rxpolarity_in" PHYSICAL="gt1_rxpolarity_in"/>
+            <PORTMAP LOGICAL="rxprbscntreset_in" PHYSICAL="gt1_rxprbscntreset_in"/>
+            <PORTMAP LOGICAL="rxprbserr_out" PHYSICAL="gt1_rxprbserr_out"/>
+            <PORTMAP LOGICAL="rxprbssel_in" PHYSICAL="gt1_rxprbssel_in"/>
+            <PORTMAP LOGICAL="rxresetdone_out" PHYSICAL="gt1_rxresetdone_out"/>
+            <PORTMAP LOGICAL="rxstatus_out" PHYSICAL="gt1_rxstatus_out"/>
+            <PORTMAP LOGICAL="txbufstatus_out" PHYSICAL="gt1_txbufstatus_out"/>
+            <PORTMAP LOGICAL="txdiffctrl_in" PHYSICAL="gt1_txdiffctrl_in"/>
+            <PORTMAP LOGICAL="txinhibit_in" PHYSICAL="gt1_txinhibit_in"/>
+            <PORTMAP LOGICAL="txpcsreset_in" PHYSICAL="gt1_txpcsreset_in"/>
+            <PORTMAP LOGICAL="txpd_in" PHYSICAL="gt1_txpd_in"/>
+            <PORTMAP LOGICAL="txpmareset_in" PHYSICAL="gt1_txpmareset_in"/>
+            <PORTMAP LOGICAL="txpolarity_in" PHYSICAL="gt1_txpolarity_in"/>
+            <PORTMAP LOGICAL="txpostcursor_in" PHYSICAL="gt1_txpostcursor_in"/>
+            <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt1_txprbsforceerr_in"/>
+            <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt1_txprecursor_in"/>
+            <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt1_txresetdone_out"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="transceiver_debug2" TYPE="INITIATOR" VLNV="xilinx.com:display_jesd204:transceiver_debug:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="cplllock_out" PHYSICAL="gt2_cplllock_out"/>
+            <PORTMAP LOGICAL="dmonitorout_out" PHYSICAL="gt2_dmonitorout_out"/>
+            <PORTMAP LOGICAL="eyescandataerror_out" PHYSICAL="gt2_eyescandataerror_out"/>
+            <PORTMAP LOGICAL="eyescanreset_in" PHYSICAL="gt2_eyescanreset_in"/>
+            <PORTMAP LOGICAL="eyescantrigger_in" PHYSICAL="gt2_eyescantrigger_in"/>
+            <PORTMAP LOGICAL="rxbufreset_in" PHYSICAL="gt2_rxbufreset_in"/>
+            <PORTMAP LOGICAL="rxbufstatus_out" PHYSICAL="gt2_rxbufstatus_out"/>
+            <PORTMAP LOGICAL="rxbyteisaligned_out" PHYSICAL="gt2_rxbyteisaligned_out"/>
+            <PORTMAP LOGICAL="rxbyterealign_out" PHYSICAL="gt2_rxbyterealign_out"/>
+            <PORTMAP LOGICAL="rxcdrhold_in" PHYSICAL="gt2_rxcdrhold_in"/>
+            <PORTMAP LOGICAL="rxcommadet_out" PHYSICAL="gt2_rxcommadet_out"/>
+            <PORTMAP LOGICAL="rxdfelpmreset_in" PHYSICAL="gt2_rxdfelpmreset_in"/>
+            <PORTMAP LOGICAL="rxlpmen_in" PHYSICAL="gt2_rxlpmen_in"/>
+            <PORTMAP LOGICAL="rxmonitorout_out" PHYSICAL="gt2_rxmonitorout_out"/>
+            <PORTMAP LOGICAL="rxmonitorsel_in" PHYSICAL="gt2_rxmonitorsel_in"/>
+            <PORTMAP LOGICAL="rxpcsreset_in" PHYSICAL="gt2_rxpcsreset_in"/>
+            <PORTMAP LOGICAL="rxpd_in" PHYSICAL="gt2_rxpd_in"/>
+            <PORTMAP LOGICAL="rxpmareset_in" PHYSICAL="gt2_rxpmareset_in"/>
+            <PORTMAP LOGICAL="rxpolarity_in" PHYSICAL="gt2_rxpolarity_in"/>
+            <PORTMAP LOGICAL="rxprbscntreset_in" PHYSICAL="gt2_rxprbscntreset_in"/>
+            <PORTMAP LOGICAL="rxprbserr_out" PHYSICAL="gt2_rxprbserr_out"/>
+            <PORTMAP LOGICAL="rxprbssel_in" PHYSICAL="gt2_rxprbssel_in"/>
+            <PORTMAP LOGICAL="rxresetdone_out" PHYSICAL="gt2_rxresetdone_out"/>
+            <PORTMAP LOGICAL="rxstatus_out" PHYSICAL="gt2_rxstatus_out"/>
+            <PORTMAP LOGICAL="txbufstatus_out" PHYSICAL="gt2_txbufstatus_out"/>
+            <PORTMAP LOGICAL="txdiffctrl_in" PHYSICAL="gt2_txdiffctrl_in"/>
+            <PORTMAP LOGICAL="txinhibit_in" PHYSICAL="gt2_txinhibit_in"/>
+            <PORTMAP LOGICAL="txpcsreset_in" PHYSICAL="gt2_txpcsreset_in"/>
+            <PORTMAP LOGICAL="txpd_in" PHYSICAL="gt2_txpd_in"/>
+            <PORTMAP LOGICAL="txpmareset_in" PHYSICAL="gt2_txpmareset_in"/>
+            <PORTMAP LOGICAL="txpolarity_in" PHYSICAL="gt2_txpolarity_in"/>
+            <PORTMAP LOGICAL="txpostcursor_in" PHYSICAL="gt2_txpostcursor_in"/>
+            <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt2_txprbsforceerr_in"/>
+            <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt2_txprecursor_in"/>
+            <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt2_txresetdone_out"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="transceiver_debug3" TYPE="INITIATOR" VLNV="xilinx.com:display_jesd204:transceiver_debug:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="cplllock_out" PHYSICAL="gt3_cplllock_out"/>
+            <PORTMAP LOGICAL="dmonitorout_out" PHYSICAL="gt3_dmonitorout_out"/>
+            <PORTMAP LOGICAL="eyescandataerror_out" PHYSICAL="gt3_eyescandataerror_out"/>
+            <PORTMAP LOGICAL="eyescanreset_in" PHYSICAL="gt3_eyescanreset_in"/>
+            <PORTMAP LOGICAL="eyescantrigger_in" PHYSICAL="gt3_eyescantrigger_in"/>
+            <PORTMAP LOGICAL="rxbufreset_in" PHYSICAL="gt3_rxbufreset_in"/>
+            <PORTMAP LOGICAL="rxbufstatus_out" PHYSICAL="gt3_rxbufstatus_out"/>
+            <PORTMAP LOGICAL="rxbyteisaligned_out" PHYSICAL="gt3_rxbyteisaligned_out"/>
+            <PORTMAP LOGICAL="rxbyterealign_out" PHYSICAL="gt3_rxbyterealign_out"/>
+            <PORTMAP LOGICAL="rxcdrhold_in" PHYSICAL="gt3_rxcdrhold_in"/>
+            <PORTMAP LOGICAL="rxcommadet_out" PHYSICAL="gt3_rxcommadet_out"/>
+            <PORTMAP LOGICAL="rxdfelpmreset_in" PHYSICAL="gt3_rxdfelpmreset_in"/>
+            <PORTMAP LOGICAL="rxlpmen_in" PHYSICAL="gt3_rxlpmen_in"/>
+            <PORTMAP LOGICAL="rxmonitorout_out" PHYSICAL="gt3_rxmonitorout_out"/>
+            <PORTMAP LOGICAL="rxmonitorsel_in" PHYSICAL="gt3_rxmonitorsel_in"/>
+            <PORTMAP LOGICAL="rxpcsreset_in" PHYSICAL="gt3_rxpcsreset_in"/>
+            <PORTMAP LOGICAL="rxpd_in" PHYSICAL="gt3_rxpd_in"/>
+            <PORTMAP LOGICAL="rxpmareset_in" PHYSICAL="gt3_rxpmareset_in"/>
+            <PORTMAP LOGICAL="rxpolarity_in" PHYSICAL="gt3_rxpolarity_in"/>
+            <PORTMAP LOGICAL="rxprbscntreset_in" PHYSICAL="gt3_rxprbscntreset_in"/>
+            <PORTMAP LOGICAL="rxprbserr_out" PHYSICAL="gt3_rxprbserr_out"/>
+            <PORTMAP LOGICAL="rxprbssel_in" PHYSICAL="gt3_rxprbssel_in"/>
+            <PORTMAP LOGICAL="rxresetdone_out" PHYSICAL="gt3_rxresetdone_out"/>
+            <PORTMAP LOGICAL="rxstatus_out" PHYSICAL="gt3_rxstatus_out"/>
+            <PORTMAP LOGICAL="txbufstatus_out" PHYSICAL="gt3_txbufstatus_out"/>
+            <PORTMAP LOGICAL="txdiffctrl_in" PHYSICAL="gt3_txdiffctrl_in"/>
+            <PORTMAP LOGICAL="txinhibit_in" PHYSICAL="gt3_txinhibit_in"/>
+            <PORTMAP LOGICAL="txpcsreset_in" PHYSICAL="gt3_txpcsreset_in"/>
+            <PORTMAP LOGICAL="txpd_in" PHYSICAL="gt3_txpd_in"/>
+            <PORTMAP LOGICAL="txpmareset_in" PHYSICAL="gt3_txpmareset_in"/>
+            <PORTMAP LOGICAL="txpolarity_in" PHYSICAL="gt3_txpolarity_in"/>
+            <PORTMAP LOGICAL="txpostcursor_in" PHYSICAL="gt3_txpostcursor_in"/>
+            <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt3_txprbsforceerr_in"/>
+            <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt3_txprecursor_in"/>
+            <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt3_txresetdone_out"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
