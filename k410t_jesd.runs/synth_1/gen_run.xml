@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1698780165">
+<GenRun Id="synth_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1698781563">
   <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
@@ -86,8 +86,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_c_counter_binary_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clock_control_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_c_counter_binary_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_c_counter_binary_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_0"/>

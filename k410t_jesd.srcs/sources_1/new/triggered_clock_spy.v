@@ -28,7 +28,7 @@ module clock_control (
     output reg clock_reset
 );
     assign CE = clock_enable;
-    reg [31:0] counter_max  = 32'd100800000;
+    reg [31:0] counter_max  = 32'd1008000;
     reg [26:0] counter      = 32'd0;
 
     always @(posedge clk) begin

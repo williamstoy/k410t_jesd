@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Tue Oct 31 14:53:19 2023
+-- Date        : Tue Oct 31 15:47:19 2023
 -- Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_clock_control_0_0_sim_netlist.vhdl
@@ -29,13 +29,10 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clock_contro
   signal clock_enable_i_2_n_0 : STD_LOGIC;
   signal clock_enable_i_3_n_0 : STD_LOGIC;
   signal clock_enable_i_4_n_0 : STD_LOGIC;
-  signal clock_enable_i_5_n_0 : STD_LOGIC;
-  signal clock_enable_i_6_n_0 : STD_LOGIC;
-  signal clock_enable_i_7_n_0 : STD_LOGIC;
   signal \^clock_reset\ : STD_LOGIC;
   signal \counter[0]_i_1_n_0\ : STD_LOGIC;
   signal \counter[0]_i_3_n_0\ : STD_LOGIC;
-  signal counter_reg : STD_LOGIC_VECTOR ( 26 downto 9 );
+  signal counter_reg : STD_LOGIC_VECTOR ( 19 downto 7 );
   signal \counter_reg[0]_i_2_n_0\ : STD_LOGIC;
   signal \counter_reg[0]_i_2_n_1\ : STD_LOGIC;
   signal \counter_reg[0]_i_2_n_2\ : STD_LOGIC;
@@ -52,7 +49,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clock_contro
   signal \counter_reg[12]_i_1_n_5\ : STD_LOGIC;
   signal \counter_reg[12]_i_1_n_6\ : STD_LOGIC;
   signal \counter_reg[12]_i_1_n_7\ : STD_LOGIC;
-  signal \counter_reg[16]_i_1_n_0\ : STD_LOGIC;
   signal \counter_reg[16]_i_1_n_1\ : STD_LOGIC;
   signal \counter_reg[16]_i_1_n_2\ : STD_LOGIC;
   signal \counter_reg[16]_i_1_n_3\ : STD_LOGIC;
@@ -60,19 +56,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clock_contro
   signal \counter_reg[16]_i_1_n_5\ : STD_LOGIC;
   signal \counter_reg[16]_i_1_n_6\ : STD_LOGIC;
   signal \counter_reg[16]_i_1_n_7\ : STD_LOGIC;
-  signal \counter_reg[20]_i_1_n_0\ : STD_LOGIC;
-  signal \counter_reg[20]_i_1_n_1\ : STD_LOGIC;
-  signal \counter_reg[20]_i_1_n_2\ : STD_LOGIC;
-  signal \counter_reg[20]_i_1_n_3\ : STD_LOGIC;
-  signal \counter_reg[20]_i_1_n_4\ : STD_LOGIC;
-  signal \counter_reg[20]_i_1_n_5\ : STD_LOGIC;
-  signal \counter_reg[20]_i_1_n_6\ : STD_LOGIC;
-  signal \counter_reg[20]_i_1_n_7\ : STD_LOGIC;
-  signal \counter_reg[24]_i_1_n_2\ : STD_LOGIC;
-  signal \counter_reg[24]_i_1_n_3\ : STD_LOGIC;
-  signal \counter_reg[24]_i_1_n_5\ : STD_LOGIC;
-  signal \counter_reg[24]_i_1_n_6\ : STD_LOGIC;
-  signal \counter_reg[24]_i_1_n_7\ : STD_LOGIC;
   signal \counter_reg[4]_i_1_n_0\ : STD_LOGIC;
   signal \counter_reg[4]_i_1_n_1\ : STD_LOGIC;
   signal \counter_reg[4]_i_1_n_2\ : STD_LOGIC;
@@ -96,10 +79,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clock_contro
   signal \counter_reg_n_0_[4]\ : STD_LOGIC;
   signal \counter_reg_n_0_[5]\ : STD_LOGIC;
   signal \counter_reg_n_0_[6]\ : STD_LOGIC;
-  signal \counter_reg_n_0_[7]\ : STD_LOGIC;
-  signal \counter_reg_n_0_[8]\ : STD_LOGIC;
-  signal \NLW_counter_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
-  signal \NLW_counter_reg[24]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal \NLW_counter_reg[16]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
 begin
   clock_enable <= \^clock_enable\;
   clock_reset <= \^clock_reset\;
@@ -114,70 +94,41 @@ clock_enable_i_1: unisim.vcomponents.LUT4
       I3 => trigger(0),
       O => clock_enable_i_1_n_0
     );
-clock_enable_i_2: unisim.vcomponents.LUT6
+clock_enable_i_2: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"01001111FFFFFFFF"
+      INIT => X"4555FFFF"
     )
         port map (
-      I0 => clock_enable_i_3_n_0,
-      I1 => clock_enable_i_4_n_0,
-      I2 => clock_enable_i_5_n_0,
-      I3 => clock_enable_i_6_n_0,
-      I4 => counter_reg(17),
-      I5 => clock_enable_i_7_n_0,
+      I0 => counter_reg(15),
+      I1 => clock_enable_i_3_n_0,
+      I2 => counter_reg(14),
+      I3 => counter_reg(13),
+      I4 => clock_enable_i_4_n_0,
       O => clock_enable_i_2_n_0
     );
-clock_enable_i_3: unisim.vcomponents.LUT3
+clock_enable_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE"
+      INIT => X"0000000100010001"
     )
         port map (
-      I0 => counter_reg(18),
-      I1 => counter_reg(20),
-      I2 => counter_reg(19),
+      I0 => counter_reg(11),
+      I1 => counter_reg(12),
+      I2 => counter_reg(9),
+      I3 => counter_reg(10),
+      I4 => counter_reg(8),
+      I5 => counter_reg(7),
       O => clock_enable_i_3_n_0
     );
 clock_enable_i_4: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"8000"
     )
         port map (
-      I0 => counter_reg(22),
-      I1 => counter_reg(21),
-      I2 => counter_reg(24),
-      I3 => counter_reg(23),
+      I0 => counter_reg(17),
+      I1 => counter_reg(16),
+      I2 => counter_reg(19),
+      I3 => counter_reg(18),
       O => clock_enable_i_4_n_0
-    );
-clock_enable_i_5: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => counter_reg(14),
-      I1 => counter_reg(13),
-      I2 => counter_reg(16),
-      I3 => counter_reg(15),
-      O => clock_enable_i_5_n_0
-    );
-clock_enable_i_6: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"07FF"
-    )
-        port map (
-      I0 => counter_reg(9),
-      I1 => counter_reg(10),
-      I2 => counter_reg(11),
-      I3 => counter_reg(12),
-      O => clock_enable_i_6_n_0
-    );
-clock_enable_i_7: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => counter_reg(25),
-      I1 => counter_reg(26),
-      O => clock_enable_i_7_n_0
     );
 clock_enable_reg: unisim.vcomponents.FDRE
      port map (
@@ -337,7 +288,7 @@ clock_reset_reg: unisim.vcomponents.FDRE
 \counter_reg[16]_i_1\: unisim.vcomponents.CARRY4
      port map (
       CI => \counter_reg[12]_i_1_n_0\,
-      CO(3) => \counter_reg[16]_i_1_n_0\,
+      CO(3) => \NLW_counter_reg[16]_i_1_CO_UNCONNECTED\(3),
       CO(2) => \counter_reg[16]_i_1_n_1\,
       CO(1) => \counter_reg[16]_i_1_n_2\,
       CO(0) => \counter_reg[16]_i_1_n_3\,
@@ -393,113 +344,6 @@ clock_reset_reg: unisim.vcomponents.FDRE
       Q => \counter_reg_n_0_[1]\,
       R => trigger(0)
     );
-\counter_reg[20]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => \counter[0]_i_1_n_0\,
-      D => \counter_reg[20]_i_1_n_7\,
-      Q => counter_reg(20),
-      R => trigger(0)
-    );
-\counter_reg[20]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \counter_reg[16]_i_1_n_0\,
-      CO(3) => \counter_reg[20]_i_1_n_0\,
-      CO(2) => \counter_reg[20]_i_1_n_1\,
-      CO(1) => \counter_reg[20]_i_1_n_2\,
-      CO(0) => \counter_reg[20]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3) => \counter_reg[20]_i_1_n_4\,
-      O(2) => \counter_reg[20]_i_1_n_5\,
-      O(1) => \counter_reg[20]_i_1_n_6\,
-      O(0) => \counter_reg[20]_i_1_n_7\,
-      S(3 downto 0) => counter_reg(23 downto 20)
-    );
-\counter_reg[21]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => \counter[0]_i_1_n_0\,
-      D => \counter_reg[20]_i_1_n_6\,
-      Q => counter_reg(21),
-      R => trigger(0)
-    );
-\counter_reg[22]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => \counter[0]_i_1_n_0\,
-      D => \counter_reg[20]_i_1_n_5\,
-      Q => counter_reg(22),
-      R => trigger(0)
-    );
-\counter_reg[23]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => \counter[0]_i_1_n_0\,
-      D => \counter_reg[20]_i_1_n_4\,
-      Q => counter_reg(23),
-      R => trigger(0)
-    );
-\counter_reg[24]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => \counter[0]_i_1_n_0\,
-      D => \counter_reg[24]_i_1_n_7\,
-      Q => counter_reg(24),
-      R => trigger(0)
-    );
-\counter_reg[24]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \counter_reg[20]_i_1_n_0\,
-      CO(3 downto 2) => \NLW_counter_reg[24]_i_1_CO_UNCONNECTED\(3 downto 2),
-      CO(1) => \counter_reg[24]_i_1_n_2\,
-      CO(0) => \counter_reg[24]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3) => \NLW_counter_reg[24]_i_1_O_UNCONNECTED\(3),
-      O(2) => \counter_reg[24]_i_1_n_5\,
-      O(1) => \counter_reg[24]_i_1_n_6\,
-      O(0) => \counter_reg[24]_i_1_n_7\,
-      S(3) => '0',
-      S(2 downto 0) => counter_reg(26 downto 24)
-    );
-\counter_reg[25]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => \counter[0]_i_1_n_0\,
-      D => \counter_reg[24]_i_1_n_6\,
-      Q => counter_reg(25),
-      R => trigger(0)
-    );
-\counter_reg[26]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => \counter[0]_i_1_n_0\,
-      D => \counter_reg[24]_i_1_n_5\,
-      Q => counter_reg(26),
-      R => trigger(0)
-    );
 \counter_reg[2]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -546,7 +390,7 @@ clock_reset_reg: unisim.vcomponents.FDRE
       O(2) => \counter_reg[4]_i_1_n_5\,
       O(1) => \counter_reg[4]_i_1_n_6\,
       O(0) => \counter_reg[4]_i_1_n_7\,
-      S(3) => \counter_reg_n_0_[7]\,
+      S(3) => counter_reg(7),
       S(2) => \counter_reg_n_0_[6]\,
       S(1) => \counter_reg_n_0_[5]\,
       S(0) => \counter_reg_n_0_[4]\
@@ -581,7 +425,7 @@ clock_reset_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \counter[0]_i_1_n_0\,
       D => \counter_reg[4]_i_1_n_4\,
-      Q => \counter_reg_n_0_[7]\,
+      Q => counter_reg(7),
       R => trigger(0)
     );
 \counter_reg[8]\: unisim.vcomponents.FDRE
@@ -592,7 +436,7 @@ clock_reset_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => \counter[0]_i_1_n_0\,
       D => \counter_reg[8]_i_1_n_7\,
-      Q => \counter_reg_n_0_[8]\,
+      Q => counter_reg(8),
       R => trigger(0)
     );
 \counter_reg[8]_i_1\: unisim.vcomponents.CARRY4
@@ -608,8 +452,7 @@ clock_reset_reg: unisim.vcomponents.FDRE
       O(2) => \counter_reg[8]_i_1_n_5\,
       O(1) => \counter_reg[8]_i_1_n_6\,
       O(0) => \counter_reg[8]_i_1_n_7\,
-      S(3 downto 1) => counter_reg(11 downto 9),
-      S(0) => \counter_reg_n_0_[8]\
+      S(3 downto 0) => counter_reg(11 downto 8)
     );
 \counter_reg[9]\: unisim.vcomponents.FDRE
     generic map(
