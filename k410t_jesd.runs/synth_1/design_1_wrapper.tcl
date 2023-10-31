@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 24
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7k410tffg676-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -60,6 +61,10 @@ set_property used_in_implementation false [get_files -all /users/wstoy/Documents
 set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_board.xdc]
 set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_3_0/design_1_util_ds_buf_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_3_0/design_1_util_ds_buf_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_1/design_1_c_counter_binary_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,0 +1,92 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Oct 31 14:53:30 2023
+# Process ID: 20205
+# Current directory: /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_c_counter_binary_0_1_synth_1
+# Command line: vivado -log design_1_c_counter_binary_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_c_counter_binary_0_1.tcl
+# Log file: /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_c_counter_binary_0_1_synth_1/design_1_c_counter_binary_0_1.vds
+# Journal file: /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_c_counter_binary_0_1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_c_counter_binary_0_1.tcl -notrace
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8310-AU25P/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8310-AU25P/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
+
+CRITICAL WARNING: [Board 49-56] Problem parsing board file - /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/TI204C-IP-Release-v1.10'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.3'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/cad/xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_c_counter_binary_0_1, cache-ID = 979c0497270aee7c.
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 31 14:53:49 2023...

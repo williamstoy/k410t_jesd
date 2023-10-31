@@ -1,12 +1,11 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE882A3DE81163350",
+      "boundary_crc": "0xA184200DA2BB8D45",
       "device": "xc7k410tffg676-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2",
-      "validated": "true"
+      "tool_version": "2019.2"
     },
     "design_tree": {
       "frontpanel_0": "",
@@ -16,7 +15,11 @@
       "ila_0": "",
       "wireoutbreakout_0": "",
       "util_ds_buf_1": "",
-      "util_ds_buf_2": ""
+      "util_ds_buf_2": "",
+      "c_counter_binary_0": "",
+      "util_ds_buf_3": "",
+      "c_counter_binary_1": "",
+      "clock_control_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -53,78 +56,28 @@
       "SYNCbABP": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_util_ds_buf_1_0_OBUF_DS_P",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
       },
       "SYNCbABM": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_util_ds_buf_1_0_OBUF_DS_N",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
       },
       "SYNCbCDP": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_util_ds_buf_2_0_OBUF_DS_P",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
       },
       "SYNCbCDM": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_util_ds_buf_2_0_OBUF_DS_N",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
+      },
+      "CLK_LAO_0P": {
+        "direction": "I"
+      },
+      "CLK_LAO_0M": {
+        "direction": "I"
       }
     },
     "components": {
@@ -139,10 +92,10 @@
             "value": "1"
           },
           "TI.ADDR_0": {
-            "value": "0xff"
+            "value": "0x40"
           },
           "TI.COUNT": {
-            "value": "0"
+            "value": "1"
           },
           "WI.ADDR_0": {
             "value": "0x00"
@@ -154,10 +107,13 @@
             "value": "0x20"
           },
           "WO.ADDR_1": {
-            "value": "0xff"
+            "value": "0x21"
+          },
+          "WO.ADDR_2": {
+            "value": "0x22"
           },
           "WO.COUNT": {
-            "value": "1"
+            "value": "3"
           },
           "host_interface_BOARD_INTERFACE": {
             "value": "host_interface"
@@ -432,31 +388,11 @@
           },
           "m_axi_aclk": {
             "type": "clk",
-            "direction": "O",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "m_axi",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "m_axi_aresetn",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100800000",
-                "value_src": "constant"
-              }
-            }
+            "direction": "O"
           },
           "m_axi_aresetn": {
             "type": "rst",
-            "direction": "O",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+            "direction": "O"
           },
           "activity_mon": {
             "direction": "O"
@@ -486,7 +422,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "6"
+            "value": "7"
           },
           "C_PROBE1_WIDTH": {
             "value": "128"
@@ -545,6 +481,76 @@
             "value": "OBUFDS"
           }
         }
+      },
+      "c_counter_binary_0": {
+        "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
+        "xci_name": "design_1_c_counter_binary_0_0",
+        "parameters": {
+          "CE": {
+            "value": "true"
+          },
+          "Output_Width": {
+            "value": "32"
+          },
+          "SCLR": {
+            "value": "true"
+          }
+        }
+      },
+      "util_ds_buf_3": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.1",
+        "xci_name": "design_1_util_ds_buf_3_0"
+      },
+      "c_counter_binary_1": {
+        "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
+        "xci_name": "design_1_c_counter_binary_0_1",
+        "parameters": {
+          "CE": {
+            "value": "true"
+          },
+          "Output_Width": {
+            "value": "32"
+          },
+          "SCLR": {
+            "value": "true"
+          }
+        }
+      },
+      "clock_control_0": {
+        "vlnv": "xilinx.com:module_ref:clock_control:1.0",
+        "xci_name": "design_1_clock_control_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock_control",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "trigger": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clock_enable": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "CE": {
+            "direction": "O"
+          },
+          "clock_reset": {
+            "type": "rst",
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -583,7 +589,9 @@
       "frontpanel_0_okClk": {
         "ports": [
           "frontpanel_0/okClk",
-          "okAXI4LiteInterface_0/okClkIn"
+          "okAXI4LiteInterface_0/okClkIn",
+          "frontpanel_0/ti40_ep_clk",
+          "clock_control_0/clk"
         ]
       },
       "okAXI4LiteInterface_0_m_axi_aresetn": {
@@ -652,7 +660,8 @@
       "jesd204_0_rx_core_clk_out": {
         "ports": [
           "jesd204_0/rx_core_clk_out",
-          "ila_0/clk"
+          "ila_0/clk",
+          "c_counter_binary_0/CLK"
         ]
       },
       "jesd204_0_rx_tvalid": {
@@ -713,6 +722,57 @@
         "ports": [
           "jesd204_0/gt_rxcharisk",
           "ila_0/probe4"
+        ]
+      },
+      "util_ds_buf_3_IBUF_OUT": {
+        "ports": [
+          "util_ds_buf_3/IBUF_OUT",
+          "c_counter_binary_1/CLK"
+        ]
+      },
+      "CLK_LAO_0M_1": {
+        "ports": [
+          "CLK_LAO_0M",
+          "util_ds_buf_3/IBUF_DS_N"
+        ]
+      },
+      "CLK_LAO_0P_1": {
+        "ports": [
+          "CLK_LAO_0P",
+          "util_ds_buf_3/IBUF_DS_P"
+        ]
+      },
+      "c_counter_binary_1_Q": {
+        "ports": [
+          "c_counter_binary_1/Q",
+          "frontpanel_0/wo21_ep_datain"
+        ]
+      },
+      "c_counter_binary_0_Q": {
+        "ports": [
+          "c_counter_binary_0/Q",
+          "frontpanel_0/wo22_ep_datain"
+        ]
+      },
+      "frontpanel_0_ti40_ep_trigger": {
+        "ports": [
+          "frontpanel_0/ti40_ep_trigger",
+          "clock_control_0/trigger"
+        ]
+      },
+      "clock_control_0_clock_reset": {
+        "ports": [
+          "clock_control_0/clock_reset",
+          "c_counter_binary_1/SCLR",
+          "c_counter_binary_0/SCLR"
+        ]
+      },
+      "clock_control_0_CE": {
+        "ports": [
+          "clock_control_0/CE",
+          "c_counter_binary_1/CE",
+          "c_counter_binary_0/CE",
+          "ila_0/probe6"
         ]
       }
     },
