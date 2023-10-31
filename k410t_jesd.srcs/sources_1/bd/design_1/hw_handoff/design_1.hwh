@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 31 14:48:17 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 31 15:22:41 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -277,6 +277,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="c_counter_binary_1" PORT="CE"/>
             <CONNECTION INSTANCE="c_counter_binary_0" PORT="CE"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe6"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="clock_reset" SIGIS="rst" SIGNAME="clock_control_0_clock_reset">
@@ -976,7 +977,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="6"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="7"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -4129,6 +4130,11 @@
         <PORT DIR="I" LEFT="127" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="gt_rxdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="clock_control_0_CE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_control_0" PORT="CE"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

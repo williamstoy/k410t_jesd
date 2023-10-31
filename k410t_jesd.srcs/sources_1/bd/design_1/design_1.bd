@@ -5,7 +5,8 @@
       "device": "xc7k410tffg676-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2"
+      "tool_version": "2019.2",
+      "validated": "true"
     },
     "design_tree": {
       "frontpanel_0": "",
@@ -56,22 +57,78 @@
       "SYNCbABP": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_1_0_OBUF_DS_P",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbABM": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_1_0_OBUF_DS_N",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbCDP": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_2_0_OBUF_DS_P",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbCDM": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_2_0_OBUF_DS_N",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "CLK_LAO_0P": {
         "direction": "I"
@@ -388,11 +445,31 @@
           },
           "m_axi_aclk": {
             "type": "clk",
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "m_axi",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "m_axi_aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
+                "value_src": "constant"
+              }
+            }
           },
           "m_axi_aresetn": {
             "type": "rst",
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "activity_mon": {
             "direction": "O"
@@ -536,7 +613,13 @@
           },
           "clock_enable": {
             "type": "clk",
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "clock_reset",
+                "value_src": "constant"
+              }
+            }
           },
           "CE": {
             "direction": "O"

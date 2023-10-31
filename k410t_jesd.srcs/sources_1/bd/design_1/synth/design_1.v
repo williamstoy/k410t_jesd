@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Tue Oct 31 14:48:04 2023
+//Date        : Tue Oct 31 15:22:38 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -155,7 +155,8 @@ module design_1
         .probe2(jesd204_0_rx_aresetn),
         .probe3(jesd204_0_rx_sync),
         .probe4(jesd204_0_gt_rxcharisk),
-        .probe5(jesd204_0_gt_rxdata));
+        .probe5(jesd204_0_gt_rxdata),
+        .probe6(clock_control_0_CE));
   design_1_jesd204_0_0 jesd204_0
        (.gt0_drpaddr_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .gt0_drpdi_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),

@@ -233,7 +233,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {6} \
+   CONFIG.C_NUM_OF_PROBES {7} \
    CONFIG.C_PROBE1_WIDTH {128} \
    CONFIG.C_PROBE4_WIDTH {16} \
    CONFIG.C_PROBE5_WIDTH {128} \
@@ -310,7 +310,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net FPGA_JESD_SYSREFP_1 [get_bd_ports FPGA_JESD_SYSREFP] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
   connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins frontpanel_0/wo22_ep_datain]
   connect_bd_net -net c_counter_binary_1_Q [get_bd_pins c_counter_binary_1/Q] [get_bd_pins frontpanel_0/wo21_ep_datain]
-  connect_bd_net -net clock_control_0_CE [get_bd_pins c_counter_binary_0/CE] [get_bd_pins c_counter_binary_1/CE] [get_bd_pins clock_control_0/CE]
+  connect_bd_net -net clock_control_0_CE [get_bd_pins c_counter_binary_0/CE] [get_bd_pins c_counter_binary_1/CE] [get_bd_pins clock_control_0/CE] [get_bd_pins ila_0/probe6]
   connect_bd_net -net clock_control_0_clock_reset [get_bd_pins c_counter_binary_0/SCLR] [get_bd_pins c_counter_binary_1/SCLR] [get_bd_pins clock_control_0/clock_reset]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins clock_control_0/clk] [get_bd_pins frontpanel_0/okClk] [get_bd_pins frontpanel_0/ti40_ep_clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_0_ti40_ep_trigger [get_bd_pins clock_control_0/trigger] [get_bd_pins frontpanel_0/ti40_ep_trigger]

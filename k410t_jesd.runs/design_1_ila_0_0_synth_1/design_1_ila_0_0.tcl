@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 24
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7k410tffg676-1
