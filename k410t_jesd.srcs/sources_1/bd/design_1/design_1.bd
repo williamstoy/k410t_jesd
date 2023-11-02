@@ -20,7 +20,8 @@
       "c_counter_binary_0": "",
       "util_ds_buf_3": "",
       "c_counter_binary_1": "",
-      "clock_control_0": ""
+      "clock_control_0": "",
+      "jesd_4421_data_split_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -499,16 +500,40 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "7"
+            "value": "15"
+          },
+          "C_PROBE10_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE11_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE12_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE13_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE14_WIDTH": {
+            "value": "16"
           },
           "C_PROBE1_WIDTH": {
-            "value": "128"
+            "value": "1"
           },
           "C_PROBE4_WIDTH": {
             "value": "16"
           },
           "C_PROBE5_WIDTH": {
             "value": "128"
+          },
+          "C_PROBE7_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE8_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE9_WIDTH": {
+            "value": "16"
           }
         }
       },
@@ -634,6 +659,109 @@
             }
           }
         }
+      },
+      "jesd_4421_data_split_0": {
+        "vlnv": "xilinx.com:module_ref:jesd_4421_data_splitter:1.0",
+        "xci_name": "design_1_jesd_4421_data_split_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "jesd_4421_data_splitter",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "rx": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "rx_tdata",
+                "direction": "I",
+                "left": "127",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "rx_tvalid",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "A0": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "A1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "B0": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "B1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "C0": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "C1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "D0": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "D1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -750,7 +878,8 @@
       "jesd204_0_rx_tvalid": {
         "ports": [
           "jesd204_0/rx_tvalid",
-          "ila_0/probe0"
+          "ila_0/probe0",
+          "jesd_4421_data_split_0/rx_tvalid"
         ]
       },
       "wireoutbreakout_0_rx_reset": {
@@ -762,7 +891,7 @@
       "jesd204_0_rx_tdata": {
         "ports": [
           "jesd204_0/rx_tdata",
-          "ila_0/probe1"
+          "jesd_4421_data_split_0/rx_tdata"
         ]
       },
       "jesd204_0_rx_aresetn": {
@@ -856,6 +985,54 @@
           "c_counter_binary_1/CE",
           "c_counter_binary_0/CE",
           "ila_0/probe6"
+        ]
+      },
+      "jesd_4421_data_split_0_A0": {
+        "ports": [
+          "jesd_4421_data_split_0/A0",
+          "ila_0/probe7"
+        ]
+      },
+      "jesd_4421_data_split_0_A1": {
+        "ports": [
+          "jesd_4421_data_split_0/A1",
+          "ila_0/probe8"
+        ]
+      },
+      "jesd_4421_data_split_0_B0": {
+        "ports": [
+          "jesd_4421_data_split_0/B0",
+          "ila_0/probe9"
+        ]
+      },
+      "jesd_4421_data_split_0_B1": {
+        "ports": [
+          "jesd_4421_data_split_0/B1",
+          "ila_0/probe10"
+        ]
+      },
+      "jesd_4421_data_split_0_C0": {
+        "ports": [
+          "jesd_4421_data_split_0/C0",
+          "ila_0/probe11"
+        ]
+      },
+      "jesd_4421_data_split_0_C1": {
+        "ports": [
+          "jesd_4421_data_split_0/C1",
+          "ila_0/probe12"
+        ]
+      },
+      "jesd_4421_data_split_0_D0": {
+        "ports": [
+          "jesd_4421_data_split_0/D0",
+          "ila_0/probe13"
+        ]
+      },
+      "jesd_4421_data_split_0_D1": {
+        "ports": [
+          "jesd_4421_data_split_0/D1",
+          "ila_0/probe14"
         ]
       }
     },
