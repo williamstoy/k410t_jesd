@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Thu Nov  2 18:27:03 2023
+//Date        : Wed Nov  8 17:31:21 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -68,7 +68,6 @@ module design_1
   wire [4:0]host_interface_1_okUH;
   wire [31:0]host_interface_1_okUHU;
   wire [15:0]jesd204_0_gt_rxcharisk;
-  wire [127:0]jesd204_0_gt_rxdata;
   wire jesd204_0_rx_aresetn;
   wire jesd204_0_rx_core_clk_out;
   wire jesd204_0_rx_sync;
@@ -168,7 +167,7 @@ module design_1
         .probe2(jesd204_0_rx_aresetn),
         .probe3(jesd204_0_rx_sync),
         .probe4(jesd204_0_gt_rxcharisk),
-        .probe5(jesd204_0_gt_rxdata),
+        .probe5(jesd204_0_rx_tdata),
         .probe6(clock_control_0_CE),
         .probe7(jesd_4421_data_split_0_A0),
         .probe8(jesd_4421_data_split_0_A1),
@@ -279,7 +278,6 @@ module design_1
         .gt3_txprbsforceerr_in(1'b0),
         .gt3_txprecursor_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .gt_rxcharisk(jesd204_0_gt_rxcharisk),
-        .gt_rxdata(jesd204_0_gt_rxdata),
         .loopback({1'b0,1'b0,1'b0}),
         .refclk_n(FPGA_JESD_CLKM_1),
         .refclk_p(FPGA_JESD_CLKP_1),

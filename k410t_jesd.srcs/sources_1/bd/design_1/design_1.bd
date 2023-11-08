@@ -891,7 +891,8 @@
       "jesd204_0_rx_tdata": {
         "ports": [
           "jesd204_0/rx_tdata",
-          "jesd_4421_data_split_0/rx_tdata"
+          "jesd_4421_data_split_0/rx_tdata",
+          "ila_0/probe5"
         ]
       },
       "jesd204_0_rx_aresetn": {
@@ -922,12 +923,6 @@
         "ports": [
           "util_ds_buf_2/OBUF_DS_N",
           "SYNCbCDM"
-        ]
-      },
-      "jesd204_0_gt_rxdata": {
-        "ports": [
-          "jesd204_0/gt_rxdata",
-          "ila_0/probe5"
         ]
       },
       "jesd204_0_gt_rxcharisk": {

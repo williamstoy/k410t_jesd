@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  2 18:27:05 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov  8 17:31:22 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -4123,9 +4123,9 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="gt_rxcharisk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
+        <PORT DIR="I" LEFT="127" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="gt_rxdata"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="clock_control_0_CE">
@@ -4356,6 +4356,7 @@
         <PORT DIR="O" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="rx_tdata"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="rx_tvalid" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
@@ -4414,11 +4415,7 @@
         <PORT DIR="O" LEFT="15" NAME="gt3_drpdo_out" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="gt3_drpwe_in" SIGIS="undef"/>
         <PORT DIR="O" NAME="gt3_drprdy_out" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="127" NAME="gt_rxdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="gt_rxdata" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="15" NAME="gt_rxcharisk" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxcharisk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
