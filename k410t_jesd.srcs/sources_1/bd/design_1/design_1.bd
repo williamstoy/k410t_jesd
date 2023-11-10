@@ -493,6 +493,9 @@
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "design_1_ila_0_0",
         "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "16384"
+          },
           "C_ENABLE_ILA_AXI_MON": {
             "value": "false"
           },
@@ -518,7 +521,7 @@
             "value": "16"
           },
           "C_PROBE1_WIDTH": {
-            "value": "1"
+            "value": "4"
           },
           "C_PROBE4_WIDTH": {
             "value": "16"
@@ -1028,6 +1031,12 @@
         "ports": [
           "jesd_4421_data_split_0/D1",
           "ila_0/probe14"
+        ]
+      },
+      "jesd204_0_rx_start_of_frame": {
+        "ports": [
+          "jesd204_0/rx_start_of_frame",
+          "ila_0/probe1"
         ]
       }
     },

@@ -45,14 +45,28 @@
                                 "id": 1,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 3,
                                 "portIndex": 1,
                                 "nets": [
                                     {
-                                        "name": "design_1_i/<const0>",
-                                        "isBus": false
+                                        "name": "design_1_i/jesd204_0_rx_start_of_frame",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "design_1_i/jesd204_0_rx_start_of_frame[3]"
+                                            },
+                                            {
+                                                "name": "design_1_i/jesd204_0_rx_start_of_frame[2]"
+                                            },
+                                            {
+                                                "name": "design_1_i/jesd204_0_rx_start_of_frame[1]"
+                                            },
+                                            {
+                                                "name": "design_1_i/jesd204_0_rx_start_of_frame[0]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },

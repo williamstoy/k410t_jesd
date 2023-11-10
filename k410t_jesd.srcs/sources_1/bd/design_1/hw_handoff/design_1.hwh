@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov  8 17:31:22 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov  8 18:07:08 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -978,7 +978,7 @@
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
         <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="15"/>
-        <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
+        <PARAMETER NAME="C_DATA_DEPTH" VALUE="16384"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
         <PARAMETER NAME="C_BUILD_REVISION" VALUE="0"/>
@@ -1002,7 +1002,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_WUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_BUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="16"/>
@@ -4107,7 +4107,11 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_frame">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_start_of_frame"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
@@ -4365,7 +4369,11 @@
             <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="rx_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="rx_start_of_frame" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="rx_start_of_frame" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_frame">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="3" NAME="rx_end_of_frame" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="3" NAME="rx_start_of_multiframe" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="3" NAME="rx_end_of_multiframe" RIGHT="0" SIGIS="undef"/>

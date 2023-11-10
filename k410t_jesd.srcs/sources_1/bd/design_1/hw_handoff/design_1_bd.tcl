@@ -231,6 +231,7 @@ proc create_root_design { parentCell } {
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
   set_property -dict [ list \
+   CONFIG.C_DATA_DEPTH {16384} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
    CONFIG.C_NUM_OF_PROBES {15} \
@@ -239,7 +240,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE12_WIDTH {16} \
    CONFIG.C_PROBE13_WIDTH {16} \
    CONFIG.C_PROBE14_WIDTH {16} \
-   CONFIG.C_PROBE1_WIDTH {1} \
+   CONFIG.C_PROBE1_WIDTH {4} \
    CONFIG.C_PROBE4_WIDTH {16} \
    CONFIG.C_PROBE5_WIDTH {128} \
    CONFIG.C_PROBE7_WIDTH {16} \
@@ -336,6 +337,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net jesd204_0_gt_rxcharisk [get_bd_pins ila_0/probe4] [get_bd_pins jesd204_0/gt_rxcharisk]
   connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins ila_0/probe2] [get_bd_pins jesd204_0/rx_aresetn]
   connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins c_counter_binary_0/CLK] [get_bd_pins ila_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out]
+  connect_bd_net -net jesd204_0_rx_start_of_frame [get_bd_pins ila_0/probe1] [get_bd_pins jesd204_0/rx_start_of_frame]
   connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
   connect_bd_net -net jesd204_0_rx_tdata [get_bd_pins ila_0/probe5] [get_bd_pins jesd204_0/rx_tdata] [get_bd_pins jesd_4421_data_split_0/rx_tdata]
   connect_bd_net -net jesd204_0_rx_tvalid [get_bd_pins ila_0/probe0] [get_bd_pins jesd204_0/rx_tvalid] [get_bd_pins jesd_4421_data_split_0/rx_tvalid]

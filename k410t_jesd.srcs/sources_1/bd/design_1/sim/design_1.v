@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Nov  8 17:31:21 2023
+//Date        : Wed Nov  8 18:07:05 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -70,6 +70,7 @@ module design_1
   wire [15:0]jesd204_0_gt_rxcharisk;
   wire jesd204_0_rx_aresetn;
   wire jesd204_0_rx_core_clk_out;
+  wire [3:0]jesd204_0_rx_start_of_frame;
   wire jesd204_0_rx_sync;
   wire [127:0]jesd204_0_rx_tdata;
   wire jesd204_0_rx_tvalid;
@@ -158,7 +159,7 @@ module design_1
   design_1_ila_0_0 ila_0
        (.clk(jesd204_0_rx_core_clk_out),
         .probe0(jesd204_0_rx_tvalid),
-        .probe1(1'b0),
+        .probe1(jesd204_0_rx_start_of_frame),
         .probe10(jesd_4421_data_split_0_B1),
         .probe11(jesd_4421_data_split_0_C0),
         .probe12(jesd_4421_data_split_0_C1),
@@ -284,6 +285,7 @@ module design_1
         .rx_aresetn(jesd204_0_rx_aresetn),
         .rx_core_clk_out(jesd204_0_rx_core_clk_out),
         .rx_reset(wireoutbreakout_0_rx_reset),
+        .rx_start_of_frame(jesd204_0_rx_start_of_frame),
         .rx_sync(jesd204_0_rx_sync),
         .rx_sysref(util_ds_buf_0_IBUF_OUT),
         .rx_tdata(jesd204_0_rx_tdata),
