@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov  8 18:07:08 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 10 16:50:11 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -277,7 +277,6 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="c_counter_binary_1" PORT="CE"/>
             <CONNECTION INSTANCE="c_counter_binary_0" PORT="CE"/>
-            <CONNECTION INSTANCE="ila_0" PORT="probe6"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="clock_reset" SIGIS="rst" SIGNAME="clock_control_0_clock_reset">
@@ -977,8 +976,8 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="15"/>
-        <PARAMETER NAME="C_DATA_DEPTH" VALUE="16384"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="9"/>
+        <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
         <PARAMETER NAME="C_BUILD_REVISION" VALUE="0"/>
@@ -992,30 +991,30 @@
         <PARAMETER NAME="C_RAM_STYLE" VALUE="SUBCORE"/>
         <PARAMETER NAME="C_TRIGOUT_EN" VALUE="0"/>
         <PARAMETER NAME="C_TRIGIN_EN" VALUE="0"/>
-        <PARAMETER NAME="C_SLOT_0_AXIS_TUSER_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_SLOT_0_AXIS_TUSER_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_SLOT_0_AXIS_TDEST_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_SLOT_0_AXIS_TID_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_SLOT_0_AXIS_TID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_RUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_AWUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_WUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_BUSER_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="128"/>
-        <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE15_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE16_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE17_WIDTH" VALUE="1"/>
@@ -4086,7 +4085,7 @@
         <PARAMETER NAME="C_CLKFBOUT_MULT_F" VALUE="10"/>
         <PARAMETER NAME="C_DIVCLK_DIVIDE" VALUE="3"/>
         <PARAMETER NAME="C_CLKOUT0_DIVIDE_F" VALUE="10"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_ila_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ila_0_1"/>
         <PARAMETER NAME="EN_BRAM_DRC" VALUE="TRUE"/>
         <PARAMETER NAME="ALL_PROBE_SAME_MU" VALUE="TRUE"/>
         <PARAMETER NAME="ALL_PROBE_SAME_MU_CNT" VALUE="1"/>
@@ -4102,79 +4101,49 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
+        <PORT DIR="I" LEFT="127" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="gt_rxdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_frame">
+        <PORT DIR="I" LEFT="3" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_end_of_frame">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_end_of_frame"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_frame">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_start_of_frame"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_sync"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxcharisk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="gt_rxcharisk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="127" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
+        <PORT DIR="I" LEFT="127" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="clock_control_0_CE">
+        <PORT DIR="I" LEFT="0" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_control_0" PORT="CE"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_A0">
+        <PORT DIR="I" LEFT="3" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_end_of_multiframe">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="A0"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_end_of_multiframe"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe8" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_A1">
+        <PORT DIR="I" LEFT="3" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_multiframe">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="A1"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_start_of_multiframe"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe9" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_B0">
+        <PORT DIR="I" LEFT="15" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_frame_error">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="B0"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_frame_error"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe10" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_B1">
+        <PORT DIR="I" LEFT="0" NAME="probe8" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="B1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe11" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_C0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="C0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe12" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_C1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="C1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe13" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_D0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="D0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe14" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_D1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="D1"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4238,8 +4207,8 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="rx_core_clk_out" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="clk"/>
             <CONNECTION INSTANCE="c_counter_binary_0" PORT="CLK"/>
+            <CONNECTION INSTANCE="ila_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100800000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="okAXI4LiteInterface_0_m_axi_aclk">
@@ -4354,30 +4323,44 @@
         </PORT>
         <PORT DIR="O" NAME="rx_aresetn" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="rx_tdata"/>
-            <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="rx_tvalid" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
-            <CONNECTION INSTANCE="jesd_4421_data_split_0" PORT="rx_tvalid"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="rx_start_of_frame" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_frame">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="rx_end_of_frame" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_end_of_frame">
+          <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="rx_end_of_frame" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="rx_start_of_multiframe" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="rx_end_of_multiframe" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="rx_frame_error" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="rx_start_of_multiframe" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_multiframe">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="rx_end_of_multiframe" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_end_of_multiframe">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="rx_frame_error" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_frame_error">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe7"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="rx_sysref" SIGIS="undef" SIGNAME="util_ds_buf_0_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_ds_buf_0" PORT="IBUF_OUT"/>
@@ -4388,7 +4371,6 @@
             <CONNECTION INSTANCE="External_Ports" PORT="JESD_SYNC"/>
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_IN"/>
-            <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="gt0_txresetdone_out" SIGIS="undef"/>
@@ -4423,12 +4405,12 @@
         <PORT DIR="O" LEFT="15" NAME="gt3_drpdo_out" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="gt3_drpwe_in" SIGIS="undef"/>
         <PORT DIR="O" NAME="gt3_drprdy_out" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="127" NAME="gt_rxdata" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="gt_rxcharisk" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxcharisk">
+        <PORT DIR="O" LEFT="127" NAME="gt_rxdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="15" NAME="gt_rxcharisk" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="15" NAME="gt_rxdisperr" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="15" NAME="gt_rxnotintable" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="1" NAME="gt0_rxpd_in" RIGHT="0" SIGIS="undef"/>
@@ -4830,86 +4812,6 @@
             <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt3_txprbsforceerr_in"/>
             <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt3_txprecursor_in"/>
             <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt3_txresetdone_out"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/jesd_4421_data_split_0" HWVERSION="1.0" INSTANCE="jesd_4421_data_split_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="jesd_4421_data_splitter" VLNV="xilinx.com:module_ref:jesd_4421_data_splitter:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_jesd_4421_data_split_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rx_tvalid" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="A0" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_A0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe7"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="A1" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_A1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="B0" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_B0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe9"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="B1" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_B1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe10"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="C0" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_C0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe11"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="C1" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_C1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe12"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="D0" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_D0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe13"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="D1" RIGHT="0" SIGIS="undef" SIGNAME="jesd_4421_data_split_0_D1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe14"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="rx" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="rx_tdata"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="rx_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>

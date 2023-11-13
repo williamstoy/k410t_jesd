@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Nov  8 18:07:05 2023
+//Date        : Fri Nov 10 16:50:07 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=13,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (CLK_LAO_0M,
     CLK_LAO_0P,
@@ -67,21 +67,17 @@ module design_1
   wire [2:0]host_interface_1_okHU;
   wire [4:0]host_interface_1_okUH;
   wire [31:0]host_interface_1_okUHU;
-  wire [15:0]jesd204_0_gt_rxcharisk;
+  wire [127:0]jesd204_0_gt_rxdata;
   wire jesd204_0_rx_aresetn;
   wire jesd204_0_rx_core_clk_out;
+  wire [3:0]jesd204_0_rx_end_of_frame;
+  wire [3:0]jesd204_0_rx_end_of_multiframe;
+  wire [15:0]jesd204_0_rx_frame_error;
   wire [3:0]jesd204_0_rx_start_of_frame;
+  wire [3:0]jesd204_0_rx_start_of_multiframe;
   wire jesd204_0_rx_sync;
   wire [127:0]jesd204_0_rx_tdata;
   wire jesd204_0_rx_tvalid;
-  wire [15:0]jesd_4421_data_split_0_A0;
-  wire [15:0]jesd_4421_data_split_0_A1;
-  wire [15:0]jesd_4421_data_split_0_B0;
-  wire [15:0]jesd_4421_data_split_0_B1;
-  wire [15:0]jesd_4421_data_split_0_C0;
-  wire [15:0]jesd_4421_data_split_0_C1;
-  wire [15:0]jesd_4421_data_split_0_D0;
-  wire [15:0]jesd_4421_data_split_0_D1;
   wire [11:0]okAXI4LiteInterface_0_m_axi_ARADDR;
   wire okAXI4LiteInterface_0_m_axi_ARREADY;
   wire okAXI4LiteInterface_0_m_axi_ARVALID;
@@ -156,23 +152,17 @@ module design_1
         .wo20_ep_datain(frontpanel_0_wireout20_EP_DATAIN),
         .wo21_ep_datain(c_counter_binary_1_Q),
         .wo22_ep_datain(c_counter_binary_0_Q));
-  design_1_ila_0_0 ila_0
+  design_1_ila_0_1 ila_0
        (.clk(jesd204_0_rx_core_clk_out),
-        .probe0(jesd204_0_rx_tvalid),
-        .probe1(jesd204_0_rx_start_of_frame),
-        .probe10(jesd_4421_data_split_0_B1),
-        .probe11(jesd_4421_data_split_0_C0),
-        .probe12(jesd_4421_data_split_0_C1),
-        .probe13(jesd_4421_data_split_0_D0),
-        .probe14(jesd_4421_data_split_0_D1),
-        .probe2(jesd204_0_rx_aresetn),
-        .probe3(jesd204_0_rx_sync),
-        .probe4(jesd204_0_gt_rxcharisk),
-        .probe5(jesd204_0_rx_tdata),
-        .probe6(clock_control_0_CE),
-        .probe7(jesd_4421_data_split_0_A0),
-        .probe8(jesd_4421_data_split_0_A1),
-        .probe9(jesd_4421_data_split_0_B0));
+        .probe0(jesd204_0_gt_rxdata),
+        .probe1(jesd204_0_rx_end_of_frame),
+        .probe2(jesd204_0_rx_start_of_frame),
+        .probe3(jesd204_0_rx_tdata),
+        .probe4(jesd204_0_rx_tvalid),
+        .probe5(jesd204_0_rx_end_of_multiframe),
+        .probe6(jesd204_0_rx_start_of_multiframe),
+        .probe7(jesd204_0_rx_frame_error),
+        .probe8(jesd204_0_rx_aresetn));
   design_1_jesd204_0_0 jesd204_0
        (.gt0_drpaddr_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .gt0_drpdi_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -278,14 +268,18 @@ module design_1
         .gt3_txpostcursor_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .gt3_txprbsforceerr_in(1'b0),
         .gt3_txprecursor_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gt_rxcharisk(jesd204_0_gt_rxcharisk),
+        .gt_rxdata(jesd204_0_gt_rxdata),
         .loopback({1'b0,1'b0,1'b0}),
         .refclk_n(FPGA_JESD_CLKM_1),
         .refclk_p(FPGA_JESD_CLKP_1),
         .rx_aresetn(jesd204_0_rx_aresetn),
         .rx_core_clk_out(jesd204_0_rx_core_clk_out),
+        .rx_end_of_frame(jesd204_0_rx_end_of_frame),
+        .rx_end_of_multiframe(jesd204_0_rx_end_of_multiframe),
+        .rx_frame_error(jesd204_0_rx_frame_error),
         .rx_reset(wireoutbreakout_0_rx_reset),
         .rx_start_of_frame(jesd204_0_rx_start_of_frame),
+        .rx_start_of_multiframe(jesd204_0_rx_start_of_multiframe),
         .rx_sync(jesd204_0_rx_sync),
         .rx_sysref(util_ds_buf_0_IBUF_OUT),
         .rx_tdata(jesd204_0_rx_tdata),
@@ -311,17 +305,6 @@ module design_1
         .s_axi_wready(okAXI4LiteInterface_0_m_axi_WREADY),
         .s_axi_wstrb(okAXI4LiteInterface_0_m_axi_WSTRB),
         .s_axi_wvalid(okAXI4LiteInterface_0_m_axi_WVALID));
-  design_1_jesd_4421_data_split_0_0 jesd_4421_data_split_0
-       (.A0(jesd_4421_data_split_0_A0),
-        .A1(jesd_4421_data_split_0_A1),
-        .B0(jesd_4421_data_split_0_B0),
-        .B1(jesd_4421_data_split_0_B1),
-        .C0(jesd_4421_data_split_0_C0),
-        .C1(jesd_4421_data_split_0_C1),
-        .D0(jesd_4421_data_split_0_D0),
-        .D1(jesd_4421_data_split_0_D1),
-        .rx_tdata(jesd204_0_rx_tdata),
-        .rx_tvalid(jesd204_0_rx_tvalid));
   design_1_okAXI4LiteInterface_0_0 okAXI4LiteInterface_0
        (.EP_DATAIN_WIREOUT(frontpanel_0_wireout20_EP_DATAIN),
         .EP_DATAOUT(frontpanel_0_btpipein80_EP_DATAOUT),

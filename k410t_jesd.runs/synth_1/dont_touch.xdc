@@ -18,9 +18,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_okAXI4
 # IP: bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_util_ds_buf_0_0 || ORIG_REF_NAME==design_1_util_ds_buf_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_wireoutbreakout_0_0 || ORIG_REF_NAME==design_1_wireoutbreakout_0_0} -quiet] -quiet
 
@@ -42,7 +39,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_util_d
 # IP: bd/design_1/ip/design_1_c_counter_binary_0_1/design_1_c_counter_binary_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_c_counter_binary_0_1 || ORIG_REF_NAME==design_1_c_counter_binary_0_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_jesd_4421_data_split_0_0/design_1_jesd_4421_data_split_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_jesd_4421_data_split_0_0 || ORIG_REF_NAME==design_1_jesd_4421_data_split_0_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_ila_0_1/design_1_ila_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_1 || ORIG_REF_NAME==design_1_ila_0_1} -quiet] -quiet
 
 # XDC: bd/design_1/design_1_ooc.xdc
