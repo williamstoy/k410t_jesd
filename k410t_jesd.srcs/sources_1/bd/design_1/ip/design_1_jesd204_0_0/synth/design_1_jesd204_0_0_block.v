@@ -549,7 +549,7 @@ module design_1_jesd204_0_0_block #(
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      rx_cfg_octets_per_frame <= 8'd0;
+      rx_cfg_octets_per_frame <= 8'd1;
     end
     else if (bank0_write[8])
     begin
@@ -561,7 +561,7 @@ module design_1_jesd204_0_0_block #(
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      rx_cfg_frames_per_multi <= 5'd31;
+      rx_cfg_frames_per_multi <= 5'd15;
     end
     else if (bank0_write[9])
     begin

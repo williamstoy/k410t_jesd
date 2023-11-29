@@ -83,8 +83,8 @@ preplace netloc frontpanel_0_wirein00 1 1 1 NJ 860
 levelinfo -pg 1 -40 220 820 1190 1620 1860 2020
 pagesize -pg 1 -db -bbox -sgen -250 -30 2190 1070
 ",
-   "Reduced Jogs_ScaleFactor":"0.643519",
-   "Reduced Jogs_TopLeft":"525,186",
+   "Reduced Jogs_ScaleFactor":"0.804391",
+   "Reduced Jogs_TopLeft":"743,121",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
 preplace port host_interface -pg 1 -lvl 0 -x -20 -y 340 -defaultsOSRD

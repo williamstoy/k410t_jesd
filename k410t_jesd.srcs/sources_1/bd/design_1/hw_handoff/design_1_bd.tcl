@@ -231,6 +231,7 @@ proc create_root_design { parentCell } {
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
   set_property -dict [ list \
+   CONFIG.C_DATA_DEPTH {32768} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
    CONFIG.C_NUM_OF_PROBES {9} \
@@ -247,7 +248,8 @@ proc create_root_design { parentCell } {
   set jesd204_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:jesd204:7.2 jesd204_0 ]
   set_property -dict [ list \
    CONFIG.AXICLK_FREQ {100.8} \
-   CONFIG.C_DEFAULT_F {1} \
+   CONFIG.C_DEFAULT_F {2} \
+   CONFIG.C_DEFAULT_K {16} \
    CONFIG.C_LANES {4} \
    CONFIG.C_NODE_IS_TRANSMIT {0} \
    CONFIG.DRPCLK_FREQ {100.8} \

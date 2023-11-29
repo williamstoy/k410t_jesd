@@ -185,7 +185,10 @@
             "value": "100.8"
           },
           "C_DEFAULT_F": {
-            "value": "1"
+            "value": "2"
+          },
+          "C_DEFAULT_K": {
+            "value": "16"
           },
           "C_LANES": {
             "value": "4"
@@ -615,6 +618,9 @@
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "design_1_ila_0_1",
         "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "32768"
+          },
           "C_ENABLE_ILA_AXI_MON": {
             "value": "false"
           },
