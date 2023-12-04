@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Mon Dec  4 14:02:01 2023
+//Date        : Mon Dec  4 14:35:47 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -68,6 +68,8 @@ module design_1
   wire [4:0]host_interface_1_okUH;
   wire [31:0]host_interface_1_okUHU;
   wire [127:0]jesd204_0_gt_rxdata;
+  wire [127:0]jesd204_0_m_axis_rx_TDATA;
+  wire jesd204_0_m_axis_rx_TVALID;
   wire jesd204_0_rx_aresetn;
   wire jesd204_0_rx_core_clk_out;
   wire [3:0]jesd204_0_rx_end_of_frame;
@@ -76,8 +78,6 @@ module design_1
   wire [3:0]jesd204_0_rx_start_of_frame;
   wire [3:0]jesd204_0_rx_start_of_multiframe;
   wire jesd204_0_rx_sync;
-  wire [127:0]jesd204_0_rx_tdata;
-  wire jesd204_0_rx_tvalid;
   wire jesd204_0_transport_0_ready_out;
   wire [1:0]jesd204_0_transport_0_signal0_cntrl0;
   wire [1:0]jesd204_0_transport_0_signal0_cntrl1;
@@ -166,8 +166,8 @@ module design_1
         .probe12(jesd204_0_transport_0_signal0_cntrl1),
         .probe13(jesd204_0_transport_0_ready_out),
         .probe2(jesd204_0_rx_start_of_frame),
-        .probe3(jesd204_0_rx_tdata),
-        .probe4(jesd204_0_rx_tvalid),
+        .probe3({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .probe4(1'b0),
         .probe5(jesd204_0_rx_end_of_multiframe),
         .probe6(jesd204_0_rx_start_of_multiframe),
         .probe7(jesd204_0_rx_frame_error),
@@ -292,8 +292,8 @@ module design_1
         .rx_start_of_multiframe(jesd204_0_rx_start_of_multiframe),
         .rx_sync(jesd204_0_rx_sync),
         .rx_sysref(util_ds_buf_0_IBUF_OUT),
-        .rx_tdata(jesd204_0_rx_tdata),
-        .rx_tvalid(jesd204_0_rx_tvalid),
+        .rx_tdata(jesd204_0_m_axis_rx_TDATA),
+        .rx_tvalid(jesd204_0_m_axis_rx_TVALID),
         .rxn(rxn_1),
         .rxp(rxp_1),
         .s_axi_aclk(okAXI4LiteInterface_0_m_axi_aclk),
@@ -319,8 +319,8 @@ module design_1
        (.clk(jesd204_0_rx_core_clk_out),
         .ready_out(jesd204_0_transport_0_ready_out),
         .rst_n(jesd204_0_rx_aresetn),
-        .rx_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .rx_tvalid(1'b0),
+        .rx_tdata(jesd204_0_m_axis_rx_TDATA),
+        .rx_tvalid(jesd204_0_m_axis_rx_TVALID),
         .signal0_cntrl0(jesd204_0_transport_0_signal0_cntrl0),
         .signal0_cntrl1(jesd204_0_transport_0_signal0_cntrl1),
         .signal0_sampl0(jesd204_0_transport_0_signal0_sampl0),

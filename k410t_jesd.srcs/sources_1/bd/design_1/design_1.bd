@@ -1067,18 +1067,6 @@
           "ila_0/probe1"
         ]
       },
-      "jesd204_0_rx_tvalid": {
-        "ports": [
-          "jesd204_0/rx_tvalid",
-          "ila_0/probe4"
-        ]
-      },
-      "jesd204_0_rx_tdata": {
-        "ports": [
-          "jesd204_0/rx_tdata",
-          "ila_0/probe3"
-        ]
-      },
       "jesd204_0_rx_end_of_multiframe": {
         "ports": [
           "jesd204_0/rx_end_of_multiframe",

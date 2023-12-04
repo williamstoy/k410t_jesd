@@ -346,8 +346,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net jesd204_0_rx_start_of_frame [get_bd_pins ila_0/probe2] [get_bd_pins jesd204_0/rx_start_of_frame]
   connect_bd_net -net jesd204_0_rx_start_of_multiframe [get_bd_pins ila_0/probe6] [get_bd_pins jesd204_0/rx_start_of_multiframe]
   connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
-  connect_bd_net -net jesd204_0_rx_tdata [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_tdata]
-  connect_bd_net -net jesd204_0_rx_tvalid [get_bd_pins ila_0/probe4] [get_bd_pins jesd204_0/rx_tvalid]
   connect_bd_net -net jesd204_0_transport_0_ready_out [get_bd_pins ila_0/probe13] [get_bd_pins jesd204_0_transport_0/ready_out]
   connect_bd_net -net jesd204_0_transport_0_signal0_cntrl0 [get_bd_pins ila_0/probe11] [get_bd_pins jesd204_0_transport_0/signal0_cntrl0]
   connect_bd_net -net jesd204_0_transport_0_signal0_cntrl1 [get_bd_pins ila_0/probe12] [get_bd_pins jesd204_0_transport_0/signal0_cntrl1]
