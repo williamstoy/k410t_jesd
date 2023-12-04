@@ -619,7 +619,7 @@
         "xci_name": "design_1_ila_0_1",
         "parameters": {
           "C_DATA_DEPTH": {
-            "value": "32768"
+            "value": "4096"
           },
           "C_ENABLE_ILA_AXI_MON": {
             "value": "false"
