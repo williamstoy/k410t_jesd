@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  4 14:35:49 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  4 15:03:29 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -976,7 +976,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="14"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="10"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -1009,10 +1009,10 @@
         <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="14"/>
-        <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="14"/>
-        <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="2"/>
-        <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE15_WIDTH" VALUE="1"/>
@@ -4087,7 +4087,7 @@
         <PARAMETER NAME="C_CLKOUT0_DIVIDE_F" VALUE="10"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_ila_0_1"/>
         <PARAMETER NAME="EN_BRAM_DRC" VALUE="TRUE"/>
-        <PARAMETER NAME="ALL_PROBE_SAME_MU" VALUE="TRUE"/>
+        <PARAMETER NAME="ALL_PROBE_SAME_MU" VALUE="true"/>
         <PARAMETER NAME="ALL_PROBE_SAME_MU_CNT" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ADDR_WIDTH" VALUE="32"/>
@@ -4116,8 +4116,16 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_start_of_frame"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="probe3" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="probe4" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="127" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="3" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_end_of_multiframe">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_end_of_multiframe"/>
@@ -4138,29 +4146,9 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="13" NAME="probe9" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signal0_sampl0">
+        <PORT DIR="I" LEFT="0" NAME="probe9" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_0_IBUF_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signal0_sampl0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="13" NAME="probe10" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signal0_sampl1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signal0_sampl1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="probe11" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signal0_cntrl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signal0_cntrl0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="probe12" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signal0_cntrl1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signal0_cntrl1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe13" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_ready_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="ready_out"/>
+            <CONNECTION INSTANCE="util_ds_buf_0" PORT="IBUF_OUT"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4226,7 +4214,6 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="c_counter_binary_0" PORT="CLK"/>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100800000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="okAXI4LiteInterface_0_m_axi_aclk">
@@ -4342,17 +4329,16 @@
         <PORT DIR="O" NAME="rx_aresetn" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rx_tdata"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="rx_tvalid" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rx_tvalid"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="rx_start_of_frame" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_frame">
@@ -4618,7 +4604,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="jesd204_0_m_axis_rx" NAME="m_axis_rx" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="m_axis_rx" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -4831,93 +4817,6 @@
             <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt3_txprbsforceerr_in"/>
             <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt3_txprecursor_in"/>
             <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt3_txresetdone_out"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/jesd204_0_transport_0" HWVERSION="1.0" INSTANCE="jesd204_0_transport_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="jesd204_0_transport_layer_demapper" VLNV="xilinx.com:module_ref:jesd204_0_transport_layer_demapper:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_jesd204_0_transport_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst_n" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rx_tvalid" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="13" NAME="signal0_sampl0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signal0_sampl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe9"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="13" NAME="signal0_sampl1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signal0_sampl1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe10"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="signal0_cntrl0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signal0_cntrl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe11"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="signal0_cntrl1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signal0_cntrl1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe12"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="13" NAME="signal1_sampl0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="signal1_sampl1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="signal1_cntrl0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="signal1_cntrl1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="signal2_sampl0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="signal2_sampl1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="signal2_cntrl0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="signal2_cntrl1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="signal3_sampl0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="signal3_sampl1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="signal3_cntrl0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="signal3_cntrl1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="ready_out" SIGIS="undef" SIGNAME="jesd204_0_transport_0_ready_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe13"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="jesd204_0_m_axis_rx" NAME="rx" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_jesd204_0_0_rx_core_clk_out"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="rx_tdata"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="rx_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -5153,6 +5052,7 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_0_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_sysref"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe9"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

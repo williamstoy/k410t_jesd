@@ -20,8 +20,7 @@
       "util_ds_buf_3": "",
       "c_counter_binary_1": "",
       "clock_control_0": "",
-      "ila_0": "",
-      "jesd204_0_transport_0": ""
+      "ila_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -619,6 +618,9 @@
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "design_1_ila_0_1",
         "parameters": {
+          "ALL_PROBE_SAME_MU": {
+            "value": "true"
+          },
           "C_DATA_DEPTH": {
             "value": "4096"
           },
@@ -629,19 +631,19 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "14"
+            "value": "10"
           },
           "C_PROBE0_WIDTH": {
             "value": "128"
           },
           "C_PROBE10_WIDTH": {
-            "value": "14"
+            "value": "1"
           },
           "C_PROBE11_WIDTH": {
-            "value": "2"
+            "value": "1"
           },
           "C_PROBE12_WIDTH": {
-            "value": "2"
+            "value": "1"
           },
           "C_PROBE1_WIDTH": {
             "value": "4"
@@ -665,189 +667,7 @@
             "value": "1"
           },
           "C_PROBE9_WIDTH": {
-            "value": "14"
-          }
-        }
-      },
-      "jesd204_0_transport_0": {
-        "vlnv": "xilinx.com:module_ref:jesd204_0_transport_layer_demapper:1.0",
-        "xci_name": "design_1_jesd204_0_transport_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "jesd204_0_transport_layer_demapper",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "rx": {
-            "mode": "Slave",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "16",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "rx_tdata",
-                "direction": "I",
-                "left": "127",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "rx_tvalid",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "rx",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "signal0_sampl0": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "signal0_sampl1": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "signal0_cntrl0": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "signal0_cntrl1": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "signal1_sampl0": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "signal1_sampl1": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "signal1_cntrl0": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "signal1_cntrl1": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "signal2_sampl0": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "signal2_sampl1": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "signal2_cntrl0": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "signal2_cntrl1": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "signal3_sampl0": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "signal3_sampl1": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "signal3_cntrl0": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "signal3_cntrl1": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "ready_out": {
-            "direction": "O"
+            "value": "1"
           }
         }
       }
@@ -881,12 +701,6 @@
         "interface_ports": [
           "wireoutbreakout_0/wirein_READDATA",
           "frontpanel_0/wirein00"
-        ]
-      },
-      "jesd204_0_m_axis_rx": {
-        "interface_ports": [
-          "jesd204_0/m_axis_rx",
-          "jesd204_0_transport_0/rx"
         ]
       }
     },
@@ -938,7 +752,8 @@
       "util_ds_buf_0_IBUF_OUT": {
         "ports": [
           "util_ds_buf_0/IBUF_OUT",
-          "jesd204_0/rx_sysref"
+          "jesd204_0/rx_sysref",
+          "ila_0/probe9"
         ]
       },
       "FPGA_JESD_SYSREFP_1": {
@@ -965,8 +780,7 @@
         "ports": [
           "jesd204_0/rx_core_clk_out",
           "c_counter_binary_0/CLK",
-          "ila_0/clk",
-          "jesd204_0_transport_0/clk"
+          "ila_0/clk"
         ]
       },
       "wireoutbreakout_0_rx_reset": {
@@ -1088,38 +902,19 @@
       "jesd204_0_rx_aresetn": {
         "ports": [
           "jesd204_0/rx_aresetn",
-          "ila_0/probe8",
-          "jesd204_0_transport_0/rst_n"
+          "ila_0/probe8"
         ]
       },
-      "jesd204_0_transport_0_ready_out": {
+      "jesd204_0_rx_tdata": {
         "ports": [
-          "jesd204_0_transport_0/ready_out",
-          "ila_0/probe13"
+          "jesd204_0/rx_tdata",
+          "ila_0/probe3"
         ]
       },
-      "jesd204_0_transport_0_signal0_sampl0": {
+      "jesd204_0_rx_tvalid": {
         "ports": [
-          "jesd204_0_transport_0/signal0_sampl0",
-          "ila_0/probe9"
-        ]
-      },
-      "jesd204_0_transport_0_signal0_sampl1": {
-        "ports": [
-          "jesd204_0_transport_0/signal0_sampl1",
-          "ila_0/probe10"
-        ]
-      },
-      "jesd204_0_transport_0_signal0_cntrl0": {
-        "ports": [
-          "jesd204_0_transport_0/signal0_cntrl0",
-          "ila_0/probe11"
-        ]
-      },
-      "jesd204_0_transport_0_signal0_cntrl1": {
-        "ports": [
-          "jesd204_0_transport_0/signal0_cntrl1",
-          "ila_0/probe12"
+          "jesd204_0/rx_tvalid",
+          "ila_0/probe4"
         ]
       }
     },
