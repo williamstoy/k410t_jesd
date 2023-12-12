@@ -43,7 +43,7 @@ always@( posedge clk or negedge RESET_N ) begin
     if ( RESET_N == 1'b0 )
         begin
         event_state <= `IDLE;
-        AUC <= 32'h0000;
+        //AUC <= 32'h0000;
         //V_peak <= 14'h00;
         dt <= 16'h00;
         IPI <= 32'h0000;
@@ -56,7 +56,7 @@ always@( posedge clk or negedge RESET_N ) begin
         `IDLE: begin //wait to detect event, reset counter
             counter <= 32'h0000;
             dt <= 16'h00;
-            AUC <= 32'h0000;
+            //AUC <= 32'h0000;
             IPI <= 32'h0000;
             if(event_detected == 1'b1) begin
                 event_state <= `EVENT; 

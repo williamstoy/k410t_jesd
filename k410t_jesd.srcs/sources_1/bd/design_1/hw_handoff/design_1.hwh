@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 12 16:26:50 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 12 17:03:42 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -4311,8 +4311,8 @@
         </PORT>
         <PORT DIR="O" LEFT="13" NAME="signalA_sampl1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="A1"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="A1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="signalA_cntrl0" SIGIS="undef"/>
