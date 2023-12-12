@@ -3,6 +3,15 @@
 	"modules": {
 		"design_1": {
 			"proto_instances": {
+				"/jesd204_0/m_axis_rx": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "rx_core_clk_out"},
+						"ARESETN": { "actual": "rx_aresetn"},
+						"TDATA": { "actual": "rx_tdata"},
+						"TVALID": { "actual": "rx_tvalid"}
+					}
+				},
 				"/jesd204_0/s_axi": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
@@ -25,6 +34,14 @@
 						"WREADY": { "actual": "s_axi_wready"},
 						"WSTRB": { "actual": "s_axi_wstrb"},
 						"WVALID": { "actual": "s_axi_wvalid"}
+					}
+				},
+				"/jesd204_0_transport_0/rx": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"TDATA": { "actual": "rx_tdata"},
+						"TVALID": { "actual": "rx_tvalid"}
 					}
 				},
 				"/okAXI4LiteInterface_0/m_axi": {

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Mon Dec  4 15:03:26 2023
+//Date        : Tue Dec 12 16:26:22 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -10,9 +10,7 @@
 `timescale 1 ps / 1 ps
 
 module design_1_wrapper
-   (CLK_LAO_0M,
-    CLK_LAO_0P,
-    FPGA_JESD_CLKM,
+   (FPGA_JESD_CLKM,
     FPGA_JESD_CLKP,
     FPGA_JESD_SYSREFM,
     FPGA_JESD_SYSREFP,
@@ -27,8 +25,6 @@ module design_1_wrapper
     host_interface_okuhu,
     rxn,
     rxp);
-  input CLK_LAO_0M;
-  input CLK_LAO_0P;
   input FPGA_JESD_CLKM;
   input FPGA_JESD_CLKP;
   input FPGA_JESD_SYSREFM;
@@ -45,8 +41,6 @@ module design_1_wrapper
   input [3:0]rxn;
   input [3:0]rxp;
 
-  wire CLK_LAO_0M;
-  wire CLK_LAO_0P;
   wire FPGA_JESD_CLKM;
   wire FPGA_JESD_CLKP;
   wire FPGA_JESD_SYSREFM;
@@ -64,9 +58,7 @@ module design_1_wrapper
   wire [3:0]rxp;
 
   design_1 design_1_i
-       (.CLK_LAO_0M(CLK_LAO_0M),
-        .CLK_LAO_0P(CLK_LAO_0P),
-        .FPGA_JESD_CLKM(FPGA_JESD_CLKM),
+       (.FPGA_JESD_CLKM(FPGA_JESD_CLKM),
         .FPGA_JESD_CLKP(FPGA_JESD_CLKP),
         .FPGA_JESD_SYSREFM(FPGA_JESD_SYSREFM),
         .FPGA_JESD_SYSREFP(FPGA_JESD_SYSREFP),

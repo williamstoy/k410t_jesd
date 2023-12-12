@@ -56,49 +56,49 @@ module jesd204_0_transport_layer_demapper (
   input         rx_tvalid,
 
   //Channel 0
-  output [13:0] signal0_sampl0,
-  output [13:0] signal0_sampl1,
-  output  [1:0] signal0_cntrl0,
-  output  [1:0] signal0_cntrl1,
+  output [13:0] signalA_sampl0,
+  output [13:0] signalA_sampl1,
+  output        signalA_cntrl0,
+  output        signalA_cntrl1,
   //Channel 1
-  output [13:0] signal1_sampl0,
-  output [13:0] signal1_sampl1,
-  output  [1:0] signal1_cntrl0,
-  output  [1:0] signal1_cntrl1,
+  output [13:0] signalB_sampl0,
+  output [13:0] signalB_sampl1,
+  output        signalB_cntrl0,
+  output        signalB_cntrl1,
   //Channel 2
-  output [13:0] signal2_sampl0,
-  output [13:0] signal2_sampl1,
-  output  [1:0] signal2_cntrl0,
-  output  [1:0] signal2_cntrl1,
+  output [13:0] signalC_sampl0,
+  output [13:0] signalC_sampl1,
+  output        signalC_cntrl0,
+  output        signalC_cntrl1,
   //Channel 3
-  output [13:0] signal3_sampl0,
-  output [13:0] signal3_sampl1,
-  output  [1:0] signal3_cntrl0,
-  output  [1:0] signal3_cntrl1,
+  output [13:0] signalD_sampl0,
+  output [13:0] signalD_sampl1,
+  output        signalD_cntrl0,
+  output        signalD_cntrl1,
 
   output        ready_out
 );
 
 //Channel 0
-reg [13:0] signal0_sampl0_reg;
-reg [13:0] signal0_sampl1_reg;
-reg  [1:0] signal0_cntrl0_reg;
-reg  [1:0] signal0_cntrl1_reg;
+reg [13:0] signalA_sampl0_reg;
+reg [13:0] signalA_sampl1_reg;
+reg        signalA_cntrl0_reg;
+reg        signalA_cntrl1_reg;
 //Channel 1
-reg [13:0] signal1_sampl0_reg;
-reg [13:0] signal1_sampl1_reg;
-reg  [1:0] signal1_cntrl0_reg;
-reg  [1:0] signal1_cntrl1_reg;
+reg [13:0] signalB_sampl0_reg;
+reg [13:0] signalB_sampl1_reg;
+reg        signalB_cntrl0_reg;
+reg        signalB_cntrl1_reg;
 //Channel 2
-reg [13:0] signal2_sampl0_reg;
-reg [13:0] signal2_sampl1_reg;
-reg  [1:0] signal2_cntrl0_reg;
-reg  [1:0] signal2_cntrl1_reg;
+reg [13:0] signalC_sampl0_reg;
+reg [13:0] signalC_sampl1_reg;
+reg        signalC_cntrl0_reg;
+reg        signalC_cntrl1_reg;
 //Channel 3
-reg [13:0] signal3_sampl0_reg;
-reg [13:0] signal3_sampl1_reg;
-reg  [1:0] signal3_cntrl0_reg;
-reg  [1:0] signal3_cntrl1_reg;
+reg [13:0] signalD_sampl0_reg;
+reg [13:0] signalD_sampl1_reg;
+reg        signalD_cntrl0_reg;
+reg        signalD_cntrl1_reg;
 
 reg full;
 
@@ -107,25 +107,25 @@ begin
   if(!rst_n)
   begin
     //Channel 0
-    signal0_sampl0_reg <= 0;
-    signal0_sampl1_reg <= 0;
-    signal0_cntrl0_reg <= 0;
-    signal0_cntrl1_reg <= 0;
+    signalA_sampl0_reg <= 0;
+    signalA_sampl1_reg <= 0;
+    signalA_cntrl0_reg <= 0;
+    signalA_cntrl1_reg <= 0;
     //Channel 1
-    signal1_sampl0_reg <= 0;
-    signal1_sampl1_reg <= 0;
-    signal1_cntrl0_reg <= 0;
-    signal1_cntrl1_reg <= 0;
+    signalB_sampl0_reg <= 0;
+    signalB_sampl1_reg <= 0;
+    signalB_cntrl0_reg <= 0;
+    signalB_cntrl1_reg <= 0;
     //Channel 2
-    signal2_sampl0_reg <= 0;
-    signal2_sampl1_reg <= 0;
-    signal2_cntrl0_reg <= 0;
-    signal2_cntrl1_reg <= 0;
+    signalC_sampl0_reg <= 0;
+    signalC_sampl1_reg <= 0;
+    signalC_cntrl0_reg <= 0;
+    signalC_cntrl1_reg <= 0;
     //Channel 3
-    signal3_sampl0_reg <= 0;
-    signal3_sampl1_reg <= 0;
-    signal3_cntrl0_reg <= 0;
-    signal3_cntrl1_reg <= 0;
+    signalD_sampl0_reg <= 0;
+    signalD_sampl1_reg <= 0;
+    signalD_cntrl0_reg <= 0;
+    signalD_cntrl1_reg <= 0;
     full <= 1'b0;
   end
   else
@@ -134,25 +134,25 @@ begin
     begin
       //extract the samples from the input data word
       //Channel 0
-      signal0_cntrl1_reg <= rx_tdata[31:30];
-      signal0_sampl1_reg <= rx_tdata[29:16];
-      signal0_cntrl0_reg <= rx_tdata[15:14];
-      signal0_sampl0_reg <= rx_tdata[13:0];
+      signalA_cntrl1_reg <= rx_tdata[9];
+      signalA_sampl1_reg <= {rx_tdata[7:0], rx_tdata[127:122]};
+      signalA_cntrl0_reg <= rx_tdata[25];
+      signalA_sampl0_reg <= rx_tdata[23:10];
       //Channel 1
-      signal1_cntrl1_reg <= rx_tdata[63:62];
-      signal1_sampl1_reg <= rx_tdata[61:48];
-      signal1_cntrl0_reg <= rx_tdata[47:46];
-      signal1_sampl0_reg <= rx_tdata[45:32];
+      signalB_cntrl1_reg <= rx_tdata[41];
+      signalB_sampl1_reg <= rx_tdata[39:26];
+      signalB_cntrl0_reg <= rx_tdata[57];
+      signalB_sampl0_reg <= rx_tdata[55:42];
       //Channel 2
-      signal2_cntrl1_reg <= rx_tdata[95:94];
-      signal2_sampl1_reg <= rx_tdata[93:80];
-      signal2_cntrl0_reg <= rx_tdata[79:78];
-      signal2_sampl0_reg <= rx_tdata[77:64];
+      signalC_cntrl1_reg <= rx_tdata[73];
+      signalC_sampl1_reg <= rx_tdata[71:58];
+      signalC_cntrl0_reg <= rx_tdata[89];
+      signalC_sampl0_reg <= rx_tdata[87:74];
       //Channel 3
-      signal3_cntrl1_reg <= rx_tdata[127:126];
-      signal3_sampl1_reg <= rx_tdata[125:112];
-      signal3_cntrl0_reg <= rx_tdata[111:110];
-      signal3_sampl0_reg <= rx_tdata[109:96];
+      signalD_cntrl1_reg <= rx_tdata[105];
+      signalD_sampl1_reg <= rx_tdata[103:90];
+      signalD_cntrl0_reg <= rx_tdata[121];
+      signalD_sampl0_reg <= rx_tdata[119:106];
       full <= 1'b1;
     end
   end
@@ -160,25 +160,25 @@ end//always
 
 //assign registered demapped sample to the outputs
 //Channel 0
-assign signal0_sampl0 = signal0_sampl0_reg;
-assign signal0_sampl1 = signal0_sampl1_reg;
-assign signal0_cntrl0 = signal0_cntrl0_reg;
-assign signal0_cntrl1 = signal0_cntrl1_reg;
+assign signalA_sampl0 = signalA_sampl0_reg;
+assign signalA_sampl1 = signalA_sampl1_reg;
+assign signalA_cntrl0 = signalA_cntrl0_reg;
+assign signalA_cntrl1 = signalA_cntrl1_reg;
 //Channel 1
-assign signal1_sampl0 = signal1_sampl0_reg;
-assign signal1_sampl1 = signal1_sampl1_reg;
-assign signal1_cntrl0 = signal1_cntrl0_reg;
-assign signal1_cntrl1 = signal1_cntrl1_reg;
+assign signalB_sampl0 = signalB_sampl0_reg;
+assign signalB_sampl1 = signalB_sampl1_reg;
+assign signalB_cntrl0 = signalB_cntrl0_reg;
+assign signalB_cntrl1 = signalB_cntrl1_reg;
 //Channel 2
-assign signal2_sampl0 = signal2_sampl0_reg;
-assign signal2_sampl1 = signal2_sampl1_reg;
-assign signal2_cntrl0 = signal2_cntrl0_reg;
-assign signal2_cntrl1 = signal2_cntrl1_reg;
+assign signalC_sampl0 = signalC_sampl0_reg;
+assign signalC_sampl1 = signalC_sampl1_reg;
+assign signalC_cntrl0 = signalC_cntrl0_reg;
+assign signalC_cntrl1 = signalC_cntrl1_reg;
 //Channel 3
-assign signal3_sampl0 = signal3_sampl0_reg;
-assign signal3_sampl1 = signal3_sampl1_reg;
-assign signal3_cntrl0 = signal3_cntrl0_reg;
-assign signal3_cntrl1 = signal3_cntrl1_reg;
+assign signalD_sampl0 = signalD_sampl0_reg;
+assign signalD_sampl1 = signalD_sampl1_reg;
+assign signalD_cntrl0 = signalD_cntrl0_reg;
+assign signalD_cntrl1 = signalD_cntrl1_reg;
 
 assign ready_out = rx_tvalid & full;
 

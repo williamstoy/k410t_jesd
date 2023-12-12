@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  4 15:03:29 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 12 16:26:50 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -79,16 +79,6 @@
         <CONNECTION INSTANCE="frontpanel_0" PORT="okAA"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="CLK_LAO_0P" SIGIS="undef" SIGNAME="External_Ports_CLK_LAO_0P">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="util_ds_buf_3" PORT="IBUF_DS_P"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="CLK_LAO_0M" SIGIS="undef" SIGNAME="External_Ports_CLK_LAO_0M">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="util_ds_buf_3" PORT="IBUF_DS_N"/>
-      </CONNECTIONS>
-    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -103,186 +93,46 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="14" FULLNAME="/c_counter_binary_0" HWVERSION="12.0" INSTANCE="c_counter_binary_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="c_counter_binary" VLNV="xilinx.com:ip:c_counter_binary:12.0">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=c_counter_binary;v=v12_0;d=pg121-c-counter-binary.pdf"/>
-      </DOCUMENTS>
+    <MODULE COREREVISION="1" FULLNAME="/data_processing_unit_0" HWVERSION="1.0" INSTANCE="data_processing_unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="data_processing_unit" VLNV="xilinx.com:module_ref:data_processing_unit:1.0">
+      <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="C_IMPLEMENTATION" VALUE="0"/>
-        <PARAMETER NAME="C_VERBOSITY" VALUE="0"/>
-        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="kintex7"/>
-        <PARAMETER NAME="C_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_HAS_CE" VALUE="1"/>
-        <PARAMETER NAME="C_HAS_SCLR" VALUE="1"/>
-        <PARAMETER NAME="C_RESTRICT_COUNT" VALUE="0"/>
-        <PARAMETER NAME="C_COUNT_TO" VALUE="1"/>
-        <PARAMETER NAME="C_COUNT_BY" VALUE="1"/>
-        <PARAMETER NAME="C_COUNT_MODE" VALUE="0"/>
-        <PARAMETER NAME="C_THRESH0_VALUE" VALUE="1"/>
-        <PARAMETER NAME="C_CE_OVERRIDES_SYNC" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_THRESH0" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_LOAD" VALUE="0"/>
-        <PARAMETER NAME="C_LOAD_LOW" VALUE="0"/>
-        <PARAMETER NAME="C_LATENCY" VALUE="1"/>
-        <PARAMETER NAME="C_FB_LATENCY" VALUE="0"/>
-        <PARAMETER NAME="C_AINIT_VAL" VALUE="0"/>
-        <PARAMETER NAME="C_SINIT_VAL" VALUE="0"/>
-        <PARAMETER NAME="C_SCLR_OVERRIDES_SSET" VALUE="1"/>
-        <PARAMETER NAME="C_HAS_SSET" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_SINIT" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_c_counter_binary_0_0"/>
-        <PARAMETER NAME="Implementation" VALUE="Fabric"/>
-        <PARAMETER NAME="Output_Width" VALUE="32"/>
-        <PARAMETER NAME="Increment_Value" VALUE="1"/>
-        <PARAMETER NAME="Restrict_Count" VALUE="false"/>
-        <PARAMETER NAME="Final_Count_Value" VALUE="1"/>
-        <PARAMETER NAME="Count_Mode" VALUE="UP"/>
-        <PARAMETER NAME="Sync_Threshold_Output" VALUE="false"/>
-        <PARAMETER NAME="Threshold_Value" VALUE="1"/>
-        <PARAMETER NAME="CE" VALUE="true"/>
-        <PARAMETER NAME="SCLR" VALUE="true"/>
-        <PARAMETER NAME="SSET" VALUE="false"/>
-        <PARAMETER NAME="SINIT" VALUE="false"/>
-        <PARAMETER NAME="SINIT_Value" VALUE="0"/>
-        <PARAMETER NAME="SyncCtrlPriority" VALUE="Reset_Overrides_Set"/>
-        <PARAMETER NAME="Sync_CE_Priority" VALUE="Sync_Overrides_CE"/>
-        <PARAMETER NAME="AINIT_Value" VALUE="0"/>
-        <PARAMETER NAME="Load" VALUE="false"/>
-        <PARAMETER NAME="Latency_Configuration" VALUE="Manual"/>
-        <PARAMETER NAME="Latency" VALUE="1"/>
-        <PARAMETER NAME="Fb_Latency_Configuration" VALUE="Manual"/>
-        <PARAMETER NAME="Fb_Latency" VALUE="0"/>
-        <PARAMETER NAME="Load_Sense" VALUE="Active_High"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_data_processing_unit_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="CE" SIGIS="ce" SIGNAME="clock_control_0_CE">
+        <PORT DIR="I" NAME="RESET_N" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_control_0" PORT="CE"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="SCLR" SIGIS="rst" SIGNAME="clock_control_0_clock_reset">
+        <PORT DIR="I" LEFT="13" NAME="A0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_control_0" PORT="clock_reset"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalA_sampl0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="Q" RIGHT="0" SIGIS="data" SIGNAME="c_counter_binary_0_Q">
+        <PORT DIR="I" LEFT="13" NAME="A1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="wo22_ep_datain"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalA_sampl1"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="14" FULLNAME="/c_counter_binary_1" HWVERSION="12.0" INSTANCE="c_counter_binary_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="c_counter_binary" VLNV="xilinx.com:ip:c_counter_binary:12.0">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=c_counter_binary;v=v12_0;d=pg121-c-counter-binary.pdf"/>
-      </DOCUMENTS>
-      <PARAMETERS>
-        <PARAMETER NAME="C_IMPLEMENTATION" VALUE="0"/>
-        <PARAMETER NAME="C_VERBOSITY" VALUE="0"/>
-        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="kintex7"/>
-        <PARAMETER NAME="C_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_HAS_CE" VALUE="1"/>
-        <PARAMETER NAME="C_HAS_SCLR" VALUE="1"/>
-        <PARAMETER NAME="C_RESTRICT_COUNT" VALUE="0"/>
-        <PARAMETER NAME="C_COUNT_TO" VALUE="1"/>
-        <PARAMETER NAME="C_COUNT_BY" VALUE="1"/>
-        <PARAMETER NAME="C_COUNT_MODE" VALUE="0"/>
-        <PARAMETER NAME="C_THRESH0_VALUE" VALUE="1"/>
-        <PARAMETER NAME="C_CE_OVERRIDES_SYNC" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_THRESH0" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_LOAD" VALUE="0"/>
-        <PARAMETER NAME="C_LOAD_LOW" VALUE="0"/>
-        <PARAMETER NAME="C_LATENCY" VALUE="1"/>
-        <PARAMETER NAME="C_FB_LATENCY" VALUE="0"/>
-        <PARAMETER NAME="C_AINIT_VAL" VALUE="0"/>
-        <PARAMETER NAME="C_SINIT_VAL" VALUE="0"/>
-        <PARAMETER NAME="C_SCLR_OVERRIDES_SSET" VALUE="1"/>
-        <PARAMETER NAME="C_HAS_SSET" VALUE="0"/>
-        <PARAMETER NAME="C_HAS_SINIT" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_c_counter_binary_0_1"/>
-        <PARAMETER NAME="Implementation" VALUE="Fabric"/>
-        <PARAMETER NAME="Output_Width" VALUE="32"/>
-        <PARAMETER NAME="Increment_Value" VALUE="1"/>
-        <PARAMETER NAME="Restrict_Count" VALUE="false"/>
-        <PARAMETER NAME="Final_Count_Value" VALUE="1"/>
-        <PARAMETER NAME="Count_Mode" VALUE="UP"/>
-        <PARAMETER NAME="Sync_Threshold_Output" VALUE="false"/>
-        <PARAMETER NAME="Threshold_Value" VALUE="1"/>
-        <PARAMETER NAME="CE" VALUE="true"/>
-        <PARAMETER NAME="SCLR" VALUE="true"/>
-        <PARAMETER NAME="SSET" VALUE="false"/>
-        <PARAMETER NAME="SINIT" VALUE="false"/>
-        <PARAMETER NAME="SINIT_Value" VALUE="0"/>
-        <PARAMETER NAME="SyncCtrlPriority" VALUE="Reset_Overrides_Set"/>
-        <PARAMETER NAME="Sync_CE_Priority" VALUE="Sync_Overrides_CE"/>
-        <PARAMETER NAME="AINIT_Value" VALUE="0"/>
-        <PARAMETER NAME="Load" VALUE="false"/>
-        <PARAMETER NAME="Latency_Configuration" VALUE="Manual"/>
-        <PARAMETER NAME="Latency" VALUE="1"/>
-        <PARAMETER NAME="Fb_Latency_Configuration" VALUE="Manual"/>
-        <PARAMETER NAME="Fb_Latency" VALUE="0"/>
-        <PARAMETER NAME="Load_Sense" VALUE="Active_High"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="util_ds_buf_3_IBUF_OUT">
+        <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="data_processing_unit_0_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ds_buf_3" PORT="IBUF_OUT"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="CE" SIGIS="ce" SIGNAME="clock_control_0_CE">
+        <PORT DIR="O" LEFT="15" NAME="dt" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_dt">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_control_0" PORT="CE"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe11"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="SCLR" SIGIS="rst" SIGNAME="clock_control_0_clock_reset">
+        <PORT DIR="O" LEFT="31" NAME="IPI" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_IPI">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_control_0" PORT="clock_reset"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="Q" RIGHT="0" SIGIS="data" SIGNAME="c_counter_binary_1_Q">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="wo21_ep_datain"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/clock_control_0" HWVERSION="1.0" INSTANCE="clock_control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clock_control" VLNV="xilinx.com:module_ref:clock_control:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_clock_control_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="frontpanel_0_okClk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="okClk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="trigger" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_ti40_ep_trigger">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="ti40_ep_trigger"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clock_enable" SIGIS="clk"/>
-        <PORT DIR="O" NAME="CE" SIGIS="undef" SIGNAME="clock_control_0_CE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="c_counter_binary_1" PORT="CE"/>
-            <CONNECTION INSTANCE="c_counter_binary_0" PORT="CE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="clock_reset" SIGIS="rst" SIGNAME="clock_control_0_clock_reset">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="c_counter_binary_1" PORT="SCLR"/>
-            <CONNECTION INSTANCE="c_counter_binary_0" PORT="SCLR"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe10"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -328,10 +178,10 @@
         <PARAMETER NAME="WI.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="WI.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="WI.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="WO.COUNT" VALUE="3"/>
+        <PARAMETER NAME="WO.COUNT" VALUE="1"/>
         <PARAMETER NAME="WO.ADDR_0" VALUE="0x20"/>
-        <PARAMETER NAME="WO.ADDR_1" VALUE="0x21"/>
-        <PARAMETER NAME="WO.ADDR_2" VALUE="0x22"/>
+        <PARAMETER NAME="WO.ADDR_1" VALUE="0xff"/>
+        <PARAMETER NAME="WO.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_3" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_4" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_5" VALUE="0xff"/>
@@ -361,8 +211,8 @@
         <PARAMETER NAME="WO.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="TI.COUNT" VALUE="1"/>
-        <PARAMETER NAME="TI.ADDR_0" VALUE="0x40"/>
+        <PARAMETER NAME="TI.COUNT" VALUE="0"/>
+        <PARAMETER NAME="TI.ADDR_0" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_3" VALUE="0xff"/>
@@ -860,8 +710,6 @@
         <PORT DIR="O" NAME="okClk" SIGIS="undef" SIGNAME="frontpanel_0_okClk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="okClkIn"/>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="ti40_ep_clk"/>
-            <CONNECTION INSTANCE="clock_control_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="wi00_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi00_ep_dataout">
@@ -872,26 +720,6 @@
         <PORT DIR="I" LEFT="31" NAME="wo20_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wo20_ep_datain">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_DATAIN_WIREOUT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="wo21_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="c_counter_binary_1_Q">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="c_counter_binary_1" PORT="Q"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="wo22_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="c_counter_binary_0_Q">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="c_counter_binary_0" PORT="Q"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="ti40_ep_trigger" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_ti40_ep_trigger">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clock_control_0" PORT="trigger"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ti40_ep_clk" SIGIS="clk" SIGNAME="frontpanel_0_okClk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="btpi80_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_btpi80_ep_dataout">
@@ -930,22 +758,6 @@
             <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="wo20_ep_datain"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="wireout21" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wireout:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="wo21_ep_datain"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="wireout22" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wireout:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="wo22_ep_datain"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="triggerin40" TYPE="INITIATOR" VLNV="opalkelly.com:interface:triggerin:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_TRIGGER" PHYSICAL="ti40_ep_trigger"/>
-            <PORTMAP LOGICAL="EP_CLK" PHYSICAL="ti40_ep_clk"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="frontpanel_0_btpipein80" NAME="btpipein80" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpi80_ep_blockstrobe"/>
@@ -976,7 +788,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="10"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="12"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -1000,18 +812,18 @@
         <PARAMETER NAME="C_SLOT_0_AXI_AWUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_WUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_BUSER_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="14"/>
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="14"/>
         <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="1"/>
@@ -4101,9 +3913,9 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
+        <PORT DIR="I" LEFT="13" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_ready_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="gt_rxdata"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="ready_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_end_of_frame">
@@ -4116,14 +3928,14 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_start_of_frame"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
+        <PORT DIR="I" LEFT="13" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tdata"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalA_sampl1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
+        <PORT DIR="I" LEFT="0" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="valid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_end_of_multiframe">
@@ -4151,6 +3963,16 @@
             <CONNECTION INSTANCE="util_ds_buf_0" PORT="IBUF_OUT"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe10" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_IPI">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="IPI"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="probe11" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_dt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="dt"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4168,7 +3990,7 @@
         <PARAMETER NAME="C_SupportLevel" VALUE="1"/>
         <PARAMETER NAME="C_USE_RPAT" VALUE="false"/>
         <PARAMETER NAME="C_USE_JSPAT" VALUE="false"/>
-        <PARAMETER NAME="C_TransceiverControl" VALUE="true"/>
+        <PARAMETER NAME="C_TransceiverControl" VALUE="false"/>
         <PARAMETER NAME="c_sub_core_name" VALUE="design_1_jesd204_0_0_phy"/>
         <PARAMETER NAME="C_GT_Line_Rate" VALUE="4.9152"/>
         <PARAMETER NAME="C_GT_REFCLK_FREQ" VALUE="122.880"/>
@@ -4188,7 +4010,7 @@
         <PARAMETER NAME="SupportLevel" VALUE="1"/>
         <PARAMETER NAME="USE_RPAT" VALUE="false"/>
         <PARAMETER NAME="USE_JSPAT" VALUE="false"/>
-        <PARAMETER NAME="TransceiverControl" VALUE="true"/>
+        <PARAMETER NAME="TransceiverControl" VALUE="false"/>
         <PARAMETER NAME="GT_Line_Rate" VALUE="4.9152"/>
         <PARAMETER NAME="GT_REFCLK_FREQ" VALUE="122.880"/>
         <PARAMETER NAME="DRPCLK_FREQ" VALUE="100.8"/>
@@ -4199,7 +4021,6 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x00000FFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="loopback" RIGHT="0" SIGIS="undef"/>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="refclk_p" SIGIS="clk" SIGNAME="External_Ports_FPGA_JESD_CLKP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="FPGA_JESD_CLKP"/>
@@ -4212,8 +4033,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="rx_core_clk_out" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="c_counter_binary_0" PORT="CLK"/>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="clk"/>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100800000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="okAXI4LiteInterface_0_m_axi_aclk">
@@ -4329,16 +4151,18 @@
         <PORT DIR="O" NAME="rx_aresetn" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="RESET_N"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rx_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="rx_tvalid" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rx_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="rx_start_of_frame" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_start_of_frame">
@@ -4378,178 +4202,6 @@
             <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_IN"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="gt0_txresetdone_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt0_rxresetdone_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_txresetdone_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_rxresetdone_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_txresetdone_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_rxresetdone_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_txresetdone_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_rxresetdone_out" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="8" NAME="gt0_drpaddr_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_drpen_in" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="gt0_drpdi_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="gt0_drpdo_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_drpwe_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt0_drprdy_out" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="8" NAME="gt1_drpaddr_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_drpen_in" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="gt1_drpdi_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="gt1_drpdo_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_drpwe_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_drprdy_out" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="8" NAME="gt2_drpaddr_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_drpen_in" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="gt2_drpdi_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="gt2_drpdo_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_drpwe_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_drprdy_out" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="8" NAME="gt3_drpaddr_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_drpen_in" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="gt3_drpdi_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="gt3_drpdo_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_drpwe_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_drprdy_out" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="127" NAME="gt_rxdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_rxdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="15" NAME="gt_rxcharisk" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="gt_rxdisperr" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="gt_rxnotintable" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt0_rxpd_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt0_txpd_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt1_rxpd_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt1_txpd_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt2_rxpd_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt2_txpd_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt3_rxpd_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt3_txpd_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt0_eyescandataerror_out" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_eyescantrigger_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_eyescanreset_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_eyescandataerror_out" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_eyescantrigger_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_eyescanreset_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_eyescandataerror_out" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_eyescantrigger_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_eyescanreset_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_eyescandataerror_out" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_eyescantrigger_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_eyescanreset_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt0_rxprbserr_out" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="2" NAME="gt0_rxprbssel_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_rxprbscntreset_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_rxprbserr_out" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="2" NAME="gt1_rxprbssel_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_rxprbscntreset_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_rxprbserr_out" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="2" NAME="gt2_rxprbssel_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_rxprbscntreset_in" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_rxprbserr_out" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="2" NAME="gt3_rxprbssel_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_rxprbscntreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_txprbsforceerr_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_txprbsforceerr_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_txprbsforceerr_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_txprbsforceerr_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_rxbufreset_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="gt0_rxbufstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="gt0_rxstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt0_rxbyteisaligned_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt0_rxbyterealign_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt0_rxcommadet_out" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="6" NAME="gt0_rxmonitorout_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt0_rxmonitorsel_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_txpmareset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_txpcsreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_rxpmareset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_rxpcsreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_rxlpmen_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_rxdfelpmreset_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="gt0_txbufstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt0_cplllock_out" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_rxcdrhold_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="7" NAME="gt0_dmonitorout_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_rxbufreset_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="gt1_rxbufstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="gt1_rxstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_rxbyteisaligned_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_rxbyterealign_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_rxcommadet_out" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="6" NAME="gt1_rxmonitorout_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt1_rxmonitorsel_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_txpmareset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_txpcsreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_rxpmareset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_rxpcsreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_rxlpmen_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_rxdfelpmreset_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="gt1_txbufstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt1_cplllock_out" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_rxcdrhold_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="7" NAME="gt1_dmonitorout_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_rxbufreset_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="gt2_rxbufstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="gt2_rxstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_rxbyteisaligned_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_rxbyterealign_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_rxcommadet_out" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="6" NAME="gt2_rxmonitorout_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt2_rxmonitorsel_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_txpmareset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_txpcsreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_rxpmareset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_rxpcsreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_rxlpmen_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_rxdfelpmreset_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="gt2_txbufstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt2_cplllock_out" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_rxcdrhold_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="7" NAME="gt2_dmonitorout_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_rxbufreset_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="gt3_rxbufstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="gt3_rxstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_rxbyteisaligned_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_rxbyterealign_out" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_rxcommadet_out" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="6" NAME="gt3_rxmonitorout_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="gt3_rxmonitorsel_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_txpmareset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_txpcsreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_rxpmareset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_rxpcsreset_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_rxlpmen_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_rxdfelpmreset_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="gt3_txbufstatus_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="gt3_cplllock_out" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_rxcdrhold_in" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="7" NAME="gt3_dmonitorout_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_rxpolarity_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_txpolarity_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt0_txinhibit_in" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="4" NAME="gt0_txpostcursor_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="4" NAME="gt0_txprecursor_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="gt0_txdiffctrl_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_rxpolarity_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_txpolarity_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt1_txinhibit_in" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="4" NAME="gt1_txpostcursor_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="4" NAME="gt1_txprecursor_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="gt1_txdiffctrl_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_rxpolarity_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_txpolarity_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt2_txinhibit_in" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="4" NAME="gt2_txpostcursor_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="4" NAME="gt2_txprecursor_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="gt2_txdiffctrl_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_rxpolarity_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_txpolarity_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="gt3_txinhibit_in" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="4" NAME="gt3_txpostcursor_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="4" NAME="gt3_txprecursor_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="gt3_txdiffctrl_in" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="okAXI4LiteInterface_0_m_axi" DATAWIDTH="32" NAME="s_axi" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -4604,7 +4256,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="m_axis_rx" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="jesd204_0_m_axis_rx" NAME="m_axis_rx" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -4623,200 +4275,84 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="rx_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="gt_drp0" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/jesd204_0_transport_0" HWVERSION="1.0" INSTANCE="jesd204_0_transport_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="jesd204_0_transport_layer_demapper" VLNV="xilinx.com:module_ref:jesd204_0_transport_layer_demapper:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_jesd204_0_transport_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rx_tvalid" SIGIS="undef" SIGNAME="jesd204_0_rx_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="signalA_sampl0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="A0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="signalA_sampl1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="A1"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="signalA_cntrl0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="signalA_cntrl1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="signalB_sampl0" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="signalB_sampl1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="signalB_cntrl0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="signalB_cntrl1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="signalC_sampl0" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="signalC_sampl1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="signalC_cntrl0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="signalC_cntrl1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="signalD_sampl0" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="signalD_sampl1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="signalD_cntrl0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="signalD_cntrl1" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ready_out" SIGIS="undef" SIGNAME="jesd204_0_transport_0_ready_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="jesd204_0_m_axis_rx" NAME="rx" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_jesd204_0_0_rx_core_clk_out"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="DADDR" PHYSICAL="gt0_drpaddr_in"/>
-            <PORTMAP LOGICAL="DEN" PHYSICAL="gt0_drpen_in"/>
-            <PORTMAP LOGICAL="DI" PHYSICAL="gt0_drpdi_in"/>
-            <PORTMAP LOGICAL="DO" PHYSICAL="gt0_drpdo_out"/>
-            <PORTMAP LOGICAL="DRDY" PHYSICAL="gt0_drprdy_out"/>
-            <PORTMAP LOGICAL="DWE" PHYSICAL="gt0_drpwe_in"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="gt_drp1" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="DADDR" PHYSICAL="gt1_drpaddr_in"/>
-            <PORTMAP LOGICAL="DEN" PHYSICAL="gt1_drpen_in"/>
-            <PORTMAP LOGICAL="DI" PHYSICAL="gt1_drpdi_in"/>
-            <PORTMAP LOGICAL="DO" PHYSICAL="gt1_drpdo_out"/>
-            <PORTMAP LOGICAL="DRDY" PHYSICAL="gt1_drprdy_out"/>
-            <PORTMAP LOGICAL="DWE" PHYSICAL="gt1_drpwe_in"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="gt_drp2" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="DADDR" PHYSICAL="gt2_drpaddr_in"/>
-            <PORTMAP LOGICAL="DEN" PHYSICAL="gt2_drpen_in"/>
-            <PORTMAP LOGICAL="DI" PHYSICAL="gt2_drpdi_in"/>
-            <PORTMAP LOGICAL="DO" PHYSICAL="gt2_drpdo_out"/>
-            <PORTMAP LOGICAL="DRDY" PHYSICAL="gt2_drprdy_out"/>
-            <PORTMAP LOGICAL="DWE" PHYSICAL="gt2_drpwe_in"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="gt_drp3" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="DADDR" PHYSICAL="gt3_drpaddr_in"/>
-            <PORTMAP LOGICAL="DEN" PHYSICAL="gt3_drpen_in"/>
-            <PORTMAP LOGICAL="DI" PHYSICAL="gt3_drpdi_in"/>
-            <PORTMAP LOGICAL="DO" PHYSICAL="gt3_drpdo_out"/>
-            <PORTMAP LOGICAL="DRDY" PHYSICAL="gt3_drprdy_out"/>
-            <PORTMAP LOGICAL="DWE" PHYSICAL="gt3_drpwe_in"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="transceiver_debug0" TYPE="INITIATOR" VLNV="xilinx.com:display_jesd204:transceiver_debug:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="cplllock_out" PHYSICAL="gt0_cplllock_out"/>
-            <PORTMAP LOGICAL="dmonitorout_out" PHYSICAL="gt0_dmonitorout_out"/>
-            <PORTMAP LOGICAL="eyescandataerror_out" PHYSICAL="gt0_eyescandataerror_out"/>
-            <PORTMAP LOGICAL="eyescanreset_in" PHYSICAL="gt0_eyescanreset_in"/>
-            <PORTMAP LOGICAL="eyescantrigger_in" PHYSICAL="gt0_eyescantrigger_in"/>
-            <PORTMAP LOGICAL="rxbufreset_in" PHYSICAL="gt0_rxbufreset_in"/>
-            <PORTMAP LOGICAL="rxbufstatus_out" PHYSICAL="gt0_rxbufstatus_out"/>
-            <PORTMAP LOGICAL="rxbyteisaligned_out" PHYSICAL="gt0_rxbyteisaligned_out"/>
-            <PORTMAP LOGICAL="rxbyterealign_out" PHYSICAL="gt0_rxbyterealign_out"/>
-            <PORTMAP LOGICAL="rxcdrhold_in" PHYSICAL="gt0_rxcdrhold_in"/>
-            <PORTMAP LOGICAL="rxcommadet_out" PHYSICAL="gt0_rxcommadet_out"/>
-            <PORTMAP LOGICAL="rxdfelpmreset_in" PHYSICAL="gt0_rxdfelpmreset_in"/>
-            <PORTMAP LOGICAL="rxlpmen_in" PHYSICAL="gt0_rxlpmen_in"/>
-            <PORTMAP LOGICAL="rxmonitorout_out" PHYSICAL="gt0_rxmonitorout_out"/>
-            <PORTMAP LOGICAL="rxmonitorsel_in" PHYSICAL="gt0_rxmonitorsel_in"/>
-            <PORTMAP LOGICAL="rxpcsreset_in" PHYSICAL="gt0_rxpcsreset_in"/>
-            <PORTMAP LOGICAL="rxpd_in" PHYSICAL="gt0_rxpd_in"/>
-            <PORTMAP LOGICAL="rxpmareset_in" PHYSICAL="gt0_rxpmareset_in"/>
-            <PORTMAP LOGICAL="rxpolarity_in" PHYSICAL="gt0_rxpolarity_in"/>
-            <PORTMAP LOGICAL="rxprbscntreset_in" PHYSICAL="gt0_rxprbscntreset_in"/>
-            <PORTMAP LOGICAL="rxprbserr_out" PHYSICAL="gt0_rxprbserr_out"/>
-            <PORTMAP LOGICAL="rxprbssel_in" PHYSICAL="gt0_rxprbssel_in"/>
-            <PORTMAP LOGICAL="rxresetdone_out" PHYSICAL="gt0_rxresetdone_out"/>
-            <PORTMAP LOGICAL="rxstatus_out" PHYSICAL="gt0_rxstatus_out"/>
-            <PORTMAP LOGICAL="txbufstatus_out" PHYSICAL="gt0_txbufstatus_out"/>
-            <PORTMAP LOGICAL="txdiffctrl_in" PHYSICAL="gt0_txdiffctrl_in"/>
-            <PORTMAP LOGICAL="txinhibit_in" PHYSICAL="gt0_txinhibit_in"/>
-            <PORTMAP LOGICAL="txpcsreset_in" PHYSICAL="gt0_txpcsreset_in"/>
-            <PORTMAP LOGICAL="txpd_in" PHYSICAL="gt0_txpd_in"/>
-            <PORTMAP LOGICAL="txpmareset_in" PHYSICAL="gt0_txpmareset_in"/>
-            <PORTMAP LOGICAL="txpolarity_in" PHYSICAL="gt0_txpolarity_in"/>
-            <PORTMAP LOGICAL="txpostcursor_in" PHYSICAL="gt0_txpostcursor_in"/>
-            <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt0_txprbsforceerr_in"/>
-            <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt0_txprecursor_in"/>
-            <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt0_txresetdone_out"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="transceiver_debug1" TYPE="INITIATOR" VLNV="xilinx.com:display_jesd204:transceiver_debug:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="cplllock_out" PHYSICAL="gt1_cplllock_out"/>
-            <PORTMAP LOGICAL="dmonitorout_out" PHYSICAL="gt1_dmonitorout_out"/>
-            <PORTMAP LOGICAL="eyescandataerror_out" PHYSICAL="gt1_eyescandataerror_out"/>
-            <PORTMAP LOGICAL="eyescanreset_in" PHYSICAL="gt1_eyescanreset_in"/>
-            <PORTMAP LOGICAL="eyescantrigger_in" PHYSICAL="gt1_eyescantrigger_in"/>
-            <PORTMAP LOGICAL="rxbufreset_in" PHYSICAL="gt1_rxbufreset_in"/>
-            <PORTMAP LOGICAL="rxbufstatus_out" PHYSICAL="gt1_rxbufstatus_out"/>
-            <PORTMAP LOGICAL="rxbyteisaligned_out" PHYSICAL="gt1_rxbyteisaligned_out"/>
-            <PORTMAP LOGICAL="rxbyterealign_out" PHYSICAL="gt1_rxbyterealign_out"/>
-            <PORTMAP LOGICAL="rxcdrhold_in" PHYSICAL="gt1_rxcdrhold_in"/>
-            <PORTMAP LOGICAL="rxcommadet_out" PHYSICAL="gt1_rxcommadet_out"/>
-            <PORTMAP LOGICAL="rxdfelpmreset_in" PHYSICAL="gt1_rxdfelpmreset_in"/>
-            <PORTMAP LOGICAL="rxlpmen_in" PHYSICAL="gt1_rxlpmen_in"/>
-            <PORTMAP LOGICAL="rxmonitorout_out" PHYSICAL="gt1_rxmonitorout_out"/>
-            <PORTMAP LOGICAL="rxmonitorsel_in" PHYSICAL="gt1_rxmonitorsel_in"/>
-            <PORTMAP LOGICAL="rxpcsreset_in" PHYSICAL="gt1_rxpcsreset_in"/>
-            <PORTMAP LOGICAL="rxpd_in" PHYSICAL="gt1_rxpd_in"/>
-            <PORTMAP LOGICAL="rxpmareset_in" PHYSICAL="gt1_rxpmareset_in"/>
-            <PORTMAP LOGICAL="rxpolarity_in" PHYSICAL="gt1_rxpolarity_in"/>
-            <PORTMAP LOGICAL="rxprbscntreset_in" PHYSICAL="gt1_rxprbscntreset_in"/>
-            <PORTMAP LOGICAL="rxprbserr_out" PHYSICAL="gt1_rxprbserr_out"/>
-            <PORTMAP LOGICAL="rxprbssel_in" PHYSICAL="gt1_rxprbssel_in"/>
-            <PORTMAP LOGICAL="rxresetdone_out" PHYSICAL="gt1_rxresetdone_out"/>
-            <PORTMAP LOGICAL="rxstatus_out" PHYSICAL="gt1_rxstatus_out"/>
-            <PORTMAP LOGICAL="txbufstatus_out" PHYSICAL="gt1_txbufstatus_out"/>
-            <PORTMAP LOGICAL="txdiffctrl_in" PHYSICAL="gt1_txdiffctrl_in"/>
-            <PORTMAP LOGICAL="txinhibit_in" PHYSICAL="gt1_txinhibit_in"/>
-            <PORTMAP LOGICAL="txpcsreset_in" PHYSICAL="gt1_txpcsreset_in"/>
-            <PORTMAP LOGICAL="txpd_in" PHYSICAL="gt1_txpd_in"/>
-            <PORTMAP LOGICAL="txpmareset_in" PHYSICAL="gt1_txpmareset_in"/>
-            <PORTMAP LOGICAL="txpolarity_in" PHYSICAL="gt1_txpolarity_in"/>
-            <PORTMAP LOGICAL="txpostcursor_in" PHYSICAL="gt1_txpostcursor_in"/>
-            <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt1_txprbsforceerr_in"/>
-            <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt1_txprecursor_in"/>
-            <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt1_txresetdone_out"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="transceiver_debug2" TYPE="INITIATOR" VLNV="xilinx.com:display_jesd204:transceiver_debug:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="cplllock_out" PHYSICAL="gt2_cplllock_out"/>
-            <PORTMAP LOGICAL="dmonitorout_out" PHYSICAL="gt2_dmonitorout_out"/>
-            <PORTMAP LOGICAL="eyescandataerror_out" PHYSICAL="gt2_eyescandataerror_out"/>
-            <PORTMAP LOGICAL="eyescanreset_in" PHYSICAL="gt2_eyescanreset_in"/>
-            <PORTMAP LOGICAL="eyescantrigger_in" PHYSICAL="gt2_eyescantrigger_in"/>
-            <PORTMAP LOGICAL="rxbufreset_in" PHYSICAL="gt2_rxbufreset_in"/>
-            <PORTMAP LOGICAL="rxbufstatus_out" PHYSICAL="gt2_rxbufstatus_out"/>
-            <PORTMAP LOGICAL="rxbyteisaligned_out" PHYSICAL="gt2_rxbyteisaligned_out"/>
-            <PORTMAP LOGICAL="rxbyterealign_out" PHYSICAL="gt2_rxbyterealign_out"/>
-            <PORTMAP LOGICAL="rxcdrhold_in" PHYSICAL="gt2_rxcdrhold_in"/>
-            <PORTMAP LOGICAL="rxcommadet_out" PHYSICAL="gt2_rxcommadet_out"/>
-            <PORTMAP LOGICAL="rxdfelpmreset_in" PHYSICAL="gt2_rxdfelpmreset_in"/>
-            <PORTMAP LOGICAL="rxlpmen_in" PHYSICAL="gt2_rxlpmen_in"/>
-            <PORTMAP LOGICAL="rxmonitorout_out" PHYSICAL="gt2_rxmonitorout_out"/>
-            <PORTMAP LOGICAL="rxmonitorsel_in" PHYSICAL="gt2_rxmonitorsel_in"/>
-            <PORTMAP LOGICAL="rxpcsreset_in" PHYSICAL="gt2_rxpcsreset_in"/>
-            <PORTMAP LOGICAL="rxpd_in" PHYSICAL="gt2_rxpd_in"/>
-            <PORTMAP LOGICAL="rxpmareset_in" PHYSICAL="gt2_rxpmareset_in"/>
-            <PORTMAP LOGICAL="rxpolarity_in" PHYSICAL="gt2_rxpolarity_in"/>
-            <PORTMAP LOGICAL="rxprbscntreset_in" PHYSICAL="gt2_rxprbscntreset_in"/>
-            <PORTMAP LOGICAL="rxprbserr_out" PHYSICAL="gt2_rxprbserr_out"/>
-            <PORTMAP LOGICAL="rxprbssel_in" PHYSICAL="gt2_rxprbssel_in"/>
-            <PORTMAP LOGICAL="rxresetdone_out" PHYSICAL="gt2_rxresetdone_out"/>
-            <PORTMAP LOGICAL="rxstatus_out" PHYSICAL="gt2_rxstatus_out"/>
-            <PORTMAP LOGICAL="txbufstatus_out" PHYSICAL="gt2_txbufstatus_out"/>
-            <PORTMAP LOGICAL="txdiffctrl_in" PHYSICAL="gt2_txdiffctrl_in"/>
-            <PORTMAP LOGICAL="txinhibit_in" PHYSICAL="gt2_txinhibit_in"/>
-            <PORTMAP LOGICAL="txpcsreset_in" PHYSICAL="gt2_txpcsreset_in"/>
-            <PORTMAP LOGICAL="txpd_in" PHYSICAL="gt2_txpd_in"/>
-            <PORTMAP LOGICAL="txpmareset_in" PHYSICAL="gt2_txpmareset_in"/>
-            <PORTMAP LOGICAL="txpolarity_in" PHYSICAL="gt2_txpolarity_in"/>
-            <PORTMAP LOGICAL="txpostcursor_in" PHYSICAL="gt2_txpostcursor_in"/>
-            <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt2_txprbsforceerr_in"/>
-            <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt2_txprecursor_in"/>
-            <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt2_txresetdone_out"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="transceiver_debug3" TYPE="INITIATOR" VLNV="xilinx.com:display_jesd204:transceiver_debug:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="cplllock_out" PHYSICAL="gt3_cplllock_out"/>
-            <PORTMAP LOGICAL="dmonitorout_out" PHYSICAL="gt3_dmonitorout_out"/>
-            <PORTMAP LOGICAL="eyescandataerror_out" PHYSICAL="gt3_eyescandataerror_out"/>
-            <PORTMAP LOGICAL="eyescanreset_in" PHYSICAL="gt3_eyescanreset_in"/>
-            <PORTMAP LOGICAL="eyescantrigger_in" PHYSICAL="gt3_eyescantrigger_in"/>
-            <PORTMAP LOGICAL="rxbufreset_in" PHYSICAL="gt3_rxbufreset_in"/>
-            <PORTMAP LOGICAL="rxbufstatus_out" PHYSICAL="gt3_rxbufstatus_out"/>
-            <PORTMAP LOGICAL="rxbyteisaligned_out" PHYSICAL="gt3_rxbyteisaligned_out"/>
-            <PORTMAP LOGICAL="rxbyterealign_out" PHYSICAL="gt3_rxbyterealign_out"/>
-            <PORTMAP LOGICAL="rxcdrhold_in" PHYSICAL="gt3_rxcdrhold_in"/>
-            <PORTMAP LOGICAL="rxcommadet_out" PHYSICAL="gt3_rxcommadet_out"/>
-            <PORTMAP LOGICAL="rxdfelpmreset_in" PHYSICAL="gt3_rxdfelpmreset_in"/>
-            <PORTMAP LOGICAL="rxlpmen_in" PHYSICAL="gt3_rxlpmen_in"/>
-            <PORTMAP LOGICAL="rxmonitorout_out" PHYSICAL="gt3_rxmonitorout_out"/>
-            <PORTMAP LOGICAL="rxmonitorsel_in" PHYSICAL="gt3_rxmonitorsel_in"/>
-            <PORTMAP LOGICAL="rxpcsreset_in" PHYSICAL="gt3_rxpcsreset_in"/>
-            <PORTMAP LOGICAL="rxpd_in" PHYSICAL="gt3_rxpd_in"/>
-            <PORTMAP LOGICAL="rxpmareset_in" PHYSICAL="gt3_rxpmareset_in"/>
-            <PORTMAP LOGICAL="rxpolarity_in" PHYSICAL="gt3_rxpolarity_in"/>
-            <PORTMAP LOGICAL="rxprbscntreset_in" PHYSICAL="gt3_rxprbscntreset_in"/>
-            <PORTMAP LOGICAL="rxprbserr_out" PHYSICAL="gt3_rxprbserr_out"/>
-            <PORTMAP LOGICAL="rxprbssel_in" PHYSICAL="gt3_rxprbssel_in"/>
-            <PORTMAP LOGICAL="rxresetdone_out" PHYSICAL="gt3_rxresetdone_out"/>
-            <PORTMAP LOGICAL="rxstatus_out" PHYSICAL="gt3_rxstatus_out"/>
-            <PORTMAP LOGICAL="txbufstatus_out" PHYSICAL="gt3_txbufstatus_out"/>
-            <PORTMAP LOGICAL="txdiffctrl_in" PHYSICAL="gt3_txdiffctrl_in"/>
-            <PORTMAP LOGICAL="txinhibit_in" PHYSICAL="gt3_txinhibit_in"/>
-            <PORTMAP LOGICAL="txpcsreset_in" PHYSICAL="gt3_txpcsreset_in"/>
-            <PORTMAP LOGICAL="txpd_in" PHYSICAL="gt3_txpd_in"/>
-            <PORTMAP LOGICAL="txpmareset_in" PHYSICAL="gt3_txpmareset_in"/>
-            <PORTMAP LOGICAL="txpolarity_in" PHYSICAL="gt3_txpolarity_in"/>
-            <PORTMAP LOGICAL="txpostcursor_in" PHYSICAL="gt3_txpostcursor_in"/>
-            <PORTMAP LOGICAL="txprbsforceerr_in" PHYSICAL="gt3_txprbsforceerr_in"/>
-            <PORTMAP LOGICAL="txprecursor_in" PHYSICAL="gt3_txprecursor_in"/>
-            <PORTMAP LOGICAL="txresetdone_out" PHYSICAL="gt3_txresetdone_out"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="rx_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="rx_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -5130,47 +4666,6 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="21" FULLNAME="/util_ds_buf_3" HWVERSION="2.1" INSTANCE="util_ds_buf_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="C_BUF_TYPE" VALUE="IBUFDS"/>
-        <PARAMETER NAME="C_SIZE" VALUE="1"/>
-        <PARAMETER NAME="C_BUFGCE_DIV" VALUE="1"/>
-        <PARAMETER NAME="C_BUFG_GT_SYNC" VALUE="0"/>
-        <PARAMETER NAME="C_SIM_DEVICE" VALUE="VERSAL_AI_CORE_ES1"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_util_ds_buf_3_0"/>
-        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
-        <PARAMETER NAME="DIFF_CLK_IN_BOARD_INTERFACE" VALUE="Custom"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="IBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_CLK_LAO_0P">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="CLK_LAO_0P"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="IBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_CLK_LAO_0M">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="CLK_LAO_0M"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_3_IBUF_OUT">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="c_counter_binary_1" PORT="CLK"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="CLK_IN_D" TYPE="TARGET" VLNV="xilinx.com:interface:diff_clock:1.0">
-          <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="CLK_P" PHYSICAL="IBUF_DS_P"/>
-            <PORTMAP LOGICAL="CLK_N" PHYSICAL="IBUF_DS_N"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
     </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/wireoutbreakout_0" HWVERSION="1.0" INSTANCE="wireoutbreakout_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="wireoutbreakout" VLNV="xilinx.com:module_ref:wireoutbreakout:1.0">
       <DOCUMENTS/>

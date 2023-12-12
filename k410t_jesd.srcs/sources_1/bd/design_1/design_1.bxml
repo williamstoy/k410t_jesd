@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1701720209"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1701720209"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1701720209"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1701720209"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1702416411"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1702416411"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1702416411"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1702416411"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0.xci" Type="IP">
         <Instance HierarchyPath="frontpanel_0"/>
@@ -63,32 +63,24 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_clock_control_0_0/design_1_clock_control_0_0.xci" Type="IP">
-        <Instance HierarchyPath="clock_control_0"/>
+      <File Name="ip/design_1_ila_0_1/design_1_ila_0_1.xci" Type="IP">
+        <Instance HierarchyPath="ila_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0.xci" Type="IP">
-        <Instance HierarchyPath="c_counter_binary_0"/>
+      <File Name="ip/design_1_data_processing_unit_0_0/design_1_data_processing_unit_0_0.xci" Type="IP">
+        <Instance HierarchyPath="data_processing_unit_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_util_ds_buf_3_0/design_1_util_ds_buf_3_0.xci" Type="IP">
-        <Instance HierarchyPath="util_ds_buf_3"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/design_1_c_counter_binary_0_1/design_1_c_counter_binary_0_1.xci" Type="IP">
-        <Instance HierarchyPath="c_counter_binary_1"/>
+      <File Name="ip/design_1_jesd204_0_transport_0_0/design_1_jesd204_0_transport_0_0.xci" Type="IP">
+        <Instance HierarchyPath="jesd204_0_transport_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -104,14 +96,6 @@
       <File Name="sim/design_1.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/design_1_ila_0_1/design_1_ila_0_1.xci" Type="IP">
-        <Instance HierarchyPath="ila_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="design_1_ooc.xdc" Type="XDC">

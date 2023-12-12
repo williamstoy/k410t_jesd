@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# clock_control, okAXI4LiteInterface, wireoutbreakout
+# data_processing_unit, jesd204_0_transport_layer_demapper, okAXI4LiteInterface, wireoutbreakout
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -167,8 +167,6 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set CLK_LAO_0M [ create_bd_port -dir I CLK_LAO_0M ]
-  set CLK_LAO_0P [ create_bd_port -dir I CLK_LAO_0P ]
   set FPGA_JESD_CLKM [ create_bd_port -dir I FPGA_JESD_CLKM ]
   set FPGA_JESD_CLKP [ create_bd_port -dir I FPGA_JESD_CLKP ]
   set FPGA_JESD_SYSREFM [ create_bd_port -dir I FPGA_JESD_SYSREFM ]
@@ -181,50 +179,30 @@ proc create_root_design { parentCell } {
   set rxn [ create_bd_port -dir I -from 3 -to 0 rxn ]
   set rxp [ create_bd_port -dir I -from 3 -to 0 rxp ]
 
-  # Create instance: c_counter_binary_0, and set properties
-  set c_counter_binary_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:c_counter_binary:12.0 c_counter_binary_0 ]
-  set_property -dict [ list \
-   CONFIG.CE {true} \
-   CONFIG.Output_Width {32} \
-   CONFIG.SCLR {true} \
- ] $c_counter_binary_0
-
-  # Create instance: c_counter_binary_1, and set properties
-  set c_counter_binary_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:c_counter_binary:12.0 c_counter_binary_1 ]
-  set_property -dict [ list \
-   CONFIG.CE {true} \
-   CONFIG.Output_Width {32} \
-   CONFIG.SCLR {true} \
- ] $c_counter_binary_1
-
-  # Create instance: clock_control_0, and set properties
-  set block_name clock_control
-  set block_cell_name clock_control_0
-  if { [catch {set clock_control_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: data_processing_unit_0, and set properties
+  set block_name data_processing_unit
+  set block_cell_name data_processing_unit_0
+  if { [catch {set data_processing_unit_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $clock_control_0 eq "" } {
+   } elseif { $data_processing_unit_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
   
-  set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
- ] [get_bd_pins /clock_control_0/clock_reset]
-
   # Create instance: frontpanel_0, and set properties
   set frontpanel_0 [ create_bd_cell -type ip -vlnv opalkelly.com:ip:frontpanel:1.0 frontpanel_0 ]
   set_property -dict [ list \
    CONFIG.BTPI.ADDR_0 {0x80} \
    CONFIG.BTPI.COUNT {1} \
-   CONFIG.TI.ADDR_0 {0x40} \
-   CONFIG.TI.COUNT {1} \
+   CONFIG.TI.ADDR_0 {0xff} \
+   CONFIG.TI.COUNT {0} \
    CONFIG.WI.ADDR_0 {0x00} \
    CONFIG.WI.COUNT {1} \
    CONFIG.WO.ADDR_0 {0x20} \
-   CONFIG.WO.ADDR_1 {0x21} \
-   CONFIG.WO.ADDR_2 {0x22} \
-   CONFIG.WO.COUNT {3} \
+   CONFIG.WO.ADDR_1 {0xff} \
+   CONFIG.WO.ADDR_2 {0xff} \
+   CONFIG.WO.COUNT {1} \
    CONFIG.host_interface_BOARD_INTERFACE {host_interface} \
  ] $frontpanel_0
 
@@ -235,14 +213,14 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {10} \
-   CONFIG.C_PROBE0_WIDTH {128} \
-   CONFIG.C_PROBE10_WIDTH {1} \
-   CONFIG.C_PROBE11_WIDTH {1} \
+   CONFIG.C_NUM_OF_PROBES {12} \
+   CONFIG.C_PROBE0_WIDTH {14} \
+   CONFIG.C_PROBE10_WIDTH {32} \
+   CONFIG.C_PROBE11_WIDTH {16} \
    CONFIG.C_PROBE12_WIDTH {1} \
    CONFIG.C_PROBE1_WIDTH {4} \
    CONFIG.C_PROBE2_WIDTH {4} \
-   CONFIG.C_PROBE3_WIDTH {128} \
+   CONFIG.C_PROBE3_WIDTH {14} \
    CONFIG.C_PROBE5_WIDTH {4} \
    CONFIG.C_PROBE6_WIDTH {4} \
    CONFIG.C_PROBE7_WIDTH {16} \
@@ -263,9 +241,20 @@ proc create_root_design { parentCell } {
    CONFIG.GT_REFCLK_FREQ {122.880} \
    CONFIG.Global_clk_sel {false} \
    CONFIG.SupportLevel {1} \
-   CONFIG.TransceiverControl {true} \
+   CONFIG.TransceiverControl {false} \
  ] $jesd204_0
 
+  # Create instance: jesd204_0_transport_0, and set properties
+  set block_name jesd204_0_transport_layer_demapper
+  set block_cell_name jesd204_0_transport_0
+  if { [catch {set jesd204_0_transport_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $jesd204_0_transport_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: okAXI4LiteInterface_0, and set properties
   set block_name okAXI4LiteInterface
   set block_cell_name okAXI4LiteInterface_0
@@ -292,9 +281,6 @@ proc create_root_design { parentCell } {
    CONFIG.C_BUF_TYPE {OBUFDS} \
  ] $util_ds_buf_2
 
-  # Create instance: util_ds_buf_3, and set properties
-  set util_ds_buf_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_3 ]
-
   # Create instance: wireoutbreakout_0, and set properties
   set block_name wireoutbreakout
   set block_cell_name wireoutbreakout_0
@@ -311,32 +297,29 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net frontpanel_0_wirein00 [get_bd_intf_pins frontpanel_0/wirein00] [get_bd_intf_pins wireoutbreakout_0/wirein_READDATA]
   connect_bd_intf_net -intf_net frontpanel_0_wireout20 [get_bd_intf_pins frontpanel_0/wireout20] [get_bd_intf_pins okAXI4LiteInterface_0/wireout_READDATA]
   connect_bd_intf_net -intf_net host_interface_1 [get_bd_intf_ports host_interface] [get_bd_intf_pins frontpanel_0/host_interface]
+  connect_bd_intf_net -intf_net jesd204_0_m_axis_rx [get_bd_intf_pins jesd204_0/m_axis_rx] [get_bd_intf_pins jesd204_0_transport_0/rx]
   connect_bd_intf_net -intf_net okAXI4LiteInterface_0_m_axi [get_bd_intf_pins jesd204_0/s_axi] [get_bd_intf_pins okAXI4LiteInterface_0/m_axi]
 
   # Create port connections
-  connect_bd_net -net CLK_LAO_0M_1 [get_bd_ports CLK_LAO_0M] [get_bd_pins util_ds_buf_3/IBUF_DS_N]
-  connect_bd_net -net CLK_LAO_0P_1 [get_bd_ports CLK_LAO_0P] [get_bd_pins util_ds_buf_3/IBUF_DS_P]
   connect_bd_net -net FPGA_JESD_CLKM_1 [get_bd_ports FPGA_JESD_CLKM] [get_bd_pins jesd204_0/refclk_n]
   connect_bd_net -net FPGA_JESD_CLKP_1 [get_bd_ports FPGA_JESD_CLKP] [get_bd_pins jesd204_0/refclk_p]
   connect_bd_net -net FPGA_JESD_SYSREFM_1 [get_bd_ports FPGA_JESD_SYSREFM] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
   connect_bd_net -net FPGA_JESD_SYSREFP_1 [get_bd_ports FPGA_JESD_SYSREFP] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
-  connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins frontpanel_0/wo22_ep_datain]
-  connect_bd_net -net c_counter_binary_1_Q [get_bd_pins c_counter_binary_1/Q] [get_bd_pins frontpanel_0/wo21_ep_datain]
-  connect_bd_net -net clock_control_0_CE [get_bd_pins c_counter_binary_0/CE] [get_bd_pins c_counter_binary_1/CE] [get_bd_pins clock_control_0/CE]
-  connect_bd_net -net clock_control_0_clock_reset [get_bd_pins c_counter_binary_0/SCLR] [get_bd_pins c_counter_binary_1/SCLR] [get_bd_pins clock_control_0/clock_reset]
-  connect_bd_net -net frontpanel_0_okClk [get_bd_pins clock_control_0/clk] [get_bd_pins frontpanel_0/okClk] [get_bd_pins frontpanel_0/ti40_ep_clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
-  connect_bd_net -net frontpanel_0_ti40_ep_trigger [get_bd_pins clock_control_0/trigger] [get_bd_pins frontpanel_0/ti40_ep_trigger]
-  connect_bd_net -net jesd204_0_gt_rxdata [get_bd_pins ila_0/probe0] [get_bd_pins jesd204_0/gt_rxdata]
-  connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins ila_0/probe8] [get_bd_pins jesd204_0/rx_aresetn]
-  connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins c_counter_binary_0/CLK] [get_bd_pins ila_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out]
+  connect_bd_net -net data_processing_unit_0_IPI [get_bd_pins data_processing_unit_0/IPI] [get_bd_pins ila_0/probe10]
+  connect_bd_net -net data_processing_unit_0_dt [get_bd_pins data_processing_unit_0/dt] [get_bd_pins ila_0/probe11]
+  connect_bd_net -net data_processing_unit_0_valid [get_bd_pins data_processing_unit_0/valid] [get_bd_pins ila_0/probe4]
+  connect_bd_net -net frontpanel_0_okClk [get_bd_pins frontpanel_0/okClk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
+  connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins data_processing_unit_0/RESET_N] [get_bd_pins ila_0/probe8] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n]
+  connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins data_processing_unit_0/clk] [get_bd_pins ila_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
   connect_bd_net -net jesd204_0_rx_end_of_frame [get_bd_pins ila_0/probe1] [get_bd_pins jesd204_0/rx_end_of_frame]
   connect_bd_net -net jesd204_0_rx_end_of_multiframe [get_bd_pins ila_0/probe5] [get_bd_pins jesd204_0/rx_end_of_multiframe]
   connect_bd_net -net jesd204_0_rx_frame_error [get_bd_pins ila_0/probe7] [get_bd_pins jesd204_0/rx_frame_error]
   connect_bd_net -net jesd204_0_rx_start_of_frame [get_bd_pins ila_0/probe2] [get_bd_pins jesd204_0/rx_start_of_frame]
   connect_bd_net -net jesd204_0_rx_start_of_multiframe [get_bd_pins ila_0/probe6] [get_bd_pins jesd204_0/rx_start_of_multiframe]
   connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
-  connect_bd_net -net jesd204_0_rx_tdata [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_tdata]
-  connect_bd_net -net jesd204_0_rx_tvalid [get_bd_pins ila_0/probe4] [get_bd_pins jesd204_0/rx_tvalid]
+  connect_bd_net -net jesd204_0_transport_0_ready_out [get_bd_pins ila_0/probe0] [get_bd_pins jesd204_0_transport_0/ready_out]
+  connect_bd_net -net jesd204_0_transport_0_signalA_sampl0 [get_bd_pins data_processing_unit_0/A0] [get_bd_pins jesd204_0_transport_0/signalA_sampl0]
+  connect_bd_net -net jesd204_0_transport_0_signalA_sampl1 [get_bd_pins data_processing_unit_0/A1] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0_transport_0/signalA_sampl1]
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aclk [get_bd_pins jesd204_0/s_axi_aclk] [get_bd_pins okAXI4LiteInterface_0/m_axi_aclk]
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aresetn [get_bd_pins jesd204_0/s_axi_aresetn] [get_bd_pins okAXI4LiteInterface_0/m_axi_aresetn]
   connect_bd_net -net rxn_1 [get_bd_ports rxn] [get_bd_pins jesd204_0/rxn]
@@ -346,7 +329,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net util_ds_buf_1_OBUF_DS_P [get_bd_ports SYNCbABP] [get_bd_pins util_ds_buf_1/OBUF_DS_P]
   connect_bd_net -net util_ds_buf_2_OBUF_DS_N [get_bd_ports SYNCbCDM] [get_bd_pins util_ds_buf_2/OBUF_DS_N]
   connect_bd_net -net util_ds_buf_2_OBUF_DS_P [get_bd_ports SYNCbCDP] [get_bd_pins util_ds_buf_2/OBUF_DS_P]
-  connect_bd_net -net util_ds_buf_3_IBUF_OUT [get_bd_pins c_counter_binary_1/CLK] [get_bd_pins util_ds_buf_3/IBUF_OUT]
   connect_bd_net -net wireoutbreakout_0_rx_reset [get_bd_pins jesd204_0/rx_reset] [get_bd_pins wireoutbreakout_0/rx_reset]
 
   # Create address segments
