@@ -14,8 +14,9 @@ module data_processing_unit(
     input wire RESET_N,
     input wire [15:0] A0,
     input wire [15:0] A1,
-    output reg [13:0] V_peak,
-    output reg [31:0] AUC, //area under curve
+    output reg valid,
+    //output reg [13:0] V_peak,
+    //output reg [31:0] AUC, //area under curve
     output reg [15:0] dt, //width of spike
     output reg [31:0] IPI //Inter-Peak Interval
 );
@@ -24,9 +25,10 @@ module data_processing_unit(
 reg [1:0] event_state;
 
 //counter regs
-reg [31:0] counter;
-reg [31:0] end_time;
-reg [15:0] V_max;
+reg [31:0] counter; //for dt
+//reg [31:0] end_time;
+//reg [31:0] V_sum; //keeps track of AUC
+//reg [15:0] V_max; //keeps track of V_peak
 
 //internal wires
 wire event_detected;
@@ -42,15 +44,16 @@ always@( posedge clk) begin
     if ( RESET_N == 1'b0 )
         begin
         event_state <= `IDLE;
-        AUC <= 32'h0000;
+        //AUC <= 32'h0000;
+        //V_peak <= 14'h00;
         dt <= 16'h00;
         IPI <= 32'h0000;
         counter <= 32'h0000;
+        //V_sum <= 32'h0000; 
         end 
     else begin
 
         case (event_state)
-        
         `IDLE: begin //wait to detect event, reset counter
             counter <= 32'h0000;
             if(event_detected == 1'b1) begin
@@ -61,23 +64,30 @@ always@( posedge clk) begin
             counter <= counter + 1;
             if (go_to_idle) begin //checks if valid
                 event_state <= `IDLE; //also resets counter
-            end else if (event_detected && counter<time_max) begin
+            end else if (event_detected && counter<time_max) begin  //evaluate data metrics
                     //FIXME do all computation, valid
+                    valid <= 1'b1;
                     
             end else if (~event_detected && counter>time_min) begin //event ends
                     event_state <= `WAIT;
+                    valid <= 1'b0;
                     dt <= counter;
+                    //V_peak <= V_max;
+                    //AUC <= V_sum;
             end
         end
         `WAITING: begin
             counter <= counter + 1; //keep incrementign for IPI
             if(event_detected == 1'b1 ) begin
                 event_state <= `EVENT; 
+                IPI <= counter; //counts from last event to next event
+                counter <= 32'h0000;
             end
         end
         endcase 
 
 
 end
+end
 
-end module
+endmodule
