@@ -12,16 +12,16 @@
 
 module data_processing_unit
 (
-    wire [31:0] V_threshold,
+    wire signed [31:0] V_threshold,
     wire [31:0] time_min, //to make sure noise hasn't caused a false alarm
     wire [31:0] time_max, //to make sure nothing has gone wrong
     input wire clk,
     input wire RESET_N,
-    input wire [13:0] A0,
-    input wire [13:0] A1,
+    input wire signed [13:0] sample0,
+    input wire signed [13:0] sample1,
     output reg valid,
-    output reg [13:0] V_peak,
-    output reg [31:0] AUC, //area under curve
+    output signed reg [13:0] V_peak,
+    output reg signed [31:0] AUC, //area under curve
     output reg [15:0] dt, //width of spike
     output reg [31:0] IPI //Inter-Peak Interval
 );
@@ -32,18 +32,18 @@ reg [1:0] event_state;
 //counter regs
 reg [31:0] counter; //for dt
 //reg [31:0] end_time;
-reg [31:0] V_sum; //keeps track of AUC
-reg [15:0] V_max; //keeps track of V_peak
+reg signed [31:0] V_sum; //keeps track of AUC
+reg signed [15:0] V_max; //keeps track of V_peak
 
 //internal wires
 wire event_detected;
 wire go_to_idle;
-wire A_max;
+wire [13:0] signed sample_max;
 
 //assign outside of sequential logic for speed
 assign go_to_idle = (event_detected && counter>time_max) || (~event_detected && counter<time_min);
-assign event_detected = A0 > V_threshold || A1 > V_threshold;
-assign A_max = (A0>A1) ? A0:A1;
+assign event_detected = sample0 > V_threshold || sample1 > V_threshold;
+assign sample_max = (sample0>sample1) ? sample0:sample1;
 
 //always block with asynchronous reset
 always@( posedge clk or negedge RESET_N ) begin
@@ -85,8 +85,8 @@ always@( posedge clk or negedge RESET_N ) begin
 
             end else if (event_detected && counter<time_max) begin  //evaluate data metrics
                     //FIXME do all computation, valid
-                    V_max <= (V_max>A_max) ? V_max:A_max;
-                    V_sum <= V_sum + A_max;
+                    V_max <= (V_max>sample_max) ? V_max:sample_max;
+                    V_sum <= V_sum + sample_max;
                     valid <= 1'b1;
                     
             end else if (~event_detected && counter>time_min) begin //event ends
