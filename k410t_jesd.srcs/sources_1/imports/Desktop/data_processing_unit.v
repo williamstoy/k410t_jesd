@@ -35,15 +35,15 @@ wire go_to_idle;
 
 //assign outside of sequential logic for speed
 assign go_to_idle = (event_detected && counter>time_max) || (~event_detected && counter<time_min);
-assign event_detected = A0 > V_threshold;
+assign event_detected = A0 > V_threshold || A1 > V_threshold;
 
-//always block with synchronous reset
-always@( posedge clk) begin
+//always block with asynchronous reset
+always@( posedge clk or negedge RESET_N ) begin
 
     if ( RESET_N == 1'b0 )
         begin
         event_state <= `IDLE;
-        //AUC <= 32'h0000;
+        AUC <= 32'h0000;
         //V_peak <= 14'h00;
         dt <= 16'h00;
         IPI <= 32'h0000;
@@ -55,6 +55,9 @@ always@( posedge clk) begin
         case (event_state)
         `IDLE: begin //wait to detect event, reset counter
             counter <= 32'h0000;
+            dt <= 16'h00;
+            AUC <= 32'h0000;
+            IPI <= 32'h0000;
             if(event_detected == 1'b1) begin
                 event_state <= `EVENT; 
             end
@@ -81,6 +84,8 @@ always@( posedge clk) begin
                 event_state <= `EVENT; 
                 IPI <= counter; //counts from last event to next event
                 counter <= 32'h0000;
+            end else if(counter>time_max+dt) begin //timed out in waiting
+                event_state <= `IDLE;
             end
         end
         endcase 
