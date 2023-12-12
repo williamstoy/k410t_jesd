@@ -38,7 +38,7 @@ reg signed [15:0] V_max; //keeps track of V_peak
 //internal wires
 wire event_detected;
 wire go_to_idle;
-wire [13:0] signed sample_max;
+wire signed [13:0] sample_max;
 
 //assign outside of sequential logic for speed
 assign go_to_idle = (event_detected && counter>time_max) || (~event_detected && counter<time_min);
