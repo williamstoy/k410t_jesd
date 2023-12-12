@@ -12,9 +12,9 @@
 
 module data_processing_unit
 (
-    wire [31:0] V_threshold,
-    wire [31:0] time_min, //to make sure noise hasn't caused a false alarm
-    wire [31:0] time_max, //to make sure nothing has gone wrong
+    input wire [31:0] V_threshold,
+    input wire [31:0] time_min, //to make sure noise hasn't caused a false alarm
+    input wire [31:0] time_max, //to make sure nothing has gone wrong
     input wire clk,
     input wire RESET_N,
     input wire [13:0] A0,

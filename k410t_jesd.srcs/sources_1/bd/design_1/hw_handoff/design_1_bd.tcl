@@ -198,7 +198,10 @@ proc create_root_design { parentCell } {
    CONFIG.TI.ADDR_0 {0xff} \
    CONFIG.TI.COUNT {0} \
    CONFIG.WI.ADDR_0 {0x00} \
-   CONFIG.WI.COUNT {1} \
+   CONFIG.WI.ADDR_1 {0x01} \
+   CONFIG.WI.ADDR_2 {0x02} \
+   CONFIG.WI.ADDR_3 {0x03} \
+   CONFIG.WI.COUNT {4} \
    CONFIG.WO.ADDR_0 {0x20} \
    CONFIG.WO.ADDR_1 {0xff} \
    CONFIG.WO.ADDR_2 {0xff} \
@@ -213,11 +216,12 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {12} \
+   CONFIG.C_NUM_OF_PROBES {14} \
    CONFIG.C_PROBE0_WIDTH {14} \
    CONFIG.C_PROBE10_WIDTH {32} \
    CONFIG.C_PROBE11_WIDTH {16} \
-   CONFIG.C_PROBE12_WIDTH {1} \
+   CONFIG.C_PROBE12_WIDTH {32} \
+   CONFIG.C_PROBE13_WIDTH {14} \
    CONFIG.C_PROBE1_WIDTH {4} \
    CONFIG.C_PROBE2_WIDTH {4} \
    CONFIG.C_PROBE3_WIDTH {14} \
@@ -305,10 +309,15 @@ proc create_root_design { parentCell } {
   connect_bd_net -net FPGA_JESD_CLKP_1 [get_bd_ports FPGA_JESD_CLKP] [get_bd_pins jesd204_0/refclk_p]
   connect_bd_net -net FPGA_JESD_SYSREFM_1 [get_bd_ports FPGA_JESD_SYSREFM] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
   connect_bd_net -net FPGA_JESD_SYSREFP_1 [get_bd_ports FPGA_JESD_SYSREFP] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
+  connect_bd_net -net data_processing_unit_0_AUC [get_bd_pins data_processing_unit_0/AUC] [get_bd_pins ila_0/probe12]
   connect_bd_net -net data_processing_unit_0_IPI [get_bd_pins data_processing_unit_0/IPI] [get_bd_pins ila_0/probe10]
+  connect_bd_net -net data_processing_unit_0_V_peak [get_bd_pins data_processing_unit_0/V_peak] [get_bd_pins ila_0/probe13]
   connect_bd_net -net data_processing_unit_0_dt [get_bd_pins data_processing_unit_0/dt] [get_bd_pins ila_0/probe11]
   connect_bd_net -net data_processing_unit_0_valid [get_bd_pins data_processing_unit_0/valid] [get_bd_pins ila_0/probe4]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins frontpanel_0/okClk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
+  connect_bd_net -net frontpanel_0_wi01_ep_dataout [get_bd_pins data_processing_unit_0/V_threshold] [get_bd_pins frontpanel_0/wi01_ep_dataout]
+  connect_bd_net -net frontpanel_0_wi02_ep_dataout [get_bd_pins data_processing_unit_0/time_min] [get_bd_pins frontpanel_0/wi02_ep_dataout]
+  connect_bd_net -net frontpanel_0_wi03_ep_dataout [get_bd_pins data_processing_unit_0/time_max] [get_bd_pins frontpanel_0/wi03_ep_dataout]
   connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins data_processing_unit_0/RESET_N] [get_bd_pins ila_0/probe8] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n]
   connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins data_processing_unit_0/clk] [get_bd_pins ila_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
   connect_bd_net -net jesd204_0_rx_end_of_frame [get_bd_pins ila_0/probe1] [get_bd_pins jesd204_0/rx_end_of_frame]

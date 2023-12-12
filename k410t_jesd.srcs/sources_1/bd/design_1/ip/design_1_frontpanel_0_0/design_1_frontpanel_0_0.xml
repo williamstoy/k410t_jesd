@@ -188,7 +188,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein01" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x01) || ($PARAM_VALUE.WI.ADDR_1 == 0x01) || ($PARAM_VALUE.WI.ADDR_2 == 0x01) || ($PARAM_VALUE.WI.ADDR_3 == 0x01) || ($PARAM_VALUE.WI.ADDR_4 == 0x01) || ($PARAM_VALUE.WI.ADDR_5 == 0x01) || ($PARAM_VALUE.WI.ADDR_6 == 0x01) || ($PARAM_VALUE.WI.ADDR_7 == 0x01) || ($PARAM_VALUE.WI.ADDR_8 == 0x01) || ($PARAM_VALUE.WI.ADDR_9 == 0x01) || ($PARAM_VALUE.WI.ADDR_10 == 0x01) || ($PARAM_VALUE.WI.ADDR_11 == 0x01) || ($PARAM_VALUE.WI.ADDR_12 == 0x01) || ($PARAM_VALUE.WI.ADDR_13 == 0x01) || ($PARAM_VALUE.WI.ADDR_14 == 0x01) || ($PARAM_VALUE.WI.ADDR_15 == 0x01) || ($PARAM_VALUE.WI.ADDR_16 == 0x01) || ($PARAM_VALUE.WI.ADDR_17 == 0x01) || ($PARAM_VALUE.WI.ADDR_18 == 0x01) || ($PARAM_VALUE.WI.ADDR_19 == 0x01) || ($PARAM_VALUE.WI.ADDR_20 == 0x01) || ($PARAM_VALUE.WI.ADDR_21 == 0x01) || ($PARAM_VALUE.WI.ADDR_22 == 0x01) || ($PARAM_VALUE.WI.ADDR_23 == 0x01) || ($PARAM_VALUE.WI.ADDR_24 == 0x01) || ($PARAM_VALUE.WI.ADDR_25 == 0x01) || ($PARAM_VALUE.WI.ADDR_26 == 0x01) || ($PARAM_VALUE.WI.ADDR_27 == 0x01) || ($PARAM_VALUE.WI.ADDR_28 == 0x01) || ($PARAM_VALUE.WI.ADDR_29 == 0x01) || ($PARAM_VALUE.WI.ADDR_30 == 0x01) || ($PARAM_VALUE.WI.ADDR_31 == 0x01)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein01" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x01) || ($PARAM_VALUE.WI.ADDR_1 == 0x01) || ($PARAM_VALUE.WI.ADDR_2 == 0x01) || ($PARAM_VALUE.WI.ADDR_3 == 0x01) || ($PARAM_VALUE.WI.ADDR_4 == 0x01) || ($PARAM_VALUE.WI.ADDR_5 == 0x01) || ($PARAM_VALUE.WI.ADDR_6 == 0x01) || ($PARAM_VALUE.WI.ADDR_7 == 0x01) || ($PARAM_VALUE.WI.ADDR_8 == 0x01) || ($PARAM_VALUE.WI.ADDR_9 == 0x01) || ($PARAM_VALUE.WI.ADDR_10 == 0x01) || ($PARAM_VALUE.WI.ADDR_11 == 0x01) || ($PARAM_VALUE.WI.ADDR_12 == 0x01) || ($PARAM_VALUE.WI.ADDR_13 == 0x01) || ($PARAM_VALUE.WI.ADDR_14 == 0x01) || ($PARAM_VALUE.WI.ADDR_15 == 0x01) || ($PARAM_VALUE.WI.ADDR_16 == 0x01) || ($PARAM_VALUE.WI.ADDR_17 == 0x01) || ($PARAM_VALUE.WI.ADDR_18 == 0x01) || ($PARAM_VALUE.WI.ADDR_19 == 0x01) || ($PARAM_VALUE.WI.ADDR_20 == 0x01) || ($PARAM_VALUE.WI.ADDR_21 == 0x01) || ($PARAM_VALUE.WI.ADDR_22 == 0x01) || ($PARAM_VALUE.WI.ADDR_23 == 0x01) || ($PARAM_VALUE.WI.ADDR_24 == 0x01) || ($PARAM_VALUE.WI.ADDR_25 == 0x01) || ($PARAM_VALUE.WI.ADDR_26 == 0x01) || ($PARAM_VALUE.WI.ADDR_27 == 0x01) || ($PARAM_VALUE.WI.ADDR_28 == 0x01) || ($PARAM_VALUE.WI.ADDR_29 == 0x01) || ($PARAM_VALUE.WI.ADDR_30 == 0x01) || ($PARAM_VALUE.WI.ADDR_31 == 0x01)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -213,7 +213,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein02" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x02) || ($PARAM_VALUE.WI.ADDR_1 == 0x02) || ($PARAM_VALUE.WI.ADDR_2 == 0x02) || ($PARAM_VALUE.WI.ADDR_3 == 0x02) || ($PARAM_VALUE.WI.ADDR_4 == 0x02) || ($PARAM_VALUE.WI.ADDR_5 == 0x02) || ($PARAM_VALUE.WI.ADDR_6 == 0x02) || ($PARAM_VALUE.WI.ADDR_7 == 0x02) || ($PARAM_VALUE.WI.ADDR_8 == 0x02) || ($PARAM_VALUE.WI.ADDR_9 == 0x02) || ($PARAM_VALUE.WI.ADDR_10 == 0x02) || ($PARAM_VALUE.WI.ADDR_11 == 0x02) || ($PARAM_VALUE.WI.ADDR_12 == 0x02) || ($PARAM_VALUE.WI.ADDR_13 == 0x02) || ($PARAM_VALUE.WI.ADDR_14 == 0x02) || ($PARAM_VALUE.WI.ADDR_15 == 0x02) || ($PARAM_VALUE.WI.ADDR_16 == 0x02) || ($PARAM_VALUE.WI.ADDR_17 == 0x02) || ($PARAM_VALUE.WI.ADDR_18 == 0x02) || ($PARAM_VALUE.WI.ADDR_19 == 0x02) || ($PARAM_VALUE.WI.ADDR_20 == 0x02) || ($PARAM_VALUE.WI.ADDR_21 == 0x02) || ($PARAM_VALUE.WI.ADDR_22 == 0x02) || ($PARAM_VALUE.WI.ADDR_23 == 0x02) || ($PARAM_VALUE.WI.ADDR_24 == 0x02) || ($PARAM_VALUE.WI.ADDR_25 == 0x02) || ($PARAM_VALUE.WI.ADDR_26 == 0x02) || ($PARAM_VALUE.WI.ADDR_27 == 0x02) || ($PARAM_VALUE.WI.ADDR_28 == 0x02) || ($PARAM_VALUE.WI.ADDR_29 == 0x02) || ($PARAM_VALUE.WI.ADDR_30 == 0x02) || ($PARAM_VALUE.WI.ADDR_31 == 0x02)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein02" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x02) || ($PARAM_VALUE.WI.ADDR_1 == 0x02) || ($PARAM_VALUE.WI.ADDR_2 == 0x02) || ($PARAM_VALUE.WI.ADDR_3 == 0x02) || ($PARAM_VALUE.WI.ADDR_4 == 0x02) || ($PARAM_VALUE.WI.ADDR_5 == 0x02) || ($PARAM_VALUE.WI.ADDR_6 == 0x02) || ($PARAM_VALUE.WI.ADDR_7 == 0x02) || ($PARAM_VALUE.WI.ADDR_8 == 0x02) || ($PARAM_VALUE.WI.ADDR_9 == 0x02) || ($PARAM_VALUE.WI.ADDR_10 == 0x02) || ($PARAM_VALUE.WI.ADDR_11 == 0x02) || ($PARAM_VALUE.WI.ADDR_12 == 0x02) || ($PARAM_VALUE.WI.ADDR_13 == 0x02) || ($PARAM_VALUE.WI.ADDR_14 == 0x02) || ($PARAM_VALUE.WI.ADDR_15 == 0x02) || ($PARAM_VALUE.WI.ADDR_16 == 0x02) || ($PARAM_VALUE.WI.ADDR_17 == 0x02) || ($PARAM_VALUE.WI.ADDR_18 == 0x02) || ($PARAM_VALUE.WI.ADDR_19 == 0x02) || ($PARAM_VALUE.WI.ADDR_20 == 0x02) || ($PARAM_VALUE.WI.ADDR_21 == 0x02) || ($PARAM_VALUE.WI.ADDR_22 == 0x02) || ($PARAM_VALUE.WI.ADDR_23 == 0x02) || ($PARAM_VALUE.WI.ADDR_24 == 0x02) || ($PARAM_VALUE.WI.ADDR_25 == 0x02) || ($PARAM_VALUE.WI.ADDR_26 == 0x02) || ($PARAM_VALUE.WI.ADDR_27 == 0x02) || ($PARAM_VALUE.WI.ADDR_28 == 0x02) || ($PARAM_VALUE.WI.ADDR_29 == 0x02) || ($PARAM_VALUE.WI.ADDR_30 == 0x02) || ($PARAM_VALUE.WI.ADDR_31 == 0x02)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -238,7 +238,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein03" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x03) || ($PARAM_VALUE.WI.ADDR_1 == 0x03) || ($PARAM_VALUE.WI.ADDR_2 == 0x03) || ($PARAM_VALUE.WI.ADDR_3 == 0x03) || ($PARAM_VALUE.WI.ADDR_4 == 0x03) || ($PARAM_VALUE.WI.ADDR_5 == 0x03) || ($PARAM_VALUE.WI.ADDR_6 == 0x03) || ($PARAM_VALUE.WI.ADDR_7 == 0x03) || ($PARAM_VALUE.WI.ADDR_8 == 0x03) || ($PARAM_VALUE.WI.ADDR_9 == 0x03) || ($PARAM_VALUE.WI.ADDR_10 == 0x03) || ($PARAM_VALUE.WI.ADDR_11 == 0x03) || ($PARAM_VALUE.WI.ADDR_12 == 0x03) || ($PARAM_VALUE.WI.ADDR_13 == 0x03) || ($PARAM_VALUE.WI.ADDR_14 == 0x03) || ($PARAM_VALUE.WI.ADDR_15 == 0x03) || ($PARAM_VALUE.WI.ADDR_16 == 0x03) || ($PARAM_VALUE.WI.ADDR_17 == 0x03) || ($PARAM_VALUE.WI.ADDR_18 == 0x03) || ($PARAM_VALUE.WI.ADDR_19 == 0x03) || ($PARAM_VALUE.WI.ADDR_20 == 0x03) || ($PARAM_VALUE.WI.ADDR_21 == 0x03) || ($PARAM_VALUE.WI.ADDR_22 == 0x03) || ($PARAM_VALUE.WI.ADDR_23 == 0x03) || ($PARAM_VALUE.WI.ADDR_24 == 0x03) || ($PARAM_VALUE.WI.ADDR_25 == 0x03) || ($PARAM_VALUE.WI.ADDR_26 == 0x03) || ($PARAM_VALUE.WI.ADDR_27 == 0x03) || ($PARAM_VALUE.WI.ADDR_28 == 0x03) || ($PARAM_VALUE.WI.ADDR_29 == 0x03) || ($PARAM_VALUE.WI.ADDR_30 == 0x03) || ($PARAM_VALUE.WI.ADDR_31 == 0x03)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein03" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x03) || ($PARAM_VALUE.WI.ADDR_1 == 0x03) || ($PARAM_VALUE.WI.ADDR_2 == 0x03) || ($PARAM_VALUE.WI.ADDR_3 == 0x03) || ($PARAM_VALUE.WI.ADDR_4 == 0x03) || ($PARAM_VALUE.WI.ADDR_5 == 0x03) || ($PARAM_VALUE.WI.ADDR_6 == 0x03) || ($PARAM_VALUE.WI.ADDR_7 == 0x03) || ($PARAM_VALUE.WI.ADDR_8 == 0x03) || ($PARAM_VALUE.WI.ADDR_9 == 0x03) || ($PARAM_VALUE.WI.ADDR_10 == 0x03) || ($PARAM_VALUE.WI.ADDR_11 == 0x03) || ($PARAM_VALUE.WI.ADDR_12 == 0x03) || ($PARAM_VALUE.WI.ADDR_13 == 0x03) || ($PARAM_VALUE.WI.ADDR_14 == 0x03) || ($PARAM_VALUE.WI.ADDR_15 == 0x03) || ($PARAM_VALUE.WI.ADDR_16 == 0x03) || ($PARAM_VALUE.WI.ADDR_17 == 0x03) || ($PARAM_VALUE.WI.ADDR_18 == 0x03) || ($PARAM_VALUE.WI.ADDR_19 == 0x03) || ($PARAM_VALUE.WI.ADDR_20 == 0x03) || ($PARAM_VALUE.WI.ADDR_21 == 0x03) || ($PARAM_VALUE.WI.ADDR_22 == 0x03) || ($PARAM_VALUE.WI.ADDR_23 == 0x03) || ($PARAM_VALUE.WI.ADDR_24 == 0x03) || ($PARAM_VALUE.WI.ADDR_25 == 0x03) || ($PARAM_VALUE.WI.ADDR_26 == 0x03) || ($PARAM_VALUE.WI.ADDR_27 == 0x03) || ($PARAM_VALUE.WI.ADDR_28 == 0x03) || ($PARAM_VALUE.WI.ADDR_29 == 0x03) || ($PARAM_VALUE.WI.ADDR_30 == 0x03) || ($PARAM_VALUE.WI.ADDR_31 == 0x03)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -18179,24 +18179,6 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
-        <spirit:name>xilinx_externalfiles</spirit:name>
-        <spirit:displayName>External Files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 21:29:39 UTC 2023</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a1676a48</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
         <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
         <spirit:displayName>Synthesis</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
@@ -18207,11 +18189,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 21:26:32 UTC 2023</spirit:value>
+            <spirit:value>Tue Dec 12 22:30:26 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:53835bdd</spirit:value>
+            <spirit:value>9:09222ed0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18222,7 +18204,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:53835bdd</spirit:value>
+            <spirit:value>9:09222ed0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18237,11 +18219,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 21:26:32 UTC 2023</spirit:value>
+            <spirit:value>Tue Dec 12 22:30:26 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:53835bdd</spirit:value>
+            <spirit:value>9:09222ed0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18257,11 +18239,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 21:26:33 UTC 2023</spirit:value>
+            <spirit:value>Tue Dec 12 22:30:27 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6a8a507e</spirit:value>
+            <spirit:value>9:04554e75</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18276,11 +18258,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 21:26:33 UTC 2023</spirit:value>
+            <spirit:value>Tue Dec 12 22:30:27 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6a8a507e</spirit:value>
+            <spirit:value>9:04554e75</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18294,11 +18276,29 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 21:26:33 UTC 2023</spirit:value>
+            <spirit:value>Tue Dec 12 22:30:27 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:53835bdd</spirit:value>
+            <spirit:value>9:09222ed0</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Dec 12 22:43:44 UTC 2023</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:09222ed0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18573,13 +18573,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.wi01_ep_dataout">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>wi02_ep_dataout</spirit:name>
@@ -18597,13 +18590,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.wi02_ep_dataout">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>wi03_ep_dataout</spirit:name>
@@ -18621,13 +18607,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.wi03_ep_dataout">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>wi04_ep_dataout</spirit:name>
@@ -43858,42 +43837,6 @@
   </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
-      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>design_1_frontpanel_0_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_frontpanel_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_frontpanel_0_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_frontpanel_0_0_sim_netlist.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_frontpanel_0_0_sim_netlist.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>templates/design_1_frontpanel_0_0_bd_interface_template.vh</spirit:name>
@@ -44042,6 +43985,42 @@
         <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>design_1_frontpanel_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_frontpanel_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_frontpanel_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_frontpanel_0_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_frontpanel_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
   </spirit:fileSets>
   <spirit:description>The FrontPanel IP implements the FrontPanel interface present on Opal Kelly boards.</spirit:description>
   <spirit:parameters>
@@ -44057,7 +44036,7 @@
     <spirit:parameter>
       <spirit:name>WI.COUNT</spirit:name>
       <spirit:displayName>WireIn</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.COUNT" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.COUNT" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WI.ADDR_0</spirit:name>
@@ -44067,17 +44046,17 @@
     <spirit:parameter>
       <spirit:name>WI.ADDR_1</spirit:name>
       <spirit:displayName>WireIn 1 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_1" spirit:bitStringLength="8">0xff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_1" spirit:bitStringLength="8">0x01</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WI.ADDR_2</spirit:name>
       <spirit:displayName>WireIn 2 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_2" spirit:bitStringLength="8">0xff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_2" spirit:bitStringLength="8">0x02</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WI.ADDR_3</spirit:name>
       <spirit:displayName>WireIn 3 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_3" spirit:bitStringLength="8">0xff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_3" spirit:bitStringLength="8">0x03</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WI.ADDR_4</spirit:name>
@@ -46758,6 +46737,9 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TI.ADDR_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TI.COUNT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_0" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_1" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_2" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_3" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.COUNT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WO.ADDR_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WO.ADDR_1" xilinx:valueSource="user"/>

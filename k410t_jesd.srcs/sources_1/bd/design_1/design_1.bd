@@ -149,8 +149,17 @@
           "WI.ADDR_0": {
             "value": "0x00"
           },
+          "WI.ADDR_1": {
+            "value": "0x01"
+          },
+          "WI.ADDR_2": {
+            "value": "0x02"
+          },
+          "WI.ADDR_3": {
+            "value": "0x03"
+          },
           "WI.COUNT": {
-            "value": "1"
+            "value": "4"
           },
           "WO.ADDR_0": {
             "value": "0x20"
@@ -547,7 +556,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "12"
+            "value": "14"
           },
           "C_PROBE0_WIDTH": {
             "value": "14"
@@ -559,7 +568,10 @@
             "value": "16"
           },
           "C_PROBE12_WIDTH": {
-            "value": "1"
+            "value": "32"
+          },
+          "C_PROBE13_WIDTH": {
+            "value": "14"
           },
           "C_PROBE1_WIDTH": {
             "value": "4"
@@ -762,6 +774,21 @@
           "boundary_crc": "0x0"
         },
         "ports": {
+          "V_threshold": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "time_min": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "time_max": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
           "clk": {
             "type": "clk",
             "direction": "I",
@@ -798,6 +825,16 @@
           },
           "valid": {
             "direction": "O"
+          },
+          "V_peak": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "AUC": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           },
           "dt": {
             "direction": "O",
@@ -1031,6 +1068,36 @@
         "ports": [
           "data_processing_unit_0/IPI",
           "ila_0/probe10"
+        ]
+      },
+      "frontpanel_0_wi01_ep_dataout": {
+        "ports": [
+          "frontpanel_0/wi01_ep_dataout",
+          "data_processing_unit_0/V_threshold"
+        ]
+      },
+      "frontpanel_0_wi02_ep_dataout": {
+        "ports": [
+          "frontpanel_0/wi02_ep_dataout",
+          "data_processing_unit_0/time_min"
+        ]
+      },
+      "frontpanel_0_wi03_ep_dataout": {
+        "ports": [
+          "frontpanel_0/wi03_ep_dataout",
+          "data_processing_unit_0/time_max"
+        ]
+      },
+      "data_processing_unit_0_AUC": {
+        "ports": [
+          "data_processing_unit_0/AUC",
+          "ila_0/probe12"
+        ]
+      },
+      "data_processing_unit_0_V_peak": {
+        "ports": [
+          "data_processing_unit_0/V_peak",
+          "ila_0/probe13"
         ]
       }
     },

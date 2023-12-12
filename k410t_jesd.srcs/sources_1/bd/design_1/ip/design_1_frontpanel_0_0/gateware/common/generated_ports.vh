@@ -4,6 +4,15 @@
     (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein00 EP_DATAOUT" *)
     output wire [31:0] wi00_ep_dataout,
 
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein01 EP_DATAOUT" *)
+    output wire [31:0] wi01_ep_dataout,
+
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein02 EP_DATAOUT" *)
+    output wire [31:0] wi02_ep_dataout,
+
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein03 EP_DATAOUT" *)
+    output wire [31:0] wi03_ep_dataout,
+
 //----------------------------------------------------------------------------------------------------------------------------------
 // WireOuts
 //----------------------------------------------------------------------------------------------------------------------------------

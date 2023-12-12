@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Tue Dec 12 17:03:40 2023
+//Date        : Tue Dec 12 17:33:39 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -46,13 +46,18 @@ module design_1
   wire FPGA_JESD_CLKP_1;
   wire FPGA_JESD_SYSREFM_1;
   wire FPGA_JESD_SYSREFP_1;
+  wire [31:0]data_processing_unit_0_AUC;
   wire [31:0]data_processing_unit_0_IPI;
+  wire [13:0]data_processing_unit_0_V_peak;
   wire [15:0]data_processing_unit_0_dt;
   wire data_processing_unit_0_valid;
   wire [31:0]frontpanel_0_btpipein80_EP_DATAOUT;
   wire frontpanel_0_btpipein80_EP_READY;
   wire frontpanel_0_btpipein80_EP_WRITE;
   wire frontpanel_0_okClk;
+  wire [31:0]frontpanel_0_wi01_ep_dataout;
+  wire [31:0]frontpanel_0_wi02_ep_dataout;
+  wire [31:0]frontpanel_0_wi03_ep_dataout;
   wire [31:0]frontpanel_0_wirein00_EP_DATAOUT;
   wire [31:0]frontpanel_0_wireout20_EP_DATAIN;
   wire host_interface_1_okAA;
@@ -116,10 +121,15 @@ module design_1
   design_1_data_processing_unit_0_0 data_processing_unit_0
        (.A0(jesd204_0_transport_0_signalA_sampl0),
         .A1(jesd204_0_transport_0_signalA_sampl1),
+        .AUC(data_processing_unit_0_AUC),
         .IPI(data_processing_unit_0_IPI),
         .RESET_N(jesd204_0_rx_aresetn),
+        .V_peak(data_processing_unit_0_V_peak),
+        .V_threshold(frontpanel_0_wi01_ep_dataout),
         .clk(jesd204_0_rx_core_clk_out),
         .dt(data_processing_unit_0_dt),
+        .time_max(frontpanel_0_wi03_ep_dataout),
+        .time_min(frontpanel_0_wi02_ep_dataout),
         .valid(data_processing_unit_0_valid));
   design_1_frontpanel_0_0 frontpanel_0
        (.btpi80_ep_dataout(frontpanel_0_btpipein80_EP_DATAOUT),
@@ -131,6 +141,9 @@ module design_1
         .okUH(host_interface_1_okUH),
         .okUHU(host_interface_okuhu[31:0]),
         .wi00_ep_dataout(frontpanel_0_wirein00_EP_DATAOUT),
+        .wi01_ep_dataout(frontpanel_0_wi01_ep_dataout),
+        .wi02_ep_dataout(frontpanel_0_wi02_ep_dataout),
+        .wi03_ep_dataout(frontpanel_0_wi03_ep_dataout),
         .wo20_ep_datain(frontpanel_0_wireout20_EP_DATAIN));
   design_1_ila_0_1 ila_0
        (.clk(jesd204_0_rx_core_clk_out),
@@ -138,6 +151,8 @@ module design_1
         .probe1(jesd204_0_rx_end_of_frame),
         .probe10(data_processing_unit_0_IPI),
         .probe11(data_processing_unit_0_dt),
+        .probe12(data_processing_unit_0_AUC),
+        .probe13(data_processing_unit_0_V_peak),
         .probe2(jesd204_0_rx_start_of_frame),
         .probe3(jesd204_0_transport_0_signalA_sampl1),
         .probe4(data_processing_unit_0_valid),
