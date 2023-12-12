@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 12 16:26:50 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec 12 17:33:43 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -100,6 +100,21 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="V_threshold" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi01_ep_dataout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_0" PORT="wi01_ep_dataout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="time_min" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi02_ep_dataout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_0" PORT="wi02_ep_dataout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="time_max" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi03_ep_dataout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_0" PORT="wi03_ep_dataout"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
@@ -125,6 +140,16 @@
             <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="13" NAME="V_peak" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_V_peak">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe13"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="AUC" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_AUC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe12"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="15" NAME="dt" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_dt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe11"/>
@@ -145,11 +170,11 @@
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_frontpanel_0_0"/>
         <PARAMETER NAME="BOARD" VALUE="XEM7350-K410T"/>
-        <PARAMETER NAME="WI.COUNT" VALUE="1"/>
+        <PARAMETER NAME="WI.COUNT" VALUE="4"/>
         <PARAMETER NAME="WI.ADDR_0" VALUE="0x00"/>
-        <PARAMETER NAME="WI.ADDR_1" VALUE="0xff"/>
-        <PARAMETER NAME="WI.ADDR_2" VALUE="0xff"/>
-        <PARAMETER NAME="WI.ADDR_3" VALUE="0xff"/>
+        <PARAMETER NAME="WI.ADDR_1" VALUE="0x01"/>
+        <PARAMETER NAME="WI.ADDR_2" VALUE="0x02"/>
+        <PARAMETER NAME="WI.ADDR_3" VALUE="0x03"/>
         <PARAMETER NAME="WI.ADDR_4" VALUE="0xff"/>
         <PARAMETER NAME="WI.ADDR_5" VALUE="0xff"/>
         <PARAMETER NAME="WI.ADDR_6" VALUE="0xff"/>
@@ -717,6 +742,21 @@
             <CONNECTION INSTANCE="wireoutbreakout_0" PORT="EP_DATAOUT_WIREIN"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="wi01_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi01_ep_dataout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="V_threshold"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="wi02_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi02_ep_dataout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="time_min"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="wi03_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi03_ep_dataout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="time_max"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="wo20_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wo20_ep_datain">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_DATAIN_WIREOUT"/>
@@ -751,6 +791,21 @@
         <BUSINTERFACE BUSNAME="frontpanel_0_wirein00" NAME="wirein00" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi00_ep_dataout"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="wirein01" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi01_ep_dataout"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="wirein02" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi02_ep_dataout"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="wirein03" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi03_ep_dataout"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="frontpanel_0_wireout20" NAME="wireout20" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wireout:1.0">
@@ -788,7 +843,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="12"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="14"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -824,8 +879,8 @@
         <PARAMETER NAME="C_PROBE9_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="14"/>
         <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE15_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE16_WIDTH" VALUE="1"/>
@@ -3973,6 +4028,16 @@
             <CONNECTION INSTANCE="data_processing_unit_0" PORT="dt"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe12" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_AUC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="AUC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="13" NAME="probe13" RIGHT="0" SIGIS="undef" SIGNAME="data_processing_unit_0_V_peak">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="V_peak"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4311,8 +4376,8 @@
         </PORT>
         <PORT DIR="O" LEFT="13" NAME="signalA_sampl1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="A1"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="A1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="signalA_cntrl0" SIGIS="undef"/>

@@ -56,15 +56,23 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_data_processing_unit_0_0 (
+  V_threshold,
+  time_min,
+  time_max,
   clk,
   RESET_N,
   A0,
   A1,
   valid,
+  V_peak,
+  AUC,
   dt,
   IPI
 );
 
+input wire [31 : 0] V_threshold;
+input wire [31 : 0] time_min;
+input wire [31 : 0] time_max;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_jesd204_0_0_rx_core_clk_out, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
@@ -74,15 +82,22 @@ input wire RESET_N;
 input wire [13 : 0] A0;
 input wire [13 : 0] A1;
 output wire valid;
+output wire [13 : 0] V_peak;
+output wire [31 : 0] AUC;
 output wire [15 : 0] dt;
 output wire [31 : 0] IPI;
 
   data_processing_unit inst (
+    .V_threshold(V_threshold),
+    .time_min(time_min),
+    .time_max(time_max),
     .clk(clk),
     .RESET_N(RESET_N),
     .A0(A0),
     .A1(A1),
     .valid(valid),
+    .V_peak(V_peak),
+    .AUC(AUC),
     .dt(dt),
     .IPI(IPI)
   );

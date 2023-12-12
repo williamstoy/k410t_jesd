@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1702416591">
+<GenRun Id="impl_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1702420545">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BITSTR-SYSDEF" Name="design_1_wrapper.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
@@ -184,5 +184,6 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_wireoutbreakout_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_frontpanel_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_okAXI4LiteInterface_0_0"/>
 </GenRun>
