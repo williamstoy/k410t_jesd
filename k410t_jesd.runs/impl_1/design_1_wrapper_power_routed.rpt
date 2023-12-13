@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Wed Dec 13 16:30:36 2023
+| Date             : Wed Dec 13 16:51:16 2023
 | Host             : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -52,18 +52,18 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.013 |       23 |       --- |             --- |
-| Slice Logic              |     0.016 |    17410 |       --- |             --- |
-|   LUT as Logic           |     0.012 |     6017 |    254200 |            2.37 |
+| Clocks                   |     0.014 |       23 |       --- |             --- |
+| Slice Logic              |     0.016 |    17370 |       --- |             --- |
+|   LUT as Logic           |     0.012 |     5998 |    254200 |            2.36 |
 |   LUT as Distributed RAM |     0.003 |      665 |     90600 |            0.73 |
-|   CARRY4                 |    <0.001 |      414 |     63550 |            0.65 |
+|   CARRY4                 |    <0.001 |      413 |     63550 |            0.65 |
 |   Register               |    <0.001 |     8020 |    508400 |            1.58 |
 |   LUT as Shift Register  |    <0.001 |      260 |     90600 |            0.29 |
 |   F7/F8 Muxes            |    <0.001 |       76 |    254200 |            0.03 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |      653 |       --- |             --- |
 |   BUFR                   |     0.000 |        2 |       208 |            0.96 |
-| Signals                  |     0.021 |    13661 |       --- |             --- |
+| Signals                  |     0.021 |    13682 |       --- |             --- |
 | Block RAM                |     0.004 |       20 |       795 |            2.52 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |     0.100 |       48 |       400 |           12.00 |
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.163 |       0.066 |      0.097 |
+| Vccint    |       1.000 |     0.164 |       0.067 |      0.097 |
 | Vccaux    |       1.800 |     0.093 |       0.060 |      0.033 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.036 |       0.035 |      0.001 |
@@ -157,8 +157,8 @@ Table of Contents
 |     inst                 |     0.002 |
 |       BSCANID.u_xsdbm_id |     0.002 |
 |   design_1_i             |     0.954 |
-|     frontpanel_0         |     0.136 |
-|       inst               |     0.136 |
+|     frontpanel_0         |     0.137 |
+|       inst               |     0.137 |
 |     ila_0                |     0.003 |
 |       inst               |     0.003 |
 |     jesd204_0            |     0.723 |
