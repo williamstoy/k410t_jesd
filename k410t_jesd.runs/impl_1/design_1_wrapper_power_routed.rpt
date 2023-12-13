@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Wed Dec 13 16:06:58 2023
+| Date             : Wed Dec 13 16:30:36 2023
 | Host             : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.166        |
+| Total On-Chip Power (W)  | 1.170        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.952        |
+| Dynamic (W)              | 0.956        |
 | Device Static (W)        | 0.214        |
 | Effective TJA (C/W)      | 1.9          |
 | Max Ambient (C)          | 82.8         |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |       23 |       --- |             --- |
-| Slice Logic              |     0.015 |    16825 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     5814 |    254200 |            2.29 |
-|   LUT as Distributed RAM |     0.002 |      505 |     90600 |            0.56 |
-|   CARRY4                 |    <0.001 |      409 |     63550 |            0.64 |
-|   Register               |    <0.001 |     7865 |    508400 |            1.55 |
+| Clocks                   |     0.013 |       23 |       --- |             --- |
+| Slice Logic              |     0.016 |    17410 |       --- |             --- |
+|   LUT as Logic           |     0.012 |     6017 |    254200 |            2.37 |
+|   LUT as Distributed RAM |     0.003 |      665 |     90600 |            0.73 |
+|   CARRY4                 |    <0.001 |      414 |     63550 |            0.65 |
+|   Register               |    <0.001 |     8020 |    508400 |            1.58 |
 |   LUT as Shift Register  |    <0.001 |      260 |     90600 |            0.29 |
 |   F7/F8 Muxes            |    <0.001 |       76 |    254200 |            0.03 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |      653 |       --- |             --- |
 |   BUFR                   |     0.000 |        2 |       208 |            0.96 |
-| Signals                  |     0.019 |    13296 |       --- |             --- |
+| Signals                  |     0.021 |    13661 |       --- |             --- |
 | Block RAM                |     0.004 |       20 |       795 |            2.52 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |     0.100 |       48 |       400 |           12.00 |
 | GTX                      |     0.695 |        4 |         8 |           50.00 |
 | Static Power             |     0.214 |          |           |                 |
-| Total                    |     1.166 |          |           |                 |
+| Total                    |     1.170 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.160 |       0.063 |      0.097 |
+| Vccint    |       1.000 |     0.163 |       0.066 |      0.097 |
 | Vccaux    |       1.800 |     0.093 |       0.060 |      0.033 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.036 |       0.035 |      0.001 |
@@ -152,17 +152,17 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     0.952 |
+| design_1_wrapper         |     0.956 |
 |   dbg_hub                |     0.002 |
 |     inst                 |     0.002 |
 |       BSCANID.u_xsdbm_id |     0.002 |
-|   design_1_i             |     0.950 |
+|   design_1_i             |     0.954 |
 |     frontpanel_0         |     0.136 |
 |       inst               |     0.136 |
 |     ila_0                |     0.003 |
 |       inst               |     0.003 |
-|     jesd204_0            |     0.720 |
-|       inst               |     0.720 |
+|     jesd204_0            |     0.723 |
+|       inst               |     0.723 |
 |     util_ds_buf_0        |     0.002 |
 |       U0                 |     0.002 |
 |     util_ds_buf_1        |     0.041 |

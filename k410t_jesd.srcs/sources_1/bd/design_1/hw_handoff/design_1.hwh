@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 13 15:58:31 2023" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 13 16:22:04 2023" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -125,8 +125,16 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="13" NAME="sample0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="13" NAME="sample1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="13" NAME="sample0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalB_sampl0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="13" NAME="sample1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalB_sampl1"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="data_processing_unit_0_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
@@ -4369,8 +4377,16 @@
         </PORT>
         <PORT DIR="O" NAME="signalA_cntrl0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalA_cntrl1" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="signalB_sampl0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="signalB_sampl1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="signalB_sampl0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="sample0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="signalB_sampl1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_processing_unit_0" PORT="sample1"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="signalB_cntrl0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalB_cntrl1" SIGIS="undef"/>
         <PORT DIR="O" LEFT="13" NAME="signalC_sampl0" RIGHT="0" SIGIS="undef"/>
