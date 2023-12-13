@@ -813,12 +813,12 @@
               }
             }
           },
-          "A0": {
+          "sample0": {
             "direction": "I",
             "left": "13",
             "right": "0"
           },
-          "A1": {
+          "sample1": {
             "direction": "I",
             "left": "13",
             "right": "0"
@@ -1035,15 +1035,13 @@
       },
       "jesd204_0_transport_0_signalA_sampl0": {
         "ports": [
-          "jesd204_0_transport_0/signalA_sampl0",
-          "data_processing_unit_0/A0"
+          "jesd204_0_transport_0/signalA_sampl0"
         ]
       },
       "jesd204_0_transport_0_signalA_sampl1": {
         "ports": [
           "jesd204_0_transport_0/signalA_sampl1",
-          "ila_0/probe3",
-          "data_processing_unit_0/A1"
+          "ila_0/probe3"
         ]
       },
       "jesd204_0_transport_0_ready_out": {

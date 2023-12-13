@@ -20,7 +20,7 @@ module data_processing_unit
     input wire signed [13:0] sample0,
     input wire signed [13:0] sample1,
     output reg valid,
-    output signed reg [13:0] V_peak,
+    output reg signed [13:0] V_peak,
     output reg signed [31:0] AUC, //area under curve
     output reg [15:0] dt, //width of spike
     output reg [31:0] IPI //Inter-Peak Interval

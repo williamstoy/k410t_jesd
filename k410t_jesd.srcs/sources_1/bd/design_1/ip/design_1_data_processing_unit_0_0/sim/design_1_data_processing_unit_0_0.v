@@ -60,8 +60,8 @@ module design_1_data_processing_unit_0_0 (
   time_max,
   clk,
   RESET_N,
-  A0,
-  A1,
+  sample0,
+  sample1,
   valid,
   V_peak,
   AUC,
@@ -78,8 +78,8 @@ input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RESET_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RESET_N RST" *)
 input wire RESET_N;
-input wire [13 : 0] A0;
-input wire [13 : 0] A1;
+input wire [13 : 0] sample0;
+input wire [13 : 0] sample1;
 output wire valid;
 output wire [13 : 0] V_peak;
 output wire [31 : 0] AUC;
@@ -92,8 +92,8 @@ output wire [31 : 0] IPI;
     .time_max(time_max),
     .clk(clk),
     .RESET_N(RESET_N),
-    .A0(A0),
-    .A1(A1),
+    .sample0(sample0),
+    .sample1(sample1),
     .valid(valid),
     .V_peak(V_peak),
     .AUC(AUC),

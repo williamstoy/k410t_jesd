@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Tue Dec 12 17:33:39 2023
+//Date        : Wed Dec 13 15:58:30 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -119,15 +119,15 @@ module design_1
   assign rxn_1 = rxn[3:0];
   assign rxp_1 = rxp[3:0];
   design_1_data_processing_unit_0_0 data_processing_unit_0
-       (.A0(jesd204_0_transport_0_signalA_sampl0),
-        .A1(jesd204_0_transport_0_signalA_sampl1),
-        .AUC(data_processing_unit_0_AUC),
+       (.AUC(data_processing_unit_0_AUC),
         .IPI(data_processing_unit_0_IPI),
         .RESET_N(jesd204_0_rx_aresetn),
         .V_peak(data_processing_unit_0_V_peak),
         .V_threshold(frontpanel_0_wi01_ep_dataout),
         .clk(jesd204_0_rx_core_clk_out),
         .dt(data_processing_unit_0_dt),
+        .sample0({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .sample1({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .time_max(frontpanel_0_wi03_ep_dataout),
         .time_min(frontpanel_0_wi02_ep_dataout),
         .valid(data_processing_unit_0_valid));
