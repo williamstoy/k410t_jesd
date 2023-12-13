@@ -12,16 +12,16 @@
 
 module data_processing_unit
 (
-    input wire signed [31:0] V_threshold,
+    input wire [31:0] V_threshold,
     input wire [31:0] time_min, //to make sure noise hasn't caused a false alarm
     input wire [31:0] time_max, //to make sure nothing has gone wrong
     input wire clk,
     input wire RESET_N,
-    input wire signed [13:0] sample0,
-    input wire signed [13:0] sample1,
+    input wire [13:0] sample0,
+    input wire [13:0] sample1,
     output reg valid,
-    output reg signed [13:0] V_peak,
-    output reg signed [31:0] AUC, //area under curve
+    output reg [13:0] V_peak,
+    output reg [31:0] AUC, //area under curve
     output reg [15:0] dt, //width of spike
     output reg [31:0] IPI //Inter-Peak Interval
 );
@@ -32,13 +32,13 @@ reg [1:0] event_state;
 //counter regs
 reg [31:0] counter; //for dt
 //reg [31:0] end_time;
-reg signed [31:0] V_sum; //keeps track of AUC
-reg signed [15:0] V_max; //keeps track of V_peak
+reg [31:0] V_sum; //keeps track of AUC
+reg [15:0] V_max; //keeps track of V_peak
 
 //internal wires
 wire event_detected;
 wire go_to_idle;
-wire signed [13:0] sample_max;
+wire [13:0] sample_max;
 
 //assign outside of sequential logic for speed
 assign go_to_idle = (event_detected && counter>time_max) || (~event_detected && counter<time_min);

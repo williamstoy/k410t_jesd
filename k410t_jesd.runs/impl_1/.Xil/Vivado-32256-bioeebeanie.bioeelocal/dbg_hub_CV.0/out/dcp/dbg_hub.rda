@@ -1,96 +1,0 @@
-Data_For_RDAFlowver5.0
-	top level³P
-dbg_hubÒL
-synthFileNamesR
-10L/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhdO
-11I/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhdS
-12M/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhdQ
-13K/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhdQ
-14K/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhdN
-20H/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/ADDSUB_MACRO.vU
-15O/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhdP
-21J/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.vP
-16J/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhdS
-22M/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.vK
-17E/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/MACC_MACRO.vhdK
-18E/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/MULT_MACRO.vhdP
-23J/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.vO
-19I/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/ADDMACC_MACRO.vT
-24N/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/COUNTER_LOAD_MACRO.vR
-25L/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/COUNTER_TC_MACRO.vL
-30F/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/MULT_MACRO.v
-NumFileNames71R
-26L/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/EQ_COMPARE_MACRO.vR
-31L/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unisims/retarget/MULT18X18.vhdE
-1@/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_VCOMP.vhdV
-27P/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/FIFO_DUALCLOCK_MACRO.vS
-32M/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unisims/retarget/MULT18X18S.vhdD
-2?/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_VPKG.vhdQ
-28K/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/FIFO_SYNC_MACRO.vH
-33B/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.svB
-3=/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.vL
-29F/tools/cad/xilinx/Vivado/2019.2/data/verilog/src/unimacro/MACC_MACRO.vN
-34H/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.svE
-4@/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/internal_cells.v¼
-35µ/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/xsdbm_v3_0_vl_rfs.vË
-40Ä/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bsid_ports.vh;
-56/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/BUFT.vÃ
-36¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_in.vhÃ
-41¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs.vhN
-6I/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhdÄ
-37½/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_i2x.vhÌ
-42Å/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vhM
-7H/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhdÄ
-38½/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_icn.vhÈ
-43Á/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_core.vhL
-8G/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhdÉ
-39Â/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vhÇ
-44À/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ext.vhË
-50Ä/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_id_vec_map.vhN
-9I/tools/cad/xilinx/Vivado/2019.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhdÏ
-45È/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bsid_vec_ports.vh¼
-51µ/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/ltlib_v1_0_vl_rfs.vÇ
-46À/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_vec.vhÄ
-52½/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/ltlib_v1_0_0_ver.vhÌ
-47Å/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vhÇ
-53À/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/ltlib_v1_0_0_lib_fn.vhË
-48Ä/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_sl_prt_map.vh´
-54­/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/synth/dbg_hub.vÇ
-49À/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_id_map.vhÆ
-60¿/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/numeric_std.vhdÇ
-55À/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhdÁ
-61º/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/textio.vhdË
-56Ä/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/fifo_generator_v13_1_vhsyn_rfs.vhdÃ
-62¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/timing_p.vhd?
-579/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_VCOMP.vhdÃ
-63¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/timing_b.vhdÃ
-58¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/std_1164.vhdÃ
-64¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/prmtvs_p.vhdÃ
-59¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/standard.vhdÃ
-70¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_attr.vhdÃ
-65¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/prmtvs_b.vhdÃ
-66¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_arit.vhdÃ
-67¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_unsi.vhdÃ
-68¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_sign.vhdÃ
-69¼/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/.Xil/Vivado-152176-linrack11.bioeelocal/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_misc.vhd
-
-synthStatsÄ
-synth_design
-	directive 
-Cputime1
-Threads used4
-Runtime1W
-argsO-verilog_define default::[not_specified] -top  dbg_hub -part  xc7k410tffg676-1 œ
-synth_design_metrics
-bigRAMs-1
-NetsWithMixedFanouts-1
-DSPsWithKeep0$
-mismatchedAddSubOperatorWidths-1
-lowMaxFanout-1
-NumUnregisteredPorts0
-caseNotFullNoDefault1
-	smallSrls-1
-srlsWithResetLogic-1
-shallowRAMWithAttribute-1
-hierMFO0
-RQS_Results

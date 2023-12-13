@@ -1033,11 +1033,6 @@
           "data_processing_unit_0/RESET_N"
         ]
       },
-      "jesd204_0_transport_0_signalA_sampl0": {
-        "ports": [
-          "jesd204_0_transport_0/signalA_sampl0"
-        ]
-      },
       "jesd204_0_transport_0_signalA_sampl1": {
         "ports": [
           "jesd204_0_transport_0/signalA_sampl1",
@@ -1096,6 +1091,18 @@
         "ports": [
           "data_processing_unit_0/V_peak",
           "ila_0/probe13"
+        ]
+      },
+      "jesd204_0_transport_0_signalB_sampl0": {
+        "ports": [
+          "jesd204_0_transport_0/signalB_sampl0",
+          "data_processing_unit_0/sample0"
+        ]
+      },
+      "jesd204_0_transport_0_signalB_sampl1": {
+        "ports": [
+          "jesd204_0_transport_0/signalB_sampl1",
+          "data_processing_unit_0/sample1"
         ]
       }
     },

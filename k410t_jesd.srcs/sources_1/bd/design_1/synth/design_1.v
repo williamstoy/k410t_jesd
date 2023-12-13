@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Dec 13 15:58:30 2023
+//Date        : Wed Dec 13 16:42:52 2023
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -75,8 +75,9 @@ module design_1
   wire [3:0]jesd204_0_rx_start_of_multiframe;
   wire jesd204_0_rx_sync;
   wire jesd204_0_transport_0_ready_out;
-  wire [13:0]jesd204_0_transport_0_signalA_sampl0;
   wire [13:0]jesd204_0_transport_0_signalA_sampl1;
+  wire [13:0]jesd204_0_transport_0_signalB_sampl0;
+  wire [13:0]jesd204_0_transport_0_signalB_sampl1;
   wire [11:0]okAXI4LiteInterface_0_m_axi_ARADDR;
   wire okAXI4LiteInterface_0_m_axi_ARREADY;
   wire okAXI4LiteInterface_0_m_axi_ARVALID;
@@ -126,8 +127,8 @@ module design_1
         .V_threshold(frontpanel_0_wi01_ep_dataout),
         .clk(jesd204_0_rx_core_clk_out),
         .dt(data_processing_unit_0_dt),
-        .sample0({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .sample1({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .sample0(jesd204_0_transport_0_signalB_sampl0),
+        .sample1(jesd204_0_transport_0_signalB_sampl1),
         .time_max(frontpanel_0_wi03_ep_dataout),
         .time_min(frontpanel_0_wi02_ep_dataout),
         .valid(data_processing_unit_0_valid));
@@ -203,8 +204,9 @@ module design_1
         .rst_n(jesd204_0_rx_aresetn),
         .rx_tdata(jesd204_0_m_axis_rx_TDATA),
         .rx_tvalid(jesd204_0_m_axis_rx_TVALID),
-        .signalA_sampl0(jesd204_0_transport_0_signalA_sampl0),
-        .signalA_sampl1(jesd204_0_transport_0_signalA_sampl1));
+        .signalA_sampl1(jesd204_0_transport_0_signalA_sampl1),
+        .signalB_sampl0(jesd204_0_transport_0_signalB_sampl0),
+        .signalB_sampl1(jesd204_0_transport_0_signalB_sampl1));
   design_1_okAXI4LiteInterface_0_0 okAXI4LiteInterface_0
        (.EP_DATAIN_WIREOUT(frontpanel_0_wireout20_EP_DATAIN),
         .EP_DATAOUT(frontpanel_0_btpipein80_EP_DATAOUT),
