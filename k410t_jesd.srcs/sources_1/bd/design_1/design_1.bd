@@ -22,7 +22,8 @@
       "xlconcat_0": "",
       "negate_0": "",
       "half_rate_0": "",
-      "enable_read_0": ""
+      "enable_read_0": "",
+      "enable_write_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -864,6 +865,33 @@
             "direction": "O"
           }
         }
+      },
+      "enable_write_0": {
+        "vlnv": "xilinx.com:module_ref:enable_write:1.0",
+        "xci_name": "design_1_enable_write_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "enable_write",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "blockstrobe": {
+            "direction": "I"
+          },
+          "read": {
+            "direction": "I"
+          },
+          "full": {
+            "direction": "I"
+          },
+          "wr_en": {
+            "direction": "O"
+          },
+          "fast_clk": {
+            "type": "clk",
+            "direction": "I"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -983,7 +1011,8 @@
           "jesd204_0_transport_0/clk",
           "data_processing_unit_0/clk",
           "fifo_generator_0/wr_clk",
-          "half_rate_0/clk"
+          "half_rate_0/clk",
+          "enable_write_0/fast_clk"
         ]
       },
       "wireoutbreakout_0_rx_reset": {
@@ -1173,7 +1202,20 @@
       "frontpanel_0_btpoa0_ep_read": {
         "ports": [
           "frontpanel_0/btpoa0_ep_read",
-          "enable_read_0/read"
+          "enable_read_0/read",
+          "enable_write_0/read"
+        ]
+      },
+      "frontpanel_0_btpoa0_ep_blockstrobe": {
+        "ports": [
+          "frontpanel_0/btpoa0_ep_blockstrobe",
+          "enable_write_0/blockstrobe"
+        ]
+      },
+      "fifo_generator_0_full": {
+        "ports": [
+          "fifo_generator_0/full",
+          "enable_write_0/full"
         ]
       }
     },
