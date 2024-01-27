@@ -18189,11 +18189,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 22:30:26 UTC 2023</spirit:value>
+            <spirit:value>Sat Jan 27 22:24:08 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:09222ed0</spirit:value>
+            <spirit:value>9:8bae7795</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18204,7 +18204,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:09222ed0</spirit:value>
+            <spirit:value>9:8bae7795</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18219,11 +18219,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 22:30:26 UTC 2023</spirit:value>
+            <spirit:value>Sat Jan 27 22:24:09 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:09222ed0</spirit:value>
+            <spirit:value>9:8bae7795</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18239,11 +18239,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 22:30:27 UTC 2023</spirit:value>
+            <spirit:value>Sat Jan 27 22:24:09 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:04554e75</spirit:value>
+            <spirit:value>9:d2fa542b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18258,11 +18258,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 22:30:27 UTC 2023</spirit:value>
+            <spirit:value>Sat Jan 27 22:24:10 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:04554e75</spirit:value>
+            <spirit:value>9:d2fa542b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18276,11 +18276,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 22:30:27 UTC 2023</spirit:value>
+            <spirit:value>Sat Jan 27 22:24:10 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:09222ed0</spirit:value>
+            <spirit:value>9:8bae7795</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18293,12 +18293,8 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 12 22:43:44 UTC 2023</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:09222ed0</spirit:value>
+            <spirit:value>9:8bae7795</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -43925,6 +43921,10 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>gateware/simulation/FrontPanel/okBTPipeIn.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>gateware/simulation/FrontPanel/okBTPipeOut.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>

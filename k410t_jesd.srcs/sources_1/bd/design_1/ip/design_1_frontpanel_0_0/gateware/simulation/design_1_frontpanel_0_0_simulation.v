@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 // File: design_1_frontpanel_0_0_simulation.v
-// Creation Date: Tue 12/12/2023 at 17:30:27 EST
+// Creation Date: Sat 01/27/2024 at 17:24:09 EST
 // IP Version: opalkelly.com:ip:frontpanel:1.0 (Rev: 3)
 // Tool Version: Vivado v2019.2 (64-bit)
 // Opal Kelly Board: XEM7350-K410T (Part: xc7k410tffg676-1)
@@ -45,6 +45,18 @@ module design_1_frontpanel_0_0(
     input  wire        btpi80_ep_ready,
 
 //----------------------------------------------------------------------------------------------------------------------------------
+// Block Throttle PipeOuts
+//----------------------------------------------------------------------------------------------------------------------------------
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_DATAIN" *)
+    input  wire [31:0] btpoA0_ep_datain,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_READ" *)
+    output wire        btpoA0_ep_read,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_BLOCKSTROBE" *)
+    output wire        btpoA0_ep_blockstrobe,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_READY" *)
+    input  wire        btpoA0_ep_ready,
+
+//----------------------------------------------------------------------------------------------------------------------------------
 // Host Interface
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:host_interface:1.0 host_interface okUH" *)
@@ -68,6 +80,10 @@ design_1_frontpanel_0_0_wrapper_simulation inst (
     .btpi80_ep_write(btpi80_ep_write),
     .btpi80_ep_blockstrobe(btpi80_ep_blockstrobe),
     .btpi80_ep_ready(btpi80_ep_ready),
+    .btpoA0_ep_datain(btpoA0_ep_datain),
+    .btpoA0_ep_read(btpoA0_ep_read),
+    .btpoA0_ep_blockstrobe(btpoA0_ep_blockstrobe),
+    .btpoA0_ep_ready(btpoA0_ep_ready),
     .okUH(okUH),
     .okHU(okHU),
     .okUHU(okUHU),

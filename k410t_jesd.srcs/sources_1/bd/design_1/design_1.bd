@@ -19,11 +19,11 @@
       "jesd204_0_transport_0": "",
       "data_processing_unit_0": "",
       "fifo_generator_0": "",
-      "xlconcat_0": "",
       "negate_0": "",
       "half_rate_0": "",
       "enable_read_0": "",
-      "enable_write_0": ""
+      "enable_write_0": "",
+      "concat_pad_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -792,18 +792,6 @@
           }
         }
       },
-      "xlconcat_0": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "xci_name": "design_1_xlconcat_0_0",
-        "parameters": {
-          "IN0_WIDTH": {
-            "value": "16"
-          },
-          "IN1_WIDTH": {
-            "value": "16"
-          }
-        }
-      },
       "negate_0": {
         "vlnv": "xilinx.com:module_ref:negate:1.0",
         "xci_name": "design_1_negate_0_0",
@@ -890,6 +878,32 @@
           "fast_clk": {
             "type": "clk",
             "direction": "I"
+          }
+        }
+      },
+      "concat_pad_0": {
+        "vlnv": "xilinx.com:module_ref:concat_pad:1.0",
+        "xci_name": "design_1_concat_pad_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "concat_pad",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "in0": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "in1": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         }
       }
@@ -1148,7 +1162,7 @@
         "ports": [
           "jesd204_0_transport_0/signalB_sampl0",
           "data_processing_unit_0/sample0",
-          "xlconcat_0/In0"
+          "concat_pad_0/in0"
         ]
       },
       "jesd204_0_transport_0_signalB_sampl1": {
@@ -1160,7 +1174,7 @@
       "jesd204_0_transport_0_signalD_cntrl0": {
         "ports": [
           "jesd204_0_transport_0/signalD_cntrl0",
-          "xlconcat_0/In1"
+          "concat_pad_0/in1"
         ]
       },
       "fifo_generator_0_dout": {
@@ -1173,12 +1187,6 @@
         "ports": [
           "negate_0/nota",
           "fifo_generator_0/rst"
-        ]
-      },
-      "xlconcat_0_dout": {
-        "ports": [
-          "xlconcat_0/dout",
-          "half_rate_0/data_in"
         ]
       },
       "half_rate_0_data_out": {
@@ -1216,6 +1224,12 @@
         "ports": [
           "fifo_generator_0/full",
           "enable_write_0/full"
+        ]
+      },
+      "concat_pad_0_out": {
+        "ports": [
+          "concat_pad_0/out",
+          "half_rate_0/data_in"
         ]
       }
     },

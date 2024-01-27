@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Dec 13 16:42:52 2023
+//Date        : Sat Jan 27 17:23:51 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_axi4_s2mm_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=8,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_axi4_s2mm_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (FPGA_JESD_CLKM,
     FPGA_JESD_CLKP,
@@ -51,15 +51,22 @@ module design_1
   wire [13:0]data_processing_unit_0_V_peak;
   wire [15:0]data_processing_unit_0_dt;
   wire data_processing_unit_0_valid;
+  wire enable_read_0_read_en;
+  wire [31:0]fifo_generator_0_dout;
+  wire fifo_generator_0_empty;
+  wire fifo_generator_0_full;
   wire [31:0]frontpanel_0_btpipein80_EP_DATAOUT;
   wire frontpanel_0_btpipein80_EP_READY;
   wire frontpanel_0_btpipein80_EP_WRITE;
+  wire frontpanel_0_btpoa0_ep_blockstrobe;
+  wire frontpanel_0_btpoa0_ep_read;
   wire frontpanel_0_okClk;
   wire [31:0]frontpanel_0_wi01_ep_dataout;
   wire [31:0]frontpanel_0_wi02_ep_dataout;
   wire [31:0]frontpanel_0_wi03_ep_dataout;
   wire [31:0]frontpanel_0_wirein00_EP_DATAOUT;
   wire [31:0]frontpanel_0_wireout20_EP_DATAIN;
+  wire [31:0]half_rate_0_data_out;
   wire host_interface_1_okAA;
   wire [2:0]host_interface_1_okHU;
   wire [4:0]host_interface_1_okUH;
@@ -78,6 +85,8 @@ module design_1
   wire [13:0]jesd204_0_transport_0_signalA_sampl1;
   wire [13:0]jesd204_0_transport_0_signalB_sampl0;
   wire [13:0]jesd204_0_transport_0_signalB_sampl1;
+  wire jesd204_0_transport_0_signalD_cntrl0;
+  wire negate_0_nota;
   wire [11:0]okAXI4LiteInterface_0_m_axi_ARADDR;
   wire okAXI4LiteInterface_0_m_axi_ARREADY;
   wire okAXI4LiteInterface_0_m_axi_ARVALID;
@@ -105,6 +114,7 @@ module design_1
   wire [0:0]util_ds_buf_2_OBUF_DS_N;
   wire [0:0]util_ds_buf_2_OBUF_DS_P;
   wire wireoutbreakout_0_rx_reset;
+  wire [31:0]xlconcat_0_dout;
 
   assign FPGA_JESD_CLKM_1 = FPGA_JESD_CLKM;
   assign FPGA_JESD_CLKP_1 = FPGA_JESD_CLKP;
@@ -132,10 +142,33 @@ module design_1
         .time_max(frontpanel_0_wi03_ep_dataout),
         .time_min(frontpanel_0_wi02_ep_dataout),
         .valid(data_processing_unit_0_valid));
+  design_1_enable_read_0_0 enable_read_0
+       (.empty(fifo_generator_0_empty),
+        .read(frontpanel_0_btpoa0_ep_read),
+        .read_en(enable_read_0_read_en));
+  design_1_enable_write_0_0 enable_write_0
+       (.blockstrobe(frontpanel_0_btpoa0_ep_blockstrobe),
+        .fast_clk(jesd204_0_rx_core_clk_out),
+        .full(fifo_generator_0_full),
+        .read(frontpanel_0_btpoa0_ep_read));
+  design_1_fifo_generator_0_1 fifo_generator_0
+       (.din(half_rate_0_data_out),
+        .dout(fifo_generator_0_dout),
+        .empty(fifo_generator_0_empty),
+        .full(fifo_generator_0_full),
+        .rd_clk(frontpanel_0_okClk),
+        .rd_en(enable_read_0_read_en),
+        .rst(negate_0_nota),
+        .wr_clk(jesd204_0_rx_core_clk_out),
+        .wr_en(1'b0));
   design_1_frontpanel_0_0 frontpanel_0
        (.btpi80_ep_dataout(frontpanel_0_btpipein80_EP_DATAOUT),
         .btpi80_ep_ready(frontpanel_0_btpipein80_EP_READY),
         .btpi80_ep_write(frontpanel_0_btpipein80_EP_WRITE),
+        .btpoa0_ep_blockstrobe(frontpanel_0_btpoa0_ep_blockstrobe),
+        .btpoa0_ep_datain(fifo_generator_0_dout),
+        .btpoa0_ep_read(frontpanel_0_btpoa0_ep_read),
+        .btpoa0_ep_ready(jesd204_0_rx_sync),
         .okAA(host_interface_okaa),
         .okClk(frontpanel_0_okClk),
         .okHU(host_interface_1_okHU),
@@ -146,6 +179,10 @@ module design_1
         .wi02_ep_dataout(frontpanel_0_wi02_ep_dataout),
         .wi03_ep_dataout(frontpanel_0_wi03_ep_dataout),
         .wo20_ep_datain(frontpanel_0_wireout20_EP_DATAIN));
+  design_1_half_rate_0_0 half_rate_0
+       (.clk(jesd204_0_rx_core_clk_out),
+        .data_in(xlconcat_0_dout),
+        .data_out(half_rate_0_data_out));
   design_1_ila_0_1 ila_0
        (.clk(jesd204_0_rx_core_clk_out),
         .probe0({jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out,jesd204_0_transport_0_ready_out}),
@@ -206,7 +243,11 @@ module design_1
         .rx_tvalid(jesd204_0_m_axis_rx_TVALID),
         .signalA_sampl1(jesd204_0_transport_0_signalA_sampl1),
         .signalB_sampl0(jesd204_0_transport_0_signalB_sampl0),
-        .signalB_sampl1(jesd204_0_transport_0_signalB_sampl1));
+        .signalB_sampl1(jesd204_0_transport_0_signalB_sampl1),
+        .signalD_cntrl0(jesd204_0_transport_0_signalD_cntrl0));
+  design_1_negate_0_0 negate_0
+       (.a(jesd204_0_rx_aresetn),
+        .nota(negate_0_nota));
   design_1_okAXI4LiteInterface_0_0 okAXI4LiteInterface_0
        (.EP_DATAIN_WIREOUT(frontpanel_0_wireout20_EP_DATAIN),
         .EP_DATAOUT(frontpanel_0_btpipein80_EP_DATAOUT),
@@ -247,4 +288,8 @@ module design_1
   design_1_wireoutbreakout_0_0 wireoutbreakout_0
        (.EP_DATAOUT_WIREIN(frontpanel_0_wirein00_EP_DATAOUT),
         .rx_reset(wireoutbreakout_0_rx_reset));
+  design_1_xlconcat_0_0 xlconcat_0
+       (.In0({1'b0,1'b0,jesd204_0_transport_0_signalB_sampl0}),
+        .In1({jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0,jesd204_0_transport_0_signalD_cntrl0}),
+        .dout(xlconcat_0_dout));
 endmodule

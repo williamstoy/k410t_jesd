@@ -32,6 +32,18 @@
     input  wire        btpi80_ep_ready,
 
 //----------------------------------------------------------------------------------------------------------------------------------
+// Block Throttle PipeOuts
+//----------------------------------------------------------------------------------------------------------------------------------
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_DATAIN" *)
+    input  wire [31:0] btpoA0_ep_datain,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_READ" *)
+    output wire        btpoA0_ep_read,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_BLOCKSTROBE" *)
+    output wire        btpoA0_ep_blockstrobe,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_READY" *)
+    input  wire        btpoA0_ep_ready,
+
+//----------------------------------------------------------------------------------------------------------------------------------
 // Host Interface
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:host_interface:1.0 host_interface okUH" *)
