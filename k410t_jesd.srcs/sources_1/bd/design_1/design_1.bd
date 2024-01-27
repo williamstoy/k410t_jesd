@@ -900,7 +900,7 @@
             "left": "13",
             "right": "0"
           },
-          "out": {
+          "pad_out": {
             "direction": "O",
             "left": "31",
             "right": "0"
@@ -1228,7 +1228,7 @@
       },
       "concat_pad_0_out": {
         "ports": [
-          "concat_pad_0/out",
+          "concat_pad_0/pad_out",
           "half_rate_0/data_in"
         ]
       }

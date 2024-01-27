@@ -39,7 +39,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>out</spirit:name>
+        <spirit:name>pad_out</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
