@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1702503780">
-  <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
   <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
-  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/opalkelly-frontpanel-axi4lite-interface/okAXI4LiteInterface.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../tools/opalkelly-frontpanel-axi4lite-interface/okAXI4LiteInterface.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../wstoy/Documents/vivado/tools/opalkelly-frontpanel-axi4lite-interface/okAXI4LiteInterface.v"/>
         <Attr Name="ImportTime" Val="1698340118"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -29,7 +26,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Desktop/data_processing_unit.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Desktop/data_processing_unit.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../wstoy/Desktop/data_processing_unit.v"/>
         <Attr Name="ImportTime" Val="1702411962"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -83,7 +80,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../k410t_jesd_pin_planning/io_1.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../wstoy/Documents/vivado/projects/k410t_jesd_pin_planning/io_1.xdc"/>
         <Attr Name="ImportTime" Val="1698342078"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -100,16 +97,14 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_data_processing_unit_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_transport_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_data_processing_unit_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_wireoutbreakout_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_frontpanel_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_okAXI4LiteInterface_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_frontpanel_0_0"/>
 </GenRun>

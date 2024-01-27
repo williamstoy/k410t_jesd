@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.xpr">
+<Project Version="7" Minor="44" Path="/users/nalarcon/k410t_jesd/k410t_jesd.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9f1fb09f2643445cbcd641236ba83141"/>
@@ -19,12 +19,13 @@
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val="opalkelly.com:xem7350-k410t:part0:1.0"/>
     <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../../.Xilinx/Vivado/2019.2/xhub/board_store"/>
-    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../XilinxBoardStore/boards/OpalKelly"/>
+    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../IP/TI204C-IP-Release-v1.10"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../IP/FrontPanel-Vivado-IP-Dist-v1.0.3"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../wstoy/Documents/vivado/IP/TI204C-IP-Release-v1.10"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../Documents/FrontPanel-Vivado-IP-Dist-v1.0.3"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.3"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -65,7 +66,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/opalkelly-frontpanel-axi4lite-interface/okAXI4LiteInterface.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../tools/opalkelly-frontpanel-axi4lite-interface/okAXI4LiteInterface.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../wstoy/Documents/vivado/tools/opalkelly-frontpanel-axi4lite-interface/okAXI4LiteInterface.v"/>
           <Attr Name="ImportTime" Val="1698340118"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -81,7 +82,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Desktop/data_processing_unit.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Desktop/data_processing_unit.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../wstoy/Desktop/data_processing_unit.v"/>
           <Attr Name="ImportTime" Val="1702411962"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -95,32 +96,53 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/negate.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/half_rate.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/enable_read.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0.xci">
-          <Proxy FileSetName="design_1_frontpanel_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_okAXI4LiteInterface_0_0/design_1_okAXI4LiteInterface_0_0.xci">
-          <Proxy FileSetName="design_1_okAXI4LiteInterface_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0.xci">
-          <Proxy FileSetName="design_1_wireoutbreakout_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_jesd204_0_0/design_1_jesd204_0_0.xci">
-          <Proxy FileSetName="design_1_jesd204_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ila_0_1/design_1_ila_0_1.xci">
-          <Proxy FileSetName="design_1_ila_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_jesd204_0_transport_0_0/design_1_jesd204_0_transport_0_0.xci">
           <Proxy FileSetName="design_1_jesd204_0_transport_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_data_processing_unit_0_0/design_1_data_processing_unit_0_0.xci">
           <Proxy FileSetName="design_1_data_processing_unit_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ila_0_1/design_1_ila_0_1.xci">
+          <Proxy FileSetName="design_1_ila_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0.xci">
+          <Proxy FileSetName="design_1_wireoutbreakout_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_okAXI4LiteInterface_0_0/design_1_okAXI4LiteInterface_0_0.xci">
+          <Proxy FileSetName="design_1_okAXI4LiteInterface_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_jesd204_0_0/design_1_jesd204_0_0.xci">
+          <Proxy FileSetName="design_1_jesd204_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0.xci">
+          <Proxy FileSetName="design_1_frontpanel_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
@@ -146,6 +168,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/enable_write.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="design_1_wrapper"/>
@@ -156,7 +186,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../k410t_jesd_pin_planning/io_1.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../wstoy/Documents/vivado/projects/k410t_jesd_pin_planning/io_1.xdc"/>
           <Attr Name="ImportTime" Val="1698342078"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -255,9 +285,7 @@
   <Runs Version="1" Minor="11">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7k410tffg676-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -267,9 +295,7 @@
     </Run>
     <Run Id="design_1_okAXI4LiteInterface_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_okAXI4LiteInterface_0_0" Part="xc7k410tffg676-1" ConstrsSet="design_1_okAXI4LiteInterface_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_okAXI4LiteInterface_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -279,9 +305,7 @@
     </Run>
     <Run Id="design_1_wireoutbreakout_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_wireoutbreakout_0_0" Part="xc7k410tffg676-1" ConstrsSet="design_1_wireoutbreakout_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_wireoutbreakout_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -291,9 +315,7 @@
     </Run>
     <Run Id="design_1_jesd204_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_jesd204_0_0" Part="xc7k410tffg676-1" ConstrsSet="design_1_jesd204_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_jesd204_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -303,9 +325,7 @@
     </Run>
     <Run Id="design_1_ila_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_ila_0_1" Part="xc7k410tffg676-1" ConstrsSet="design_1_ila_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ila_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -315,9 +335,7 @@
     </Run>
     <Run Id="design_1_jesd204_0_transport_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_jesd204_0_transport_0_0" Part="xc7k410tffg676-1" ConstrsSet="design_1_jesd204_0_transport_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_jesd204_0_transport_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -327,9 +345,7 @@
     </Run>
     <Run Id="design_1_frontpanel_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_frontpanel_0_0" Part="xc7k410tffg676-1" ConstrsSet="design_1_frontpanel_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_frontpanel_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -339,9 +355,7 @@
     </Run>
     <Run Id="design_1_data_processing_unit_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_data_processing_unit_0_0" Part="xc7k410tffg676-1" ConstrsSet="design_1_data_processing_unit_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_data_processing_unit_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -351,9 +365,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -371,9 +383,7 @@
     </Run>
     <Run Id="design_1_okAXI4LiteInterface_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_okAXI4LiteInterface_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_okAXI4LiteInterface_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -390,9 +400,7 @@
     </Run>
     <Run Id="design_1_wireoutbreakout_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_wireoutbreakout_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_wireoutbreakout_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -409,9 +417,7 @@
     </Run>
     <Run Id="design_1_jesd204_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_jesd204_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_jesd204_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -428,9 +434,7 @@
     </Run>
     <Run Id="design_1_ila_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_ila_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ila_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -447,9 +451,7 @@
     </Run>
     <Run Id="design_1_jesd204_0_transport_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_jesd204_0_transport_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_jesd204_0_transport_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -466,9 +468,7 @@
     </Run>
     <Run Id="design_1_frontpanel_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_frontpanel_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_frontpanel_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -485,9 +485,7 @@
     </Run>
     <Run Id="design_1_data_processing_unit_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_data_processing_unit_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_data_processing_unit_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

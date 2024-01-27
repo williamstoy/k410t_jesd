@@ -7579,7 +7579,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.btpipeouta0" xilinx:dependency="($PARAM_VALUE.BTPO.ADDR_0 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_1 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_2 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_3 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_4 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_5 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_6 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_7 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_8 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_9 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_10 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_11 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_12 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_13 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_14 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_15 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_16 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_17 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_18 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_19 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_20 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_21 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_22 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_23 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_24 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_25 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_26 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_27 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_28 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_29 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_30 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_31 == 0xa0)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.btpipeouta0" xilinx:dependency="($PARAM_VALUE.BTPO.ADDR_0 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_1 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_2 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_3 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_4 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_5 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_6 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_7 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_8 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_9 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_10 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_11 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_12 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_13 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_14 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_15 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_16 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_17 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_18 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_19 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_20 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_21 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_22 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_23 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_24 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_25 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_26 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_27 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_28 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_29 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_30 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_31 == 0xa0)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -28349,13 +28349,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa0_ep_datain">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa0_ep_read</spirit:name>
@@ -28369,13 +28362,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa0_ep_read">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa0_ep_blockstrobe</spirit:name>
@@ -28389,13 +28375,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa0_ep_blockstrobe">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa0_ep_ready</spirit:name>
@@ -28409,13 +28388,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa0_ep_ready">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa1_ep_datain</spirit:name>
@@ -45191,12 +45163,12 @@
     <spirit:parameter>
       <spirit:name>BTPO.COUNT</spirit:name>
       <spirit:displayName>BTPipeOut</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BTPO.COUNT" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BTPO.COUNT" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BTPO.ADDR_0</spirit:name>
       <spirit:displayName>BTPipeOut 0 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BTPO.ADDR_0" spirit:bitStringLength="8">0xff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BTPO.ADDR_0" spirit:bitStringLength="8">0xA0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BTPO.ADDR_1</spirit:name>
@@ -46734,6 +46706,8 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.HOST_INTERFACE.BOARD.ASSOCIATED_PARAM" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BTPI.ADDR_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BTPI.COUNT" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BTPO.ADDR_0" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BTPO.COUNT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TI.ADDR_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TI.COUNT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_0" xilinx:valueSource="user"/>
