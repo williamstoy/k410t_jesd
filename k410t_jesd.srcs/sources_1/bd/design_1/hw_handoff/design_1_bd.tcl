@@ -261,10 +261,12 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.BTPI.ADDR_0 {0x80} \
    CONFIG.BTPI.COUNT {1} \
-   CONFIG.BTPO.ADDR_0 {0xA0} \
+   CONFIG.BTPO.ADDR_0 {0xA1} \
    CONFIG.BTPO.COUNT {1} \
-   CONFIG.TI.ADDR_0 {0xff} \
-   CONFIG.TI.COUNT {0} \
+   CONFIG.TI.ADDR_0 {0x40} \
+   CONFIG.TI.COUNT {1} \
+   CONFIG.TO.ADDR_0 {0x60} \
+   CONFIG.TO.COUNT {1} \
    CONFIG.WI.ADDR_0 {0x00} \
    CONFIG.WI.ADDR_1 {0x01} \
    CONFIG.WI.ADDR_2 {0x02} \
@@ -407,11 +409,11 @@ proc create_root_design { parentCell } {
   connect_bd_net -net data_processing_unit_0_valid [get_bd_pins data_processing_unit_0/valid] [get_bd_pins ila_0/probe4]
   connect_bd_net -net enable_read_0_read_en [get_bd_pins enable_read_0/read_en] [get_bd_pins fifo_generator_0/rd_en]
   connect_bd_net -net enable_write_0_wr_en [get_bd_pins enable_write_0/wr_en] [get_bd_pins fifo_generator_0/wr_en]
-  connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_0/btpoa0_ep_datain]
+  connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_0/btpoa1_ep_datain]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/empty]
   connect_bd_net -net fifo_generator_0_full [get_bd_pins enable_write_0/full] [get_bd_pins fifo_generator_0/full]
-  connect_bd_net -net frontpanel_0_btpoa0_ep_blockstrobe [get_bd_pins enable_write_0/blockstrobe] [get_bd_pins frontpanel_0/btpoa0_ep_blockstrobe]
-  connect_bd_net -net frontpanel_0_btpoa0_ep_read [get_bd_pins enable_read_0/read] [get_bd_pins enable_write_0/read] [get_bd_pins frontpanel_0/btpoa0_ep_read]
+  connect_bd_net -net frontpanel_0_btpoa0_ep_read [get_bd_pins enable_read_0/read] [get_bd_pins enable_write_0/read] [get_bd_pins frontpanel_0/btpoa1_ep_read]
+  connect_bd_net -net frontpanel_0_btpoa1_ep_blockstrobe [get_bd_pins enable_write_0/blockstrobe] [get_bd_pins frontpanel_0/btpoa1_ep_blockstrobe]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_0/okClk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_0_wi01_ep_dataout [get_bd_pins data_processing_unit_0/V_threshold] [get_bd_pins frontpanel_0/wi01_ep_dataout]
   connect_bd_net -net frontpanel_0_wi02_ep_dataout [get_bd_pins data_processing_unit_0/time_min] [get_bd_pins frontpanel_0/wi02_ep_dataout]
@@ -424,7 +426,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net jesd204_0_rx_frame_error [get_bd_pins ila_0/probe7] [get_bd_pins jesd204_0/rx_frame_error]
   connect_bd_net -net jesd204_0_rx_start_of_frame [get_bd_pins ila_0/probe2] [get_bd_pins jesd204_0/rx_start_of_frame]
   connect_bd_net -net jesd204_0_rx_start_of_multiframe [get_bd_pins ila_0/probe6] [get_bd_pins jesd204_0/rx_start_of_multiframe]
-  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins frontpanel_0/btpoa0_ep_ready] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
+  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins frontpanel_0/btpoa1_ep_ready] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
   connect_bd_net -net jesd204_0_transport_0_ready_out [get_bd_pins ila_0/probe0] [get_bd_pins jesd204_0_transport_0/ready_out]
   connect_bd_net -net jesd204_0_transport_0_signalA_sampl1 [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0_transport_0/signalA_sampl1]
   connect_bd_net -net jesd204_0_transport_0_signalB_sampl0 [get_bd_pins concat_pad_0/in0] [get_bd_pins data_processing_unit_0/sample0] [get_bd_pins jesd204_0_transport_0/signalB_sampl0]

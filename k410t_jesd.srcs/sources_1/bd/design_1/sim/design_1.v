@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Sat Jan 27 18:55:03 2024
+//Date        : Sun Jan 28 14:00:49 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -60,8 +60,8 @@ module design_1
   wire [31:0]frontpanel_0_btpipein80_EP_DATAOUT;
   wire frontpanel_0_btpipein80_EP_READY;
   wire frontpanel_0_btpipein80_EP_WRITE;
-  wire frontpanel_0_btpoa0_ep_blockstrobe;
   wire frontpanel_0_btpoa0_ep_read;
+  wire frontpanel_0_btpoa1_ep_blockstrobe;
   wire frontpanel_0_okClk;
   wire [31:0]frontpanel_0_wi01_ep_dataout;
   wire [31:0]frontpanel_0_wi02_ep_dataout;
@@ -152,7 +152,7 @@ module design_1
         .read(frontpanel_0_btpoa0_ep_read),
         .read_en(enable_read_0_read_en));
   design_1_enable_write_0_0 enable_write_0
-       (.blockstrobe(frontpanel_0_btpoa0_ep_blockstrobe),
+       (.blockstrobe(frontpanel_0_btpoa1_ep_blockstrobe),
         .fast_clk(jesd204_0_rx_core_clk_out),
         .full(fifo_generator_0_full),
         .read(frontpanel_0_btpoa0_ep_read),
@@ -171,15 +171,18 @@ module design_1
        (.btpi80_ep_dataout(frontpanel_0_btpipein80_EP_DATAOUT),
         .btpi80_ep_ready(frontpanel_0_btpipein80_EP_READY),
         .btpi80_ep_write(frontpanel_0_btpipein80_EP_WRITE),
-        .btpoa0_ep_blockstrobe(frontpanel_0_btpoa0_ep_blockstrobe),
-        .btpoa0_ep_datain(fifo_generator_0_dout),
-        .btpoa0_ep_read(frontpanel_0_btpoa0_ep_read),
-        .btpoa0_ep_ready(jesd204_0_rx_sync),
+        .btpoa1_ep_blockstrobe(frontpanel_0_btpoa1_ep_blockstrobe),
+        .btpoa1_ep_datain(fifo_generator_0_dout),
+        .btpoa1_ep_read(frontpanel_0_btpoa0_ep_read),
+        .btpoa1_ep_ready(jesd204_0_rx_sync),
         .okAA(host_interface_okaa),
         .okClk(frontpanel_0_okClk),
         .okHU(host_interface_1_okHU),
         .okUH(host_interface_1_okUH),
         .okUHU(host_interface_okuhu[31:0]),
+        .ti40_ep_clk(1'b0),
+        .to60_ep_clk(1'b0),
+        .to60_ep_trigger({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .wi00_ep_dataout(frontpanel_0_wirein00_EP_DATAOUT),
         .wi01_ep_dataout(frontpanel_0_wi01_ep_dataout),
         .wi02_ep_dataout(frontpanel_0_wi02_ep_dataout),

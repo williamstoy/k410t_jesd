@@ -44,7 +44,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BTPI.ADDR_8">0xff</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BTPI.ADDR_9">0xff</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BTPI.COUNT">1</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BTPO.ADDR_0">0xA0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BTPO.ADDR_0">0xA1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BTPO.ADDR_1">0xff</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BTPO.ADDR_10">0xff</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.BTPO.ADDR_11">0xff</spirit:configurableElementValue>
@@ -581,6 +581,8 @@
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BTPO.COUNT" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TI.ADDR_0" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TI.COUNT" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TO.ADDR_0" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TO.COUNT" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_0" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_1" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_2" xilinx:valueSource="user"/>

@@ -20,6 +20,22 @@
     input  wire [31:0] wo20_ep_datain,
 
 //----------------------------------------------------------------------------------------------------------------------------------
+// TriggerIns
+//----------------------------------------------------------------------------------------------------------------------------------
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40 EP_TRIGGER" *)
+    output wire [31:0] ti40_ep_trigger,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40 EP_CLK" *)
+    input  wire        ti40_ep_clk,
+
+//----------------------------------------------------------------------------------------------------------------------------------
+// TriggerOuts
+//----------------------------------------------------------------------------------------------------------------------------------
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerout:1.0 triggerout60 EP_TRIGGER" *)
+    input  wire [31:0] to60_ep_trigger,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerout:1.0 triggerout60 EP_CLK" *)
+    input  wire        to60_ep_clk,
+
+//----------------------------------------------------------------------------------------------------------------------------------
 // Block Throttle PipeIns
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipein:1.0 btpipein80 EP_DATAOUT" *)
@@ -34,14 +50,14 @@
 //----------------------------------------------------------------------------------------------------------------------------------
 // Block Throttle PipeOuts
 //----------------------------------------------------------------------------------------------------------------------------------
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_DATAIN" *)
-    input  wire [31:0] btpoA0_ep_datain,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_READ" *)
-    output wire        btpoA0_ep_read,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_BLOCKSTROBE" *)
-    output wire        btpoA0_ep_blockstrobe,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA0 EP_READY" *)
-    input  wire        btpoA0_ep_ready,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA1 EP_DATAIN" *)
+    input  wire [31:0] btpoA1_ep_datain,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA1 EP_READ" *)
+    output wire        btpoA1_ep_read,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA1 EP_BLOCKSTROBE" *)
+    output wire        btpoA1_ep_blockstrobe,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeoutA1 EP_READY" *)
+    input  wire        btpoA1_ep_ready,
 
 //----------------------------------------------------------------------------------------------------------------------------------
 // Host Interface

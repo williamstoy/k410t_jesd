@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jan 27 18:55:05 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan 28 14:01:01 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -195,9 +195,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa0_ep_read">
+        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_read">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa0_ep_read"/>
+            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_read"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
@@ -220,14 +220,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="blockstrobe" SIGIS="undef" SIGNAME="frontpanel_0_btpoa0_ep_blockstrobe">
+        <PORT DIR="I" NAME="blockstrobe" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_blockstrobe">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa0_ep_blockstrobe"/>
+            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_blockstrobe"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa0_ep_read">
+        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_read">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa0_ep_read"/>
+            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_read"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
@@ -657,7 +657,7 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa0_ep_datain"/>
+            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_datain"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
@@ -764,8 +764,8 @@
         <PARAMETER NAME="WO.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="TI.COUNT" VALUE="0"/>
-        <PARAMETER NAME="TI.ADDR_0" VALUE="0xff"/>
+        <PARAMETER NAME="TI.COUNT" VALUE="1"/>
+        <PARAMETER NAME="TI.ADDR_0" VALUE="0x40"/>
         <PARAMETER NAME="TI.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_3" VALUE="0xff"/>
@@ -797,8 +797,8 @@
         <PARAMETER NAME="TI.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="TO.COUNT" VALUE="0"/>
-        <PARAMETER NAME="TO.ADDR_0" VALUE="0xff"/>
+        <PARAMETER NAME="TO.COUNT" VALUE="1"/>
+        <PARAMETER NAME="TO.ADDR_0" VALUE="0x60"/>
         <PARAMETER NAME="TO.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="TO.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="TO.ADDR_3" VALUE="0xff"/>
@@ -930,7 +930,7 @@
         <PARAMETER NAME="BTPI.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="BTPI.ADDR_31" VALUE="0xff"/>
         <PARAMETER NAME="BTPO.COUNT" VALUE="1"/>
-        <PARAMETER NAME="BTPO.ADDR_0" VALUE="0xA0"/>
+        <PARAMETER NAME="BTPO.ADDR_0" VALUE="0xA1"/>
         <PARAMETER NAME="BTPO.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="BTPO.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="BTPO.ADDR_3" VALUE="0xff"/>
@@ -1291,6 +1291,10 @@
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_DATAIN_WIREOUT"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="ti40_ep_trigger" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ti40_ep_clk" SIGIS="clk"/>
+        <PORT DIR="I" LEFT="31" NAME="to60_ep_trigger" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="to60_ep_clk" SIGIS="clk"/>
         <PORT DIR="O" LEFT="31" NAME="btpi80_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_btpi80_ep_dataout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_DATAOUT"/>
@@ -1307,23 +1311,23 @@
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_READY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="btpoa0_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
+        <PORT DIR="I" LEFT="31" NAME="btpoa1_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="btpoa0_ep_read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa0_ep_read">
+        <PORT DIR="O" NAME="btpoa1_ep_read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_read">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_read_0" PORT="read"/>
             <CONNECTION INSTANCE="enable_write_0" PORT="read"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="btpoa0_ep_blockstrobe" SIGIS="undef" SIGNAME="frontpanel_0_btpoa0_ep_blockstrobe">
+        <PORT DIR="O" NAME="btpoa1_ep_blockstrobe" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_blockstrobe">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_write_0" PORT="blockstrobe"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="btpoa0_ep_ready" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
+        <PORT DIR="I" NAME="btpoa1_ep_ready" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_sync"/>
           </CONNECTIONS>
@@ -1363,6 +1367,18 @@
             <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="wo20_ep_datain"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="triggerin40" TYPE="INITIATOR" VLNV="opalkelly.com:interface:triggerin:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="EP_TRIGGER" PHYSICAL="ti40_ep_trigger"/>
+            <PORTMAP LOGICAL="EP_CLK" PHYSICAL="ti40_ep_clk"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="triggerout60" TYPE="INITIATOR" VLNV="opalkelly.com:interface:triggerout:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="EP_TRIGGER" PHYSICAL="to60_ep_trigger"/>
+            <PORTMAP LOGICAL="EP_CLK" PHYSICAL="to60_ep_clk"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="frontpanel_0_btpipein80" NAME="btpipein80" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpi80_ep_blockstrobe"/>
@@ -1371,12 +1387,12 @@
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="btpi80_ep_dataout"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="btpipeouta0" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipeout:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="btpipeouta1" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipeout:1.0">
           <PORTMAPS>
-            <PORTMAP LOGICAL="EP_READ" PHYSICAL="btpoa0_ep_read"/>
-            <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpoa0_ep_blockstrobe"/>
-            <PORTMAP LOGICAL="EP_READY" PHYSICAL="btpoa0_ep_ready"/>
-            <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="btpoa0_ep_datain"/>
+            <PORTMAP LOGICAL="EP_READ" PHYSICAL="btpoa1_ep_read"/>
+            <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpoa1_ep_blockstrobe"/>
+            <PORTMAP LOGICAL="EP_READY" PHYSICAL="btpoa1_ep_ready"/>
+            <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="btpoa1_ep_datain"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -4858,7 +4874,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="JESD_SYNC"/>
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_IN"/>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa0_ep_ready"/>
+            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_ready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

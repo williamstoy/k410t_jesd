@@ -7579,7 +7579,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.btpipeouta0" xilinx:dependency="($PARAM_VALUE.BTPO.ADDR_0 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_1 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_2 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_3 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_4 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_5 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_6 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_7 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_8 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_9 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_10 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_11 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_12 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_13 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_14 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_15 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_16 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_17 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_18 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_19 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_20 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_21 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_22 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_23 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_24 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_25 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_26 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_27 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_28 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_29 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_30 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_31 == 0xa0)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.btpipeouta0" xilinx:dependency="($PARAM_VALUE.BTPO.ADDR_0 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_1 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_2 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_3 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_4 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_5 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_6 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_7 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_8 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_9 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_10 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_11 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_12 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_13 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_14 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_15 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_16 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_17 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_18 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_19 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_20 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_21 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_22 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_23 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_24 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_25 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_26 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_27 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_28 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_29 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_30 == 0xa0) || ($PARAM_VALUE.BTPO.ADDR_31 == 0xa0)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -7628,7 +7628,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.btpipeouta1" xilinx:dependency="($PARAM_VALUE.BTPO.ADDR_0 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_1 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_2 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_3 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_4 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_5 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_6 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_7 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_8 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_9 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_10 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_11 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_12 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_13 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_14 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_15 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_16 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_17 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_18 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_19 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_20 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_21 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_22 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_23 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_24 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_25 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_26 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_27 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_28 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_29 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_30 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_31 == 0xa1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.btpipeouta1" xilinx:dependency="($PARAM_VALUE.BTPO.ADDR_0 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_1 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_2 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_3 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_4 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_5 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_6 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_7 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_8 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_9 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_10 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_11 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_12 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_13 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_14 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_15 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_16 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_17 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_18 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_19 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_20 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_21 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_22 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_23 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_24 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_25 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_26 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_27 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_28 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_29 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_30 == 0xa1) || ($PARAM_VALUE.BTPO.ADDR_31 == 0xa1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -18189,11 +18189,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jan 27 22:24:08 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 28 19:00:59 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8bae7795</spirit:value>
+            <spirit:value>9:6f79a0f4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18204,7 +18204,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8bae7795</spirit:value>
+            <spirit:value>9:6f79a0f4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18219,11 +18219,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jan 27 22:24:09 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 28 19:01:00 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8bae7795</spirit:value>
+            <spirit:value>9:6f79a0f4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18239,11 +18239,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jan 27 22:24:09 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 28 19:01:00 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d2fa542b</spirit:value>
+            <spirit:value>9:57b340aa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18258,11 +18258,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jan 27 22:24:10 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 28 19:01:01 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d2fa542b</spirit:value>
+            <spirit:value>9:57b340aa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18276,11 +18276,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jan 27 22:24:10 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 28 19:01:01 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8bae7795</spirit:value>
+            <spirit:value>9:6f79a0f4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18294,11 +18294,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jan 27 22:50:28 UTC 2024</spirit:value>
+            <spirit:value>Sun Jan 28 19:09:57 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8bae7795</spirit:value>
+            <spirit:value>9:6f79a0f4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -28349,6 +28349,13 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa0_ep_datain">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa0_ep_read</spirit:name>
@@ -28362,6 +28369,13 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa0_ep_read">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa0_ep_blockstrobe</spirit:name>
@@ -28375,6 +28389,13 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa0_ep_blockstrobe">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa0_ep_ready</spirit:name>
@@ -28388,6 +28409,13 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa0_ep_ready">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa1_ep_datain</spirit:name>
@@ -28405,13 +28433,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa1_ep_datain">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa1_ep_read</spirit:name>
@@ -28425,13 +28446,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa1_ep_read">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa1_ep_blockstrobe</spirit:name>
@@ -28445,13 +28459,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa1_ep_blockstrobe">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa1_ep_ready</spirit:name>
@@ -28465,13 +28472,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.btpoa1_ep_ready">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>btpoa2_ep_datain</spirit:name>
@@ -43932,7 +43932,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>gateware/simulation/FrontPanel/okTriggerOut.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>gateware/simulation/FrontPanel/okWireIn.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>gateware/simulation/FrontPanel/okTriggerIn.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -45172,7 +45180,7 @@
     <spirit:parameter>
       <spirit:name>BTPO.ADDR_0</spirit:name>
       <spirit:displayName>BTPipeOut 0 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BTPO.ADDR_0" spirit:bitStringLength="8">0xA0</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BTPO.ADDR_0" spirit:bitStringLength="8">0xA1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BTPO.ADDR_1</spirit:name>
@@ -46714,6 +46722,8 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BTPO.COUNT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TI.ADDR_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TI.COUNT" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TO.ADDR_0" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TO.COUNT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_1" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.WI.ADDR_2" xilinx:valueSource="user"/>
