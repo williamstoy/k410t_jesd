@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 24
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -string {{Problem parsing board file}}  -suppress 
 create_project -in_memory -part xc7k410tffg676-1
 
@@ -35,16 +33,14 @@ set_property board_part_repo_paths {/users/wstoy/Documents/vivado/XilinxBoardSto
 set_property board_part opalkelly.com:xem7350-k410t:part0:1.0 [current_project]
 set_property ip_repo_paths {
   /users/wstoy/Documents/vivado/IP/TI204C-IP-Release-v1.10
-  /users/nalarcon/Documents/FrontPanel-Vivado-IP-Dist-v1.0.3
   /users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.3
+  /users/nalarcon/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo /users/nalarcon/k410t_jesd/k410t_jesd.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_0_0/gateware/synthesis/xem7350.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt_ooc.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_ooc.xdc]
@@ -66,6 +62,9 @@ set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

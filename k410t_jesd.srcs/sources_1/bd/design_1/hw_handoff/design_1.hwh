@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan 28 14:01:01 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan 28 15:13:26 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -59,24 +59,24 @@
         <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_DS_N"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="2" NAME="host_interface_okhu" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_okHU">
+    <PORT DIR="O" LEFT="2" NAME="host_interface_okhu" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_okHU">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="frontpanel_0" PORT="okHU"/>
+        <CONNECTION INSTANCE="frontpanel_1" PORT="okHU"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="4" NAME="host_interface_okuh" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_okUH">
+    <PORT DIR="I" LEFT="4" NAME="host_interface_okuh" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_okUH">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="frontpanel_0" PORT="okUH"/>
+        <CONNECTION INSTANCE="frontpanel_1" PORT="okUH"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" LEFT="31" NAME="host_interface_okuhu" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_okUHU">
+    <PORT DIR="IO" LEFT="31" NAME="host_interface_okuhu" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_okUHU">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="frontpanel_0" PORT="okUHU"/>
+        <CONNECTION INSTANCE="frontpanel_1" PORT="okUHU"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" NAME="host_interface_okaa" SIGIS="undef" SIGNAME="frontpanel_0_okAA">
+    <PORT DIR="IO" NAME="host_interface_okaa" SIGIS="undef" SIGNAME="frontpanel_1_okAA">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="frontpanel_0" PORT="okAA"/>
+        <CONNECTION INSTANCE="frontpanel_1" PORT="okAA"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -125,19 +125,19 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="31" NAME="V_threshold" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi01_ep_dataout">
+        <PORT DIR="I" LEFT="31" NAME="V_threshold" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi01_ep_dataout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="wi01_ep_dataout"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="wi01_ep_dataout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="time_min" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi02_ep_dataout">
+        <PORT DIR="I" LEFT="31" NAME="time_min" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi02_ep_dataout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="wi02_ep_dataout"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="wi02_ep_dataout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="time_max" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi03_ep_dataout">
+        <PORT DIR="I" LEFT="31" NAME="time_max" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi03_ep_dataout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="wi03_ep_dataout"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="wi03_ep_dataout"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
@@ -195,9 +195,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_read">
+        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_read"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_read"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
@@ -220,14 +220,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="blockstrobe" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_blockstrobe">
+        <PORT DIR="I" NAME="blockstrobe" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_blockstrobe">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_blockstrobe"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_blockstrobe"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_read">
+        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_read"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_read"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
@@ -635,9 +635,9 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="frontpanel_0_okClk">
+        <PORT CLKFREQUENCY="100800000" DIR="I" NAME="rd_clk" SIGIS="clk" SIGNAME="frontpanel_1_okClk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="okClk"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="half_rate_0_data_out">
@@ -657,7 +657,7 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_datain"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_datain"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
@@ -691,12 +691,12 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="3" FULLNAME="/frontpanel_0" HWVERSION="1.0" INSTANCE="frontpanel_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="frontpanel" VLNV="opalkelly.com:ip:frontpanel:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/frontpanel_1" HWVERSION="1.0" INSTANCE="frontpanel_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="frontpanel" VLNV="opalkelly.com:ip:frontpanel:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="https://docs.opalkelly.com/"/>
       </DOCUMENTS>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_frontpanel_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_frontpanel_1_0"/>
         <PARAMETER NAME="BOARD" VALUE="XEM7350-K410T"/>
         <PARAMETER NAME="WI.COUNT" VALUE="4"/>
         <PARAMETER NAME="WI.ADDR_0" VALUE="0x00"/>
@@ -764,8 +764,8 @@
         <PARAMETER NAME="WO.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="TI.COUNT" VALUE="1"/>
-        <PARAMETER NAME="TI.ADDR_0" VALUE="0x40"/>
+        <PARAMETER NAME="TI.COUNT" VALUE="0"/>
+        <PARAMETER NAME="TI.ADDR_0" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_3" VALUE="0xff"/>
@@ -797,8 +797,8 @@
         <PARAMETER NAME="TI.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="TO.COUNT" VALUE="1"/>
-        <PARAMETER NAME="TO.ADDR_0" VALUE="0x60"/>
+        <PARAMETER NAME="TO.COUNT" VALUE="0"/>
+        <PARAMETER NAME="TO.ADDR_0" VALUE="0xff"/>
         <PARAMETER NAME="TO.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="TO.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="TO.ADDR_3" VALUE="0xff"/>
@@ -930,7 +930,7 @@
         <PARAMETER NAME="BTPI.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="BTPI.ADDR_31" VALUE="0xff"/>
         <PARAMETER NAME="BTPO.COUNT" VALUE="1"/>
-        <PARAMETER NAME="BTPO.ADDR_0" VALUE="0xA1"/>
+        <PARAMETER NAME="BTPO.ADDR_0" VALUE="0xA0"/>
         <PARAMETER NAME="BTPO.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="BTPO.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="BTPO.ADDR_3" VALUE="0xff"/>
@@ -1235,99 +1235,95 @@
         <PARAMETER NAME="EXDES.SELECTION" VALUE="PipeTest"/>
         <PARAMETER NAME="BITSTREAM.FLASH" VALUE="false"/>
         <PARAMETER NAME="GUI.APPLY_PRESET" VALUE="0"/>
-        <PARAMETER NAME="host_interface_BOARD_INTERFACE" VALUE="host_interface"/>
+        <PARAMETER NAME="host_interface_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="host_interface_s_BOARD_INTERFACE" VALUE="Custom"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="4" NAME="okUH" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_okUH">
+        <PORT DIR="I" LEFT="4" NAME="okUH" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_okUH">
           <CONNECTIONS>
             <CONNECTION INSTANCE="design_1_imp" PORT="host_interface_okuh"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="okHU" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_okHU">
+        <PORT DIR="O" LEFT="2" NAME="okHU" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_okHU">
           <CONNECTIONS>
             <CONNECTION INSTANCE="design_1_imp" PORT="host_interface_okhu"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="IO" LEFT="31" NAME="okUHU" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_okUHU">
+        <PORT DIR="IO" LEFT="31" NAME="okUHU" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_okUHU">
           <CONNECTIONS>
             <CONNECTION INSTANCE="design_1_imp" PORT="host_interface_okuhu"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="IO" NAME="okAA" SIGIS="undef" SIGNAME="frontpanel_0_okAA">
+        <PORT DIR="IO" NAME="okAA" SIGIS="undef" SIGNAME="frontpanel_1_okAA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="design_1_imp" PORT="host_interface_okaa"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="okClk" SIGIS="undef" SIGNAME="frontpanel_0_okClk">
+        <PORT CLKFREQUENCY="100800000" DIR="O" NAME="okClk" SIGIS="clk" SIGNAME="frontpanel_1_okClk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="okClkIn"/>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="rd_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="wi00_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi00_ep_dataout">
+        <PORT DIR="O" LEFT="31" NAME="wi00_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi00_ep_dataout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="wireoutbreakout_0" PORT="EP_DATAOUT_WIREIN"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="wi01_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi01_ep_dataout">
+        <PORT DIR="O" LEFT="31" NAME="wi01_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi01_ep_dataout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="data_processing_unit_0" PORT="V_threshold"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="wi02_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi02_ep_dataout">
+        <PORT DIR="O" LEFT="31" NAME="wi02_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi02_ep_dataout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="data_processing_unit_0" PORT="time_min"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="wi03_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi03_ep_dataout">
+        <PORT DIR="O" LEFT="31" NAME="wi03_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi03_ep_dataout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="data_processing_unit_0" PORT="time_max"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="wo20_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wo20_ep_datain">
+        <PORT DIR="I" LEFT="31" NAME="wo20_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wo20_ep_datain">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_DATAIN_WIREOUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="ti40_ep_trigger" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="ti40_ep_clk" SIGIS="clk"/>
-        <PORT DIR="I" LEFT="31" NAME="to60_ep_trigger" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="to60_ep_clk" SIGIS="clk"/>
-        <PORT DIR="O" LEFT="31" NAME="btpi80_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_btpi80_ep_dataout">
+        <PORT DIR="O" LEFT="31" NAME="btpi80_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_btpi80_ep_dataout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_DATAOUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="btpi80_ep_write" SIGIS="undef" SIGNAME="frontpanel_0_btpi80_ep_write">
+        <PORT DIR="O" NAME="btpi80_ep_write" SIGIS="undef" SIGNAME="frontpanel_1_btpi80_ep_write">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_WRITE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="btpi80_ep_blockstrobe" SIGIS="undef"/>
-        <PORT DIR="I" NAME="btpi80_ep_ready" SIGIS="undef" SIGNAME="frontpanel_0_btpi80_ep_ready">
+        <PORT DIR="I" NAME="btpi80_ep_ready" SIGIS="undef" SIGNAME="frontpanel_1_btpi80_ep_ready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_READY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="btpoa1_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
+        <PORT DIR="I" LEFT="31" NAME="btpoa0_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="btpoa1_ep_read" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_read">
+        <PORT DIR="O" NAME="btpoa0_ep_read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_read_0" PORT="read"/>
             <CONNECTION INSTANCE="enable_write_0" PORT="read"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="btpoa1_ep_blockstrobe" SIGIS="undef" SIGNAME="frontpanel_0_btpoa1_ep_blockstrobe">
+        <PORT DIR="O" NAME="btpoa0_ep_blockstrobe" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_blockstrobe">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_write_0" PORT="blockstrobe"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="btpoa1_ep_ready" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
+        <PORT DIR="I" NAME="btpoa0_ep_ready" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_sync"/>
           </CONNECTIONS>
@@ -1342,7 +1338,7 @@
             <PORTMAP LOGICAL="okAA" PHYSICAL="okAA"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="frontpanel_0_wirein00" NAME="wirein00" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
+        <BUSINTERFACE BUSNAME="frontpanel_1_wirein00" NAME="wirein00" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi00_ep_dataout"/>
           </PORTMAPS>
@@ -1362,24 +1358,12 @@
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi03_ep_dataout"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="frontpanel_0_wireout20" NAME="wireout20" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wireout:1.0">
+        <BUSINTERFACE BUSNAME="frontpanel_1_wireout20" NAME="wireout20" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wireout:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="wo20_ep_datain"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="triggerin40" TYPE="INITIATOR" VLNV="opalkelly.com:interface:triggerin:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_TRIGGER" PHYSICAL="ti40_ep_trigger"/>
-            <PORTMAP LOGICAL="EP_CLK" PHYSICAL="ti40_ep_clk"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="triggerout60" TYPE="INITIATOR" VLNV="opalkelly.com:interface:triggerout:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_TRIGGER" PHYSICAL="to60_ep_trigger"/>
-            <PORTMAP LOGICAL="EP_CLK" PHYSICAL="to60_ep_clk"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="frontpanel_0_btpipein80" NAME="btpipein80" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipein:1.0">
+        <BUSINTERFACE BUSNAME="frontpanel_1_btpipein80" NAME="btpipein80" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpi80_ep_blockstrobe"/>
             <PORTMAP LOGICAL="EP_WRITE" PHYSICAL="btpi80_ep_write"/>
@@ -1387,12 +1371,12 @@
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="btpi80_ep_dataout"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="btpipeouta1" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipeout:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="btpipeouta0" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipeout:1.0">
           <PORTMAPS>
-            <PORTMAP LOGICAL="EP_READ" PHYSICAL="btpoa1_ep_read"/>
-            <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpoa1_ep_blockstrobe"/>
-            <PORTMAP LOGICAL="EP_READY" PHYSICAL="btpoa1_ep_ready"/>
-            <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="btpoa1_ep_datain"/>
+            <PORTMAP LOGICAL="EP_READ" PHYSICAL="btpoa0_ep_read"/>
+            <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpoa0_ep_blockstrobe"/>
+            <PORTMAP LOGICAL="EP_READY" PHYSICAL="btpoa0_ep_ready"/>
+            <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="btpoa0_ep_datain"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -4874,7 +4858,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="JESD_SYNC"/>
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_IN"/>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpoa1_ep_ready"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_ready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5069,29 +5053,29 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="okClkIn" SIGIS="undef" SIGNAME="frontpanel_0_okClk">
+        <PORT DIR="I" NAME="okClkIn" SIGIS="undef" SIGNAME="frontpanel_1_okClk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="okClk"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="EP_DATAOUT" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_btpi80_ep_dataout">
+        <PORT DIR="I" LEFT="31" NAME="EP_DATAOUT" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_btpi80_ep_dataout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpi80_ep_dataout"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpi80_ep_dataout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="EP_READY" SIGIS="undef" SIGNAME="frontpanel_0_btpi80_ep_ready">
+        <PORT DIR="O" NAME="EP_READY" SIGIS="undef" SIGNAME="frontpanel_1_btpi80_ep_ready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpi80_ep_ready"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpi80_ep_ready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="EP_WRITE" SIGIS="undef" SIGNAME="frontpanel_0_btpi80_ep_write">
+        <PORT DIR="I" NAME="EP_WRITE" SIGIS="undef" SIGNAME="frontpanel_1_btpi80_ep_write">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="btpi80_ep_write"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpi80_ep_write"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="EP_DATAIN_WIREOUT" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wo20_ep_datain">
+        <PORT DIR="O" LEFT="31" NAME="EP_DATAIN_WIREOUT" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wo20_ep_datain">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="wo20_ep_datain"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="wo20_ep_datain"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100800000" DIR="O" NAME="m_axi_aclk" SIGIS="clk" SIGNAME="okAXI4LiteInterface_0_m_axi_aclk">
@@ -5192,14 +5176,14 @@
         <PORT DIR="O" NAME="activity_mon" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="frontpanel_0_btpipein80" NAME="btpipein_DATA" TYPE="TARGET" VLNV="opalkelly.com:interface:btpipein:1.0">
+        <BUSINTERFACE BUSNAME="frontpanel_1_btpipein80" NAME="btpipein_DATA" TYPE="TARGET" VLNV="opalkelly.com:interface:btpipein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="EP_DATAOUT"/>
             <PORTMAP LOGICAL="EP_WRITE" PHYSICAL="EP_WRITE"/>
             <PORTMAP LOGICAL="EP_READY" PHYSICAL="EP_READY"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="frontpanel_0_wireout20" NAME="wireout_READDATA" TYPE="TARGET" VLNV="opalkelly.com:interface:wireout:1.0">
+        <BUSINTERFACE BUSNAME="frontpanel_1_wireout20" NAME="wireout_READDATA" TYPE="TARGET" VLNV="opalkelly.com:interface:wireout:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="EP_DATAIN_WIREOUT"/>
           </PORTMAPS>
@@ -5377,9 +5361,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="31" NAME="EP_DATAOUT_WIREIN" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_0_wi00_ep_dataout">
+        <PORT DIR="I" LEFT="31" NAME="EP_DATAOUT_WIREIN" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi00_ep_dataout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_0" PORT="wi00_ep_dataout"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="wi00_ep_dataout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="rx_reset" SIGIS="rst" SIGNAME="wireoutbreakout_0_rx_reset">
@@ -5389,7 +5373,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="frontpanel_0_wirein00" NAME="wirein_READDATA" TYPE="TARGET" VLNV="opalkelly.com:interface:wirein:1.0">
+        <BUSINTERFACE BUSNAME="frontpanel_1_wirein00" NAME="wirein_READDATA" TYPE="TARGET" VLNV="opalkelly.com:interface:wirein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="EP_DATAOUT_WIREIN"/>
           </PORTMAPS>

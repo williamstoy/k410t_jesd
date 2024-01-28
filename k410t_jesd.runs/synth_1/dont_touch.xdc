@@ -6,9 +6,6 @@
 # Block Designs: bd/design_1/design_1.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_frontpanel_0_0/design_1_frontpanel_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_frontpanel_0_0 || ORIG_REF_NAME==design_1_frontpanel_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_jesd204_0_0 || ORIG_REF_NAME==design_1_jesd204_0_0} -quiet] -quiet
 
@@ -53,5 +50,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_enable
 
 # IP: bd/design_1/ip/design_1_concat_pad_0_0/design_1_concat_pad_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_concat_pad_0_0 || ORIG_REF_NAME==design_1_concat_pad_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_frontpanel_1_0 || ORIG_REF_NAME==design_1_frontpanel_1_0} -quiet] -quiet
 
 # XDC: bd/design_1/design_1_ooc.xdc

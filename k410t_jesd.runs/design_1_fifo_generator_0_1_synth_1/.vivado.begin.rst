@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="nalarcon" Host="bioeebeanie.bioeelocal" Pid="25229" HostCore="96" HostMemory="619009656">
+    <Process Command="vivado" Owner="nalarcon" Host="linrack10" Pid="191342" HostCore="48" HostMemory="790955476">
     </Process>
 </ProcessHandle>

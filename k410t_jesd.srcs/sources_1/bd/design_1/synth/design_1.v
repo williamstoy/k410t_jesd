@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Sun Jan 28 14:00:48 2024
+//Date        : Sun Jan 28 15:13:14 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -57,17 +57,17 @@ module design_1
   wire [31:0]fifo_generator_0_dout;
   wire fifo_generator_0_empty;
   wire fifo_generator_0_full;
-  wire [31:0]frontpanel_0_btpipein80_EP_DATAOUT;
-  wire frontpanel_0_btpipein80_EP_READY;
-  wire frontpanel_0_btpipein80_EP_WRITE;
   wire frontpanel_0_btpoa0_ep_read;
-  wire frontpanel_0_btpoa1_ep_blockstrobe;
   wire frontpanel_0_okClk;
-  wire [31:0]frontpanel_0_wi01_ep_dataout;
-  wire [31:0]frontpanel_0_wi02_ep_dataout;
-  wire [31:0]frontpanel_0_wi03_ep_dataout;
-  wire [31:0]frontpanel_0_wirein00_EP_DATAOUT;
-  wire [31:0]frontpanel_0_wireout20_EP_DATAIN;
+  wire [31:0]frontpanel_1_btpipein80_EP_DATAOUT;
+  wire frontpanel_1_btpipein80_EP_READY;
+  wire frontpanel_1_btpipein80_EP_WRITE;
+  wire frontpanel_1_btpoa0_ep_blockstrobe;
+  wire [31:0]frontpanel_1_wi01_ep_dataout;
+  wire [31:0]frontpanel_1_wi02_ep_dataout;
+  wire [31:0]frontpanel_1_wi03_ep_dataout;
+  wire [31:0]frontpanel_1_wirein00_EP_DATAOUT;
+  wire [31:0]frontpanel_1_wireout20_EP_DATAIN;
   wire [31:0]half_rate_0_data_out;
   wire host_interface_1_okAA;
   wire [2:0]host_interface_1_okHU;
@@ -139,20 +139,20 @@ module design_1
         .IPI(data_processing_unit_0_IPI),
         .RESET_N(jesd204_0_rx_aresetn),
         .V_peak(data_processing_unit_0_V_peak),
-        .V_threshold(frontpanel_0_wi01_ep_dataout),
+        .V_threshold(frontpanel_1_wi01_ep_dataout),
         .clk(jesd204_0_rx_core_clk_out),
         .dt(data_processing_unit_0_dt),
         .sample0(jesd204_0_transport_0_signalB_sampl0),
         .sample1(jesd204_0_transport_0_signalB_sampl1),
-        .time_max(frontpanel_0_wi03_ep_dataout),
-        .time_min(frontpanel_0_wi02_ep_dataout),
+        .time_max(frontpanel_1_wi03_ep_dataout),
+        .time_min(frontpanel_1_wi02_ep_dataout),
         .valid(data_processing_unit_0_valid));
   design_1_enable_read_0_0 enable_read_0
        (.empty(fifo_generator_0_empty),
         .read(frontpanel_0_btpoa0_ep_read),
         .read_en(enable_read_0_read_en));
   design_1_enable_write_0_0 enable_write_0
-       (.blockstrobe(frontpanel_0_btpoa1_ep_blockstrobe),
+       (.blockstrobe(frontpanel_1_btpoa0_ep_blockstrobe),
         .fast_clk(jesd204_0_rx_core_clk_out),
         .full(fifo_generator_0_full),
         .read(frontpanel_0_btpoa0_ep_read),
@@ -167,27 +167,24 @@ module design_1
         .rst(negate_0_nota),
         .wr_clk(jesd204_0_rx_core_clk_out),
         .wr_en(enable_write_0_wr_en));
-  design_1_frontpanel_0_0 frontpanel_0
-       (.btpi80_ep_dataout(frontpanel_0_btpipein80_EP_DATAOUT),
-        .btpi80_ep_ready(frontpanel_0_btpipein80_EP_READY),
-        .btpi80_ep_write(frontpanel_0_btpipein80_EP_WRITE),
-        .btpoa1_ep_blockstrobe(frontpanel_0_btpoa1_ep_blockstrobe),
-        .btpoa1_ep_datain(fifo_generator_0_dout),
-        .btpoa1_ep_read(frontpanel_0_btpoa0_ep_read),
-        .btpoa1_ep_ready(jesd204_0_rx_sync),
+  design_1_frontpanel_1_0 frontpanel_1
+       (.btpi80_ep_dataout(frontpanel_1_btpipein80_EP_DATAOUT),
+        .btpi80_ep_ready(frontpanel_1_btpipein80_EP_READY),
+        .btpi80_ep_write(frontpanel_1_btpipein80_EP_WRITE),
+        .btpoa0_ep_blockstrobe(frontpanel_1_btpoa0_ep_blockstrobe),
+        .btpoa0_ep_datain(fifo_generator_0_dout),
+        .btpoa0_ep_read(frontpanel_0_btpoa0_ep_read),
+        .btpoa0_ep_ready(jesd204_0_rx_sync),
         .okAA(host_interface_okaa),
         .okClk(frontpanel_0_okClk),
         .okHU(host_interface_1_okHU),
         .okUH(host_interface_1_okUH),
         .okUHU(host_interface_okuhu[31:0]),
-        .ti40_ep_clk(1'b0),
-        .to60_ep_clk(1'b0),
-        .to60_ep_trigger({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .wi00_ep_dataout(frontpanel_0_wirein00_EP_DATAOUT),
-        .wi01_ep_dataout(frontpanel_0_wi01_ep_dataout),
-        .wi02_ep_dataout(frontpanel_0_wi02_ep_dataout),
-        .wi03_ep_dataout(frontpanel_0_wi03_ep_dataout),
-        .wo20_ep_datain(frontpanel_0_wireout20_EP_DATAIN));
+        .wi00_ep_dataout(frontpanel_1_wirein00_EP_DATAOUT),
+        .wi01_ep_dataout(frontpanel_1_wi01_ep_dataout),
+        .wi02_ep_dataout(frontpanel_1_wi02_ep_dataout),
+        .wi03_ep_dataout(frontpanel_1_wi03_ep_dataout),
+        .wo20_ep_datain(frontpanel_1_wireout20_EP_DATAIN));
   design_1_half_rate_0_0 half_rate_0
        (.clk(jesd204_0_rx_core_clk_out),
         .data_in(concat_pad_0_out),
@@ -259,10 +256,10 @@ module design_1
        (.a(jesd204_0_rx_aresetn),
         .nota(negate_0_nota));
   design_1_okAXI4LiteInterface_0_0 okAXI4LiteInterface_0
-       (.EP_DATAIN_WIREOUT(frontpanel_0_wireout20_EP_DATAIN),
-        .EP_DATAOUT(frontpanel_0_btpipein80_EP_DATAOUT),
-        .EP_READY(frontpanel_0_btpipein80_EP_READY),
-        .EP_WRITE(frontpanel_0_btpipein80_EP_WRITE),
+       (.EP_DATAIN_WIREOUT(frontpanel_1_wireout20_EP_DATAIN),
+        .EP_DATAOUT(frontpanel_1_btpipein80_EP_DATAOUT),
+        .EP_READY(frontpanel_1_btpipein80_EP_READY),
+        .EP_WRITE(frontpanel_1_btpipein80_EP_WRITE),
         .m_axi_aclk(okAXI4LiteInterface_0_m_axi_aclk),
         .m_axi_araddr(okAXI4LiteInterface_0_m_axi_ARADDR),
         .m_axi_aresetn(okAXI4LiteInterface_0_m_axi_aresetn),
@@ -296,6 +293,6 @@ module design_1
         .OBUF_DS_P(util_ds_buf_2_OBUF_DS_P),
         .OBUF_IN(jesd204_0_rx_sync));
   design_1_wireoutbreakout_0_0 wireoutbreakout_0
-       (.EP_DATAOUT_WIREIN(frontpanel_0_wirein00_EP_DATAOUT),
+       (.EP_DATAOUT_WIREIN(frontpanel_1_wirein00_EP_DATAOUT),
         .rx_reset(wireoutbreakout_0_rx_reset));
 endmodule

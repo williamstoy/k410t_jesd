@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1706468581">
+<GenRun Id="synth_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1706472920">
   <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/opalkelly-frontpanel-axi4lite-interface/okAXI4LiteInterface.v">
@@ -138,17 +138,17 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_frontpanel_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_half_rate_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_concat_pad_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_enable_write_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_fifo_generator_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_wireoutbreakout_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_okAXI4LiteInterface_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_negate_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_data_processing_unit_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_enable_read_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_transport_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_wireoutbreakout_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_frontpanel_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_okAXI4LiteInterface_0_0"/>
 </GenRun>
