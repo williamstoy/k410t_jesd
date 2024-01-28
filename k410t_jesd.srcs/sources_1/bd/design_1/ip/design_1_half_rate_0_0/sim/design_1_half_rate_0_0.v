@@ -57,7 +57,8 @@
 module design_1_half_rate_0_0 (
   data_in,
   data_out,
-  clk
+  clk,
+  rst_n
 );
 
 input wire [31 : 0] data_in;
@@ -65,10 +66,14 @@ output wire [31 : 0] data_out;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_jesd204_0_0_rx_core_clk_out, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst_n RST" *)
+input wire rst_n;
 
   half_rate inst (
     .data_in(data_in),
     .data_out(data_out),
-    .clk(clk)
+    .clk(clk),
+    .rst_n(rst_n)
   );
 endmodule

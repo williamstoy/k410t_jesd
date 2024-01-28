@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/users/nalarcon/k410t_jesd/k410t_jesd.runs/impl_1'
+HD_PWD='/users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_concat_pad_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,8 +36,4 @@ EAStep()
      fi
 }
 
-# pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-
-
+EAStep vivado -log design_1_concat_pad_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_concat_pad_0_0.tcl
