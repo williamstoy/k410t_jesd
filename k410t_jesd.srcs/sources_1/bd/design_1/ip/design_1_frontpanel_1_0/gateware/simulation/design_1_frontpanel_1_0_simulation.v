@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 // File: design_1_frontpanel_1_0_simulation.v
-// Creation Date: Sun 01/28/2024 at 15:13:25 EST
+// Creation Date: Mon 01/29/2024 at 16:21:02 EST
 // IP Version: opalkelly.com:ip:frontpanel:1.0 (Rev: 5)
 // Tool Version: Vivado v2019.2 (64-bit)
 // Opal Kelly Board: XEM7350-K410T (Part: xc7k410tffg676-1)
@@ -16,15 +16,6 @@ module design_1_frontpanel_1_0(
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein00 EP_DATAOUT" *)
     output wire [31:0] wi00_ep_dataout,
-
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein01 EP_DATAOUT" *)
-    output wire [31:0] wi01_ep_dataout,
-
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein02 EP_DATAOUT" *)
-    output wire [31:0] wi02_ep_dataout,
-
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein03 EP_DATAOUT" *)
-    output wire [31:0] wi03_ep_dataout,
 
 //----------------------------------------------------------------------------------------------------------------------------------
 // WireOuts
@@ -72,9 +63,6 @@ module design_1_frontpanel_1_0(
 
 design_1_frontpanel_1_0_wrapper_simulation inst (
     .wi00_ep_dataout(wi00_ep_dataout),
-    .wi01_ep_dataout(wi01_ep_dataout),
-    .wi02_ep_dataout(wi02_ep_dataout),
-    .wi03_ep_dataout(wi03_ep_dataout),
     .wo20_ep_datain(wo20_ep_datain),
     .btpi80_ep_dataout(btpi80_ep_dataout),
     .btpi80_ep_write(btpi80_ep_write),

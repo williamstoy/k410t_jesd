@@ -14,17 +14,16 @@
       "util_ds_buf_1": "",
       "util_ds_buf_2": "",
       "fifo_generator_0": "",
-      "frontpanel_1": "",
       "ila_0": "",
       "okAXI4LiteInterface_0": "",
       "wireoutbreakout_0": "",
-      "data_processing_unit_0": "",
       "jesd204_0_transport_0": "",
       "negate_0": "",
       "half_rate_0": "",
       "enable_read_0": "",
       "enable_write_0": "",
-      "concat_pad_0": ""
+      "concat_pad_0": "",
+      "frontpanel_1": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -236,51 +235,6 @@
           },
           "Valid_Flag": {
             "value": "true"
-          }
-        }
-      },
-      "frontpanel_1": {
-        "vlnv": "opalkelly.com:ip:frontpanel:1.0",
-        "xci_name": "design_1_frontpanel_1_0",
-        "parameters": {
-          "BTPI.ADDR_0": {
-            "value": "0x80"
-          },
-          "BTPI.COUNT": {
-            "value": "1"
-          },
-          "BTPO.ADDR_0": {
-            "value": "0xA0"
-          },
-          "BTPO.COUNT": {
-            "value": "1"
-          },
-          "EXDES.FLOW": {
-            "value": "Block Designer"
-          },
-          "EXDES.SELECTION": {
-            "value": "PipeTest"
-          },
-          "WI.ADDR_0": {
-            "value": "0x00"
-          },
-          "WI.ADDR_1": {
-            "value": "0x01"
-          },
-          "WI.ADDR_2": {
-            "value": "0x02"
-          },
-          "WI.ADDR_3": {
-            "value": "0x03"
-          },
-          "WI.COUNT": {
-            "value": "4"
-          },
-          "WO.ADDR_0": {
-            "value": "0x20"
-          },
-          "WO.COUNT": {
-            "value": "1"
           }
         }
       },
@@ -547,7 +501,7 @@
               },
               "FREQ_HZ": {
                 "value": "100800000",
-                "value_src": "ip_prop"
+                "value_src": "default_prop"
               },
               "PHASE": {
                 "value": "0.000",
@@ -622,89 +576,6 @@
           "rx_reset": {
             "type": "rst",
             "direction": "O"
-          }
-        }
-      },
-      "data_processing_unit_0": {
-        "vlnv": "xilinx.com:module_ref:data_processing_unit:1.0",
-        "xci_name": "design_1_data_processing_unit_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "data_processing_unit",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "V_threshold": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "time_min": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "time_max": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "RESET_N": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "sample0": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          },
-          "sample1": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          },
-          "valid": {
-            "direction": "O"
-          },
-          "V_peak": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "AUC": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "dt": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "IPI": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
           }
         }
       },
@@ -1024,6 +895,51 @@
             "right": "0"
           }
         }
+      },
+      "frontpanel_1": {
+        "vlnv": "opalkelly.com:ip:frontpanel:1.0",
+        "xci_name": "design_1_frontpanel_1_0",
+        "parameters": {
+          "BTPI.ADDR_0": {
+            "value": "0x80"
+          },
+          "BTPI.COUNT": {
+            "value": "1"
+          },
+          "BTPO.ADDR_0": {
+            "value": "0xA0"
+          },
+          "BTPO.COUNT": {
+            "value": "1"
+          },
+          "EXDES.FLOW": {
+            "value": "Block Designer"
+          },
+          "EXDES.SELECTION": {
+            "value": "PipeTest"
+          },
+          "WI.ADDR_0": {
+            "value": "0x00"
+          },
+          "WI.ADDR_1": {
+            "value": "0xff"
+          },
+          "WI.ADDR_2": {
+            "value": "0xff"
+          },
+          "WI.ADDR_3": {
+            "value": "0xff"
+          },
+          "WI.COUNT": {
+            "value": "1"
+          },
+          "WO.ADDR_0": {
+            "value": "0x20"
+          },
+          "WO.COUNT": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1033,28 +949,28 @@
           "frontpanel_1/wirein00"
         ]
       },
-      "frontpanel_1_wireout20": {
-        "interface_ports": [
-          "okAXI4LiteInterface_0/wireout_READDATA",
-          "frontpanel_1/wireout20"
-        ]
-      },
       "jesd204_0_m_axis_rx": {
         "interface_ports": [
           "jesd204_0_transport_0/rx",
           "jesd204_0/m_axis_rx"
         ]
       },
-      "frontpanel_1_btpipein80": {
-        "interface_ports": [
-          "okAXI4LiteInterface_0/btpipein_DATA",
-          "frontpanel_1/btpipein80"
-        ]
-      },
       "okAXI4LiteInterface_0_m_axi": {
         "interface_ports": [
           "okAXI4LiteInterface_0/m_axi",
           "jesd204_0/s_axi"
+        ]
+      },
+      "frontpanel_1_wireout20": {
+        "interface_ports": [
+          "okAXI4LiteInterface_0/wireout_READDATA",
+          "frontpanel_1/wireout20"
+        ]
+      },
+      "frontpanel_1_btpipein80": {
+        "interface_ports": [
+          "okAXI4LiteInterface_0/btpipein_DATA",
+          "frontpanel_1/btpipein80"
         ]
       },
       "host_interface_1": {
@@ -1133,14 +1049,14 @@
           "JESD_SYNC",
           "util_ds_buf_1/OBUF_IN",
           "util_ds_buf_2/OBUF_IN",
-          "ila_0/probe3"
+          "ila_0/probe3",
+          "frontpanel_1/btpoa0_ep_ready"
         ]
       },
       "jesd204_0_rx_core_clk_out": {
         "ports": [
           "jesd204_0/rx_core_clk_out",
           "fifo_generator_0/wr_clk",
-          "data_processing_unit_0/clk",
           "jesd204_0_transport_0/clk",
           "half_rate_0/clk",
           "enable_write_0/fast_clk"
@@ -1179,7 +1095,6 @@
       "jesd204_0_rx_aresetn": {
         "ports": [
           "jesd204_0/rx_aresetn",
-          "data_processing_unit_0/RESET_N",
           "jesd204_0_transport_0/rst_n",
           "negate_0/a",
           "half_rate_0/rst_n"
@@ -1188,20 +1103,7 @@
       "jesd204_0_transport_0_signalB_sampl0": {
         "ports": [
           "jesd204_0_transport_0/signalB_sampl0",
-          "data_processing_unit_0/sample0",
           "concat_pad_0/in0"
-        ]
-      },
-      "jesd204_0_transport_0_signalB_sampl1": {
-        "ports": [
-          "jesd204_0_transport_0/signalB_sampl1",
-          "data_processing_unit_0/sample1"
-        ]
-      },
-      "jesd204_0_transport_0_signalD_cntrl0": {
-        "ports": [
-          "jesd204_0_transport_0/signalD_cntrl0",
-          "concat_pad_0/in1"
         ]
       },
       "negate_0_nota": {
@@ -1257,26 +1159,8 @@
       "fifo_generator_0_dout": {
         "ports": [
           "fifo_generator_0/dout",
-          "frontpanel_1/btpoa0_ep_datain",
-          "ila_0/probe2"
-        ]
-      },
-      "frontpanel_1_wi01_ep_dataout": {
-        "ports": [
-          "frontpanel_1/wi01_ep_dataout",
-          "data_processing_unit_0/V_threshold"
-        ]
-      },
-      "frontpanel_1_wi02_ep_dataout": {
-        "ports": [
-          "frontpanel_1/wi02_ep_dataout",
-          "data_processing_unit_0/time_min"
-        ]
-      },
-      "frontpanel_1_wi03_ep_dataout": {
-        "ports": [
-          "frontpanel_1/wi03_ep_dataout",
-          "data_processing_unit_0/time_max"
+          "ila_0/probe2",
+          "frontpanel_1/btpoa0_ep_datain"
         ]
       },
       "frontpanel_1_btpoa0_ep_blockstrobe": {
@@ -1289,8 +1173,13 @@
       "fifo_generator_0_valid": {
         "ports": [
           "fifo_generator_0/valid",
-          "ila_0/probe4",
-          "frontpanel_1/btpoa0_ep_ready"
+          "ila_0/probe4"
+        ]
+      },
+      "jesd204_0_transport_0_signalA_sampl0": {
+        "ports": [
+          "jesd204_0_transport_0/signalA_sampl0",
+          "concat_pad_0/in1"
         ]
       }
     },

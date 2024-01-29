@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan 28 21:38:58 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 29 16:21:03 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -105,9 +105,9 @@
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalB_sampl0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="13" NAME="in1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalD_cntrl0">
+        <PORT DIR="I" LEFT="13" NAME="in1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalD_cntrl0"/>
+            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalA_sampl0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="pad_out" RIGHT="0" SIGIS="undef" SIGNAME="concat_pad_0_pad_out">
@@ -115,56 +115,6 @@
             <CONNECTION INSTANCE="half_rate_0" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/data_processing_unit_0" HWVERSION="1.0" INSTANCE="data_processing_unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="data_processing_unit" VLNV="xilinx.com:module_ref:data_processing_unit:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_data_processing_unit_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="31" NAME="V_threshold" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi01_ep_dataout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="wi01_ep_dataout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="time_min" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi02_ep_dataout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="wi02_ep_dataout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="time_max" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi03_ep_dataout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="wi03_ep_dataout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="RESET_N" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="13" NAME="sample0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalB_sampl0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="13" NAME="sample1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalB_sampl1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="valid" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="V_peak" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="AUC" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="15" NAME="dt" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="IPI" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -637,8 +587,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_datain"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_datain"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
@@ -654,7 +604,6 @@
         <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="fifo_generator_0_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_ready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="wr_rst_busy" SIGIS="undef"/>
@@ -684,11 +633,11 @@
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_frontpanel_1_0"/>
         <PARAMETER NAME="BOARD" VALUE="XEM7350-K410T"/>
-        <PARAMETER NAME="WI.COUNT" VALUE="4"/>
+        <PARAMETER NAME="WI.COUNT" VALUE="1"/>
         <PARAMETER NAME="WI.ADDR_0" VALUE="0x00"/>
-        <PARAMETER NAME="WI.ADDR_1" VALUE="0x01"/>
-        <PARAMETER NAME="WI.ADDR_2" VALUE="0x02"/>
-        <PARAMETER NAME="WI.ADDR_3" VALUE="0x03"/>
+        <PARAMETER NAME="WI.ADDR_1" VALUE="0xff"/>
+        <PARAMETER NAME="WI.ADDR_2" VALUE="0xff"/>
+        <PARAMETER NAME="WI.ADDR_3" VALUE="0xff"/>
         <PARAMETER NAME="WI.ADDR_4" VALUE="0xff"/>
         <PARAMETER NAME="WI.ADDR_5" VALUE="0xff"/>
         <PARAMETER NAME="WI.ADDR_6" VALUE="0xff"/>
@@ -1258,21 +1207,6 @@
             <CONNECTION INSTANCE="wireoutbreakout_0" PORT="EP_DATAOUT_WIREIN"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="wi01_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi01_ep_dataout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="V_threshold"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="wi02_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi02_ep_dataout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="time_min"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="wi03_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi03_ep_dataout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="time_max"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="31" NAME="wo20_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wo20_ep_datain">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_DATAIN_WIREOUT"/>
@@ -1312,9 +1246,9 @@
             <CONNECTION INSTANCE="enable_write_0" PORT="blockstrobe"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="btpoa0_ep_ready" SIGIS="undef" SIGNAME="fifo_generator_0_valid">
+        <PORT DIR="I" NAME="btpoa0_ep_ready" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="valid"/>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_sync"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1330,21 +1264,6 @@
         <BUSINTERFACE BUSNAME="frontpanel_1_wirein00" NAME="wirein00" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi00_ep_dataout"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="wirein01" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi01_ep_dataout"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="wirein02" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi02_ep_dataout"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="wirein03" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wirein:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="wi03_ep_dataout"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="frontpanel_1_wireout20" NAME="wireout20" TYPE="INITIATOR" VLNV="opalkelly.com:interface:wireout:1.0">
@@ -4631,7 +4550,6 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="rx_core_clk_out" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_clk"/>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="clk"/>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="clk"/>
             <CONNECTION INSTANCE="half_rate_0" PORT="clk"/>
             <CONNECTION INSTANCE="enable_write_0" PORT="fast_clk"/>
@@ -4749,7 +4667,6 @@
         </PORT>
         <PORT DIR="O" NAME="rx_aresetn" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="RESET_N"/>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="negate_0" PORT="a"/>
             <CONNECTION INSTANCE="half_rate_0" PORT="rst_n"/>
@@ -4781,6 +4698,7 @@
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_ready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4885,21 +4803,20 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="13" NAME="signalA_sampl0" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="13" NAME="signalA_sampl0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="concat_pad_0" PORT="in1"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="13" NAME="signalA_sampl1" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalA_cntrl0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalA_cntrl1" SIGIS="undef"/>
         <PORT DIR="O" LEFT="13" NAME="signalB_sampl0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="sample0"/>
             <CONNECTION INSTANCE="concat_pad_0" PORT="in0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="13" NAME="signalB_sampl1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="data_processing_unit_0" PORT="sample1"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="signalB_sampl1" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalB_cntrl0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalB_cntrl1" SIGIS="undef"/>
         <PORT DIR="O" LEFT="13" NAME="signalC_sampl0" RIGHT="0" SIGIS="undef"/>
@@ -4908,11 +4825,7 @@
         <PORT DIR="O" NAME="signalC_cntrl1" SIGIS="undef"/>
         <PORT DIR="O" LEFT="13" NAME="signalD_sampl0" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="13" NAME="signalD_sampl1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="signalD_cntrl0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalD_cntrl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="concat_pad_0" PORT="in1"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="signalD_cntrl0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalD_cntrl1" SIGIS="undef"/>
         <PORT DIR="O" NAME="ready_out" SIGIS="undef"/>
       </PORTS>

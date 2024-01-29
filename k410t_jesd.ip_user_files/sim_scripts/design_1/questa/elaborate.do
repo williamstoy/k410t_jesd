@@ -1,0 +1,1 @@
+vopt -64 +acc -l elaborate.log -L xpm -L xil_defaultlib -L jesd204_v7_2_7 -L fifo_generator_v13_2_5 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.design_1 xil_defaultlib.glbl -o design_1_opt

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Sun Jan 28 15:22:10 2024
+| Date         : Mon Jan 29 16:29:57 2024
 | Host         : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command      : report_utilization -file design_1_frontpanel_1_0_utilization_synth.rpt -pb design_1_frontpanel_1_0_utilization_synth.pb
 | Design       : design_1_frontpanel_1_0
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  925 |     0 |    254200 |  0.36 |
-|   LUT as Logic             |  893 |     0 |    254200 |  0.35 |
+| Slice LUTs*                |  913 |     0 |    254200 |  0.36 |
+|   LUT as Logic             |  881 |     0 |    254200 |  0.35 |
 |   LUT as Memory            |   32 |     0 |     90600 |  0.04 |
 |     LUT as Distributed RAM |   32 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            | 1105 |   103 |    508400 |  0.22 |
-|   Register as Flip Flop    | 1105 |   103 |    508400 |  0.22 |
+| Slice Registers            |  913 |   103 |    508400 |  0.18 |
+|   Register as Flip Flop    |  913 |   103 |    508400 |  0.18 |
 |   Register as Latch        |    0 |     0 |    508400 |  0.00 |
 | F7 Muxes                   |    8 |     0 |    127100 | <0.01 |
 | F8 Muxes                   |    0 |     0 |     63550 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 37    |          Yes |           - |          Set |
 | 160   |          Yes |           - |        Reset |
 | 22    |          Yes |         Set |            - |
-| 886   |          Yes |       Reset |            - |
+| 694   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -155,9 +155,9 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  886 |        Flop & Latch |
-| LUT6       |  455 |                 LUT |
-| LUT4       |  216 |                 LUT |
+| FDRE       |  694 |        Flop & Latch |
+| LUT6       |  449 |                 LUT |
+| LUT4       |  210 |                 LUT |
 | FDCE       |  160 |        Flop & Latch |
 | LUT5       |  149 |                 LUT |
 | LUT2       |   87 |                 LUT |
@@ -195,9 +195,9 @@ Table of Contents
 +------------------------+------+
 |        Ref Name        | Used |
 +------------------------+------+
-| okWireIn               |    4 |
 | xpm_cdc_async_rst      |    1 |
 | okWireOut              |    1 |
+| okWireIn               |    1 |
 | okCoreHarness          |    1 |
 | okCore                 |    1 |
 | okBTPipeOut            |    1 |

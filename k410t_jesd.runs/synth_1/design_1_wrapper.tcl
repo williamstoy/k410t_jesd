@@ -17,9 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 24
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config  -string {{Problem parsing board file}}  -suppress 
+set_msg_config  -string {{board file}}  -suppress 
 create_project -in_memory -part xc7k410tffg676-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -35,8 +33,8 @@ set_property board_part_repo_paths {/users/wstoy/Documents/vivado/XilinxBoardSto
 set_property board_part opalkelly.com:xem7350-k410t:part0:1.0 [current_project]
 set_property ip_repo_paths {
   /users/wstoy/Documents/vivado/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
-  /users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
   /users/wstoy/Documents/vivado/projects/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.cache/ip [current_project]

@@ -1,0 +1,622 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Mon Jan 29 00:28:21 2024
+| Host         : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+| Command      : upgrade_ip
+| Device       : xc7k410tffg676-1
+-----------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_frontpanel_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_frontpanel_1_0 (opalkelly.com:ip:frontpanel:1.0) from (Rev. 3) to (Rev. 5)
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_frontpanel_1_0'.
+
+
+-Upgrade has added interface 'okClk' (xilinx.com:signal:clock:1.0)
+
+-Upgrade has added interface 'okClks' (xilinx.com:signal:clock:1.0)
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Mon Jan 29 00:12:29 2024
+| Host         : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+| Command      : upgrade_ip
+| Device       : xc7k410tffg676-1
+-----------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_frontpanel_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_frontpanel_1_0 (opalkelly.com:ip:frontpanel:1.0) from (Rev. 5) to (Rev. 3)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_frontpanel_1_0'.
+
+
+-Upgrade has removed interface 'okClk'
+
+-Upgrade has removed interface 'okClks'
+
+
+3. Customization warnings
+-------------------------
+
+Parameter 'WRITE_CLK.FREQ_HZ' is no longer present on the upgraded IP 'design_1_frontpanel_1_0', and cannot be set to '100800000'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv opalkelly.com:ip:frontpanel:1.0 -user_name design_1_frontpanel_1_0
+set_property -dict "\
+  CONFIG.BITSTREAM.FLASH {false} \
+  CONFIG.BOARD {XEM7350-K410T} \
+  CONFIG.BTPI.ADDR_0 {0x80} \
+  CONFIG.BTPI.ADDR_1 {0xff} \
+  CONFIG.BTPI.ADDR_10 {0xff} \
+  CONFIG.BTPI.ADDR_11 {0xff} \
+  CONFIG.BTPI.ADDR_12 {0xff} \
+  CONFIG.BTPI.ADDR_13 {0xff} \
+  CONFIG.BTPI.ADDR_14 {0xff} \
+  CONFIG.BTPI.ADDR_15 {0xff} \
+  CONFIG.BTPI.ADDR_16 {0xff} \
+  CONFIG.BTPI.ADDR_17 {0xff} \
+  CONFIG.BTPI.ADDR_18 {0xff} \
+  CONFIG.BTPI.ADDR_19 {0xff} \
+  CONFIG.BTPI.ADDR_2 {0xff} \
+  CONFIG.BTPI.ADDR_20 {0xff} \
+  CONFIG.BTPI.ADDR_21 {0xff} \
+  CONFIG.BTPI.ADDR_22 {0xff} \
+  CONFIG.BTPI.ADDR_23 {0xff} \
+  CONFIG.BTPI.ADDR_24 {0xff} \
+  CONFIG.BTPI.ADDR_25 {0xff} \
+  CONFIG.BTPI.ADDR_26 {0xff} \
+  CONFIG.BTPI.ADDR_27 {0xff} \
+  CONFIG.BTPI.ADDR_28 {0xff} \
+  CONFIG.BTPI.ADDR_29 {0xff} \
+  CONFIG.BTPI.ADDR_3 {0xff} \
+  CONFIG.BTPI.ADDR_30 {0xff} \
+  CONFIG.BTPI.ADDR_31 {0xff} \
+  CONFIG.BTPI.ADDR_4 {0xff} \
+  CONFIG.BTPI.ADDR_5 {0xff} \
+  CONFIG.BTPI.ADDR_6 {0xff} \
+  CONFIG.BTPI.ADDR_7 {0xff} \
+  CONFIG.BTPI.ADDR_8 {0xff} \
+  CONFIG.BTPI.ADDR_9 {0xff} \
+  CONFIG.BTPI.COUNT {1} \
+  CONFIG.BTPO.ADDR_0 {0xA0} \
+  CONFIG.BTPO.ADDR_1 {0xff} \
+  CONFIG.BTPO.ADDR_10 {0xff} \
+  CONFIG.BTPO.ADDR_11 {0xff} \
+  CONFIG.BTPO.ADDR_12 {0xff} \
+  CONFIG.BTPO.ADDR_13 {0xff} \
+  CONFIG.BTPO.ADDR_14 {0xff} \
+  CONFIG.BTPO.ADDR_15 {0xff} \
+  CONFIG.BTPO.ADDR_16 {0xff} \
+  CONFIG.BTPO.ADDR_17 {0xff} \
+  CONFIG.BTPO.ADDR_18 {0xff} \
+  CONFIG.BTPO.ADDR_19 {0xff} \
+  CONFIG.BTPO.ADDR_2 {0xff} \
+  CONFIG.BTPO.ADDR_20 {0xff} \
+  CONFIG.BTPO.ADDR_21 {0xff} \
+  CONFIG.BTPO.ADDR_22 {0xff} \
+  CONFIG.BTPO.ADDR_23 {0xff} \
+  CONFIG.BTPO.ADDR_24 {0xff} \
+  CONFIG.BTPO.ADDR_25 {0xff} \
+  CONFIG.BTPO.ADDR_26 {0xff} \
+  CONFIG.BTPO.ADDR_27 {0xff} \
+  CONFIG.BTPO.ADDR_28 {0xff} \
+  CONFIG.BTPO.ADDR_29 {0xff} \
+  CONFIG.BTPO.ADDR_3 {0xff} \
+  CONFIG.BTPO.ADDR_30 {0xff} \
+  CONFIG.BTPO.ADDR_31 {0xff} \
+  CONFIG.BTPO.ADDR_4 {0xff} \
+  CONFIG.BTPO.ADDR_5 {0xff} \
+  CONFIG.BTPO.ADDR_6 {0xff} \
+  CONFIG.BTPO.ADDR_7 {0xff} \
+  CONFIG.BTPO.ADDR_8 {0xff} \
+  CONFIG.BTPO.ADDR_9 {0xff} \
+  CONFIG.BTPO.COUNT {1} \
+  CONFIG.Component_Name {design_1_frontpanel_1_0} \
+  CONFIG.DNA.EN {false} \
+  CONFIG.DNA.WIDTH {57} \
+  CONFIG.EXDES.FLOW {Block Designer} \
+  CONFIG.EXDES.SELECTION {PipeTest} \
+  CONFIG.GUI.APPLY_PRESET {0} \
+  CONFIG.PI.ADDR_0 {0xff} \
+  CONFIG.PI.ADDR_1 {0xff} \
+  CONFIG.PI.ADDR_10 {0xff} \
+  CONFIG.PI.ADDR_11 {0xff} \
+  CONFIG.PI.ADDR_12 {0xff} \
+  CONFIG.PI.ADDR_13 {0xff} \
+  CONFIG.PI.ADDR_14 {0xff} \
+  CONFIG.PI.ADDR_15 {0xff} \
+  CONFIG.PI.ADDR_16 {0xff} \
+  CONFIG.PI.ADDR_17 {0xff} \
+  CONFIG.PI.ADDR_18 {0xff} \
+  CONFIG.PI.ADDR_19 {0xff} \
+  CONFIG.PI.ADDR_2 {0xff} \
+  CONFIG.PI.ADDR_20 {0xff} \
+  CONFIG.PI.ADDR_21 {0xff} \
+  CONFIG.PI.ADDR_22 {0xff} \
+  CONFIG.PI.ADDR_23 {0xff} \
+  CONFIG.PI.ADDR_24 {0xff} \
+  CONFIG.PI.ADDR_25 {0xff} \
+  CONFIG.PI.ADDR_26 {0xff} \
+  CONFIG.PI.ADDR_27 {0xff} \
+  CONFIG.PI.ADDR_28 {0xff} \
+  CONFIG.PI.ADDR_29 {0xff} \
+  CONFIG.PI.ADDR_3 {0xff} \
+  CONFIG.PI.ADDR_30 {0xff} \
+  CONFIG.PI.ADDR_31 {0xff} \
+  CONFIG.PI.ADDR_4 {0xff} \
+  CONFIG.PI.ADDR_5 {0xff} \
+  CONFIG.PI.ADDR_6 {0xff} \
+  CONFIG.PI.ADDR_7 {0xff} \
+  CONFIG.PI.ADDR_8 {0xff} \
+  CONFIG.PI.ADDR_9 {0xff} \
+  CONFIG.PI.COUNT {0} \
+  CONFIG.PO.ADDR_0 {0xff} \
+  CONFIG.PO.ADDR_1 {0xff} \
+  CONFIG.PO.ADDR_10 {0xff} \
+  CONFIG.PO.ADDR_11 {0xff} \
+  CONFIG.PO.ADDR_12 {0xff} \
+  CONFIG.PO.ADDR_13 {0xff} \
+  CONFIG.PO.ADDR_14 {0xff} \
+  CONFIG.PO.ADDR_15 {0xff} \
+  CONFIG.PO.ADDR_16 {0xff} \
+  CONFIG.PO.ADDR_17 {0xff} \
+  CONFIG.PO.ADDR_18 {0xff} \
+  CONFIG.PO.ADDR_19 {0xff} \
+  CONFIG.PO.ADDR_2 {0xff} \
+  CONFIG.PO.ADDR_20 {0xff} \
+  CONFIG.PO.ADDR_21 {0xff} \
+  CONFIG.PO.ADDR_22 {0xff} \
+  CONFIG.PO.ADDR_23 {0xff} \
+  CONFIG.PO.ADDR_24 {0xff} \
+  CONFIG.PO.ADDR_25 {0xff} \
+  CONFIG.PO.ADDR_26 {0xff} \
+  CONFIG.PO.ADDR_27 {0xff} \
+  CONFIG.PO.ADDR_28 {0xff} \
+  CONFIG.PO.ADDR_29 {0xff} \
+  CONFIG.PO.ADDR_3 {0xff} \
+  CONFIG.PO.ADDR_30 {0xff} \
+  CONFIG.PO.ADDR_31 {0xff} \
+  CONFIG.PO.ADDR_4 {0xff} \
+  CONFIG.PO.ADDR_5 {0xff} \
+  CONFIG.PO.ADDR_6 {0xff} \
+  CONFIG.PO.ADDR_7 {0xff} \
+  CONFIG.PO.ADDR_8 {0xff} \
+  CONFIG.PO.ADDR_9 {0xff} \
+  CONFIG.PO.COUNT {0} \
+  CONFIG.RB.EN {false} \
+  CONFIG.S.BTPI.ADDR_0 {0xff} \
+  CONFIG.S.BTPI.ADDR_1 {0xff} \
+  CONFIG.S.BTPI.ADDR_10 {0xff} \
+  CONFIG.S.BTPI.ADDR_11 {0xff} \
+  CONFIG.S.BTPI.ADDR_12 {0xff} \
+  CONFIG.S.BTPI.ADDR_13 {0xff} \
+  CONFIG.S.BTPI.ADDR_14 {0xff} \
+  CONFIG.S.BTPI.ADDR_15 {0xff} \
+  CONFIG.S.BTPI.ADDR_16 {0xff} \
+  CONFIG.S.BTPI.ADDR_17 {0xff} \
+  CONFIG.S.BTPI.ADDR_18 {0xff} \
+  CONFIG.S.BTPI.ADDR_19 {0xff} \
+  CONFIG.S.BTPI.ADDR_2 {0xff} \
+  CONFIG.S.BTPI.ADDR_20 {0xff} \
+  CONFIG.S.BTPI.ADDR_21 {0xff} \
+  CONFIG.S.BTPI.ADDR_22 {0xff} \
+  CONFIG.S.BTPI.ADDR_23 {0xff} \
+  CONFIG.S.BTPI.ADDR_24 {0xff} \
+  CONFIG.S.BTPI.ADDR_25 {0xff} \
+  CONFIG.S.BTPI.ADDR_26 {0xff} \
+  CONFIG.S.BTPI.ADDR_27 {0xff} \
+  CONFIG.S.BTPI.ADDR_28 {0xff} \
+  CONFIG.S.BTPI.ADDR_29 {0xff} \
+  CONFIG.S.BTPI.ADDR_3 {0xff} \
+  CONFIG.S.BTPI.ADDR_30 {0xff} \
+  CONFIG.S.BTPI.ADDR_31 {0xff} \
+  CONFIG.S.BTPI.ADDR_4 {0xff} \
+  CONFIG.S.BTPI.ADDR_5 {0xff} \
+  CONFIG.S.BTPI.ADDR_6 {0xff} \
+  CONFIG.S.BTPI.ADDR_7 {0xff} \
+  CONFIG.S.BTPI.ADDR_8 {0xff} \
+  CONFIG.S.BTPI.ADDR_9 {0xff} \
+  CONFIG.S.BTPI.COUNT {0} \
+  CONFIG.S.BTPO.ADDR_0 {0xff} \
+  CONFIG.S.BTPO.ADDR_1 {0xff} \
+  CONFIG.S.BTPO.ADDR_10 {0xff} \
+  CONFIG.S.BTPO.ADDR_11 {0xff} \
+  CONFIG.S.BTPO.ADDR_12 {0xff} \
+  CONFIG.S.BTPO.ADDR_13 {0xff} \
+  CONFIG.S.BTPO.ADDR_14 {0xff} \
+  CONFIG.S.BTPO.ADDR_15 {0xff} \
+  CONFIG.S.BTPO.ADDR_16 {0xff} \
+  CONFIG.S.BTPO.ADDR_17 {0xff} \
+  CONFIG.S.BTPO.ADDR_18 {0xff} \
+  CONFIG.S.BTPO.ADDR_19 {0xff} \
+  CONFIG.S.BTPO.ADDR_2 {0xff} \
+  CONFIG.S.BTPO.ADDR_20 {0xff} \
+  CONFIG.S.BTPO.ADDR_21 {0xff} \
+  CONFIG.S.BTPO.ADDR_22 {0xff} \
+  CONFIG.S.BTPO.ADDR_23 {0xff} \
+  CONFIG.S.BTPO.ADDR_24 {0xff} \
+  CONFIG.S.BTPO.ADDR_25 {0xff} \
+  CONFIG.S.BTPO.ADDR_26 {0xff} \
+  CONFIG.S.BTPO.ADDR_27 {0xff} \
+  CONFIG.S.BTPO.ADDR_28 {0xff} \
+  CONFIG.S.BTPO.ADDR_29 {0xff} \
+  CONFIG.S.BTPO.ADDR_3 {0xff} \
+  CONFIG.S.BTPO.ADDR_30 {0xff} \
+  CONFIG.S.BTPO.ADDR_31 {0xff} \
+  CONFIG.S.BTPO.ADDR_4 {0xff} \
+  CONFIG.S.BTPO.ADDR_5 {0xff} \
+  CONFIG.S.BTPO.ADDR_6 {0xff} \
+  CONFIG.S.BTPO.ADDR_7 {0xff} \
+  CONFIG.S.BTPO.ADDR_8 {0xff} \
+  CONFIG.S.BTPO.ADDR_9 {0xff} \
+  CONFIG.S.BTPO.COUNT {0} \
+  CONFIG.S.EN {false} \
+  CONFIG.S.PI.ADDR_0 {0xff} \
+  CONFIG.S.PI.ADDR_1 {0xff} \
+  CONFIG.S.PI.ADDR_10 {0xff} \
+  CONFIG.S.PI.ADDR_11 {0xff} \
+  CONFIG.S.PI.ADDR_12 {0xff} \
+  CONFIG.S.PI.ADDR_13 {0xff} \
+  CONFIG.S.PI.ADDR_14 {0xff} \
+  CONFIG.S.PI.ADDR_15 {0xff} \
+  CONFIG.S.PI.ADDR_16 {0xff} \
+  CONFIG.S.PI.ADDR_17 {0xff} \
+  CONFIG.S.PI.ADDR_18 {0xff} \
+  CONFIG.S.PI.ADDR_19 {0xff} \
+  CONFIG.S.PI.ADDR_2 {0xff} \
+  CONFIG.S.PI.ADDR_20 {0xff} \
+  CONFIG.S.PI.ADDR_21 {0xff} \
+  CONFIG.S.PI.ADDR_22 {0xff} \
+  CONFIG.S.PI.ADDR_23 {0xff} \
+  CONFIG.S.PI.ADDR_24 {0xff} \
+  CONFIG.S.PI.ADDR_25 {0xff} \
+  CONFIG.S.PI.ADDR_26 {0xff} \
+  CONFIG.S.PI.ADDR_27 {0xff} \
+  CONFIG.S.PI.ADDR_28 {0xff} \
+  CONFIG.S.PI.ADDR_29 {0xff} \
+  CONFIG.S.PI.ADDR_3 {0xff} \
+  CONFIG.S.PI.ADDR_30 {0xff} \
+  CONFIG.S.PI.ADDR_31 {0xff} \
+  CONFIG.S.PI.ADDR_4 {0xff} \
+  CONFIG.S.PI.ADDR_5 {0xff} \
+  CONFIG.S.PI.ADDR_6 {0xff} \
+  CONFIG.S.PI.ADDR_7 {0xff} \
+  CONFIG.S.PI.ADDR_8 {0xff} \
+  CONFIG.S.PI.ADDR_9 {0xff} \
+  CONFIG.S.PI.COUNT {0} \
+  CONFIG.S.PO.ADDR_0 {0xff} \
+  CONFIG.S.PO.ADDR_1 {0xff} \
+  CONFIG.S.PO.ADDR_10 {0xff} \
+  CONFIG.S.PO.ADDR_11 {0xff} \
+  CONFIG.S.PO.ADDR_12 {0xff} \
+  CONFIG.S.PO.ADDR_13 {0xff} \
+  CONFIG.S.PO.ADDR_14 {0xff} \
+  CONFIG.S.PO.ADDR_15 {0xff} \
+  CONFIG.S.PO.ADDR_16 {0xff} \
+  CONFIG.S.PO.ADDR_17 {0xff} \
+  CONFIG.S.PO.ADDR_18 {0xff} \
+  CONFIG.S.PO.ADDR_19 {0xff} \
+  CONFIG.S.PO.ADDR_2 {0xff} \
+  CONFIG.S.PO.ADDR_20 {0xff} \
+  CONFIG.S.PO.ADDR_21 {0xff} \
+  CONFIG.S.PO.ADDR_22 {0xff} \
+  CONFIG.S.PO.ADDR_23 {0xff} \
+  CONFIG.S.PO.ADDR_24 {0xff} \
+  CONFIG.S.PO.ADDR_25 {0xff} \
+  CONFIG.S.PO.ADDR_26 {0xff} \
+  CONFIG.S.PO.ADDR_27 {0xff} \
+  CONFIG.S.PO.ADDR_28 {0xff} \
+  CONFIG.S.PO.ADDR_29 {0xff} \
+  CONFIG.S.PO.ADDR_3 {0xff} \
+  CONFIG.S.PO.ADDR_30 {0xff} \
+  CONFIG.S.PO.ADDR_31 {0xff} \
+  CONFIG.S.PO.ADDR_4 {0xff} \
+  CONFIG.S.PO.ADDR_5 {0xff} \
+  CONFIG.S.PO.ADDR_6 {0xff} \
+  CONFIG.S.PO.ADDR_7 {0xff} \
+  CONFIG.S.PO.ADDR_8 {0xff} \
+  CONFIG.S.PO.ADDR_9 {0xff} \
+  CONFIG.S.PO.COUNT {0} \
+  CONFIG.S.RB.EN {false} \
+  CONFIG.S.TI.ADDR_0 {0xff} \
+  CONFIG.S.TI.ADDR_1 {0xff} \
+  CONFIG.S.TI.ADDR_10 {0xff} \
+  CONFIG.S.TI.ADDR_11 {0xff} \
+  CONFIG.S.TI.ADDR_12 {0xff} \
+  CONFIG.S.TI.ADDR_13 {0xff} \
+  CONFIG.S.TI.ADDR_14 {0xff} \
+  CONFIG.S.TI.ADDR_15 {0xff} \
+  CONFIG.S.TI.ADDR_16 {0xff} \
+  CONFIG.S.TI.ADDR_17 {0xff} \
+  CONFIG.S.TI.ADDR_18 {0xff} \
+  CONFIG.S.TI.ADDR_19 {0xff} \
+  CONFIG.S.TI.ADDR_2 {0xff} \
+  CONFIG.S.TI.ADDR_20 {0xff} \
+  CONFIG.S.TI.ADDR_21 {0xff} \
+  CONFIG.S.TI.ADDR_22 {0xff} \
+  CONFIG.S.TI.ADDR_23 {0xff} \
+  CONFIG.S.TI.ADDR_24 {0xff} \
+  CONFIG.S.TI.ADDR_25 {0xff} \
+  CONFIG.S.TI.ADDR_26 {0xff} \
+  CONFIG.S.TI.ADDR_27 {0xff} \
+  CONFIG.S.TI.ADDR_28 {0xff} \
+  CONFIG.S.TI.ADDR_29 {0xff} \
+  CONFIG.S.TI.ADDR_3 {0xff} \
+  CONFIG.S.TI.ADDR_30 {0xff} \
+  CONFIG.S.TI.ADDR_31 {0xff} \
+  CONFIG.S.TI.ADDR_4 {0xff} \
+  CONFIG.S.TI.ADDR_5 {0xff} \
+  CONFIG.S.TI.ADDR_6 {0xff} \
+  CONFIG.S.TI.ADDR_7 {0xff} \
+  CONFIG.S.TI.ADDR_8 {0xff} \
+  CONFIG.S.TI.ADDR_9 {0xff} \
+  CONFIG.S.TI.COUNT {0} \
+  CONFIG.S.TO.ADDR_0 {0xff} \
+  CONFIG.S.TO.ADDR_1 {0xff} \
+  CONFIG.S.TO.ADDR_10 {0xff} \
+  CONFIG.S.TO.ADDR_11 {0xff} \
+  CONFIG.S.TO.ADDR_12 {0xff} \
+  CONFIG.S.TO.ADDR_13 {0xff} \
+  CONFIG.S.TO.ADDR_14 {0xff} \
+  CONFIG.S.TO.ADDR_15 {0xff} \
+  CONFIG.S.TO.ADDR_16 {0xff} \
+  CONFIG.S.TO.ADDR_17 {0xff} \
+  CONFIG.S.TO.ADDR_18 {0xff} \
+  CONFIG.S.TO.ADDR_19 {0xff} \
+  CONFIG.S.TO.ADDR_2 {0xff} \
+  CONFIG.S.TO.ADDR_20 {0xff} \
+  CONFIG.S.TO.ADDR_21 {0xff} \
+  CONFIG.S.TO.ADDR_22 {0xff} \
+  CONFIG.S.TO.ADDR_23 {0xff} \
+  CONFIG.S.TO.ADDR_24 {0xff} \
+  CONFIG.S.TO.ADDR_25 {0xff} \
+  CONFIG.S.TO.ADDR_26 {0xff} \
+  CONFIG.S.TO.ADDR_27 {0xff} \
+  CONFIG.S.TO.ADDR_28 {0xff} \
+  CONFIG.S.TO.ADDR_29 {0xff} \
+  CONFIG.S.TO.ADDR_3 {0xff} \
+  CONFIG.S.TO.ADDR_30 {0xff} \
+  CONFIG.S.TO.ADDR_31 {0xff} \
+  CONFIG.S.TO.ADDR_4 {0xff} \
+  CONFIG.S.TO.ADDR_5 {0xff} \
+  CONFIG.S.TO.ADDR_6 {0xff} \
+  CONFIG.S.TO.ADDR_7 {0xff} \
+  CONFIG.S.TO.ADDR_8 {0xff} \
+  CONFIG.S.TO.ADDR_9 {0xff} \
+  CONFIG.S.TO.COUNT {0} \
+  CONFIG.S.WI.ADDR_0 {0xff} \
+  CONFIG.S.WI.ADDR_1 {0xff} \
+  CONFIG.S.WI.ADDR_10 {0xff} \
+  CONFIG.S.WI.ADDR_11 {0xff} \
+  CONFIG.S.WI.ADDR_12 {0xff} \
+  CONFIG.S.WI.ADDR_13 {0xff} \
+  CONFIG.S.WI.ADDR_14 {0xff} \
+  CONFIG.S.WI.ADDR_15 {0xff} \
+  CONFIG.S.WI.ADDR_16 {0xff} \
+  CONFIG.S.WI.ADDR_17 {0xff} \
+  CONFIG.S.WI.ADDR_18 {0xff} \
+  CONFIG.S.WI.ADDR_19 {0xff} \
+  CONFIG.S.WI.ADDR_2 {0xff} \
+  CONFIG.S.WI.ADDR_20 {0xff} \
+  CONFIG.S.WI.ADDR_21 {0xff} \
+  CONFIG.S.WI.ADDR_22 {0xff} \
+  CONFIG.S.WI.ADDR_23 {0xff} \
+  CONFIG.S.WI.ADDR_24 {0xff} \
+  CONFIG.S.WI.ADDR_25 {0xff} \
+  CONFIG.S.WI.ADDR_26 {0xff} \
+  CONFIG.S.WI.ADDR_27 {0xff} \
+  CONFIG.S.WI.ADDR_28 {0xff} \
+  CONFIG.S.WI.ADDR_29 {0xff} \
+  CONFIG.S.WI.ADDR_3 {0xff} \
+  CONFIG.S.WI.ADDR_30 {0xff} \
+  CONFIG.S.WI.ADDR_31 {0xff} \
+  CONFIG.S.WI.ADDR_4 {0xff} \
+  CONFIG.S.WI.ADDR_5 {0xff} \
+  CONFIG.S.WI.ADDR_6 {0xff} \
+  CONFIG.S.WI.ADDR_7 {0xff} \
+  CONFIG.S.WI.ADDR_8 {0xff} \
+  CONFIG.S.WI.ADDR_9 {0xff} \
+  CONFIG.S.WI.COUNT {0} \
+  CONFIG.S.WO.ADDR_0 {0xff} \
+  CONFIG.S.WO.ADDR_1 {0xff} \
+  CONFIG.S.WO.ADDR_10 {0xff} \
+  CONFIG.S.WO.ADDR_11 {0xff} \
+  CONFIG.S.WO.ADDR_12 {0xff} \
+  CONFIG.S.WO.ADDR_13 {0xff} \
+  CONFIG.S.WO.ADDR_14 {0xff} \
+  CONFIG.S.WO.ADDR_15 {0xff} \
+  CONFIG.S.WO.ADDR_16 {0xff} \
+  CONFIG.S.WO.ADDR_17 {0xff} \
+  CONFIG.S.WO.ADDR_18 {0xff} \
+  CONFIG.S.WO.ADDR_19 {0xff} \
+  CONFIG.S.WO.ADDR_2 {0xff} \
+  CONFIG.S.WO.ADDR_20 {0xff} \
+  CONFIG.S.WO.ADDR_21 {0xff} \
+  CONFIG.S.WO.ADDR_22 {0xff} \
+  CONFIG.S.WO.ADDR_23 {0xff} \
+  CONFIG.S.WO.ADDR_24 {0xff} \
+  CONFIG.S.WO.ADDR_25 {0xff} \
+  CONFIG.S.WO.ADDR_26 {0xff} \
+  CONFIG.S.WO.ADDR_27 {0xff} \
+  CONFIG.S.WO.ADDR_28 {0xff} \
+  CONFIG.S.WO.ADDR_29 {0xff} \
+  CONFIG.S.WO.ADDR_3 {0xff} \
+  CONFIG.S.WO.ADDR_30 {0xff} \
+  CONFIG.S.WO.ADDR_31 {0xff} \
+  CONFIG.S.WO.ADDR_4 {0xff} \
+  CONFIG.S.WO.ADDR_5 {0xff} \
+  CONFIG.S.WO.ADDR_6 {0xff} \
+  CONFIG.S.WO.ADDR_7 {0xff} \
+  CONFIG.S.WO.ADDR_8 {0xff} \
+  CONFIG.S.WO.ADDR_9 {0xff} \
+  CONFIG.S.WO.COUNT {0} \
+  CONFIG.TI.ADDR_0 {0xff} \
+  CONFIG.TI.ADDR_1 {0xff} \
+  CONFIG.TI.ADDR_10 {0xff} \
+  CONFIG.TI.ADDR_11 {0xff} \
+  CONFIG.TI.ADDR_12 {0xff} \
+  CONFIG.TI.ADDR_13 {0xff} \
+  CONFIG.TI.ADDR_14 {0xff} \
+  CONFIG.TI.ADDR_15 {0xff} \
+  CONFIG.TI.ADDR_16 {0xff} \
+  CONFIG.TI.ADDR_17 {0xff} \
+  CONFIG.TI.ADDR_18 {0xff} \
+  CONFIG.TI.ADDR_19 {0xff} \
+  CONFIG.TI.ADDR_2 {0xff} \
+  CONFIG.TI.ADDR_20 {0xff} \
+  CONFIG.TI.ADDR_21 {0xff} \
+  CONFIG.TI.ADDR_22 {0xff} \
+  CONFIG.TI.ADDR_23 {0xff} \
+  CONFIG.TI.ADDR_24 {0xff} \
+  CONFIG.TI.ADDR_25 {0xff} \
+  CONFIG.TI.ADDR_26 {0xff} \
+  CONFIG.TI.ADDR_27 {0xff} \
+  CONFIG.TI.ADDR_28 {0xff} \
+  CONFIG.TI.ADDR_29 {0xff} \
+  CONFIG.TI.ADDR_3 {0xff} \
+  CONFIG.TI.ADDR_30 {0xff} \
+  CONFIG.TI.ADDR_31 {0xff} \
+  CONFIG.TI.ADDR_4 {0xff} \
+  CONFIG.TI.ADDR_5 {0xff} \
+  CONFIG.TI.ADDR_6 {0xff} \
+  CONFIG.TI.ADDR_7 {0xff} \
+  CONFIG.TI.ADDR_8 {0xff} \
+  CONFIG.TI.ADDR_9 {0xff} \
+  CONFIG.TI.COUNT {0} \
+  CONFIG.TO.ADDR_0 {0xff} \
+  CONFIG.TO.ADDR_1 {0xff} \
+  CONFIG.TO.ADDR_10 {0xff} \
+  CONFIG.TO.ADDR_11 {0xff} \
+  CONFIG.TO.ADDR_12 {0xff} \
+  CONFIG.TO.ADDR_13 {0xff} \
+  CONFIG.TO.ADDR_14 {0xff} \
+  CONFIG.TO.ADDR_15 {0xff} \
+  CONFIG.TO.ADDR_16 {0xff} \
+  CONFIG.TO.ADDR_17 {0xff} \
+  CONFIG.TO.ADDR_18 {0xff} \
+  CONFIG.TO.ADDR_19 {0xff} \
+  CONFIG.TO.ADDR_2 {0xff} \
+  CONFIG.TO.ADDR_20 {0xff} \
+  CONFIG.TO.ADDR_21 {0xff} \
+  CONFIG.TO.ADDR_22 {0xff} \
+  CONFIG.TO.ADDR_23 {0xff} \
+  CONFIG.TO.ADDR_24 {0xff} \
+  CONFIG.TO.ADDR_25 {0xff} \
+  CONFIG.TO.ADDR_26 {0xff} \
+  CONFIG.TO.ADDR_27 {0xff} \
+  CONFIG.TO.ADDR_28 {0xff} \
+  CONFIG.TO.ADDR_29 {0xff} \
+  CONFIG.TO.ADDR_3 {0xff} \
+  CONFIG.TO.ADDR_30 {0xff} \
+  CONFIG.TO.ADDR_31 {0xff} \
+  CONFIG.TO.ADDR_4 {0xff} \
+  CONFIG.TO.ADDR_5 {0xff} \
+  CONFIG.TO.ADDR_6 {0xff} \
+  CONFIG.TO.ADDR_7 {0xff} \
+  CONFIG.TO.ADDR_8 {0xff} \
+  CONFIG.TO.ADDR_9 {0xff} \
+  CONFIG.TO.COUNT {0} \
+  CONFIG.WI.ADDR_0 {0x00} \
+  CONFIG.WI.ADDR_1 {0x01} \
+  CONFIG.WI.ADDR_10 {0xff} \
+  CONFIG.WI.ADDR_11 {0xff} \
+  CONFIG.WI.ADDR_12 {0xff} \
+  CONFIG.WI.ADDR_13 {0xff} \
+  CONFIG.WI.ADDR_14 {0xff} \
+  CONFIG.WI.ADDR_15 {0xff} \
+  CONFIG.WI.ADDR_16 {0xff} \
+  CONFIG.WI.ADDR_17 {0xff} \
+  CONFIG.WI.ADDR_18 {0xff} \
+  CONFIG.WI.ADDR_19 {0xff} \
+  CONFIG.WI.ADDR_2 {0x02} \
+  CONFIG.WI.ADDR_20 {0xff} \
+  CONFIG.WI.ADDR_21 {0xff} \
+  CONFIG.WI.ADDR_22 {0xff} \
+  CONFIG.WI.ADDR_23 {0xff} \
+  CONFIG.WI.ADDR_24 {0xff} \
+  CONFIG.WI.ADDR_25 {0xff} \
+  CONFIG.WI.ADDR_26 {0xff} \
+  CONFIG.WI.ADDR_27 {0xff} \
+  CONFIG.WI.ADDR_28 {0xff} \
+  CONFIG.WI.ADDR_29 {0xff} \
+  CONFIG.WI.ADDR_3 {0x03} \
+  CONFIG.WI.ADDR_30 {0xff} \
+  CONFIG.WI.ADDR_31 {0xff} \
+  CONFIG.WI.ADDR_4 {0xff} \
+  CONFIG.WI.ADDR_5 {0xff} \
+  CONFIG.WI.ADDR_6 {0xff} \
+  CONFIG.WI.ADDR_7 {0xff} \
+  CONFIG.WI.ADDR_8 {0xff} \
+  CONFIG.WI.ADDR_9 {0xff} \
+  CONFIG.WI.COUNT {4} \
+  CONFIG.WO.ADDR_0 {0x20} \
+  CONFIG.WO.ADDR_1 {0xff} \
+  CONFIG.WO.ADDR_10 {0xff} \
+  CONFIG.WO.ADDR_11 {0xff} \
+  CONFIG.WO.ADDR_12 {0xff} \
+  CONFIG.WO.ADDR_13 {0xff} \
+  CONFIG.WO.ADDR_14 {0xff} \
+  CONFIG.WO.ADDR_15 {0xff} \
+  CONFIG.WO.ADDR_16 {0xff} \
+  CONFIG.WO.ADDR_17 {0xff} \
+  CONFIG.WO.ADDR_18 {0xff} \
+  CONFIG.WO.ADDR_19 {0xff} \
+  CONFIG.WO.ADDR_2 {0xff} \
+  CONFIG.WO.ADDR_20 {0xff} \
+  CONFIG.WO.ADDR_21 {0xff} \
+  CONFIG.WO.ADDR_22 {0xff} \
+  CONFIG.WO.ADDR_23 {0xff} \
+  CONFIG.WO.ADDR_24 {0xff} \
+  CONFIG.WO.ADDR_25 {0xff} \
+  CONFIG.WO.ADDR_26 {0xff} \
+  CONFIG.WO.ADDR_27 {0xff} \
+  CONFIG.WO.ADDR_28 {0xff} \
+  CONFIG.WO.ADDR_29 {0xff} \
+  CONFIG.WO.ADDR_3 {0xff} \
+  CONFIG.WO.ADDR_30 {0xff} \
+  CONFIG.WO.ADDR_31 {0xff} \
+  CONFIG.WO.ADDR_4 {0xff} \
+  CONFIG.WO.ADDR_5 {0xff} \
+  CONFIG.WO.ADDR_6 {0xff} \
+  CONFIG.WO.ADDR_7 {0xff} \
+  CONFIG.WO.ADDR_8 {0xff} \
+  CONFIG.WO.ADDR_9 {0xff} \
+  CONFIG.WO.COUNT {1} \
+  CONFIG.host_interface.BOARD.ASSOCIATED_PARAM {host_interface_BOARD_INTERFACE} \
+  CONFIG.host_interface_BOARD_INTERFACE {Custom} \
+  CONFIG.host_interface_s_BOARD_INTERFACE {Custom} " [get_ips design_1_frontpanel_1_0]
+
+

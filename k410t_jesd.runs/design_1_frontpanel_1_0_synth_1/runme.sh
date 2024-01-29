@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1'
+HD_PWD='/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

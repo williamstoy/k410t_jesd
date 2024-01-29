@@ -2,74 +2,22 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jan 28 15:17:08 2024
-# Process ID: 264006
-# Current directory: /users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1
+# Start of session at: Mon Jan 29 16:24:49 2024
+# Process ID: 24564
+# Current directory: /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1
 # Command line: vivado -log design_1_frontpanel_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_frontpanel_1_0.tcl
-# Log file: /users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/design_1_frontpanel_1_0.vds
-# Journal file: /users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/vivado.jou
+# Log file: /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/design_1_frontpanel_1_0.vds
+# Journal file: /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_frontpanel_1_0.tcl -notrace
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
-
-WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
-
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/TI204C-IP-Release-v1.10'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.3'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/nalarcon/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/wstoy/Documents/vivado/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/wstoy/Documents/vivado/projects/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/cad/xilinx/Vivado/2019.2/data/ip'.
-config_ip_cache: Time (s): cpu = 00:00:28 ; elapsed = 00:01:16 . Memory (MB): peak = 1554.715 ; gain = 0.004 ; free physical = 715800 ; free virtual = 733262
+config_ip_cache: Time (s): cpu = 00:00:32 ; elapsed = 00:01:21 . Memory (MB): peak = 1554.715 ; gain = 0.004 ; free physical = 732004 ; free virtual = 752220
 Command: synth_design -top design_1_frontpanel_1_0 -part xc7k410tffg676-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
@@ -77,14 +25,14 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410
 INFO: [Common 17-1540] The version limit for your license is '2020.01' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 INFO: [Device 21-403] Loading part xc7k410tffg676-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 264596 
-WARNING: [Synth 8-2490] overwriting previous definition of module xpm_cdc_async_rst [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/FrontPanel/okCoreHarness.v:15360]
+INFO: Helper process launched with PID 24840 
+WARNING: [Synth 8-2490] overwriting previous definition of module xpm_cdc_async_rst [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/FrontPanel/okCoreHarness.v:15360]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2076.297 ; gain = 208.637 ; free physical = 715176 ; free virtual = 732668
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2076.359 ; gain = 209.637 ; free physical = 731414 ; free virtual = 751631
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_frontpanel_1_0' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/design_1_frontpanel_1_0_synthesis.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_frontpanel_1_0_wrapper_synthesis' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/design_1_frontpanel_1_0_wrapper_synthesis.v:13]
-INFO: [Synth 8-6157] synthesizing module 'okHost' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/FrontPanel/okLibrary.v:8]
+INFO: [Synth 8-6157] synthesizing module 'design_1_frontpanel_1_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/design_1_frontpanel_1_0_synthesis.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_frontpanel_1_0_wrapper_synthesis' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/design_1_frontpanel_1_0_wrapper_synthesis.v:13]
+INFO: [Synth 8-6157] synthesizing module 'okHost' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/FrontPanel/okLibrary.v:8]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36196]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
@@ -134,7 +82,7 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [/tools/cad/xilinx/Vivado
 	Parameter REF_JITTER1 bound to: 0.000000 - type: double 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (4#1) [/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:40060]
-WARNING: [Synth 8-7023] instance 'mmcm0' of module 'MMCME2_BASE' has 18 connections declared, but only 6 given [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/FrontPanel/okLibrary.v:55]
+WARNING: [Synth 8-7023] instance 'mmcm0' of module 'MMCME2_BASE' has 18 connections declared, but only 6 given [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/FrontPanel/okLibrary.v:55]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (5#1) [/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
 INFO: [Synth 8-6157] synthesizing module 'OBUF' [/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46211]
@@ -335,7 +283,7 @@ INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized32' (27#1) [/t
 INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized33' (27#1) [/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:39299]
 INFO: [Synth 8-6155] done synthesizing module 'LUT6__parameterized34' (27#1) [/tools/cad/xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:39299]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-7023] instance 'okHI' of module 'okHost' has 9 connections declared, but only 7 given [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/design_1_frontpanel_1_0_wrapper_synthesis.v:26]
+WARNING: [Synth 8-7023] instance 'okHI' of module 'okHost' has 9 connections declared, but only 7 given [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/design_1_frontpanel_1_0_wrapper_synthesis.v:26]
 	Parameter N bound to: 3 - type: integer 
 WARNING: [Synth 8-3331] design okBTPipeOut has unconnected port okHE[112]
 WARNING: [Synth 8-3331] design okBTPipeOut has unconnected port okHE[111]
@@ -439,7 +387,7 @@ WARNING: [Synth 8-3331] design okBTPipeOut has unconnected port okHE[4]
 WARNING: [Synth 8-3331] design okBTPipeOut has unconnected port okHE[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2134.215 ; gain = 266.555 ; free physical = 715203 ; free virtual = 732696
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 2134.277 ; gain = 267.555 ; free physical = 731442 ; free virtual = 751659
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -452,12 +400,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2149.051 ; gain = 281.391 ; free physical = 715206 ; free virtual = 732700
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 2149.113 ; gain = 282.391 ; free physical = 731446 ; free virtual = 751664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2149.051 ; gain = 281.391 ; free physical = 715206 ; free virtual = 732700
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 2149.113 ; gain = 282.391 ; free physical = 731446 ; free virtual = 751664
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2155.984 ; gain = 0.000 ; free physical = 715197 ; free virtual = 732692
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2160.016 ; gain = 0.000 ; free physical = 731438 ; free virtual = 751656
 INFO: [Netlist 29-17] Analyzing 146 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'inst/okHI/hi_clk_bufg' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -465,19 +413,19 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc] for cell 'inst'
-Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc] for cell 'inst'
-Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc] for cell 'inst'
-Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc] for cell 'inst'
-Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc] for cell 'inst'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc] for cell 'inst'
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc] for cell 'inst'
+Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/dont_touch.xdc]
 Sourcing Tcl File [/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Finished Sourcing Tcl File [/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2314.832 ; gain = 0.000 ; free physical = 715090 ; free virtual = 732595
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2312.863 ; gain = 0.000 ; free physical = 731294 ; free virtual = 751511
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 97 instances were transformed.
   IBUFG => IBUF: 1 instance 
@@ -488,27 +436,27 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
 INFO: [Timing 38-2] Deriving generated clocks
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2314.832 ; gain = 0.000 ; free physical = 715089 ; free virtual = 732594
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2312.863 ; gain = 0.000 ; free physical = 731293 ; free virtual = 751510
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715174 ; free virtual = 732679
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731427 ; free virtual = 751645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k410tffg676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715174 ; free virtual = 732679
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731427 ; free virtual = 751645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/dont_touch.xdc, line 9).
 Applied set_property DONT_TOUCH = true for inst/okHI/core0/core0/\a0/cb0 /U0/\inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715177 ; free virtual = 732682
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731428 ; free virtual = 751645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715167 ; free virtual = 732672
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731418 ; free virtual = 751637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -608,7 +556,7 @@ WARNING: [Synth 8-3332] Sequential element (ld53bc82cafe43594f651cb14d090c4f9_re
 WARNING: [Synth 8-3332] Sequential element (ld53bc82cafe43594f651cb14d090c4f9_reg[9]) is unused and will be removed from module okCore.
 WARNING: [Synth 8-3332] Sequential element (lf38b0951701b1c1d5bc7a746e996b3c6_reg) is unused and will be removed from module okCore.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715157 ; free virtual = 732666
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731407 ; free virtual = 751629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -622,13 +570,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/src_arst' to pin 'inst/okHI/core0/core0/a0/l62a5479e7989ce7f4d5507c695cc69cf_reg/Q'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715030 ; free virtual = 732546
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731285 ; free virtual = 751508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715027 ; free virtual = 732543
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731283 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -640,7 +588,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715027 ; free virtual = 732543
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731283 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -664,13 +612,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715026 ; free virtual = 732542
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731282 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715026 ; free virtual = 732542
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731282 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -689,25 +637,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715026 ; free virtual = 732542
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731282 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715026 ; free virtual = 732542
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731282 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715026 ; free virtual = 732542
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731282 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715026 ; free virtual = 732542
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731282 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -729,9 +677,9 @@ Report Cell Usage:
 |4     |LUT1        |    58|
 |5     |LUT2        |    87|
 |6     |LUT3        |    63|
-|7     |LUT4        |   216|
+|7     |LUT4        |   210|
 |8     |LUT5        |    99|
-|9     |LUT6        |   405|
+|9     |LUT6        |   399|
 |10    |LUT6_2      |    50|
 |11    |MMCME2_BASE |     1|
 |12    |RAM128X1S   |     8|
@@ -741,7 +689,7 @@ Report Cell Usage:
 |16    |RAMB36E1    |     1|
 |17    |FDCE        |   160|
 |18    |FDPE        |    37|
-|19    |FDRE        |   886|
+|19    |FDRE        |   694|
 |20    |FDSE        |    22|
 |21    |IBUF        |     4|
 |22    |IBUFG       |     1|
@@ -749,19 +697,19 @@ Report Cell Usage:
 |24    |OBUF        |     3|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715026 ; free virtual = 732542
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731282 ; free virtual = 751505
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 860 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2314.832 ; gain = 281.391 ; free physical = 715080 ; free virtual = 732596
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 2314.832 ; gain = 447.172 ; free physical = 715161 ; free virtual = 732678
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 2312.863 ; gain = 282.391 ; free physical = 731335 ; free virtual = 751557
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2312.863 ; gain = 446.141 ; free physical = 731412 ; free virtual = 751635
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2314.832 ; gain = 0.000 ; free physical = 715155 ; free virtual = 732672
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2312.863 ; gain = 0.000 ; free physical = 731406 ; free virtual = 751629
 INFO: [Netlist 29-17] Analyzing 146 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'inst/okHI/hi_clk_bufg' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2314.832 ; gain = 0.000 ; free physical = 715091 ; free virtual = 732607
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2312.863 ; gain = 0.000 ; free physical = 731342 ; free virtual = 751565
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 97 instances were transformed.
   IBUFG => IBUF: 1 instance 
@@ -772,20 +720,20 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-225 Infos, 189 Warnings, 0 Critical Warnings and 0 Errors encountered.
+223 Infos, 173 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:01:01 . Memory (MB): peak = 2314.832 ; gain = 760.117 ; free physical = 715224 ; free virtual = 732741
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2314.832 ; gain = 0.000 ; free physical = 715224 ; free virtual = 732741
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:57 . Memory (MB): peak = 2312.863 ; gain = 758.148 ; free physical = 731475 ; free virtual = 751698
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2312.863 ; gain = 0.000 ; free physical = 731475 ; free virtual = 751698
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/design_1_frontpanel_1_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/design_1_frontpanel_1_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_frontpanel_1_0, cache-ID = 638752bbbd7d197b
-config_ip_cache: Time (s): cpu = 00:00:52 ; elapsed = 00:02:28 . Memory (MB): peak = 2338.848 ; gain = 0.000 ; free physical = 715221 ; free virtual = 732742
-INFO: [Coretcl 2-1174] Renamed 15 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2338.848 ; gain = 0.000 ; free physical = 715221 ; free virtual = 732742
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_frontpanel_1_0, cache-ID = 95b1b88cff54ce8a
+config_ip_cache: Time (s): cpu = 00:00:58 ; elapsed = 00:02:32 . Memory (MB): peak = 2336.879 ; gain = 0.000 ; free physical = 731471 ; free virtual = 751698
+INFO: [Coretcl 2-1174] Renamed 12 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2336.879 ; gain = 0.000 ; free physical = 731471 ; free virtual = 751698
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/design_1_frontpanel_1_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_frontpanel_1_0_synth_1/design_1_frontpanel_1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_frontpanel_1_0_utilization_synth.rpt -pb design_1_frontpanel_1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 28 15:22:11 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 29 16:29:57 2024...

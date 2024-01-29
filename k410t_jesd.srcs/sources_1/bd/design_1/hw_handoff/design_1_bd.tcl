@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# concat_pad, data_processing_unit, enable_read, enable_write, half_rate, jesd204_0_transport_layer_demapper, negate, okAXI4LiteInterface, wireoutbreakout
+# concat_pad, enable_read, enable_write, half_rate, jesd204_0_transport_layer_demapper, negate, okAXI4LiteInterface, wireoutbreakout
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -190,17 +190,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: data_processing_unit_0, and set properties
-  set block_name data_processing_unit
-  set block_cell_name data_processing_unit_0
-  if { [catch {set data_processing_unit_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $data_processing_unit_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: enable_read_0, and set properties
   set block_name enable_read
   set block_cell_name enable_read_0
@@ -266,10 +255,10 @@ proc create_root_design { parentCell } {
    CONFIG.EXDES.FLOW {Block Designer} \
    CONFIG.EXDES.SELECTION {PipeTest} \
    CONFIG.WI.ADDR_0 {0x00} \
-   CONFIG.WI.ADDR_1 {0x01} \
-   CONFIG.WI.ADDR_2 {0x02} \
-   CONFIG.WI.ADDR_3 {0x03} \
-   CONFIG.WI.COUNT {4} \
+   CONFIG.WI.ADDR_1 {0xff} \
+   CONFIG.WI.ADDR_2 {0xff} \
+   CONFIG.WI.ADDR_3 {0xff} \
+   CONFIG.WI.COUNT {1} \
    CONFIG.WO.ADDR_0 {0x20} \
    CONFIG.WO.COUNT {1} \
  ] $frontpanel_1
@@ -390,20 +379,16 @@ proc create_root_design { parentCell } {
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe2]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/empty]
   connect_bd_net -net fifo_generator_0_full [get_bd_pins enable_write_0/full] [get_bd_pins fifo_generator_0/full]
-  connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe4]
+  connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
   connect_bd_net -net frontpanel_0_btpoa0_ep_read [get_bd_pins enable_read_0/read] [get_bd_pins enable_write_0/read] [get_bd_pins frontpanel_1/btpoa0_ep_read] [get_bd_pins ila_0/probe0]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_1_btpoa0_ep_blockstrobe [get_bd_pins enable_write_0/blockstrobe] [get_bd_pins frontpanel_1/btpoa0_ep_blockstrobe] [get_bd_pins ila_0/probe1]
-  connect_bd_net -net frontpanel_1_wi01_ep_dataout [get_bd_pins data_processing_unit_0/V_threshold] [get_bd_pins frontpanel_1/wi01_ep_dataout]
-  connect_bd_net -net frontpanel_1_wi02_ep_dataout [get_bd_pins data_processing_unit_0/time_min] [get_bd_pins frontpanel_1/wi02_ep_dataout]
-  connect_bd_net -net frontpanel_1_wi03_ep_dataout [get_bd_pins data_processing_unit_0/time_max] [get_bd_pins frontpanel_1/wi03_ep_dataout]
   connect_bd_net -net half_rate_0_data_out [get_bd_pins fifo_generator_0/din] [get_bd_pins half_rate_0/data_out]
-  connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins data_processing_unit_0/RESET_N] [get_bd_pins half_rate_0/rst_n] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a]
-  connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins data_processing_unit_0/clk] [get_bd_pins enable_write_0/fast_clk] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins half_rate_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
-  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
-  connect_bd_net -net jesd204_0_transport_0_signalB_sampl0 [get_bd_pins concat_pad_0/in0] [get_bd_pins data_processing_unit_0/sample0] [get_bd_pins jesd204_0_transport_0/signalB_sampl0]
-  connect_bd_net -net jesd204_0_transport_0_signalB_sampl1 [get_bd_pins data_processing_unit_0/sample1] [get_bd_pins jesd204_0_transport_0/signalB_sampl1]
-  connect_bd_net -net jesd204_0_transport_0_signalD_cntrl0 [get_bd_pins concat_pad_0/in1] [get_bd_pins jesd204_0_transport_0/signalD_cntrl0]
+  connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins half_rate_0/rst_n] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a]
+  connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins enable_write_0/fast_clk] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins half_rate_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
+  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
+  connect_bd_net -net jesd204_0_transport_0_signalA_sampl0 [get_bd_pins concat_pad_0/in1] [get_bd_pins jesd204_0_transport_0/signalA_sampl0]
+  connect_bd_net -net jesd204_0_transport_0_signalB_sampl0 [get_bd_pins concat_pad_0/in0] [get_bd_pins jesd204_0_transport_0/signalB_sampl0]
   connect_bd_net -net negate_0_nota [get_bd_pins fifo_generator_0/rst] [get_bd_pins negate_0/nota]
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aclk [get_bd_pins jesd204_0/s_axi_aclk] [get_bd_pins okAXI4LiteInterface_0/m_axi_aclk]
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aresetn [get_bd_pins jesd204_0/s_axi_aresetn] [get_bd_pins okAXI4LiteInterface_0/m_axi_aresetn]

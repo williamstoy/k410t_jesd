@@ -60,8 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config  -string {{Problem parsing board file}}  -suppress 
+set_msg_config  -string {{board file}}  -suppress 
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -77,8 +76,8 @@ set rc [catch {
   set_property parent.project_path /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.xpr [current_project]
   set_property ip_repo_paths {
   /users/wstoy/Documents/vivado/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
-  /users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
   /users/wstoy/Documents/vivado/projects/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.cache/ip [current_project]

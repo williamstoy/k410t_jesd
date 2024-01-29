@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Sun Jan 28 21:41:39 2024
+-- Date        : Sun Jan 28 21:41:37 2024
 -- Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
--- Command     : write_vhdl -force -mode synth_stub
---               /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_fifo_generator_0_1 -prefix
+--               design_1_fifo_generator_0_1_ design_1_fifo_generator_0_1_stub.vhdl
 -- Design      : design_1_fifo_generator_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k410tffg676-1
