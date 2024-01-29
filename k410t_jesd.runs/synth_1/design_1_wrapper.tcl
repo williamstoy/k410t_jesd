@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 24
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -string {{Problem parsing board file}}  -suppress 
 create_project -in_memory -part xc7k410tffg676-1

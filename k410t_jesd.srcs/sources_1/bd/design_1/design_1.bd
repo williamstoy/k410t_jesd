@@ -226,7 +226,7 @@
             "value": "32"
           },
           "Input_Depth": {
-            "value": "16"
+            "value": "1024"
           },
           "Output_Data_Width": {
             "value": "32"
@@ -1133,7 +1133,6 @@
           "JESD_SYNC",
           "util_ds_buf_1/OBUF_IN",
           "util_ds_buf_2/OBUF_IN",
-          "frontpanel_1/btpoa0_ep_ready",
           "ila_0/probe3"
         ]
       },
@@ -1290,7 +1289,8 @@
       "fifo_generator_0_valid": {
         "ports": [
           "fifo_generator_0/valid",
-          "ila_0/probe4"
+          "ila_0/probe4",
+          "frontpanel_1/btpoa0_ep_ready"
         ]
       }
     },

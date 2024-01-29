@@ -227,7 +227,7 @@ proc create_root_design { parentCell } {
   set fifo_generator_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 fifo_generator_0 ]
   set_property -dict [ list \
    CONFIG.Almost_Empty_Flag {false} \
-   CONFIG.Data_Count_Width {4} \
+   CONFIG.Data_Count_Width {10} \
    CONFIG.Empty_Threshold_Assert_Value {4} \
    CONFIG.Empty_Threshold_Assert_Value_rach {1022} \
    CONFIG.Empty_Threshold_Assert_Value_wach {1022} \
@@ -239,21 +239,21 @@ proc create_root_design { parentCell } {
    CONFIG.FIFO_Implementation_wrch {Common_Clock_Distributed_RAM} \
    CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} \
    CONFIG.Full_Flags_Reset_Value {1} \
-   CONFIG.Full_Threshold_Assert_Value {15} \
+   CONFIG.Full_Threshold_Assert_Value {1023} \
    CONFIG.Full_Threshold_Assert_Value_rach {1023} \
    CONFIG.Full_Threshold_Assert_Value_wach {1023} \
    CONFIG.Full_Threshold_Assert_Value_wrch {1023} \
-   CONFIG.Full_Threshold_Negate_Value {14} \
+   CONFIG.Full_Threshold_Negate_Value {1022} \
    CONFIG.INTERFACE_TYPE {Native} \
    CONFIG.Input_Data_Width {32} \
-   CONFIG.Input_Depth {16} \
+   CONFIG.Input_Depth {1024} \
    CONFIG.Output_Data_Width {32} \
-   CONFIG.Output_Depth {16} \
+   CONFIG.Output_Depth {1024} \
    CONFIG.Performance_Options {First_Word_Fall_Through} \
-   CONFIG.Read_Data_Count_Width {4} \
+   CONFIG.Read_Data_Count_Width {10} \
    CONFIG.Reset_Type {Asynchronous_Reset} \
    CONFIG.Valid_Flag {true} \
-   CONFIG.Write_Data_Count_Width {4} \
+   CONFIG.Write_Data_Count_Width {10} \
  ] $fifo_generator_0
 
   # Create instance: frontpanel_1, and set properties
@@ -390,7 +390,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe2]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/empty]
   connect_bd_net -net fifo_generator_0_full [get_bd_pins enable_write_0/full] [get_bd_pins fifo_generator_0/full]
-  connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
+  connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe4]
   connect_bd_net -net frontpanel_0_btpoa0_ep_read [get_bd_pins enable_read_0/read] [get_bd_pins enable_write_0/read] [get_bd_pins frontpanel_1/btpoa0_ep_read] [get_bd_pins ila_0/probe0]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_1_btpoa0_ep_blockstrobe [get_bd_pins enable_write_0/blockstrobe] [get_bd_pins frontpanel_1/btpoa0_ep_blockstrobe] [get_bd_pins ila_0/probe1]
@@ -400,7 +400,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net half_rate_0_data_out [get_bd_pins fifo_generator_0/din] [get_bd_pins half_rate_0/data_out]
   connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins data_processing_unit_0/RESET_N] [get_bd_pins half_rate_0/rst_n] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a]
   connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins data_processing_unit_0/clk] [get_bd_pins enable_write_0/fast_clk] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins half_rate_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
-  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
+  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
   connect_bd_net -net jesd204_0_transport_0_signalB_sampl0 [get_bd_pins concat_pad_0/in0] [get_bd_pins data_processing_unit_0/sample0] [get_bd_pins jesd204_0_transport_0/signalB_sampl0]
   connect_bd_net -net jesd204_0_transport_0_signalB_sampl1 [get_bd_pins data_processing_unit_0/sample1] [get_bd_pins jesd204_0_transport_0/signalB_sampl1]
   connect_bd_net -net jesd204_0_transport_0_signalD_cntrl0 [get_bd_pins concat_pad_0/in1] [get_bd_pins jesd204_0_transport_0/signalD_cntrl0]

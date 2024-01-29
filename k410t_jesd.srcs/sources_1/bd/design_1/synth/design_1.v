@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Sun Jan 28 19:33:05 2024
+//Date        : Sun Jan 28 21:38:56 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -159,7 +159,7 @@ module design_1
         .btpoa0_ep_blockstrobe(frontpanel_1_btpoa0_ep_blockstrobe),
         .btpoa0_ep_datain(fifo_generator_0_dout),
         .btpoa0_ep_read(frontpanel_0_btpoa0_ep_read),
-        .btpoa0_ep_ready(jesd204_0_rx_sync),
+        .btpoa0_ep_ready(fifo_generator_0_valid),
         .okAA(host_interface_okaa),
         .okClk(frontpanel_0_okClk),
         .okHU(host_interface_1_okHU),
