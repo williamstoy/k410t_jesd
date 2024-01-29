@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command=".planAhead." Owner="nalarcon" Host="linrack10" Pid="194981">
-    </Process>
-</ProcessHandle>

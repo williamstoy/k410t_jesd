@@ -1,0 +1,203 @@
+
+*** Running vivado
+    with args -log design_1_jesd204_0_transport_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_jesd204_0_transport_0_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source design_1_jesd204_0_transport_0_0.tcl -notrace
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Avnet/zub1cg/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for avnet.com:zuboard_1cg:szg_std_j6:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k24c/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k24c:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k24i/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k24i:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.3/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.3
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.4/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.4
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.3/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.3
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.4/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.4
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kd240_carrier/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kd240_carrier:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kd240_som/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kd240_som:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_carrier/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_carrier:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_som/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_som:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_som/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_som:som240_1_connector:1.1
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_carrier/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_carrier:som240_1_connector:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_carrier/1.3/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_carrier:som240_1_connector:1.3
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.3/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.3
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.4/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.4
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Avnet/zub1cg/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for avnet.com:zuboard_1cg:szg_std_j6:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k24c/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k24c:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k24i/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k24i:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.3/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.3
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.4/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.4
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.3/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.3
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.4/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.4
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kd240_carrier/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kd240_carrier:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kd240_som/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kd240_som:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_carrier/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_carrier:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_som/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_som:som240_1_connector:1.0
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_som/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_som:som240_1_connector:1.1
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_carrier/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_carrier:som240_1_connector:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_carrier/1.3/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_carrier:som240_1_connector:1.3
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.2
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.3/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.3
+
+WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.4/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.4
+
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 972.594 ; gain = 671.922
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/williamstoy/Documents/wstoy/Documents/vivado/IP/TI204C-IP-Release-v1.10'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/williamstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/williamstoy/Documents/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.3'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/williamstoy/Documents/GitHub/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top design_1_jesd204_0_transport_0_0 -part xc7k410tffg676-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'design_1_jesd204_0_transport_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
+WARNING: [Common 17-348] Failed to get the license for feature 'Synthesis' and/or device 'xc7k410t'. Explanation: Problem encountered while checking for license feature Synthesis license version 2019.11. Try setting the environment variable FLEXLM_DIAGNOSTICS=3 and re-running this software to get more information.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+3 Infos, 61 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-345] A valid license was not found for feature 'Synthesis' and/or device 'xc7k410t'. Please run the Vivado License Manager for assistance in determining
+which features and devices are licensed for your system.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". If you are using a license server, verify that the license server is up and running a version of the xilinx daemon that is compatible with the version of Xilinx software that you are using. Please note that Vivado 2017.3 and later requires upgrading your license server tools to the Flex 11.14.1 tools. Please confirm with your license admin that the correct version of the license server tools are installed.
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 28 19:14:42 2024...

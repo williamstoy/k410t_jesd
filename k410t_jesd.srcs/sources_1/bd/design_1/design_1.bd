@@ -5,14 +5,14 @@
       "device": "xc7k410tffg676-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2"
+      "tool_version": "2019.2",
+      "validated": "true"
     },
     "design_tree": {
       "jesd204_0": "",
       "util_ds_buf_0": "",
       "util_ds_buf_1": "",
       "util_ds_buf_2": "",
-      "ila_0": "",
       "fifo_generator_0": "",
       "frontpanel_1": "",
       "okAXI4LiteInterface_0": "",
@@ -23,7 +23,8 @@
       "half_rate_0": "",
       "enable_read_0": "",
       "enable_write_0": "",
-      "concat_pad_0": ""
+      "concat_pad_0": "",
+      "ila_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -60,22 +61,78 @@
       "SYNCbABP": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_1_0_OBUF_DS_P",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbABM": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_1_0_OBUF_DS_N",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbCDP": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_2_0_OBUF_DS_P",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbCDM": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_2_0_OBUF_DS_N",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       }
     },
     "components": {
@@ -134,66 +191,6 @@
         "parameters": {
           "C_BUF_TYPE": {
             "value": "OBUFDS"
-          }
-        }
-      },
-      "ila_0": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_ila_0_1",
-        "parameters": {
-          "ALL_PROBE_SAME_MU": {
-            "value": "true"
-          },
-          "C_DATA_DEPTH": {
-            "value": "4096"
-          },
-          "C_ENABLE_ILA_AXI_MON": {
-            "value": "false"
-          },
-          "C_MONITOR_TYPE": {
-            "value": "Native"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "14"
-          },
-          "C_PROBE0_WIDTH": {
-            "value": "14"
-          },
-          "C_PROBE10_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE11_WIDTH": {
-            "value": "16"
-          },
-          "C_PROBE12_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE13_WIDTH": {
-            "value": "14"
-          },
-          "C_PROBE1_WIDTH": {
-            "value": "4"
-          },
-          "C_PROBE2_WIDTH": {
-            "value": "4"
-          },
-          "C_PROBE3_WIDTH": {
-            "value": "14"
-          },
-          "C_PROBE5_WIDTH": {
-            "value": "4"
-          },
-          "C_PROBE6_WIDTH": {
-            "value": "4"
-          },
-          "C_PROBE7_WIDTH": {
-            "value": "16"
-          },
-          "C_PROBE8_WIDTH": {
-            "value": "1"
-          },
-          "C_PROBE9_WIDTH": {
-            "value": "1"
           }
         }
       },
@@ -339,6 +336,10 @@
               },
               "PROTOCOL": {
                 "value": "AXI4LITE",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
                 "value_src": "constant"
               },
               "ID_WIDTH": {
@@ -514,15 +515,49 @@
         },
         "ports": {
           "okClkIn": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_frontpanel_1_0_okClk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "m_axi_aclk": {
             "type": "clk",
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "m_axi",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "m_axi_aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
+                "value_src": "constant"
+              }
+            }
           },
           "m_axi_aresetn": {
             "type": "rst",
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "activity_mon": {
             "direction": "O"
@@ -592,11 +627,27 @@
           },
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "RESET_N": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "sample0": {
             "direction": "I",
@@ -677,6 +728,14 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
               }
             },
             "port_maps": {
@@ -696,11 +755,31 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "rx",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "rst_n": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "signalA_sampl0": {
             "direction": "O",
@@ -781,7 +860,13 @@
         },
         "ports": {
           "a": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "nota": {
             "direction": "O"
@@ -809,11 +894,27 @@
           },
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "rst_n": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           }
         }
       },
@@ -860,7 +961,17 @@
           },
           "fast_clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
           }
         }
       },
@@ -887,6 +998,30 @@
             "direction": "O",
             "left": "31",
             "right": "0"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_2",
+        "parameters": {
+          "C_ADV_TRIGGER": {
+            "value": "false"
+          },
+          "C_DATA_DEPTH": {
+            "value": "4096"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "5"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "32"
           }
         }
       }
@@ -934,7 +1069,8 @@
         "ports": [
           "frontpanel_1/okClk",
           "fifo_generator_0/rd_clk",
-          "okAXI4LiteInterface_0/okClkIn"
+          "okAXI4LiteInterface_0/okClkIn",
+          "ila_0/clk"
         ]
       },
       "okAXI4LiteInterface_0_m_axi_aresetn": {
@@ -976,8 +1112,7 @@
       "util_ds_buf_0_IBUF_OUT": {
         "ports": [
           "util_ds_buf_0/IBUF_OUT",
-          "jesd204_0/rx_sysref",
-          "ila_0/probe9"
+          "jesd204_0/rx_sysref"
         ]
       },
       "FPGA_JESD_SYSREFP_1": {
@@ -998,13 +1133,13 @@
           "JESD_SYNC",
           "util_ds_buf_1/OBUF_IN",
           "util_ds_buf_2/OBUF_IN",
-          "frontpanel_1/btpoa0_ep_ready"
+          "frontpanel_1/btpoa0_ep_ready",
+          "ila_0/probe3"
         ]
       },
       "jesd204_0_rx_core_clk_out": {
         "ports": [
           "jesd204_0/rx_core_clk_out",
-          "ila_0/clk",
           "fifo_generator_0/wr_clk",
           "data_processing_unit_0/clk",
           "jesd204_0_transport_0/clk",
@@ -1042,86 +1177,13 @@
           "SYNCbCDM"
         ]
       },
-      "jesd204_0_rx_start_of_frame": {
-        "ports": [
-          "jesd204_0/rx_start_of_frame",
-          "ila_0/probe2"
-        ]
-      },
-      "jesd204_0_rx_end_of_frame": {
-        "ports": [
-          "jesd204_0/rx_end_of_frame",
-          "ila_0/probe1"
-        ]
-      },
-      "jesd204_0_rx_end_of_multiframe": {
-        "ports": [
-          "jesd204_0/rx_end_of_multiframe",
-          "ila_0/probe5"
-        ]
-      },
-      "jesd204_0_rx_start_of_multiframe": {
-        "ports": [
-          "jesd204_0/rx_start_of_multiframe",
-          "ila_0/probe6"
-        ]
-      },
-      "jesd204_0_rx_frame_error": {
-        "ports": [
-          "jesd204_0/rx_frame_error",
-          "ila_0/probe7"
-        ]
-      },
       "jesd204_0_rx_aresetn": {
         "ports": [
           "jesd204_0/rx_aresetn",
-          "ila_0/probe8",
           "data_processing_unit_0/RESET_N",
           "jesd204_0_transport_0/rst_n",
           "negate_0/a",
           "half_rate_0/rst_n"
-        ]
-      },
-      "jesd204_0_transport_0_signalA_sampl1": {
-        "ports": [
-          "jesd204_0_transport_0/signalA_sampl1",
-          "ila_0/probe3"
-        ]
-      },
-      "jesd204_0_transport_0_ready_out": {
-        "ports": [
-          "jesd204_0_transport_0/ready_out",
-          "ila_0/probe0"
-        ]
-      },
-      "data_processing_unit_0_valid": {
-        "ports": [
-          "data_processing_unit_0/valid",
-          "ila_0/probe4"
-        ]
-      },
-      "data_processing_unit_0_dt": {
-        "ports": [
-          "data_processing_unit_0/dt",
-          "ila_0/probe11"
-        ]
-      },
-      "data_processing_unit_0_IPI": {
-        "ports": [
-          "data_processing_unit_0/IPI",
-          "ila_0/probe10"
-        ]
-      },
-      "data_processing_unit_0_AUC": {
-        "ports": [
-          "data_processing_unit_0/AUC",
-          "ila_0/probe12"
-        ]
-      },
-      "data_processing_unit_0_V_peak": {
-        "ports": [
-          "data_processing_unit_0/V_peak",
-          "ila_0/probe13"
         ]
       },
       "jesd204_0_transport_0_signalB_sampl0": {
@@ -1171,7 +1233,8 @@
         "ports": [
           "frontpanel_1/btpoa0_ep_read",
           "enable_read_0/read",
-          "enable_write_0/read"
+          "enable_write_0/read",
+          "ila_0/probe0"
         ]
       },
       "fifo_generator_0_full": {
@@ -1195,7 +1258,8 @@
       "fifo_generator_0_dout": {
         "ports": [
           "fifo_generator_0/dout",
-          "frontpanel_1/btpoa0_ep_datain"
+          "frontpanel_1/btpoa0_ep_datain",
+          "ila_0/probe2"
         ]
       },
       "frontpanel_1_wi01_ep_dataout": {
@@ -1219,7 +1283,14 @@
       "frontpanel_1_btpoa0_ep_blockstrobe": {
         "ports": [
           "frontpanel_1/btpoa0_ep_blockstrobe",
-          "enable_write_0/blockstrobe"
+          "enable_write_0/blockstrobe",
+          "ila_0/probe1"
+        ]
+      },
+      "fifo_generator_0_valid": {
+        "ports": [
+          "fifo_generator_0/valid",
+          "ila_0/probe4"
         ]
       }
     },
