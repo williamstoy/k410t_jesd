@@ -4,200 +4,331 @@
 
 
 ****** Vivado v2019.2 (64-bit)
-  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-Sourcing tcl script 'C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
 source design_1_enable_write_0_0.tcl -notrace
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Avnet/zub1cg/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for avnet.com:zuboard_1cg:szg_std_j6:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
  Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k24c/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k24c:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k24i/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k24i:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.2
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.3/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.3
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.4/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.4
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.2
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.3/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.3
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.4/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.4
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kd240_carrier/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kd240_carrier:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kd240_som/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kd240_som:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_carrier/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_carrier:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_som/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_som:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_som/1.1/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_som:som240_1_connector:1.1
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_carrier/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_carrier:som240_1_connector:1.2
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_carrier/1.3/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_carrier:som240_1_connector:1.3
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.2
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.3/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.3
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.4/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.4
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Avnet/zub1cg/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for avnet.com:zuboard_1cg:szg_std_j6:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
  Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
  Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
  Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
+
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
+
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
  Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k24c/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k24c:som240_1_connector:1.0
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A200/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a200:szg_port_a:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k24i/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k24i:som240_1_connector:1.0
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-ENET1G/1.1/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_enet1g:szg_port_std:1.1
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.2
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EV/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7ev:szg_port_a:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.3/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.3
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7EG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7eg:szg_port_a:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26c/1.4/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26c:som240_1_connector:1.4
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-PCIEX4/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_pciex4:szg_port_txr4:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.2
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM7320-A75/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem7320-a75:szg_port_a:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.3/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.3
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/BRK1900-7CG/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:brk1900-7cg:szg_port_a:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/k26i/1.4/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:k26i:som240_1_connector:1.4
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/SZG-MIPI-8320/1.0/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:szg_mipi_8320:szg_port_std:1.0
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kd240_carrier/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kd240_carrier:som240_1_connector:1.0
+WARNING: [Board 49-69] Validation failed for board file /users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly/XEM8320-AU25P/1.2/board.xml:
+ Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for opalkelly.com:xem8320-au25p:szg_port_a:1.2
 
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kd240_som/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kd240_som:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_carrier/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_carrier:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_som/1.0/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_som:som240_1_connector:1.0
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kr260_som/1.1/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kr260_som:som240_1_connector:1.1
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_carrier/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_carrier:som240_1_connector:1.2
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_carrier/1.3/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_carrier:som240_1_connector:1.3
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.2/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.2
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.3/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.3
-
-WARNING: [Board 49-69] Validation failed for board file C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1/boards/Xilinx/kv260_som/1.4/board.xml:
- Component Sub Type should be ddr/switch/push_button/lcd/led/ethernet/sfp/sma/mux/reset/system_reset/uart/mgt_clock/system_clock/memory_flash_qspi/memory_flash_bpi/memory/dimm/pmod/fmc_hpc/fmc_lpc/fmc_plus/pcie/fixed_io/chip for xilinx.com:kv260_som:som240_1_connector:1.4
-
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 974.762 ; gain = 673.930
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/williamstoy/Documents/wstoy/Documents/vivado/IP/TI204C-IP-Release-v1.10'; Can't find the specified path.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/wstoy/Documents/vivado/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/williamstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/williamstoy/Documents/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.3'; Can't find the specified path.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/wstoy/Documents/vivado/projects/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/williamstoy/Documents/GitHub/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
-If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/cad/xilinx/Vivado/2019.2/data/ip'.
 Command: synth_design -top design_1_enable_write_0_0 -part xc7k410tffg676-1 -mode out_of_context
 Starting synth_design
 WARNING: [IP_Flow 19-3571] IP 'design_1_enable_write_0_0' is restricted:
 * Module reference is stale and needs refreshing.
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k410t'
-WARNING: [Common 17-348] Failed to get the license for feature 'Synthesis' and/or device 'xc7k410t'. Explanation: Problem encountered while checking for license feature Synthesis license version 2019.11. Try setting the environment variable FLEXLM_DIAGNOSTICS=3 and re-running this software to get more information.
-Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
-3 Infos, 61 Warnings, 0 Critical Warnings and 1 Errors encountered.
-synth_design failed
-ERROR: [Common 17-345] A valid license was not found for feature 'Synthesis' and/or device 'xc7k410t'. Please run the Vivado License Manager for assistance in determining
-which features and devices are licensed for your system.
-Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". If you are using a license server, verify that the license server is up and running a version of the xilinx daemon that is compatible with the version of Xilinx software that you are using. Please note that Vivado 2017.3 and later requires upgrading your license server tools to the Flex 11.14.1 tools. Please confirm with your license admin that the correct version of the license server tools are installed.
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 28 19:14:43 2024...
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410t'
+INFO: [Common 17-1540] The version limit for your license is '2020.01' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Device 21-403] Loading part xc7k410tffg676-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 78900 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:26 . Memory (MB): peak = 2087.965 ; gain = 199.668 ; free physical = 103946 ; free virtual = 417863
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_enable_write_0_0' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_enable_write_0_0/synth/design_1_enable_write_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'enable_write' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/new/enable_write.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'enable_write' (1#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/new/enable_write.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_enable_write_0_0' (2#1) [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_enable_write_0_0/synth/design_1_enable_write_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:31 . Memory (MB): peak = 2151.695 ; gain = 263.398 ; free physical = 103814 ; free virtual = 417734
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:33 . Memory (MB): peak = 2154.656 ; gain = 266.359 ; free physical = 104142 ; free virtual = 418068
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:33 . Memory (MB): peak = 2154.656 ; gain = 266.359 ; free physical = 104142 ; free virtual = 418068
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2154.656 ; gain = 0.000 ; free physical = 104135 ; free virtual = 418059
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.434 ; gain = 0.000 ; free physical = 103580 ; free virtual = 417504
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.52 . Memory (MB): peak = 2253.438 ; gain = 0.004 ; free physical = 103628 ; free virtual = 417553
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103715 ; free virtual = 417647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k410tffg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103715 ; free virtual = 417647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:53 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103710 ; free virtual = 417641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:53 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103792 ; free virtual = 417727
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module enable_write 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1540 (col length:140)
+BRAMs: 1590 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:54 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103817 ; free virtual = 417763
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:01:20 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103017 ; free virtual = 416966
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:01:20 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103017 ; free virtual = 416966
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:01:20 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103057 ; free virtual = 417005
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103881 ; free virtual = 417830
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103881 ; free virtual = 417830
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103880 ; free virtual = 417828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103880 ; free virtual = 417828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103879 ; free virtual = 417827
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103875 ; free virtual = 417823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     1|
+|2     |FDRE |     2|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             |     3|
+|2     |  inst   |enable_write |     3|
++------+---------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:01:31 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103874 ; free virtual = 417822
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:01:26 . Memory (MB): peak = 2253.438 ; gain = 266.359 ; free physical = 103950 ; free virtual = 417898
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:01:32 . Memory (MB): peak = 2253.438 ; gain = 365.141 ; free physical = 103955 ; free virtual = 417904
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.438 ; gain = 0.000 ; free physical = 104350 ; free virtual = 418298
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2262.184 ; gain = 0.000 ; free physical = 104491 ; free virtual = 418439
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:02:10 . Memory (MB): peak = 2262.184 ; gain = 694.801 ; free physical = 104700 ; free virtual = 418648
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2262.184 ; gain = 0.000 ; free physical = 104699 ; free virtual = 418648
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_enable_write_0_0_synth_1/design_1_enable_write_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2262.191 ; gain = 0.000 ; free physical = 105108 ; free virtual = 419056
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/design_1_enable_write_0_0_synth_1/design_1_enable_write_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_enable_write_0_0_utilization_synth.rpt -pb design_1_enable_write_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 28 19:36:41 2024...

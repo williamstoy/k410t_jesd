@@ -67,30 +67,29 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 24
   create_project -in_memory -part xc7k410tffg676-1
-  set_property board_part_repo_paths {C:/Users/williamstoy/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store/XilinxBoardStore-2023.1/XilinxBoardStore-2023.1} [current_project]
+  set_property board_part_repo_paths {/users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly} [current_project]
   set_property board_part opalkelly.com:xem7350-k410t:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/williamstoy/Documents/GitHub/k410t_jesd/k410t_jesd.cache/wt [current_project]
-  set_property parent.project_path C:/Users/williamstoy/Documents/GitHub/k410t_jesd/k410t_jesd.xpr [current_project]
+  set_property webtalk.parent_dir /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.cache/wt [current_project]
+  set_property parent.project_path /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.xpr [current_project]
   set_property ip_repo_paths {
-  c:/Users/williamstoy/Documents/wstoy/Documents/vivado/IP/TI204C-IP-Release-v1.10
-  C:/Users/williamstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
-  c:/Users/williamstoy/Documents/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.3
-  c:/Users/williamstoy/Documents/GitHub/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/wstoy/Documents/vivado/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/wstoy/Documents/vivado/projects/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/williamstoy/Documents/GitHub/k410t_jesd/k410t_jesd.cache/ip [current_project]
+  set_property ip_output_repo /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/williamstoy/Documents/GitHub/k410t_jesd/k410t_jesd.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/williamstoy/Documents/GitHub/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1.bd
+  add_files /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/williamstoy/Documents/GitHub/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc
+  read_xdc /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7k410tffg676-1
   set_param project.isImplRun false

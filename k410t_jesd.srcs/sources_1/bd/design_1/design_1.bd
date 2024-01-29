@@ -15,6 +15,7 @@
       "util_ds_buf_2": "",
       "fifo_generator_0": "",
       "frontpanel_1": "",
+      "ila_0": "",
       "okAXI4LiteInterface_0": "",
       "wireoutbreakout_0": "",
       "data_processing_unit_0": "",
@@ -23,8 +24,7 @@
       "half_rate_0": "",
       "enable_read_0": "",
       "enable_write_0": "",
-      "concat_pad_0": "",
-      "ila_0": ""
+      "concat_pad_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -281,6 +281,30 @@
           },
           "WO.COUNT": {
             "value": "1"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_2",
+        "parameters": {
+          "C_ADV_TRIGGER": {
+            "value": "false"
+          },
+          "C_DATA_DEPTH": {
+            "value": "4096"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "5"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "32"
           }
         }
       },
@@ -1000,45 +1024,9 @@
             "right": "0"
           }
         }
-      },
-      "ila_0": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_ila_0_2",
-        "parameters": {
-          "C_ADV_TRIGGER": {
-            "value": "false"
-          },
-          "C_DATA_DEPTH": {
-            "value": "4096"
-          },
-          "C_ENABLE_ILA_AXI_MON": {
-            "value": "false"
-          },
-          "C_MONITOR_TYPE": {
-            "value": "Native"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "5"
-          },
-          "C_PROBE2_WIDTH": {
-            "value": "32"
-          }
-        }
       }
     },
     "interface_nets": {
-      "jesd204_0_m_axis_rx": {
-        "interface_ports": [
-          "jesd204_0_transport_0/rx",
-          "jesd204_0/m_axis_rx"
-        ]
-      },
-      "frontpanel_1_btpipein80": {
-        "interface_ports": [
-          "okAXI4LiteInterface_0/btpipein_DATA",
-          "frontpanel_1/btpipein80"
-        ]
-      },
       "frontpanel_1_wirein00": {
         "interface_ports": [
           "wireoutbreakout_0/wirein_READDATA",
@@ -1049,6 +1037,18 @@
         "interface_ports": [
           "okAXI4LiteInterface_0/wireout_READDATA",
           "frontpanel_1/wireout20"
+        ]
+      },
+      "jesd204_0_m_axis_rx": {
+        "interface_ports": [
+          "jesd204_0_transport_0/rx",
+          "jesd204_0/m_axis_rx"
+        ]
+      },
+      "frontpanel_1_btpipein80": {
+        "interface_ports": [
+          "okAXI4LiteInterface_0/btpipein_DATA",
+          "frontpanel_1/btpipein80"
         ]
       },
       "okAXI4LiteInterface_0_m_axi": {
@@ -1069,8 +1069,8 @@
         "ports": [
           "frontpanel_1/okClk",
           "fifo_generator_0/rd_clk",
-          "okAXI4LiteInterface_0/okClkIn",
-          "ila_0/clk"
+          "ila_0/clk",
+          "okAXI4LiteInterface_0/okClkIn"
         ]
       },
       "okAXI4LiteInterface_0_m_axi_aresetn": {
@@ -1232,9 +1232,9 @@
       "frontpanel_0_btpoa0_ep_read": {
         "ports": [
           "frontpanel_1/btpoa0_ep_read",
+          "ila_0/probe0",
           "enable_read_0/read",
-          "enable_write_0/read",
-          "ila_0/probe0"
+          "enable_write_0/read"
         ]
       },
       "fifo_generator_0_full": {
@@ -1283,8 +1283,8 @@
       "frontpanel_1_btpoa0_ep_blockstrobe": {
         "ports": [
           "frontpanel_1/btpoa0_ep_blockstrobe",
-          "enable_write_0/blockstrobe",
-          "ila_0/probe1"
+          "ila_0/probe1",
+          "enable_write_0/blockstrobe"
         ]
       },
       "fifo_generator_0_valid": {
