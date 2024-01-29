@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Mon Jan 29 16:20:52 2024
+//Date        : Mon Jan 29 16:58:15 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=15,numReposBlks=15,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=8,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_axi4_s2mm_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=8,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_axi4_s2mm_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (FPGA_JESD_CLKM,
     FPGA_JESD_CLKP,
@@ -49,7 +49,6 @@ module design_1
   wire [31:0]concat_pad_0_out;
   wire enable_read_0_read_en;
   wire enable_write_0_wr_en;
-  wire [31:0]fifo_generator_0_dout;
   wire fifo_generator_0_empty;
   wire fifo_generator_0_full;
   wire fifo_generator_0_valid;
@@ -101,6 +100,7 @@ module design_1
   wire [0:0]util_ds_buf_2_OBUF_DS_N;
   wire [0:0]util_ds_buf_2_OBUF_DS_P;
   wire wireoutbreakout_0_rx_reset;
+  wire [31:0]xlconstant_0_dout;
 
   assign FPGA_JESD_CLKM_1 = FPGA_JESD_CLKM;
   assign FPGA_JESD_CLKP_1 = FPGA_JESD_CLKP;
@@ -131,7 +131,6 @@ module design_1
         .wr_en(enable_write_0_wr_en));
   design_1_fifo_generator_0_1 fifo_generator_0
        (.din(half_rate_0_data_out),
-        .dout(fifo_generator_0_dout),
         .empty(fifo_generator_0_empty),
         .full(fifo_generator_0_full),
         .rd_clk(frontpanel_0_okClk),
@@ -145,7 +144,7 @@ module design_1
         .btpi80_ep_ready(frontpanel_1_btpipein80_EP_READY),
         .btpi80_ep_write(frontpanel_1_btpipein80_EP_WRITE),
         .btpoa0_ep_blockstrobe(frontpanel_1_btpoa0_ep_blockstrobe),
-        .btpoa0_ep_datain(fifo_generator_0_dout),
+        .btpoa0_ep_datain(xlconstant_0_dout),
         .btpoa0_ep_read(frontpanel_0_btpoa0_ep_read),
         .btpoa0_ep_ready(jesd204_0_rx_sync),
         .okAA(host_interface_okaa),
@@ -164,7 +163,7 @@ module design_1
        (.clk(frontpanel_0_okClk),
         .probe0(frontpanel_0_btpoa0_ep_read),
         .probe1(frontpanel_1_btpoa0_ep_blockstrobe),
-        .probe2(fifo_generator_0_dout),
+        .probe2({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .probe3(jesd204_0_rx_sync),
         .probe4(fifo_generator_0_valid));
   design_1_jesd204_0_0 jesd204_0
@@ -248,4 +247,6 @@ module design_1
   design_1_wireoutbreakout_0_0 wireoutbreakout_0
        (.EP_DATAOUT_WIREIN(frontpanel_1_wirein00_EP_DATAOUT),
         .rx_reset(wireoutbreakout_0_rx_reset));
+  design_1_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
 endmodule

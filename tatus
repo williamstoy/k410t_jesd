@@ -1,0 +1,308 @@
+[33mcommit 3608b13a0ca5c1e081adfdc25041dc46f0611e88[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Sun Jan 28 21:51:55 2024 -0500
+
+    larger fifo
+
+[33mcommit d587f9d8951a5d9cfa0b42dbe6d93ee537f057ab[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Sun Jan 28 20:19:49 2024 -0500
+
+    ila update
+
+[33mcommit 270ccbefcd291be4a9d58b3928a3558401b2a2cf[m
+Author: William Stoy <ws2574@columbia.edu>
+Date:   Sun Jan 28 19:17:22 2024 -0500
+
+    replace ila to inspect blockpipeout
+
+[33mcommit 18cc4feea11bc9953977bf76bbc9b4959cb67314[m
+Author: William Stoy <ws2574@columbia.edu>
+Date:   Sun Jan 28 19:07:19 2024 -0500
+
+    create and update gitignore
+
+[33mcommit 68272e52838170d48d1495a01a545bf0c5c4b745[m
+Author: NicoA2002 <na2946@columbia.edu>
+Date:   Sun Jan 28 15:44:31 2024 -0500
+
+    gen bitfile for btpipeout synth with new okfp IP
+
+[33mcommit 472ea96d55a32d6c69213fa01c1eecd0390cfd4c[m
+Author: NicoA2002 <na2946@columbia.edu>
+Date:   Sun Jan 28 14:18:22 2024 -0500
+
+    save progress before adding new frontpanel ip
+
+[33mcommit 075210c4f4b29b66a64a2a30aabbd05906e402e0[m
+Author: NicoA2002 <na2946@columbia.edu>
+Date:   Sat Jan 27 19:33:57 2024 -0500
+
+    change half rate, synthesis failing on half rate
+
+[33mcommit f00291fae4b6e255b13ce0179fe040c5dffbe97c[m
+Author: NicoA2002 <na2946@columbia.edu>
+Date:   Sat Jan 27 17:51:21 2024 -0500
+
+    fix concatenation and padding
+
+[33mcommit 7818b3d24275fb9c09a8563c2d17e52f10a10029[m
+Author: NicoA2002 <na2946@columbia.edu>
+Date:   Sat Jan 27 17:38:44 2024 -0500
+
+    fix width on sample concatenation, add to block diagram
+
+[33mcommit d4693a370df11ca8334c88d61207ccb23b61717c[m
+Author: NicoA2002 <na2946@columbia.edu>
+Date:   Sat Jan 27 17:23:29 2024 -0500
+
+    Update block diagram
+
+[33mcommit 0b53f3b8436cb1fa7c303037a520059d5eddbf75[m
+Author: NicoA2002 <na2946@columbia.edu>
+Date:   Sat Jan 27 17:21:41 2024 -0500
+
+    Add USB 3.0 support
+    
+    - BTPipeOut address 0xA0
+    - HDL files for intermediates including FIFO and
+            logic for handling handshake
+
+[33mcommit ca277b368c785f1e1bc6b8f2f8467744024a0c4c[m
+Merge: cc8decf 630d720
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Wed Dec 13 17:35:20 2023 -0500
+
+    Merge branch 'main' of https://github.com/williamstoy/k410t_jesd
+
+[33mcommit cc8decf33149bdbe3c58d1b5f5408106bef86bb7[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Wed Dec 13 17:35:16 2023 -0500
+
+    basic tb dor dpu
+
+[33mcommit 630d7205ec67b928e30faf3d9e1a8d631cb88adc[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Wed Dec 13 16:53:02 2023 -0500
+
+    removed 'signed' from data analysis v
+
+[33mcommit cdaf389b61d2f8a8c3f2d091d6fb2cf691fc6096[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Wed Dec 13 16:35:29 2023 -0500
+
+    forgot to hook up wires to RTL data analysis block in block diagram. Fixed now
+
+[33mcommit ea20543d48bc0ceddf2c99dc71f42150dd7933eb[m
+Merge: 36e7720 7e51e84
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Wed Dec 13 16:13:11 2023 -0500
+
+    Merge branch 'main' of github.com:williamstoy/k410t_jesd into main
+
+[33mcommit 36e772000b0e7259a6c4fc5ae6b12ea216cdddd0[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Wed Dec 13 16:12:48 2023 -0500
+
+    forgot to rescan after generating bitfile
+
+[33mcommit 7e51e846dbd32ec2c25fb308b5ba64b2b2867c66[m
+Merge: a786c7a 14e01a9
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Wed Dec 13 16:09:10 2023 -0500
+
+    Merge branch 'main' of https://github.com/williamstoy/k410t_jesd
+
+[33mcommit a786c7a816ab09d30cc5e8a3dce7189957542397[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Wed Dec 13 16:07:29 2023 -0500
+
+    test bench created
+
+[33mcommit 14e01a99e02634d8e3cf8fbf4ec5720f61e839dc[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Wed Dec 13 16:06:52 2023 -0500
+
+    fix keyword order in input outblock block
+
+[33mcommit 362ca2762349ecf5b81ba060da1228f4228de736[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Tue Dec 12 18:29:44 2023 -0500
+
+    syntax error
+
+[33mcommit 9da81f151ca509cf70a8a1048323ceacef963936[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Tue Dec 12 18:28:12 2023 -0500
+
+    git changed
+
+[33mcommit 31cce2c6b05fbee8fb5ab9c15e93f7da3c440d85[m
+Merge: 6e6e5f4 fce4d65
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Tue Dec 12 18:27:23 2023 -0500
+
+    Merge branch 'main' of https://github.com/williamstoy/k410t_jesd
+
+[33mcommit 6e6e5f44facd2f77d78c2df4bcdd34f25f50b3fb[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Tue Dec 12 18:26:11 2023 -0500
+
+    generalized sample, signed regs, adjust samp_max
+
+[33mcommit fce4d65f85ff9d19a36db14a24746f63677585ca[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Dec 12 17:52:18 2023 -0500
+
+    data processing in block design
+
+[33mcommit f1e2cd84455764fdcaf2356ca74654177c982334[m
+Merge: 09a52d1 0e3aeaf
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Dec 12 17:26:13 2023 -0500
+
+    Merge branch 'main' of github.com:williamstoy/k410t_jesd into main
+    
+    # Conflicts:
+    #       k410t_jesd.srcs/sources_1/imports/Desktop/data_processing_unit.v
+
+[33mcommit 09a52d11850e7eb13b4a3db4cd2d80a044d00556[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Dec 12 17:22:47 2023 -0500
+
+    new bitfile
+
+[33mcommit 0e3aeaff05250e6f60971e749453d0af87861710[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Tue Dec 12 17:19:39 2023 -0500
+
+    measure peak voltage, and area under curve
+
+[33mcommit 3db688a9c400d2feb3cb345ed6ca53e8dde4d677[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Tue Dec 12 16:49:11 2023 -0500
+
+    Fixed async reset and waiting state
+
+[33mcommit 094d9c3363288ee4a99253806628e68b5197699a[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Dec 12 16:35:36 2023 -0500
+
+    add in demapper and data processor
+
+[33mcommit 1c2dd160086a153021f355a91d776111233f6af1[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Tue Dec 12 14:58:56 2023 -0500
+
+    Update data_processing_unit.v
+    
+    Basic edge detection and counter
+
+[33mcommit 8be48d8d0d1c376561013850be08f06c12772b02[m
+Author: NicoA2002 <114366568+NicoA2002@users.noreply.github.com>
+Date:   Tue Dec 5 17:32:12 2023 -0500
+
+    initial commit of data_processing file
+
+[33mcommit 83c9ba442b537b050c57da10085a592f7c5d7101[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Mon Dec 4 15:22:46 2023 -0500
+
+    add back ila reading of raw rx_tdata
+
+[33mcommit 08089a0fe4f8fb71f5570a8d83b0c899f312ba05[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Mon Dec 4 14:51:02 2023 -0500
+
+    update ila remove m_axis_rx doubled breakout
+
+[33mcommit a93a31a54c405ed7074979d0eb14c5dc719e68b3[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Mon Dec 4 14:32:13 2023 -0500
+
+    use transport layer demapper from example
+
+[33mcommit ffceffa59081d900beb7c844a1158a59ffe38ef4[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Mon Dec 4 13:30:23 2023 -0500
+
+    reduce samples on ila
+
+[33mcommit 83643b4c149b5eadc212c216b75e97f77e228743[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Nov 28 22:53:09 2023 -0500
+
+    increase ILA recording length to 32k
+    default JESD settings to 2 octets per sample and K=16
+
+[33mcommit 01b02bafee2d93a34d3cf22371e4750ec38d86d8[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Mon Nov 13 16:34:29 2023 -0500
+
+    start and end of frame ila debug
+
+[33mcommit 2ebed06d5b321b42b9c15da782ffea1e02a4dfdd[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Thu Nov 9 23:03:58 2023 -0500
+
+    testing
+
+[33mcommit 0879ff2b8bbc409244bc4b0413d602f9b0531722[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Wed Nov 8 17:53:07 2023 -0500
+
+    probe rx_tdata
+
+[33mcommit 740b6dedf153c9ccff9a3ff93e8996d5de87bbf5[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Thu Nov 2 18:40:34 2023 -0400
+
+    break out rx_tdata into samples
+
+[33mcommit be22f4121159790e12c88f770b063d9ec24b527c[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Oct 31 19:03:56 2023 -0400
+
+    change line rate to 4.9152 GSPS
+
+[33mcommit 52f20f0ccd79c78f682c6fd6ae6355be15f6d5b6[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Oct 31 16:05:41 2023 -0400
+
+    change clock control sample to only sample for 1/100th of a second
+
+[33mcommit c2e74e0101bd34b6c1d0c31b9521cf46ff5f45d1[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Oct 31 15:35:33 2023 -0400
+
+    read clock enable into ILA
+
+[33mcommit 3ab700ac4ab515ac257aab4faa60b6d84a6850e6[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Oct 31 15:21:36 2023 -0400
+
+    added clock control CE to ILA
+
+[33mcommit 1556172bfc930c98bbac646198eb1ef0240f51b3[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Tue Oct 31 13:14:22 2023 -0400
+
+    probe debug signals on jesd ip
+
+[33mcommit e6b024f5d439ff444b17c82cd913c960550862df[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Mon Oct 30 17:54:02 2023 -0400
+
+    Line Rate set to 6.00 GHz
+
+[33mcommit 21f5ff113dd15ca881b4295ecef2c9ed2cbd4114[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Fri Oct 27 22:00:49 2023 -0400
+
+    ila probe rx_sync
+
+[33mcommit fc10b2d001df83f3807d8563fd738b2f82641da0[m
+Author: William Stoy <wstoy@bioeebeanie.bioeelocal>
+Date:   Thu Oct 26 20:10:45 2023 -0400
+
+    initial commit

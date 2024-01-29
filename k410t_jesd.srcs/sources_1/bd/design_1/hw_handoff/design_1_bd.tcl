@@ -360,6 +360,12 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+  set_property -dict [ list \
+   CONFIG.CONST_WIDTH {32} \
+ ] $xlconstant_0
+
   # Create interface connections
   connect_bd_intf_net -intf_net frontpanel_1_btpipein80 [get_bd_intf_pins frontpanel_1/btpipein80] [get_bd_intf_pins okAXI4LiteInterface_0/btpipein_DATA]
   connect_bd_intf_net -intf_net frontpanel_1_wirein00 [get_bd_intf_pins frontpanel_1/wirein00] [get_bd_intf_pins wireoutbreakout_0/wirein_READDATA]
@@ -376,7 +382,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net concat_pad_0_out [get_bd_pins concat_pad_0/pad_out] [get_bd_pins half_rate_0/data_in]
   connect_bd_net -net enable_read_0_read_en [get_bd_pins enable_read_0/read_en] [get_bd_pins fifo_generator_0/rd_en]
   connect_bd_net -net enable_write_0_wr_en [get_bd_pins enable_write_0/wr_en] [get_bd_pins fifo_generator_0/wr_en]
-  connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe2]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/empty]
   connect_bd_net -net fifo_generator_0_full [get_bd_pins enable_write_0/full] [get_bd_pins fifo_generator_0/full]
   connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
@@ -400,6 +405,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net util_ds_buf_2_OBUF_DS_N [get_bd_ports SYNCbCDM] [get_bd_pins util_ds_buf_2/OBUF_DS_N]
   connect_bd_net -net util_ds_buf_2_OBUF_DS_P [get_bd_ports SYNCbCDP] [get_bd_pins util_ds_buf_2/OBUF_DS_P]
   connect_bd_net -net wireoutbreakout_0_rx_reset [get_bd_pins jesd204_0/rx_reset] [get_bd_pins wireoutbreakout_0/rx_reset]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
   assign_bd_address -offset 0x00000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces okAXI4LiteInterface_0/m_axi] [get_bd_addr_segs jesd204_0/s_axi/Reg] -force
