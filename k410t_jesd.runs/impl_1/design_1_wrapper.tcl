@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -string {{board file}}  -suppress 
 
 start_step init_design
@@ -73,23 +72,23 @@ set rc [catch {
   set_property board_part opalkelly.com:xem7350-k410t:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.cache/wt [current_project]
-  set_property parent.project_path /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.xpr [current_project]
+  set_property webtalk.parent_dir /users/nalarcon/k410t_jesd/k410t_jesd.cache/wt [current_project]
+  set_property parent.project_path /users/nalarcon/k410t_jesd/k410t_jesd.xpr [current_project]
   set_property ip_repo_paths {
-  /users/wstoy/Documents/vivado/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
-  /users/wstoy/Documents/vivado/projects/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/nalarcon/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
   /users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.cache/ip [current_project]
+  set_property ip_output_repo /users/nalarcon/k410t_jesd/k410t_jesd.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet /users/nalarcon/k410t_jesd/k410t_jesd.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1.bd
+  add_files /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc
+  read_xdc /users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7k410tffg676-1
   set_param project.isImplRun false

@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1706565498"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1706565498"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1706565498"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1706565498"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1706733426"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1706733426"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1706733426"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1706733426"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_jesd204_0_0/design_1_jesd204_0_0.xci" Type="IP">
         <Instance HierarchyPath="jesd204_0"/>
@@ -138,8 +138,8 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconstant_0"/>
+      <File Name="ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0.xci" Type="IP">
+        <Instance HierarchyPath="c_counter_binary_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 24
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -string {{board file}}  -suppress 
 create_project -in_memory -part xc7k410tffg676-1
 
@@ -26,48 +24,49 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.cache/wt [current_project]
-set_property parent.project_path /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.xpr [current_project]
+set_property webtalk.parent_dir /users/nalarcon/k410t_jesd/k410t_jesd.cache/wt [current_project]
+set_property parent.project_path /users/nalarcon/k410t_jesd/k410t_jesd.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {/users/wstoy/Documents/vivado/XilinxBoardStore/boards/OpalKelly} [current_project]
 set_property board_part opalkelly.com:xem7350-k410t:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  /users/wstoy/Documents/vivado/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
-  /users/wstoy/Documents/vivado/projects/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
+  /users/nalarcon/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5
   /users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.cache/ip [current_project]
+set_property ip_output_repo /users/nalarcon/k410t_jesd/k410t_jesd.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-add_files /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clock_group.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clocks.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_board.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+read_verilog -library xil_defaultlib /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clock_group.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clocks.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -77,8 +76,8 @@ set_property used_in_implementation false [get_files -all /users/wstoy/Documents
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc
-set_property used_in_implementation false [get_files /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]
+read_xdc /users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc
+set_property used_in_implementation false [get_files /users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

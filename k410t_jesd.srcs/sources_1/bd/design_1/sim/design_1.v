@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Mon Jan 29 16:58:16 2024
+//Date        : Wed Jan 31 15:37:04 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -46,6 +46,7 @@ module design_1
   wire FPGA_JESD_CLKP_1;
   wire FPGA_JESD_SYSREFM_1;
   wire FPGA_JESD_SYSREFP_1;
+  wire [31:0]c_counter_binary_0_Q;
   wire [31:0]concat_pad_0_out;
   wire enable_read_0_read_en;
   wire enable_write_0_wr_en;
@@ -100,7 +101,6 @@ module design_1
   wire [0:0]util_ds_buf_2_OBUF_DS_N;
   wire [0:0]util_ds_buf_2_OBUF_DS_P;
   wire wireoutbreakout_0_rx_reset;
-  wire [31:0]xlconstant_0_dout;
 
   assign FPGA_JESD_CLKM_1 = FPGA_JESD_CLKM;
   assign FPGA_JESD_CLKP_1 = FPGA_JESD_CLKP;
@@ -115,6 +115,10 @@ module design_1
   assign host_interface_okhu[2:0] = host_interface_1_okHU;
   assign rxn_1 = rxn[3:0];
   assign rxp_1 = rxp[3:0];
+  design_1_c_counter_binary_0_0 c_counter_binary_0
+       (.CE(frontpanel_0_btpoa0_ep_read),
+        .CLK(frontpanel_0_okClk),
+        .Q(c_counter_binary_0_Q));
   design_1_concat_pad_0_0 concat_pad_0
        (.in0(jesd204_0_transport_0_signalB_sampl0),
         .in1(jesd204_0_transport_0_signalA_sampl0),
@@ -144,7 +148,7 @@ module design_1
         .btpi80_ep_ready(frontpanel_1_btpipein80_EP_READY),
         .btpi80_ep_write(frontpanel_1_btpipein80_EP_WRITE),
         .btpoa0_ep_blockstrobe(frontpanel_1_btpoa0_ep_blockstrobe),
-        .btpoa0_ep_datain(xlconstant_0_dout),
+        .btpoa0_ep_datain(c_counter_binary_0_Q),
         .btpoa0_ep_read(frontpanel_0_btpoa0_ep_read),
         .btpoa0_ep_ready(jesd204_0_rx_sync),
         .okAA(host_interface_okaa),
@@ -247,6 +251,4 @@ module design_1
   design_1_wireoutbreakout_0_0 wireoutbreakout_0
        (.EP_DATAOUT_WIREIN(frontpanel_1_wirein00_EP_DATAOUT),
         .rx_reset(wireoutbreakout_0_rx_reset));
-  design_1_xlconstant_0_0 xlconstant_0
-       (.dout(xlconstant_0_dout));
 endmodule

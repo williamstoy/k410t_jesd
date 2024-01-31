@@ -10,34 +10,34 @@
 
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/wstoy/Documents/vivado/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/users/wstoy/Documents/vivado/projects/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5'; Can't find the specified path.
-If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/nalarcon/Documents/FrontPanel-Vivado-IP-Dist-v1.0.5'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/users/wstoy/Documents/vivado/IP/FrontPanel-Vivado-IP-Dist-v1.0.5'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/cad/xilinx/Vivado/2019.2/data/ip'.
-add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1798.301 ; gain = 257.125 ; free physical = 731884 ; free virtual = 752187
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1854.328 ; gain = 313.148 ; free physical = 740557 ; free virtual = 757088
 Command: link_design -top design_1_wrapper -part xc7k410tffg676-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7k410tffg676-1
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_concat_pad_0_0/design_1_concat_pad_0_0.dcp' for cell 'design_1_i/concat_pad_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_enable_read_0_0/design_1_enable_read_0_0.dcp' for cell 'design_1_i/enable_read_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_enable_write_0_0/design_1_enable_write_0_0.dcp' for cell 'design_1_i/enable_write_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.dcp' for cell 'design_1_i/fifo_generator_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0.dcp' for cell 'design_1_i/frontpanel_1'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_half_rate_0_0/design_1_half_rate_0_0.dcp' for cell 'design_1_i/half_rate_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2.dcp' for cell 'design_1_i/ila_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0.dcp' for cell 'design_1_i/jesd204_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_transport_0_0/design_1_jesd204_0_transport_0_0.dcp' for cell 'design_1_i/jesd204_0_transport_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_negate_0_0/design_1_negate_0_0.dcp' for cell 'design_1_i/negate_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_okAXI4LiteInterface_0_0/design_1_okAXI4LiteInterface_0_0.dcp' for cell 'design_1_i/okAXI4LiteInterface_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0.dcp' for cell 'design_1_i/util_ds_buf_0'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0.dcp' for cell 'design_1_i/util_ds_buf_1'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0.dcp' for cell 'design_1_i/util_ds_buf_2'
-INFO: [Project 1-454] Reading design checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0.dcp' for cell 'design_1_i/wireoutbreakout_0'
-Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1987.531 ; gain = 0.000 ; free physical = 731539 ; free virtual = 751843
-INFO: [Netlist 29-17] Analyzing 750 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0.dcp' for cell 'design_1_i/c_counter_binary_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_concat_pad_0_0/design_1_concat_pad_0_0.dcp' for cell 'design_1_i/concat_pad_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_enable_read_0_0/design_1_enable_read_0_0.dcp' for cell 'design_1_i/enable_read_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_enable_write_0_0/design_1_enable_write_0_0.dcp' for cell 'design_1_i/enable_write_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.dcp' for cell 'design_1_i/fifo_generator_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0.dcp' for cell 'design_1_i/frontpanel_1'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_half_rate_0_0/design_1_half_rate_0_0.dcp' for cell 'design_1_i/half_rate_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2.dcp' for cell 'design_1_i/ila_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/design_1_jesd204_0_0.dcp' for cell 'design_1_i/jesd204_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_transport_0_0/design_1_jesd204_0_transport_0_0.dcp' for cell 'design_1_i/jesd204_0_transport_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_negate_0_0/design_1_negate_0_0.dcp' for cell 'design_1_i/negate_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_okAXI4LiteInterface_0_0/design_1_okAXI4LiteInterface_0_0.dcp' for cell 'design_1_i/okAXI4LiteInterface_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0.dcp' for cell 'design_1_i/util_ds_buf_0'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0.dcp' for cell 'design_1_i/util_ds_buf_1'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0.dcp' for cell 'design_1_i/util_ds_buf_2'
+INFO: [Project 1-454] Reading design checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_wireoutbreakout_0_0/design_1_wireoutbreakout_0_0.dcp' for cell 'design_1_i/wireoutbreakout_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1988.566 ; gain = 0.000 ; free physical = 740213 ; free virtual = 756745
+INFO: [Netlist 29-17] Analyzing 758 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -46,217 +46,217 @@ WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because
 WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'design_1_i/util_ds_buf_1/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
 WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'design_1_i/util_ds_buf_2/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
 INFO: [Chipscope 16-324] Core: design_1_i/ila_0 UUID: be177176-557e-59fe-ace2-fe04795a2b22 
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:77]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:77]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_*x_i/slv_rdata_reg[*]}'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:77]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter {name=~*_transDbgCtrl_*x_i/slv_rdata_reg[*]}]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:77]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:81]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:81]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:81]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:81]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:85]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:85]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:85]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:85]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:89]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:89]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:89]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:89]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:93]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:93]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:93]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:93]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:97]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:97]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/*cpll_cal_state_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:97]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/*cpll_cal_state_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:97]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:101]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:101]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/cal_fail_store_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:101]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/cal_fail_store_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:101]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:105]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:105]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/*repeat_ctr_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:105]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/*repeat_ctr_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:105]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:109]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:109]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_gt*e4_cpll_cal_*x_i/gen_cal_*x_en.cal_fail_store_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:109]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_gt*e4_cpll_cal_*x_i/gen_cal_*x_en.cal_fail_store_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:109]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:113]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:113]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_drp_arb_i*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:113]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_drp_arb_i*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:113]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:117]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:117]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:117]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:117]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/access_type_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:121]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/access_type_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:121]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:121]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:121]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:125]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:125]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/clk2clk_handshake_pulse_gen_i/clk2_ready_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:125]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*Mailbox_i/clk2clk_handshake_pulse_gen_i/clk2_ready_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:125]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~Mailbox_i/drp_if_select_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:129]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~Mailbox_i/drp_if_select_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:129]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:132]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:132]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:132]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:132]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:136]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:136]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:136]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:136]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:140]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:140]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_block_i/*x_pll_lock_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:140]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_block_i/*x_pll_lock_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:140]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:147]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:147]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*x_pll_lock_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:147]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*x_pll_lock_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:147]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*USER_CPLLLOCK_OUT_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:163]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*USER_CPLLLOCK_OUT_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:163]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:167]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:167]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:167]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:167]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/cpll_pd_*_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:171]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/cpll_pd_*_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:171]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:171]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:171]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*cpll_cal_*x_i/gen_cal_*x_en.mask_user_in_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:175]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*cpll_cal_*x_i/gen_cal_*x_en.mask_user_in_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:175]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*x_sys_reset_axi_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:179]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*x_sys_reset_axi_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:179]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:189]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:189]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*x_pll_lock_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:189]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*x_pll_lock_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:189]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[0]}'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:193]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter {name=~*sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[0]}]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:193]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:199]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:199]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*rst_in_meta_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:199]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter name=~*rst_in_meta_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:199]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:203]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:203]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*OUTCLK_FREQ_COUNTER/tstclk_rst_dly1_reg'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:203]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*OUTCLK_FREQ_COUNTER/tstclk_rst_dly1_reg]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:203]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:223]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:223]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/access_type_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:226]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/access_type_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:226]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpChannelMailbox_i/drp_int_addr_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:232]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpChannelMailbox_i/drp_int_addr_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:232]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpChannelMailbox_i/drp_write_data_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:235]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpChannelMailbox_i/drp_write_data_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:235]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpCommonMailbox_i/drp_int_addr_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:238]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpCommonMailbox_i/drp_int_addr_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:238]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpCommonMailbox_i/drp_write_data_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:241]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpCommonMailbox_i/drp_write_data_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:241]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:247]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:247]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/axi_rdata_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:247]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*axi_register_if_i/axi_rdata_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:247]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:251]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:251]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:251]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:251]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_rx_i/slv_wdata_r_internal_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:255]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*transDbgCtrl_rx_i/slv_wdata_r_internal_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:255]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*hold_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:255]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*hold_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:255]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_tx_i/slv_wdata_r_internal_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:259]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*transDbgCtrl_tx_i/slv_wdata_r_internal_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:259]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_tx_i/txdiffctrl*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:259]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*transDbgCtrl_tx_i/txdiffctrl*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:259]
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc] for cell 'design_1_i/jesd204_0/inst'
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*/jesd204_i/inst/IP2Bus_Data_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:91]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*/jesd204_i/inst/IP2Bus_Data_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:91]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*tx_cfg_lid*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:115]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*tx_cfg_lid*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:115]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*got_sysref_r_reg*'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:121]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*got_sysref_r_reg*]'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:121]
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc] for cell 'design_1_i/jesd204_0/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_i/util_ds_buf_0/U0'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_i/util_ds_buf_0/U0'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_board.xdc] for cell 'design_1_i/util_ds_buf_1/U0'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_board.xdc] for cell 'design_1_i/util_ds_buf_1/U0'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_board.xdc] for cell 'design_1_i/util_ds_buf_2/U0'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_board.xdc] for cell 'design_1_i/util_ds_buf_2/U0'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.xdc] for cell 'design_1_i/fifo_generator_0/U0'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.xdc] for cell 'design_1_i/fifo_generator_0/U0'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc] for cell 'design_1_i/frontpanel_1/inst'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc] for cell 'design_1_i/frontpanel_1/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc] for cell 'design_1_i/frontpanel_1/inst'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc] for cell 'design_1_i/frontpanel_1/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/ila_0/inst'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/ila_0/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/ila_0/inst'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/ila_0/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]
-CRITICAL WARNING: [Coretcl 2-93] Port 'rxp[0]' already specified as part of a differential pair. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:1]
-CRITICAL WARNING: [Coretcl 2-93] Port 'rxp[1]' already specified as part of a differential pair. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:2]
-CRITICAL WARNING: [Coretcl 2-93] Port 'rxp[2]' already specified as part of a differential pair. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:3]
-CRITICAL WARNING: [Coretcl 2-93] Port 'rxp[3]' already specified as part of a differential pair. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:4]
-CRITICAL WARNING: [Coretcl 2-93] Port 'FPGA_JESD_CLKP' already specified as part of a differential pair. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:5]
-CRITICAL WARNING: [Coretcl 2-95] Port 'CLK_LAO_0P' not found. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:6]
-CRITICAL WARNING: [Coretcl 2-93] Port 'FPGA_JESD_SYSREFP' already specified as part of a differential pair. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:7]
-CRITICAL WARNING: [Coretcl 2-95] Port 'SYNCbABP' not found. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:8]
-CRITICAL WARNING: [Coretcl 2-95] Port 'SYNCbCDP' not found. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:9]
-CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:10]
-CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:11]
-CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:12]
-CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:13]
-CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:23]
-WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:26]
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/ip_0/design_1_jesd204_0_0_phy_gt.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:77]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:77]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_*x_i/slv_rdata_reg[*]}'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:77]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter {name=~*_transDbgCtrl_*x_i/slv_rdata_reg[*]}]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:77]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:81]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:81]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:81]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:81]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:85]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:85]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:85]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:85]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:89]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:89]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:89]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:89]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:93]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:93]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:93]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:93]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:97]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:97]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/*cpll_cal_state_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:97]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/*cpll_cal_state_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:97]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:101]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:101]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/cal_fail_store_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:101]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/cal_fail_store_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:101]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:105]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:105]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/*repeat_ctr_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:105]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/*repeat_ctr_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:105]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:109]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:109]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_gt*e4_cpll_cal_*x_i/gen_cal_*x_en.cal_fail_store_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:109]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_gt*e4_cpll_cal_*x_i/gen_cal_*x_en.cal_fail_store_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:109]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:113]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:113]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_drp_arb_i*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:113]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_drp_arb_i*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:113]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:117]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:117]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:117]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:117]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/access_type_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:121]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/access_type_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:121]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:121]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:121]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:125]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:125]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/clk2clk_handshake_pulse_gen_i/clk2_ready_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:125]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*Mailbox_i/clk2clk_handshake_pulse_gen_i/clk2_ready_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:125]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~Mailbox_i/drp_if_select_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:129]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~Mailbox_i/drp_if_select_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:129]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:132]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:132]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:132]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:132]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:136]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:136]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:136]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:136]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:140]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:140]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_block_i/*x_pll_lock_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:140]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_block_i/*x_pll_lock_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:140]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:147]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:147]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*x_pll_lock_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:147]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*x_pll_lock_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:147]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*USER_CPLLLOCK_OUT_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:163]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*USER_CPLLLOCK_OUT_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:163]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:167]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:167]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:167]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:167]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/cpll_pd_*_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:171]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/cpll_pd_*_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:171]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:171]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:171]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*cpll_cal_*x_i/gen_cal_*x_en.mask_user_in_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:175]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*cpll_cal_*x_i/gen_cal_*x_en.mask_user_in_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:175]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*x_sys_reset_axi_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:179]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*x_sys_reset_axi_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:179]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:189]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:189]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*x_pll_lock_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:189]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*x_pll_lock_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:189]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[0]}'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:193]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter {name=~*sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/arststages_ff_reg[0]}]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:193]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:199]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:199]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*rst_in_meta_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:199]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter name=~*rst_in_meta_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:199]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:203]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:203]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*OUTCLK_FREQ_COUNTER/tstclk_rst_dly1_reg'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:203]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*OUTCLK_FREQ_COUNTER/tstclk_rst_dly1_reg]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:203]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:223]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:223]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/access_type_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:226]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/access_type_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:226]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpChannelMailbox_i/drp_int_addr_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:232]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpChannelMailbox_i/drp_int_addr_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:232]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpChannelMailbox_i/drp_write_data_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:235]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpChannelMailbox_i/drp_write_data_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:235]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpCommonMailbox_i/drp_int_addr_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:238]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpCommonMailbox_i/drp_int_addr_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:238]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpCommonMailbox_i/drp_write_data_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:241]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpCommonMailbox_i/drp_write_data_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:241]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:247]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:247]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/axi_rdata_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:247]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*axi_register_if_i/axi_rdata_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:247]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:251]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:251]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:251]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:251]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_rx_i/slv_wdata_r_internal_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:255]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*transDbgCtrl_rx_i/slv_wdata_r_internal_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:255]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*hold_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:255]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*hold_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:255]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_tx_i/slv_wdata_r_internal_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:259]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*transDbgCtrl_tx_i/slv_wdata_r_internal_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:259]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_tx_i/txdiffctrl*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:259]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*transDbgCtrl_tx_i/txdiffctrl*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc:259]
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc] for cell 'design_1_i/jesd204_0/inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*/jesd204_i/inst/IP2Bus_Data_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:91]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*/jesd204_i/inst/IP2Bus_Data_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:91]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*tx_cfg_lid*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:115]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*tx_cfg_lid*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:115]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*got_sysref_r_reg*'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:121]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*got_sysref_r_reg*]'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc:121]
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/synth/design_1_jesd204_0_0.xdc] for cell 'design_1_i/jesd204_0/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_i/util_ds_buf_0/U0'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_i/util_ds_buf_0/U0'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_board.xdc] for cell 'design_1_i/util_ds_buf_1/U0'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_board.xdc] for cell 'design_1_i/util_ds_buf_1/U0'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_board.xdc] for cell 'design_1_i/util_ds_buf_2/U0'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_2_0/design_1_util_ds_buf_2_0_board.xdc] for cell 'design_1_i/util_ds_buf_2/U0'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.xdc] for cell 'design_1_i/fifo_generator_0/U0'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1.xdc] for cell 'design_1_i/fifo_generator_0/U0'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc] for cell 'design_1_i/frontpanel_1/inst'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/design_1_frontpanel_1_0_board.xdc] for cell 'design_1_i/frontpanel_1/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc] for cell 'design_1_i/frontpanel_1/inst'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_frontpanel_1_0/gateware/synthesis/xem7350.xdc] for cell 'design_1_i/frontpanel_1/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/ila_0/inst'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/ila_0/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/ila_0/inst'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/ila_0/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]
+CRITICAL WARNING: [Coretcl 2-93] Port 'rxp[0]' already specified as part of a differential pair. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:1]
+CRITICAL WARNING: [Coretcl 2-93] Port 'rxp[1]' already specified as part of a differential pair. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:2]
+CRITICAL WARNING: [Coretcl 2-93] Port 'rxp[2]' already specified as part of a differential pair. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:3]
+CRITICAL WARNING: [Coretcl 2-93] Port 'rxp[3]' already specified as part of a differential pair. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:4]
+CRITICAL WARNING: [Coretcl 2-93] Port 'FPGA_JESD_CLKP' already specified as part of a differential pair. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:5]
+CRITICAL WARNING: [Coretcl 2-95] Port 'CLK_LAO_0P' not found. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:6]
+CRITICAL WARNING: [Coretcl 2-93] Port 'FPGA_JESD_SYSREFP' already specified as part of a differential pair. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:7]
+CRITICAL WARNING: [Coretcl 2-95] Port 'SYNCbABP' not found. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:8]
+CRITICAL WARNING: [Coretcl 2-95] Port 'SYNCbCDP' not found. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:9]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:10]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:11]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:12]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:13]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:26]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:27]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:34]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[1]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:35]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[2]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:36]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[3]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:37]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:38]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[1]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:39]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[2]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:40]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[3]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:41]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'JESD_SYNC' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:42]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_CLKP' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:46]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_CLKM' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:47]
-WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:48]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[0]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:34]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[1]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:35]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[2]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:36]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxp[3]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:37]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[0]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:38]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[1]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:39]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[2]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:40]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'rxn[3]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:41]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'JESD_SYNC' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:42]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_CLKP' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:46]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_CLKM' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:48]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0P'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:49]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:50]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:51]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'CLK_LAO_0M'. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:51]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_SYSREFP' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:52]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_SYSREFM' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:54]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbABP[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:56]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbABM[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:58]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbCDP[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:60]
-CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbCDM[0]' [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:62]
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clock_group.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clock_group.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clocks.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clocks.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
-Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_clocks.xdc] for cell 'design_1_i/fifo_generator_0/U0'
-Finished Parsing XDC File [/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_clocks.xdc] for cell 'design_1_i/fifo_generator_0/U0'
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_SYSREFP' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:52]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'FPGA_JESD_SYSREFM' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:54]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbABP[0]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:56]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbABM[0]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:58]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbCDP[0]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:60]
+CRITICAL WARNING: [Common 17-69] Command failed: Cannot change direction of connected port 'SYNCbCDM[0]' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc:62]
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/constrs_1/imports/k410t_jesd_pin_planning/io_1.xdc]
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clock_group.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clock_group.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clocks.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_jesd204_0_0/ip_0/synth/design_1_jesd204_0_0_phy_clocks.xdc] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst'
+Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_clocks.xdc] for cell 'design_1_i/fifo_generator_0/U0'
+Finished Parsing XDC File [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_fifo_generator_0_1/design_1_fifo_generator_0_1_clocks.xdc] for cell 'design_1_i/fifo_generator_0/U0'
 Sourcing Tcl File [/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Finished Sourcing Tcl File [/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Sourcing Tcl File [/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst'
@@ -304,7 +304,7 @@ Finished Sourcing Tcl File [/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/
 Sourcing Tcl File [/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'design_1_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
 Finished Sourcing Tcl File [/tools/cad/xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'design_1_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2726.910 ; gain = 0.000 ; free physical = 730984 ; free virtual = 751288
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2728.914 ; gain = 0.000 ; free physical = 739639 ; free virtual = 756190
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 350 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 60 instances
@@ -316,9 +316,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M => RAM64M (RAMD64E(x4)): 192 instances
   RAM64X1S => RAM64X1S (RAMS64E): 1 instance 
 
-26 Infos, 144 Warnings, 37 Critical Warnings and 0 Errors encountered.
+28 Infos, 143 Warnings, 37 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:35 . Memory (MB): peak = 2726.910 ; gain = 928.609 ; free physical = 730984 ; free virtual = 751288
+link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:35 . Memory (MB): peak = 2728.914 ; gain = 874.586 ; free physical = 739639 ; free virtual = 756190
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
@@ -330,13 +330,13 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2802.816 ; gain = 75.891 ; free physical = 730978 ; free virtual = 751283
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2801.852 ; gain = 72.922 ; free physical = 739633 ; free virtual = 756184
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 216f92883
+Ending Cache Timing Information Task | Checksum: 14d5734c6
 
-Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2802.816 ; gain = 0.000 ; free physical = 730963 ; free virtual = 751268
+Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.44 . Memory (MB): peak = 2801.852 ; gain = 0.000 ; free physical = 739620 ; free virtual = 756171
 
 Starting Logic Optimization Task
 
@@ -344,32 +344,32 @@ Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
 INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "4fe41678bcdb731b".
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2902.664 ; gain = 0.000 ; free physical = 730776 ; free virtual = 751095
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 212ebc1a2
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2904.699 ; gain = 0.000 ; free physical = 739365 ; free virtual = 755996
+Phase 1 Generate And Synthesize Debug Cores | Checksum: e651c362
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 2902.664 ; gain = 32.871 ; free physical = 730776 ; free virtual = 751095
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 2904.699 ; gain = 32.871 ; free physical = 739365 ; free virtual = 755996
 
 Phase 2 Retarget
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 15 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: c9c5bc16
+Phase 2 Retarget | Checksum: 206b8b0c7
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 2902.664 ; gain = 32.871 ; free physical = 730787 ; free virtual = 751105
-INFO: [Opt 31-389] Phase Retarget created 35 cells and removed 75 cells
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 2904.699 ; gain = 32.871 ; free physical = 739375 ; free virtual = 756005
+INFO: [Opt 31-389] Phase Retarget created 34 cells and removed 74 cells
 INFO: [Opt 31-1021] In phase Retarget, 78 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 3 Constant propagation | Checksum: d2c40e68
+Phase 3 Constant propagation | Checksum: 19c8513bc
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 2902.664 ; gain = 32.871 ; free physical = 730787 ; free virtual = 751105
-INFO: [Opt 31-389] Phase Constant propagation created 16 cells and removed 104 cells
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:37 . Memory (MB): peak = 2904.699 ; gain = 32.871 ; free physical = 739375 ; free virtual = 756005
+INFO: [Opt 31-389] Phase Constant propagation created 16 cells and removed 42 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 59 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: 1cfe2bf88
+Phase 4 Sweep | Checksum: 252c12c96
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 2902.664 ; gain = 32.871 ; free physical = 730787 ; free virtual = 751106
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:38 . Memory (MB): peak = 2904.699 ; gain = 32.871 ; free physical = 739375 ; free virtual = 756006
 INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 2744 cells
 INFO: [Opt 31-1021] In phase Sweep, 910 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -377,22 +377,22 @@ Phase 5 BUFG optimization
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
 INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
-Phase 5 BUFG optimization | Checksum: 1cfe2bf88
+Phase 5 BUFG optimization | Checksum: 252c12c96
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 2902.664 ; gain = 32.871 ; free physical = 730788 ; free virtual = 751107
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 2904.699 ; gain = 32.871 ; free physical = 739375 ; free virtual = 756006
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 6 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 6 Shift Register Optimization | Checksum: 1cfe2bf88
+Phase 6 Shift Register Optimization | Checksum: 252c12c96
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 2902.664 ; gain = 32.871 ; free physical = 730788 ; free virtual = 751107
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 2904.699 ; gain = 32.871 ; free physical = 739375 ; free virtual = 756006
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 7 Post Processing Netlist
-Phase 7 Post Processing Netlist | Checksum: 1cfe2bf88
+Phase 7 Post Processing Netlist | Checksum: 252c12c96
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 2902.664 ; gain = 32.871 ; free physical = 730788 ; free virtual = 751107
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 2904.699 ; gain = 32.871 ; free physical = 739375 ; free virtual = 756006
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 71 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -402,8 +402,8 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              35  |              75  |                                             78  |
-|  Constant propagation         |              16  |             104  |                                             59  |
+|  Retarget                     |              34  |              74  |                                             78  |
+|  Constant propagation         |              16  |              42  |                                             59  |
 |  Sweep                        |               1  |            2744  |                                            910  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
@@ -414,10 +414,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2902.664 ; gain = 0.000 ; free physical = 730788 ; free virtual = 751106
-Ending Logic Optimization Task | Checksum: 253567464
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2904.699 ; gain = 0.000 ; free physical = 739375 ; free virtual = 756006
+Ending Logic Optimization Task | Checksum: 1849adcd3
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 2902.664 ; gain = 32.871 ; free physical = 730788 ; free virtual = 751106
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 2904.699 ; gain = 32.871 ; free physical = 739375 ; free virtual = 756006
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -437,12 +437,12 @@ INFO: [Pwropt 34-201] Structural ODC has moved 1 WE to EN ports
 Number of BRAM Ports augmented: 6 newly gated: 1 Total Ports: 16
 Number of Flops added for Enable Generation: 3
 
-Ending PowerOpt Patch Enables Task | Checksum: 250aba781
+Ending PowerOpt Patch Enables Task | Checksum: 14f2b91f9
 
-Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3350.844 ; gain = 0.000 ; free physical = 730759 ; free virtual = 751078
-Ending Power Optimization Task | Checksum: 250aba781
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3351.871 ; gain = 0.000 ; free physical = 739343 ; free virtual = 755977
+Ending Power Optimization Task | Checksum: 14f2b91f9
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3350.844 ; gain = 448.180 ; free physical = 730767 ; free virtual = 751086
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3351.871 ; gain = 447.172 ; free physical = 739352 ; free virtual = 755986
 
 Starting Final Cleanup Task
 
@@ -451,38 +451,38 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
 INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
-Ending Logic Optimization Task | Checksum: 24327e415
+Ending Logic Optimization Task | Checksum: 204ae7a2f
 
-Time (s): cpu = 00:00:00.84 ; elapsed = 00:00:00.87 . Memory (MB): peak = 3350.844 ; gain = 0.000 ; free physical = 730771 ; free virtual = 751089
-Ending Final Cleanup Task | Checksum: 24327e415
+Time (s): cpu = 00:00:00.83 ; elapsed = 00:00:00.86 . Memory (MB): peak = 3351.871 ; gain = 0.000 ; free physical = 739354 ; free virtual = 755988
+Ending Final Cleanup Task | Checksum: 204ae7a2f
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3350.844 ; gain = 0.000 ; free physical = 730771 ; free virtual = 751089
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3351.871 ; gain = 0.000 ; free physical = 739354 ; free virtual = 755988
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3350.844 ; gain = 0.000 ; free physical = 730771 ; free virtual = 751089
-Ending Netlist Obfuscation Task | Checksum: 24327e415
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3351.871 ; gain = 0.000 ; free physical = 739354 ; free virtual = 755988
+Ending Netlist Obfuscation Task | Checksum: 204ae7a2f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3350.844 ; gain = 0.000 ; free physical = 730771 ; free virtual = 751089
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3351.871 ; gain = 0.000 ; free physical = 739354 ; free virtual = 755988
 INFO: [Common 17-83] Releasing license: Implementation
-68 Infos, 144 Warnings, 37 Critical Warnings and 0 Errors encountered.
+70 Infos, 143 Warnings, 37 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 3350.844 ; gain = 623.926 ; free physical = 730771 ; free virtual = 751089
+opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 3351.871 ; gain = 622.949 ; free physical = 739354 ; free virtual = 755988
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3350.844 ; gain = 0.000 ; free physical = 730762 ; free virtual = 751081
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3351.871 ; gain = 0.000 ; free physical = 739347 ; free virtual = 755980
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3350.844 ; gain = 0.000 ; free physical = 730756 ; free virtual = 751078
-INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.22 . Memory (MB): peak = 3351.871 ; gain = 0.000 ; free physical = 739338 ; free virtual = 755976
+INFO: [Common 17-1381] The checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Coretcl 2-168] The results of DRC are in file /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file /users/nalarcon/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3366.992 ; gain = 16.148 ; free physical = 730750 ; free virtual = 751073
+report_drc: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3368.023 ; gain = 16.152 ; free physical = 739336 ; free virtual = 755974
 INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
@@ -544,42 +544,42 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730748 ; free virtual = 751070
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 196ac70a3
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739335 ; free virtual = 755973
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 147e6e4d4
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730748 ; free virtual = 751070
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730748 ; free virtual = 751070
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739335 ; free virtual = 755973
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739335 ; free virtual = 755973
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13f5faf18
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 12faae781
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730738 ; free virtual = 751061
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739323 ; free virtual = 755962
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 187fd9cad
+Phase 1.3 Build Placer Netlist Model | Checksum: 1d426ac08
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730719 ; free virtual = 751042
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739305 ; free virtual = 755944
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 187fd9cad
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1d426ac08
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730719 ; free virtual = 751042
-Phase 1 Placer Initialization | Checksum: 187fd9cad
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739305 ; free virtual = 755944
+Phase 1 Placer Initialization | Checksum: 1d426ac08
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730716 ; free virtual = 751039
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739302 ; free virtual = 755941
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1586b58f7
+Phase 2.1 Floorplanning | Checksum: 22da4f607
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730706 ; free virtual = 751029
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739291 ; free virtual = 755930
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1018] Found 337 candidate LUT instances to create LUTNM shape
-INFO: [Physopt 32-775] End 1 Pass. Optimized 145 nets or cells. Created 0 new cell, deleted 145 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1018] Found 369 candidate LUT instances to create LUTNM shape
+INFO: [Physopt 32-775] End 1 Pass. Optimized 160 nets or cells. Created 0 new cell, deleted 160 existing cells and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -589,7 +589,7 @@ INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization wa
 INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730654 ; free virtual = 750977
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739239 ; free virtual = 755879
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -598,66 +598,66 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            145  |                   145  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            160  |                   160  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            145  |                   145  |           0  |           3  |  00:00:00  |
+|  Total                                            |            0  |            160  |                   160  |           0  |           3  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 2311b9761
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1995a6d93
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730655 ; free virtual = 750977
-Phase 2.2 Global Placement Core | Checksum: 22029d1cd
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739240 ; free virtual = 755880
+Phase 2.2 Global Placement Core | Checksum: 11f755044
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730646 ; free virtual = 750969
-Phase 2 Global Placement | Checksum: 22029d1cd
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739232 ; free virtual = 755872
+Phase 2 Global Placement | Checksum: 11f755044
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730655 ; free virtual = 750977
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739240 ; free virtual = 755880
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 24f80e6b3
+Phase 3.1 Commit Multi Column Macros | Checksum: 168dedc74
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730656 ; free virtual = 750978
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739241 ; free virtual = 755881
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1aa4f881d
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a1d3b7c7
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730650 ; free virtual = 750973
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739235 ; free virtual = 755875
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 21c7bd738
+Phase 3.3 Area Swap Optimization | Checksum: 1360b2280
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730651 ; free virtual = 750973
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739236 ; free virtual = 755875
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1fd13207c
+Phase 3.4 Pipeline Register Optimization | Checksum: 1190c3b2d
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730651 ; free virtual = 750973
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739236 ; free virtual = 755875
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 2210c8f4c
+Phase 3.5 Small Shape Detail Placement | Checksum: 105f1a404
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730642 ; free virtual = 750965
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739227 ; free virtual = 755867
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 1dc89fed5
+Phase 3.6 Re-assign LUT pins | Checksum: 77664f94
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730643 ; free virtual = 750965
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739227 ; free virtual = 755867
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 1044b81f3
+Phase 3.7 Pipeline Register Optimization | Checksum: 1089e6a7f
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730643 ; free virtual = 750965
-Phase 3 Detail Placement | Checksum: 1044b81f3
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739227 ; free virtual = 755867
+Phase 3 Detail Placement | Checksum: 1089e6a7f
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730643 ; free virtual = 750965
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739227 ; free virtual = 755867
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -665,59 +665,59 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1e34ed316
+Post Placement Optimization Initialization | Checksum: 1aa7d1535
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1e34ed316
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1aa7d1535
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730636 ; free virtual = 750959
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739221 ; free virtual = 755861
 INFO: [Place 30-746] Post Placement Timing Summary WNS=0.266. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 115a7bf37
+Phase 4.1.1 Post Placement Optimization | Checksum: dc582954
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730636 ; free virtual = 750958
-Phase 4.1 Post Commit Optimization | Checksum: 115a7bf37
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739221 ; free virtual = 755861
+Phase 4.1 Post Commit Optimization | Checksum: dc582954
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730636 ; free virtual = 750958
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739221 ; free virtual = 755861
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 115a7bf37
+Phase 4.2 Post Placement Cleanup | Checksum: dc582954
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730645 ; free virtual = 750968
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739230 ; free virtual = 755870
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 115a7bf37
+Phase 4.3 Placer Reporting | Checksum: dc582954
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730645 ; free virtual = 750968
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739230 ; free virtual = 755870
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730645 ; free virtual = 750968
-Phase 4.4 Final Placement Cleanup | Checksum: 9d468f3a
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739230 ; free virtual = 755870
+Phase 4.4 Final Placement Cleanup | Checksum: dade8246
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730645 ; free virtual = 750968
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 9d468f3a
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739230 ; free virtual = 755870
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: dade8246
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730645 ; free virtual = 750968
-Ending Placer Task | Checksum: 902c4d91
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739230 ; free virtual = 755870
+Ending Placer Task | Checksum: adff4d5a
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730645 ; free virtual = 750968
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739230 ; free virtual = 755870
 INFO: [Common 17-83] Releasing license: Implementation
-100 Infos, 186 Warnings, 37 Critical Warnings and 0 Errors encountered.
+102 Infos, 185 Warnings, 37 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730712 ; free virtual = 751034
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730712 ; free virtual = 751034
+place_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739295 ; free virtual = 755935
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739295 ; free virtual = 755935
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.78 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730688 ; free virtual = 751025
-INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739268 ; free virtual = 755925
+INFO: [Common 17-1381] The checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.21 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730690 ; free virtual = 751017
+report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.19 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739275 ; free virtual = 755920
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730703 ; free virtual = 751031
+report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739288 ; free virtual = 755933
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
@@ -725,16 +725,16 @@ INFO: [Common 17-1540] The version limit for your license is '2020.01' and has e
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-110 Infos, 186 Warnings, 37 Critical Warnings and 0 Errors encountered.
+112 Infos, 185 Warnings, 37 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730674 ; free virtual = 751002
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739258 ; free virtual = 755903
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3366.992 ; gain = 0.000 ; free physical = 730645 ; free virtual = 750989
-INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00.79 ; elapsed = 00:00:00.93 . Memory (MB): peak = 3368.023 ; gain = 0.000 ; free physical = 739234 ; free virtual = 755895
+INFO: [Common 17-1381] The checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k410t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k410t'
@@ -747,131 +747,132 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: 2b877dbe ConstDB: 0 ShapeSum: 64a4cfd3 RouteDB: 0
+Checksum: PlaceDB: 1d75297f ConstDB: 0 ShapeSum: 908a23db RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 74b9d0ac
+Phase 1 Build RT Design | Checksum: 1293a5254
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 3409.020 ; gain = 42.027 ; free physical = 730363 ; free virtual = 750695
-Post Restoration Checksum: NetGraph: 1b973754 NumContArr: 59229958 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 3410.047 ; gain = 42.023 ; free physical = 738944 ; free virtual = 755594
+Post Restoration Checksum: NetGraph: e253bb1d NumContArr: 46e69737 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 74b9d0ac
+Phase 2.1 Create Timer | Checksum: 1293a5254
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 3409.020 ; gain = 42.027 ; free physical = 730364 ; free virtual = 750696
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 3410.047 ; gain = 42.023 ; free physical = 738946 ; free virtual = 755596
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 74b9d0ac
+Phase 2.2 Fix Topology Constraints | Checksum: 1293a5254
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 3442.020 ; gain = 75.027 ; free physical = 730315 ; free virtual = 750647
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 3444.047 ; gain = 76.023 ; free physical = 738897 ; free virtual = 755547
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 74b9d0ac
+Phase 2.3 Pre Route Cleanup | Checksum: 1293a5254
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 3442.020 ; gain = 75.027 ; free physical = 730314 ; free virtual = 750647
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 3444.047 ; gain = 76.023 ; free physical = 738897 ; free virtual = 755547
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 141041a76
+Phase 2.4 Update Timing | Checksum: 9031141d
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730301 ; free virtual = 750633
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.648  | TNS=0.000  | WHS=-0.297 | THS=-212.905|
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738886 ; free virtual = 755536
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.648  | TNS=0.000  | WHS=-0.389 | THS=-211.142|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 1902b65fb
+Phase 2.5.1 Update Timing | Checksum: 7487d3b3
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730293 ; free virtual = 750625
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738880 ; free virtual = 755530
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.648  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 12bc85ed4
+Phase 2.5 Update Timing for Bus Skew | Checksum: 5c652184
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730293 ; free virtual = 750625
-Phase 2 Router Initialization | Checksum: 1e95496ed
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738880 ; free virtual = 755530
+Phase 2 Router Initialization | Checksum: a3a7231b
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730293 ; free virtual = 750625
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738880 ; free virtual = 755530
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.08412e-05 %
-  Global Horizontal Routing Utilization  = 1.76966e-05 %
+  Global Vertical Routing Utilization    = 4.33647e-05 %
+  Global Horizontal Routing Utilization  = 3.53932e-05 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 10246
+  Number of Failed Nets               = 10354
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 10245
+  Number of Unrouted Nets             = 10353
   Number of Partially Routed Nets     = 1
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1a443a569
+Phase 3 Initial Routing | Checksum: 163724767
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730281 ; free virtual = 750613
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738864 ; free virtual = 755514
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 858
- Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 892
+ Number of Nodes with overlaps = 23
  Number of Nodes with overlaps = 0
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.648  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 807d0b82
+Phase 4.1 Global Iteration 0 | Checksum: 1bbc215a4
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730283 ; free virtual = 750615
-Phase 4 Rip-up And Reroute | Checksum: 807d0b82
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730283 ; free virtual = 750615
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.648  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 157747750
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
+Phase 4 Rip-up And Reroute | Checksum: 157747750
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 157747750
 
-Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 13dfbe441
-
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730283 ; free virtual = 750615
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.648  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 5.1 Delay CleanUp | Checksum: d5c0c0dd
-
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730283 ; free virtual = 750615
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: d5c0c0dd
+Phase 5.2 Clock Skew Optimization | Checksum: 157747750
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730283 ; free virtual = 750615
-Phase 5 Delay and Skew Optimization | Checksum: d5c0c0dd
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
+Phase 5 Delay and Skew Optimization | Checksum: 157747750
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730283 ; free virtual = 750615
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: fa14ef03
+Phase 6.1.1 Update Timing | Checksum: e1bbe35a
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730284 ; free virtual = 750616
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.648  | TNS=0.000  | WHS=0.052  | THS=0.000  |
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.648  | TNS=0.000  | WHS=0.062  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 530cab48
+Phase 6.1 Hold Fix Iter | Checksum: 152f2a46a
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730284 ; free virtual = 750616
-Phase 6 Post Hold Fix | Checksum: 530cab48
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
+Phase 6 Post Hold Fix | Checksum: 152f2a46a
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730284 ; free virtual = 750616
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738868 ; free virtual = 755518
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.622988 %
-  Global Horizontal Routing Utilization  = 0.805479 %
+  Global Vertical Routing Utilization    = 0.640529 %
+  Global Horizontal Routing Utilization  = 0.786473 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -881,60 +882,60 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: ea519af0
+Phase 7 Route finalize | Checksum: 152f2a46a
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730283 ; free virtual = 750615
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738866 ; free virtual = 755516
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: ea519af0
+Phase 8 Verifying routed nets | Checksum: 152f2a46a
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730279 ; free virtual = 750612
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738865 ; free virtual = 755515
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: c8958933
+Phase 9 Depositing Routes | Checksum: 1589e9e0f
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730279 ; free virtual = 750611
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738865 ; free virtual = 755515
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.648  | TNS=0.000  | WHS=0.052  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.648  | TNS=0.000  | WHS=0.062  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: c8958933
+Phase 10 Post Router Timing | Checksum: 1589e9e0f
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730281 ; free virtual = 750613
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738870 ; free virtual = 755520
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730347 ; free virtual = 750680
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738935 ; free virtual = 755586
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-127 Infos, 186 Warnings, 37 Critical Warnings and 0 Errors encountered.
+129 Infos, 185 Warnings, 37 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 3486.676 ; gain = 119.684 ; free physical = 730348 ; free virtual = 750680
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3486.676 ; gain = 0.000 ; free physical = 730348 ; free virtual = 750680
+route_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 3489.703 ; gain = 121.680 ; free physical = 738935 ; free virtual = 755586
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3489.703 ; gain = 0.000 ; free physical = 738935 ; free virtual = 755586
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3486.676 ; gain = 0.000 ; free physical = 730316 ; free virtual = 750669
-INFO: [Common 17-1381] The checkpoint '/users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3489.703 ; gain = 0.000 ; free physical = 738902 ; free virtual = 755572
+INFO: [Common 17-1381] The checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Coretcl 2-168] The results of DRC are in file /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file /users/nalarcon/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_drc_routed.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3589.598 ; gain = 102.910 ; free physical = 730340 ; free virtual = 750677
+report_drc: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 3588.656 ; gain = 98.941 ; free physical = 738925 ; free virtual = 755580
 INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 8 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file /users/wstoy/Documents/vivado/projects/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /users/nalarcon/k410t_jesd/k410t_jesd.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3589.598 ; gain = 0.000 ; free physical = 730335 ; free virtual = 750674
+report_methodology: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3588.656 ; gain = 0.000 ; free physical = 738917 ; free virtual = 755573
 INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 INFO: [Power 33-23] Power model is not available for a0/d0/dna0
@@ -942,7 +943,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-140 Infos, 186 Warnings, 37 Critical Warnings and 0 Errors encountered.
+142 Infos, 185 Warnings, 37 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -1025,7 +1026,7 @@ WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/fro
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/p_19_out) which is driven by a register (design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/p_19_out) which is driven by a register (design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/p_19_out) which is driven by a register (design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC RTSTAT-10] No routable loads: 35 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, design_1_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i... and (the first 15 of 29 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 35 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/cb0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, design_1_i/fifo_generator_0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i... and (the first 15 of 29 listed).
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 58 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
@@ -1035,12 +1036,12 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 103694240 bits.
+Bitstream compression saved 102953600 bits.
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
 INFO: [Common 17-83] Releasing license: Implementation
-160 Infos, 245 Warnings, 38 Critical Warnings and 0 Errors encountered.
+162 Infos, 244 Warnings, 38 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:33 ; elapsed = 00:00:48 . Memory (MB): peak = 3914.617 ; gain = 138.102 ; free physical = 730270 ; free virtual = 750621
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 29 17:05:07 2024...
+write_bitstream: Time (s): cpu = 00:00:32 ; elapsed = 00:00:48 . Memory (MB): peak = 3915.613 ; gain = 177.121 ; free physical = 738845 ; free virtual = 755520
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 31 15:45:40 2024...
