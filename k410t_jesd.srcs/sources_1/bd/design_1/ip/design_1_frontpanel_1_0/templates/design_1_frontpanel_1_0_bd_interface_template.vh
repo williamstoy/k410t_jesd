@@ -21,6 +21,14 @@
     output wire [31:0] wo20_ep_datain_DESCRIPTION,
 
 //----------------------------------------------------------------------------------------------------------------------------------
+// TriggerIns
+//----------------------------------------------------------------------------------------------------------------------------------
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40_DESCRIPTION EP_TRIGGER" *)
+    input  wire [31:0] ti40_ep_trigger_DESCRIPTION,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40_DESCRIPTION EP_CLK" *)
+    output wire        ti40_ep_clk_DESCRIPTION,
+
+//----------------------------------------------------------------------------------------------------------------------------------
 // Block Throttle PipeIns
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipein:1.0 btpipein80_DESCRIPTION EP_DATAOUT" *)
@@ -33,14 +41,10 @@
     output wire        btpi80_ep_ready_DESCRIPTION,
 
 //----------------------------------------------------------------------------------------------------------------------------------
-// Block Throttle PipeOuts
+// PipeOuts
 //----------------------------------------------------------------------------------------------------------------------------------
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0_DESCRIPTION EP_DATAIN" *)
-    output wire [31:0] btpoa0_ep_datain_DESCRIPTION,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0_DESCRIPTION EP_READ" *)
-    input  wire        btpoa0_ep_read_DESCRIPTION,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0_DESCRIPTION EP_BLOCKSTROBE" *)
-    input  wire        btpoa0_ep_blockstrobe_DESCRIPTION,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0_DESCRIPTION EP_READY" *)
-    output wire        btpoa0_ep_ready_DESCRIPTION,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:pipeout:1.0 pipeouta0_DESCRIPTION EP_DATAIN" *)
+    output wire [31:0] poa0_ep_datain_DESCRIPTION,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:pipeout:1.0 pipeouta0_DESCRIPTION EP_READ" *)
+    input  wire        poa0_ep_read_DESCRIPTION,
 

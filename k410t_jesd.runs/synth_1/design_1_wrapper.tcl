@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 24
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -string {{board file}}  -suppress 
 create_project -in_memory -part xc7k410tffg676-1
 
@@ -65,7 +67,6 @@ set_property used_in_synthesis false [get_files -all /users/nalarcon/k410t_jesd/
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

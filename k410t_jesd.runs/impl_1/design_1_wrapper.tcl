@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -string {{board file}}  -suppress 
 
 start_step init_design

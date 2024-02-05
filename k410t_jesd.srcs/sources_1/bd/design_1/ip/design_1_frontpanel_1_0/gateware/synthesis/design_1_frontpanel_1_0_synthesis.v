@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 // File: design_1_frontpanel_1_0_synthesis.v
-// Creation Date: Mon 01/29/2024 at 16:21:01 EST
+// Creation Date: Mon 02/05/2024 at 17:05:34 EST
 // IP Version: opalkelly.com:ip:frontpanel:1.0 (Rev: 5)
 // Tool Version: Vivado v2019.2 (64-bit)
 // Opal Kelly Board: XEM7350-K410T (Part: xc7k410tffg676-1)
@@ -24,6 +24,14 @@ module design_1_frontpanel_1_0(
     input  wire [31:0] wo20_ep_datain,
 
 //----------------------------------------------------------------------------------------------------------------------------------
+// TriggerIns
+//----------------------------------------------------------------------------------------------------------------------------------
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40 EP_TRIGGER" *)
+    output wire [31:0] ti40_ep_trigger,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40 EP_CLK" *)
+    input  wire        ti40_ep_clk,
+
+//----------------------------------------------------------------------------------------------------------------------------------
 // Block Throttle PipeIns
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipein:1.0 btpipein80 EP_DATAOUT" *)
@@ -36,16 +44,12 @@ module design_1_frontpanel_1_0(
     input  wire        btpi80_ep_ready,
 
 //----------------------------------------------------------------------------------------------------------------------------------
-// Block Throttle PipeOuts
+// PipeOuts
 //----------------------------------------------------------------------------------------------------------------------------------
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0 EP_DATAIN" *)
-    input  wire [31:0] btpoa0_ep_datain,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0 EP_READ" *)
-    output wire        btpoa0_ep_read,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0 EP_BLOCKSTROBE" *)
-    output wire        btpoa0_ep_blockstrobe,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0 EP_READY" *)
-    input  wire        btpoa0_ep_ready,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:pipeout:1.0 pipeouta0 EP_DATAIN" *)
+    input  wire [31:0] poa0_ep_datain,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:pipeout:1.0 pipeouta0 EP_READ" *)
+    output wire        poa0_ep_read,
 
 //----------------------------------------------------------------------------------------------------------------------------------
 // Host Interface
@@ -64,14 +68,14 @@ module design_1_frontpanel_1_0(
 design_1_frontpanel_1_0_wrapper_synthesis inst (
     .wi00_ep_dataout(wi00_ep_dataout),
     .wo20_ep_datain(wo20_ep_datain),
+    .ti40_ep_trigger(ti40_ep_trigger),
+    .ti40_ep_clk(ti40_ep_clk),
     .btpi80_ep_dataout(btpi80_ep_dataout),
     .btpi80_ep_write(btpi80_ep_write),
     .btpi80_ep_blockstrobe(btpi80_ep_blockstrobe),
     .btpi80_ep_ready(btpi80_ep_ready),
-    .btpoa0_ep_datain(btpoa0_ep_datain),
-    .btpoa0_ep_read(btpoa0_ep_read),
-    .btpoa0_ep_blockstrobe(btpoa0_ep_blockstrobe),
-    .btpoa0_ep_ready(btpoa0_ep_ready),
+    .poa0_ep_datain(poa0_ep_datain),
+    .poa0_ep_read(poa0_ep_read),
     .okUH(okUH),
     .okHU(okHU),
     .okUHU(okUHU),

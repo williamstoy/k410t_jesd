@@ -21,10 +21,10 @@
       "negate_0": "",
       "half_rate_0": "",
       "enable_read_0": "",
-      "enable_write_0": "",
       "concat_pad_0": "",
       "frontpanel_1": "",
-      "c_counter_binary_0": ""
+      "xlconstant_0": "",
+      "trigger_to_level_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -256,7 +256,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "5"
+            "value": "7"
           },
           "C_PROBE2_WIDTH": {
             "value": "32"
@@ -834,43 +834,6 @@
           }
         }
       },
-      "enable_write_0": {
-        "vlnv": "xilinx.com:module_ref:enable_write:1.0",
-        "xci_name": "design_1_enable_write_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "enable_write",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "blockstrobe": {
-            "direction": "I"
-          },
-          "read": {
-            "direction": "I"
-          },
-          "full": {
-            "direction": "I"
-          },
-          "wr_en": {
-            "direction": "O"
-          },
-          "fast_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
-          }
-        }
-      },
       "concat_pad_0": {
         "vlnv": "xilinx.com:module_ref:concat_pad:1.0",
         "xci_name": "design_1_concat_pad_0_0",
@@ -908,16 +871,28 @@
             "value": "1"
           },
           "BTPO.ADDR_0": {
-            "value": "0xA0"
+            "value": "0xff"
           },
           "BTPO.COUNT": {
-            "value": "1"
+            "value": "0"
           },
           "EXDES.FLOW": {
             "value": "Block Designer"
           },
           "EXDES.SELECTION": {
             "value": "PipeTest"
+          },
+          "PO.ADDR_0": {
+            "value": "0xa0"
+          },
+          "PO.COUNT": {
+            "value": "1"
+          },
+          "TI.ADDR_0": {
+            "value": "0x40"
+          },
+          "TI.COUNT": {
+            "value": "1"
           },
           "WI.ADDR_0": {
             "value": "0x00"
@@ -942,36 +917,59 @@
           }
         }
       },
-      "c_counter_binary_0": {
-        "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
-        "xci_name": "design_1_c_counter_binary_0_0",
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
         "parameters": {
-          "CE": {
-            "value": "true"
+          "CONST_VAL": {
+            "value": "1337"
           },
-          "Output_Width": {
+          "CONST_WIDTH": {
             "value": "32"
+          }
+        }
+      },
+      "trigger_to_level_0": {
+        "vlnv": "xilinx.com:module_ref:trigger_to_level:1.0",
+        "xci_name": "design_1_trigger_to_level_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "trigger_to_level",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "READY": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "READY_LVL": {
+            "direction": "O"
+          },
+          "RSTN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           }
         }
       }
     },
     "interface_nets": {
-      "jesd204_0_m_axis_rx": {
-        "interface_ports": [
-          "jesd204_0_transport_0/rx",
-          "jesd204_0/m_axis_rx"
-        ]
-      },
       "okAXI4LiteInterface_0_m_axi": {
         "interface_ports": [
           "okAXI4LiteInterface_0/m_axi",
           "jesd204_0/s_axi"
         ]
       },
-      "frontpanel_1_wirein00": {
+      "frontpanel_1_wireout20": {
         "interface_ports": [
-          "wireoutbreakout_0/wirein_READDATA",
-          "frontpanel_1/wirein00"
+          "okAXI4LiteInterface_0/wireout_READDATA",
+          "frontpanel_1/wireout20"
         ]
       },
       "host_interface_1": {
@@ -986,10 +984,16 @@
           "frontpanel_1/btpipein80"
         ]
       },
-      "frontpanel_1_wireout20": {
+      "jesd204_0_m_axis_rx": {
         "interface_ports": [
-          "okAXI4LiteInterface_0/wireout_READDATA",
-          "frontpanel_1/wireout20"
+          "jesd204_0_transport_0/rx",
+          "jesd204_0/m_axis_rx"
+        ]
+      },
+      "frontpanel_1_wirein00": {
+        "interface_ports": [
+          "wireoutbreakout_0/wirein_READDATA",
+          "frontpanel_1/wirein00"
         ]
       }
     },
@@ -1000,7 +1004,7 @@
           "fifo_generator_0/rd_clk",
           "ila_0/clk",
           "okAXI4LiteInterface_0/okClkIn",
-          "c_counter_binary_0/CLK"
+          "frontpanel_1/ti40_ep_clk"
         ]
       },
       "okAXI4LiteInterface_0_m_axi_aresetn": {
@@ -1063,8 +1067,7 @@
           "JESD_SYNC",
           "util_ds_buf_1/OBUF_IN",
           "util_ds_buf_2/OBUF_IN",
-          "ila_0/probe3",
-          "frontpanel_1/btpoa0_ep_ready"
+          "ila_0/probe3"
         ]
       },
       "jesd204_0_rx_core_clk_out": {
@@ -1072,8 +1075,7 @@
           "jesd204_0/rx_core_clk_out",
           "fifo_generator_0/wr_clk",
           "jesd204_0_transport_0/clk",
-          "half_rate_0/clk",
-          "enable_write_0/fast_clk"
+          "half_rate_0/clk"
         ]
       },
       "wireoutbreakout_0_rx_reset": {
@@ -1111,7 +1113,8 @@
           "jesd204_0/rx_aresetn",
           "jesd204_0_transport_0/rst_n",
           "negate_0/a",
-          "half_rate_0/rst_n"
+          "half_rate_0/rst_n",
+          "trigger_to_level_0/RSTN"
         ]
       },
       "jesd204_0_transport_0_signalB_sampl0": {
@@ -1129,7 +1132,8 @@
       "half_rate_0_data_out": {
         "ports": [
           "half_rate_0/data_out",
-          "fifo_generator_0/din"
+          "fifo_generator_0/din",
+          "ila_0/probe1"
         ]
       },
       "enable_read_0_read_en": {
@@ -1144,38 +1148,10 @@
           "enable_read_0/empty"
         ]
       },
-      "frontpanel_0_btpoa0_ep_read": {
-        "ports": [
-          "frontpanel_1/btpoa0_ep_read",
-          "ila_0/probe0",
-          "enable_read_0/read",
-          "enable_write_0/read",
-          "c_counter_binary_0/CE"
-        ]
-      },
-      "fifo_generator_0_full": {
-        "ports": [
-          "fifo_generator_0/full",
-          "enable_write_0/full"
-        ]
-      },
       "concat_pad_0_out": {
         "ports": [
           "concat_pad_0/pad_out",
           "half_rate_0/data_in"
-        ]
-      },
-      "enable_write_0_wr_en": {
-        "ports": [
-          "enable_write_0/wr_en",
-          "fifo_generator_0/wr_en"
-        ]
-      },
-      "frontpanel_1_btpoa0_ep_blockstrobe": {
-        "ports": [
-          "frontpanel_1/btpoa0_ep_blockstrobe",
-          "ila_0/probe1",
-          "enable_write_0/blockstrobe"
         ]
       },
       "fifo_generator_0_valid": {
@@ -1190,10 +1166,30 @@
           "concat_pad_0/in1"
         ]
       },
-      "c_counter_binary_0_Q": {
+      "xlconstant_0_dout": {
         "ports": [
-          "c_counter_binary_0/Q",
-          "frontpanel_1/btpoa0_ep_datain"
+          "xlconstant_0/dout",
+          "ila_0/probe2",
+          "frontpanel_1/poa0_ep_datain"
+        ]
+      },
+      "frontpanel_1_ti40_ep_trigger": {
+        "ports": [
+          "frontpanel_1/ti40_ep_trigger",
+          "trigger_to_level_0/READY",
+          "ila_0/probe0"
+        ]
+      },
+      "trigger_to_level_0_READY_LVL": {
+        "ports": [
+          "trigger_to_level_0/READY_LVL",
+          "ila_0/probe5"
+        ]
+      },
+      "frontpanel_1_poa0_ep_read": {
+        "ports": [
+          "frontpanel_1/poa0_ep_read",
+          "ila_0/probe6"
         ]
       }
     },
