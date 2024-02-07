@@ -11,14 +11,6 @@
     input  wire [31:0] wo20_ep_datain,
 
 //----------------------------------------------------------------------------------------------------------------------------------
-// TriggerIns
-//----------------------------------------------------------------------------------------------------------------------------------
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40 EP_TRIGGER" *)
-    output wire [31:0] ti40_ep_trigger,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40 EP_CLK" *)
-    input  wire        ti40_ep_clk,
-
-//----------------------------------------------------------------------------------------------------------------------------------
 // Block Throttle PipeIns
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipein:1.0 btpipein80 EP_DATAOUT" *)
@@ -31,12 +23,16 @@
     input  wire        btpi80_ep_ready,
 
 //----------------------------------------------------------------------------------------------------------------------------------
-// PipeOuts
+// Block Throttle PipeOuts
 //----------------------------------------------------------------------------------------------------------------------------------
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:pipeout:1.0 pipeouta0 EP_DATAIN" *)
-    input  wire [31:0] poa0_ep_datain,
-    (* X_INTERFACE_INFO = "opalkelly.com:interface:pipeout:1.0 pipeouta0 EP_READ" *)
-    output wire        poa0_ep_read,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0 EP_DATAIN" *)
+    input  wire [31:0] btpoa0_ep_datain,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0 EP_READ" *)
+    output wire        btpoa0_ep_read,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0 EP_BLOCKSTROBE" *)
+    output wire        btpoa0_ep_blockstrobe,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipeout:1.0 btpipeouta0 EP_READY" *)
+    input  wire        btpoa0_ep_ready,
 
 //----------------------------------------------------------------------------------------------------------------------------------
 // Host Interface

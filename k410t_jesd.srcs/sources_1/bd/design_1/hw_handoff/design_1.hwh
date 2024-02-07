@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb  5 17:25:43 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 16:51:04 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -93,31 +93,6 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="1" FULLNAME="/concat_pad_0" HWVERSION="1.0" INSTANCE="concat_pad_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="concat_pad" VLNV="xilinx.com:module_ref:concat_pad:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_concat_pad_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="13" NAME="in0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalB_sampl0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="13" NAME="in1" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="signalA_sampl0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="pad_out" RIGHT="0" SIGIS="undef" SIGNAME="concat_pad_0_pad_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="half_rate_0" PORT="data_in"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/enable_read_0" HWVERSION="1.0" INSTANCE="enable_read_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable_read" VLNV="xilinx.com:module_ref:enable_read:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -125,7 +100,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="read" SIGIS="undef"/>
+        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_read"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="empty"/>
@@ -134,6 +113,77 @@
         <PORT DIR="O" NAME="read_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="rd_en"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe7"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/enable_write_0" HWVERSION="1.0" INSTANCE="enable_write_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable_write" VLNV="xilinx.com:module_ref:enable_write:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_enable_write_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="blockstrobe" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_blockstrobe">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_blockstrobe"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_read"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="full"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="wr_en" SIGIS="undef" SIGNAME="enable_write_0_wr_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_en"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="EN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="fast_clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/enabled_binary_count_0" HWVERSION="1.0" INSTANCE="enabled_binary_count_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enabled_binary_counter" VLNV="xilinx.com:module_ref:enabled_binary_counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="step" VALUE="1"/>
+        <PARAMETER NAME="width" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_enabled_binary_count_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="RST_N" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="EN" SIGIS="undef" SIGNAME="enable_write_0_wr_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_write_0" PORT="wr_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="count" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="din"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -531,19 +581,32 @@
             <CONNECTION INSTANCE="frontpanel_1" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="half_rate_0_data_out">
+        <PORT DIR="I" LEFT="31" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="half_rate_0" PORT="data_out"/>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="count"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="wr_en" SIGIS="undef"/>
+        <PORT DIR="I" NAME="wr_en" SIGIS="undef" SIGNAME="enable_write_0_wr_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_write_0" PORT="wr_en"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="rd_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_read_0" PORT="read_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="full" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_datain"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_write_0" PORT="full"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_read_0" PORT="empty"/>
@@ -647,8 +710,8 @@
         <PARAMETER NAME="WO.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="WO.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="TI.COUNT" VALUE="1"/>
-        <PARAMETER NAME="TI.ADDR_0" VALUE="0x40"/>
+        <PARAMETER NAME="TI.COUNT" VALUE="0"/>
+        <PARAMETER NAME="TI.ADDR_0" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="TI.ADDR_3" VALUE="0xff"/>
@@ -746,8 +809,8 @@
         <PARAMETER NAME="PI.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="PI.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="PI.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="PO.COUNT" VALUE="1"/>
-        <PARAMETER NAME="PO.ADDR_0" VALUE="0xa0"/>
+        <PARAMETER NAME="PO.COUNT" VALUE="0"/>
+        <PARAMETER NAME="PO.ADDR_0" VALUE="0xff"/>
         <PARAMETER NAME="PO.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="PO.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="PO.ADDR_3" VALUE="0xff"/>
@@ -812,8 +875,8 @@
         <PARAMETER NAME="BTPI.ADDR_29" VALUE="0xff"/>
         <PARAMETER NAME="BTPI.ADDR_30" VALUE="0xff"/>
         <PARAMETER NAME="BTPI.ADDR_31" VALUE="0xff"/>
-        <PARAMETER NAME="BTPO.COUNT" VALUE="0"/>
-        <PARAMETER NAME="BTPO.ADDR_0" VALUE="0xff"/>
+        <PARAMETER NAME="BTPO.COUNT" VALUE="1"/>
+        <PARAMETER NAME="BTPO.ADDR_0" VALUE="0xa0"/>
         <PARAMETER NAME="BTPO.ADDR_1" VALUE="0xff"/>
         <PARAMETER NAME="BTPO.ADDR_2" VALUE="0xff"/>
         <PARAMETER NAME="BTPO.ADDR_3" VALUE="0xff"/>
@@ -1148,7 +1211,6 @@
             <CONNECTION INSTANCE="fifo_generator_0" PORT="rd_clk"/>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="okClkIn"/>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="ti40_ep_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="wi00_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi00_ep_dataout">
@@ -1159,17 +1221,6 @@
         <PORT DIR="I" LEFT="31" NAME="wo20_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wo20_ep_datain">
           <CONNECTIONS>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_DATAIN_WIREOUT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="ti40_ep_trigger" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_ti40_ep_trigger">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_to_level_0" PORT="READY"/>
-            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100800000" DIR="I" NAME="ti40_ep_clk" SIGIS="clk" SIGNAME="frontpanel_1_okClk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="btpi80_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_btpi80_ep_dataout">
@@ -1188,14 +1239,27 @@
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="EP_READY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="poa0_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+        <PORT DIR="I" LEFT="31" NAME="btpoa0_ep_datain" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="poa0_ep_read" SIGIS="undef" SIGNAME="frontpanel_1_poa0_ep_read">
+        <PORT DIR="O" NAME="btpoa0_ep_read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_read_0" PORT="read"/>
+            <CONNECTION INSTANCE="enable_write_0" PORT="read"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="btpoa0_ep_blockstrobe" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_blockstrobe">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_write_0" PORT="blockstrobe"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btpoa0_ep_ready" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_sync"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1218,12 +1282,6 @@
             <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="wo20_ep_datain"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="triggerin40" TYPE="INITIATOR" VLNV="opalkelly.com:interface:triggerin:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="EP_TRIGGER" PHYSICAL="ti40_ep_trigger"/>
-            <PORTMAP LOGICAL="EP_CLK" PHYSICAL="ti40_ep_clk"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="frontpanel_1_btpipein80" NAME="btpipein80" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipein:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpi80_ep_blockstrobe"/>
@@ -1232,44 +1290,15 @@
             <PORTMAP LOGICAL="EP_DATAOUT" PHYSICAL="btpi80_ep_dataout"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="pipeouta0" TYPE="INITIATOR" VLNV="opalkelly.com:interface:pipeout:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="btpipeouta0" TYPE="INITIATOR" VLNV="opalkelly.com:interface:btpipeout:1.0">
           <PORTMAPS>
-            <PORTMAP LOGICAL="EP_READ" PHYSICAL="poa0_ep_read"/>
-            <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="poa0_ep_datain"/>
+            <PORTMAP LOGICAL="EP_READ" PHYSICAL="btpoa0_ep_read"/>
+            <PORTMAP LOGICAL="EP_BLOCKSTROBE" PHYSICAL="btpoa0_ep_blockstrobe"/>
+            <PORTMAP LOGICAL="EP_READY" PHYSICAL="btpoa0_ep_ready"/>
+            <PORTMAP LOGICAL="EP_DATAIN" PHYSICAL="btpoa0_ep_datain"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/half_rate_0" HWVERSION="1.0" INSTANCE="half_rate_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="half_rate" VLNV="xilinx.com:module_ref:half_rate:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_half_rate_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="31" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="concat_pad_0_pad_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="concat_pad_0" PORT="pad_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="half_rate_0_data_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="din"/>
-            <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst_n" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
     </MODULE>
     <MODULE COREREVISION="10" FULLNAME="/ila_0" HWVERSION="6.2" INSTANCE="ila_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ila" VLNV="xilinx.com:ip:ila:6.2">
       <DOCUMENTS>
@@ -1291,7 +1320,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="7"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="8"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -1317,7 +1346,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_BUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="1"/>
@@ -4416,19 +4445,19 @@
             <CONNECTION INSTANCE="frontpanel_1" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_ti40_ep_trigger">
+        <PORT DIR="I" LEFT="31" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="ti40_ep_trigger"/>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="count"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="half_rate_0_data_out">
+        <PORT DIR="I" LEFT="31" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="half_rate_0" PORT="data_out"/>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="enable_write_0_wr_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+            <CONNECTION INSTANCE="enable_write_0" PORT="wr_en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
@@ -4441,14 +4470,19 @@
             <CONNECTION INSTANCE="fifo_generator_0" PORT="valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="trigger_to_level_0_READY_LVL">
+        <PORT DIR="I" LEFT="0" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_to_level_0" PORT="READY_LVL"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_read"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_poa0_ep_read">
+        <PORT DIR="I" LEFT="0" NAME="probe6" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_blockstrobe">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="poa0_ep_read"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_blockstrobe"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="enable_read_0_read_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_read_0" PORT="read_en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4513,7 +4547,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_clk"/>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="clk"/>
-            <CONNECTION INSTANCE="half_rate_0" PORT="clk"/>
+            <CONNECTION INSTANCE="enable_write_0" PORT="fast_clk"/>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100800000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="okAXI4LiteInterface_0_m_axi_aclk">
@@ -4630,8 +4665,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="negate_0" PORT="a"/>
-            <CONNECTION INSTANCE="half_rate_0" PORT="rst_n"/>
-            <CONNECTION INSTANCE="trigger_to_level_0" PORT="RSTN"/>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="RST_N"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">
@@ -4660,6 +4694,7 @@
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_ready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4764,19 +4799,11 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="13" NAME="signalA_sampl0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalA_sampl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="concat_pad_0" PORT="in1"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="signalA_sampl0" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="13" NAME="signalA_sampl1" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalA_cntrl0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalA_cntrl1" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="13" NAME="signalB_sampl0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_transport_0_signalB_sampl0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="concat_pad_0" PORT="in0"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="13" NAME="signalB_sampl0" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="13" NAME="signalB_sampl1" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalB_cntrl0" SIGIS="undef"/>
         <PORT DIR="O" NAME="signalB_cntrl1" SIGIS="undef"/>
@@ -5036,31 +5063,6 @@
         <PERIPHERAL INSTANCE="jesd204_0"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/trigger_to_level_0" HWVERSION="1.0" INSTANCE="trigger_to_level_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="trigger_to_level" VLNV="xilinx.com:module_ref:trigger_to_level:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_trigger_to_level_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="31" NAME="READY" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_ti40_ep_trigger">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="ti40_ep_trigger"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="READY_LVL" SIGIS="undef" SIGNAME="trigger_to_level_0_READY_LVL">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="RSTN" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE COREREVISION="21" FULLNAME="/util_ds_buf_0" HWVERSION="2.1" INSTANCE="util_ds_buf_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.1">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -5191,24 +5193,6 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
-    </MODULE>
-    <MODULE COREREVISION="6" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x00000539"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="poa0_ep_datain"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
     </MODULE>
   </MODULES>
 

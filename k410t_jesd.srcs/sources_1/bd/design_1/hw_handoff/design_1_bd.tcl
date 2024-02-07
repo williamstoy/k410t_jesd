@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# concat_pad, enable_read, half_rate, jesd204_0_transport_layer_demapper, negate, okAXI4LiteInterface, trigger_to_level, wireoutbreakout
+# enable_read, enable_write, enabled_binary_counter, jesd204_0_transport_layer_demapper, negate, okAXI4LiteInterface, wireoutbreakout
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -179,17 +179,6 @@ proc create_root_design { parentCell } {
   set rxn [ create_bd_port -dir I -from 3 -to 0 rxn ]
   set rxp [ create_bd_port -dir I -from 3 -to 0 rxp ]
 
-  # Create instance: concat_pad_0, and set properties
-  set block_name concat_pad
-  set block_cell_name concat_pad_0
-  if { [catch {set concat_pad_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $concat_pad_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: enable_read_0, and set properties
   set block_name enable_read
   set block_cell_name enable_read_0
@@ -197,6 +186,28 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $enable_read_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: enable_write_0, and set properties
+  set block_name enable_write
+  set block_cell_name enable_write_0
+  if { [catch {set enable_write_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $enable_write_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: enabled_binary_count_0, and set properties
+  set block_name enabled_binary_counter
+  set block_cell_name enabled_binary_count_0
+  if { [catch {set enabled_binary_count_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $enabled_binary_count_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -239,14 +250,14 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.BTPI.ADDR_0 {0x80} \
    CONFIG.BTPI.COUNT {1} \
-   CONFIG.BTPO.ADDR_0 {0xff} \
-   CONFIG.BTPO.COUNT {0} \
+   CONFIG.BTPO.ADDR_0 {0xa0} \
+   CONFIG.BTPO.COUNT {1} \
    CONFIG.EXDES.FLOW {Block Designer} \
    CONFIG.EXDES.SELECTION {PipeTest} \
-   CONFIG.PO.ADDR_0 {0xa0} \
-   CONFIG.PO.COUNT {1} \
-   CONFIG.TI.ADDR_0 {0x40} \
-   CONFIG.TI.COUNT {1} \
+   CONFIG.PO.ADDR_0 {0xff} \
+   CONFIG.PO.COUNT {0} \
+   CONFIG.TI.ADDR_0 {0xff} \
+   CONFIG.TI.COUNT {0} \
    CONFIG.WI.ADDR_0 {0x00} \
    CONFIG.WI.ADDR_1 {0xff} \
    CONFIG.WI.ADDR_2 {0xff} \
@@ -256,17 +267,6 @@ proc create_root_design { parentCell } {
    CONFIG.WO.COUNT {1} \
  ] $frontpanel_1
 
-  # Create instance: half_rate_0, and set properties
-  set block_name half_rate
-  set block_cell_name half_rate_0
-  if { [catch {set half_rate_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $half_rate_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
   set_property -dict [ list \
@@ -274,8 +274,8 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {7} \
-   CONFIG.C_PROBE2_WIDTH {32} \
+   CONFIG.C_NUM_OF_PROBES {8} \
+   CONFIG.C_PROBE2_WIDTH {1} \
  ] $ila_0
 
   # Create instance: jesd204_0, and set properties
@@ -327,17 +327,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: trigger_to_level_0, and set properties
-  set block_name trigger_to_level
-  set block_cell_name trigger_to_level_0
-  if { [catch {set trigger_to_level_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $trigger_to_level_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: util_ds_buf_0, and set properties
   set util_ds_buf_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_0 ]
 
@@ -364,13 +353,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {1337} \
-   CONFIG.CONST_WIDTH {32} \
- ] $xlconstant_0
-
   # Create interface connections
   connect_bd_intf_net -intf_net frontpanel_1_btpipein80 [get_bd_intf_pins frontpanel_1/btpipein80] [get_bd_intf_pins okAXI4LiteInterface_0/btpipein_DATA]
   connect_bd_intf_net -intf_net frontpanel_1_wirein00 [get_bd_intf_pins frontpanel_1/wirein00] [get_bd_intf_pins wireoutbreakout_0/wirein_READDATA]
@@ -384,32 +366,30 @@ proc create_root_design { parentCell } {
   connect_bd_net -net FPGA_JESD_CLKP_1 [get_bd_ports FPGA_JESD_CLKP] [get_bd_pins jesd204_0/refclk_p]
   connect_bd_net -net FPGA_JESD_SYSREFM_1 [get_bd_ports FPGA_JESD_SYSREFM] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
   connect_bd_net -net FPGA_JESD_SYSREFP_1 [get_bd_ports FPGA_JESD_SYSREFP] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
-  connect_bd_net -net concat_pad_0_out [get_bd_pins concat_pad_0/pad_out] [get_bd_pins half_rate_0/data_in]
-  connect_bd_net -net enable_read_0_read_en [get_bd_pins enable_read_0/read_en] [get_bd_pins fifo_generator_0/rd_en]
+  connect_bd_net -net enable_read_0_read_en [get_bd_pins enable_read_0/read_en] [get_bd_pins fifo_generator_0/rd_en] [get_bd_pins ila_0/probe7]
+  connect_bd_net -net enable_write_0_wr_en [get_bd_pins enable_write_0/wr_en] [get_bd_pins enabled_binary_count_0/EN] [get_bd_pins fifo_generator_0/wr_en] [get_bd_pins ila_0/probe2]
+  connect_bd_net -net enabled_binary_count_0_OUT [get_bd_pins enabled_binary_count_0/count] [get_bd_pins fifo_generator_0/din] [get_bd_pins ila_0/probe0]
+  connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe1]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/empty]
+  connect_bd_net -net fifo_generator_0_full [get_bd_pins enable_write_0/full] [get_bd_pins fifo_generator_0/full]
   connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
-  connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins frontpanel_1/ti40_ep_clk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
-  connect_bd_net -net frontpanel_1_poa0_ep_read [get_bd_pins frontpanel_1/poa0_ep_read] [get_bd_pins ila_0/probe6]
-  connect_bd_net -net frontpanel_1_ti40_ep_trigger [get_bd_pins frontpanel_1/ti40_ep_trigger] [get_bd_pins ila_0/probe0] [get_bd_pins trigger_to_level_0/READY]
-  connect_bd_net -net half_rate_0_data_out [get_bd_pins fifo_generator_0/din] [get_bd_pins half_rate_0/data_out] [get_bd_pins ila_0/probe1]
-  connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins half_rate_0/rst_n] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a] [get_bd_pins trigger_to_level_0/RSTN]
-  connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins half_rate_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
-  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
-  connect_bd_net -net jesd204_0_transport_0_signalA_sampl0 [get_bd_pins concat_pad_0/in1] [get_bd_pins jesd204_0_transport_0/signalA_sampl0]
-  connect_bd_net -net jesd204_0_transport_0_signalB_sampl0 [get_bd_pins concat_pad_0/in0] [get_bd_pins jesd204_0_transport_0/signalB_sampl0]
+  connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
+  connect_bd_net -net frontpanel_1_btpoa0_ep_blockstrobe [get_bd_pins enable_write_0/blockstrobe] [get_bd_pins frontpanel_1/btpoa0_ep_blockstrobe] [get_bd_pins ila_0/probe6]
+  connect_bd_net -net frontpanel_1_btpoa0_ep_read [get_bd_pins enable_read_0/read] [get_bd_pins enable_write_0/read] [get_bd_pins frontpanel_1/btpoa0_ep_read] [get_bd_pins ila_0/probe5]
+  connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins enabled_binary_count_0/RST_N] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a]
+  connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins enable_write_0/fast_clk] [get_bd_pins enabled_binary_count_0/CLK] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
+  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
   connect_bd_net -net negate_0_nota [get_bd_pins fifo_generator_0/rst] [get_bd_pins negate_0/nota]
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aclk [get_bd_pins jesd204_0/s_axi_aclk] [get_bd_pins okAXI4LiteInterface_0/m_axi_aclk]
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aresetn [get_bd_pins jesd204_0/s_axi_aresetn] [get_bd_pins okAXI4LiteInterface_0/m_axi_aresetn]
   connect_bd_net -net rxn_1 [get_bd_ports rxn] [get_bd_pins jesd204_0/rxn]
   connect_bd_net -net rxp_1 [get_bd_ports rxp] [get_bd_pins jesd204_0/rxp]
-  connect_bd_net -net trigger_to_level_0_READY_LVL [get_bd_pins ila_0/probe5] [get_bd_pins trigger_to_level_0/READY_LVL]
   connect_bd_net -net util_ds_buf_0_IBUF_OUT [get_bd_pins jesd204_0/rx_sysref] [get_bd_pins util_ds_buf_0/IBUF_OUT]
   connect_bd_net -net util_ds_buf_1_OBUF_DS_N [get_bd_ports SYNCbABM] [get_bd_pins util_ds_buf_1/OBUF_DS_N]
   connect_bd_net -net util_ds_buf_1_OBUF_DS_P [get_bd_ports SYNCbABP] [get_bd_pins util_ds_buf_1/OBUF_DS_P]
   connect_bd_net -net util_ds_buf_2_OBUF_DS_N [get_bd_ports SYNCbCDM] [get_bd_pins util_ds_buf_2/OBUF_DS_N]
   connect_bd_net -net util_ds_buf_2_OBUF_DS_P [get_bd_ports SYNCbCDP] [get_bd_pins util_ds_buf_2/OBUF_DS_P]
   connect_bd_net -net wireoutbreakout_0_rx_reset [get_bd_pins jesd204_0/rx_reset] [get_bd_pins wireoutbreakout_0/rx_reset]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins frontpanel_1/poa0_ep_datain] [get_bd_pins ila_0/probe2] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
   assign_bd_address -offset 0x00000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces okAXI4LiteInterface_0/m_axi] [get_bd_addr_segs jesd204_0/s_axi/Reg] -force
