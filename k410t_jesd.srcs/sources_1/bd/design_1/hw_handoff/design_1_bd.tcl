@@ -277,7 +277,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {8} \
+   CONFIG.C_NUM_OF_PROBES {10} \
    CONFIG.C_PROBE2_WIDTH {1} \
  ] $ila_0
 
@@ -365,7 +365,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net okAXI4LiteInterface_0_m_axi [get_bd_intf_pins jesd204_0/s_axi] [get_bd_intf_pins okAXI4LiteInterface_0/m_axi]
 
   # Create port connections
-  connect_bd_net -net FIFO_FSM_0_state_reg [get_bd_pins FIFO_FSM_0/state_reg] [get_bd_pins enable_read_0/state_reg]
+  connect_bd_net -net FIFO_FSM_0_state_reg [get_bd_pins FIFO_FSM_0/state_reg] [get_bd_pins enable_read_0/state_reg] [get_bd_pins ila_0/probe9]
   connect_bd_net -net FPGA_JESD_CLKM_1 [get_bd_ports FPGA_JESD_CLKM] [get_bd_pins jesd204_0/refclk_n]
   connect_bd_net -net FPGA_JESD_CLKP_1 [get_bd_ports FPGA_JESD_CLKP] [get_bd_pins jesd204_0/refclk_p]
   connect_bd_net -net FPGA_JESD_SYSREFM_1 [get_bd_ports FPGA_JESD_SYSREFM] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
@@ -376,7 +376,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net enabled_binary_count_0_count [get_bd_pins FIFO_FSM_0/DATA_IN] [get_bd_pins enabled_binary_count_0/count]
   connect_bd_net -net fifo_generator_0_almost_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins fifo_generator_0/almost_empty]
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe1]
-  connect_bd_net -net fifo_generator_0_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/empty]
+  connect_bd_net -net fifo_generator_0_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/empty] [get_bd_pins ila_0/probe8]
   connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_1_btpoa0_ep_blockstrobe [get_bd_pins frontpanel_1/btpoa0_ep_blockstrobe] [get_bd_pins ila_0/probe6]

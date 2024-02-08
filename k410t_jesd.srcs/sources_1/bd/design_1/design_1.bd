@@ -254,7 +254,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "8"
+            "value": "10"
           },
           "C_PROBE2_WIDTH": {
             "value": "1"
@@ -1178,13 +1178,15 @@
       "fifo_generator_0_empty": {
         "ports": [
           "fifo_generator_0/empty",
-          "enable_read_0/empty"
+          "enable_read_0/empty",
+          "ila_0/probe8"
         ]
       },
       "FIFO_FSM_0_state_reg": {
         "ports": [
           "FIFO_FSM_0/state_reg",
-          "enable_read_0/state_reg"
+          "enable_read_0/state_reg",
+          "ila_0/probe9"
         ]
       }
     },

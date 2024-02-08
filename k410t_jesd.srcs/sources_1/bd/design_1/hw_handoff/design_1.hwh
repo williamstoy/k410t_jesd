@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 21:54:25 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 22:21:14 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -125,6 +125,7 @@
         <PORT DIR="O" NAME="state_reg" SIGIS="undef" SIGNAME="FIFO_FSM_0_state_reg">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_read_0" PORT="state_reg"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe9"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="FIFO_DATA" RIGHT="0" SIGIS="undef" SIGNAME="FIFO_FSM_0_FIFO_DATA">
@@ -624,6 +625,7 @@
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_read_0" PORT="empty"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="almost_empty" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
@@ -1338,7 +1340,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="8"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="10"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -4501,6 +4503,16 @@
         <PORT DIR="I" LEFT="0" NAME="probe7" RIGHT="0" SIGIS="undef" SIGNAME="enable_read_0_read_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_read_0" PORT="read_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe8" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe9" RIGHT="0" SIGIS="undef" SIGNAME="FIFO_FSM_0_state_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="state_reg"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

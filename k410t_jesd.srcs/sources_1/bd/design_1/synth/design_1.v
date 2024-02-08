@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Feb  7 21:54:23 2024
+//Date        : Wed Feb  7 22:21:12 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -167,7 +167,9 @@ module design_1
         .probe4(fifo_generator_0_valid),
         .probe5(frontpanel_1_btpoa0_ep_read),
         .probe6(frontpanel_1_btpoa0_ep_blockstrobe),
-        .probe7(enable_read_0_read_en));
+        .probe7(enable_read_0_read_en),
+        .probe8(fifo_generator_0_empty),
+        .probe9(FIFO_FSM_0_state_reg));
   design_1_jesd204_0_0 jesd204_0
        (.refclk_n(FPGA_JESD_CLKM_1),
         .refclk_p(FPGA_JESD_CLKP_1),
