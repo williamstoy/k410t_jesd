@@ -1,13 +1,12 @@
 `timescale 1ns / 1ps
 
 module enable_read(
-	read,
-	empty,
-	read_en);
+	input read,
+	input empty,
+	input state_reg,
+	output read_en);
 	
-	input read, empty;
-	output read_en;
 
-	assign read_en = read & ~empty;	
+	assign read_en = (read | ~state_reg) & ~empty;	
 
 endmodule

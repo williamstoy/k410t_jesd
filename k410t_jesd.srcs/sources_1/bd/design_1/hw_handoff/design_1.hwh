@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 16:51:04 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 20:15:15 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -93,10 +93,60 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/FIFO_FSM_0" HWVERSION="1.0" INSTANCE="FIFO_FSM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FIFO_FSM" VLNV="xilinx.com:module_ref:FIFO_FSM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="FIFO_DEPTH" VALUE="8000"/>
+        <PARAMETER NAME="FIFO_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_FIFO_FSM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="RST_N" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="READY" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="almost_empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="count"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="state_reg" SIGIS="undef" SIGNAME="FIFO_FSM_0_state_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_read_0" PORT="state_reg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="FIFO_DATA" RIGHT="0" SIGIS="undef" SIGNAME="FIFO_FSM_0_FIFO_DATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="din"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="WR_EN" SIGIS="undef" SIGNAME="FIFO_FSM_0_WR_EN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_en"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="EN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/enable_read_0" HWVERSION="1.0" INSTANCE="enable_read_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable_read" VLNV="xilinx.com:module_ref:enable_read:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_enable_read_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_enable_read_0_4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -110,47 +160,15 @@
             <CONNECTION INSTANCE="fifo_generator_0" PORT="empty"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="state_reg" SIGIS="undef" SIGNAME="FIFO_FSM_0_state_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="state_reg"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="read_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="rd_en"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe7"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/enable_write_0" HWVERSION="1.0" INSTANCE="enable_write_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable_write" VLNV="xilinx.com:module_ref:enable_write:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_enable_write_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="blockstrobe" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_blockstrobe">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_blockstrobe"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_read"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="full"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="wr_en" SIGIS="undef" SIGNAME="enable_write_0_wr_en">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_en"/>
-            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
-            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="EN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="fast_clk" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -175,15 +193,14 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="EN" SIGIS="undef" SIGNAME="enable_write_0_wr_en">
+        <PORT DIR="I" NAME="EN" SIGIS="undef" SIGNAME="FIFO_FSM_0_WR_EN">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_write_0" PORT="wr_en"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="WR_EN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="count" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="din"/>
-            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="DATA_IN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -197,7 +214,7 @@
         <PARAMETER NAME="C_COMMON_CLOCK" VALUE="0"/>
         <PARAMETER NAME="C_SELECT_XPM" VALUE="0"/>
         <PARAMETER NAME="C_COUNT_TYPE" VALUE="0"/>
-        <PARAMETER NAME="C_DATA_COUNT_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_DATA_COUNT_WIDTH" VALUE="13"/>
         <PARAMETER NAME="C_DEFAULT_VALUE" VALUE="BlankString"/>
         <PARAMETER NAME="C_DIN_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_DOUT_RST_VAL" VALUE="0"/>
@@ -205,7 +222,7 @@
         <PARAMETER NAME="C_ENABLE_RLOCS" VALUE="0"/>
         <PARAMETER NAME="C_FAMILY" VALUE="kintex7"/>
         <PARAMETER NAME="C_FULL_FLAGS_RST_VAL" VALUE="1"/>
-        <PARAMETER NAME="C_HAS_ALMOST_EMPTY" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ALMOST_EMPTY" VALUE="1"/>
         <PARAMETER NAME="C_HAS_ALMOST_FULL" VALUE="0"/>
         <PARAMETER NAME="C_HAS_BACKUP" VALUE="0"/>
         <PARAMETER NAME="C_HAS_DATA_COUNT" VALUE="0"/>
@@ -229,17 +246,17 @@
         <PARAMETER NAME="C_OVERFLOW_LOW" VALUE="0"/>
         <PARAMETER NAME="C_PRELOAD_LATENCY" VALUE="0"/>
         <PARAMETER NAME="C_PRELOAD_REGS" VALUE="1"/>
-        <PARAMETER NAME="C_PRIM_FIFO_TYPE" VALUE="1kx36"/>
+        <PARAMETER NAME="C_PRIM_FIFO_TYPE" VALUE="8kx4"/>
         <PARAMETER NAME="C_PROG_EMPTY_THRESH_ASSERT_VAL" VALUE="4"/>
         <PARAMETER NAME="C_PROG_EMPTY_THRESH_NEGATE_VAL" VALUE="5"/>
         <PARAMETER NAME="C_PROG_EMPTY_TYPE" VALUE="0"/>
-        <PARAMETER NAME="C_PROG_FULL_THRESH_ASSERT_VAL" VALUE="1023"/>
-        <PARAMETER NAME="C_PROG_FULL_THRESH_NEGATE_VAL" VALUE="1022"/>
+        <PARAMETER NAME="C_PROG_FULL_THRESH_ASSERT_VAL" VALUE="8191"/>
+        <PARAMETER NAME="C_PROG_FULL_THRESH_NEGATE_VAL" VALUE="8190"/>
         <PARAMETER NAME="C_PROG_FULL_TYPE" VALUE="0"/>
-        <PARAMETER NAME="C_RD_DATA_COUNT_WIDTH" VALUE="10"/>
-        <PARAMETER NAME="C_RD_DEPTH" VALUE="1024"/>
+        <PARAMETER NAME="C_RD_DATA_COUNT_WIDTH" VALUE="13"/>
+        <PARAMETER NAME="C_RD_DEPTH" VALUE="8192"/>
         <PARAMETER NAME="C_RD_FREQ" VALUE="1"/>
-        <PARAMETER NAME="C_RD_PNTR_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_RD_PNTR_WIDTH" VALUE="13"/>
         <PARAMETER NAME="C_UNDERFLOW_LOW" VALUE="0"/>
         <PARAMETER NAME="C_USE_DOUT_RST" VALUE="1"/>
         <PARAMETER NAME="C_USE_ECC" VALUE="0"/>
@@ -250,10 +267,10 @@
         <PARAMETER NAME="C_USE_FWFT_DATA_COUNT" VALUE="0"/>
         <PARAMETER NAME="C_VALID_LOW" VALUE="0"/>
         <PARAMETER NAME="C_WR_ACK_LOW" VALUE="0"/>
-        <PARAMETER NAME="C_WR_DATA_COUNT_WIDTH" VALUE="10"/>
-        <PARAMETER NAME="C_WR_DEPTH" VALUE="1024"/>
+        <PARAMETER NAME="C_WR_DATA_COUNT_WIDTH" VALUE="13"/>
+        <PARAMETER NAME="C_WR_DEPTH" VALUE="8192"/>
         <PARAMETER NAME="C_WR_FREQ" VALUE="1"/>
-        <PARAMETER NAME="C_WR_PNTR_WIDTH" VALUE="10"/>
+        <PARAMETER NAME="C_WR_PNTR_WIDTH" VALUE="13"/>
         <PARAMETER NAME="C_WR_RESPONSE_LATENCY" VALUE="1"/>
         <PARAMETER NAME="C_MSGON_VAL" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_RST_SYNC" VALUE="1"/>
@@ -404,9 +421,9 @@
         <PARAMETER NAME="Performance_Options" VALUE="First_Word_Fall_Through"/>
         <PARAMETER NAME="asymmetric_port_width" VALUE="false"/>
         <PARAMETER NAME="Input_Data_Width" VALUE="32"/>
-        <PARAMETER NAME="Input_Depth" VALUE="1024"/>
+        <PARAMETER NAME="Input_Depth" VALUE="8192"/>
         <PARAMETER NAME="Output_Data_Width" VALUE="32"/>
-        <PARAMETER NAME="Output_Depth" VALUE="1024"/>
+        <PARAMETER NAME="Output_Depth" VALUE="8192"/>
         <PARAMETER NAME="Enable_ECC" VALUE="false"/>
         <PARAMETER NAME="Use_Embedded_Registers" VALUE="false"/>
         <PARAMETER NAME="Reset_Pin" VALUE="true"/>
@@ -417,7 +434,7 @@
         <PARAMETER NAME="Dout_Reset_Value" VALUE="0"/>
         <PARAMETER NAME="dynamic_power_saving" VALUE="false"/>
         <PARAMETER NAME="Almost_Full_Flag" VALUE="false"/>
-        <PARAMETER NAME="Almost_Empty_Flag" VALUE="false"/>
+        <PARAMETER NAME="Almost_Empty_Flag" VALUE="true"/>
         <PARAMETER NAME="Valid_Flag" VALUE="true"/>
         <PARAMETER NAME="Valid_Sense" VALUE="Active_High"/>
         <PARAMETER NAME="Underflow_Flag" VALUE="false"/>
@@ -431,17 +448,17 @@
         <PARAMETER NAME="ecc_pipeline_reg" VALUE="false"/>
         <PARAMETER NAME="Use_Extra_Logic" VALUE="false"/>
         <PARAMETER NAME="Data_Count" VALUE="false"/>
-        <PARAMETER NAME="Data_Count_Width" VALUE="10"/>
+        <PARAMETER NAME="Data_Count_Width" VALUE="13"/>
         <PARAMETER NAME="Write_Data_Count" VALUE="false"/>
-        <PARAMETER NAME="Write_Data_Count_Width" VALUE="10"/>
+        <PARAMETER NAME="Write_Data_Count_Width" VALUE="13"/>
         <PARAMETER NAME="Read_Data_Count" VALUE="false"/>
-        <PARAMETER NAME="Read_Data_Count_Width" VALUE="10"/>
+        <PARAMETER NAME="Read_Data_Count_Width" VALUE="13"/>
         <PARAMETER NAME="Disable_Timing_Violations" VALUE="false"/>
         <PARAMETER NAME="Read_Clock_Frequency" VALUE="1"/>
         <PARAMETER NAME="Write_Clock_Frequency" VALUE="1"/>
         <PARAMETER NAME="Programmable_Full_Type" VALUE="No_Programmable_Full_Threshold"/>
-        <PARAMETER NAME="Full_Threshold_Assert_Value" VALUE="1023"/>
-        <PARAMETER NAME="Full_Threshold_Negate_Value" VALUE="1022"/>
+        <PARAMETER NAME="Full_Threshold_Assert_Value" VALUE="8191"/>
+        <PARAMETER NAME="Full_Threshold_Negate_Value" VALUE="8190"/>
         <PARAMETER NAME="Programmable_Empty_Type" VALUE="No_Programmable_Empty_Threshold"/>
         <PARAMETER NAME="Empty_Threshold_Assert_Value" VALUE="4"/>
         <PARAMETER NAME="Empty_Threshold_Negate_Value" VALUE="5"/>
@@ -581,14 +598,14 @@
             <CONNECTION INSTANCE="frontpanel_1" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
+        <PORT DIR="I" LEFT="31" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="FIFO_FSM_0_FIFO_DATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="count"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="FIFO_DATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="wr_en" SIGIS="undef" SIGNAME="enable_write_0_wr_en">
+        <PORT DIR="I" NAME="wr_en" SIGIS="undef" SIGNAME="FIFO_FSM_0_WR_EN">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_write_0" PORT="wr_en"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="WR_EN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rd_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
@@ -602,14 +619,15 @@
             <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="full" SIGIS="undef" SIGNAME="fifo_generator_0_full">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_write_0" PORT="full"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="full" SIGIS="undef"/>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enable_read_0" PORT="empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="almost_empty" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="READY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="fifo_generator_0_valid">
@@ -630,6 +648,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="FIFO_READ" TYPE="TARGET" VLNV="xilinx.com:interface:fifo_read:1.0">
           <PORTMAPS>
+            <PORTMAP LOGICAL="ALMOST_EMPTY" PHYSICAL="almost_empty"/>
             <PORTMAP LOGICAL="EMPTY" PHYSICAL="empty"/>
             <PORTMAP LOGICAL="RD_DATA" PHYSICAL="dout"/>
             <PORTMAP LOGICAL="RD_EN" PHYSICAL="rd_en"/>
@@ -1246,14 +1265,12 @@
         </PORT>
         <PORT DIR="O" NAME="btpoa0_ep_read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_read_0" PORT="read"/>
-            <CONNECTION INSTANCE="enable_write_0" PORT="read"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
+            <CONNECTION INSTANCE="enable_read_0" PORT="read"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="btpoa0_ep_blockstrobe" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_blockstrobe">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_write_0" PORT="blockstrobe"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe6"/>
           </CONNECTIONS>
         </PORT>
@@ -4445,9 +4462,9 @@
             <CONNECTION INSTANCE="frontpanel_1" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
+        <PORT DIR="I" LEFT="31" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="FIFO_FSM_0_FIFO_DATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="count"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="FIFO_DATA"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
@@ -4455,9 +4472,9 @@
             <CONNECTION INSTANCE="fifo_generator_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="enable_write_0_wr_en">
+        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="FIFO_FSM_0_WR_EN">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_write_0" PORT="wr_en"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="WR_EN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
@@ -4545,10 +4562,10 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="rx_core_clk_out" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_clk"/>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="clk"/>
-            <CONNECTION INSTANCE="enable_write_0" PORT="fast_clk"/>
             <CONNECTION INSTANCE="enabled_binary_count_0" PORT="CLK"/>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_clk"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100800000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="okAXI4LiteInterface_0_m_axi_aclk">
@@ -4666,6 +4683,7 @@
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="negate_0" PORT="a"/>
             <CONNECTION INSTANCE="enabled_binary_count_0" PORT="RST_N"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="RST_N"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">

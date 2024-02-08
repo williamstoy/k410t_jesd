@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1707342782">
+<GenRun Id="synth_1" LaunchPart="xc7k410tffg676-1" LaunchTime="1707354920">
   <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
@@ -41,13 +41,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/enable_read.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/enabled_binary_counter.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -55,7 +48,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/enable_write.v">
+    <File Path="$PSRCDIR/sources_1/new/FIFO_FSM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/enable_read.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -71,14 +71,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/trigger_to_level.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -156,10 +148,11 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_enable_write_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_enable_read_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_FIFO_FSM_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_fifo_generator_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_frontpanel_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_negate_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_enable_read_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_jesd204_0_transport_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_enabled_binary_count_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_wireoutbreakout_0_0"/>
