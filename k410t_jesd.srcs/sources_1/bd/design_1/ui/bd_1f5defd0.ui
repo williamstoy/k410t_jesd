@@ -38,9 +38,9 @@ preplace inst wireoutbreakout_0 -pg 1 -lvl 2 -x 800 -y 620 -defaultsOSRD -pinY w
 preplace inst jesd204_0_transport_0 -pg 1 -lvl 4 -x 1670 -y 640 -swap {0 1 2 4 3 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21} -defaultsOSRD -pinY rx 0L -pinY clk 40L -pinY rst_n 20L -pinBusY signalA_sampl0 0R -pinBusY signalA_sampl1 20R -pinY signalA_cntrl0 40R -pinY signalA_cntrl1 60R -pinBusY signalB_sampl0 80R -pinBusY signalB_sampl1 100R -pinY signalB_cntrl0 120R -pinY signalB_cntrl1 140R -pinBusY signalC_sampl0 160R -pinBusY signalC_sampl1 180R -pinY signalC_cntrl0 200R -pinY signalC_cntrl1 220R -pinBusY signalD_sampl0 240R -pinBusY signalD_sampl1 260R -pinY signalD_cntrl0 280R -pinY signalD_cntrl1 300R -pinY ready_out 320R
 preplace inst negate_0 -pg 1 -lvl 5 -x 1980 -y 800 -defaultsOSRD -pinY a 0L -pinY nota 0R
 preplace inst frontpanel_1 -pg 1 -lvl 1 -x 280 -y 360 -defaultsOSRD -pinY host_interface 0L -pinY host_interface.okHU 20L -pinY host_interface.okUH 40L -pinY host_interface.okUHU 60L -pinY host_interface.okAA 80L -pinY wirein00 0R -pinY wirein00.wi00_ep_dataout 20R -pinY wireout20 40R -pinY btpipein80 140R -pinY btpipeouta0 160R -pinY btpipeouta0.btpoa0_ep_read 180R -pinY btpipeouta0.btpoa0_ep_blockstrobe 200R -pinY btpipeouta0.btpoa0_ep_ready 220R -pinY btpipeouta0.btpoa0_ep_datain 240R -pinY okClk 260R
-preplace inst enabled_binary_count_0 -pg 1 -lvl 5 -x 1980 -y 640 -swap {1 2 0 3} -defaultsOSRD -pinY RST_N 20L -pinY CLK 40L -pinY EN 0L -pinBusY count 0R
 preplace inst FIFO_FSM_0 -pg 1 -lvl 6 -x 2470 -y 540 -swap {1 2 0 3 6 4 5} -defaultsOSRD -pinY RST_N 20L -pinY CLK 40L -pinY READY 0L -pinBusY DATA_IN 100L -pinY state_reg 100R -pinBusY FIFO_DATA 0R -pinY WR_EN 20R
 preplace inst enable_read_0 -pg 1 -lvl 6 -x 2470 -y 790 -swap {2 1 0 3} -defaultsOSRD -pinY read 40L -pinY empty 20L -pinY state_reg 0L -pinY read_en 0R
+preplace inst enabled_binary_count_0 -pg 1 -lvl 5 -x 1980 -y 640 -swap {1 2 0 3} -defaultsOSRD -pinY RST_N 20L -pinY CLK 40L -pinY EN 0L -pinBusY count 0R
 preplace netloc frontpanel_0_okClk 1 1 6 540 240 NJ 240 NJ 240 NJ 240 2140 100 2780J
 preplace netloc okAXI4LiteInterface_0_m_axi_aresetn 1 2 1 980 440n
 preplace netloc okAXI4LiteInterface_0_m_axi_aclk 1 2 1 1000 420n
@@ -81,7 +81,7 @@ levelinfo -pg 1 0 280 800 1310 1670 1980 2470 2960 3120
 pagesize -pg 1 -db -bbox -sgen -210 -80 3290 1150
 ",
    "Reduced Jogs_ScaleFactor":"0.815842",
-   "Reduced Jogs_TopLeft":"1796,211",
+   "Reduced Jogs_TopLeft":"1676,331",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
 preplace port host_interface -pg 1 -lvl 0 -x -20 -y 340 -defaultsOSRD

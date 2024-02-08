@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 20:15:15 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 21:54:25 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -179,6 +179,7 @@
       <PARAMETERS>
         <PARAMETER NAME="step" VALUE="1"/>
         <PARAMETER NAME="width" VALUE="32"/>
+        <PARAMETER NAME="max_value" VALUE="0x00000011"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_enabled_binary_count_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -4563,9 +4564,9 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="rx_core_clk_out" SIGIS="clk" SIGNAME="jesd204_0_rx_core_clk_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="clk"/>
-            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="CLK"/>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_clk"/>
             <CONNECTION INSTANCE="FIFO_FSM_0" PORT="CLK"/>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100800000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="okAXI4LiteInterface_0_m_axi_aclk">
@@ -4682,8 +4683,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="negate_0" PORT="a"/>
-            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="RST_N"/>
             <CONNECTION INSTANCE="FIFO_FSM_0" PORT="RST_N"/>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="RST_N"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">

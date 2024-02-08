@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "enabled_binary_counter,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_enabled_binary_count_0_0,enabled_binary_counter,{}" *)
-(* CORE_GENERATION_INFO = "design_1_enabled_binary_count_0_0,enabled_binary_counter,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=enabled_binary_counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,step=1,width=32}" *)
+(* CORE_GENERATION_INFO = "design_1_enabled_binary_count_0_0,enabled_binary_counter,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=enabled_binary_counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,step=1,width=32,max_value=0x00000011}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_enabled_binary_count_0_0 (
@@ -73,7 +73,8 @@ output wire [31 : 0] count;
 
   enabled_binary_counter #(
     .step(1),
-    .width(32)
+    .width(32),
+    .max_value(32'H00000011)
   ) inst (
     .RST_N(RST_N),
     .CLK(CLK),

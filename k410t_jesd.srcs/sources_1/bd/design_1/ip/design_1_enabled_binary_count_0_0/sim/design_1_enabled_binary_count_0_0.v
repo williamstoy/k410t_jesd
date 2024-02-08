@@ -72,7 +72,8 @@ output wire [31 : 0] count;
 
   enabled_binary_counter #(
     .step(1),
-    .width(32)
+    .width(32),
+    .max_value(32'H00000011)
   ) inst (
     .RST_N(RST_N),
     .CLK(CLK),
