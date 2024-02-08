@@ -20,9 +20,7 @@
       "jesd204_0_transport_0": "",
       "negate_0": "",
       "frontpanel_1": "",
-      "FIFO_FSM_0": "",
-      "enable_read_0": "",
-      "enabled_binary_count_0": ""
+      "FIFO_FSM_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -197,10 +195,13 @@
         "xci_name": "design_1_fifo_generator_0_1",
         "parameters": {
           "Almost_Empty_Flag": {
-            "value": "false"
+            "value": "true"
+          },
+          "Almost_Full_Flag": {
+            "value": "true"
           },
           "Empty_Threshold_Assert_Value": {
-            "value": "16"
+            "value": "62"
           },
           "Enable_Safety_Circuit": {
             "value": "true"
@@ -220,6 +221,9 @@
           "Full_Flags_Reset_Value": {
             "value": "1"
           },
+          "Full_Threshold_Assert_Value": {
+            "value": "32"
+          },
           "INTERFACE_TYPE": {
             "value": "Native"
           },
@@ -227,7 +231,7 @@
             "value": "32"
           },
           "Input_Depth": {
-            "value": "8192"
+            "value": "64"
           },
           "Output_Data_Width": {
             "value": "32"
@@ -237,6 +241,9 @@
           },
           "Programmable_Empty_Type": {
             "value": "Single_Programmable_Empty_Threshold_Constant"
+          },
+          "Programmable_Full_Type": {
+            "value": "Single_Programmable_Full_Threshold_Constant"
           },
           "Valid_Flag": {
             "value": "true"
@@ -866,13 +873,25 @@
           "READY": {
             "direction": "I"
           },
-          "DATA_IN": {
+          "in00": {
             "direction": "I",
-            "left": "31",
+            "left": "13",
             "right": "0"
           },
-          "state_reg": {
-            "direction": "O"
+          "in01": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "in10": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "in11": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
           },
           "FIFO_DATA": {
             "direction": "O",
@@ -881,77 +900,6 @@
           },
           "WR_EN": {
             "direction": "O"
-          }
-        }
-      },
-      "enable_read_0": {
-        "vlnv": "xilinx.com:module_ref:enable_read:1.0",
-        "xci_name": "design_1_enable_read_0_4",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "enable_read",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "read": {
-            "direction": "I"
-          },
-          "empty": {
-            "direction": "I"
-          },
-          "state_reg": {
-            "direction": "I"
-          },
-          "read_en": {
-            "direction": "O"
-          }
-        }
-      },
-      "enabled_binary_count_0": {
-        "vlnv": "xilinx.com:module_ref:enabled_binary_counter:1.0",
-        "xci_name": "design_1_enabled_binary_count_0_0",
-        "parameters": {
-          "max_value": {
-            "value": "0x00000011"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "enabled_binary_counter",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "RST_N": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "CLK": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "EN": {
-            "direction": "I"
-          },
-          "count": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
           }
         }
       }
@@ -1063,8 +1011,7 @@
           "JESD_SYNC",
           "util_ds_buf_1/OBUF_IN",
           "util_ds_buf_2/OBUF_IN",
-          "ila_0/probe3",
-          "frontpanel_1/btpoa0_ep_ready"
+          "ila_0/probe3"
         ]
       },
       "jesd204_0_rx_core_clk_out": {
@@ -1072,8 +1019,7 @@
           "jesd204_0/rx_core_clk_out",
           "jesd204_0_transport_0/clk",
           "fifo_generator_0/wr_clk",
-          "FIFO_FSM_0/CLK",
-          "enabled_binary_count_0/CLK"
+          "FIFO_FSM_0/CLK"
         ]
       },
       "wireoutbreakout_0_rx_reset": {
@@ -1111,21 +1057,13 @@
           "jesd204_0/rx_aresetn",
           "jesd204_0_transport_0/rst_n",
           "negate_0/a",
-          "FIFO_FSM_0/RST_N",
-          "enabled_binary_count_0/RST_N"
+          "FIFO_FSM_0/RST_N"
         ]
       },
       "negate_0_nota": {
         "ports": [
           "negate_0/nota",
           "fifo_generator_0/rst"
-        ]
-      },
-      "enable_read_0_read_en": {
-        "ports": [
-          "enable_read_0/read_en",
-          "fifo_generator_0/rd_en",
-          "ila_0/probe7"
         ]
       },
       "fifo_generator_0_valid": {
@@ -1137,8 +1075,7 @@
       "frontpanel_1_btpoa0_ep_read": {
         "ports": [
           "frontpanel_1/btpoa0_ep_read",
-          "ila_0/probe5",
-          "enable_read_0/read"
+          "ila_0/probe5"
         ]
       },
       "enabled_binary_count_0_OUT": {
@@ -1152,8 +1089,7 @@
         "ports": [
           "FIFO_FSM_0/WR_EN",
           "fifo_generator_0/wr_en",
-          "ila_0/probe2",
-          "enabled_binary_count_0/EN"
+          "ila_0/probe2"
         ]
       },
       "frontpanel_1_btpoa0_ep_blockstrobe": {
@@ -1169,30 +1105,49 @@
           "ila_0/probe1"
         ]
       },
-      "enabled_binary_count_0_count": {
-        "ports": [
-          "enabled_binary_count_0/count",
-          "FIFO_FSM_0/DATA_IN"
-        ]
-      },
       "fifo_generator_0_empty": {
         "ports": [
           "fifo_generator_0/empty",
           "ila_0/probe8"
         ]
       },
-      "FIFO_FSM_0_state_reg": {
+      "fifo_generator_0_prog_full": {
         "ports": [
-          "FIFO_FSM_0/state_reg",
-          "enable_read_0/state_reg",
-          "ila_0/probe9"
+          "fifo_generator_0/prog_full",
+          "frontpanel_1/btpoa0_ep_ready",
+          "fifo_generator_0/rd_en",
+          "ila_0/probe7"
         ]
       },
       "fifo_generator_0_prog_empty": {
         "ports": [
           "fifo_generator_0/prog_empty",
           "FIFO_FSM_0/READY",
-          "enable_read_0/empty"
+          "ila_0/probe9"
+        ]
+      },
+      "jesd204_0_transport_0_signalA_sampl0": {
+        "ports": [
+          "jesd204_0_transport_0/signalA_sampl0",
+          "FIFO_FSM_0/in00"
+        ]
+      },
+      "jesd204_0_transport_0_signalA_sampl1": {
+        "ports": [
+          "jesd204_0_transport_0/signalA_sampl1",
+          "FIFO_FSM_0/in11"
+        ]
+      },
+      "jesd204_0_transport_0_signalB_sampl0": {
+        "ports": [
+          "jesd204_0_transport_0/signalB_sampl0",
+          "FIFO_FSM_0/in10"
+        ]
+      },
+      "jesd204_0_transport_0_signalB_sampl1": {
+        "ports": [
+          "jesd204_0_transport_0/signalB_sampl1",
+          "FIFO_FSM_0/in01"
         ]
       }
     },

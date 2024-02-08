@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="nalarcon" Host="linrack11" Pid="94016" HostCore="48" HostMemory="790955468">
-    </Process>
-</ProcessHandle>

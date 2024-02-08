@@ -1,13 +1,16 @@
 `timescale  1ns / 1ps
 
 module concat_pad(
-	in0,
-	in1,
-	pad_out
+	input [13:0] in00,
+	input [13:0] in01,
+	input [13:0] in10,
+	input [13:0] in11,
+	output [31:0] pad_out
 	);
+    
+    wire [14:0] channel0 = (in00 + in01) >> 1;
+    wire [14:0] channel1 = (in10 + in11) >> 1;
 
-	input [13:0] in0, in1;
-	output [31:0] pad_out;
-
-	assign pad_out = {in1, 2'b00, in0, 2'b00};
+	assign pad_out = {channel1[13:0], 2'b00, channel0[13:0], 2'b00};
+	
 endmodule

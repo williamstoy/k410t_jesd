@@ -58,8 +58,10 @@ module design_1_FIFO_FSM_0_0 (
   RST_N,
   CLK,
   READY,
-  DATA_IN,
-  state_reg,
+  in00,
+  in01,
+  in10,
+  in11,
   FIFO_DATA,
   WR_EN
 );
@@ -71,20 +73,21 @@ input wire RST_N;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *)
 input wire CLK;
 input wire READY;
-input wire [31 : 0] DATA_IN;
-output wire state_reg;
+input wire [13 : 0] in00;
+input wire [13 : 0] in01;
+input wire [13 : 0] in10;
+input wire [13 : 0] in11;
 output wire [31 : 0] FIFO_DATA;
 output wire WR_EN;
 
-  FIFO_FSM #(
-    .FIFO_DEPTH(8000),
-    .FIFO_WIDTH(32)
-  ) inst (
+  FIFO_FSM inst (
     .RST_N(RST_N),
     .CLK(CLK),
     .READY(READY),
-    .DATA_IN(DATA_IN),
-    .state_reg(state_reg),
+    .in00(in00),
+    .in01(in01),
+    .in10(in10),
+    .in11(in11),
     .FIFO_DATA(FIFO_DATA),
     .WR_EN(WR_EN)
   );

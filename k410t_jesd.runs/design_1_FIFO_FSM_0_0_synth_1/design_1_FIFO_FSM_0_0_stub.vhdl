@@ -1,8 +1,8 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Wed Feb  7 19:10:29 2024
--- Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+-- Date        : Thu Feb  8 00:52:17 2024
+-- Host        : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_FIFO_FSM_0_0_stub.vhdl
 -- Design      : design_1_FIFO_FSM_0_0
@@ -17,8 +17,10 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     RST_N : in STD_LOGIC;
     CLK : in STD_LOGIC;
     READY : in STD_LOGIC;
-    DATA_IN : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    state_reg : out STD_LOGIC;
+    in00 : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    in01 : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    in10 : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    in11 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     FIFO_DATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
     WR_EN : out STD_LOGIC
   );
@@ -29,7 +31,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "RST_N,CLK,READY,DATA_IN[31:0],state_reg,FIFO_DATA[31:0],WR_EN";
+attribute black_box_pad_pin of stub : architecture is "RST_N,CLK,READY,in00[13:0],in01[13:0],in10[13:0],in11[13:0],FIFO_DATA[31:0],WR_EN";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "FIFO_FSM,Vivado 2019.2";
 begin
