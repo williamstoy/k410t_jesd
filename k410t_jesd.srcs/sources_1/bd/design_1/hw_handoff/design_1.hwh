@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 22:21:14 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb  7 22:56:16 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -112,9 +112,9 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="rx_core_clk_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="READY" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
+        <PORT DIR="I" NAME="READY" SIGIS="undef" SIGNAME="fifo_generator_0_prog_empty">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="almost_empty"/>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="prog_empty"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
@@ -156,9 +156,9 @@
             <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_read"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
+        <PORT DIR="I" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_prog_empty">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="empty"/>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="prog_empty"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="state_reg" SIGIS="undef" SIGNAME="FIFO_FSM_0_state_reg">
@@ -224,7 +224,7 @@
         <PARAMETER NAME="C_ENABLE_RLOCS" VALUE="0"/>
         <PARAMETER NAME="C_FAMILY" VALUE="kintex7"/>
         <PARAMETER NAME="C_FULL_FLAGS_RST_VAL" VALUE="1"/>
-        <PARAMETER NAME="C_HAS_ALMOST_EMPTY" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_ALMOST_EMPTY" VALUE="0"/>
         <PARAMETER NAME="C_HAS_ALMOST_FULL" VALUE="0"/>
         <PARAMETER NAME="C_HAS_BACKUP" VALUE="0"/>
         <PARAMETER NAME="C_HAS_DATA_COUNT" VALUE="0"/>
@@ -249,9 +249,9 @@
         <PARAMETER NAME="C_PRELOAD_LATENCY" VALUE="0"/>
         <PARAMETER NAME="C_PRELOAD_REGS" VALUE="1"/>
         <PARAMETER NAME="C_PRIM_FIFO_TYPE" VALUE="8kx4"/>
-        <PARAMETER NAME="C_PROG_EMPTY_THRESH_ASSERT_VAL" VALUE="4"/>
-        <PARAMETER NAME="C_PROG_EMPTY_THRESH_NEGATE_VAL" VALUE="5"/>
-        <PARAMETER NAME="C_PROG_EMPTY_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_PROG_EMPTY_THRESH_ASSERT_VAL" VALUE="16"/>
+        <PARAMETER NAME="C_PROG_EMPTY_THRESH_NEGATE_VAL" VALUE="17"/>
+        <PARAMETER NAME="C_PROG_EMPTY_TYPE" VALUE="1"/>
         <PARAMETER NAME="C_PROG_FULL_THRESH_ASSERT_VAL" VALUE="8191"/>
         <PARAMETER NAME="C_PROG_FULL_THRESH_NEGATE_VAL" VALUE="8190"/>
         <PARAMETER NAME="C_PROG_FULL_TYPE" VALUE="0"/>
@@ -436,7 +436,7 @@
         <PARAMETER NAME="Dout_Reset_Value" VALUE="0"/>
         <PARAMETER NAME="dynamic_power_saving" VALUE="false"/>
         <PARAMETER NAME="Almost_Full_Flag" VALUE="false"/>
-        <PARAMETER NAME="Almost_Empty_Flag" VALUE="true"/>
+        <PARAMETER NAME="Almost_Empty_Flag" VALUE="false"/>
         <PARAMETER NAME="Valid_Flag" VALUE="true"/>
         <PARAMETER NAME="Valid_Sense" VALUE="Active_High"/>
         <PARAMETER NAME="Underflow_Flag" VALUE="false"/>
@@ -461,9 +461,9 @@
         <PARAMETER NAME="Programmable_Full_Type" VALUE="No_Programmable_Full_Threshold"/>
         <PARAMETER NAME="Full_Threshold_Assert_Value" VALUE="8191"/>
         <PARAMETER NAME="Full_Threshold_Negate_Value" VALUE="8190"/>
-        <PARAMETER NAME="Programmable_Empty_Type" VALUE="No_Programmable_Empty_Threshold"/>
-        <PARAMETER NAME="Empty_Threshold_Assert_Value" VALUE="4"/>
-        <PARAMETER NAME="Empty_Threshold_Negate_Value" VALUE="5"/>
+        <PARAMETER NAME="Programmable_Empty_Type" VALUE="Single_Programmable_Empty_Threshold_Constant"/>
+        <PARAMETER NAME="Empty_Threshold_Assert_Value" VALUE="16"/>
+        <PARAMETER NAME="Empty_Threshold_Negate_Value" VALUE="17"/>
         <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="Clock_Type_AXI" VALUE="Common_Clock"/>
         <PARAMETER NAME="HAS_ACLKEN" VALUE="false"/>
@@ -624,18 +624,18 @@
         <PORT DIR="O" NAME="full" SIGIS="undef"/>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_read_0" PORT="empty"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="almost_empty" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="READY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="fifo_generator_0_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="prog_empty" SIGIS="undef" SIGNAME="fifo_generator_0_prog_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="READY"/>
+            <CONNECTION INSTANCE="enable_read_0" PORT="empty"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="wr_rst_busy" SIGIS="undef"/>
@@ -651,7 +651,6 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="FIFO_READ" TYPE="TARGET" VLNV="xilinx.com:interface:fifo_read:1.0">
           <PORTMAPS>
-            <PORTMAP LOGICAL="ALMOST_EMPTY" PHYSICAL="almost_empty"/>
             <PORTMAP LOGICAL="EMPTY" PHYSICAL="empty"/>
             <PORTMAP LOGICAL="RD_DATA" PHYSICAL="dout"/>
             <PORTMAP LOGICAL="RD_EN" PHYSICAL="rd_en"/>

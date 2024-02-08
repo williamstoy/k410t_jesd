@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Feb  7 22:21:12 2024
+//Date        : Wed Feb  7 22:56:15 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -51,9 +51,9 @@ module design_1
   wire enable_write_0_wr_en;
   wire [31:0]enabled_binary_count_0_OUT;
   wire [31:0]enabled_binary_count_0_count;
-  wire fifo_generator_0_almost_empty;
   wire [31:0]fifo_generator_0_dout;
   wire fifo_generator_0_empty;
+  wire fifo_generator_0_prog_empty;
   wire fifo_generator_0_valid;
   wire frontpanel_0_okClk;
   wire [31:0]frontpanel_1_btpipein80_EP_DATAOUT;
@@ -118,12 +118,12 @@ module design_1
        (.CLK(jesd204_0_rx_core_clk_out),
         .DATA_IN(enabled_binary_count_0_count),
         .FIFO_DATA(enabled_binary_count_0_OUT),
-        .READY(fifo_generator_0_almost_empty),
+        .READY(fifo_generator_0_prog_empty),
         .RST_N(jesd204_0_rx_aresetn),
         .WR_EN(enable_write_0_wr_en),
         .state_reg(FIFO_FSM_0_state_reg));
   design_1_enable_read_0_4 enable_read_0
-       (.empty(fifo_generator_0_empty),
+       (.empty(fifo_generator_0_prog_empty),
         .read(frontpanel_1_btpoa0_ep_read),
         .read_en(enable_read_0_read_en),
         .state_reg(FIFO_FSM_0_state_reg));
@@ -133,10 +133,10 @@ module design_1
         .RST_N(jesd204_0_rx_aresetn),
         .count(enabled_binary_count_0_count));
   design_1_fifo_generator_0_1 fifo_generator_0
-       (.almost_empty(fifo_generator_0_almost_empty),
-        .din(enabled_binary_count_0_OUT),
+       (.din(enabled_binary_count_0_OUT),
         .dout(fifo_generator_0_dout),
         .empty(fifo_generator_0_empty),
+        .prog_empty(fifo_generator_0_prog_empty),
         .rd_clk(frontpanel_0_okClk),
         .rd_en(enable_read_0_read_en),
         .rst(negate_0_nota),

@@ -63,8 +63,8 @@ module design_1_fifo_generator_0_1 (
   dout,
   full,
   empty,
-  almost_empty,
   valid,
+  prog_empty,
   wr_rst_busy,
   rd_rst_busy
 );
@@ -88,9 +88,8 @@ output wire [31 : 0] dout;
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
-(* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ ALMOST_EMPTY" *)
-output wire almost_empty;
 output wire valid;
+output wire prog_empty;
 output wire wr_rst_busy;
 output wire rd_rst_busy;
 
@@ -106,7 +105,7 @@ output wire rd_rst_busy;
     .C_ENABLE_RLOCS(0),
     .C_FAMILY("kintex7"),
     .C_FULL_FLAGS_RST_VAL(1),
-    .C_HAS_ALMOST_EMPTY(1),
+    .C_HAS_ALMOST_EMPTY(0),
     .C_HAS_ALMOST_FULL(0),
     .C_HAS_BACKUP(0),
     .C_HAS_DATA_COUNT(0),
@@ -131,9 +130,9 @@ output wire rd_rst_busy;
     .C_PRELOAD_LATENCY(0),
     .C_PRELOAD_REGS(1),
     .C_PRIM_FIFO_TYPE("8kx4"),
-    .C_PROG_EMPTY_THRESH_ASSERT_VAL(4),
-    .C_PROG_EMPTY_THRESH_NEGATE_VAL(5),
-    .C_PROG_EMPTY_TYPE(0),
+    .C_PROG_EMPTY_THRESH_ASSERT_VAL(16),
+    .C_PROG_EMPTY_THRESH_NEGATE_VAL(17),
+    .C_PROG_EMPTY_TYPE(1),
     .C_PROG_FULL_THRESH_ASSERT_VAL(8191),
     .C_PROG_FULL_THRESH_NEGATE_VAL(8190),
     .C_PROG_FULL_TYPE(0),
@@ -326,14 +325,14 @@ output wire rd_rst_busy;
     .wr_ack(),
     .overflow(),
     .empty(empty),
-    .almost_empty(almost_empty),
+    .almost_empty(),
     .valid(valid),
     .underflow(),
     .data_count(),
     .rd_data_count(),
     .wr_data_count(),
     .prog_full(),
-    .prog_empty(),
+    .prog_empty(prog_empty),
     .sbiterr(),
     .dbiterr(),
     .wr_rst_busy(wr_rst_busy),

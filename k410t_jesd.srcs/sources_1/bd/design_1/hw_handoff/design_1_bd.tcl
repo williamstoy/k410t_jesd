@@ -218,13 +218,13 @@ proc create_root_design { parentCell } {
   # Create instance: fifo_generator_0, and set properties
   set fifo_generator_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 fifo_generator_0 ]
   set_property -dict [ list \
-   CONFIG.Almost_Empty_Flag {true} \
+   CONFIG.Almost_Empty_Flag {false} \
    CONFIG.Data_Count_Width {13} \
-   CONFIG.Empty_Threshold_Assert_Value {4} \
+   CONFIG.Empty_Threshold_Assert_Value {16} \
    CONFIG.Empty_Threshold_Assert_Value_rach {1022} \
    CONFIG.Empty_Threshold_Assert_Value_wach {1022} \
    CONFIG.Empty_Threshold_Assert_Value_wrch {1022} \
-   CONFIG.Empty_Threshold_Negate_Value {5} \
+   CONFIG.Empty_Threshold_Negate_Value {17} \
    CONFIG.Enable_Safety_Circuit {true} \
    CONFIG.FIFO_Implementation_rach {Common_Clock_Distributed_RAM} \
    CONFIG.FIFO_Implementation_wach {Common_Clock_Distributed_RAM} \
@@ -242,6 +242,7 @@ proc create_root_design { parentCell } {
    CONFIG.Output_Data_Width {32} \
    CONFIG.Output_Depth {8192} \
    CONFIG.Performance_Options {First_Word_Fall_Through} \
+   CONFIG.Programmable_Empty_Type {Single_Programmable_Empty_Threshold_Constant} \
    CONFIG.Read_Data_Count_Width {13} \
    CONFIG.Reset_Type {Asynchronous_Reset} \
    CONFIG.Valid_Flag {true} \
@@ -374,9 +375,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net enable_write_0_wr_en [get_bd_pins FIFO_FSM_0/WR_EN] [get_bd_pins enabled_binary_count_0/EN] [get_bd_pins fifo_generator_0/wr_en] [get_bd_pins ila_0/probe2]
   connect_bd_net -net enabled_binary_count_0_OUT [get_bd_pins FIFO_FSM_0/FIFO_DATA] [get_bd_pins fifo_generator_0/din] [get_bd_pins ila_0/probe0]
   connect_bd_net -net enabled_binary_count_0_count [get_bd_pins FIFO_FSM_0/DATA_IN] [get_bd_pins enabled_binary_count_0/count]
-  connect_bd_net -net fifo_generator_0_almost_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins fifo_generator_0/almost_empty]
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe1]
-  connect_bd_net -net fifo_generator_0_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/empty] [get_bd_pins ila_0/probe8]
+  connect_bd_net -net fifo_generator_0_empty [get_bd_pins fifo_generator_0/empty] [get_bd_pins ila_0/probe8]
+  connect_bd_net -net fifo_generator_0_prog_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/prog_empty]
   connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_1_btpoa0_ep_blockstrobe [get_bd_pins frontpanel_1/btpoa0_ep_blockstrobe] [get_bd_pins ila_0/probe6]
