@@ -209,35 +209,35 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.Almost_Empty_Flag {true} \
    CONFIG.Almost_Full_Flag {true} \
-   CONFIG.Data_Count_Width {6} \
-   CONFIG.Empty_Threshold_Assert_Value {62} \
+   CONFIG.Data_Count_Width {8} \
+   CONFIG.Empty_Threshold_Assert_Value {100} \
    CONFIG.Empty_Threshold_Assert_Value_rach {1022} \
    CONFIG.Empty_Threshold_Assert_Value_wach {1022} \
    CONFIG.Empty_Threshold_Assert_Value_wrch {1022} \
-   CONFIG.Empty_Threshold_Negate_Value {63} \
+   CONFIG.Empty_Threshold_Negate_Value {101} \
    CONFIG.Enable_Safety_Circuit {true} \
    CONFIG.FIFO_Implementation_rach {Common_Clock_Distributed_RAM} \
    CONFIG.FIFO_Implementation_wach {Common_Clock_Distributed_RAM} \
    CONFIG.FIFO_Implementation_wrch {Common_Clock_Distributed_RAM} \
    CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} \
    CONFIG.Full_Flags_Reset_Value {1} \
-   CONFIG.Full_Threshold_Assert_Value {32} \
+   CONFIG.Full_Threshold_Assert_Value {64} \
    CONFIG.Full_Threshold_Assert_Value_rach {1023} \
    CONFIG.Full_Threshold_Assert_Value_wach {1023} \
    CONFIG.Full_Threshold_Assert_Value_wrch {1023} \
-   CONFIG.Full_Threshold_Negate_Value {31} \
+   CONFIG.Full_Threshold_Negate_Value {32} \
    CONFIG.INTERFACE_TYPE {Native} \
    CONFIG.Input_Data_Width {32} \
-   CONFIG.Input_Depth {64} \
+   CONFIG.Input_Depth {256} \
    CONFIG.Output_Data_Width {32} \
-   CONFIG.Output_Depth {64} \
+   CONFIG.Output_Depth {256} \
    CONFIG.Performance_Options {First_Word_Fall_Through} \
    CONFIG.Programmable_Empty_Type {Single_Programmable_Empty_Threshold_Constant} \
-   CONFIG.Programmable_Full_Type {Single_Programmable_Full_Threshold_Constant} \
-   CONFIG.Read_Data_Count_Width {6} \
+   CONFIG.Programmable_Full_Type {Multiple_Programmable_Full_Threshold_Constants} \
+   CONFIG.Read_Data_Count_Width {8} \
    CONFIG.Reset_Type {Asynchronous_Reset} \
    CONFIG.Valid_Flag {true} \
-   CONFIG.Write_Data_Count_Width {6} \
+   CONFIG.Write_Data_Count_Width {8} \
  ] $fifo_generator_0
 
   # Create instance: frontpanel_1, and set properties
@@ -269,7 +269,8 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {10} \
+   CONFIG.C_NUM_OF_PROBES {12} \
+   CONFIG.C_PROBE10_WIDTH {32} \
    CONFIG.C_PROBE2_WIDTH {1} \
  ] $ila_0
 
@@ -374,7 +375,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net FPGA_JESD_SYSREFP_1 [get_bd_ports FPGA_JESD_SYSREFP] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
   connect_bd_net -net enable_write_0_wr_en [get_bd_pins FIFO_FSM_0/WR_EN] [get_bd_pins fifo_generator_0/wr_en] [get_bd_pins ila_0/probe2]
   connect_bd_net -net enabled_binary_count_0_OUT [get_bd_pins FIFO_FSM_0/FIFO_DATA] [get_bd_pins fifo_generator_0/din] [get_bd_pins ila_0/probe0]
-  connect_bd_net -net enabled_binary_count_0_count [get_bd_pins FIFO_FSM_0/test_data] [get_bd_pins enabled_binary_count_0/count]
+  connect_bd_net -net enabled_binary_count_0_count [get_bd_pins FIFO_FSM_0/test_data] [get_bd_pins enabled_binary_count_0/count] [get_bd_pins ila_0/probe10]
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe1]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins fifo_generator_0/empty] [get_bd_pins ila_0/probe8]
   connect_bd_net -net fifo_generator_0_prog_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins fifo_generator_0/prog_empty] [get_bd_pins ila_0/probe9]
@@ -396,7 +397,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aresetn [get_bd_pins jesd204_0/s_axi_aresetn] [get_bd_pins okAXI4LiteInterface_0/m_axi_aresetn]
   connect_bd_net -net rxn_1 [get_bd_ports rxn] [get_bd_pins jesd204_0/rxn]
   connect_bd_net -net rxp_1 [get_bd_ports rxp] [get_bd_pins jesd204_0/rxp]
-  connect_bd_net -net trigger_to_level_0_READY_LVL [get_bd_pins FIFO_FSM_0/TEST_MODE] [get_bd_pins enabled_binary_count_0/EN] [get_bd_pins trigger_to_level_0/READY_LVL]
+  connect_bd_net -net trigger_to_level_0_READY_LVL [get_bd_pins FIFO_FSM_0/TEST_MODE] [get_bd_pins enabled_binary_count_0/EN] [get_bd_pins ila_0/probe11] [get_bd_pins trigger_to_level_0/READY_LVL]
   connect_bd_net -net util_ds_buf_0_IBUF_OUT [get_bd_pins jesd204_0/rx_sysref] [get_bd_pins util_ds_buf_0/IBUF_OUT]
   connect_bd_net -net util_ds_buf_1_OBUF_DS_N [get_bd_ports SYNCbABM] [get_bd_pins util_ds_buf_1/OBUF_DS_N]
   connect_bd_net -net util_ds_buf_1_OBUF_DS_P [get_bd_ports SYNCbABP] [get_bd_pins util_ds_buf_1/OBUF_DS_P]

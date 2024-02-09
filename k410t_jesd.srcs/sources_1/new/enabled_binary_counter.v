@@ -23,7 +23,7 @@
 module enabled_binary_counter #
     (parameter integer step = 1,
     parameter integer width = 32,
-    parameter integer max_value = 32'hffffffff
+    parameter integer max_value = 32'h00000011
     ) 
     (
     input RST_N,

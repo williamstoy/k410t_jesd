@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Fri Feb  9 16:18:24 2024
+//Date        : Fri Feb  9 17:21:21 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -169,6 +169,8 @@ module design_1
        (.clk(frontpanel_0_okClk),
         .probe0(enabled_binary_count_0_OUT),
         .probe1(fifo_generator_0_dout),
+        .probe10(enabled_binary_count_0_count),
+        .probe11(trigger_to_level_0_READY_LVL),
         .probe2(enable_write_0_wr_en),
         .probe3(jesd204_0_rx_sync),
         .probe4(fifo_generator_0_valid),

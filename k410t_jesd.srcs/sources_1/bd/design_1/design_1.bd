@@ -203,7 +203,7 @@
             "value": "true"
           },
           "Empty_Threshold_Assert_Value": {
-            "value": "62"
+            "value": "100"
           },
           "Enable_Safety_Circuit": {
             "value": "true"
@@ -224,6 +224,9 @@
             "value": "1"
           },
           "Full_Threshold_Assert_Value": {
+            "value": "64"
+          },
+          "Full_Threshold_Negate_Value": {
             "value": "32"
           },
           "INTERFACE_TYPE": {
@@ -233,7 +236,7 @@
             "value": "32"
           },
           "Input_Depth": {
-            "value": "64"
+            "value": "256"
           },
           "Output_Data_Width": {
             "value": "32"
@@ -245,7 +248,7 @@
             "value": "Single_Programmable_Empty_Threshold_Constant"
           },
           "Programmable_Full_Type": {
-            "value": "Single_Programmable_Full_Threshold_Constant"
+            "value": "Multiple_Programmable_Full_Threshold_Constants"
           },
           "Valid_Flag": {
             "value": "true"
@@ -269,7 +272,10 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "10"
+            "value": "12"
+          },
+          "C_PROBE10_WIDTH": {
+            "value": "32"
           },
           "C_PROBE2_WIDTH": {
             "value": "1"
@@ -1251,13 +1257,15 @@
         "ports": [
           "trigger_to_level_0/READY_LVL",
           "FIFO_FSM_0/TEST_MODE",
+          "ila_0/probe11",
           "enabled_binary_count_0/EN"
         ]
       },
       "enabled_binary_count_0_count": {
         "ports": [
           "enabled_binary_count_0/count",
-          "FIFO_FSM_0/test_data"
+          "FIFO_FSM_0/test_data",
+          "ila_0/probe10"
         ]
       }
     },
