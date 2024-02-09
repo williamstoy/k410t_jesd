@@ -25,6 +25,8 @@ module FIFO_FSM
 	input wire RST_N,
 	input wire CLK, // FIFO CLK
 	input wire READY,
+	input wire TEST_MODE,
+	input [31:0] test_data,
 	input [13:0] in00,
 	input [13:0] in01,
 	input [13:0] in10,
@@ -45,7 +47,7 @@ wire [14:0] channel0_avg = (channel0_2 + channel0) >> 1;
 wire [14:0] channel1_avg = (channel1_2 + channel1) >> 1;
 
 //running average over 2 clock cycles concatenated. 2 channels per device
-wire [31:0] pad_out = {channel1_avg[13:0], 2'b00, channel0_avg, 2'b00}; 
+wire [31:0] pad_out = TEST_MODE ?  test_data : {channel1_avg[13:0], 2'b00, channel0_avg, 2'b00}; 
 
 
 

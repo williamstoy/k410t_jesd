@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Thu Feb  8 00:57:47 2024
+| Date         : Fri Feb  9 16:33:15 2024
 | Host         : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command      : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 | Design       : design_1_wrapper
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs                 | 6068 |     0 |    254200 |  2.39 |
-|   LUT as Logic             | 5304 |     0 |    254200 |  2.09 |
+| Slice LUTs                 | 6131 |     0 |    254200 |  2.41 |
+|   LUT as Logic             | 5367 |     0 |    254200 |  2.11 |
 |   LUT as Memory            |  764 |     0 |     90600 |  0.84 |
 |     LUT as Distributed RAM |  585 |     0 |           |       |
 |     LUT as Shift Register  |  179 |     0 |           |       |
-| Slice Registers            | 7191 |     0 |    508400 |  1.41 |
-|   Register as Flip Flop    | 7191 |     0 |    508400 |  1.41 |
+| Slice Registers            | 7233 |     0 |    508400 |  1.42 |
+|   Register as Flip Flop    | 7233 |     0 |    508400 |  1.42 |
 |   Register as Latch        |    0 |     0 |    508400 |  0.00 |
 | F7 Muxes                   |   43 |     0 |    127100 |  0.03 |
 | F8 Muxes                   |   13 |     0 |     63550 |  0.02 |
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 115   |          Yes |           - |          Set |
-| 438   |          Yes |           - |        Reset |
+| 474   |          Yes |           - |        Reset |
 | 147   |          Yes |         Set |            - |
-| 6579  |          Yes |       Reset |            - |
+| 6585  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,13 +69,13 @@ Table of Contents
 +--------------------------------------------+------+-------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Available | Util% |
 +--------------------------------------------+------+-------+-----------+-------+
-| Slice                                      | 2685 |     0 |     63550 |  4.23 |
-|   SLICEL                                   | 1730 |     0 |           |       |
-|   SLICEM                                   |  955 |     0 |           |       |
-| LUT as Logic                               | 5304 |     0 |    254200 |  2.09 |
+| Slice                                      | 2768 |     0 |     63550 |  4.36 |
+|   SLICEL                                   | 1740 |     0 |           |       |
+|   SLICEM                                   | 1028 |     0 |           |       |
+| LUT as Logic                               | 5367 |     0 |    254200 |  2.11 |
 |   using O5 output only                     |    3 |       |           |       |
-|   using O6 output only                     | 4449 |       |           |       |
-|   using O5 and O6                          |  852 |       |           |       |
+|   using O6 output only                     | 4500 |       |           |       |
+|   using O5 and O6                          |  864 |       |           |       |
 | LUT as Memory                              |  764 |     0 |     90600 |  0.84 |
 |   LUT as Distributed RAM                   |  585 |     0 |           |       |
 |     using O5 output only                   |    0 |       |           |       |
@@ -85,12 +85,12 @@ Table of Contents
 |     using O5 output only                   |    6 |       |           |       |
 |     using O6 output only                   |   41 |       |           |       |
 |     using O5 and O6                        |  132 |       |           |       |
-| Slice Registers                            | 7191 |     0 |    508400 |  1.41 |
-|   Register driven from within the Slice    | 3597 |       |           |       |
-|   Register driven from outside the Slice   | 3594 |       |           |       |
-|     LUT in front of the register is unused | 2392 |       |           |       |
-|     LUT in front of the register is used   | 1202 |       |           |       |
-| Unique Control Sets                        |  336 |       |     63550 |  0.53 |
+| Slice Registers                            | 7233 |     0 |    508400 |  1.42 |
+|   Register driven from within the Slice    | 3638 |       |           |       |
+|   Register driven from outside the Slice   | 3595 |       |           |       |
+|     LUT in front of the register is unused | 2390 |       |           |       |
+|     LUT in front of the register is used   | 1205 |       |           |       |
+| Unique Control Sets                        |  340 |       |     63550 |  0.54 |
 +--------------------------------------------+------+-------+-----------+-------+
 * Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.
 
@@ -193,16 +193,16 @@ Table of Contents
 +---------------+------+---------------------+
 |    Ref Name   | Used | Functional Category |
 +---------------+------+---------------------+
-| FDRE          | 6579 |        Flop & Latch |
+| FDRE          | 6585 |        Flop & Latch |
 | LUT6          | 2786 |                 LUT |
-| LUT4          |  970 |                 LUT |
-| LUT5          |  956 |                 LUT |
-| LUT2          |  656 |                 LUT |
-| LUT3          |  597 |                 LUT |
+| LUT5          |  992 |                 LUT |
+| LUT4          |  976 |                 LUT |
+| LUT2          |  659 |                 LUT |
+| LUT3          |  626 |                 LUT |
 | RAMD64E       |  528 |  Distributed Memory |
-| FDCE          |  438 |        Flop & Latch |
-| CARRY4        |  348 |          CarryLogic |
-| LUT1          |  191 |                 LUT |
+| FDCE          |  474 |        Flop & Latch |
+| CARRY4        |  356 |          CarryLogic |
+| LUT1          |  192 |                 LUT |
 | SRL16E        |  175 |  Distributed Memory |
 | FDSE          |  147 |        Flop & Latch |
 | SRLC32E       |  134 |  Distributed Memory |
@@ -242,30 +242,33 @@ Table of Contents
 10. Instantiated Netlists
 -------------------------
 
-+----------------------------------+------+
-|             Ref Name             | Used |
-+----------------------------------+------+
-| xpm_cdc_async_rst                |    1 |
-| okWireOut                        |    1 |
-| okWireIn                         |    1 |
-| okCoreHarness                    |    1 |
-| okCore                           |    1 |
-| okBTPipeOut                      |    1 |
-| okBTPipeIn                       |    1 |
-| fifo_generator_v13_2_0           |    1 |
-| design_1_wireoutbreakout_0_0     |    1 |
-| design_1_util_ds_buf_2_0         |    1 |
-| design_1_util_ds_buf_1_0         |    1 |
-| design_1_util_ds_buf_0_0         |    1 |
-| design_1_okAXI4LiteInterface_0_0 |    1 |
-| design_1_negate_0_0              |    1 |
-| design_1_jesd204_0_transport_0_0 |    1 |
-| design_1_jesd204_0_0             |    1 |
-| design_1_ila_0_2                 |    1 |
-| design_1_frontpanel_1_0          |    1 |
-| design_1_fifo_generator_0_1      |    1 |
-| design_1_FIFO_FSM_0_0            |    1 |
-| dbg_hub                          |    1 |
-+----------------------------------+------+
++-----------------------------------+------+
+|              Ref Name             | Used |
++-----------------------------------+------+
+| xpm_cdc_async_rst                 |    1 |
+| okWireOut                         |    1 |
+| okWireIn                          |    1 |
+| okTriggerIn                       |    1 |
+| okCoreHarness                     |    1 |
+| okCore                            |    1 |
+| okBTPipeOut                       |    1 |
+| okBTPipeIn                        |    1 |
+| fifo_generator_v13_2_0            |    1 |
+| design_1_wireoutbreakout_0_0      |    1 |
+| design_1_util_ds_buf_2_0          |    1 |
+| design_1_util_ds_buf_1_0          |    1 |
+| design_1_util_ds_buf_0_0          |    1 |
+| design_1_trigger_to_level_0_0     |    1 |
+| design_1_okAXI4LiteInterface_0_0  |    1 |
+| design_1_negate_0_0               |    1 |
+| design_1_jesd204_0_transport_0_0  |    1 |
+| design_1_jesd204_0_0              |    1 |
+| design_1_ila_0_2                  |    1 |
+| design_1_frontpanel_1_0           |    1 |
+| design_1_fifo_generator_0_1       |    1 |
+| design_1_enabled_binary_count_0_0 |    1 |
+| design_1_FIFO_FSM_0_0             |    1 |
+| dbg_hub                           |    1 |
++-----------------------------------+------+
 
 

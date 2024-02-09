@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Thu Feb  8 00:50:57 2024
+//Date        : Fri Feb  9 16:18:24 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_axi4_s2mm_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=14,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=7,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_axi4_s2mm_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (FPGA_JESD_CLKM,
     FPGA_JESD_CLKP,
@@ -48,6 +48,7 @@ module design_1
   wire FPGA_JESD_SYSREFP_1;
   wire enable_write_0_wr_en;
   wire [31:0]enabled_binary_count_0_OUT;
+  wire [31:0]enabled_binary_count_0_count;
   wire [31:0]fifo_generator_0_dout;
   wire fifo_generator_0_empty;
   wire fifo_generator_0_prog_empty;
@@ -59,6 +60,7 @@ module design_1
   wire frontpanel_1_btpipein80_EP_WRITE;
   wire frontpanel_1_btpoa0_ep_blockstrobe;
   wire frontpanel_1_btpoa0_ep_read;
+  wire [31:0]frontpanel_1_ti40_ep_trigger;
   wire [31:0]frontpanel_1_wirein00_EP_DATAOUT;
   wire [31:0]frontpanel_1_wireout20_EP_DATAIN;
   wire host_interface_1_okAA;
@@ -96,6 +98,7 @@ module design_1
   wire okAXI4LiteInterface_0_m_axi_aresetn;
   wire [3:0]rxn_1;
   wire [3:0]rxp_1;
+  wire trigger_to_level_0_READY_LVL;
   wire [0:0]util_ds_buf_0_IBUF_OUT;
   wire [0:0]util_ds_buf_1_OBUF_DS_N;
   wire [0:0]util_ds_buf_1_OBUF_DS_P;
@@ -121,11 +124,18 @@ module design_1
         .FIFO_DATA(enabled_binary_count_0_OUT),
         .READY(fifo_generator_0_prog_empty),
         .RST_N(jesd204_0_rx_aresetn),
+        .TEST_MODE(trigger_to_level_0_READY_LVL),
         .WR_EN(enable_write_0_wr_en),
         .in00(jesd204_0_transport_0_signalA_sampl0),
         .in01(jesd204_0_transport_0_signalB_sampl1),
         .in10(jesd204_0_transport_0_signalB_sampl0),
-        .in11(jesd204_0_transport_0_signalA_sampl1));
+        .in11(jesd204_0_transport_0_signalA_sampl1),
+        .test_data(enabled_binary_count_0_count));
+  design_1_enabled_binary_count_0_0 enabled_binary_count_0
+       (.CLK(jesd204_0_rx_core_clk_out),
+        .EN(trigger_to_level_0_READY_LVL),
+        .RST_N(jesd204_0_rx_aresetn),
+        .count(enabled_binary_count_0_count));
   design_1_fifo_generator_0_1 fifo_generator_0
        (.din(enabled_binary_count_0_OUT),
         .dout(fifo_generator_0_dout),
@@ -151,6 +161,8 @@ module design_1
         .okHU(host_interface_1_okHU),
         .okUH(host_interface_1_okUH),
         .okUHU(host_interface_okuhu[31:0]),
+        .ti40_ep_clk(frontpanel_0_okClk),
+        .ti40_ep_trigger(frontpanel_1_ti40_ep_trigger),
         .wi00_ep_dataout(frontpanel_1_wirein00_EP_DATAOUT),
         .wo20_ep_datain(frontpanel_1_wireout20_EP_DATAIN));
   design_1_ila_0_2 ila_0
@@ -233,6 +245,10 @@ module design_1
         .m_axi_wstrb(okAXI4LiteInterface_0_m_axi_WSTRB),
         .m_axi_wvalid(okAXI4LiteInterface_0_m_axi_WVALID),
         .okClkIn(frontpanel_0_okClk));
+  design_1_trigger_to_level_0_0 trigger_to_level_0
+       (.READY(frontpanel_1_ti40_ep_trigger),
+        .READY_LVL(trigger_to_level_0_READY_LVL),
+        .RSTN(jesd204_0_rx_aresetn));
   design_1_util_ds_buf_0_0 util_ds_buf_0
        (.IBUF_DS_N(FPGA_JESD_SYSREFM_1),
         .IBUF_DS_P(FPGA_JESD_SYSREFP_1),

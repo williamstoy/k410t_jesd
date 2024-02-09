@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Thu Feb  8 00:59:20 2024
+| Date             : Fri Feb  9 16:34:47 2024
 | Host             : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.183        |
+| Total On-Chip Power (W)  | 1.184        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.970        |
@@ -53,23 +53,23 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.022 |       23 |       --- |             --- |
-| Slice Logic              |     0.015 |    15283 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     5304 |    254200 |            2.09 |
+| Slice Logic              |     0.015 |    15411 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     5367 |    254200 |            2.11 |
 |   LUT as Distributed RAM |     0.002 |      585 |     90600 |            0.65 |
-|   CARRY4                 |    <0.001 |      348 |     63550 |            0.55 |
-|   Register               |    <0.001 |     7191 |    508400 |            1.41 |
+|   CARRY4                 |    <0.001 |      356 |     63550 |            0.56 |
+|   Register               |    <0.001 |     7233 |    508400 |            1.42 |
 |   F7/F8 Muxes            |    <0.001 |       56 |    254200 |            0.02 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register  |    <0.001 |      179 |     90600 |            0.20 |
-|   Others                 |     0.000 |      593 |       --- |             --- |
+|   Others                 |     0.000 |      596 |       --- |             --- |
 |   BUFR                   |     0.000 |        2 |       208 |            0.96 |
-| Signals                  |     0.019 |    12215 |       --- |             --- |
+| Signals                  |     0.019 |    12339 |       --- |             --- |
 | Block RAM                |     0.013 |       11 |       795 |            1.38 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |     0.100 |       48 |       400 |           12.00 |
 | GTX                      |     0.695 |        4 |         8 |           50.00 |
 | Static Power             |     0.214 |          |           |                 |
-| Total                    |     1.183 |          |           |                 |
+| Total                    |     1.184 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 

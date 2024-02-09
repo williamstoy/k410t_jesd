@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# FIFO_FSM, jesd204_0_transport_layer_demapper, negate, okAXI4LiteInterface, wireoutbreakout
+# FIFO_FSM, enabled_binary_counter, jesd204_0_transport_layer_demapper, negate, okAXI4LiteInterface, trigger_to_level, wireoutbreakout
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -190,6 +190,20 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: enabled_binary_count_0, and set properties
+  set block_name enabled_binary_counter
+  set block_cell_name enabled_binary_count_0
+  if { [catch {set enabled_binary_count_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $enabled_binary_count_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+    set_property -dict [ list \
+   CONFIG.max_value {0x00000011} \
+ ] $enabled_binary_count_0
+
   # Create instance: fifo_generator_0, and set properties
   set fifo_generator_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 fifo_generator_0 ]
   set_property -dict [ list \
@@ -237,8 +251,8 @@ proc create_root_design { parentCell } {
    CONFIG.EXDES.SELECTION {PipeTest} \
    CONFIG.PO.ADDR_0 {0xff} \
    CONFIG.PO.COUNT {0} \
-   CONFIG.TI.ADDR_0 {0xff} \
-   CONFIG.TI.COUNT {0} \
+   CONFIG.TI.ADDR_0 {0x40} \
+   CONFIG.TI.COUNT {1} \
    CONFIG.WI.ADDR_0 {0x00} \
    CONFIG.WI.ADDR_1 {0xff} \
    CONFIG.WI.ADDR_2 {0xff} \
@@ -308,6 +322,17 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: trigger_to_level_0, and set properties
+  set block_name trigger_to_level
+  set block_cell_name trigger_to_level_0
+  if { [catch {set trigger_to_level_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $trigger_to_level_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: util_ds_buf_0, and set properties
   set util_ds_buf_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_0 ]
 
@@ -349,16 +374,18 @@ proc create_root_design { parentCell } {
   connect_bd_net -net FPGA_JESD_SYSREFP_1 [get_bd_ports FPGA_JESD_SYSREFP] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
   connect_bd_net -net enable_write_0_wr_en [get_bd_pins FIFO_FSM_0/WR_EN] [get_bd_pins fifo_generator_0/wr_en] [get_bd_pins ila_0/probe2]
   connect_bd_net -net enabled_binary_count_0_OUT [get_bd_pins FIFO_FSM_0/FIFO_DATA] [get_bd_pins fifo_generator_0/din] [get_bd_pins ila_0/probe0]
+  connect_bd_net -net enabled_binary_count_0_count [get_bd_pins FIFO_FSM_0/test_data] [get_bd_pins enabled_binary_count_0/count]
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe1]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins fifo_generator_0/empty] [get_bd_pins ila_0/probe8]
   connect_bd_net -net fifo_generator_0_prog_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins fifo_generator_0/prog_empty] [get_bd_pins ila_0/probe9]
   connect_bd_net -net fifo_generator_0_prog_full [get_bd_pins fifo_generator_0/prog_full] [get_bd_pins fifo_generator_0/rd_en] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe7]
   connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
-  connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
+  connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins frontpanel_1/ti40_ep_clk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_1_btpoa0_ep_blockstrobe [get_bd_pins frontpanel_1/btpoa0_ep_blockstrobe] [get_bd_pins ila_0/probe6]
   connect_bd_net -net frontpanel_1_btpoa0_ep_read [get_bd_pins frontpanel_1/btpoa0_ep_read] [get_bd_pins ila_0/probe5]
-  connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins FIFO_FSM_0/RST_N] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a]
-  connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins FIFO_FSM_0/CLK] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
+  connect_bd_net -net frontpanel_1_ti40_ep_trigger [get_bd_pins frontpanel_1/ti40_ep_trigger] [get_bd_pins trigger_to_level_0/READY]
+  connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins FIFO_FSM_0/RST_N] [get_bd_pins enabled_binary_count_0/RST_N] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a] [get_bd_pins trigger_to_level_0/RSTN]
+  connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins FIFO_FSM_0/CLK] [get_bd_pins enabled_binary_count_0/CLK] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
   connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
   connect_bd_net -net jesd204_0_transport_0_signalA_sampl0 [get_bd_pins FIFO_FSM_0/in00] [get_bd_pins jesd204_0_transport_0/signalA_sampl0]
   connect_bd_net -net jesd204_0_transport_0_signalA_sampl1 [get_bd_pins FIFO_FSM_0/in11] [get_bd_pins jesd204_0_transport_0/signalA_sampl1]
@@ -369,6 +396,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net okAXI4LiteInterface_0_m_axi_aresetn [get_bd_pins jesd204_0/s_axi_aresetn] [get_bd_pins okAXI4LiteInterface_0/m_axi_aresetn]
   connect_bd_net -net rxn_1 [get_bd_ports rxn] [get_bd_pins jesd204_0/rxn]
   connect_bd_net -net rxp_1 [get_bd_ports rxp] [get_bd_pins jesd204_0/rxp]
+  connect_bd_net -net trigger_to_level_0_READY_LVL [get_bd_pins FIFO_FSM_0/TEST_MODE] [get_bd_pins enabled_binary_count_0/EN] [get_bd_pins trigger_to_level_0/READY_LVL]
   connect_bd_net -net util_ds_buf_0_IBUF_OUT [get_bd_pins jesd204_0/rx_sysref] [get_bd_pins util_ds_buf_0/IBUF_OUT]
   connect_bd_net -net util_ds_buf_1_OBUF_DS_N [get_bd_ports SYNCbABM] [get_bd_pins util_ds_buf_1/OBUF_DS_N]
   connect_bd_net -net util_ds_buf_1_OBUF_DS_P [get_bd_ports SYNCbABP] [get_bd_pins util_ds_buf_1/OBUF_DS_P]

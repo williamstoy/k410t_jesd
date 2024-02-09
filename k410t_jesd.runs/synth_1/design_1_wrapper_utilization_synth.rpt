@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Thu Feb  8 00:54:49 2024
+| Date         : Fri Feb  9 16:30:15 2024
 | Host         : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -159,22 +159,24 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+----------------------------------+------+
-|             Ref Name             | Used |
-+----------------------------------+------+
-| design_1_wireoutbreakout_0_0     |    1 |
-| design_1_util_ds_buf_2_0         |    1 |
-| design_1_util_ds_buf_1_0         |    1 |
-| design_1_util_ds_buf_0_0         |    1 |
-| design_1_okAXI4LiteInterface_0_0 |    1 |
-| design_1_negate_0_0              |    1 |
-| design_1_jesd204_0_transport_0_0 |    1 |
-| design_1_jesd204_0_0             |    1 |
-| design_1_ila_0_2                 |    1 |
-| design_1_frontpanel_1_0          |    1 |
-| design_1_fifo_generator_0_1      |    1 |
-| design_1_FIFO_FSM_0_0            |    1 |
-+----------------------------------+------+
++-----------------------------------+------+
+|              Ref Name             | Used |
++-----------------------------------+------+
+| design_1_wireoutbreakout_0_0      |    1 |
+| design_1_util_ds_buf_2_0          |    1 |
+| design_1_util_ds_buf_1_0          |    1 |
+| design_1_util_ds_buf_0_0          |    1 |
+| design_1_trigger_to_level_0_0     |    1 |
+| design_1_okAXI4LiteInterface_0_0  |    1 |
+| design_1_negate_0_0               |    1 |
+| design_1_jesd204_0_transport_0_0  |    1 |
+| design_1_jesd204_0_0              |    1 |
+| design_1_ila_0_2                  |    1 |
+| design_1_frontpanel_1_0           |    1 |
+| design_1_fifo_generator_0_1       |    1 |
+| design_1_enabled_binary_count_0_0 |    1 |
+| design_1_FIFO_FSM_0_0             |    1 |
++-----------------------------------+------+
 
 
 9. Instantiated Netlists

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Nicolas Alarcon
 // 
 // Create Date: 02/05/2024 04:56:15 PM
 // Design Name: 
@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: Uses a pulse to flip a level indicator. active low reset to low output
 // 
 // Dependencies: 
 // 
@@ -36,7 +36,7 @@ always@(negedge RSTN, posedge rdy) begin
         READY_LVL <= 1'b0;
     end
     else if(rdy) begin
-        READY_LVL <= 1'b1;
+        READY_LVL <= ~READY_LVL;
     end
 end
 endmodule

@@ -59,6 +59,8 @@ module design_1_FIFO_FSM_0_0 (
   RST_N,
   CLK,
   READY,
+  TEST_MODE,
+  test_data,
   in00,
   in01,
   in10,
@@ -74,6 +76,8 @@ input wire RST_N;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *)
 input wire CLK;
 input wire READY;
+input wire TEST_MODE;
+input wire [31 : 0] test_data;
 input wire [13 : 0] in00;
 input wire [13 : 0] in01;
 input wire [13 : 0] in10;
@@ -85,6 +89,8 @@ output wire WR_EN;
     .RST_N(RST_N),
     .CLK(CLK),
     .READY(READY),
+    .TEST_MODE(TEST_MODE),
+    .test_data(test_data),
     .in00(in00),
     .in01(in01),
     .in10(in10),

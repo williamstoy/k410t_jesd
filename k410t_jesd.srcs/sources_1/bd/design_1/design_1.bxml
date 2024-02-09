@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1707371459"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1707371459"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1707371459"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1707371459"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1707513516"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1707513516"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1707513516"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1707513516"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_jesd204_0_0/design_1_jesd204_0_0.xci" Type="IP">
         <Instance HierarchyPath="jesd204_0"/>
@@ -97,6 +97,22 @@
       </File>
       <File Name="ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0.xci" Type="IP">
         <Instance HierarchyPath="FIFO_FSM_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/design_1_trigger_to_level_0_0/design_1_trigger_to_level_0_0.xci" Type="IP">
+        <Instance HierarchyPath="trigger_to_level_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/design_1_enabled_binary_count_0_0/design_1_enabled_binary_count_0_0.xci" Type="IP">
+        <Instance HierarchyPath="enabled_binary_count_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

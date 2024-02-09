@@ -1909,7 +1909,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.triggerin40" xilinx:dependency="($PARAM_VALUE.TI.ADDR_0 == 0x40) || ($PARAM_VALUE.TI.ADDR_1 == 0x40) || ($PARAM_VALUE.TI.ADDR_2 == 0x40) || ($PARAM_VALUE.TI.ADDR_3 == 0x40) || ($PARAM_VALUE.TI.ADDR_4 == 0x40) || ($PARAM_VALUE.TI.ADDR_5 == 0x40) || ($PARAM_VALUE.TI.ADDR_6 == 0x40) || ($PARAM_VALUE.TI.ADDR_7 == 0x40) || ($PARAM_VALUE.TI.ADDR_8 == 0x40) || ($PARAM_VALUE.TI.ADDR_9 == 0x40) || ($PARAM_VALUE.TI.ADDR_10 == 0x40) || ($PARAM_VALUE.TI.ADDR_11 == 0x40) || ($PARAM_VALUE.TI.ADDR_12 == 0x40) || ($PARAM_VALUE.TI.ADDR_13 == 0x40) || ($PARAM_VALUE.TI.ADDR_14 == 0x40) || ($PARAM_VALUE.TI.ADDR_15 == 0x40) || ($PARAM_VALUE.TI.ADDR_16 == 0x40) || ($PARAM_VALUE.TI.ADDR_17 == 0x40) || ($PARAM_VALUE.TI.ADDR_18 == 0x40) || ($PARAM_VALUE.TI.ADDR_19 == 0x40) || ($PARAM_VALUE.TI.ADDR_20 == 0x40) || ($PARAM_VALUE.TI.ADDR_21 == 0x40) || ($PARAM_VALUE.TI.ADDR_22 == 0x40) || ($PARAM_VALUE.TI.ADDR_23 == 0x40) || ($PARAM_VALUE.TI.ADDR_24 == 0x40) || ($PARAM_VALUE.TI.ADDR_25 == 0x40) || ($PARAM_VALUE.TI.ADDR_26 == 0x40) || ($PARAM_VALUE.TI.ADDR_27 == 0x40) || ($PARAM_VALUE.TI.ADDR_28 == 0x40) || ($PARAM_VALUE.TI.ADDR_29 == 0x40) || ($PARAM_VALUE.TI.ADDR_30 == 0x40) || ($PARAM_VALUE.TI.ADDR_31 == 0x40)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.triggerin40" xilinx:dependency="($PARAM_VALUE.TI.ADDR_0 == 0x40) || ($PARAM_VALUE.TI.ADDR_1 == 0x40) || ($PARAM_VALUE.TI.ADDR_2 == 0x40) || ($PARAM_VALUE.TI.ADDR_3 == 0x40) || ($PARAM_VALUE.TI.ADDR_4 == 0x40) || ($PARAM_VALUE.TI.ADDR_5 == 0x40) || ($PARAM_VALUE.TI.ADDR_6 == 0x40) || ($PARAM_VALUE.TI.ADDR_7 == 0x40) || ($PARAM_VALUE.TI.ADDR_8 == 0x40) || ($PARAM_VALUE.TI.ADDR_9 == 0x40) || ($PARAM_VALUE.TI.ADDR_10 == 0x40) || ($PARAM_VALUE.TI.ADDR_11 == 0x40) || ($PARAM_VALUE.TI.ADDR_12 == 0x40) || ($PARAM_VALUE.TI.ADDR_13 == 0x40) || ($PARAM_VALUE.TI.ADDR_14 == 0x40) || ($PARAM_VALUE.TI.ADDR_15 == 0x40) || ($PARAM_VALUE.TI.ADDR_16 == 0x40) || ($PARAM_VALUE.TI.ADDR_17 == 0x40) || ($PARAM_VALUE.TI.ADDR_18 == 0x40) || ($PARAM_VALUE.TI.ADDR_19 == 0x40) || ($PARAM_VALUE.TI.ADDR_20 == 0x40) || ($PARAM_VALUE.TI.ADDR_21 == 0x40) || ($PARAM_VALUE.TI.ADDR_22 == 0x40) || ($PARAM_VALUE.TI.ADDR_23 == 0x40) || ($PARAM_VALUE.TI.ADDR_24 == 0x40) || ($PARAM_VALUE.TI.ADDR_25 == 0x40) || ($PARAM_VALUE.TI.ADDR_26 == 0x40) || ($PARAM_VALUE.TI.ADDR_27 == 0x40) || ($PARAM_VALUE.TI.ADDR_28 == 0x40) || ($PARAM_VALUE.TI.ADDR_29 == 0x40) || ($PARAM_VALUE.TI.ADDR_30 == 0x40) || ($PARAM_VALUE.TI.ADDR_31 == 0x40)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -18327,11 +18327,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 07 21:44:37 UTC 2024</spirit:value>
+            <spirit:value>Fri Feb 09 21:18:34 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2093c1f7</spirit:value>
+            <spirit:value>9:26df78c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18345,11 +18345,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 07 21:44:37 UTC 2024</spirit:value>
+            <spirit:value>Fri Feb 09 21:18:34 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2093c1f7</spirit:value>
+            <spirit:value>9:26df78c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18364,11 +18364,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 07 21:44:37 UTC 2024</spirit:value>
+            <spirit:value>Fri Feb 09 21:18:34 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2093c1f7</spirit:value>
+            <spirit:value>9:26df78c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18384,11 +18384,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 07 21:44:38 UTC 2024</spirit:value>
+            <spirit:value>Fri Feb 09 21:18:35 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:651f2967</spirit:value>
+            <spirit:value>9:0f2a9c7e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18403,11 +18403,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 07 21:44:38 UTC 2024</spirit:value>
+            <spirit:value>Fri Feb 09 21:18:35 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:651f2967</spirit:value>
+            <spirit:value>9:0f2a9c7e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18421,11 +18421,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 07 21:44:39 UTC 2024</spirit:value>
+            <spirit:value>Fri Feb 09 21:18:35 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2093c1f7</spirit:value>
+            <spirit:value>9:26df78c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18439,11 +18439,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 07 21:59:51 UTC 2024</spirit:value>
+            <spirit:value>Fri Feb 09 21:28:45 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2093c1f7</spirit:value>
+            <spirit:value>9:26df78c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20223,13 +20223,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.ti40_ep_trigger">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>ti40_ep_clk</spirit:name>
@@ -20243,13 +20236,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.ti40_ep_clk">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>ti41_ep_trigger</spirit:name>
@@ -44113,6 +44099,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>gateware/simulation/FrontPanel/okTriggerIn.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>gateware/simulation/FrontPanel/okWireOut.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -44519,12 +44509,12 @@
     <spirit:parameter>
       <spirit:name>TI.COUNT</spirit:name>
       <spirit:displayName>TriggerIn</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TI.COUNT" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TI.COUNT" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TI.ADDR_0</spirit:name>
       <spirit:displayName>TriggerIn 0 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TI.ADDR_0" spirit:bitStringLength="8">0xff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TI.ADDR_0" spirit:bitStringLength="8">0x40</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TI.ADDR_1</spirit:name>

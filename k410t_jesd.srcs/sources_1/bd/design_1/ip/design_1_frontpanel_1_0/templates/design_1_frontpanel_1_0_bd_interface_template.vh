@@ -21,6 +21,14 @@
     output wire [31:0] wo20_ep_datain_DESCRIPTION,
 
 //----------------------------------------------------------------------------------------------------------------------------------
+// TriggerIns
+//----------------------------------------------------------------------------------------------------------------------------------
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40_DESCRIPTION EP_TRIGGER" *)
+    input  wire [31:0] ti40_ep_trigger_DESCRIPTION,
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:triggerin:1.0 triggerin40_DESCRIPTION EP_CLK" *)
+    output wire        ti40_ep_clk_DESCRIPTION,
+
+//----------------------------------------------------------------------------------------------------------------------------------
 // Block Throttle PipeIns
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:btpipein:1.0 btpipein80_DESCRIPTION EP_DATAOUT" *)
