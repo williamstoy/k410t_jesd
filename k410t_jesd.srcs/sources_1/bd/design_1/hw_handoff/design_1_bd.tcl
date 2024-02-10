@@ -280,8 +280,9 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {13} \
+   CONFIG.C_NUM_OF_PROBES {14} \
    CONFIG.C_PROBE10_WIDTH {32} \
+   CONFIG.C_PROBE13_WIDTH {32} \
    CONFIG.C_PROBE2_WIDTH {1} \
  ] $ila_0
 
@@ -398,7 +399,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins frontpanel_1/ti40_ep_clk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_1_btpoa0_ep_blockstrobe [get_bd_pins frontpanel_1/btpoa0_ep_blockstrobe] [get_bd_pins ila_0/probe6]
   connect_bd_net -net frontpanel_1_btpoa0_ep_read [get_bd_pins enable_read_0/read] [get_bd_pins frontpanel_1/btpoa0_ep_read] [get_bd_pins ila_0/probe5]
-  connect_bd_net -net frontpanel_1_ti40_ep_trigger [get_bd_pins frontpanel_1/ti40_ep_trigger] [get_bd_pins trigger_to_level_0/READY]
+  connect_bd_net -net frontpanel_1_ti40_ep_trigger [get_bd_pins frontpanel_1/ti40_ep_trigger] [get_bd_pins ila_0/probe13] [get_bd_pins trigger_to_level_0/READY]
   connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins FIFO_FSM_0/RST_N] [get_bd_pins enabled_binary_count_0/RST_N] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a] [get_bd_pins trigger_to_level_0/RSTN]
   connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins FIFO_FSM_0/CLK] [get_bd_pins enabled_binary_count_0/CLK] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
   connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]

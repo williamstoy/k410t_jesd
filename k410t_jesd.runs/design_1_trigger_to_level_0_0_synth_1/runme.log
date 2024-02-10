@@ -24,46 +24,16 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k410
 INFO: [Common 17-1540] The version limit for your license is '2020.01' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 INFO: [Device 21-403] Loading part xc7k410tffg676-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 204752 
+INFO: Helper process launched with PID 33858 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2062.395 ; gain = 199.699 ; free physical = 739944 ; free virtual = 757057
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2062.395 ; gain = 199.699 ; free physical = 732492 ; free virtual = 754641
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_trigger_to_level_0_0' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_trigger_to_level_0_0/synth/design_1_trigger_to_level_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'trigger_to_level' [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/new/trigger_to_level.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'trigger_to_level' (1#1) [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/new/trigger_to_level.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_trigger_to_level_0_0' (2#1) [/users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_trigger_to_level_0_0/synth/design_1_trigger_to_level_0_0.v:58]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[31]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[30]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[29]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[28]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[27]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[26]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[25]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[24]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[23]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[22]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[21]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[20]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[19]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[18]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[17]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[16]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[15]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[14]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[13]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[12]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[11]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[10]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[9]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[8]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[7]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[6]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[5]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[4]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[3]
-WARNING: [Synth 8-3331] design trigger_to_level has unconnected port READY[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2128.125 ; gain = 265.430 ; free physical = 739980 ; free virtual = 757093
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2128.125 ; gain = 265.430 ; free physical = 732527 ; free virtual = 754676
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -76,43 +46,43 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2131.086 ; gain = 268.391 ; free physical = 739976 ; free virtual = 757090
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2131.086 ; gain = 268.391 ; free physical = 732524 ; free virtual = 754673
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2131.086 ; gain = 268.391 ; free physical = 739976 ; free virtual = 757090
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2131.086 ; gain = 268.391 ; free physical = 732524 ; free virtual = 754673
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2131.086 ; gain = 0.000 ; free physical = 739969 ; free virtual = 757083
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2131.086 ; gain = 0.000 ; free physical = 732517 ; free virtual = 754666
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2218.863 ; gain = 0.000 ; free physical = 739883 ; free virtual = 756996
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2222.863 ; gain = 0.000 ; free physical = 732431 ; free virtual = 754580
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2218.867 ; gain = 0.004 ; free physical = 739883 ; free virtual = 756996
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2222.867 ; gain = 0.004 ; free physical = 732430 ; free virtual = 754579
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2218.867 ; gain = 356.172 ; free physical = 739950 ; free virtual = 757064
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2222.867 ; gain = 360.172 ; free physical = 732498 ; free virtual = 754647
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k410tffg676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2218.867 ; gain = 356.172 ; free physical = 739950 ; free virtual = 757064
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2222.867 ; gain = 360.172 ; free physical = 732498 ; free virtual = 754647
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2218.867 ; gain = 356.172 ; free physical = 739950 ; free virtual = 757064
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2222.867 ; gain = 360.172 ; free physical = 732498 ; free virtual = 754647
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2218.867 ; gain = 356.172 ; free physical = 739942 ; free virtual = 757056
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2222.867 ; gain = 360.172 ; free physical = 732490 ; free virtual = 754639
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -157,38 +127,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[31]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[30]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[29]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[28]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[27]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[26]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[25]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[24]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[23]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[22]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[21]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[20]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[19]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[18]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[17]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[16]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[15]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[14]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[13]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[12]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[11]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[10]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[9]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[8]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[7]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[6]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[5]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[4]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[3]
-WARNING: [Synth 8-3331] design design_1_trigger_to_level_0_0 has unconnected port READY[2]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2218.867 ; gain = 356.172 ; free physical = 739931 ; free virtual = 757048
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2222.867 ; gain = 360.172 ; free physical = 732478 ; free virtual = 754630
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -200,13 +140,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 2218.867 ; gain = 356.172 ; free physical = 739812 ; free virtual = 756928
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 2222.867 ; gain = 360.172 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 2218.867 ; gain = 356.172 ; free physical = 739812 ; free virtual = 756928
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 2222.867 ; gain = 360.172 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -218,7 +158,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 2218.867 ; gain = 356.172 ; free physical = 739811 ; free virtual = 756927
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 2222.867 ; gain = 360.172 ; free physical = 732358 ; free virtual = 754509
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -242,13 +182,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 739811 ; free virtual = 756927
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 739811 ; free virtual = 756927
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -267,25 +207,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 739811 ; free virtual = 756927
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 739811 ; free virtual = 756927
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 739811 ; free virtual = 756927
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 739811 ; free virtual = 756927
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -302,43 +242,45 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT1 |     1|
-|2     |LUT3 |     1|
-|3     |FDCE |     1|
+|2     |LUT2 |     1|
+|3     |LUT3 |     1|
+|4     |LUT6 |     6|
+|5     |FDCE |     1|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+---------+-----------------+------+
 |      |Instance |Module           |Cells |
 +------+---------+-----------------+------+
-|1     |top      |                 |     3|
-|2     |  inst   |trigger_to_level |     3|
+|1     |top      |                 |    10|
+|2     |  inst   |trigger_to_level |    10|
 +------+---------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 739811 ; free virtual = 756927
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.738 ; gain = 369.043 ; free physical = 732358 ; free virtual = 754510
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 2231.738 ; gain = 281.262 ; free physical = 739867 ; free virtual = 756984
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.742 ; gain = 369.043 ; free physical = 739948 ; free virtual = 757064
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 2231.738 ; gain = 277.262 ; free physical = 732414 ; free virtual = 754565
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 2231.742 ; gain = 369.043 ; free physical = 732492 ; free virtual = 754644
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2231.742 ; gain = 0.000 ; free physical = 739941 ; free virtual = 757057
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2231.742 ; gain = 0.000 ; free physical = 732484 ; free virtual = 754636
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2245.613 ; gain = 0.000 ; free physical = 739878 ; free virtual = 756995
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.629 ; gain = 0.000 ; free physical = 732422 ; free virtual = 754573
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
+18 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:51 . Memory (MB): peak = 2245.613 ; gain = 704.770 ; free physical = 740011 ; free virtual = 757128
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2245.613 ; gain = 0.000 ; free physical = 740011 ; free virtual = 757128
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:51 . Memory (MB): peak = 2278.629 ; gain = 737.785 ; free physical = 732555 ; free virtual = 754706
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.629 ; gain = 0.000 ; free physical = 732555 ; free virtual = 754706
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_trigger_to_level_0_0_synth_1/design_1_trigger_to_level_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2245.621 ; gain = 0.000 ; free physical = 740010 ; free virtual = 757126
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2302.648 ; gain = 0.000 ; free physical = 732553 ; free virtual = 754705
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/users/nalarcon/k410t_jesd/k410t_jesd.runs/design_1_trigger_to_level_0_0_synth_1/design_1_trigger_to_level_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_trigger_to_level_0_0_utilization_synth.rpt -pb design_1_trigger_to_level_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Feb  9 17:57:12 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 10 18:05:46 2024...

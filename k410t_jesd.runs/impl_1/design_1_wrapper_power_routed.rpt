@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Sat Feb 10 16:16:04 2024
+| Date             : Sat Feb 10 18:14:00 2024
 | Host             : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.190        |
+| Total On-Chip Power (W)  | 1.195        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.976        |
+| Dynamic (W)              | 0.981        |
 | Device Static (W)        | 0.214        |
 | Effective TJA (C/W)      | 1.9          |
 | Max Ambient (C)          | 82.8         |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.024 |       23 |       --- |             --- |
-| Slice Logic              |     0.015 |    16013 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     5511 |    254200 |            2.17 |
+| Clocks                   |     0.025 |       23 |       --- |             --- |
+| Slice Logic              |     0.015 |    16555 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     5618 |    254200 |            2.21 |
 |   LUT as Distributed RAM |     0.002 |      585 |     90600 |            0.65 |
-|   CARRY4                 |    <0.001 |      365 |     63550 |            0.57 |
-|   Register               |    <0.001 |     7545 |    508400 |            1.48 |
-|   F7/F8 Muxes            |    <0.001 |       56 |    254200 |            0.02 |
+|   CARRY4                 |    <0.001 |      370 |     63550 |            0.58 |
+|   Register               |    <0.001 |     7857 |    508400 |            1.55 |
+|   F7/F8 Muxes            |    <0.001 |       75 |    254200 |            0.03 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   LUT as Shift Register  |    <0.001 |      224 |     90600 |            0.25 |
-|   Others                 |     0.000 |      640 |       --- |             --- |
+|   LUT as Shift Register  |    <0.001 |      257 |     90600 |            0.28 |
+|   Others                 |     0.000 |      668 |       --- |             --- |
 |   BUFR                   |     0.000 |        2 |       208 |            0.96 |
-| Signals                  |     0.019 |    12792 |       --- |             --- |
-| Block RAM                |     0.017 |     14.5 |       795 |            1.82 |
+| Signals                  |     0.019 |    13185 |       --- |             --- |
+| Block RAM                |     0.021 |       18 |       795 |            2.26 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |     0.100 |       48 |       400 |           12.00 |
 | GTX                      |     0.695 |        4 |         8 |           50.00 |
 | Static Power             |     0.214 |          |           |                 |
-| Total                    |     1.190 |          |           |                 |
+| Total                    |     1.195 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.183 |       0.086 |      0.097 |
+| Vccint    |       1.000 |     0.188 |       0.090 |      0.097 |
 | Vccaux    |       1.800 |     0.093 |       0.060 |      0.033 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.036 |       0.035 |      0.001 |
@@ -88,7 +88,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.004 |       0.001 |      0.003 |
+| Vccbram   |       1.000 |     0.005 |       0.001 |      0.003 |
 | MGTAVcc   |       1.000 |     0.304 |       0.299 |      0.004 |
 | MGTAVtt   |       1.200 |     0.327 |       0.322 |      0.005 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -152,17 +152,17 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     0.976 |
+| design_1_wrapper         |     0.981 |
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |
-|   design_1_i             |     0.972 |
+|   design_1_i             |     0.978 |
 |     fifo_generator_0     |     0.002 |
 |       U0                 |     0.002 |
-|     frontpanel_1         |     0.133 |
-|       inst               |     0.133 |
-|     ila_0                |     0.027 |
-|       inst               |     0.027 |
+|     frontpanel_1         |     0.134 |
+|       inst               |     0.134 |
+|     ila_0                |     0.031 |
+|       inst               |     0.031 |
 |     jesd204_0            |     0.720 |
 |       inst               |     0.720 |
 |     util_ds_buf_0        |     0.002 |

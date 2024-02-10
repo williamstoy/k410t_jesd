@@ -26,8 +26,12 @@ module trigger_to_level(
     input RSTN
     );
     
+    wire trig_change; 
+    assign trig_change = |READY;
+    
+    
 //Trigger to Level converter
-always@(negedge RSTN or posedge READY) begin
+always@(negedge RSTN or posedge trig_change) begin
     if(!RSTN) begin
         READY_LVL <= 1'b0;
     end

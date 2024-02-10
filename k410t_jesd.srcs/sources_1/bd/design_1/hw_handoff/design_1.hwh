@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 10 16:06:18 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 10 18:04:25 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -218,8 +218,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="count" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="test_data"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe10"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="test_data"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1282,6 +1282,7 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="ti40_ep_trigger" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_ti40_ep_trigger">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe13"/>
             <CONNECTION INSTANCE="trigger_to_level_0" PORT="READY"/>
           </CONNECTIONS>
         </PORT>
@@ -1391,7 +1392,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="13"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="14"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -1428,7 +1429,7 @@
         <PARAMETER NAME="C_PROBE10_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE15_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE16_WIDTH" VALUE="1"/>
@@ -4581,6 +4582,11 @@
             <CONNECTION INSTANCE="enable_read_0" PORT="read_en"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe13" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_ti40_ep_trigger">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="ti40_ep_trigger"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4643,8 +4649,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="clk"/>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_clk"/>
-            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="CLK"/>
             <CONNECTION INSTANCE="enabled_binary_count_0" PORT="CLK"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="CLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100800000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="okAXI4LiteInterface_0_m_axi_aclk">
@@ -4761,8 +4767,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="negate_0" PORT="a"/>
-            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="RST_N"/>
             <CONNECTION INSTANCE="enabled_binary_count_0" PORT="RST_N"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="RST_N"/>
             <CONNECTION INSTANCE="trigger_to_level_0" PORT="RSTN"/>
           </CONNECTIONS>
         </PORT>
@@ -5190,9 +5196,9 @@
         </PORT>
         <PORT DIR="O" NAME="READY_LVL" SIGIS="undef" SIGNAME="trigger_to_level_0_READY_LVL">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="TEST_MODE"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe11"/>
             <CONNECTION INSTANCE="enabled_binary_count_0" PORT="EN"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="TEST_MODE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="RSTN" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">
