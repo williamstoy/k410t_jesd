@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Fri Feb  9 17:57:11 2024
+// Date        : Sat Feb 10 18:44:31 2024
 // Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_enable_read_0_0_sim_netlist.v
@@ -18,20 +18,20 @@
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (read,
     empty,
-    almost_full,
+    almost_empty,
     read_en);
   input read;
   input empty;
-  input almost_full;
+  input almost_empty;
   output read_en;
 
-  wire almost_full;
+  wire almost_empty;
   wire empty;
   wire read;
   wire read_en;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read inst
-       (.almost_full(almost_full),
+       (.almost_empty(almost_empty),
         .empty(empty),
         .read(read),
         .read_en(read_en));
@@ -39,23 +39,23 @@ endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read
    (read_en,
-    almost_full,
+    almost_empty,
     read,
     empty);
   output read_en;
-  input almost_full;
+  input almost_empty;
   input read;
   input empty;
 
-  wire almost_full;
+  wire almost_empty;
   wire empty;
   wire read;
   wire read_en;
 
   LUT3 #(
-    .INIT(8'h0E)) 
+    .INIT(8'h0D)) 
     read_en__0
-       (.I0(almost_full),
+       (.I0(almost_empty),
         .I1(read),
         .I2(empty),
         .O(read_en));

@@ -219,7 +219,7 @@ proc create_root_design { parentCell } {
   set fifo_generator_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 fifo_generator_0 ]
   set_property -dict [ list \
    CONFIG.Almost_Empty_Flag {true} \
-   CONFIG.Almost_Full_Flag {true} \
+   CONFIG.Almost_Full_Flag {false} \
    CONFIG.Data_Count_Width {8} \
    CONFIG.Empty_Threshold_Assert_Value {100} \
    CONFIG.Empty_Threshold_Assert_Value_rach {1022} \
@@ -390,10 +390,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net enabled_binary_count_0_OUT [get_bd_pins FIFO_FSM_0/FIFO_DATA] [get_bd_pins fifo_generator_0/din] [get_bd_pins ila_0/probe0]
   connect_bd_net -net enabled_binary_count_0_count [get_bd_pins FIFO_FSM_0/test_data] [get_bd_pins enabled_binary_count_0/count] [get_bd_pins ila_0/probe10]
   connect_bd_net -net fifo_generator_0_almost_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/almost_empty]
-  connect_bd_net -net fifo_generator_0_almost_full [get_bd_pins enable_read_0/almost_full] [get_bd_pins fifo_generator_0/almost_full]
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe1]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins fifo_generator_0/empty] [get_bd_pins ila_0/probe8]
-  connect_bd_net -net fifo_generator_0_prog_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins fifo_generator_0/prog_empty] [get_bd_pins ila_0/probe9]
+  connect_bd_net -net fifo_generator_0_prog_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins enable_read_0/almost_empty] [get_bd_pins fifo_generator_0/prog_empty] [get_bd_pins ila_0/probe9]
   connect_bd_net -net fifo_generator_0_prog_full [get_bd_pins fifo_generator_0/prog_full] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe7]
   connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins frontpanel_1/ti40_ep_clk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]

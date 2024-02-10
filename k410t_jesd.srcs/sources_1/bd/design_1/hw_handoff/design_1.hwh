@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 10 18:04:25 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 10 18:43:12 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -177,9 +177,9 @@
             <CONNECTION INSTANCE="fifo_generator_0" PORT="almost_empty"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="almost_full" SIGIS="undef" SIGNAME="fifo_generator_0_almost_full">
+        <PORT DIR="I" NAME="almost_empty" SIGIS="undef" SIGNAME="fifo_generator_0_prog_empty">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="almost_full"/>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="prog_empty"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="read_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
@@ -242,7 +242,7 @@
         <PARAMETER NAME="C_FAMILY" VALUE="kintex7"/>
         <PARAMETER NAME="C_FULL_FLAGS_RST_VAL" VALUE="1"/>
         <PARAMETER NAME="C_HAS_ALMOST_EMPTY" VALUE="1"/>
-        <PARAMETER NAME="C_HAS_ALMOST_FULL" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_ALMOST_FULL" VALUE="0"/>
         <PARAMETER NAME="C_HAS_BACKUP" VALUE="0"/>
         <PARAMETER NAME="C_HAS_DATA_COUNT" VALUE="0"/>
         <PARAMETER NAME="C_HAS_INT_CLK" VALUE="0"/>
@@ -452,7 +452,7 @@
         <PARAMETER NAME="Use_Dout_Reset" VALUE="true"/>
         <PARAMETER NAME="Dout_Reset_Value" VALUE="0"/>
         <PARAMETER NAME="dynamic_power_saving" VALUE="false"/>
-        <PARAMETER NAME="Almost_Full_Flag" VALUE="true"/>
+        <PARAMETER NAME="Almost_Full_Flag" VALUE="false"/>
         <PARAMETER NAME="Almost_Empty_Flag" VALUE="true"/>
         <PARAMETER NAME="Valid_Flag" VALUE="true"/>
         <PARAMETER NAME="Valid_Sense" VALUE="Active_High"/>
@@ -639,11 +639,6 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef"/>
-        <PORT DIR="O" NAME="almost_full" SIGIS="undef" SIGNAME="fifo_generator_0_almost_full">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="enable_read_0" PORT="almost_full"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
@@ -669,6 +664,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe9"/>
             <CONNECTION INSTANCE="FIFO_FSM_0" PORT="READY"/>
+            <CONNECTION INSTANCE="enable_read_0" PORT="almost_empty"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="wr_rst_busy" SIGIS="undef"/>
@@ -677,7 +673,6 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="FIFO_WRITE" TYPE="TARGET" VLNV="xilinx.com:interface:fifo_write:1.0">
           <PORTMAPS>
-            <PORTMAP LOGICAL="ALMOST_FULL" PHYSICAL="almost_full"/>
             <PORTMAP LOGICAL="FULL" PHYSICAL="full"/>
             <PORTMAP LOGICAL="WR_DATA" PHYSICAL="din"/>
             <PORTMAP LOGICAL="WR_EN" PHYSICAL="wr_en"/>

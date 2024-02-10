@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Fri Feb  9 17:57:12 2024
+-- Date        : Sat Feb 10 18:44:31 2024
 -- Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_enable_read_0_0_sim_netlist.vhdl
@@ -17,7 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read is
   port (
     read_en : out STD_LOGIC;
-    almost_full : in STD_LOGIC;
+    almost_empty : in STD_LOGIC;
     read : in STD_LOGIC;
     empty : in STD_LOGIC
   );
@@ -27,10 +27,10 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read 
 begin
 \read_en__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0E"
+      INIT => X"0D"
     )
         port map (
-      I0 => almost_full,
+      I0 => almost_empty,
       I1 => read,
       I2 => empty,
       O => read_en
@@ -44,7 +44,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     read : in STD_LOGIC;
     empty : in STD_LOGIC;
-    almost_full : in STD_LOGIC;
+    almost_empty : in STD_LOGIC;
     read_en : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -63,7 +63,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 begin
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read
      port map (
-      almost_full => almost_full,
+      almost_empty => almost_empty,
       empty => empty,
       read => read,
       read_en => read_en

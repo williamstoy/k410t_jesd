@@ -62,7 +62,6 @@ module design_1_fifo_generator_0_1 (
   rd_en,
   dout,
   full,
-  almost_full,
   empty,
   almost_empty,
   valid,
@@ -89,8 +88,6 @@ input wire rd_en;
 output wire [31 : 0] dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *)
 output wire full;
-(* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE ALMOST_FULL" *)
-output wire almost_full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ ALMOST_EMPTY" *)
@@ -114,7 +111,7 @@ output wire rd_rst_busy;
     .C_FAMILY("kintex7"),
     .C_FULL_FLAGS_RST_VAL(1),
     .C_HAS_ALMOST_EMPTY(1),
-    .C_HAS_ALMOST_FULL(1),
+    .C_HAS_ALMOST_FULL(0),
     .C_HAS_BACKUP(0),
     .C_HAS_DATA_COUNT(0),
     .C_HAS_INT_CLK(0),
@@ -329,7 +326,7 @@ output wire rd_rst_busy;
     .sleep(1'D0),
     .dout(dout),
     .full(full),
-    .almost_full(almost_full),
+    .almost_full(),
     .wr_ack(),
     .overflow(),
     .empty(empty),
