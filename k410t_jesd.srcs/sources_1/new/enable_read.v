@@ -3,10 +3,10 @@
 module enable_read(
 	input read,
 	input empty,
-	input state_reg,
+	input almost_full,
 	output read_en);
 	
 
-	assign read_en = (read | ~state_reg) & ~empty;	
+	assign read_en = (read | almost_full) & ~empty;	
 
 endmodule

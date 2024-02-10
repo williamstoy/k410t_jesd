@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Fri Feb  9 17:25:12 2024
-| Host         : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+| Date         : Sat Feb 10 16:11:30 2024
+| Host         : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
 | Device       : 7k410tffg676-1
@@ -175,6 +175,7 @@ Table of Contents
 | design_1_frontpanel_1_0           |    1 |
 | design_1_fifo_generator_0_1       |    1 |
 | design_1_enabled_binary_count_0_0 |    1 |
+| design_1_enable_read_0_0          |    1 |
 | design_1_FIFO_FSM_0_0             |    1 |
 +-----------------------------------+------+
 

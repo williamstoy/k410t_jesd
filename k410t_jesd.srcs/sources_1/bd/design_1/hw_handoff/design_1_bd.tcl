@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# FIFO_FSM, enabled_binary_counter, jesd204_0_transport_layer_demapper, negate, okAXI4LiteInterface, trigger_to_level, wireoutbreakout
+# FIFO_FSM, enable_read, enabled_binary_counter, jesd204_0_transport_layer_demapper, negate, okAXI4LiteInterface, trigger_to_level, wireoutbreakout
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -190,6 +190,17 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: enable_read_0, and set properties
+  set block_name enable_read
+  set block_cell_name enable_read_0
+  if { [catch {set enable_read_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $enable_read_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: enabled_binary_count_0, and set properties
   set block_name enabled_binary_counter
   set block_cell_name enabled_binary_count_0
@@ -269,7 +280,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {12} \
+   CONFIG.C_NUM_OF_PROBES {13} \
    CONFIG.C_PROBE10_WIDTH {32} \
    CONFIG.C_PROBE2_WIDTH {1} \
  ] $ila_0
@@ -373,17 +384,20 @@ proc create_root_design { parentCell } {
   connect_bd_net -net FPGA_JESD_CLKP_1 [get_bd_ports FPGA_JESD_CLKP] [get_bd_pins jesd204_0/refclk_p]
   connect_bd_net -net FPGA_JESD_SYSREFM_1 [get_bd_ports FPGA_JESD_SYSREFM] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
   connect_bd_net -net FPGA_JESD_SYSREFP_1 [get_bd_ports FPGA_JESD_SYSREFP] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
+  connect_bd_net -net enable_read_0_read_en [get_bd_pins enable_read_0/read_en] [get_bd_pins fifo_generator_0/rd_en] [get_bd_pins ila_0/probe12]
   connect_bd_net -net enable_write_0_wr_en [get_bd_pins FIFO_FSM_0/WR_EN] [get_bd_pins fifo_generator_0/wr_en] [get_bd_pins ila_0/probe2]
   connect_bd_net -net enabled_binary_count_0_OUT [get_bd_pins FIFO_FSM_0/FIFO_DATA] [get_bd_pins fifo_generator_0/din] [get_bd_pins ila_0/probe0]
   connect_bd_net -net enabled_binary_count_0_count [get_bd_pins FIFO_FSM_0/test_data] [get_bd_pins enabled_binary_count_0/count] [get_bd_pins ila_0/probe10]
+  connect_bd_net -net fifo_generator_0_almost_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/almost_empty]
+  connect_bd_net -net fifo_generator_0_almost_full [get_bd_pins enable_read_0/almost_full] [get_bd_pins fifo_generator_0/almost_full]
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe1]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins fifo_generator_0/empty] [get_bd_pins ila_0/probe8]
   connect_bd_net -net fifo_generator_0_prog_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins fifo_generator_0/prog_empty] [get_bd_pins ila_0/probe9]
-  connect_bd_net -net fifo_generator_0_prog_full [get_bd_pins fifo_generator_0/prog_full] [get_bd_pins fifo_generator_0/rd_en] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe7]
+  connect_bd_net -net fifo_generator_0_prog_full [get_bd_pins fifo_generator_0/prog_full] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe7]
   connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins frontpanel_1/ti40_ep_clk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]
   connect_bd_net -net frontpanel_1_btpoa0_ep_blockstrobe [get_bd_pins frontpanel_1/btpoa0_ep_blockstrobe] [get_bd_pins ila_0/probe6]
-  connect_bd_net -net frontpanel_1_btpoa0_ep_read [get_bd_pins frontpanel_1/btpoa0_ep_read] [get_bd_pins ila_0/probe5]
+  connect_bd_net -net frontpanel_1_btpoa0_ep_read [get_bd_pins enable_read_0/read] [get_bd_pins frontpanel_1/btpoa0_ep_read] [get_bd_pins ila_0/probe5]
   connect_bd_net -net frontpanel_1_ti40_ep_trigger [get_bd_pins frontpanel_1/ti40_ep_trigger] [get_bd_pins trigger_to_level_0/READY]
   connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins FIFO_FSM_0/RST_N] [get_bd_pins enabled_binary_count_0/RST_N] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a] [get_bd_pins trigger_to_level_0/RSTN]
   connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins FIFO_FSM_0/CLK] [get_bd_pins enabled_binary_count_0/CLK] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]

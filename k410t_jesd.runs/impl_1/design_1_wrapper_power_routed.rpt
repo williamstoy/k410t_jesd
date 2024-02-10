@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Fri Feb  9 17:29:46 2024
-| Host             : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+| Date             : Sat Feb 10 16:16:04 2024
+| Host             : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7k410tffg676-1
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.024 |       23 |       --- |             --- |
-| Slice Logic              |     0.015 |    15900 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     5466 |    254200 |            2.15 |
+| Slice Logic              |     0.015 |    16013 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     5511 |    254200 |            2.17 |
 |   LUT as Distributed RAM |     0.002 |      585 |     90600 |            0.65 |
-|   CARRY4                 |    <0.001 |      363 |     63550 |            0.57 |
-|   Register               |    <0.001 |     7489 |    508400 |            1.47 |
-|   F7/F8 Muxes            |    <0.001 |       68 |    254200 |            0.03 |
+|   CARRY4                 |    <0.001 |      365 |     63550 |            0.57 |
+|   Register               |    <0.001 |     7545 |    508400 |            1.48 |
+|   F7/F8 Muxes            |    <0.001 |       56 |    254200 |            0.02 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   LUT as Shift Register  |    <0.001 |      218 |     90600 |            0.24 |
-|   Others                 |     0.000 |      630 |       --- |             --- |
+|   LUT as Shift Register  |    <0.001 |      224 |     90600 |            0.25 |
+|   Others                 |     0.000 |      640 |       --- |             --- |
 |   BUFR                   |     0.000 |        2 |       208 |            0.96 |
-| Signals                  |     0.019 |    12685 |       --- |             --- |
+| Signals                  |     0.019 |    12792 |       --- |             --- |
 | Block RAM                |     0.017 |     14.5 |       795 |            1.82 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |     0.100 |       48 |       400 |           12.00 |
@@ -156,7 +156,7 @@ Table of Contents
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |
-|   design_1_i             |     0.973 |
+|   design_1_i             |     0.972 |
 |     fifo_generator_0     |     0.002 |
 |       U0                 |     0.002 |
 |     frontpanel_1         |     0.133 |

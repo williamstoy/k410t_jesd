@@ -1,8 +1,8 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Fri Feb  9 16:23:28 2024
--- Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+-- Date        : Fri Feb  9 17:57:12 2024
+-- Host        : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode funcsim
 --               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_trigger_to_level_0_0/design_1_trigger_to_level_0_0_sim_netlist.vhdl
 -- Design      : design_1_trigger_to_level_0_0
@@ -17,7 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_trigger_to_level_0_0_trigger_to_level is
   port (
     READY_LVL : out STD_LOGIC;
-    READY : in STD_LOGIC_VECTOR ( 0 to 0 );
+    READY : in STD_LOGIC_VECTOR ( 1 downto 0 );
     RSTN : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -26,17 +26,19 @@ end design_1_trigger_to_level_0_0_trigger_to_level;
 
 architecture STRUCTURE of design_1_trigger_to_level_0_0_trigger_to_level is
   signal \^ready_lvl\ : STD_LOGIC;
+  signal READY_LVL_i_1_n_0 : STD_LOGIC;
   signal READY_LVL_i_2_n_0 : STD_LOGIC;
-  signal p_0_in : STD_LOGIC;
 begin
   READY_LVL <= \^ready_lvl\;
-READY_LVL_i_1: unisim.vcomponents.LUT1
+READY_LVL_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"1"
+      INIT => X"BA"
     )
         port map (
-      I0 => \^ready_lvl\,
-      O => p_0_in
+      I0 => READY(0),
+      I1 => READY(1),
+      I2 => \^ready_lvl\,
+      O => READY_LVL_i_1_n_0
     );
 READY_LVL_i_2: unisim.vcomponents.LUT1
     generic map(
@@ -51,7 +53,7 @@ READY_LVL_reg: unisim.vcomponents.FDCE
       C => READY(0),
       CE => '1',
       CLR => READY_LVL_i_2_n_0,
-      D => p_0_in,
+      D => READY_LVL_i_1_n_0,
       Q => \^ready_lvl\
     );
 end STRUCTURE;
@@ -85,7 +87,7 @@ architecture STRUCTURE of design_1_trigger_to_level_0_0 is
 begin
 inst: entity work.design_1_trigger_to_level_0_0_trigger_to_level
      port map (
-      READY(0) => READY(0),
+      READY(1 downto 0) => READY(1 downto 0),
       READY_LVL => READY_LVL,
       RSTN => RSTN
     );

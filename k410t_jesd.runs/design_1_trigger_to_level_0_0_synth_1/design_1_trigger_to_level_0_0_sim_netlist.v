@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Fri Feb  9 16:23:28 2024
-// Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+// Date        : Fri Feb  9 17:57:12 2024
+// Host        : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_trigger_to_level_0_0_sim_netlist.v
 // Design      : design_1_trigger_to_level_0_0
@@ -28,7 +28,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire RSTN;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_to_level inst
-       (.READY(READY[0]),
+       (.READY(READY[1:0]),
         .READY_LVL(READY_LVL),
         .RSTN(RSTN));
 endmodule
@@ -38,30 +38,32 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_to_level
     READY,
     RSTN);
   output READY_LVL;
-  input [0:0]READY;
+  input [1:0]READY;
   input RSTN;
 
-  wire [0:0]READY;
+  wire [1:0]READY;
   wire READY_LVL;
+  wire READY_LVL_i_1_n_0;
   wire READY_LVL_i_2_n_0;
   wire RSTN;
-  wire p_0_in;
 
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT3 #(
+    .INIT(8'hBA)) 
     READY_LVL_i_1
-       (.I0(READY_LVL),
-        .O(p_0_in));
+       (.I0(READY[0]),
+        .I1(READY[1]),
+        .I2(READY_LVL),
+        .O(READY_LVL_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     READY_LVL_i_2
        (.I0(RSTN),
         .O(READY_LVL_i_2_n_0));
   FDCE READY_LVL_reg
-       (.C(READY),
+       (.C(READY[0]),
         .CE(1'b1),
         .CLR(READY_LVL_i_2_n_0),
-        .D(p_0_in),
+        .D(READY_LVL_i_1_n_0),
         .Q(READY_LVL));
 endmodule
 `ifndef GLBL

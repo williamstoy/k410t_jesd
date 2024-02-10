@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb  9 17:21:23 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 10 16:06:18 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -155,6 +155,37 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_en"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/enable_read_0" HWVERSION="1.0" INSTANCE="enable_read_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable_read" VLNV="xilinx.com:module_ref:enable_read:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_enable_read_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_read"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="almost_empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="almost_full" SIGIS="undef" SIGNAME="fifo_generator_0_almost_full">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="almost_full"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="read_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fifo_generator_0" PORT="rd_en"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe12"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -596,9 +627,9 @@
             <CONNECTION INSTANCE="FIFO_FSM_0" PORT="WR_EN"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rd_en" SIGIS="undef" SIGNAME="fifo_generator_0_prog_full">
+        <PORT DIR="I" NAME="rd_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="prog_full"/>
+            <CONNECTION INSTANCE="enable_read_0" PORT="read_en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="fifo_generator_0_dout">
@@ -608,13 +639,21 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="full" SIGIS="undef"/>
-        <PORT DIR="O" NAME="almost_full" SIGIS="undef"/>
+        <PORT DIR="O" NAME="almost_full" SIGIS="undef" SIGNAME="fifo_generator_0_almost_full">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_read_0" PORT="almost_full"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_empty">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe8"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="almost_empty" SIGIS="undef"/>
+        <PORT DIR="O" NAME="almost_empty" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_read_0" PORT="empty"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="valid" SIGIS="undef" SIGNAME="fifo_generator_0_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
@@ -623,7 +662,6 @@
         <PORT DIR="O" NAME="prog_full" SIGIS="undef" SIGNAME="fifo_generator_0_prog_full">
           <CONNECTIONS>
             <CONNECTION INSTANCE="frontpanel_1" PORT="btpoa0_ep_ready"/>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="rd_en"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe7"/>
           </CONNECTIONS>
         </PORT>
@@ -1276,6 +1314,7 @@
         <PORT DIR="O" NAME="btpoa0_ep_read" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_read">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
+            <CONNECTION INSTANCE="enable_read_0" PORT="read"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="btpoa0_ep_blockstrobe" SIGIS="undef" SIGNAME="frontpanel_1_btpoa0_ep_blockstrobe">
@@ -1352,7 +1391,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="12"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="13"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -4537,6 +4576,11 @@
             <CONNECTION INSTANCE="trigger_to_level_0" PORT="READY_LVL"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe12" RIGHT="0" SIGIS="undef" SIGNAME="enable_read_0_read_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_read_0" PORT="read_en"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4717,9 +4761,9 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0_transport_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="negate_0" PORT="a"/>
-            <CONNECTION INSTANCE="trigger_to_level_0" PORT="RSTN"/>
             <CONNECTION INSTANCE="FIFO_FSM_0" PORT="RST_N"/>
             <CONNECTION INSTANCE="enabled_binary_count_0" PORT="RST_N"/>
+            <CONNECTION INSTANCE="trigger_to_level_0" PORT="RSTN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="127" NAME="rx_tdata" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_rx_tdata">

@@ -9,8 +9,8 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: Uses a pulse to flip a level indicator. active low reset to low output
-// 
+// Description: Uses a pulse on [0] turn on a level indicator. active low reset to low output
+// Pulse bit [1] to turn off level indicator
 // Dependencies: 
 // 
 // Revision:
@@ -26,18 +26,14 @@ module trigger_to_level(
     input RSTN
     );
     
-    wire rdy;
-    
-    assign rdy = READY[0];
-    
 //Trigger to Level converter
-always@(negedge RSTN, posedge rdy) begin
+always@(negedge RSTN or posedge READY) begin
     if(!RSTN) begin
         READY_LVL <= 1'b0;
     end
-    else if(rdy) begin
-        READY_LVL <= ~READY_LVL;
-    end
+    else if(READY[0]) begin
+        READY_LVL <= 1'b1;
+    end else if (READY[1]) READY_LVL <= 1'b0;
 end
 endmodule
 
