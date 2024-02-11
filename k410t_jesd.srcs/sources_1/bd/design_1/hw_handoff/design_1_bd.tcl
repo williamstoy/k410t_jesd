@@ -392,7 +392,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net fifo_generator_0_almost_empty [get_bd_pins enable_read_0/empty] [get_bd_pins fifo_generator_0/almost_empty]
   connect_bd_net -net fifo_generator_0_dout [get_bd_pins fifo_generator_0/dout] [get_bd_pins frontpanel_1/btpoa0_ep_datain] [get_bd_pins ila_0/probe1]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins fifo_generator_0/empty] [get_bd_pins ila_0/probe8]
-  connect_bd_net -net fifo_generator_0_prog_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins enable_read_0/almost_empty] [get_bd_pins fifo_generator_0/prog_empty] [get_bd_pins ila_0/probe9]
+  connect_bd_net -net fifo_generator_0_prog_empty [get_bd_pins FIFO_FSM_0/READY] [get_bd_pins fifo_generator_0/prog_empty] [get_bd_pins ila_0/probe9]
   connect_bd_net -net fifo_generator_0_prog_full [get_bd_pins fifo_generator_0/prog_full] [get_bd_pins frontpanel_1/btpoa0_ep_ready] [get_bd_pins ila_0/probe7]
   connect_bd_net -net fifo_generator_0_valid [get_bd_pins fifo_generator_0/valid] [get_bd_pins ila_0/probe4]
   connect_bd_net -net frontpanel_0_okClk [get_bd_pins fifo_generator_0/rd_clk] [get_bd_pins frontpanel_1/okClk] [get_bd_pins frontpanel_1/ti40_ep_clk] [get_bd_pins ila_0/clk] [get_bd_pins okAXI4LiteInterface_0/okClkIn]

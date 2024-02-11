@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 10 19:23:33 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 10 19:44:51 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -175,11 +175,6 @@
         <PORT DIR="I" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="almost_empty"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="almost_empty" SIGIS="undef" SIGNAME="fifo_generator_0_prog_empty">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="fifo_generator_0" PORT="prog_empty"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="read_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
@@ -664,7 +659,6 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe9"/>
             <CONNECTION INSTANCE="FIFO_FSM_0" PORT="READY"/>
-            <CONNECTION INSTANCE="enable_read_0" PORT="almost_empty"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="wr_rst_busy" SIGIS="undef"/>

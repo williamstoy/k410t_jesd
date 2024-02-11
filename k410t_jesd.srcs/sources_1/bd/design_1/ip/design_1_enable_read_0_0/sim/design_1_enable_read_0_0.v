@@ -57,19 +57,16 @@
 module design_1_enable_read_0_0 (
   read,
   empty,
-  almost_empty,
   read_en
 );
 
 input wire read;
 input wire empty;
-input wire almost_empty;
 output wire read_en;
 
   enable_read inst (
     .read(read),
     .empty(empty),
-    .almost_empty(almost_empty),
     .read_en(read_en)
   );
 endmodule

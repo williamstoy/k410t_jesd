@@ -1015,9 +1015,6 @@
           "empty": {
             "direction": "I"
           },
-          "almost_empty": {
-            "direction": "I"
-          },
           "read_en": {
             "direction": "O"
           }
@@ -1240,8 +1237,7 @@
         "ports": [
           "fifo_generator_0/prog_empty",
           "ila_0/probe9",
-          "FIFO_FSM_0/READY",
-          "enable_read_0/almost_empty"
+          "FIFO_FSM_0/READY"
         ]
       },
       "jesd204_0_transport_0_signalA_sampl0": {

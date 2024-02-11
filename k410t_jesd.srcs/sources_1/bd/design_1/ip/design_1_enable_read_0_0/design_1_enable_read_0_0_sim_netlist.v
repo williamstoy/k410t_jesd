@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Sat Feb 10 18:44:31 2024
+// Date        : Sat Feb 10 19:46:09 2024
 // Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_enable_read_0_0/design_1_enable_read_0_0_sim_netlist.v
@@ -18,47 +18,20 @@
 module design_1_enable_read_0_0
    (read,
     empty,
-    almost_empty,
     read_en);
   input read;
   input empty;
-  input almost_empty;
   output read_en;
 
-  wire almost_empty;
   wire empty;
   wire read;
   wire read_en;
 
-  design_1_enable_read_0_0_enable_read inst
-       (.almost_empty(almost_empty),
-        .empty(empty),
-        .read(read),
-        .read_en(read_en));
-endmodule
-
-(* ORIG_REF_NAME = "enable_read" *) 
-module design_1_enable_read_0_0_enable_read
-   (read_en,
-    almost_empty,
-    read,
-    empty);
-  output read_en;
-  input almost_empty;
-  input read;
-  input empty;
-
-  wire almost_empty;
-  wire empty;
-  wire read;
-  wire read_en;
-
-  LUT3 #(
-    .INIT(8'h0D)) 
-    read_en__0
-       (.I0(almost_empty),
-        .I1(read),
-        .I2(empty),
+  LUT2 #(
+    .INIT(4'h2)) 
+    read_en_INST_0
+       (.I0(read),
+        .I1(empty),
         .O(read_en));
 endmodule
 `ifndef GLBL

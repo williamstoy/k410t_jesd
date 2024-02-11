@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Sat Feb 10 18:44:31 2024
+-- Date        : Sat Feb 10 19:46:08 2024
 -- Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_enable_read_0_0_sim_netlist.vhdl
@@ -14,37 +14,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read is
-  port (
-    read_en : out STD_LOGIC;
-    almost_empty : in STD_LOGIC;
-    read : in STD_LOGIC;
-    empty : in STD_LOGIC
-  );
-end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read;
-
-architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read is
-begin
-\read_en__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"0D"
-    )
-        port map (
-      I0 => almost_empty,
-      I1 => read,
-      I2 => empty,
-      O => read_en
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     read : in STD_LOGIC;
     empty : in STD_LOGIC;
-    almost_empty : in STD_LOGIC;
     read_en : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -61,11 +34,13 @@ end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 begin
-inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_enable_read
-     port map (
-      almost_empty => almost_empty,
-      empty => empty,
-      read => read,
-      read_en => read_en
+read_en_INST_0: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => read,
+      I1 => empty,
+      O => read_en
     );
 end STRUCTURE;
