@@ -220,35 +220,35 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.Almost_Empty_Flag {true} \
    CONFIG.Almost_Full_Flag {false} \
-   CONFIG.Data_Count_Width {8} \
-   CONFIG.Empty_Threshold_Assert_Value {100} \
+   CONFIG.Data_Count_Width {13} \
+   CONFIG.Empty_Threshold_Assert_Value {8000} \
    CONFIG.Empty_Threshold_Assert_Value_rach {1022} \
    CONFIG.Empty_Threshold_Assert_Value_wach {1022} \
    CONFIG.Empty_Threshold_Assert_Value_wrch {1022} \
-   CONFIG.Empty_Threshold_Negate_Value {101} \
+   CONFIG.Empty_Threshold_Negate_Value {8001} \
    CONFIG.Enable_Safety_Circuit {true} \
    CONFIG.FIFO_Implementation_rach {Common_Clock_Distributed_RAM} \
    CONFIG.FIFO_Implementation_wach {Common_Clock_Distributed_RAM} \
    CONFIG.FIFO_Implementation_wrch {Common_Clock_Distributed_RAM} \
    CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} \
    CONFIG.Full_Flags_Reset_Value {1} \
-   CONFIG.Full_Threshold_Assert_Value {64} \
+   CONFIG.Full_Threshold_Assert_Value {4128} \
    CONFIG.Full_Threshold_Assert_Value_rach {1023} \
    CONFIG.Full_Threshold_Assert_Value_wach {1023} \
    CONFIG.Full_Threshold_Assert_Value_wrch {1023} \
    CONFIG.Full_Threshold_Negate_Value {32} \
    CONFIG.INTERFACE_TYPE {Native} \
    CONFIG.Input_Data_Width {32} \
-   CONFIG.Input_Depth {256} \
+   CONFIG.Input_Depth {8192} \
    CONFIG.Output_Data_Width {32} \
-   CONFIG.Output_Depth {256} \
+   CONFIG.Output_Depth {8192} \
    CONFIG.Performance_Options {First_Word_Fall_Through} \
    CONFIG.Programmable_Empty_Type {Single_Programmable_Empty_Threshold_Constant} \
    CONFIG.Programmable_Full_Type {Multiple_Programmable_Full_Threshold_Constants} \
-   CONFIG.Read_Data_Count_Width {8} \
+   CONFIG.Read_Data_Count_Width {13} \
    CONFIG.Reset_Type {Asynchronous_Reset} \
    CONFIG.Valid_Flag {true} \
-   CONFIG.Write_Data_Count_Width {8} \
+   CONFIG.Write_Data_Count_Width {13} \
  ] $fifo_generator_0
 
   # Create instance: frontpanel_1, and set properties

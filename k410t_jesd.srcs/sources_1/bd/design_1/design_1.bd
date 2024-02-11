@@ -204,7 +204,7 @@
             "value": "false"
           },
           "Empty_Threshold_Assert_Value": {
-            "value": "100"
+            "value": "8000"
           },
           "Enable_Safety_Circuit": {
             "value": "true"
@@ -225,7 +225,7 @@
             "value": "1"
           },
           "Full_Threshold_Assert_Value": {
-            "value": "64"
+            "value": "4128"
           },
           "Full_Threshold_Negate_Value": {
             "value": "32"
@@ -237,7 +237,7 @@
             "value": "32"
           },
           "Input_Depth": {
-            "value": "256"
+            "value": "8192"
           },
           "Output_Data_Width": {
             "value": "32"
