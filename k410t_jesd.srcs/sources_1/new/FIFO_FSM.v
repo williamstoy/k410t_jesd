@@ -43,8 +43,8 @@ reg data_count;
 wire [14:0] channelA = (inA0 + inA1) >> 1;
 wire [14:0] channelB = (inB0 + inB1) >> 1;
 
-wire [14:0] channelA_avg = {1'b0 , inA0};//(channel0_2 + channel0) >> 1;
-wire [14:0] channelB_avg = {1'b0 , inB0};//(channel1_2 + channel1) >> 1;
+wire [14:0] channelA_avg = (channelA_2 + channelA) >> 1;
+wire [14:0] channelB_avg = (channelB_2 + channelB) >> 1;
 
 //running average over 2 clock cycles concatenated. 2 channels per device
 wire [31:0] pad_out = TEST_MODE ?  test_data : {channelB_avg[13:0], 2'b00, channelA_avg, 2'b00}; 
