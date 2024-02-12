@@ -21,9 +21,9 @@
       "negate_0": "",
       "frontpanel_1": "",
       "enabled_binary_count_0": "",
-      "FIFO_FSM_0": "",
       "trigger_to_level_0": "",
-      "enable_read_0": ""
+      "enable_read_0": "",
+      "FIFO_FSM_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -897,6 +897,55 @@
           }
         }
       },
+      "trigger_to_level_0": {
+        "vlnv": "xilinx.com:module_ref:trigger_to_level:1.0",
+        "xci_name": "design_1_trigger_to_level_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "trigger_to_level",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "READY": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "READY_LVL": {
+            "direction": "O"
+          },
+          "RSTN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "enable_read_0": {
+        "vlnv": "xilinx.com:module_ref:enable_read:1.0",
+        "xci_name": "design_1_enable_read_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "enable_read",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "read": {
+            "direction": "I"
+          },
+          "empty": {
+            "direction": "I"
+          },
+          "read_en": {
+            "direction": "O"
+          }
+        }
+      },
       "FIFO_FSM_0": {
         "vlnv": "xilinx.com:module_ref:FIFO_FSM:1.0",
         "xci_name": "design_1_FIFO_FSM_0_0",
@@ -967,55 +1016,6 @@
             "right": "0"
           },
           "WR_EN": {
-            "direction": "O"
-          }
-        }
-      },
-      "trigger_to_level_0": {
-        "vlnv": "xilinx.com:module_ref:trigger_to_level:1.0",
-        "xci_name": "design_1_trigger_to_level_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "trigger_to_level",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "READY": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "READY_LVL": {
-            "direction": "O"
-          },
-          "RSTN": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          }
-        }
-      },
-      "enable_read_0": {
-        "vlnv": "xilinx.com:module_ref:enable_read:1.0",
-        "xci_name": "design_1_enable_read_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "enable_read",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "read": {
-            "direction": "I"
-          },
-          "empty": {
-            "direction": "I"
-          },
-          "read_en": {
             "direction": "O"
           }
         }
@@ -1177,8 +1177,8 @@
           "jesd204_0_transport_0/rst_n",
           "negate_0/a",
           "enabled_binary_count_0/RST_N",
-          "FIFO_FSM_0/RST_N",
-          "trigger_to_level_0/RSTN"
+          "trigger_to_level_0/RSTN",
+          "FIFO_FSM_0/RST_N"
         ]
       },
       "negate_0_nota": {

@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat Feb 10 19:46:23 2024
-# Process ID: 82874
+# Start of session at: Mon Feb 12 16:26:27 2024
+# Process ID: 30421
 # Current directory: /users/nalarcon/k410t_jesd/k410t_jesd.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /users/nalarcon/k410t_jesd/k410t_jesd.runs/synth_1/design_1_wrapper.vds
