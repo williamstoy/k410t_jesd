@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Mon Feb 12 18:08:45 2024
+| Date             : Mon Feb 12 18:47:35 2024
 | Host             : linrack7.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 1.196        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.981        |
+| Dynamic (W)              | 0.982        |
 | Device Static (W)        | 0.215        |
 | Effective TJA (C/W)      | 1.9          |
 | Max Ambient (C)          | 82.8         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.026 |       23 |       --- |             --- |
-| Slice Logic              |     0.015 |    16774 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     5667 |    254200 |            2.23 |
+| Slice Logic              |     0.015 |    16768 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     5665 |    254200 |            2.23 |
 |   LUT as Distributed RAM |     0.002 |      585 |     90600 |            0.65 |
-|   CARRY4                 |    <0.001 |      398 |     63550 |            0.63 |
-|   Register               |    <0.001 |     7933 |    508400 |            1.56 |
+|   CARRY4                 |    <0.001 |      390 |     63550 |            0.61 |
+|   Register               |    <0.001 |     7934 |    508400 |            1.56 |
 |   F7/F8 Muxes            |    <0.001 |       75 |    254200 |            0.03 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register  |    <0.001 |      256 |     90600 |            0.28 |
 |   Others                 |     0.000 |      716 |       --- |             --- |
 |   BUFR                   |     0.000 |        2 |       208 |            0.96 |
-| Signals                  |     0.019 |    13324 |       --- |             --- |
+| Signals                  |     0.019 |    13318 |       --- |             --- |
 | Block RAM                |     0.020 |       25 |       795 |            3.14 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |     0.100 |       48 |       400 |           12.00 |
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.188 |       0.090 |      0.098 |
+| Vccint    |       1.000 |     0.189 |       0.091 |      0.098 |
 | Vccaux    |       1.800 |     0.093 |       0.060 |      0.033 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.036 |       0.035 |      0.001 |
@@ -152,7 +152,7 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     0.981 |
+| design_1_wrapper         |     0.982 |
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |

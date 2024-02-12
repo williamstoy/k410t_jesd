@@ -29,6 +29,7 @@ module enabled_binary_counter #
     input RST_N,
     input CLK,
     input EN,
+    input DIS,
     input read_en_detect,
     output reg [width-1:0] count
     );
@@ -37,7 +38,7 @@ module enabled_binary_counter #
     
     
     always @(posedge CLK or negedge RST_N) begin
-        if (!RST_N) begin
+        if (!RST_N || DIS) begin
             count <= 0;
         end else if (EN) begin
             count <= count + step;

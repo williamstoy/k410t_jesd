@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Sat Feb 10 19:46:08 2024
-// Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+// Date        : Mon Feb 12 18:34:32 2024
+// Host        : linrack10.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_enable_read_0_0_sim_netlist.v
 // Design      : design_1_enable_read_0_0
@@ -18,20 +18,20 @@
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (read,
     empty,
+    clk,
     read_en);
   input read;
   input empty;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100800000, PHASE 0.000, CLK_DOMAIN design_1_frontpanel_1_0_okClk, INSERT_VIP 0" *) input clk;
   output read_en;
 
   wire empty;
-  wire read;
   wire read_en;
 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     read_en_INST_0
-       (.I0(read),
-        .I1(empty),
+       (.I0(empty),
         .O(read_en));
 endmodule
 `ifndef GLBL

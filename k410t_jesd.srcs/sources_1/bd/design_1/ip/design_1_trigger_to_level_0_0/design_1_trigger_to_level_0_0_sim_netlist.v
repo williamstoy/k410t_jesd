@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Sat Feb 10 18:05:45 2024
-// Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+// Date        : Mon Feb 12 18:35:33 2024
+// Host        : linrack7.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_trigger_to_level_0_0/design_1_trigger_to_level_0_0_sim_netlist.v
 // Design      : design_1_trigger_to_level_0_0
@@ -18,29 +18,35 @@
 module design_1_trigger_to_level_0_0
    (READY,
     READY_LVL,
+    counter_reset,
     RSTN);
   input [31:0]READY;
   output READY_LVL;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 counter_reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME counter_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output counter_reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RSTN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RSTN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input RSTN;
 
   wire [31:0]READY;
   wire READY_LVL;
   wire RSTN;
+  wire counter_reset;
 
   design_1_trigger_to_level_0_0_trigger_to_level inst
        (.READY(READY),
         .READY_LVL(READY_LVL),
-        .RSTN(RSTN));
+        .RSTN(RSTN),
+        .counter_reset(counter_reset));
 endmodule
 
 (* ORIG_REF_NAME = "trigger_to_level" *) 
 module design_1_trigger_to_level_0_0_trigger_to_level
    (READY_LVL,
-    RSTN,
-    READY);
+    counter_reset,
+    READY,
+    RSTN);
   output READY_LVL;
-  input RSTN;
+  output counter_reset;
   input [31:0]READY;
+  input RSTN;
 
   wire [31:0]READY;
   wire READY_LVL;
@@ -53,25 +59,28 @@ module design_1_trigger_to_level_0_0_trigger_to_level
   wire READY_LVL_i_8_n_0;
   wire READY_LVL_i_9_n_0;
   wire RSTN;
+  wire counter_reset;
+  wire counter_reset_i_1_n_0;
   wire trig_change;
 
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
+  LUT4 #(
+    .INIT(16'hFBF0)) 
     READY_LVL_i_1
-       (.I0(READY[0]),
+       (.I0(READY[2]),
         .I1(READY[1]),
-        .I2(READY_LVL),
+        .I2(READY[0]),
+        .I3(READY_LVL),
         .O(READY_LVL_i_1_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     READY_LVL_i_2
        (.I0(READY_LVL_i_4_n_0),
-        .I1(READY_LVL_i_5_n_0),
-        .I2(READY_LVL_i_6_n_0),
-        .I3(READY_LVL_i_7_n_0),
-        .I4(READY_LVL_i_8_n_0),
-        .I5(READY_LVL_i_9_n_0),
+        .I1(READY[0]),
+        .I2(READY_LVL_i_5_n_0),
+        .I3(READY_LVL_i_6_n_0),
+        .I4(READY_LVL_i_7_n_0),
+        .I5(READY_LVL_i_8_n_0),
         .O(trig_change));
   LUT1 #(
     .INIT(2'h1)) 
@@ -81,12 +90,12 @@ module design_1_trigger_to_level_0_0_trigger_to_level
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     READY_LVL_i_4
-       (.I0(READY[12]),
-        .I1(READY[13]),
-        .I2(READY[10]),
-        .I3(READY[11]),
-        .I4(READY[9]),
-        .I5(READY[8]),
+       (.I0(READY[30]),
+        .I1(READY[31]),
+        .I2(READY[28]),
+        .I3(READY[29]),
+        .I4(READY[27]),
+        .I5(READY[26]),
         .O(READY_LVL_i_4_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
@@ -101,39 +110,38 @@ module design_1_trigger_to_level_0_0_trigger_to_level
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     READY_LVL_i_6
-       (.I0(READY[30]),
-        .I1(READY[31]),
-        .I2(READY[28]),
-        .I3(READY[29]),
-        .I4(READY[27]),
-        .I5(READY[26]),
-        .O(READY_LVL_i_6_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    READY_LVL_i_7
        (.I0(READY[24]),
         .I1(READY[25]),
         .I2(READY[22]),
         .I3(READY[23]),
         .I4(READY[21]),
         .I5(READY[20]),
-        .O(READY_LVL_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    READY_LVL_i_8
-       (.I0(READY[0]),
-        .I1(READY[1]),
-        .O(READY_LVL_i_8_n_0));
+        .O(READY_LVL_i_6_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    READY_LVL_i_9
+    READY_LVL_i_7
+       (.I0(READY[12]),
+        .I1(READY[13]),
+        .I2(READY[10]),
+        .I3(READY[11]),
+        .I4(READY[9]),
+        .I5(READY[8]),
+        .O(READY_LVL_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    READY_LVL_i_8
        (.I0(READY[6]),
         .I1(READY[7]),
         .I2(READY[4]),
         .I3(READY[5]),
         .I4(READY[3]),
-        .I5(READY[2]),
+        .I5(READY_LVL_i_9_n_0),
+        .O(READY_LVL_i_8_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    READY_LVL_i_9
+       (.I0(READY[1]),
+        .I1(READY[2]),
         .O(READY_LVL_i_9_n_0));
   FDCE READY_LVL_reg
        (.C(trig_change),
@@ -141,6 +149,21 @@ module design_1_trigger_to_level_0_0_trigger_to_level
         .CLR(READY_LVL_i_3_n_0),
         .D(READY_LVL_i_1_n_0),
         .Q(READY_LVL));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'hFB0A)) 
+    counter_reset_i_1
+       (.I0(READY[2]),
+        .I1(READY[1]),
+        .I2(READY[0]),
+        .I3(counter_reset),
+        .O(counter_reset_i_1_n_0));
+  FDCE counter_reset_reg
+       (.C(trig_change),
+        .CE(1'b1),
+        .CLR(READY_LVL_i_3_n_0),
+        .D(counter_reset_i_1_n_0),
+        .Q(counter_reset));
 endmodule
 `ifndef GLBL
 `define GLBL

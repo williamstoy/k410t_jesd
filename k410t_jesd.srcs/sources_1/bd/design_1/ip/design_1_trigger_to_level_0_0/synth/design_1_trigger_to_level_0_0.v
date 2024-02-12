@@ -58,11 +58,15 @@
 module design_1_trigger_to_level_0_0 (
   READY,
   READY_LVL,
+  counter_reset,
   RSTN
 );
 
 input wire [31 : 0] READY;
 output wire READY_LVL;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME counter_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 counter_reset RST" *)
+output wire counter_reset;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RSTN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RSTN RST" *)
 input wire RSTN;
@@ -70,6 +74,7 @@ input wire RSTN;
   trigger_to_level inst (
     .READY(READY),
     .READY_LVL(READY_LVL),
+    .counter_reset(counter_reset),
     .RSTN(RSTN)
   );
 endmodule

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb 12 18:01:21 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb 12 18:40:11 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -163,6 +163,7 @@
     <MODULE COREREVISION="1" FULLNAME="/enable_read_0" HWVERSION="1.0" INSTANCE="enable_read_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable_read" VLNV="xilinx.com:module_ref:enable_read:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
+        <PARAMETER NAME="hold" VALUE="60"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_enable_read_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -175,6 +176,11 @@
         <PORT DIR="I" NAME="empty" SIGIS="undef" SIGNAME="fifo_generator_0_almost_empty">
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="almost_empty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100800000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="frontpanel_1_okClk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="frontpanel_1" PORT="okClk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="read_en" SIGIS="undef" SIGNAME="enable_read_0_read_en">
@@ -210,6 +216,11 @@
         <PORT DIR="I" NAME="EN" SIGIS="undef" SIGNAME="trigger_to_level_0_READY_LVL">
           <CONNECTIONS>
             <CONNECTION INSTANCE="trigger_to_level_0" PORT="READY_LVL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="DIS" SIGIS="undef" SIGNAME="trigger_to_level_0_counter_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="trigger_to_level_0" PORT="counter_reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="read_en_detect" SIGIS="undef" SIGNAME="enable_read_0_read_en">
@@ -1263,6 +1274,7 @@
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
             <CONNECTION INSTANCE="okAXI4LiteInterface_0" PORT="okClkIn"/>
             <CONNECTION INSTANCE="frontpanel_1" PORT="ti40_ep_clk"/>
+            <CONNECTION INSTANCE="enable_read_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="wi00_ep_dataout" RIGHT="0" SIGIS="undef" SIGNAME="frontpanel_1_wi00_ep_dataout">
@@ -5194,6 +5206,11 @@
             <CONNECTION INSTANCE="ila_0" PORT="probe11"/>
             <CONNECTION INSTANCE="enabled_binary_count_0" PORT="EN"/>
             <CONNECTION INSTANCE="FIFO_FSM_0" PORT="TEST_MODE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="counter_reset" SIGIS="rst" SIGNAME="trigger_to_level_0_counter_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enabled_binary_count_0" PORT="DIS"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="RSTN" SIGIS="rst" SIGNAME="jesd204_0_rx_aresetn">

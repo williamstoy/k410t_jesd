@@ -27,22 +27,22 @@ preplace portBus SYNCbABP -pg 1 -lvl 7 -x 3300 -y 980 -defaultsOSRD
 preplace portBus SYNCbABM -pg 1 -lvl 7 -x 3300 -y 1000 -defaultsOSRD
 preplace portBus SYNCbCDP -pg 1 -lvl 7 -x 3300 -y 1120 -defaultsOSRD
 preplace portBus SYNCbCDM -pg 1 -lvl 7 -x 3300 -y 1140 -defaultsOSRD
-preplace inst jesd204_0 -pg 1 -lvl 3 -x 1250 -y 340 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 25 21 23 22 24 28 27 26 36 33 30 34 31 32 35 29} -defaultsOSRD -pinY s_axi 100L -pinY m_axis_rx 0R -pinY refclk_p 200L -pinY refclk_n 120L -pinY rx_core_clk_out 20R -pinY s_axi_aclk 140L -pinY s_axi_aresetn 160L -pinY rx_reset 260L -pinBusY rxp 240L -pinBusY rxn 220L -pinY rx_aresetn 280R -pinBusY rx_start_of_frame 120R -pinBusY rx_end_of_frame 60R -pinBusY rx_start_of_multiframe 140R -pinBusY rx_end_of_multiframe 80R -pinBusY rx_frame_error 100R -pinY rx_sysref 280L -pinY rx_sync 40R
+preplace inst jesd204_0 -pg 1 -lvl 3 -x 1250 -y 340 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 25 21 23 22 24 28 27 26 36 33 29 31 30 34 35 32} -defaultsOSRD -pinY s_axi 100L -pinY m_axis_rx 0R -pinY refclk_p 200L -pinY refclk_n 120L -pinY rx_core_clk_out 20R -pinY s_axi_aclk 140L -pinY s_axi_aresetn 160L -pinY rx_reset 260L -pinBusY rxp 240L -pinBusY rxn 220L -pinY rx_aresetn 280R -pinBusY rx_start_of_frame 120R -pinBusY rx_end_of_frame 40R -pinBusY rx_start_of_multiframe 80R -pinBusY rx_end_of_multiframe 60R -pinBusY rx_frame_error 140R -pinY rx_sysref 280L -pinY rx_sync 100R
 preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 740 -y 840 -defaultsOSRD -pinY CLK_IN_D 0L -pinY CLK_IN_D.IBUF_DS_P 20L -pinY CLK_IN_D.IBUF_DS_N 40L -pinBusY IBUF_OUT 0R
 preplace inst util_ds_buf_1 -pg 1 -lvl 6 -x 3100 -y 980 -defaultsOSRD -pinBusY OBUF_IN 0L -pinBusY OBUF_DS_P 0R -pinBusY OBUF_DS_N 20R
 preplace inst util_ds_buf_2 -pg 1 -lvl 6 -x 3100 -y 1120 -defaultsOSRD -pinBusY OBUF_IN 0L -pinBusY OBUF_DS_P 0R -pinBusY OBUF_DS_N 20R
-preplace inst fifo_generator_0 -pg 1 -lvl 5 -x 2390 -y 460 -swap {0 1 2 3 4 5 6 7 8 11 9 10 15 16 14 13 12} -defaultsOSRD -pinY FIFO_WRITE 0L -pinY FIFO_WRITE.full 40L -pinY FIFO_WRITE.din 60L -pinY FIFO_WRITE.wr_en 80L -pinY FIFO_READ 100L -pinY FIFO_READ.almost_empty 120L -pinY FIFO_READ.empty 140L -pinY FIFO_READ.dout 160L -pinY FIFO_READ.rd_en 180L -pinY rst 240L -pinY wr_clk 200L -pinY rd_clk 220L -pinY valid 60R -pinY prog_full 240R -pinY prog_empty 40R -pinY wr_rst_busy 20R -pinY rd_rst_busy 0R
-preplace inst ila_0 -pg 1 -lvl 6 -x 3100 -y 290 -swap {13 4 8 12 2 10 1 0 11 5 9 6 3 7 14} -defaultsOSRD -pinY clk 520L -pinBusY probe0 80L -pinBusY probe1 420L -pinBusY probe2 500L -pinBusY probe3 40L -pinBusY probe4 460L -pinBusY probe5 20L -pinBusY probe6 0L -pinBusY probe7 480L -pinBusY probe8 100L -pinBusY probe9 440L -pinBusY probe10 120L -pinBusY probe11 60L -pinBusY probe12 400L -pinBusY probe13 540L
+preplace inst fifo_generator_0 -pg 1 -lvl 5 -x 2390 -y 460 -swap {0 1 2 3 4 5 6 7 8 11 9 10 16 15 14 13 12} -defaultsOSRD -pinY FIFO_WRITE 0L -pinY FIFO_WRITE.full 40L -pinY FIFO_WRITE.din 60L -pinY FIFO_WRITE.wr_en 80L -pinY FIFO_READ 100L -pinY FIFO_READ.almost_empty 120L -pinY FIFO_READ.empty 140L -pinY FIFO_READ.dout 160L -pinY FIFO_READ.rd_en 180L -pinY rst 240L -pinY wr_clk 200L -pinY rd_clk 220L -pinY valid 240R -pinY prog_full 60R -pinY prog_empty 40R -pinY wr_rst_busy 20R -pinY rd_rst_busy 0R
+preplace inst ila_0 -pg 1 -lvl 6 -x 3100 -y 290 -swap {13 4 6 3 9 12 1 0 11 7 10 8 2 5 14} -defaultsOSRD -pinY clk 520L -pinBusY probe0 80L -pinBusY probe1 120L -pinBusY probe2 60L -pinBusY probe3 440L -pinBusY probe4 500L -pinBusY probe5 20L -pinBusY probe6 0L -pinBusY probe7 480L -pinBusY probe8 400L -pinBusY probe9 460L -pinBusY probe10 420L -pinBusY probe11 40L -pinBusY probe12 100L -pinBusY probe13 540L
 preplace inst okAXI4LiteInterface_0 -pg 1 -lvl 2 -x 740 -y 440 -defaultsOSRD -pinY btpipein_DATA 0L -pinY wireout_READDATA 80L -pinY m_axi 0R -pinY okClkIn 100L -pinY m_axi_aclk 40R -pinY m_axi_aresetn 60R -pinY activity_mon 90R
 preplace inst wireoutbreakout_0 -pg 1 -lvl 2 -x 740 -y 340 -defaultsOSRD -pinY wirein_READDATA 0L -pinY rx_reset 0R
-preplace inst jesd204_0_transport_0 -pg 1 -lvl 4 -x 1770 -y 60 -swap {0 1 2 3 4 6 5 9 10 7 8 11 12 13 14 15 16 17 18 19 20 21} -defaultsOSRD -pinY rx 280L -pinY clk 300L -pinY rst_n 320L -pinBusY signalA_sampl0 20R -pinBusY signalA_sampl1 0R -pinY signalA_cntrl0 80R -pinY signalA_cntrl1 100R -pinBusY signalB_sampl0 40R -pinBusY signalB_sampl1 60R -pinY signalB_cntrl0 120R -pinY signalB_cntrl1 140R -pinBusY signalC_sampl0 160R -pinBusY signalC_sampl1 180R -pinY signalC_cntrl0 200R -pinY signalC_cntrl1 220R -pinBusY signalD_sampl0 240R -pinBusY signalD_sampl1 260R -pinY signalD_cntrl0 280R -pinY signalD_cntrl1 300R -pinY ready_out 320R
+preplace inst jesd204_0_transport_0 -pg 1 -lvl 4 -x 1770 -y 60 -swap {0 1 2 3 4 6 5 10 9 8 7 11 12 13 14 15 16 17 18 19 20 21} -defaultsOSRD -pinY rx 280L -pinY clk 300L -pinY rst_n 320L -pinBusY signalA_sampl0 20R -pinBusY signalA_sampl1 0R -pinY signalA_cntrl0 100R -pinY signalA_cntrl1 80R -pinBusY signalB_sampl0 60R -pinBusY signalB_sampl1 40R -pinY signalB_cntrl0 120R -pinY signalB_cntrl1 140R -pinBusY signalC_sampl0 160R -pinBusY signalC_sampl1 180R -pinY signalC_cntrl0 200R -pinY signalC_cntrl1 220R -pinBusY signalD_sampl0 240R -pinBusY signalD_sampl1 260R -pinY signalD_cntrl0 280R -pinY signalD_cntrl1 300R -pinY ready_out 320R
 preplace inst negate_0 -pg 1 -lvl 4 -x 1770 -y 880 -defaultsOSRD -pinY a 0L -pinY nota 0R
 preplace inst frontpanel_1 -pg 1 -lvl 1 -x 220 -y 340 -swap {0 1 2 3 4 5 6 12 8 9 10 11 7 13 14 15 16 17 18 19 20 21 22} -defaultsOSRD -pinY host_interface 0L -pinY host_interface.okHU 20L -pinY host_interface.okUH 40L -pinY host_interface.okUHU 60L -pinY host_interface.okAA 80L -pinY wirein00 0R -pinY wirein00.wi00_ep_dataout 20R -pinY wireout20 180R -pinY triggerin40 120R -pinY triggerin40.ti40_ep_trigger 140R -pinY triggerin40.ti40_ep_clk 160R -pinY btpipein80 100R -pinY btpipeouta0 200R -pinY btpipeouta0.btpoa0_ep_read 220R -pinY btpipeouta0.btpoa0_ep_blockstrobe 240R -pinY btpipeouta0.btpoa0_ep_ready 260R -pinY btpipeouta0.btpoa0_ep_datain 280R -pinY okClk 300R
-preplace inst trigger_to_level_0 -pg 1 -lvl 4 -x 1770 -y 980 -defaultsOSRD -pinBusY READY 0L -pinY READY_LVL 0R -pinY RSTN 20L
-preplace inst enable_read_0 -pg 1 -lvl 4 -x 1770 -y 540 -defaultsOSRD -pinY read 100L -pinY empty 120L -pinY read_en 100R
-preplace inst enabled_binary_count_0 -pg 1 -lvl 5 -x 2390 -y 260 -swap {1 0 3 2 4} -defaultsOSRD -pinY RST_N 20L -pinY CLK 0L -pinY EN 60L -pinY read_en_detect 40L -pinBusY count 0R
-preplace inst FIFO_FSM_0 -pg 1 -lvl 6 -x 3100 -y -40 -swap {2 0 7 8 6 4 1 5 3 10 9} -defaultsOSRD -pinY RST_N 60L -pinY CLK 0L -pinY READY 170L -pinY TEST_MODE 190L -pinBusY test_data 150L -pinBusY inA0 100L -pinBusY inA1 20L -pinBusY inB0 130L -pinBusY inB1 80L -pinBusY FIFO_DATA 190R -pinY WR_EN 0R
-preplace netloc frontpanel_0_okClk 1 1 5 440 760 NJ 760 NJ 760 2100 810 NJ
+preplace inst trigger_to_level_0 -pg 1 -lvl 4 -x 1770 -y 980 -swap {0 2 1 3} -defaultsOSRD -pinBusY READY 0L -pinY READY_LVL 20R -pinY counter_reset 0R -pinY RSTN 20L
+preplace inst enabled_binary_count_0 -pg 1 -lvl 5 -x 2390 -y 260 -swap {1 0 4 3 2 5} -defaultsOSRD -pinY RST_N 20L -pinY CLK 0L -pinY EN 80L -pinY DIS 60L -pinY read_en_detect 40L -pinBusY count 0R
+preplace inst enable_read_0 -pg 1 -lvl 4 -x 1770 -y 540 -swap {0 2 1 3} -defaultsOSRD -pinY read 100L -pinY empty 140L -pinY clk 120L -pinY read_en 100R
+preplace inst FIFO_FSM_0 -pg 1 -lvl 6 -x 3100 -y -40 -swap {2 0 7 4 6 3 1 5 8 9 10} -defaultsOSRD -pinY RST_N 60L -pinY CLK 0L -pinY READY 170L -pinY TEST_MODE 100L -pinBusY test_data 150L -pinBusY inA0 80L -pinBusY inA1 20L -pinBusY inB0 130L -pinBusY inB1 190L -pinBusY FIFO_DATA 0R -pinY WR_EN 190R
+preplace netloc frontpanel_0_okClk 1 1 5 440 700 NJ 700 1480J 780 2200 810 NJ
 preplace netloc okAXI4LiteInterface_0_m_axi_aresetn 1 2 1 N 500
 preplace netloc okAXI4LiteInterface_0_m_axi_aclk 1 2 1 N 480
 preplace netloc rxp_1 1 0 3 20J 280 NJ 280 940J
@@ -52,33 +52,34 @@ preplace netloc FPGA_JESD_CLKM_1 1 0 3 -40J 180 NJ 180 1000J
 preplace netloc util_ds_buf_0_IBUF_OUT 1 2 1 960 620n
 preplace netloc FPGA_JESD_SYSREFP_1 1 0 2 NJ 860 NJ
 preplace netloc FPGA_JESD_SYSREFM_1 1 0 2 NJ 880 NJ
-preplace netloc jesd204_0_rx_sync 1 3 4 1420 -20 NJ -20 2680 1060 NJ
-preplace netloc jesd204_0_rx_core_clk_out 1 3 3 1460 0 1980 0 2600J
+preplace netloc jesd204_0_rx_sync 1 3 4 N 440 2040J 400 2600 1060 NJ
+preplace netloc jesd204_0_rx_core_clk_out 1 3 3 1460 0 2020 0 2780J
 preplace netloc wireoutbreakout_0_rx_reset 1 2 1 920 340n
 preplace netloc util_ds_buf_1_OBUF_DS_P 1 6 1 NJ 980
 preplace netloc util_ds_buf_1_OBUF_DS_N 1 6 1 NJ 1000
 preplace netloc util_ds_buf_2_OBUF_DS_P 1 6 1 NJ 1120
 preplace netloc util_ds_buf_2_OBUF_DS_N 1 6 1 NJ 1140
-preplace netloc jesd204_0_rx_aresetn 1 3 3 1500 440 1940 40 2720J
-preplace netloc negate_0_nota 1 4 1 2080 700n
-preplace netloc fifo_generator_0_valid 1 5 1 2580 520n
-preplace netloc frontpanel_1_btpoa0_ep_read 1 1 5 500J 220 NJ 220 1480 -40 NJ -40 2580J
-preplace netloc enabled_binary_count_0_OUT 1 4 3 2100 180 2760 210 3260
-preplace netloc enable_write_0_wr_en 1 4 3 2060 160 2660 230 3280
-preplace netloc frontpanel_1_btpoa0_ep_blockstrobe 1 1 5 480J -60 NJ -60 NJ -60 NJ -60 2800
-preplace netloc fifo_generator_0_dout 1 1 5 420J 680 NJ 680 1420J 720 1960 400 2640J
-preplace netloc fifo_generator_0_empty 1 4 2 2080 200 2740J
-preplace netloc fifo_generator_0_prog_empty 1 5 1 2820 130n
-preplace netloc jesd204_0_transport_0_signalA_sampl0 1 4 2 NJ 80 2760
-preplace netloc jesd204_0_transport_0_signalA_sampl1 1 4 2 1920J 20 2700
-preplace netloc jesd204_0_transport_0_signalB_sampl0 1 4 2 NJ 100 2780
-preplace netloc jesd204_0_transport_0_signalB_sampl1 1 4 2 1960 60 2740
-preplace netloc frontpanel_1_ti40_ep_trigger 1 1 5 520J 240 NJ 240 1440 820 1920 830 N
-preplace netloc trigger_to_level_0_READY_LVL 1 4 2 2000 140 2780
-preplace netloc enabled_binary_count_0_count 1 5 1 2840 110n
-preplace netloc fifo_generator_0_prog_full 1 1 5 460J -80 NJ -80 NJ -80 NJ -80 2620
-preplace netloc enable_read_0_read_en 1 4 2 2040 380 2720
-preplace netloc fifo_generator_0_almost_empty 1 3 2 1520 740 2020J
+preplace netloc jesd204_0_rx_aresetn 1 3 3 1460 460 1980 20 NJ
+preplace netloc negate_0_nota 1 4 1 2180 700n
+preplace netloc fifo_generator_0_valid 1 5 1 2580 700n
+preplace netloc frontpanel_1_btpoa0_ep_read 1 1 5 460J 220 NJ 220 1500 -60 NJ -60 2820J
+preplace netloc enabled_binary_count_0_OUT 1 4 3 2200 140 2700 230 3280
+preplace netloc enable_write_0_wr_en 1 4 3 2160 120 2760 210 3260
+preplace netloc frontpanel_1_btpoa0_ep_blockstrobe 1 1 5 420J -80 NJ -80 NJ -80 NJ -80 2840
+preplace netloc fifo_generator_0_dout 1 1 5 420J 680 NJ 680 1440J 760 2080 180 2640J
+preplace netloc fifo_generator_0_empty 1 4 2 2180 200 2620J
+preplace netloc fifo_generator_0_prog_empty 1 5 1 2800 130n
+preplace netloc jesd204_0_transport_0_signalA_sampl0 1 4 2 1940J 40 N
+preplace netloc jesd204_0_transport_0_signalA_sampl1 1 4 2 1920J -20 N
+preplace netloc jesd204_0_transport_0_signalB_sampl0 1 4 2 2000J 100 2760
+preplace netloc jesd204_0_transport_0_signalB_sampl1 1 4 2 1960 60 2720
+preplace netloc frontpanel_1_ti40_ep_trigger 1 1 5 480J 240 NJ 240 1420 820 1940 830 N
+preplace netloc trigger_to_level_0_READY_LVL 1 4 2 2060 80 2740
+preplace netloc enabled_binary_count_0_count 1 5 1 2780 110n
+preplace netloc fifo_generator_0_prog_full 1 1 5 500J -40 NJ -40 NJ -40 NJ -40 2660
+preplace netloc enable_read_0_read_en 1 4 2 2120 160 2680
+preplace netloc fifo_generator_0_almost_empty 1 3 2 1500 740 2100J
+preplace netloc trigger_to_level_0_counter_reset 1 4 1 2140 320n
 preplace netloc jesd204_0_m_axis_rx 1 3 1 N 340
 preplace netloc okAXI4LiteInterface_0_m_axi 1 2 1 N 440
 preplace netloc frontpanel_1_wireout20 1 1 1 N 520
@@ -89,7 +90,7 @@ levelinfo -pg 1 -60 220 740 1250 1770 2390 3100 3300
 pagesize -pg 1 -db -bbox -sgen -270 -100 3470 1200
 ",
    "Reduced Jogs_ScaleFactor":"0.731974",
-   "Reduced Jogs_TopLeft":"2167,-98",
+   "Reduced Jogs_TopLeft":"1488,299",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
 preplace port host_interface -pg 1 -lvl 0 -x -20 -y 340 -defaultsOSRD

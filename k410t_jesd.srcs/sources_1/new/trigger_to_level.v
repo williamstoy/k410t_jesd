@@ -23,6 +23,7 @@
 module trigger_to_level(
     input [31:0] READY,
     output reg READY_LVL,
+    output reg counter_reset,
     input RSTN
     );
     
@@ -34,10 +35,15 @@ module trigger_to_level(
 always@(negedge RSTN or posedge trig_change) begin
     if(!RSTN) begin
         READY_LVL <= 1'b0;
+        counter_reset <= 1'b0;
     end
     else if(READY[0]) begin
         READY_LVL <= 1'b1;
-    end else if (READY[1]) READY_LVL <= 1'b0;
+    end else if (READY[2]) counter_reset <= 1'b1;
+    else if (READY[1]) begin 
+        READY_LVL <= 1'b0;
+        counter_reset <= 1'b0;
+    end
 end
 endmodule
 

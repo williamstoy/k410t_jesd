@@ -52,22 +52,29 @@
 
 (* X_CORE_INFO = "enable_read,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_enable_read_0_0,enable_read,{}" *)
-(* CORE_GENERATION_INFO = "design_1_enable_read_0_0,enable_read,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=enable_read,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_enable_read_0_0,enable_read,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=enable_read,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,hold=60}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_enable_read_0_0 (
   read,
   empty,
+  clk,
   read_en
 );
 
 input wire read;
 input wire empty;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100800000, PHASE 0.000, CLK_DOMAIN design_1_frontpanel_1_0_okClk, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
+input wire clk;
 output wire read_en;
 
-  enable_read inst (
+  enable_read #(
+    .hold(60)
+  ) inst (
     .read(read),
     .empty(empty),
+    .clk(clk),
     .read_en(read_en)
   );
 endmodule

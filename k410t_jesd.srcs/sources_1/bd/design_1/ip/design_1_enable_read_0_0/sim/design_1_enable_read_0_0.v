@@ -57,16 +57,23 @@
 module design_1_enable_read_0_0 (
   read,
   empty,
+  clk,
   read_en
 );
 
 input wire read;
 input wire empty;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100800000, PHASE 0.000, CLK_DOMAIN design_1_frontpanel_1_0_okClk, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
+input wire clk;
 output wire read_en;
 
-  enable_read inst (
+  enable_read #(
+    .hold(60)
+  ) inst (
     .read(read),
     .empty(empty),
+    .clk(clk),
     .read_en(read_en)
   );
 endmodule

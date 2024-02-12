@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Mon Feb 12 18:01:19 2024
+//Date        : Mon Feb 12 18:40:09 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -101,6 +101,7 @@ module design_1
   wire [3:0]rxn_1;
   wire [3:0]rxp_1;
   wire trigger_to_level_0_READY_LVL;
+  wire trigger_to_level_0_counter_reset;
   wire [0:0]util_ds_buf_0_IBUF_OUT;
   wire [0:0]util_ds_buf_1_OBUF_DS_N;
   wire [0:0]util_ds_buf_1_OBUF_DS_P;
@@ -134,11 +135,13 @@ module design_1
         .inB1(jesd204_0_transport_0_signalB_sampl1),
         .test_data(enabled_binary_count_0_count));
   design_1_enable_read_0_0 enable_read_0
-       (.empty(fifo_generator_0_almost_empty),
+       (.clk(frontpanel_0_okClk),
+        .empty(fifo_generator_0_almost_empty),
         .read(frontpanel_1_btpoa0_ep_read),
         .read_en(enable_read_0_read_en));
   design_1_enabled_binary_count_0_0 enabled_binary_count_0
        (.CLK(jesd204_0_rx_core_clk_out),
+        .DIS(trigger_to_level_0_counter_reset),
         .EN(trigger_to_level_0_READY_LVL),
         .RST_N(jesd204_0_rx_aresetn),
         .count(enabled_binary_count_0_count),
@@ -260,7 +263,8 @@ module design_1
   design_1_trigger_to_level_0_0 trigger_to_level_0
        (.READY(frontpanel_1_ti40_ep_trigger),
         .READY_LVL(trigger_to_level_0_READY_LVL),
-        .RSTN(jesd204_0_rx_aresetn));
+        .RSTN(jesd204_0_rx_aresetn),
+        .counter_reset(trigger_to_level_0_counter_reset));
   design_1_util_ds_buf_0_0 util_ds_buf_0
        (.IBUF_DS_N(FPGA_JESD_SYSREFM_1),
         .IBUF_DS_P(FPGA_JESD_SYSREFP_1),

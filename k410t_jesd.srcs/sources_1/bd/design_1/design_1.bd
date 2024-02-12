@@ -21,8 +21,8 @@
       "negate_0": "",
       "frontpanel_1": "",
       "trigger_to_level_0": "",
-      "enable_read_0": "",
       "enabled_binary_count_0": "",
+      "enable_read_0": "",
       "FIFO_FSM_0": ""
     },
     "interface_ports": {
@@ -866,6 +866,10 @@
           "READY_LVL": {
             "direction": "O"
           },
+          "counter_reset": {
+            "type": "rst",
+            "direction": "O"
+          },
           "RSTN": {
             "type": "rst",
             "direction": "I",
@@ -875,26 +879,6 @@
                 "value_src": "constant"
               }
             }
-          }
-        }
-      },
-      "enable_read_0": {
-        "vlnv": "xilinx.com:module_ref:enable_read:1.0",
-        "xci_name": "design_1_enable_read_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "enable_read",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "read": {
-            "direction": "I"
-          },
-          "empty": {
-            "direction": "I"
-          },
-          "read_en": {
-            "direction": "O"
           }
         }
       },
@@ -939,6 +923,15 @@
           "EN": {
             "direction": "I"
           },
+          "DIS": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
           "read_en_detect": {
             "direction": "I"
           },
@@ -946,6 +939,40 @@
             "direction": "O",
             "left": "31",
             "right": "0"
+          }
+        }
+      },
+      "enable_read_0": {
+        "vlnv": "xilinx.com:module_ref:enable_read:1.0",
+        "xci_name": "design_1_enable_read_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "enable_read",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "read": {
+            "direction": "I"
+          },
+          "empty": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_frontpanel_1_0_okClk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "read_en": {
+            "direction": "O"
           }
         }
       },
@@ -1069,7 +1096,8 @@
           "fifo_generator_0/rd_clk",
           "ila_0/clk",
           "okAXI4LiteInterface_0/okClkIn",
-          "frontpanel_1/ti40_ep_clk"
+          "frontpanel_1/ti40_ep_clk",
+          "enable_read_0/clk"
         ]
       },
       "okAXI4LiteInterface_0_m_axi_aresetn": {
@@ -1308,6 +1336,12 @@
         "ports": [
           "fifo_generator_0/almost_empty",
           "enable_read_0/empty"
+        ]
+      },
+      "trigger_to_level_0_counter_reset": {
+        "ports": [
+          "trigger_to_level_0/counter_reset",
+          "enabled_binary_count_0/DIS"
         ]
       }
     },
