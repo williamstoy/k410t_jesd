@@ -1,8 +1,8 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Fri Feb  9 16:52:43 2024
--- Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+-- Date        : Mon Feb 12 17:48:42 2024
+-- Host        : linrack7.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_enabled_binary_count_0_0_stub.vhdl
 -- Design      : design_1_enabled_binary_count_0_0
@@ -17,6 +17,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     RST_N : in STD_LOGIC;
     CLK : in STD_LOGIC;
     EN : in STD_LOGIC;
+    read_en_detect : in STD_LOGIC;
     count : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
 
@@ -26,7 +27,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "RST_N,CLK,EN,count[31:0]";
+attribute black_box_pad_pin of stub : architecture is "RST_N,CLK,EN,read_en_detect,count[31:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "enabled_binary_counter,Vivado 2019.2";
 begin

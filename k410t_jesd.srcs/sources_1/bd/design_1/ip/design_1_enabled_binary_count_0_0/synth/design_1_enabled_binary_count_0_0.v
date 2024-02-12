@@ -59,6 +59,7 @@ module design_1_enabled_binary_count_0_0 (
   RST_N,
   CLK,
   EN,
+  read_en_detect,
   count
 );
 
@@ -69,6 +70,7 @@ input wire RST_N;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *)
 input wire CLK;
 input wire EN;
+input wire read_en_detect;
 output wire [31 : 0] count;
 
   enabled_binary_counter #(
@@ -79,6 +81,7 @@ output wire [31 : 0] count;
     .RST_N(RST_N),
     .CLK(CLK),
     .EN(EN),
+    .read_en_detect(read_en_detect),
     .count(count)
   );
 endmodule

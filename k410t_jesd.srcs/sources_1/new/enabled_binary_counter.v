@@ -29,15 +29,24 @@ module enabled_binary_counter #
     input RST_N,
     input CLK,
     input EN,
+    input read_en_detect,
     output reg [width-1:0] count
     );
+    
+    reg [1:0] blockstrobe_detect;
+    
     
     always @(posedge CLK or negedge RST_N) begin
         if (!RST_N) begin
             count <= 0;
         end else if (EN) begin
             count <= count + step;
-            if (count == max_value) count <= 0;
+            if (count >= max_value) count <= 0;
+        end else begin
+            blockstrobe_detect[0] <= read_en_detect;
+            blockstrobe_detect[1] <= blockstrobe_detect[0];
+            if (blockstrobe_detect == 1'b01) //rising edge
+                count <= count + 1; 
         end
             
     end
