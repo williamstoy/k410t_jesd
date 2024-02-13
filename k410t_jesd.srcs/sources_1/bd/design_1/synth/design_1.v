@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Tue Feb 13 09:48:32 2024
+//Date        : Tue Feb 13 10:56:41 2024
 //Host        : bioeebeanie.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -42,6 +42,7 @@ module design_1
   input [3:0]rxn;
   input [3:0]rxp;
 
+  wire [31:0]FIFO_FSM_0_pad_out;
   wire FPGA_JESD_CLKM_1;
   wire FPGA_JESD_CLKP_1;
   wire FPGA_JESD_SYSREFM_1;
@@ -128,11 +129,13 @@ module design_1
         .READY(fifo_generator_0_prog_empty),
         .RST_N(jesd204_0_rx_aresetn),
         .TEST_MODE(trigger_to_level_0_READY_LVL),
+        .VALID(jesd204_0_rx_sync),
         .WR_EN(enable_write_0_wr_en),
         .inA0(jesd204_0_transport_0_signalA_sampl0),
         .inA1(jesd204_0_transport_0_signalA_sampl1),
         .inB0(jesd204_0_transport_0_signalB_sampl0),
         .inB1(jesd204_0_transport_0_signalB_sampl1),
+        .pad_out(FIFO_FSM_0_pad_out),
         .test_data(enabled_binary_count_0_count));
   design_1_enable_read_0_0 enable_read_0
        (.clk(frontpanel_0_okClk),
@@ -184,6 +187,7 @@ module design_1
         .probe11(trigger_to_level_0_READY_LVL),
         .probe12(enable_read_0_read_en),
         .probe13(frontpanel_1_ti40_ep_trigger),
+        .probe14(FIFO_FSM_0_pad_out),
         .probe2(enable_write_0_wr_en),
         .probe3(jesd204_0_rx_sync),
         .probe4(fifo_generator_0_valid),

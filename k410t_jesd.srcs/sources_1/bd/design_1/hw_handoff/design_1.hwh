@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 13 09:48:34 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 13 10:56:43 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -120,6 +120,11 @@
             <CONNECTION INSTANCE="trigger_to_level_0" PORT="READY_LVL"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="VALID" SIGIS="undef" SIGNAME="jesd204_0_rx_sync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="rx_sync"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="test_data" RIGHT="0" SIGIS="undef" SIGNAME="enabled_binary_count_0_count">
           <CONNECTIONS>
             <CONNECTION INSTANCE="enabled_binary_count_0" PORT="count"/>
@@ -155,6 +160,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="wr_en"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="pad_out" RIGHT="0" SIGIS="undef" SIGNAME="FIFO_FSM_0_pad_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe14"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1399,7 +1409,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="14"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="15"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="4096"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2019"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -1437,7 +1447,7 @@
         <PARAMETER NAME="C_PROBE11_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE12_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE13_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE15_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE16_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE17_WIDTH" VALUE="1"/>
@@ -4594,6 +4604,11 @@
             <CONNECTION INSTANCE="frontpanel_1" PORT="ti40_ep_trigger"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe14" RIGHT="0" SIGIS="undef" SIGNAME="FIFO_FSM_0_pad_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="pad_out"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4805,6 +4820,7 @@
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="util_ds_buf_2" PORT="OBUF_IN"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+            <CONNECTION INSTANCE="FIFO_FSM_0" PORT="VALID"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

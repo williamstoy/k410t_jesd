@@ -60,13 +60,15 @@ module design_1_FIFO_FSM_0_0 (
   CLK,
   READY,
   TEST_MODE,
+  VALID,
   test_data,
   inA0,
   inA1,
   inB0,
   inB1,
   FIFO_DATA,
-  WR_EN
+  WR_EN,
+  pad_out
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -77,6 +79,7 @@ input wire RST_N;
 input wire CLK;
 input wire READY;
 input wire TEST_MODE;
+input wire VALID;
 input wire [31 : 0] test_data;
 input wire [13 : 0] inA0;
 input wire [13 : 0] inA1;
@@ -84,18 +87,21 @@ input wire [13 : 0] inB0;
 input wire [13 : 0] inB1;
 output wire [31 : 0] FIFO_DATA;
 output wire WR_EN;
+output wire [31 : 0] pad_out;
 
   FIFO_FSM inst (
     .RST_N(RST_N),
     .CLK(CLK),
     .READY(READY),
     .TEST_MODE(TEST_MODE),
+    .VALID(VALID),
     .test_data(test_data),
     .inA0(inA0),
     .inA1(inA1),
     .inB0(inB0),
     .inB1(inB1),
     .FIFO_DATA(FIFO_DATA),
-    .WR_EN(WR_EN)
+    .WR_EN(WR_EN),
+    .pad_out(pad_out)
   );
 endmodule

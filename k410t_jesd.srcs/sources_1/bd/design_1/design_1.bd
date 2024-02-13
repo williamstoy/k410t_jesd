@@ -273,12 +273,15 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "14"
+            "value": "15"
           },
           "C_PROBE10_WIDTH": {
             "value": "32"
           },
           "C_PROBE13_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE14_WIDTH": {
             "value": "32"
           },
           "C_PROBE2_WIDTH": {
@@ -1015,6 +1018,9 @@
           "TEST_MODE": {
             "direction": "I"
           },
+          "VALID": {
+            "direction": "I"
+          },
           "test_data": {
             "direction": "I",
             "left": "31",
@@ -1047,6 +1053,11 @@
           },
           "WR_EN": {
             "direction": "O"
+          },
+          "pad_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         }
       }
@@ -1160,7 +1171,8 @@
           "JESD_SYNC",
           "util_ds_buf_1/OBUF_IN",
           "util_ds_buf_2/OBUF_IN",
-          "ila_0/probe3"
+          "ila_0/probe3",
+          "FIFO_FSM_0/VALID"
         ]
       },
       "jesd204_0_rx_core_clk_out": {
@@ -1342,6 +1354,12 @@
         "ports": [
           "trigger_to_level_0/counter_reset",
           "enabled_binary_count_0/DIS"
+        ]
+      },
+      "FIFO_FSM_0_pad_out": {
+        "ports": [
+          "FIFO_FSM_0/pad_out",
+          "ila_0/probe14"
         ]
       }
     },

@@ -1,8 +1,8 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Tue Feb 13 09:49:56 2024
--- Host        : linrack10.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+-- Date        : Tue Feb 13 10:57:56 2024
+-- Host        : linrack7.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_FIFO_FSM_0_0_stub.vhdl
 -- Design      : design_1_FIFO_FSM_0_0
@@ -18,13 +18,15 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     CLK : in STD_LOGIC;
     READY : in STD_LOGIC;
     TEST_MODE : in STD_LOGIC;
+    VALID : in STD_LOGIC;
     test_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
     inA0 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     inA1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     inB0 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     inB1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     FIFO_DATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    WR_EN : out STD_LOGIC
+    WR_EN : out STD_LOGIC;
+    pad_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
 
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
@@ -33,7 +35,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "RST_N,CLK,READY,TEST_MODE,test_data[31:0],inA0[13:0],inA1[13:0],inB0[13:0],inB1[13:0],FIFO_DATA[31:0],WR_EN";
+attribute black_box_pad_pin of stub : architecture is "RST_N,CLK,READY,TEST_MODE,VALID,test_data[31:0],inA0[13:0],inA1[13:0],inB0[13:0],inB1[13:0],FIFO_DATA[31:0],WR_EN,pad_out[31:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "FIFO_FSM,Vivado 2019.2";
 begin

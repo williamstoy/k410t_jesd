@@ -280,9 +280,10 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {4096} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {14} \
+   CONFIG.C_NUM_OF_PROBES {15} \
    CONFIG.C_PROBE10_WIDTH {32} \
    CONFIG.C_PROBE13_WIDTH {32} \
+   CONFIG.C_PROBE14_WIDTH {32} \
    CONFIG.C_PROBE2_WIDTH {1} \
  ] $ila_0
 
@@ -381,6 +382,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net okAXI4LiteInterface_0_m_axi [get_bd_intf_pins jesd204_0/s_axi] [get_bd_intf_pins okAXI4LiteInterface_0/m_axi]
 
   # Create port connections
+  connect_bd_net -net FIFO_FSM_0_pad_out [get_bd_pins FIFO_FSM_0/pad_out] [get_bd_pins ila_0/probe14]
   connect_bd_net -net FPGA_JESD_CLKM_1 [get_bd_ports FPGA_JESD_CLKM] [get_bd_pins jesd204_0/refclk_n]
   connect_bd_net -net FPGA_JESD_CLKP_1 [get_bd_ports FPGA_JESD_CLKP] [get_bd_pins jesd204_0/refclk_p]
   connect_bd_net -net FPGA_JESD_SYSREFM_1 [get_bd_ports FPGA_JESD_SYSREFM] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
@@ -401,7 +403,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net frontpanel_1_ti40_ep_trigger [get_bd_pins frontpanel_1/ti40_ep_trigger] [get_bd_pins ila_0/probe13] [get_bd_pins trigger_to_level_0/READY]
   connect_bd_net -net jesd204_0_rx_aresetn [get_bd_pins FIFO_FSM_0/RST_N] [get_bd_pins enabled_binary_count_0/RST_N] [get_bd_pins jesd204_0/rx_aresetn] [get_bd_pins jesd204_0_transport_0/rst_n] [get_bd_pins negate_0/a] [get_bd_pins trigger_to_level_0/RSTN]
   connect_bd_net -net jesd204_0_rx_core_clk_out [get_bd_pins FIFO_FSM_0/CLK] [get_bd_pins enabled_binary_count_0/CLK] [get_bd_pins fifo_generator_0/wr_clk] [get_bd_pins jesd204_0/rx_core_clk_out] [get_bd_pins jesd204_0_transport_0/clk]
-  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
+  connect_bd_net -net jesd204_0_rx_sync [get_bd_ports JESD_SYNC] [get_bd_pins FIFO_FSM_0/VALID] [get_bd_pins ila_0/probe3] [get_bd_pins jesd204_0/rx_sync] [get_bd_pins util_ds_buf_1/OBUF_IN] [get_bd_pins util_ds_buf_2/OBUF_IN]
   connect_bd_net -net jesd204_0_transport_0_signalA_sampl0 [get_bd_pins FIFO_FSM_0/inA0] [get_bd_pins jesd204_0_transport_0/signalA_sampl0]
   connect_bd_net -net jesd204_0_transport_0_signalA_sampl1 [get_bd_pins FIFO_FSM_0/inA1] [get_bd_pins jesd204_0_transport_0/signalA_sampl1]
   connect_bd_net -net jesd204_0_transport_0_signalB_sampl0 [get_bd_pins FIFO_FSM_0/inB0] [get_bd_pins jesd204_0_transport_0/signalB_sampl0]
