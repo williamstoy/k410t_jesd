@@ -69,7 +69,7 @@ input wire clk;
 output wire read_en;
 
   enable_read #(
-    .hold(60)
+    .hold(10)
   ) inst (
     .read(read),
     .empty(empty),

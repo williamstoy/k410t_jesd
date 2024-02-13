@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "enable_read,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_enable_read_0_0,enable_read,{}" *)
-(* CORE_GENERATION_INFO = "design_1_enable_read_0_0,enable_read,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=enable_read,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,hold=60}" *)
+(* CORE_GENERATION_INFO = "design_1_enable_read_0_0,enable_read,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=enable_read,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,hold=10}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_enable_read_0_0 (
@@ -70,7 +70,7 @@ input wire clk;
 output wire read_en;
 
   enable_read #(
-    .hold(60)
+    .hold(10)
   ) inst (
     .read(read),
     .empty(empty),

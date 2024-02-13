@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 13 10:56:43 2024" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 13 11:09:37 2024" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="kintex7" BOARD="opalkelly.com:xem7350-k410t:part0:1.0" DEVICE="7k410t" NAME="design_1" PACKAGE="ffg676" SPEEDGRADE="-1"/>
 
@@ -173,7 +173,7 @@
     <MODULE COREREVISION="1" FULLNAME="/enable_read_0" HWVERSION="1.0" INSTANCE="enable_read_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable_read" VLNV="xilinx.com:module_ref:enable_read:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="hold" VALUE="60"/>
+        <PARAMETER NAME="hold" VALUE="10"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_enable_read_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module enable_read #(parameter integer hold = 60)(
+module enable_read #(parameter integer hold = 10)(
 	input read,
 	input empty,
 	input clk,
@@ -13,9 +13,11 @@ module enable_read #(parameter integer hold = 60)(
 
     always @(posedge clk) begin
         count <= 0;
-        if (read) hold_read <= 1;
-        else if (count < hold) count <= count + 1;
-        else begin
+        if (read) begin 
+            hold_read <= 1;
+        end else if (count < hold) begin
+            count <= count + 1;
+        end else begin
             hold_read <= 0;
         end
             
