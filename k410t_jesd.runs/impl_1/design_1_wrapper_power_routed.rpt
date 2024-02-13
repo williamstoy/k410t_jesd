@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Tue Feb 13 11:17:15 2024
+| Date             : Tue Feb 13 11:34:00 2024
 | Host             : linrack7.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -52,9 +52,9 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.026 |       23 |       --- |             --- |
+| Clocks                   |     0.027 |       23 |       --- |             --- |
 | Slice Logic              |     0.014 |    16384 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     5426 |    254200 |            2.13 |
+|   LUT as Logic           |     0.010 |     5432 |    254200 |            2.14 |
 |   LUT as Distributed RAM |     0.002 |      409 |     90600 |            0.45 |
 |   CARRY4                 |    <0.001 |      377 |     63550 |            0.59 |
 |   Register               |    <0.001 |     7921 |    508400 |            1.56 |
@@ -63,7 +63,7 @@ Table of Contents
 |   LUT as Shift Register  |    <0.001 |      289 |     90600 |            0.32 |
 |   Others                 |     0.000 |      734 |       --- |             --- |
 |   BUFR                   |     0.000 |        2 |       208 |            0.96 |
-| Signals                  |     0.018 |    13077 |       --- |             --- |
+| Signals                  |     0.018 |    13138 |       --- |             --- |
 | Block RAM                |     0.024 |     28.5 |       795 |            3.58 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |     0.100 |       48 |       400 |           12.00 |
@@ -156,15 +156,15 @@ Table of Contents
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |
-|   design_1_i             |     0.979 |
+|   design_1_i             |     0.980 |
 |     fifo_generator_0     |     0.002 |
 |       U0                 |     0.002 |
 |     frontpanel_1         |     0.134 |
 |       inst               |     0.134 |
-|     ila_0                |     0.036 |
-|       inst               |     0.036 |
-|     jesd204_0            |     0.718 |
-|       inst               |     0.718 |
+|     ila_0                |     0.037 |
+|       inst               |     0.037 |
+|     jesd204_0            |     0.717 |
+|       inst               |     0.717 |
 |     util_ds_buf_0        |     0.002 |
 |       U0                 |     0.002 |
 |     util_ds_buf_1        |     0.041 |

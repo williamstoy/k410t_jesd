@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Tue Feb 13 11:10:53 2024
+// Date        : Tue Feb 13 11:27:53 2024
 // Host        : linrack7.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_enable_read_0_0/design_1_enable_read_0_0_sim_netlist.v
@@ -26,14 +26,12 @@ module design_1_enable_read_0_0
   output read_en;
 
   wire empty;
-  wire read;
   wire read_en;
 
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     read_en_INST_0
-       (.I0(read),
-        .I1(empty),
+       (.I0(empty),
         .O(read_en));
 endmodule
 `ifndef GLBL

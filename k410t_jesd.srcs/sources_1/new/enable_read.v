@@ -9,7 +9,7 @@ module enable_read #(parameter integer hold = 10)(
 	reg hold_read;
 	reg count;
 
-	assign read_en = read & ~empty;	
+	assign read_en = hold_read & ~empty;	
 
     always @(posedge clk) begin
         count <= 0;
