@@ -1,3 +1,14 @@
 *.wdb
+*.swp
 k410t_jesd.cache/*
 k410t_jesd.sim/*
+*.str
+k410t_jesd_test/*
+k410t_jesd.run/*
+!k410t_jesd.run/*.bit
+*.runs/
+k410t_jesd.sim/*
+k410t_jesd.hw/*
+k410t_jesd.ip_user_files/*    
+*.jou
+*.log
