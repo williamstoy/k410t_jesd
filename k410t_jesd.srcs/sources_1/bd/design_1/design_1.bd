@@ -5,8 +5,7 @@
       "device": "xc7k410tffg676-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2",
-      "validated": "true"
+      "tool_version": "2019.2"
     },
     "design_tree": {
       "jesd204_0": "",
@@ -60,78 +59,22 @@
       "SYNCbABP": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_util_ds_buf_1_0_OBUF_DS_P",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
       },
       "SYNCbABM": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_util_ds_buf_1_0_OBUF_DS_N",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
       },
       "SYNCbCDP": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_util_ds_buf_2_0_OBUF_DS_P",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
       },
       "SYNCbCDM": {
         "direction": "O",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_util_ds_buf_2_0_OBUF_DS_N",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
       }
     },
     "components": {
@@ -520,49 +463,15 @@
         },
         "ports": {
           "okClkIn": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_frontpanel_1_0_okClk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100800000",
-                "value_src": "default_prop"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default_prop"
-              }
-            }
+            "direction": "I"
           },
           "m_axi_aclk": {
             "type": "clk",
-            "direction": "O",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "m_axi",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "m_axi_aresetn",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100800000",
-                "value_src": "constant"
-              }
-            }
+            "direction": "O"
           },
           "m_axi_aresetn": {
             "type": "rst",
-            "direction": "O",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+            "direction": "O"
           },
           "activity_mon": {
             "direction": "O"
@@ -677,31 +586,11 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "rx",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "rst_n": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+            "direction": "I"
           },
           "signalA_sampl0": {
             "direction": "O",
@@ -782,13 +671,7 @@
         },
         "ports": {
           "a": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
+            "direction": "I"
           },
           "nota": {
             "direction": "O"
@@ -875,13 +758,7 @@
           },
           "RSTN": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+            "direction": "I"
           }
         }
       },
@@ -901,39 +778,17 @@
         "ports": {
           "RST_N": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+            "direction": "I"
           },
           "CLK": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "EN": {
             "direction": "I"
           },
           "DIS": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "default_prop"
-              }
-            }
+            "direction": "I"
           },
           "read_en_detect": {
             "direction": "I"
@@ -956,27 +811,11 @@
         "ports": {
           "RST_N": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+            "direction": "I"
           },
           "CLK": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "READY": {
             "direction": "I"
@@ -1044,17 +883,7 @@
           },
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_frontpanel_1_0_okClk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100800000",
-                "value_src": "default_prop"
-              }
-            }
+            "direction": "I"
           },
           "read_en": {
             "direction": "O"

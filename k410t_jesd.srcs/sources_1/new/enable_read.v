@@ -6,12 +6,12 @@ module enable_read #(parameter integer hold = 10)(
 	input clk,
 	output read_en);
 	
-	reg hold_read;
-	reg count;
+	//reg hold_read;
+	//reg count;
 
-	assign read_en = hold_read & ~empty;	
+	assign read_en = read & ~empty;	
 
-    always @(posedge clk) begin
+    /*always @(posedge clk) begin
         count <= 0;
         if (read) begin 
             hold_read <= 1;
@@ -21,5 +21,5 @@ module enable_read #(parameter integer hold = 10)(
             hold_read <= 0;
         end
             
-    end
+    end*/
 endmodule
