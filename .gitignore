@@ -5,7 +5,7 @@ k410t_jesd.sim/*
 *.str
 k410t_jesd_test/*
 k410t_jesd.run/*
-!k410t_jesd.run/*.bit
+!k410t_jesd.runs/impl_1/*.bit
 *.runs/
 k410t_jesd.sim/*
 k410t_jesd.hw/*
