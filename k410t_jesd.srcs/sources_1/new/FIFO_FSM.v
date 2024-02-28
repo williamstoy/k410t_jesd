@@ -26,6 +26,7 @@ module FIFO_FSM
 	input wire CLK, // FIFO CLK
 	input wire READY,
 	input wire TEST_MODE,
+	input wire AVG,
 	input wire VALID,
 	input [31:0] test_data,
 	input [13:0] inA0,
@@ -42,14 +43,14 @@ reg [14:0] channelA_2;
 reg [14:0] channelB_2;
 reg data_count;
 
-wire [14:0] channelA = (inA0 + inA1) >> 1;
-wire [14:0] channelB = (inB0 + inB1) >> 1;
+wire [14:0] channelA = (inA0 + inA1); //sums,splice out 14:1 to shift by 2 without changing sign 
+wire [14:0] channelB = (inB0 + inB1);
 
-wire [14:0] channelA_avg = {1'b0, inA0}; //(channelA_2[13:0] + channelA[13:0]) >> 1;//{1'b0, inA0};
-wire [14:0] channelB_avg = {1'b0, inB0}; //(channelB_2[13:0] + channelB[13:0]) >> 1;//{1'b0, inB0};
+wire [14:0] channelA_avg = AVG ? (channelA_2[14:1] + channelA[14:1]) : {inA0, 1'b0}; //sum of 2 averages
+wire [14:0] channelB_avg = AVG ? (channelB_2[14:1] + channelB[14:1]) : {inB0, 1'b0};
 
 //running average over 2 clock cycles concatenated. 2 channels per device
-assign pad_out = TEST_MODE ?  test_data : {channelB_avg[13:0], 2'b00, channelA_avg[13:0], 2'b00}; 
+assign pad_out = TEST_MODE ?  test_data : {channelB_avg[14:1], 2'b00, channelA_avg[14:1], 2'b00}; 
 
 always @(negedge RST_N, posedge CLK) begin
 

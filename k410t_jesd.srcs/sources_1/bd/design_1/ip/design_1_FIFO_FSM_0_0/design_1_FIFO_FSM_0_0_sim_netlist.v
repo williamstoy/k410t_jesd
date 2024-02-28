@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Tue Feb 13 11:10:58 2024
+// Date        : Wed Feb 28 16:32:15 2024
 // Host        : linrack10.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0_sim_netlist.v
@@ -20,6 +20,7 @@ module design_1_FIFO_FSM_0_0
     CLK,
     READY,
     TEST_MODE,
+    AVG,
     VALID,
     test_data,
     inA0,
@@ -33,6 +34,7 @@ module design_1_FIFO_FSM_0_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_jesd204_0_0_rx_core_clk_out, INSERT_VIP 0" *) input CLK;
   input READY;
   input TEST_MODE;
+  input AVG;
   input VALID;
   input [31:0]test_data;
   input [13:0]inA0;
@@ -43,6 +45,7 @@ module design_1_FIFO_FSM_0_0
   output WR_EN;
   output [31:0]pad_out;
 
+  wire AVG;
   wire CLK;
   wire [31:0]FIFO_DATA;
   wire READY;
@@ -51,12 +54,15 @@ module design_1_FIFO_FSM_0_0
   wire VALID;
   wire WR_EN;
   wire [13:0]inA0;
+  wire [13:0]inA1;
   wire [13:0]inB0;
+  wire [13:0]inB1;
   wire [31:0]pad_out;
   wire [31:0]test_data;
 
   design_1_FIFO_FSM_0_0_FIFO_FSM inst
-       (.CLK(CLK),
+       (.AVG(AVG),
+        .CLK(CLK),
         .FIFO_DATA(FIFO_DATA),
         .READY(READY),
         .RST_N(RST_N),
@@ -64,15 +70,17 @@ module design_1_FIFO_FSM_0_0
         .VALID(VALID),
         .WR_EN(WR_EN),
         .inA0(inA0),
+        .inA1(inA1),
         .inB0(inB0),
+        .inB1(inB1),
         .pad_out(pad_out),
         .test_data(test_data));
 endmodule
 
 (* ORIG_REF_NAME = "FIFO_FSM" *) 
 module design_1_FIFO_FSM_0_0_FIFO_FSM
-   (pad_out,
-    FIFO_DATA,
+   (FIFO_DATA,
+    pad_out,
     WR_EN,
     READY,
     VALID,
@@ -81,9 +89,12 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
     CLK,
     test_data,
     inA0,
-    inB0);
-  output [31:0]pad_out;
+    inA1,
+    inB0,
+    inB1,
+    AVG);
   output [31:0]FIFO_DATA;
+  output [31:0]pad_out;
   output WR_EN;
   input READY;
   input VALID;
@@ -92,8 +103,12 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   input CLK;
   input [31:0]test_data;
   input [13:0]inA0;
+  input [13:0]inA1;
   input [13:0]inB0;
+  input [13:0]inB1;
+  input AVG;
 
+  wire AVG;
   wire CLK;
   wire [31:0]FIFO_DATA;
   wire \FIFO_DATA[17]_i_1_n_0 ;
@@ -105,12 +120,140 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   wire WR_EN;
   wire WR_EN0_n_0;
   wire WR_EN_i_1_n_0;
+  wire \channelA_2[11]_i_2_n_0 ;
+  wire \channelA_2[11]_i_3_n_0 ;
+  wire \channelA_2[11]_i_4_n_0 ;
+  wire \channelA_2[11]_i_5_n_0 ;
+  wire \channelA_2[14]_i_2_n_0 ;
+  wire \channelA_2[14]_i_3_n_0 ;
+  wire \channelA_2[3]_i_2_n_0 ;
+  wire \channelA_2[3]_i_3_n_0 ;
+  wire \channelA_2[3]_i_4_n_0 ;
+  wire \channelA_2[3]_i_5_n_0 ;
+  wire \channelA_2[7]_i_2_n_0 ;
+  wire \channelA_2[7]_i_3_n_0 ;
+  wire \channelA_2[7]_i_4_n_0 ;
+  wire \channelA_2[7]_i_5_n_0 ;
+  wire \channelA_2_reg[11]_i_1_n_0 ;
+  wire \channelA_2_reg[11]_i_1_n_1 ;
+  wire \channelA_2_reg[11]_i_1_n_2 ;
+  wire \channelA_2_reg[11]_i_1_n_3 ;
+  wire \channelA_2_reg[14]_i_1_n_3 ;
+  wire \channelA_2_reg[3]_i_1_n_0 ;
+  wire \channelA_2_reg[3]_i_1_n_1 ;
+  wire \channelA_2_reg[3]_i_1_n_2 ;
+  wire \channelA_2_reg[3]_i_1_n_3 ;
+  wire \channelA_2_reg[7]_i_1_n_0 ;
+  wire \channelA_2_reg[7]_i_1_n_1 ;
+  wire \channelA_2_reg[7]_i_1_n_2 ;
+  wire \channelA_2_reg[7]_i_1_n_3 ;
+  wire [14:1]channelA_avg0;
+  wire \channelB_2[11]_i_2_n_0 ;
+  wire \channelB_2[11]_i_3_n_0 ;
+  wire \channelB_2[11]_i_4_n_0 ;
+  wire \channelB_2[11]_i_5_n_0 ;
+  wire \channelB_2[14]_i_2_n_0 ;
+  wire \channelB_2[14]_i_3_n_0 ;
+  wire \channelB_2[3]_i_2_n_0 ;
+  wire \channelB_2[3]_i_3_n_0 ;
+  wire \channelB_2[3]_i_4_n_0 ;
+  wire \channelB_2[3]_i_5_n_0 ;
+  wire \channelB_2[7]_i_2_n_0 ;
+  wire \channelB_2[7]_i_3_n_0 ;
+  wire \channelB_2[7]_i_4_n_0 ;
+  wire \channelB_2[7]_i_5_n_0 ;
+  wire \channelB_2_reg[11]_i_1_n_0 ;
+  wire \channelB_2_reg[11]_i_1_n_1 ;
+  wire \channelB_2_reg[11]_i_1_n_2 ;
+  wire \channelB_2_reg[11]_i_1_n_3 ;
+  wire \channelB_2_reg[14]_i_1_n_3 ;
+  wire \channelB_2_reg[3]_i_1_n_0 ;
+  wire \channelB_2_reg[3]_i_1_n_1 ;
+  wire \channelB_2_reg[3]_i_1_n_2 ;
+  wire \channelB_2_reg[3]_i_1_n_3 ;
+  wire \channelB_2_reg[7]_i_1_n_0 ;
+  wire \channelB_2_reg[7]_i_1_n_1 ;
+  wire \channelB_2_reg[7]_i_1_n_2 ;
+  wire \channelB_2_reg[7]_i_1_n_3 ;
+  wire [14:1]channelB_avg0;
   wire data_count;
   wire data_count_i_1_n_0;
   wire [13:0]inA0;
+  wire [13:0]inA1;
   wire [13:0]inB0;
+  wire [13:0]inB1;
+  wire [13:0]p_0_in;
+  wire [13:0]p_0_in0_in;
+  wire [13:0]p_1_in;
+  wire [13:0]p_1_in1_in;
   wire [31:0]pad_out;
+  wire \pad_out[12]_INST_0_i_1_n_0 ;
+  wire \pad_out[12]_INST_0_i_1_n_1 ;
+  wire \pad_out[12]_INST_0_i_1_n_2 ;
+  wire \pad_out[12]_INST_0_i_1_n_3 ;
+  wire \pad_out[12]_INST_0_i_2_n_0 ;
+  wire \pad_out[12]_INST_0_i_3_n_0 ;
+  wire \pad_out[12]_INST_0_i_4_n_0 ;
+  wire \pad_out[12]_INST_0_i_5_n_0 ;
+  wire \pad_out[15]_INST_0_i_1_n_3 ;
+  wire \pad_out[15]_INST_0_i_2_n_0 ;
+  wire \pad_out[15]_INST_0_i_3_n_0 ;
+  wire \pad_out[20]_INST_0_i_1_n_0 ;
+  wire \pad_out[20]_INST_0_i_1_n_1 ;
+  wire \pad_out[20]_INST_0_i_1_n_2 ;
+  wire \pad_out[20]_INST_0_i_1_n_3 ;
+  wire \pad_out[20]_INST_0_i_2_n_0 ;
+  wire \pad_out[20]_INST_0_i_3_n_0 ;
+  wire \pad_out[20]_INST_0_i_4_n_0 ;
+  wire \pad_out[20]_INST_0_i_5_n_0 ;
+  wire \pad_out[24]_INST_0_i_1_n_0 ;
+  wire \pad_out[24]_INST_0_i_1_n_1 ;
+  wire \pad_out[24]_INST_0_i_1_n_2 ;
+  wire \pad_out[24]_INST_0_i_1_n_3 ;
+  wire \pad_out[24]_INST_0_i_2_n_0 ;
+  wire \pad_out[24]_INST_0_i_3_n_0 ;
+  wire \pad_out[24]_INST_0_i_4_n_0 ;
+  wire \pad_out[24]_INST_0_i_5_n_0 ;
+  wire \pad_out[28]_INST_0_i_1_n_0 ;
+  wire \pad_out[28]_INST_0_i_1_n_1 ;
+  wire \pad_out[28]_INST_0_i_1_n_2 ;
+  wire \pad_out[28]_INST_0_i_1_n_3 ;
+  wire \pad_out[28]_INST_0_i_2_n_0 ;
+  wire \pad_out[28]_INST_0_i_3_n_0 ;
+  wire \pad_out[28]_INST_0_i_4_n_0 ;
+  wire \pad_out[28]_INST_0_i_5_n_0 ;
+  wire \pad_out[31]_INST_0_i_1_n_3 ;
+  wire \pad_out[31]_INST_0_i_2_n_0 ;
+  wire \pad_out[31]_INST_0_i_3_n_0 ;
+  wire \pad_out[4]_INST_0_i_1_n_0 ;
+  wire \pad_out[4]_INST_0_i_1_n_1 ;
+  wire \pad_out[4]_INST_0_i_1_n_2 ;
+  wire \pad_out[4]_INST_0_i_1_n_3 ;
+  wire \pad_out[4]_INST_0_i_2_n_0 ;
+  wire \pad_out[4]_INST_0_i_3_n_0 ;
+  wire \pad_out[4]_INST_0_i_4_n_0 ;
+  wire \pad_out[4]_INST_0_i_5_n_0 ;
+  wire \pad_out[8]_INST_0_i_1_n_0 ;
+  wire \pad_out[8]_INST_0_i_1_n_1 ;
+  wire \pad_out[8]_INST_0_i_1_n_2 ;
+  wire \pad_out[8]_INST_0_i_1_n_3 ;
+  wire \pad_out[8]_INST_0_i_2_n_0 ;
+  wire \pad_out[8]_INST_0_i_3_n_0 ;
+  wire \pad_out[8]_INST_0_i_4_n_0 ;
+  wire \pad_out[8]_INST_0_i_5_n_0 ;
   wire [31:0]test_data;
+  wire [3:1]\NLW_channelA_2_reg[14]_i_1_CO_UNCONNECTED ;
+  wire [3:2]\NLW_channelA_2_reg[14]_i_1_O_UNCONNECTED ;
+  wire [0:0]\NLW_channelA_2_reg[3]_i_1_O_UNCONNECTED ;
+  wire [3:1]\NLW_channelB_2_reg[14]_i_1_CO_UNCONNECTED ;
+  wire [3:2]\NLW_channelB_2_reg[14]_i_1_O_UNCONNECTED ;
+  wire [0:0]\NLW_channelB_2_reg[3]_i_1_O_UNCONNECTED ;
+  wire [3:1]\NLW_pad_out[15]_INST_0_i_1_CO_UNCONNECTED ;
+  wire [3:2]\NLW_pad_out[15]_INST_0_i_1_O_UNCONNECTED ;
+  wire [0:0]\NLW_pad_out[20]_INST_0_i_1_O_UNCONNECTED ;
+  wire [3:1]\NLW_pad_out[31]_INST_0_i_1_CO_UNCONNECTED ;
+  wire [3:2]\NLW_pad_out[31]_INST_0_i_1_O_UNCONNECTED ;
+  wire [0:0]\NLW_pad_out[4]_INST_0_i_1_O_UNCONNECTED ;
 
   LUT5 #(
     .INIT(32'h00008000)) 
@@ -321,7 +464,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .D(pad_out[9]),
         .Q(FIFO_DATA[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h80)) 
     WR_EN0
@@ -340,7 +483,399 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(WR_EN0_n_0),
         .Q(WR_EN));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[11]_i_2 
+       (.I0(inA0[11]),
+        .I1(inA1[11]),
+        .O(\channelA_2[11]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[11]_i_3 
+       (.I0(inA0[10]),
+        .I1(inA1[10]),
+        .O(\channelA_2[11]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[11]_i_4 
+       (.I0(inA0[9]),
+        .I1(inA1[9]),
+        .O(\channelA_2[11]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[11]_i_5 
+       (.I0(inA0[8]),
+        .I1(inA1[8]),
+        .O(\channelA_2[11]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[14]_i_2 
+       (.I0(inA0[13]),
+        .I1(inA1[13]),
+        .O(\channelA_2[14]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[14]_i_3 
+       (.I0(inA0[12]),
+        .I1(inA1[12]),
+        .O(\channelA_2[14]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[3]_i_2 
+       (.I0(inA0[3]),
+        .I1(inA1[3]),
+        .O(\channelA_2[3]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[3]_i_3 
+       (.I0(inA0[2]),
+        .I1(inA1[2]),
+        .O(\channelA_2[3]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[3]_i_4 
+       (.I0(inA0[1]),
+        .I1(inA1[1]),
+        .O(\channelA_2[3]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[3]_i_5 
+       (.I0(inA0[0]),
+        .I1(inA1[0]),
+        .O(\channelA_2[3]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[7]_i_2 
+       (.I0(inA0[7]),
+        .I1(inA1[7]),
+        .O(\channelA_2[7]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[7]_i_3 
+       (.I0(inA0[6]),
+        .I1(inA1[6]),
+        .O(\channelA_2[7]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[7]_i_4 
+       (.I0(inA0[5]),
+        .I1(inA1[5]),
+        .O(\channelA_2[7]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelA_2[7]_i_5 
+       (.I0(inA0[4]),
+        .I1(inA1[4]),
+        .O(\channelA_2[7]_i_5_n_0 ));
+  FDCE \channelA_2_reg[10] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[9]),
+        .Q(p_1_in[9]));
+  FDCE \channelA_2_reg[11] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[10]),
+        .Q(p_1_in[10]));
+  CARRY4 \channelA_2_reg[11]_i_1 
+       (.CI(\channelA_2_reg[7]_i_1_n_0 ),
+        .CO({\channelA_2_reg[11]_i_1_n_0 ,\channelA_2_reg[11]_i_1_n_1 ,\channelA_2_reg[11]_i_1_n_2 ,\channelA_2_reg[11]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(inA0[11:8]),
+        .O(p_0_in[10:7]),
+        .S({\channelA_2[11]_i_2_n_0 ,\channelA_2[11]_i_3_n_0 ,\channelA_2[11]_i_4_n_0 ,\channelA_2[11]_i_5_n_0 }));
+  FDCE \channelA_2_reg[12] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[11]),
+        .Q(p_1_in[11]));
+  FDCE \channelA_2_reg[13] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[12]),
+        .Q(p_1_in[12]));
+  FDCE \channelA_2_reg[14] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[13]),
+        .Q(p_1_in[13]));
+  CARRY4 \channelA_2_reg[14]_i_1 
+       (.CI(\channelA_2_reg[11]_i_1_n_0 ),
+        .CO({\NLW_channelA_2_reg[14]_i_1_CO_UNCONNECTED [3],p_0_in[13],\NLW_channelA_2_reg[14]_i_1_CO_UNCONNECTED [1],\channelA_2_reg[14]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,inA0[13:12]}),
+        .O({\NLW_channelA_2_reg[14]_i_1_O_UNCONNECTED [3:2],p_0_in[12:11]}),
+        .S({1'b0,1'b1,\channelA_2[14]_i_2_n_0 ,\channelA_2[14]_i_3_n_0 }));
+  FDCE \channelA_2_reg[1] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[0]),
+        .Q(p_1_in[0]));
+  FDCE \channelA_2_reg[2] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[1]),
+        .Q(p_1_in[1]));
+  FDCE \channelA_2_reg[3] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[2]),
+        .Q(p_1_in[2]));
+  CARRY4 \channelA_2_reg[3]_i_1 
+       (.CI(1'b0),
+        .CO({\channelA_2_reg[3]_i_1_n_0 ,\channelA_2_reg[3]_i_1_n_1 ,\channelA_2_reg[3]_i_1_n_2 ,\channelA_2_reg[3]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(inA0[3:0]),
+        .O({p_0_in[2:0],\NLW_channelA_2_reg[3]_i_1_O_UNCONNECTED [0]}),
+        .S({\channelA_2[3]_i_2_n_0 ,\channelA_2[3]_i_3_n_0 ,\channelA_2[3]_i_4_n_0 ,\channelA_2[3]_i_5_n_0 }));
+  FDCE \channelA_2_reg[4] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[3]),
+        .Q(p_1_in[3]));
+  FDCE \channelA_2_reg[5] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[4]),
+        .Q(p_1_in[4]));
+  FDCE \channelA_2_reg[6] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[5]),
+        .Q(p_1_in[5]));
+  FDCE \channelA_2_reg[7] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[6]),
+        .Q(p_1_in[6]));
+  CARRY4 \channelA_2_reg[7]_i_1 
+       (.CI(\channelA_2_reg[3]_i_1_n_0 ),
+        .CO({\channelA_2_reg[7]_i_1_n_0 ,\channelA_2_reg[7]_i_1_n_1 ,\channelA_2_reg[7]_i_1_n_2 ,\channelA_2_reg[7]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(inA0[7:4]),
+        .O(p_0_in[6:3]),
+        .S({\channelA_2[7]_i_2_n_0 ,\channelA_2[7]_i_3_n_0 ,\channelA_2[7]_i_4_n_0 ,\channelA_2[7]_i_5_n_0 }));
+  FDCE \channelA_2_reg[8] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[7]),
+        .Q(p_1_in[7]));
+  FDCE \channelA_2_reg[9] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in[8]),
+        .Q(p_1_in[8]));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[11]_i_2 
+       (.I0(inB0[11]),
+        .I1(inB1[11]),
+        .O(\channelB_2[11]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[11]_i_3 
+       (.I0(inB0[10]),
+        .I1(inB1[10]),
+        .O(\channelB_2[11]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[11]_i_4 
+       (.I0(inB0[9]),
+        .I1(inB1[9]),
+        .O(\channelB_2[11]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[11]_i_5 
+       (.I0(inB0[8]),
+        .I1(inB1[8]),
+        .O(\channelB_2[11]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[14]_i_2 
+       (.I0(inB0[13]),
+        .I1(inB1[13]),
+        .O(\channelB_2[14]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[14]_i_3 
+       (.I0(inB0[12]),
+        .I1(inB1[12]),
+        .O(\channelB_2[14]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[3]_i_2 
+       (.I0(inB0[3]),
+        .I1(inB1[3]),
+        .O(\channelB_2[3]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[3]_i_3 
+       (.I0(inB0[2]),
+        .I1(inB1[2]),
+        .O(\channelB_2[3]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[3]_i_4 
+       (.I0(inB0[1]),
+        .I1(inB1[1]),
+        .O(\channelB_2[3]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[3]_i_5 
+       (.I0(inB0[0]),
+        .I1(inB1[0]),
+        .O(\channelB_2[3]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[7]_i_2 
+       (.I0(inB0[7]),
+        .I1(inB1[7]),
+        .O(\channelB_2[7]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[7]_i_3 
+       (.I0(inB0[6]),
+        .I1(inB1[6]),
+        .O(\channelB_2[7]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[7]_i_4 
+       (.I0(inB0[5]),
+        .I1(inB1[5]),
+        .O(\channelB_2[7]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \channelB_2[7]_i_5 
+       (.I0(inB0[4]),
+        .I1(inB1[4]),
+        .O(\channelB_2[7]_i_5_n_0 ));
+  FDCE \channelB_2_reg[10] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[9]),
+        .Q(p_1_in1_in[9]));
+  FDCE \channelB_2_reg[11] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[10]),
+        .Q(p_1_in1_in[10]));
+  CARRY4 \channelB_2_reg[11]_i_1 
+       (.CI(\channelB_2_reg[7]_i_1_n_0 ),
+        .CO({\channelB_2_reg[11]_i_1_n_0 ,\channelB_2_reg[11]_i_1_n_1 ,\channelB_2_reg[11]_i_1_n_2 ,\channelB_2_reg[11]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(inB0[11:8]),
+        .O(p_0_in0_in[10:7]),
+        .S({\channelB_2[11]_i_2_n_0 ,\channelB_2[11]_i_3_n_0 ,\channelB_2[11]_i_4_n_0 ,\channelB_2[11]_i_5_n_0 }));
+  FDCE \channelB_2_reg[12] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[11]),
+        .Q(p_1_in1_in[11]));
+  FDCE \channelB_2_reg[13] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[12]),
+        .Q(p_1_in1_in[12]));
+  FDCE \channelB_2_reg[14] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[13]),
+        .Q(p_1_in1_in[13]));
+  CARRY4 \channelB_2_reg[14]_i_1 
+       (.CI(\channelB_2_reg[11]_i_1_n_0 ),
+        .CO({\NLW_channelB_2_reg[14]_i_1_CO_UNCONNECTED [3],p_0_in0_in[13],\NLW_channelB_2_reg[14]_i_1_CO_UNCONNECTED [1],\channelB_2_reg[14]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,inB0[13:12]}),
+        .O({\NLW_channelB_2_reg[14]_i_1_O_UNCONNECTED [3:2],p_0_in0_in[12:11]}),
+        .S({1'b0,1'b1,\channelB_2[14]_i_2_n_0 ,\channelB_2[14]_i_3_n_0 }));
+  FDCE \channelB_2_reg[1] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[0]),
+        .Q(p_1_in1_in[0]));
+  FDCE \channelB_2_reg[2] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[1]),
+        .Q(p_1_in1_in[1]));
+  FDCE \channelB_2_reg[3] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[2]),
+        .Q(p_1_in1_in[2]));
+  CARRY4 \channelB_2_reg[3]_i_1 
+       (.CI(1'b0),
+        .CO({\channelB_2_reg[3]_i_1_n_0 ,\channelB_2_reg[3]_i_1_n_1 ,\channelB_2_reg[3]_i_1_n_2 ,\channelB_2_reg[3]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(inB0[3:0]),
+        .O({p_0_in0_in[2:0],\NLW_channelB_2_reg[3]_i_1_O_UNCONNECTED [0]}),
+        .S({\channelB_2[3]_i_2_n_0 ,\channelB_2[3]_i_3_n_0 ,\channelB_2[3]_i_4_n_0 ,\channelB_2[3]_i_5_n_0 }));
+  FDCE \channelB_2_reg[4] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[3]),
+        .Q(p_1_in1_in[3]));
+  FDCE \channelB_2_reg[5] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[4]),
+        .Q(p_1_in1_in[4]));
+  FDCE \channelB_2_reg[6] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[5]),
+        .Q(p_1_in1_in[5]));
+  FDCE \channelB_2_reg[7] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[6]),
+        .Q(p_1_in1_in[6]));
+  CARRY4 \channelB_2_reg[7]_i_1 
+       (.CI(\channelB_2_reg[3]_i_1_n_0 ),
+        .CO({\channelB_2_reg[7]_i_1_n_0 ,\channelB_2_reg[7]_i_1_n_1 ,\channelB_2_reg[7]_i_1_n_2 ,\channelB_2_reg[7]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(inB0[7:4]),
+        .O(p_0_in0_in[6:3]),
+        .S({\channelB_2[7]_i_2_n_0 ,\channelB_2[7]_i_3_n_0 ,\channelB_2[7]_i_4_n_0 ,\channelB_2[7]_i_5_n_0 }));
+  FDCE \channelB_2_reg[8] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[7]),
+        .Q(p_1_in1_in[7]));
+  FDCE \channelB_2_reg[9] 
+       (.C(CLK),
+        .CE(1'b1),
+        .CLR(WR_EN_i_1_n_0),
+        .D(p_0_in0_in[8]),
+        .Q(p_1_in1_in[8]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT1 #(
     .INIT(2'h1)) 
     data_count_i_1
@@ -352,90 +887,148 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(data_count_i_1_n_0),
         .Q(data_count));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[0]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[0]),
         .O(pad_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[10]_INST_0 
        (.I0(test_data[10]),
         .I1(TEST_MODE),
-        .I2(inA0[8]),
+        .I2(channelA_avg0[9]),
+        .I3(AVG),
+        .I4(inA0[8]),
         .O(pad_out[10]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[11]_INST_0 
        (.I0(test_data[11]),
         .I1(TEST_MODE),
-        .I2(inA0[9]),
+        .I2(channelA_avg0[10]),
+        .I3(AVG),
+        .I4(inA0[9]),
         .O(pad_out[11]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[12]_INST_0 
        (.I0(test_data[12]),
         .I1(TEST_MODE),
-        .I2(inA0[10]),
+        .I2(channelA_avg0[11]),
+        .I3(AVG),
+        .I4(inA0[10]),
         .O(pad_out[12]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  CARRY4 \pad_out[12]_INST_0_i_1 
+       (.CI(\pad_out[8]_INST_0_i_1_n_0 ),
+        .CO({\pad_out[12]_INST_0_i_1_n_0 ,\pad_out[12]_INST_0_i_1_n_1 ,\pad_out[12]_INST_0_i_1_n_2 ,\pad_out[12]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(p_1_in[11:8]),
+        .O(channelA_avg0[11:8]),
+        .S({\pad_out[12]_INST_0_i_2_n_0 ,\pad_out[12]_INST_0_i_3_n_0 ,\pad_out[12]_INST_0_i_4_n_0 ,\pad_out[12]_INST_0_i_5_n_0 }));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[12]_INST_0_i_2 
+       (.I0(p_1_in[11]),
+        .I1(p_0_in[11]),
+        .O(\pad_out[12]_INST_0_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[12]_INST_0_i_3 
+       (.I0(p_1_in[10]),
+        .I1(p_0_in[10]),
+        .O(\pad_out[12]_INST_0_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[12]_INST_0_i_4 
+       (.I0(p_1_in[9]),
+        .I1(p_0_in[9]),
+        .O(\pad_out[12]_INST_0_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[12]_INST_0_i_5 
+       (.I0(p_1_in[8]),
+        .I1(p_0_in[8]),
+        .O(\pad_out[12]_INST_0_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[13]_INST_0 
        (.I0(test_data[13]),
         .I1(TEST_MODE),
-        .I2(inA0[11]),
+        .I2(channelA_avg0[12]),
+        .I3(AVG),
+        .I4(inA0[11]),
         .O(pad_out[13]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[14]_INST_0 
        (.I0(test_data[14]),
         .I1(TEST_MODE),
-        .I2(inA0[12]),
+        .I2(channelA_avg0[13]),
+        .I3(AVG),
+        .I4(inA0[12]),
         .O(pad_out[14]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[15]_INST_0 
        (.I0(test_data[15]),
         .I1(TEST_MODE),
-        .I2(inA0[13]),
+        .I2(channelA_avg0[14]),
+        .I3(AVG),
+        .I4(inA0[13]),
         .O(pad_out[15]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  CARRY4 \pad_out[15]_INST_0_i_1 
+       (.CI(\pad_out[12]_INST_0_i_1_n_0 ),
+        .CO({\NLW_pad_out[15]_INST_0_i_1_CO_UNCONNECTED [3],channelA_avg0[14],\NLW_pad_out[15]_INST_0_i_1_CO_UNCONNECTED [1],\pad_out[15]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,p_1_in[13:12]}),
+        .O({\NLW_pad_out[15]_INST_0_i_1_O_UNCONNECTED [3:2],channelA_avg0[13:12]}),
+        .S({1'b0,1'b1,\pad_out[15]_INST_0_i_2_n_0 ,\pad_out[15]_INST_0_i_3_n_0 }));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[15]_INST_0_i_2 
+       (.I0(p_1_in[13]),
+        .I1(p_0_in[13]),
+        .O(\pad_out[15]_INST_0_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[15]_INST_0_i_3 
+       (.I0(p_1_in[12]),
+        .I1(p_0_in[12]),
+        .O(\pad_out[15]_INST_0_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[16]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[16]),
         .O(pad_out[16]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[17]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[17]),
         .O(pad_out[17]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[18]_INST_0 
        (.I0(test_data[18]),
         .I1(TEST_MODE),
-        .I2(inB0[0]),
+        .I2(channelB_avg0[1]),
+        .I3(AVG),
+        .I4(inB0[0]),
         .O(pad_out[18]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[19]_INST_0 
        (.I0(test_data[19]),
         .I1(TEST_MODE),
-        .I2(inB0[1]),
+        .I2(channelB_avg0[2]),
+        .I3(AVG),
+        .I4(inB0[1]),
         .O(pad_out[19]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
@@ -444,165 +1037,359 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
        (.I0(TEST_MODE),
         .I1(test_data[1]),
         .O(pad_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[20]_INST_0 
        (.I0(test_data[20]),
         .I1(TEST_MODE),
-        .I2(inB0[2]),
+        .I2(channelB_avg0[3]),
+        .I3(AVG),
+        .I4(inB0[2]),
         .O(pad_out[20]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  CARRY4 \pad_out[20]_INST_0_i_1 
+       (.CI(1'b0),
+        .CO({\pad_out[20]_INST_0_i_1_n_0 ,\pad_out[20]_INST_0_i_1_n_1 ,\pad_out[20]_INST_0_i_1_n_2 ,\pad_out[20]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(p_1_in1_in[3:0]),
+        .O({channelB_avg0[3:1],\NLW_pad_out[20]_INST_0_i_1_O_UNCONNECTED [0]}),
+        .S({\pad_out[20]_INST_0_i_2_n_0 ,\pad_out[20]_INST_0_i_3_n_0 ,\pad_out[20]_INST_0_i_4_n_0 ,\pad_out[20]_INST_0_i_5_n_0 }));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[20]_INST_0_i_2 
+       (.I0(p_1_in1_in[3]),
+        .I1(p_0_in0_in[3]),
+        .O(\pad_out[20]_INST_0_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[20]_INST_0_i_3 
+       (.I0(p_1_in1_in[2]),
+        .I1(p_0_in0_in[2]),
+        .O(\pad_out[20]_INST_0_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[20]_INST_0_i_4 
+       (.I0(p_1_in1_in[1]),
+        .I1(p_0_in0_in[1]),
+        .O(\pad_out[20]_INST_0_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[20]_INST_0_i_5 
+       (.I0(p_1_in1_in[0]),
+        .I1(p_0_in0_in[0]),
+        .O(\pad_out[20]_INST_0_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[21]_INST_0 
        (.I0(test_data[21]),
         .I1(TEST_MODE),
-        .I2(inB0[3]),
+        .I2(channelB_avg0[4]),
+        .I3(AVG),
+        .I4(inB0[3]),
         .O(pad_out[21]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[22]_INST_0 
        (.I0(test_data[22]),
         .I1(TEST_MODE),
-        .I2(inB0[4]),
+        .I2(channelB_avg0[5]),
+        .I3(AVG),
+        .I4(inB0[4]),
         .O(pad_out[22]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[23]_INST_0 
        (.I0(test_data[23]),
         .I1(TEST_MODE),
-        .I2(inB0[5]),
+        .I2(channelB_avg0[6]),
+        .I3(AVG),
+        .I4(inB0[5]),
         .O(pad_out[23]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[24]_INST_0 
        (.I0(test_data[24]),
         .I1(TEST_MODE),
-        .I2(inB0[6]),
+        .I2(channelB_avg0[7]),
+        .I3(AVG),
+        .I4(inB0[6]),
         .O(pad_out[24]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  CARRY4 \pad_out[24]_INST_0_i_1 
+       (.CI(\pad_out[20]_INST_0_i_1_n_0 ),
+        .CO({\pad_out[24]_INST_0_i_1_n_0 ,\pad_out[24]_INST_0_i_1_n_1 ,\pad_out[24]_INST_0_i_1_n_2 ,\pad_out[24]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(p_1_in1_in[7:4]),
+        .O(channelB_avg0[7:4]),
+        .S({\pad_out[24]_INST_0_i_2_n_0 ,\pad_out[24]_INST_0_i_3_n_0 ,\pad_out[24]_INST_0_i_4_n_0 ,\pad_out[24]_INST_0_i_5_n_0 }));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[24]_INST_0_i_2 
+       (.I0(p_1_in1_in[7]),
+        .I1(p_0_in0_in[7]),
+        .O(\pad_out[24]_INST_0_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[24]_INST_0_i_3 
+       (.I0(p_1_in1_in[6]),
+        .I1(p_0_in0_in[6]),
+        .O(\pad_out[24]_INST_0_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[24]_INST_0_i_4 
+       (.I0(p_1_in1_in[5]),
+        .I1(p_0_in0_in[5]),
+        .O(\pad_out[24]_INST_0_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[24]_INST_0_i_5 
+       (.I0(p_1_in1_in[4]),
+        .I1(p_0_in0_in[4]),
+        .O(\pad_out[24]_INST_0_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[25]_INST_0 
        (.I0(test_data[25]),
         .I1(TEST_MODE),
-        .I2(inB0[7]),
+        .I2(channelB_avg0[8]),
+        .I3(AVG),
+        .I4(inB0[7]),
         .O(pad_out[25]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[26]_INST_0 
        (.I0(test_data[26]),
         .I1(TEST_MODE),
-        .I2(inB0[8]),
+        .I2(channelB_avg0[9]),
+        .I3(AVG),
+        .I4(inB0[8]),
         .O(pad_out[26]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[27]_INST_0 
        (.I0(test_data[27]),
         .I1(TEST_MODE),
-        .I2(inB0[9]),
+        .I2(channelB_avg0[10]),
+        .I3(AVG),
+        .I4(inB0[9]),
         .O(pad_out[27]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[28]_INST_0 
        (.I0(test_data[28]),
         .I1(TEST_MODE),
-        .I2(inB0[10]),
+        .I2(channelB_avg0[11]),
+        .I3(AVG),
+        .I4(inB0[10]),
         .O(pad_out[28]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  CARRY4 \pad_out[28]_INST_0_i_1 
+       (.CI(\pad_out[24]_INST_0_i_1_n_0 ),
+        .CO({\pad_out[28]_INST_0_i_1_n_0 ,\pad_out[28]_INST_0_i_1_n_1 ,\pad_out[28]_INST_0_i_1_n_2 ,\pad_out[28]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(p_1_in1_in[11:8]),
+        .O(channelB_avg0[11:8]),
+        .S({\pad_out[28]_INST_0_i_2_n_0 ,\pad_out[28]_INST_0_i_3_n_0 ,\pad_out[28]_INST_0_i_4_n_0 ,\pad_out[28]_INST_0_i_5_n_0 }));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[28]_INST_0_i_2 
+       (.I0(p_1_in1_in[11]),
+        .I1(p_0_in0_in[11]),
+        .O(\pad_out[28]_INST_0_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[28]_INST_0_i_3 
+       (.I0(p_1_in1_in[10]),
+        .I1(p_0_in0_in[10]),
+        .O(\pad_out[28]_INST_0_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[28]_INST_0_i_4 
+       (.I0(p_1_in1_in[9]),
+        .I1(p_0_in0_in[9]),
+        .O(\pad_out[28]_INST_0_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[28]_INST_0_i_5 
+       (.I0(p_1_in1_in[8]),
+        .I1(p_0_in0_in[8]),
+        .O(\pad_out[28]_INST_0_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[29]_INST_0 
        (.I0(test_data[29]),
         .I1(TEST_MODE),
-        .I2(inB0[11]),
+        .I2(channelB_avg0[12]),
+        .I3(AVG),
+        .I4(inB0[11]),
         .O(pad_out[29]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[2]_INST_0 
        (.I0(test_data[2]),
         .I1(TEST_MODE),
-        .I2(inA0[0]),
+        .I2(channelA_avg0[1]),
+        .I3(AVG),
+        .I4(inA0[0]),
         .O(pad_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[30]_INST_0 
        (.I0(test_data[30]),
         .I1(TEST_MODE),
-        .I2(inB0[12]),
+        .I2(channelB_avg0[13]),
+        .I3(AVG),
+        .I4(inB0[12]),
         .O(pad_out[30]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[31]_INST_0 
        (.I0(test_data[31]),
         .I1(TEST_MODE),
-        .I2(inB0[13]),
+        .I2(channelB_avg0[14]),
+        .I3(AVG),
+        .I4(inB0[13]),
         .O(pad_out[31]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  CARRY4 \pad_out[31]_INST_0_i_1 
+       (.CI(\pad_out[28]_INST_0_i_1_n_0 ),
+        .CO({\NLW_pad_out[31]_INST_0_i_1_CO_UNCONNECTED [3],channelB_avg0[14],\NLW_pad_out[31]_INST_0_i_1_CO_UNCONNECTED [1],\pad_out[31]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,p_1_in1_in[13:12]}),
+        .O({\NLW_pad_out[31]_INST_0_i_1_O_UNCONNECTED [3:2],channelB_avg0[13:12]}),
+        .S({1'b0,1'b1,\pad_out[31]_INST_0_i_2_n_0 ,\pad_out[31]_INST_0_i_3_n_0 }));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[31]_INST_0_i_2 
+       (.I0(p_1_in1_in[13]),
+        .I1(p_0_in0_in[13]),
+        .O(\pad_out[31]_INST_0_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[31]_INST_0_i_3 
+       (.I0(p_1_in1_in[12]),
+        .I1(p_0_in0_in[12]),
+        .O(\pad_out[31]_INST_0_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[3]_INST_0 
        (.I0(test_data[3]),
         .I1(TEST_MODE),
-        .I2(inA0[1]),
+        .I2(channelA_avg0[2]),
+        .I3(AVG),
+        .I4(inA0[1]),
         .O(pad_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[4]_INST_0 
        (.I0(test_data[4]),
         .I1(TEST_MODE),
-        .I2(inA0[2]),
+        .I2(channelA_avg0[3]),
+        .I3(AVG),
+        .I4(inA0[2]),
         .O(pad_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  CARRY4 \pad_out[4]_INST_0_i_1 
+       (.CI(1'b0),
+        .CO({\pad_out[4]_INST_0_i_1_n_0 ,\pad_out[4]_INST_0_i_1_n_1 ,\pad_out[4]_INST_0_i_1_n_2 ,\pad_out[4]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(p_1_in[3:0]),
+        .O({channelA_avg0[3:1],\NLW_pad_out[4]_INST_0_i_1_O_UNCONNECTED [0]}),
+        .S({\pad_out[4]_INST_0_i_2_n_0 ,\pad_out[4]_INST_0_i_3_n_0 ,\pad_out[4]_INST_0_i_4_n_0 ,\pad_out[4]_INST_0_i_5_n_0 }));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[4]_INST_0_i_2 
+       (.I0(p_1_in[3]),
+        .I1(p_0_in[3]),
+        .O(\pad_out[4]_INST_0_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[4]_INST_0_i_3 
+       (.I0(p_1_in[2]),
+        .I1(p_0_in[2]),
+        .O(\pad_out[4]_INST_0_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[4]_INST_0_i_4 
+       (.I0(p_1_in[1]),
+        .I1(p_0_in[1]),
+        .O(\pad_out[4]_INST_0_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[4]_INST_0_i_5 
+       (.I0(p_1_in[0]),
+        .I1(p_0_in[0]),
+        .O(\pad_out[4]_INST_0_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[5]_INST_0 
        (.I0(test_data[5]),
         .I1(TEST_MODE),
-        .I2(inA0[3]),
+        .I2(channelA_avg0[4]),
+        .I3(AVG),
+        .I4(inA0[3]),
         .O(pad_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[6]_INST_0 
        (.I0(test_data[6]),
         .I1(TEST_MODE),
-        .I2(inA0[4]),
+        .I2(channelA_avg0[5]),
+        .I3(AVG),
+        .I4(inA0[4]),
         .O(pad_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[7]_INST_0 
        (.I0(test_data[7]),
         .I1(TEST_MODE),
-        .I2(inA0[5]),
+        .I2(channelA_avg0[6]),
+        .I3(AVG),
+        .I4(inA0[5]),
         .O(pad_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[8]_INST_0 
        (.I0(test_data[8]),
         .I1(TEST_MODE),
-        .I2(inA0[6]),
+        .I2(channelA_avg0[7]),
+        .I3(AVG),
+        .I4(inA0[6]),
         .O(pad_out[8]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  CARRY4 \pad_out[8]_INST_0_i_1 
+       (.CI(\pad_out[4]_INST_0_i_1_n_0 ),
+        .CO({\pad_out[8]_INST_0_i_1_n_0 ,\pad_out[8]_INST_0_i_1_n_1 ,\pad_out[8]_INST_0_i_1_n_2 ,\pad_out[8]_INST_0_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(p_1_in[7:4]),
+        .O(channelA_avg0[7:4]),
+        .S({\pad_out[8]_INST_0_i_2_n_0 ,\pad_out[8]_INST_0_i_3_n_0 ,\pad_out[8]_INST_0_i_4_n_0 ,\pad_out[8]_INST_0_i_5_n_0 }));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[8]_INST_0_i_2 
+       (.I0(p_1_in[7]),
+        .I1(p_0_in[7]),
+        .O(\pad_out[8]_INST_0_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[8]_INST_0_i_3 
+       (.I0(p_1_in[6]),
+        .I1(p_0_in[6]),
+        .O(\pad_out[8]_INST_0_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[8]_INST_0_i_4 
+       (.I0(p_1_in[5]),
+        .I1(p_0_in[5]),
+        .O(\pad_out[8]_INST_0_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pad_out[8]_INST_0_i_5 
+       (.I0(p_1_in[4]),
+        .I1(p_0_in[4]),
+        .O(\pad_out[8]_INST_0_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[9]_INST_0 
        (.I0(test_data[9]),
         .I1(TEST_MODE),
-        .I2(inA0[7]),
+        .I2(channelA_avg0[8]),
+        .I3(AVG),
+        .I4(inA0[7]),
         .O(pad_out[9]));
 endmodule
 `ifndef GLBL

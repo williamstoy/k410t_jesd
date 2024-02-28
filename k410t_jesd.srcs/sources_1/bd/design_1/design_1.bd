@@ -5,7 +5,8 @@
       "device": "xc7k410tffg676-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2"
+      "tool_version": "2019.2",
+      "validated": "true"
     },
     "design_tree": {
       "jesd204_0": "",
@@ -19,10 +20,12 @@
       "jesd204_0_transport_0": "",
       "negate_0": "",
       "frontpanel_1": "",
-      "trigger_to_level_0": "",
       "enabled_binary_count_0": "",
+      "enable_read_0": "",
       "FIFO_FSM_0": "",
-      "enable_read_0": ""
+      "TEST_Enable": "",
+      "CNT_RST": "",
+      "AVG_Enable": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -59,22 +62,78 @@
       "SYNCbABP": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_1_0_OBUF_DS_P",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbABM": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_1_0_OBUF_DS_N",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbCDP": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_2_0_OBUF_DS_P",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "SYNCbCDM": {
         "direction": "O",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_util_ds_buf_2_0_OBUF_DS_N",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       }
     },
     "components": {
@@ -463,15 +522,49 @@
         },
         "ports": {
           "okClkIn": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_frontpanel_1_0_okClk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
           },
           "m_axi_aclk": {
             "type": "clk",
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "m_axi",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "m_axi_aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
+                "value_src": "constant"
+              }
+            }
           },
           "m_axi_aresetn": {
             "type": "rst",
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "activity_mon": {
             "direction": "O"
@@ -586,11 +679,31 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "rx",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "rst_n": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "signalA_sampl0": {
             "direction": "O",
@@ -671,7 +784,13 @@
         },
         "ports": {
           "a": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "nota": {
             "direction": "O"
@@ -735,33 +854,6 @@
           }
         }
       },
-      "trigger_to_level_0": {
-        "vlnv": "xilinx.com:module_ref:trigger_to_level:1.0",
-        "xci_name": "design_1_trigger_to_level_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "trigger_to_level",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "READY": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "READY_LVL": {
-            "direction": "O"
-          },
-          "counter_reset": {
-            "type": "rst",
-            "direction": "O"
-          },
-          "RSTN": {
-            "type": "rst",
-            "direction": "I"
-          }
-        }
-      },
       "enabled_binary_count_0": {
         "vlnv": "xilinx.com:module_ref:enabled_binary_counter:1.0",
         "xci_name": "design_1_enabled_binary_count_0_0",
@@ -778,17 +870,39 @@
         "ports": {
           "RST_N": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "EN": {
             "direction": "I"
           },
           "DIS": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
           },
           "read_en_detect": {
             "direction": "I"
@@ -797,6 +911,40 @@
             "direction": "O",
             "left": "31",
             "right": "0"
+          }
+        }
+      },
+      "enable_read_0": {
+        "vlnv": "xilinx.com:module_ref:enable_read:1.0",
+        "xci_name": "design_1_enable_read_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "enable_read",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "read": {
+            "direction": "I"
+          },
+          "empty": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_frontpanel_1_0_okClk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "read_en": {
+            "direction": "O"
           }
         }
       },
@@ -811,16 +959,35 @@
         "ports": {
           "RST_N": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
           "CLK": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "READY": {
             "direction": "I"
           },
           "TEST_MODE": {
+            "direction": "I"
+          },
+          "AVG": {
             "direction": "I"
           },
           "VALID": {
@@ -866,42 +1033,133 @@
           }
         }
       },
-      "enable_read_0": {
-        "vlnv": "xilinx.com:module_ref:enable_read:1.0",
-        "xci_name": "design_1_enable_read_0_0",
+      "TEST_Enable": {
+        "vlnv": "xilinx.com:module_ref:trigger_to_level:1.0",
+        "xci_name": "design_1_trigger_to_level_0_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "enable_read",
+          "ref_name": "trigger_to_level",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "read": {
-            "direction": "I"
+          "READY": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
           },
-          "empty": {
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "read_en": {
+          "READY_LVL": {
             "direction": "O"
+          },
+          "RSTN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "CNT_RST": {
+        "vlnv": "xilinx.com:module_ref:trigger_to_level:1.0",
+        "xci_name": "design_1_trigger_to_level_1_0",
+        "parameters": {
+          "OFF": {
+            "value": "1"
+          },
+          "ON": {
+            "value": "2"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "trigger_to_level",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "READY": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "READY_LVL": {
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "RSTN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "AVG_Enable": {
+        "vlnv": "xilinx.com:module_ref:trigger_to_level:1.0",
+        "xci_name": "design_1_trigger_to_level_2_0",
+        "parameters": {
+          "OFF": {
+            "value": "4"
+          },
+          "ON": {
+            "value": "5"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "trigger_to_level",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "READY": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "READY_LVL": {
+            "direction": "O"
+          },
+          "RSTN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           }
         }
       }
     },
     "interface_nets": {
-      "okAXI4LiteInterface_0_m_axi": {
+      "jesd204_0_m_axis_rx": {
         "interface_ports": [
-          "okAXI4LiteInterface_0/m_axi",
-          "jesd204_0/s_axi"
+          "jesd204_0_transport_0/rx",
+          "jesd204_0/m_axis_rx"
         ]
       },
       "frontpanel_1_wireout20": {
         "interface_ports": [
           "okAXI4LiteInterface_0/wireout_READDATA",
           "frontpanel_1/wireout20"
+        ]
+      },
+      "okAXI4LiteInterface_0_m_axi": {
+        "interface_ports": [
+          "okAXI4LiteInterface_0/m_axi",
+          "jesd204_0/s_axi"
         ]
       },
       "host_interface_1": {
@@ -914,12 +1172,6 @@
         "interface_ports": [
           "okAXI4LiteInterface_0/btpipein_DATA",
           "frontpanel_1/btpipein80"
-        ]
-      },
-      "jesd204_0_m_axis_rx": {
-        "interface_ports": [
-          "jesd204_0_transport_0/rx",
-          "jesd204_0/m_axis_rx"
         ]
       },
       "frontpanel_1_wirein00": {
@@ -1048,9 +1300,11 @@
           "jesd204_0/rx_aresetn",
           "jesd204_0_transport_0/rst_n",
           "negate_0/a",
-          "trigger_to_level_0/RSTN",
           "enabled_binary_count_0/RST_N",
-          "FIFO_FSM_0/RST_N"
+          "FIFO_FSM_0/RST_N",
+          "TEST_Enable/RSTN",
+          "CNT_RST/RSTN",
+          "AVG_Enable/RSTN"
         ]
       },
       "negate_0_nota": {
@@ -1140,12 +1394,14 @@
         "ports": [
           "frontpanel_1/ti40_ep_trigger",
           "ila_0/probe13",
-          "trigger_to_level_0/READY"
+          "TEST_Enable/READY",
+          "CNT_RST/READY",
+          "AVG_Enable/READY"
         ]
       },
       "trigger_to_level_0_READY_LVL": {
         "ports": [
-          "trigger_to_level_0/READY_LVL",
+          "TEST_Enable/READY_LVL",
           "ila_0/probe11",
           "enabled_binary_count_0/EN",
           "FIFO_FSM_0/TEST_MODE"
@@ -1181,7 +1437,7 @@
       },
       "trigger_to_level_0_counter_reset": {
         "ports": [
-          "trigger_to_level_0/counter_reset",
+          "CNT_RST/READY_LVL",
           "enabled_binary_count_0/DIS"
         ]
       },
@@ -1189,6 +1445,12 @@
         "ports": [
           "FIFO_FSM_0/pad_out",
           "ila_0/probe14"
+        ]
+      },
+      "trigger_to_level_2_READY_LVL": {
+        "ports": [
+          "AVG_Enable/READY_LVL",
+          "FIFO_FSM_0/AVG"
         ]
       }
     },

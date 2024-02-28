@@ -59,6 +59,7 @@ module design_1_FIFO_FSM_0_0 (
   CLK,
   READY,
   TEST_MODE,
+  AVG,
   VALID,
   test_data,
   inA0,
@@ -78,6 +79,7 @@ input wire RST_N;
 input wire CLK;
 input wire READY;
 input wire TEST_MODE;
+input wire AVG;
 input wire VALID;
 input wire [31 : 0] test_data;
 input wire [13 : 0] inA0;
@@ -93,6 +95,7 @@ output wire [31 : 0] pad_out;
     .CLK(CLK),
     .READY(READY),
     .TEST_MODE(TEST_MODE),
+    .AVG(AVG),
     .VALID(VALID),
     .test_data(test_data),
     .inA0(inA0),
