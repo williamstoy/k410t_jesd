@@ -28,26 +28,26 @@ module FIFO_FSM
 	input wire TEST_MODE,
 	input wire AVG,
 	input wire VALID,
-	input [31:0] test_data,
-	input [13:0] inA0,
-	input [13:0] inA1,
-	input [13:0] inB0,
-	input [13:0] inB1,
+	input signed [31:0] test_data,
+	input signed [13:0] inA0,
+	input signed [13:0] inA1,
+	input signed [13:0] inB0,
+	input signed [13:0] inB1,
 	
-	output reg [31:0] FIFO_DATA,
+	output reg signed [31:0] FIFO_DATA,
 	output reg WR_EN,
-	output wire [31:0] pad_out
+	output wire signed [31:0] pad_out
 );
 
-reg [14:0] channelA_2;
-reg [14:0] channelB_2;
+reg signed [14:0] channelA_2;
+reg signed [14:0] channelB_2;
 reg data_count;
 
-wire [14:0] channelA = (inA0 + inA1); //sums,splice out 14:1 to shift by 2 without changing sign 
-wire [14:0] channelB = (inB0 + inB1);
+wire signed [14:0] channelA = (inA0 + inA1); //sums,splice out 14:1 to shift by 2 without changing sign 
+wire signed [14:0] channelB = (inB0 + inB1);
 
-wire [14:0] channelA_avg = AVG ? (channelA_2[14:1] + channelA[14:1]) : {inA0, 1'b0}; //sum of 2 averages
-wire [14:0] channelB_avg = AVG ? (channelB_2[14:1] + channelB[14:1]) : {inB0, 1'b0};
+wire signed [14:0] channelA_avg = AVG ? (channelA_2[14:1] + channelA[14:1]) : {inA0, 1'b0}; //sum of 2 averages
+wire signed [14:0] channelB_avg = AVG ? (channelB_2[14:1] + channelB[14:1]) : {inB0, 1'b0};
 
 //running average over 2 clock cycles concatenated. 2 channels per device
 assign pad_out = TEST_MODE ?  test_data : {channelB_avg[14:1], 2'b00, channelA_avg[14:1], 2'b00}; 

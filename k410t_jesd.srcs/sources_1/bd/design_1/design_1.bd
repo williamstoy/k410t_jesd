@@ -22,10 +22,10 @@
       "frontpanel_1": "",
       "enabled_binary_count_0": "",
       "enable_read_0": "",
-      "FIFO_FSM_0": "",
       "TEST_Enable": "",
       "CNT_RST": "",
-      "AVG_Enable": ""
+      "AVG_Enable": "",
+      "FIFO_FSM_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -948,91 +948,6 @@
           }
         }
       },
-      "FIFO_FSM_0": {
-        "vlnv": "xilinx.com:module_ref:FIFO_FSM:1.0",
-        "xci_name": "design_1_FIFO_FSM_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "FIFO_FSM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "RST_N": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "CLK": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "READY": {
-            "direction": "I"
-          },
-          "TEST_MODE": {
-            "direction": "I"
-          },
-          "AVG": {
-            "direction": "I"
-          },
-          "VALID": {
-            "direction": "I"
-          },
-          "test_data": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "inA0": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          },
-          "inA1": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          },
-          "inB0": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          },
-          "inB1": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          },
-          "FIFO_DATA": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "WR_EN": {
-            "direction": "O"
-          },
-          "pad_out": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
-      },
       "TEST_Enable": {
         "vlnv": "xilinx.com:module_ref:trigger_to_level:1.0",
         "xci_name": "design_1_trigger_to_level_0_0",
@@ -1139,6 +1054,91 @@
                 "value_src": "constant"
               }
             }
+          }
+        }
+      },
+      "FIFO_FSM_0": {
+        "vlnv": "xilinx.com:module_ref:FIFO_FSM:1.0",
+        "xci_name": "design_1_FIFO_FSM_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "FIFO_FSM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "RST_N": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "READY": {
+            "direction": "I"
+          },
+          "TEST_MODE": {
+            "direction": "I"
+          },
+          "AVG": {
+            "direction": "I"
+          },
+          "VALID": {
+            "direction": "I"
+          },
+          "test_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inA0": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "inA1": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "inB0": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "inB1": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "FIFO_DATA": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "WR_EN": {
+            "direction": "O"
+          },
+          "pad_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         }
       }
@@ -1301,10 +1301,10 @@
           "jesd204_0_transport_0/rst_n",
           "negate_0/a",
           "enabled_binary_count_0/RST_N",
-          "FIFO_FSM_0/RST_N",
           "TEST_Enable/RSTN",
           "CNT_RST/RSTN",
-          "AVG_Enable/RSTN"
+          "AVG_Enable/RSTN",
+          "FIFO_FSM_0/RST_N"
         ]
       },
       "negate_0_nota": {

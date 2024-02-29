@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Wed Feb 28 16:32:15 2024
-// Host        : linrack10.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+// Date        : Wed Feb 28 18:32:44 2024
+// Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0_sim_netlist.v
 // Design      : design_1_FIFO_FSM_0_0
@@ -86,12 +86,12 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
     VALID,
     RST_N,
     TEST_MODE,
-    CLK,
-    test_data,
     inA0,
     inA1,
     inB0,
     inB1,
+    CLK,
+    test_data,
     AVG);
   output [31:0]FIFO_DATA;
   output [31:0]pad_out;
@@ -100,12 +100,12 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   input VALID;
   input RST_N;
   input TEST_MODE;
-  input CLK;
-  input [31:0]test_data;
   input [13:0]inA0;
   input [13:0]inA1;
   input [13:0]inB0;
   input [13:0]inB1;
+  input CLK;
+  input [31:0]test_data;
   input AVG;
 
   wire AVG;
@@ -120,62 +120,66 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   wire WR_EN;
   wire WR_EN0_n_0;
   wire WR_EN_i_1_n_0;
-  wire \channelA_2[11]_i_2_n_0 ;
-  wire \channelA_2[11]_i_3_n_0 ;
-  wire \channelA_2[11]_i_4_n_0 ;
-  wire \channelA_2[11]_i_5_n_0 ;
-  wire \channelA_2[14]_i_2_n_0 ;
-  wire \channelA_2[14]_i_3_n_0 ;
-  wire \channelA_2[3]_i_2_n_0 ;
-  wire \channelA_2[3]_i_3_n_0 ;
-  wire \channelA_2[3]_i_4_n_0 ;
-  wire \channelA_2[3]_i_5_n_0 ;
-  wire \channelA_2[7]_i_2_n_0 ;
-  wire \channelA_2[7]_i_3_n_0 ;
-  wire \channelA_2[7]_i_4_n_0 ;
-  wire \channelA_2[7]_i_5_n_0 ;
-  wire \channelA_2_reg[11]_i_1_n_0 ;
-  wire \channelA_2_reg[11]_i_1_n_1 ;
-  wire \channelA_2_reg[11]_i_1_n_2 ;
-  wire \channelA_2_reg[11]_i_1_n_3 ;
-  wire \channelA_2_reg[14]_i_1_n_3 ;
-  wire \channelA_2_reg[3]_i_1_n_0 ;
-  wire \channelA_2_reg[3]_i_1_n_1 ;
-  wire \channelA_2_reg[3]_i_1_n_2 ;
-  wire \channelA_2_reg[3]_i_1_n_3 ;
-  wire \channelA_2_reg[7]_i_1_n_0 ;
-  wire \channelA_2_reg[7]_i_1_n_1 ;
-  wire \channelA_2_reg[7]_i_1_n_2 ;
-  wire \channelA_2_reg[7]_i_1_n_3 ;
   wire [14:1]channelA_avg0;
-  wire \channelB_2[11]_i_2_n_0 ;
-  wire \channelB_2[11]_i_3_n_0 ;
-  wire \channelB_2[11]_i_4_n_0 ;
-  wire \channelB_2[11]_i_5_n_0 ;
-  wire \channelB_2[14]_i_2_n_0 ;
-  wire \channelB_2[14]_i_3_n_0 ;
-  wire \channelB_2[3]_i_2_n_0 ;
-  wire \channelB_2[3]_i_3_n_0 ;
-  wire \channelB_2[3]_i_4_n_0 ;
-  wire \channelB_2[3]_i_5_n_0 ;
-  wire \channelB_2[7]_i_2_n_0 ;
-  wire \channelB_2[7]_i_3_n_0 ;
-  wire \channelB_2[7]_i_4_n_0 ;
-  wire \channelB_2[7]_i_5_n_0 ;
-  wire \channelB_2_reg[11]_i_1_n_0 ;
-  wire \channelB_2_reg[11]_i_1_n_1 ;
-  wire \channelB_2_reg[11]_i_1_n_2 ;
-  wire \channelB_2_reg[11]_i_1_n_3 ;
-  wire \channelB_2_reg[14]_i_1_n_3 ;
-  wire \channelB_2_reg[3]_i_1_n_0 ;
-  wire \channelB_2_reg[3]_i_1_n_1 ;
-  wire \channelB_2_reg[3]_i_1_n_2 ;
-  wire \channelB_2_reg[3]_i_1_n_3 ;
-  wire \channelB_2_reg[7]_i_1_n_0 ;
-  wire \channelB_2_reg[7]_i_1_n_1 ;
-  wire \channelB_2_reg[7]_i_1_n_2 ;
-  wire \channelB_2_reg[7]_i_1_n_3 ;
+  wire channelA_carry__0_i_1_n_0;
+  wire channelA_carry__0_i_2_n_0;
+  wire channelA_carry__0_i_3_n_0;
+  wire channelA_carry__0_i_4_n_0;
+  wire channelA_carry__0_n_0;
+  wire channelA_carry__0_n_1;
+  wire channelA_carry__0_n_2;
+  wire channelA_carry__0_n_3;
+  wire channelA_carry__1_i_1_n_0;
+  wire channelA_carry__1_i_2_n_0;
+  wire channelA_carry__1_i_3_n_0;
+  wire channelA_carry__1_i_4_n_0;
+  wire channelA_carry__1_n_0;
+  wire channelA_carry__1_n_1;
+  wire channelA_carry__1_n_2;
+  wire channelA_carry__1_n_3;
+  wire channelA_carry__2_i_1_n_0;
+  wire channelA_carry__2_i_2_n_0;
+  wire channelA_carry__2_i_3_n_0;
+  wire channelA_carry__2_n_2;
+  wire channelA_carry__2_n_3;
+  wire channelA_carry_i_1_n_0;
+  wire channelA_carry_i_2_n_0;
+  wire channelA_carry_i_3_n_0;
+  wire channelA_carry_i_4_n_0;
+  wire channelA_carry_n_0;
+  wire channelA_carry_n_1;
+  wire channelA_carry_n_2;
+  wire channelA_carry_n_3;
   wire [14:1]channelB_avg0;
+  wire channelB_carry__0_i_1_n_0;
+  wire channelB_carry__0_i_2_n_0;
+  wire channelB_carry__0_i_3_n_0;
+  wire channelB_carry__0_i_4_n_0;
+  wire channelB_carry__0_n_0;
+  wire channelB_carry__0_n_1;
+  wire channelB_carry__0_n_2;
+  wire channelB_carry__0_n_3;
+  wire channelB_carry__1_i_1_n_0;
+  wire channelB_carry__1_i_2_n_0;
+  wire channelB_carry__1_i_3_n_0;
+  wire channelB_carry__1_i_4_n_0;
+  wire channelB_carry__1_n_0;
+  wire channelB_carry__1_n_1;
+  wire channelB_carry__1_n_2;
+  wire channelB_carry__1_n_3;
+  wire channelB_carry__2_i_1_n_0;
+  wire channelB_carry__2_i_2_n_0;
+  wire channelB_carry__2_i_3_n_0;
+  wire channelB_carry__2_n_2;
+  wire channelB_carry__2_n_3;
+  wire channelB_carry_i_1_n_0;
+  wire channelB_carry_i_2_n_0;
+  wire channelB_carry_i_3_n_0;
+  wire channelB_carry_i_4_n_0;
+  wire channelB_carry_n_0;
+  wire channelB_carry_n_1;
+  wire channelB_carry_n_2;
+  wire channelB_carry_n_3;
   wire data_count;
   wire data_count_i_1_n_0;
   wire [13:0]inA0;
@@ -242,12 +246,12 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   wire \pad_out[8]_INST_0_i_4_n_0 ;
   wire \pad_out[8]_INST_0_i_5_n_0 ;
   wire [31:0]test_data;
-  wire [3:1]\NLW_channelA_2_reg[14]_i_1_CO_UNCONNECTED ;
-  wire [3:2]\NLW_channelA_2_reg[14]_i_1_O_UNCONNECTED ;
-  wire [0:0]\NLW_channelA_2_reg[3]_i_1_O_UNCONNECTED ;
-  wire [3:1]\NLW_channelB_2_reg[14]_i_1_CO_UNCONNECTED ;
-  wire [3:2]\NLW_channelB_2_reg[14]_i_1_O_UNCONNECTED ;
-  wire [0:0]\NLW_channelB_2_reg[3]_i_1_O_UNCONNECTED ;
+  wire [0:0]NLW_channelA_carry_O_UNCONNECTED;
+  wire [3:2]NLW_channelA_carry__2_CO_UNCONNECTED;
+  wire [3:3]NLW_channelA_carry__2_O_UNCONNECTED;
+  wire [0:0]NLW_channelB_carry_O_UNCONNECTED;
+  wire [3:2]NLW_channelB_carry__2_CO_UNCONNECTED;
+  wire [3:3]NLW_channelB_carry__2_O_UNCONNECTED;
   wire [3:1]\NLW_pad_out[15]_INST_0_i_1_CO_UNCONNECTED ;
   wire [3:2]\NLW_pad_out[15]_INST_0_i_1_O_UNCONNECTED ;
   wire [0:0]\NLW_pad_out[20]_INST_0_i_1_O_UNCONNECTED ;
@@ -483,90 +487,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(WR_EN0_n_0),
         .Q(WR_EN));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[11]_i_2 
-       (.I0(inA0[11]),
-        .I1(inA1[11]),
-        .O(\channelA_2[11]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[11]_i_3 
-       (.I0(inA0[10]),
-        .I1(inA1[10]),
-        .O(\channelA_2[11]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[11]_i_4 
-       (.I0(inA0[9]),
-        .I1(inA1[9]),
-        .O(\channelA_2[11]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[11]_i_5 
-       (.I0(inA0[8]),
-        .I1(inA1[8]),
-        .O(\channelA_2[11]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[14]_i_2 
-       (.I0(inA0[13]),
-        .I1(inA1[13]),
-        .O(\channelA_2[14]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[14]_i_3 
-       (.I0(inA0[12]),
-        .I1(inA1[12]),
-        .O(\channelA_2[14]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[3]_i_2 
-       (.I0(inA0[3]),
-        .I1(inA1[3]),
-        .O(\channelA_2[3]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[3]_i_3 
-       (.I0(inA0[2]),
-        .I1(inA1[2]),
-        .O(\channelA_2[3]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[3]_i_4 
-       (.I0(inA0[1]),
-        .I1(inA1[1]),
-        .O(\channelA_2[3]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[3]_i_5 
-       (.I0(inA0[0]),
-        .I1(inA1[0]),
-        .O(\channelA_2[3]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[7]_i_2 
-       (.I0(inA0[7]),
-        .I1(inA1[7]),
-        .O(\channelA_2[7]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[7]_i_3 
-       (.I0(inA0[6]),
-        .I1(inA1[6]),
-        .O(\channelA_2[7]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[7]_i_4 
-       (.I0(inA0[5]),
-        .I1(inA1[5]),
-        .O(\channelA_2[7]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \channelA_2[7]_i_5 
-       (.I0(inA0[4]),
-        .I1(inA1[4]),
-        .O(\channelA_2[7]_i_5_n_0 ));
   FDCE \channelA_2_reg[10] 
        (.C(CLK),
         .CE(1'b1),
@@ -579,13 +499,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in[10]),
         .Q(p_1_in[10]));
-  CARRY4 \channelA_2_reg[11]_i_1 
-       (.CI(\channelA_2_reg[7]_i_1_n_0 ),
-        .CO({\channelA_2_reg[11]_i_1_n_0 ,\channelA_2_reg[11]_i_1_n_1 ,\channelA_2_reg[11]_i_1_n_2 ,\channelA_2_reg[11]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(inA0[11:8]),
-        .O(p_0_in[10:7]),
-        .S({\channelA_2[11]_i_2_n_0 ,\channelA_2[11]_i_3_n_0 ,\channelA_2[11]_i_4_n_0 ,\channelA_2[11]_i_5_n_0 }));
   FDCE \channelA_2_reg[12] 
        (.C(CLK),
         .CE(1'b1),
@@ -604,13 +517,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in[13]),
         .Q(p_1_in[13]));
-  CARRY4 \channelA_2_reg[14]_i_1 
-       (.CI(\channelA_2_reg[11]_i_1_n_0 ),
-        .CO({\NLW_channelA_2_reg[14]_i_1_CO_UNCONNECTED [3],p_0_in[13],\NLW_channelA_2_reg[14]_i_1_CO_UNCONNECTED [1],\channelA_2_reg[14]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,inA0[13:12]}),
-        .O({\NLW_channelA_2_reg[14]_i_1_O_UNCONNECTED [3:2],p_0_in[12:11]}),
-        .S({1'b0,1'b1,\channelA_2[14]_i_2_n_0 ,\channelA_2[14]_i_3_n_0 }));
   FDCE \channelA_2_reg[1] 
        (.C(CLK),
         .CE(1'b1),
@@ -629,13 +535,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in[2]),
         .Q(p_1_in[2]));
-  CARRY4 \channelA_2_reg[3]_i_1 
-       (.CI(1'b0),
-        .CO({\channelA_2_reg[3]_i_1_n_0 ,\channelA_2_reg[3]_i_1_n_1 ,\channelA_2_reg[3]_i_1_n_2 ,\channelA_2_reg[3]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(inA0[3:0]),
-        .O({p_0_in[2:0],\NLW_channelA_2_reg[3]_i_1_O_UNCONNECTED [0]}),
-        .S({\channelA_2[3]_i_2_n_0 ,\channelA_2[3]_i_3_n_0 ,\channelA_2[3]_i_4_n_0 ,\channelA_2[3]_i_5_n_0 }));
   FDCE \channelA_2_reg[4] 
        (.C(CLK),
         .CE(1'b1),
@@ -660,13 +559,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in[6]),
         .Q(p_1_in[6]));
-  CARRY4 \channelA_2_reg[7]_i_1 
-       (.CI(\channelA_2_reg[3]_i_1_n_0 ),
-        .CO({\channelA_2_reg[7]_i_1_n_0 ,\channelA_2_reg[7]_i_1_n_1 ,\channelA_2_reg[7]_i_1_n_2 ,\channelA_2_reg[7]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(inA0[7:4]),
-        .O(p_0_in[6:3]),
-        .S({\channelA_2[7]_i_2_n_0 ,\channelA_2[7]_i_3_n_0 ,\channelA_2[7]_i_4_n_0 ,\channelA_2[7]_i_5_n_0 }));
   FDCE \channelA_2_reg[8] 
        (.C(CLK),
         .CE(1'b1),
@@ -679,90 +571,123 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in[8]),
         .Q(p_1_in[8]));
+  CARRY4 channelA_carry
+       (.CI(1'b0),
+        .CO({channelA_carry_n_0,channelA_carry_n_1,channelA_carry_n_2,channelA_carry_n_3}),
+        .CYINIT(1'b0),
+        .DI(inA0[3:0]),
+        .O({p_0_in[2:0],NLW_channelA_carry_O_UNCONNECTED[0]}),
+        .S({channelA_carry_i_1_n_0,channelA_carry_i_2_n_0,channelA_carry_i_3_n_0,channelA_carry_i_4_n_0}));
+  CARRY4 channelA_carry__0
+       (.CI(channelA_carry_n_0),
+        .CO({channelA_carry__0_n_0,channelA_carry__0_n_1,channelA_carry__0_n_2,channelA_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI(inA0[7:4]),
+        .O(p_0_in[6:3]),
+        .S({channelA_carry__0_i_1_n_0,channelA_carry__0_i_2_n_0,channelA_carry__0_i_3_n_0,channelA_carry__0_i_4_n_0}));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[11]_i_2 
-       (.I0(inB0[11]),
-        .I1(inB1[11]),
-        .O(\channelB_2[11]_i_2_n_0 ));
+    channelA_carry__0_i_1
+       (.I0(inA0[7]),
+        .I1(inA1[7]),
+        .O(channelA_carry__0_i_1_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[11]_i_3 
-       (.I0(inB0[10]),
-        .I1(inB1[10]),
-        .O(\channelB_2[11]_i_3_n_0 ));
+    channelA_carry__0_i_2
+       (.I0(inA0[6]),
+        .I1(inA1[6]),
+        .O(channelA_carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[11]_i_4 
-       (.I0(inB0[9]),
-        .I1(inB1[9]),
-        .O(\channelB_2[11]_i_4_n_0 ));
+    channelA_carry__0_i_3
+       (.I0(inA0[5]),
+        .I1(inA1[5]),
+        .O(channelA_carry__0_i_3_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[11]_i_5 
-       (.I0(inB0[8]),
-        .I1(inB1[8]),
-        .O(\channelB_2[11]_i_5_n_0 ));
+    channelA_carry__0_i_4
+       (.I0(inA0[4]),
+        .I1(inA1[4]),
+        .O(channelA_carry__0_i_4_n_0));
+  CARRY4 channelA_carry__1
+       (.CI(channelA_carry__0_n_0),
+        .CO({channelA_carry__1_n_0,channelA_carry__1_n_1,channelA_carry__1_n_2,channelA_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI(inA0[11:8]),
+        .O(p_0_in[10:7]),
+        .S({channelA_carry__1_i_1_n_0,channelA_carry__1_i_2_n_0,channelA_carry__1_i_3_n_0,channelA_carry__1_i_4_n_0}));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[14]_i_2 
-       (.I0(inB0[13]),
-        .I1(inB1[13]),
-        .O(\channelB_2[14]_i_2_n_0 ));
+    channelA_carry__1_i_1
+       (.I0(inA0[11]),
+        .I1(inA1[11]),
+        .O(channelA_carry__1_i_1_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[14]_i_3 
-       (.I0(inB0[12]),
-        .I1(inB1[12]),
-        .O(\channelB_2[14]_i_3_n_0 ));
+    channelA_carry__1_i_2
+       (.I0(inA0[10]),
+        .I1(inA1[10]),
+        .O(channelA_carry__1_i_2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[3]_i_2 
-       (.I0(inB0[3]),
-        .I1(inB1[3]),
-        .O(\channelB_2[3]_i_2_n_0 ));
+    channelA_carry__1_i_3
+       (.I0(inA0[9]),
+        .I1(inA1[9]),
+        .O(channelA_carry__1_i_3_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[3]_i_3 
-       (.I0(inB0[2]),
-        .I1(inB1[2]),
-        .O(\channelB_2[3]_i_3_n_0 ));
+    channelA_carry__1_i_4
+       (.I0(inA0[8]),
+        .I1(inA1[8]),
+        .O(channelA_carry__1_i_4_n_0));
+  CARRY4 channelA_carry__2
+       (.CI(channelA_carry__1_n_0),
+        .CO({NLW_channelA_carry__2_CO_UNCONNECTED[3:2],channelA_carry__2_n_2,channelA_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,channelA_carry__2_i_1_n_0,inA0[12]}),
+        .O({NLW_channelA_carry__2_O_UNCONNECTED[3],p_0_in[13:11]}),
+        .S({1'b0,1'b1,channelA_carry__2_i_2_n_0,channelA_carry__2_i_3_n_0}));
+  LUT1 #(
+    .INIT(2'h1)) 
+    channelA_carry__2_i_1
+       (.I0(inA0[13]),
+        .O(channelA_carry__2_i_1_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[3]_i_4 
-       (.I0(inB0[1]),
-        .I1(inB1[1]),
-        .O(\channelB_2[3]_i_4_n_0 ));
+    channelA_carry__2_i_2
+       (.I0(inA0[13]),
+        .I1(inA1[13]),
+        .O(channelA_carry__2_i_2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[3]_i_5 
-       (.I0(inB0[0]),
-        .I1(inB1[0]),
-        .O(\channelB_2[3]_i_5_n_0 ));
+    channelA_carry__2_i_3
+       (.I0(inA0[12]),
+        .I1(inA1[12]),
+        .O(channelA_carry__2_i_3_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[7]_i_2 
-       (.I0(inB0[7]),
-        .I1(inB1[7]),
-        .O(\channelB_2[7]_i_2_n_0 ));
+    channelA_carry_i_1
+       (.I0(inA0[3]),
+        .I1(inA1[3]),
+        .O(channelA_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[7]_i_3 
-       (.I0(inB0[6]),
-        .I1(inB1[6]),
-        .O(\channelB_2[7]_i_3_n_0 ));
+    channelA_carry_i_2
+       (.I0(inA0[2]),
+        .I1(inA1[2]),
+        .O(channelA_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[7]_i_4 
-       (.I0(inB0[5]),
-        .I1(inB1[5]),
-        .O(\channelB_2[7]_i_4_n_0 ));
+    channelA_carry_i_3
+       (.I0(inA0[1]),
+        .I1(inA1[1]),
+        .O(channelA_carry_i_3_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    \channelB_2[7]_i_5 
-       (.I0(inB0[4]),
-        .I1(inB1[4]),
-        .O(\channelB_2[7]_i_5_n_0 ));
+    channelA_carry_i_4
+       (.I0(inA0[0]),
+        .I1(inA1[0]),
+        .O(channelA_carry_i_4_n_0));
   FDCE \channelB_2_reg[10] 
        (.C(CLK),
         .CE(1'b1),
@@ -775,13 +700,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in0_in[10]),
         .Q(p_1_in1_in[10]));
-  CARRY4 \channelB_2_reg[11]_i_1 
-       (.CI(\channelB_2_reg[7]_i_1_n_0 ),
-        .CO({\channelB_2_reg[11]_i_1_n_0 ,\channelB_2_reg[11]_i_1_n_1 ,\channelB_2_reg[11]_i_1_n_2 ,\channelB_2_reg[11]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(inB0[11:8]),
-        .O(p_0_in0_in[10:7]),
-        .S({\channelB_2[11]_i_2_n_0 ,\channelB_2[11]_i_3_n_0 ,\channelB_2[11]_i_4_n_0 ,\channelB_2[11]_i_5_n_0 }));
   FDCE \channelB_2_reg[12] 
        (.C(CLK),
         .CE(1'b1),
@@ -800,13 +718,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in0_in[13]),
         .Q(p_1_in1_in[13]));
-  CARRY4 \channelB_2_reg[14]_i_1 
-       (.CI(\channelB_2_reg[11]_i_1_n_0 ),
-        .CO({\NLW_channelB_2_reg[14]_i_1_CO_UNCONNECTED [3],p_0_in0_in[13],\NLW_channelB_2_reg[14]_i_1_CO_UNCONNECTED [1],\channelB_2_reg[14]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,inB0[13:12]}),
-        .O({\NLW_channelB_2_reg[14]_i_1_O_UNCONNECTED [3:2],p_0_in0_in[12:11]}),
-        .S({1'b0,1'b1,\channelB_2[14]_i_2_n_0 ,\channelB_2[14]_i_3_n_0 }));
   FDCE \channelB_2_reg[1] 
        (.C(CLK),
         .CE(1'b1),
@@ -825,13 +736,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in0_in[2]),
         .Q(p_1_in1_in[2]));
-  CARRY4 \channelB_2_reg[3]_i_1 
-       (.CI(1'b0),
-        .CO({\channelB_2_reg[3]_i_1_n_0 ,\channelB_2_reg[3]_i_1_n_1 ,\channelB_2_reg[3]_i_1_n_2 ,\channelB_2_reg[3]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(inB0[3:0]),
-        .O({p_0_in0_in[2:0],\NLW_channelB_2_reg[3]_i_1_O_UNCONNECTED [0]}),
-        .S({\channelB_2[3]_i_2_n_0 ,\channelB_2[3]_i_3_n_0 ,\channelB_2[3]_i_4_n_0 ,\channelB_2[3]_i_5_n_0 }));
   FDCE \channelB_2_reg[4] 
        (.C(CLK),
         .CE(1'b1),
@@ -856,13 +760,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in0_in[6]),
         .Q(p_1_in1_in[6]));
-  CARRY4 \channelB_2_reg[7]_i_1 
-       (.CI(\channelB_2_reg[3]_i_1_n_0 ),
-        .CO({\channelB_2_reg[7]_i_1_n_0 ,\channelB_2_reg[7]_i_1_n_1 ,\channelB_2_reg[7]_i_1_n_2 ,\channelB_2_reg[7]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(inB0[7:4]),
-        .O(p_0_in0_in[6:3]),
-        .S({\channelB_2[7]_i_2_n_0 ,\channelB_2[7]_i_3_n_0 ,\channelB_2[7]_i_4_n_0 ,\channelB_2[7]_i_5_n_0 }));
   FDCE \channelB_2_reg[8] 
        (.C(CLK),
         .CE(1'b1),
@@ -875,6 +772,123 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(p_0_in0_in[8]),
         .Q(p_1_in1_in[8]));
+  CARRY4 channelB_carry
+       (.CI(1'b0),
+        .CO({channelB_carry_n_0,channelB_carry_n_1,channelB_carry_n_2,channelB_carry_n_3}),
+        .CYINIT(1'b0),
+        .DI(inB0[3:0]),
+        .O({p_0_in0_in[2:0],NLW_channelB_carry_O_UNCONNECTED[0]}),
+        .S({channelB_carry_i_1_n_0,channelB_carry_i_2_n_0,channelB_carry_i_3_n_0,channelB_carry_i_4_n_0}));
+  CARRY4 channelB_carry__0
+       (.CI(channelB_carry_n_0),
+        .CO({channelB_carry__0_n_0,channelB_carry__0_n_1,channelB_carry__0_n_2,channelB_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI(inB0[7:4]),
+        .O(p_0_in0_in[6:3]),
+        .S({channelB_carry__0_i_1_n_0,channelB_carry__0_i_2_n_0,channelB_carry__0_i_3_n_0,channelB_carry__0_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__0_i_1
+       (.I0(inB0[7]),
+        .I1(inB1[7]),
+        .O(channelB_carry__0_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__0_i_2
+       (.I0(inB0[6]),
+        .I1(inB1[6]),
+        .O(channelB_carry__0_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__0_i_3
+       (.I0(inB0[5]),
+        .I1(inB1[5]),
+        .O(channelB_carry__0_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__0_i_4
+       (.I0(inB0[4]),
+        .I1(inB1[4]),
+        .O(channelB_carry__0_i_4_n_0));
+  CARRY4 channelB_carry__1
+       (.CI(channelB_carry__0_n_0),
+        .CO({channelB_carry__1_n_0,channelB_carry__1_n_1,channelB_carry__1_n_2,channelB_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI(inB0[11:8]),
+        .O(p_0_in0_in[10:7]),
+        .S({channelB_carry__1_i_1_n_0,channelB_carry__1_i_2_n_0,channelB_carry__1_i_3_n_0,channelB_carry__1_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__1_i_1
+       (.I0(inB0[11]),
+        .I1(inB1[11]),
+        .O(channelB_carry__1_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__1_i_2
+       (.I0(inB0[10]),
+        .I1(inB1[10]),
+        .O(channelB_carry__1_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__1_i_3
+       (.I0(inB0[9]),
+        .I1(inB1[9]),
+        .O(channelB_carry__1_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__1_i_4
+       (.I0(inB0[8]),
+        .I1(inB1[8]),
+        .O(channelB_carry__1_i_4_n_0));
+  CARRY4 channelB_carry__2
+       (.CI(channelB_carry__1_n_0),
+        .CO({NLW_channelB_carry__2_CO_UNCONNECTED[3:2],channelB_carry__2_n_2,channelB_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,channelB_carry__2_i_1_n_0,inB0[12]}),
+        .O({NLW_channelB_carry__2_O_UNCONNECTED[3],p_0_in0_in[13:11]}),
+        .S({1'b0,1'b1,channelB_carry__2_i_2_n_0,channelB_carry__2_i_3_n_0}));
+  LUT1 #(
+    .INIT(2'h1)) 
+    channelB_carry__2_i_1
+       (.I0(inB0[13]),
+        .O(channelB_carry__2_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__2_i_2
+       (.I0(inB0[13]),
+        .I1(inB1[13]),
+        .O(channelB_carry__2_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry__2_i_3
+       (.I0(inB0[12]),
+        .I1(inB1[12]),
+        .O(channelB_carry__2_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry_i_1
+       (.I0(inB0[3]),
+        .I1(inB1[3]),
+        .O(channelB_carry_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry_i_2
+       (.I0(inB0[2]),
+        .I1(inB1[2]),
+        .O(channelB_carry_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry_i_3
+       (.I0(inB0[1]),
+        .I1(inB1[1]),
+        .O(channelB_carry_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    channelB_carry_i_4
+       (.I0(inB0[0]),
+        .I1(inB1[0]),
+        .O(channelB_carry_i_4_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT1 #(
     .INIT(2'h1)) 

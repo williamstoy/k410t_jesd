@@ -40,10 +40,10 @@ preplace inst negate_0 -pg 1 -lvl 4 -x 1770 -y 880 -defaultsOSRD -pinY a 0L -pin
 preplace inst frontpanel_1 -pg 1 -lvl 1 -x 220 -y 340 -defaultsOSRD -pinY host_interface 0L -pinY wirein00 0R -pinY wireout20 180R -pinY wireout20.wo20_ep_datain 200R -pinY triggerin40 220R -pinY triggerin40.ti40_ep_trigger 240R -pinY triggerin40.ti40_ep_clk 260R -pinY btpipein80 280R -pinY btpipeouta0 300R -pinY btpipeouta0.btpoa0_ep_read 320R -pinY btpipeouta0.btpoa0_ep_blockstrobe 340R -pinY btpipeouta0.btpoa0_ep_ready 360R -pinY btpipeouta0.btpoa0_ep_datain 380R -pinY okClk 400R
 preplace inst enabled_binary_count_0 -pg 1 -lvl 6 -x 2910 -y 260 -swap {2 0 1 4 3 5} -defaultsOSRD -pinY RST_N 40L -pinY CLK 0L -pinY EN 20L -pinY DIS 80L -pinY read_en_detect 60L -pinBusY count 0R
 preplace inst enable_read_0 -pg 1 -lvl 4 -x 1770 -y 540 -swap {0 2 1 3} -defaultsOSRD -pinY read 100L -pinY empty 140L -pinY clk 120L -pinY read_en 100R
-preplace inst FIFO_FSM_0 -pg 1 -lvl 7 -x 3520 -y -80 -swap {3 2 10 8 7 5 9 6 4 0 1 13 12 11} -defaultsOSRD -pinY RST_N 60L -pinY CLK 40L -pinY READY 210L -pinY TEST_MODE 170L -pinY AVG 150L -pinY VALID 100L -pinBusY test_data 190L -pinBusY inA0 130L -pinBusY inA1 80L -pinBusY inB0 0L -pinBusY inB1 20L -pinBusY FIFO_DATA 190R -pinY WR_EN 20R -pinBusY pad_out 0R
 preplace inst TEST_Enable -pg 1 -lvl 4 -x 1770 -y 980 -defaultsOSRD -pinBusY READY 0L -pinY READY_LVL 20R -pinY RSTN 20L
 preplace inst CNT_RST -pg 1 -lvl 5 -x 2240 -y 1060 -swap {2 1 0} -defaultsOSRD -pinBusY READY 20L -pinY READY_LVL 0R -pinY RSTN 0L
 preplace inst AVG_Enable -pg 1 -lvl 4 -x 1770 -y 1110 -defaultsOSRD -pinBusY READY 0L -pinY READY_LVL 0R -pinY RSTN 20L
+preplace inst FIFO_FSM_0 -pg 1 -lvl 7 -x 3520 -y -80 -swap {3 2 10 8 7 5 9 6 4 0 1 13 12 11} -defaultsOSRD -pinY RST_N 60L -pinY CLK 40L -pinY READY 210L -pinY TEST_MODE 170L -pinY AVG 150L -pinY VALID 100L -pinBusY test_data 190L -pinBusY inA0 130L -pinBusY inA1 80L -pinBusY inB0 0L -pinBusY inB1 20L -pinBusY FIFO_DATA 190R -pinY WR_EN 20R -pinBusY pad_out 0R
 preplace netloc frontpanel_0_okClk 1 1 6 500 280 960J 620 1580J 480 N 480 2660 160 3220J
 preplace netloc okAXI4LiteInterface_0_m_axi_aresetn 1 2 1 940 500n
 preplace netloc okAXI4LiteInterface_0_m_axi_aclk 1 2 1 920 530n
@@ -94,7 +94,7 @@ levelinfo -pg 1 -60 220 740 1270 1770 2240 2910 3520 3740
 pagesize -pg 1 -db -bbox -sgen -270 -140 3910 1200
 ",
    "Reduced Jogs_ScaleFactor":"0.731974",
-   "Reduced Jogs_TopLeft":"1141,566",
+   "Reduced Jogs_TopLeft":"2488,-139",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
 preplace port host_interface -pg 1 -lvl 0 -x -20 -y 340 -defaultsOSRD
