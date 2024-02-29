@@ -275,7 +275,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "19"
+            "value": "17"
           },
           "C_PROBE10_WIDTH": {
             "value": "32"
@@ -293,10 +293,10 @@
             "value": "14"
           },
           "C_PROBE17_WIDTH": {
-            "value": "14"
+            "value": "1"
           },
           "C_PROBE18_WIDTH": {
-            "value": "14"
+            "value": "1"
           },
           "C_PROBE2_WIDTH": {
             "value": "1"
@@ -1152,16 +1152,6 @@
             "left": "31",
             "right": "0"
           },
-          "channelA_2": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "channelB_2": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
           "channelA_out": {
             "direction": "O",
             "left": "13",
@@ -1485,28 +1475,16 @@
           "FIFO_FSM_0/AVG"
         ]
       },
-      "FIFO_FSM_0_channelA_2": {
-        "ports": [
-          "FIFO_FSM_0/channelA_2",
-          "ila_0/probe18"
-        ]
-      },
-      "FIFO_FSM_0_channelB_2": {
-        "ports": [
-          "FIFO_FSM_0/channelB_2",
-          "ila_0/probe16"
-        ]
-      },
       "FIFO_FSM_0_channelB_out": {
         "ports": [
           "FIFO_FSM_0/channelB_out",
-          "ila_0/probe15"
+          "ila_0/probe16"
         ]
       },
       "FIFO_FSM_0_channelA_out": {
         "ports": [
           "FIFO_FSM_0/channelA_out",
-          "ila_0/probe17"
+          "ila_0/probe15"
         ]
       }
     },

@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Wed Feb 28 20:28:28 2024
+// Date        : Wed Feb 28 20:58:13 2024
 // Host        : linrack2.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0_sim_netlist.v
@@ -30,8 +30,6 @@ module design_1_FIFO_FSM_0_0
     FIFO_DATA,
     WR_EN,
     pad_out,
-    channelA_2,
-    channelB_2,
     channelA_out,
     channelB_out);
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input RST_N;
@@ -48,8 +46,6 @@ module design_1_FIFO_FSM_0_0
   output [31:0]FIFO_DATA;
   output WR_EN;
   output [31:0]pad_out;
-  output [13:0]channelA_2;
-  output [13:0]channelB_2;
   output [13:0]channelA_out;
   output [13:0]channelB_out;
 
@@ -61,9 +57,7 @@ module design_1_FIFO_FSM_0_0
   wire TEST_MODE;
   wire VALID;
   wire WR_EN;
-  wire [13:0]channelA_2;
   wire [13:0]channelA_out;
-  wire [13:0]channelB_2;
   wire [13:0]channelB_out;
   wire [13:0]inA0;
   wire [13:0]inA1;
@@ -81,9 +75,7 @@ module design_1_FIFO_FSM_0_0
         .TEST_MODE(TEST_MODE),
         .VALID(VALID),
         .WR_EN(WR_EN),
-        .channelA_2(channelA_2),
         .channelA_out(channelA_out),
-        .channelB_2(channelB_2),
         .channelB_out(channelB_out),
         .inA0(inA0),
         .inA1(inA1),
@@ -95,13 +87,11 @@ endmodule
 
 (* ORIG_REF_NAME = "FIFO_FSM" *) 
 module design_1_FIFO_FSM_0_0_FIFO_FSM
-   (channelA_2,
-    channelB_2,
+   (FIFO_DATA,
+    pad_out,
+    WR_EN,
     channelA_out,
     channelB_out,
-    pad_out,
-    FIFO_DATA,
-    WR_EN,
     READY,
     VALID,
     RST_N,
@@ -113,13 +103,11 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
     CLK,
     test_data,
     AVG);
-  output [13:0]channelA_2;
-  output [13:0]channelB_2;
+  output [31:0]FIFO_DATA;
+  output [31:0]pad_out;
+  output WR_EN;
   output [13:0]channelA_out;
   output [13:0]channelB_out;
-  output [31:0]pad_out;
-  output [31:0]FIFO_DATA;
-  output WR_EN;
   input READY;
   input VALID;
   input RST_N;
@@ -147,37 +135,9 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   wire [13:0]channelA;
   wire [13:0]channelA_2;
   wire [13:0]channelA_out;
-  wire \channelA_out[0]_i_1_n_0 ;
-  wire \channelA_out[10]_i_1_n_0 ;
-  wire \channelA_out[11]_i_1_n_0 ;
-  wire \channelA_out[12]_i_1_n_0 ;
-  wire \channelA_out[13]_i_1_n_0 ;
-  wire \channelA_out[1]_i_1_n_0 ;
-  wire \channelA_out[2]_i_1_n_0 ;
-  wire \channelA_out[3]_i_1_n_0 ;
-  wire \channelA_out[4]_i_1_n_0 ;
-  wire \channelA_out[5]_i_1_n_0 ;
-  wire \channelA_out[6]_i_1_n_0 ;
-  wire \channelA_out[7]_i_1_n_0 ;
-  wire \channelA_out[8]_i_1_n_0 ;
-  wire \channelA_out[9]_i_1_n_0 ;
   wire [13:0]channelB;
   wire [13:0]channelB_2;
   wire [13:0]channelB_out;
-  wire \channelB_out[0]_i_1_n_0 ;
-  wire \channelB_out[10]_i_1_n_0 ;
-  wire \channelB_out[11]_i_1_n_0 ;
-  wire \channelB_out[12]_i_1_n_0 ;
-  wire \channelB_out[13]_i_1_n_0 ;
-  wire \channelB_out[1]_i_1_n_0 ;
-  wire \channelB_out[2]_i_1_n_0 ;
-  wire \channelB_out[3]_i_1_n_0 ;
-  wire \channelB_out[4]_i_1_n_0 ;
-  wire \channelB_out[5]_i_1_n_0 ;
-  wire \channelB_out[6]_i_1_n_0 ;
-  wire \channelB_out[7]_i_1_n_0 ;
-  wire \channelB_out[8]_i_1_n_0 ;
-  wire \channelB_out[9]_i_1_n_0 ;
   wire data_count;
   wire data_count_i_1_n_0;
   wire [13:0]inA0;
@@ -526,7 +486,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .D(pad_out[9]),
         .Q(FIFO_DATA[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'h80)) 
     WR_EN0
@@ -634,202 +594,118 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(channelA[9]),
         .Q(channelA_2[9]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[0]_i_1 
+    \channelA_out[0]_INST_0 
        (.I0(tempA_avg[1]),
         .I1(AVG),
         .I2(inA0[0]),
-        .O(\channelA_out[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+        .O(channelA_out[0]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[10]_i_1 
+    \channelA_out[10]_INST_0 
        (.I0(tempA_avg[11]),
         .I1(AVG),
         .I2(inA0[10]),
-        .O(\channelA_out[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+        .O(channelA_out[10]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[11]_i_1 
+    \channelA_out[11]_INST_0 
        (.I0(tempA_avg[12]),
         .I1(AVG),
         .I2(inA0[11]),
-        .O(\channelA_out[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+        .O(channelA_out[11]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[12]_i_1 
+    \channelA_out[12]_INST_0 
        (.I0(tempA_avg[13]),
         .I1(AVG),
         .I2(inA0[12]),
-        .O(\channelA_out[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+        .O(channelA_out[12]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[13]_i_1 
+    \channelA_out[13]_INST_0 
        (.I0(tempA_avg__0),
         .I1(AVG),
         .I2(inA0[13]),
-        .O(\channelA_out[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+        .O(channelA_out[13]));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[1]_i_1 
+    \channelA_out[1]_INST_0 
        (.I0(tempA_avg[2]),
         .I1(AVG),
         .I2(inA0[1]),
-        .O(\channelA_out[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+        .O(channelA_out[1]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[2]_i_1 
+    \channelA_out[2]_INST_0 
        (.I0(tempA_avg[3]),
         .I1(AVG),
         .I2(inA0[2]),
-        .O(\channelA_out[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \channelA_out[3]_i_1 
-       (.I0(tempA_avg[4]),
-        .I1(AVG),
-        .I2(inA0[3]),
-        .O(\channelA_out[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \channelA_out[4]_i_1 
-       (.I0(tempA_avg[5]),
-        .I1(AVG),
-        .I2(inA0[4]),
-        .O(\channelA_out[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \channelA_out[5]_i_1 
-       (.I0(tempA_avg[6]),
-        .I1(AVG),
-        .I2(inA0[5]),
-        .O(\channelA_out[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \channelA_out[6]_i_1 
-       (.I0(tempA_avg[7]),
-        .I1(AVG),
-        .I2(inA0[6]),
-        .O(\channelA_out[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \channelA_out[7]_i_1 
-       (.I0(tempA_avg[8]),
-        .I1(AVG),
-        .I2(inA0[7]),
-        .O(\channelA_out[7]_i_1_n_0 ));
+        .O(channelA_out[2]));
   (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[8]_i_1 
+    \channelA_out[3]_INST_0 
+       (.I0(tempA_avg[4]),
+        .I1(AVG),
+        .I2(inA0[3]),
+        .O(channelA_out[3]));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \channelA_out[4]_INST_0 
+       (.I0(tempA_avg[5]),
+        .I1(AVG),
+        .I2(inA0[4]),
+        .O(channelA_out[4]));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \channelA_out[5]_INST_0 
+       (.I0(tempA_avg[6]),
+        .I1(AVG),
+        .I2(inA0[5]),
+        .O(channelA_out[5]));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \channelA_out[6]_INST_0 
+       (.I0(tempA_avg[7]),
+        .I1(AVG),
+        .I2(inA0[6]),
+        .O(channelA_out[6]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \channelA_out[7]_INST_0 
+       (.I0(tempA_avg[8]),
+        .I1(AVG),
+        .I2(inA0[7]),
+        .O(channelA_out[7]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \channelA_out[8]_INST_0 
        (.I0(tempA_avg[9]),
         .I1(AVG),
         .I2(inA0[8]),
-        .O(\channelA_out[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+        .O(channelA_out[8]));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelA_out[9]_i_1 
+    \channelA_out[9]_INST_0 
        (.I0(tempA_avg[10]),
         .I1(AVG),
         .I2(inA0[9]),
-        .O(\channelA_out[9]_i_1_n_0 ));
-  FDRE \channelA_out_reg[0] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[0]_i_1_n_0 ),
-        .Q(channelA_out[0]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[10] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[10]_i_1_n_0 ),
-        .Q(channelA_out[10]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[11] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[11]_i_1_n_0 ),
-        .Q(channelA_out[11]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[12] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[12]_i_1_n_0 ),
-        .Q(channelA_out[12]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[13] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[13]_i_1_n_0 ),
-        .Q(channelA_out[13]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[1] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[1]_i_1_n_0 ),
-        .Q(channelA_out[1]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[2] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[2]_i_1_n_0 ),
-        .Q(channelA_out[2]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[3] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[3]_i_1_n_0 ),
-        .Q(channelA_out[3]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[4] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[4]_i_1_n_0 ),
-        .Q(channelA_out[4]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[5] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[5]_i_1_n_0 ),
-        .Q(channelA_out[5]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[6] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[6]_i_1_n_0 ),
-        .Q(channelA_out[6]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[7] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[7]_i_1_n_0 ),
-        .Q(channelA_out[7]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[8] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[8]_i_1_n_0 ),
-        .Q(channelA_out[8]),
-        .R(1'b0));
-  FDRE \channelA_out_reg[9] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelA_out[9]_i_1_n_0 ),
-        .Q(channelA_out[9]),
-        .R(1'b0));
+        .O(channelA_out[9]));
   LUT1 #(
     .INIT(2'h1)) 
     \channelB_2[13]_i_1 
@@ -919,203 +795,119 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(channelB[9]),
         .Q(channelB_2[9]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[0]_i_1 
+    \channelB_out[0]_INST_0 
        (.I0(tempB_avg[1]),
         .I1(AVG),
         .I2(inB0[0]),
-        .O(\channelB_out[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+        .O(channelB_out[0]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[10]_i_1 
+    \channelB_out[10]_INST_0 
        (.I0(tempB_avg[11]),
         .I1(AVG),
         .I2(inB0[10]),
-        .O(\channelB_out[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+        .O(channelB_out[10]));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[11]_i_1 
+    \channelB_out[11]_INST_0 
        (.I0(tempB_avg[12]),
         .I1(AVG),
         .I2(inB0[11]),
-        .O(\channelB_out[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+        .O(channelB_out[11]));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[12]_i_1 
+    \channelB_out[12]_INST_0 
        (.I0(tempB_avg[13]),
         .I1(AVG),
         .I2(inB0[12]),
-        .O(\channelB_out[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+        .O(channelB_out[12]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[13]_i_1 
+    \channelB_out[13]_INST_0 
        (.I0(tempB_avg__0),
         .I1(AVG),
         .I2(inB0[13]),
-        .O(\channelB_out[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+        .O(channelB_out[13]));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[1]_i_1 
+    \channelB_out[1]_INST_0 
        (.I0(tempB_avg[2]),
         .I1(AVG),
         .I2(inB0[1]),
-        .O(\channelB_out[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+        .O(channelB_out[1]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[2]_i_1 
+    \channelB_out[2]_INST_0 
        (.I0(tempB_avg[3]),
         .I1(AVG),
         .I2(inB0[2]),
-        .O(\channelB_out[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+        .O(channelB_out[2]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[3]_i_1 
+    \channelB_out[3]_INST_0 
        (.I0(tempB_avg[4]),
         .I1(AVG),
         .I2(inB0[3]),
-        .O(\channelB_out[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+        .O(channelB_out[3]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[4]_i_1 
+    \channelB_out[4]_INST_0 
        (.I0(tempB_avg[5]),
         .I1(AVG),
         .I2(inB0[4]),
-        .O(\channelB_out[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+        .O(channelB_out[4]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[5]_i_1 
+    \channelB_out[5]_INST_0 
        (.I0(tempB_avg[6]),
         .I1(AVG),
         .I2(inB0[5]),
-        .O(\channelB_out[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+        .O(channelB_out[5]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[6]_i_1 
+    \channelB_out[6]_INST_0 
        (.I0(tempB_avg[7]),
         .I1(AVG),
         .I2(inB0[6]),
-        .O(\channelB_out[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+        .O(channelB_out[6]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[7]_i_1 
+    \channelB_out[7]_INST_0 
        (.I0(tempB_avg[8]),
         .I1(AVG),
         .I2(inB0[7]),
-        .O(\channelB_out[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+        .O(channelB_out[7]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[8]_i_1 
+    \channelB_out[8]_INST_0 
        (.I0(tempB_avg[9]),
         .I1(AVG),
         .I2(inB0[8]),
-        .O(\channelB_out[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+        .O(channelB_out[8]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \channelB_out[9]_i_1 
+    \channelB_out[9]_INST_0 
        (.I0(tempB_avg[10]),
         .I1(AVG),
         .I2(inB0[9]),
-        .O(\channelB_out[9]_i_1_n_0 ));
-  FDRE \channelB_out_reg[0] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[0]_i_1_n_0 ),
-        .Q(channelB_out[0]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[10] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[10]_i_1_n_0 ),
-        .Q(channelB_out[10]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[11] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[11]_i_1_n_0 ),
-        .Q(channelB_out[11]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[12] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[12]_i_1_n_0 ),
-        .Q(channelB_out[12]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[13] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[13]_i_1_n_0 ),
-        .Q(channelB_out[13]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[1] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[1]_i_1_n_0 ),
-        .Q(channelB_out[1]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[2] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[2]_i_1_n_0 ),
-        .Q(channelB_out[2]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[3] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[3]_i_1_n_0 ),
-        .Q(channelB_out[3]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[4] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[4]_i_1_n_0 ),
-        .Q(channelB_out[4]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[5] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[5]_i_1_n_0 ),
-        .Q(channelB_out[5]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[6] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[6]_i_1_n_0 ),
-        .Q(channelB_out[6]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[7] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[7]_i_1_n_0 ),
-        .Q(channelB_out[7]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[8] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[8]_i_1_n_0 ),
-        .Q(channelB_out[8]),
-        .R(1'b0));
-  FDRE \channelB_out_reg[9] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\channelB_out[9]_i_1_n_0 ),
-        .Q(channelB_out[9]),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+        .O(channelB_out[9]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT1 #(
     .INIT(2'h1)) 
     data_count_i_1
@@ -1127,69 +919,81 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .CLR(WR_EN_i_1_n_0),
         .D(data_count_i_1_n_0),
         .Q(data_count));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[0]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[0]),
         .O(pad_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[10]_INST_0 
        (.I0(test_data[10]),
         .I1(TEST_MODE),
-        .I2(channelA_out[8]),
+        .I2(tempA_avg[9]),
+        .I3(AVG),
+        .I4(inA0[8]),
         .O(pad_out[10]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[11]_INST_0 
        (.I0(test_data[11]),
         .I1(TEST_MODE),
-        .I2(channelA_out[9]),
+        .I2(tempA_avg[10]),
+        .I3(AVG),
+        .I4(inA0[9]),
         .O(pad_out[11]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[12]_INST_0 
        (.I0(test_data[12]),
         .I1(TEST_MODE),
-        .I2(channelA_out[10]),
+        .I2(tempA_avg[11]),
+        .I3(AVG),
+        .I4(inA0[10]),
         .O(pad_out[12]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[13]_INST_0 
        (.I0(test_data[13]),
         .I1(TEST_MODE),
-        .I2(channelA_out[11]),
+        .I2(tempA_avg[12]),
+        .I3(AVG),
+        .I4(inA0[11]),
         .O(pad_out[13]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[14]_INST_0 
        (.I0(test_data[14]),
         .I1(TEST_MODE),
-        .I2(channelA_out[12]),
+        .I2(tempA_avg[13]),
+        .I3(AVG),
+        .I4(inA0[12]),
         .O(pad_out[14]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[15]_INST_0 
        (.I0(test_data[15]),
         .I1(TEST_MODE),
-        .I2(channelA_out[13]),
+        .I2(tempA_avg__0),
+        .I3(AVG),
+        .I4(inA0[13]),
         .O(pad_out[15]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[16]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[16]),
         .O(pad_out[16]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[17]_INST_0 
@@ -1197,187 +1001,231 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(test_data[17]),
         .O(pad_out[17]));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[18]_INST_0 
        (.I0(test_data[18]),
         .I1(TEST_MODE),
-        .I2(channelB_out[0]),
+        .I2(tempB_avg[1]),
+        .I3(AVG),
+        .I4(inB0[0]),
         .O(pad_out[18]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[19]_INST_0 
        (.I0(test_data[19]),
         .I1(TEST_MODE),
-        .I2(channelB_out[1]),
+        .I2(tempB_avg[2]),
+        .I3(AVG),
+        .I4(inB0[1]),
         .O(pad_out[19]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[1]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[1]),
         .O(pad_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[20]_INST_0 
        (.I0(test_data[20]),
         .I1(TEST_MODE),
-        .I2(channelB_out[2]),
+        .I2(tempB_avg[3]),
+        .I3(AVG),
+        .I4(inB0[2]),
         .O(pad_out[20]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[21]_INST_0 
        (.I0(test_data[21]),
         .I1(TEST_MODE),
-        .I2(channelB_out[3]),
+        .I2(tempB_avg[4]),
+        .I3(AVG),
+        .I4(inB0[3]),
         .O(pad_out[21]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[22]_INST_0 
        (.I0(test_data[22]),
         .I1(TEST_MODE),
-        .I2(channelB_out[4]),
+        .I2(tempB_avg[5]),
+        .I3(AVG),
+        .I4(inB0[4]),
         .O(pad_out[22]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[23]_INST_0 
        (.I0(test_data[23]),
         .I1(TEST_MODE),
-        .I2(channelB_out[5]),
+        .I2(tempB_avg[6]),
+        .I3(AVG),
+        .I4(inB0[5]),
         .O(pad_out[23]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[24]_INST_0 
        (.I0(test_data[24]),
         .I1(TEST_MODE),
-        .I2(channelB_out[6]),
+        .I2(tempB_avg[7]),
+        .I3(AVG),
+        .I4(inB0[6]),
         .O(pad_out[24]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[25]_INST_0 
        (.I0(test_data[25]),
         .I1(TEST_MODE),
-        .I2(channelB_out[7]),
+        .I2(tempB_avg[8]),
+        .I3(AVG),
+        .I4(inB0[7]),
         .O(pad_out[25]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[26]_INST_0 
        (.I0(test_data[26]),
         .I1(TEST_MODE),
-        .I2(channelB_out[8]),
+        .I2(tempB_avg[9]),
+        .I3(AVG),
+        .I4(inB0[8]),
         .O(pad_out[26]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[27]_INST_0 
        (.I0(test_data[27]),
         .I1(TEST_MODE),
-        .I2(channelB_out[9]),
+        .I2(tempB_avg[10]),
+        .I3(AVG),
+        .I4(inB0[9]),
         .O(pad_out[27]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[28]_INST_0 
        (.I0(test_data[28]),
         .I1(TEST_MODE),
-        .I2(channelB_out[10]),
+        .I2(tempB_avg[11]),
+        .I3(AVG),
+        .I4(inB0[10]),
         .O(pad_out[28]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[29]_INST_0 
        (.I0(test_data[29]),
         .I1(TEST_MODE),
-        .I2(channelB_out[11]),
+        .I2(tempB_avg[12]),
+        .I3(AVG),
+        .I4(inB0[11]),
         .O(pad_out[29]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[2]_INST_0 
        (.I0(test_data[2]),
         .I1(TEST_MODE),
-        .I2(channelA_out[0]),
+        .I2(tempA_avg[1]),
+        .I3(AVG),
+        .I4(inA0[0]),
         .O(pad_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[30]_INST_0 
        (.I0(test_data[30]),
         .I1(TEST_MODE),
-        .I2(channelB_out[12]),
+        .I2(tempB_avg[13]),
+        .I3(AVG),
+        .I4(inB0[12]),
         .O(pad_out[30]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[31]_INST_0 
        (.I0(test_data[31]),
         .I1(TEST_MODE),
-        .I2(channelB_out[13]),
+        .I2(tempB_avg__0),
+        .I3(AVG),
+        .I4(inB0[13]),
         .O(pad_out[31]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[3]_INST_0 
        (.I0(test_data[3]),
         .I1(TEST_MODE),
-        .I2(channelA_out[1]),
+        .I2(tempA_avg[2]),
+        .I3(AVG),
+        .I4(inA0[1]),
         .O(pad_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[4]_INST_0 
        (.I0(test_data[4]),
         .I1(TEST_MODE),
-        .I2(channelA_out[2]),
+        .I2(tempA_avg[3]),
+        .I3(AVG),
+        .I4(inA0[2]),
         .O(pad_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[5]_INST_0 
        (.I0(test_data[5]),
         .I1(TEST_MODE),
-        .I2(channelA_out[3]),
+        .I2(tempA_avg[4]),
+        .I3(AVG),
+        .I4(inA0[3]),
         .O(pad_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[6]_INST_0 
        (.I0(test_data[6]),
         .I1(TEST_MODE),
-        .I2(channelA_out[4]),
+        .I2(tempA_avg[5]),
+        .I3(AVG),
+        .I4(inA0[4]),
         .O(pad_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[7]_INST_0 
        (.I0(test_data[7]),
         .I1(TEST_MODE),
-        .I2(channelA_out[5]),
+        .I2(tempA_avg[6]),
+        .I3(AVG),
+        .I4(inA0[5]),
         .O(pad_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[8]_INST_0 
        (.I0(test_data[8]),
         .I1(TEST_MODE),
-        .I2(channelA_out[6]),
+        .I2(tempA_avg[7]),
+        .I3(AVG),
+        .I4(inA0[6]),
         .O(pad_out[8]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'hB8BBB888)) 
     \pad_out[9]_INST_0 
        (.I0(test_data[9]),
         .I1(TEST_MODE),
-        .I2(channelA_out[7]),
+        .I2(tempA_avg[8]),
+        .I3(AVG),
+        .I4(inA0[7]),
         .O(pad_out[9]));
   CARRY4 tempA_avg_carry
        (.CI(1'b0),

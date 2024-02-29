@@ -69,8 +69,6 @@ module design_1_FIFO_FSM_0_0 (
   FIFO_DATA,
   WR_EN,
   pad_out,
-  channelA_2,
-  channelB_2,
   channelA_out,
   channelB_out
 );
@@ -93,8 +91,6 @@ input wire [13 : 0] inB1;
 output wire [31 : 0] FIFO_DATA;
 output wire WR_EN;
 output wire [31 : 0] pad_out;
-output wire [13 : 0] channelA_2;
-output wire [13 : 0] channelB_2;
 output wire [13 : 0] channelA_out;
 output wire [13 : 0] channelB_out;
 
@@ -113,8 +109,6 @@ output wire [13 : 0] channelB_out;
     .FIFO_DATA(FIFO_DATA),
     .WR_EN(WR_EN),
     .pad_out(pad_out),
-    .channelA_2(channelA_2),
-    .channelB_2(channelB_2),
     .channelA_out(channelA_out),
     .channelB_out(channelB_out)
   );
