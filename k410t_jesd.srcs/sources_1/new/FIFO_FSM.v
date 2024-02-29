@@ -36,24 +36,28 @@ module FIFO_FSM
 	
 	output reg signed [31:0] FIFO_DATA,
 	output reg WR_EN,
-	output wire signed [31:0] pad_out
+	output wire signed [31:0] pad_out,
+	output reg signed [14:0] channelA_2,
+	output reg signed [14:0] channelB_2,
+	output reg signed [14:0] channelA_avg,
+	output reg signed [14:0] channelB_avg
 );
 
-reg signed [14:0] channelA_2;
-reg signed [14:0] channelB_2;
+//reg signed [14:0] channelA_2;
+//reg signed [14:0] channelB_2;
 reg data_count;
 
 wire signed [14:0] channelA = (inA0 + inA1); //sums,splice out 14:1 to shift by 2 without changing sign 
 wire signed [14:0] channelB = (inB0 + inB1);
 
-wire signed [14:0] channelA_avg = AVG ? (channelA_2[14:1] + channelA[14:1]) : {inA0, 1'b0}; //sum of 2 averages
-wire signed [14:0] channelB_avg = AVG ? (channelB_2[14:1] + channelB[14:1]) : {inB0, 1'b0};
+
 
 //running average over 2 clock cycles concatenated. 2 channels per device
 assign pad_out = TEST_MODE ?  test_data : {channelB_avg[14:1], 2'b00, channelA_avg[14:1], 2'b00}; 
 
 always @(negedge RST_N, posedge CLK) begin
-
+    channelA_avg <= AVG ? (channelA_2[14:1] + channelA[14:1]) : {inA0, 1'b0}; //sum of 2 averages
+    channelB_avg <= AVG ? (channelB_2[14:1] + channelB[14:1]) : {inB0, 1'b0};
     if(!RST_N) begin
         WR_EN <= 1'b0;
         data_count <= 1'b0;

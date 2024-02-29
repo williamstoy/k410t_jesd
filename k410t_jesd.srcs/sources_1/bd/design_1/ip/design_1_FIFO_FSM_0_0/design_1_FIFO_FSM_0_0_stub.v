@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Wed Feb 28 18:32:44 2024
-// Host        : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+// Date        : Wed Feb 28 19:56:15 2024
+// Host        : linrack2.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode synth_stub
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0_stub.v
 // Design      : design_1_FIFO_FSM_0_0
@@ -15,8 +15,9 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "FIFO_FSM,Vivado 2019.2" *)
 module design_1_FIFO_FSM_0_0(RST_N, CLK, READY, TEST_MODE, AVG, VALID, test_data, 
-  inA0, inA1, inB0, inB1, FIFO_DATA, WR_EN, pad_out)
-/* synthesis syn_black_box black_box_pad_pin="RST_N,CLK,READY,TEST_MODE,AVG,VALID,test_data[31:0],inA0[13:0],inA1[13:0],inB0[13:0],inB1[13:0],FIFO_DATA[31:0],WR_EN,pad_out[31:0]" */;
+  inA0, inA1, inB0, inB1, FIFO_DATA, WR_EN, pad_out, channelA_2, channelB_2, channelA_avg, 
+  channelB_avg)
+/* synthesis syn_black_box black_box_pad_pin="RST_N,CLK,READY,TEST_MODE,AVG,VALID,test_data[31:0],inA0[13:0],inA1[13:0],inB0[13:0],inB1[13:0],FIFO_DATA[31:0],WR_EN,pad_out[31:0],channelA_2[14:0],channelB_2[14:0],channelA_avg[14:0],channelB_avg[14:0]" */;
   input RST_N;
   input CLK;
   input READY;
@@ -31,4 +32,8 @@ module design_1_FIFO_FSM_0_0(RST_N, CLK, READY, TEST_MODE, AVG, VALID, test_data
   output [31:0]FIFO_DATA;
   output WR_EN;
   output [31:0]pad_out;
+  output [14:0]channelA_2;
+  output [14:0]channelB_2;
+  output [14:0]channelA_avg;
+  output [14:0]channelB_avg;
 endmodule

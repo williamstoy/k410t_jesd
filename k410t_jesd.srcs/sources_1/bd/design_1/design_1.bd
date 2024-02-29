@@ -275,7 +275,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "15"
+            "value": "19"
           },
           "C_PROBE10_WIDTH": {
             "value": "32"
@@ -285,6 +285,18 @@
           },
           "C_PROBE14_WIDTH": {
             "value": "32"
+          },
+          "C_PROBE15_WIDTH": {
+            "value": "15"
+          },
+          "C_PROBE16_WIDTH": {
+            "value": "15"
+          },
+          "C_PROBE17_WIDTH": {
+            "value": "15"
+          },
+          "C_PROBE18_WIDTH": {
+            "value": "15"
           },
           "C_PROBE2_WIDTH": {
             "value": "1"
@@ -1139,6 +1151,26 @@
             "direction": "O",
             "left": "31",
             "right": "0"
+          },
+          "channelA_2": {
+            "direction": "O",
+            "left": "14",
+            "right": "0"
+          },
+          "channelB_2": {
+            "direction": "O",
+            "left": "14",
+            "right": "0"
+          },
+          "channelA_avg": {
+            "direction": "O",
+            "left": "14",
+            "right": "0"
+          },
+          "channelB_avg": {
+            "direction": "O",
+            "left": "14",
+            "right": "0"
           }
         }
       }
@@ -1451,6 +1483,30 @@
         "ports": [
           "AVG_Enable/READY_LVL",
           "FIFO_FSM_0/AVG"
+        ]
+      },
+      "FIFO_FSM_0_channelA_2": {
+        "ports": [
+          "FIFO_FSM_0/channelA_2",
+          "ila_0/probe18"
+        ]
+      },
+      "FIFO_FSM_0_channelB_2": {
+        "ports": [
+          "FIFO_FSM_0/channelB_2",
+          "ila_0/probe16"
+        ]
+      },
+      "FIFO_FSM_0_channelA_avg": {
+        "ports": [
+          "FIFO_FSM_0/channelA_avg",
+          "ila_0/probe15"
+        ]
+      },
+      "FIFO_FSM_0_channelB_avg": {
+        "ports": [
+          "FIFO_FSM_0/channelB_avg",
+          "ila_0/probe17"
         ]
       }
     },
