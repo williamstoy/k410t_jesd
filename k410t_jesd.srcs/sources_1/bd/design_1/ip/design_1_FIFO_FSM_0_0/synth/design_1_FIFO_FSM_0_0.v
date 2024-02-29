@@ -72,8 +72,8 @@ module design_1_FIFO_FSM_0_0 (
   pad_out,
   channelA_2,
   channelB_2,
-  channelA_avg,
-  channelB_avg
+  channelA_out,
+  channelB_out
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -94,10 +94,10 @@ input wire [13 : 0] inB1;
 output wire [31 : 0] FIFO_DATA;
 output wire WR_EN;
 output wire [31 : 0] pad_out;
-output wire [14 : 0] channelA_2;
-output wire [14 : 0] channelB_2;
-output wire [14 : 0] channelA_avg;
-output wire [14 : 0] channelB_avg;
+output wire [13 : 0] channelA_2;
+output wire [13 : 0] channelB_2;
+output wire [13 : 0] channelA_out;
+output wire [13 : 0] channelB_out;
 
   FIFO_FSM inst (
     .RST_N(RST_N),
@@ -116,7 +116,7 @@ output wire [14 : 0] channelB_avg;
     .pad_out(pad_out),
     .channelA_2(channelA_2),
     .channelB_2(channelB_2),
-    .channelA_avg(channelA_avg),
-    .channelB_avg(channelB_avg)
+    .channelA_out(channelA_out),
+    .channelB_out(channelB_out)
   );
 endmodule

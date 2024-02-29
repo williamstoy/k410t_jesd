@@ -89,10 +89,10 @@ input [0 : 0] probe11;
 input [0 : 0] probe12;
 input [31 : 0] probe13;
 input [31 : 0] probe14;
-input [14 : 0] probe15;
-input [14 : 0] probe16;
-input [14 : 0] probe17;
-input [14 : 0] probe18;
+input [13 : 0] probe15;
+input [13 : 0] probe16;
+input [13 : 0] probe17;
+input [13 : 0] probe18;
 
 
 endmodule
