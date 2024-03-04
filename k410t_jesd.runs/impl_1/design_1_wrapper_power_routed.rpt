@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Wed Feb 28 21:05:59 2024
+| Date             : Mon Mar  4 18:09:42 2024
 | Host             : linrack12.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.206        |
+| Total On-Chip Power (W)  | 1.207        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.991        |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.027 |       23 |       --- |             --- |
-| Slice Logic              |     0.015 |    17563 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     5818 |    254200 |            2.29 |
+| Clocks                   |     0.028 |       23 |       --- |             --- |
+| Slice Logic              |     0.015 |    17723 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     6077 |    254200 |            2.39 |
 |   LUT as Distributed RAM |     0.002 |      585 |     90600 |            0.65 |
-|   CARRY4                 |    <0.001 |      402 |     63550 |            0.63 |
-|   Register               |    <0.001 |     8318 |    508400 |            1.64 |
+|   CARRY4                 |    <0.001 |      410 |     63550 |            0.65 |
+|   Register               |    <0.001 |     8384 |    508400 |            1.65 |
 |   F7/F8 Muxes            |    <0.001 |       97 |    254200 |            0.04 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register  |    <0.001 |      325 |     90600 |            0.36 |
-|   Others                 |     0.000 |      781 |       --- |             --- |
+|   Others                 |     0.000 |      782 |       --- |             --- |
 |   BUFR                   |     0.000 |        2 |       208 |            0.96 |
-| Signals                  |     0.020 |    13922 |       --- |             --- |
+| Signals                  |     0.020 |    13965 |       --- |             --- |
 | Block RAM                |     0.028 |       32 |       795 |            4.03 |
 | MMCM                     |     0.106 |        1 |        10 |           10.00 |
 | I/O                      |     0.100 |       48 |       400 |           12.00 |
 | GTX                      |     0.695 |        4 |         8 |           50.00 |
 | Static Power             |     0.215 |          |           |                 |
-| Total                    |     1.206 |          |           |                 |
+| Total                    |     1.207 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -161,8 +161,8 @@ Table of Contents
 |       U0                 |     0.002 |
 |     frontpanel_1         |     0.134 |
 |       inst               |     0.134 |
-|     ila_0                |     0.041 |
-|       inst               |     0.041 |
+|     ila_0                |     0.042 |
+|       inst               |     0.042 |
 |     jesd204_0            |     0.720 |
 |       inst               |     0.720 |
 |     util_ds_buf_0        |     0.002 |

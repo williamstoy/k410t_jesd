@@ -25,7 +25,8 @@
       "TEST_Enable": "",
       "CNT_RST": "",
       "AVG_Enable": "",
-      "FIFO_FSM_0": ""
+      "FIFO_FSM_0": "",
+      "data_tagger_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -1163,6 +1164,59 @@
             "right": "0"
           }
         }
+      },
+      "data_tagger_0": {
+        "vlnv": "xilinx.com:module_ref:data_tagger:1.0",
+        "xci_name": "design_1_data_tagger_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "data_tagger",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_frontpanel_1_0_okClk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100800000",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "evnt": {
+            "direction": "I"
+          },
+          "DIS": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "RST_N": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1211,7 +1265,8 @@
           "ila_0/clk",
           "okAXI4LiteInterface_0/okClkIn",
           "frontpanel_1/ti40_ep_clk",
-          "enable_read_0/clk"
+          "enable_read_0/clk",
+          "data_tagger_0/clk"
         ]
       },
       "okAXI4LiteInterface_0_m_axi_aresetn": {
@@ -1326,7 +1381,8 @@
           "TEST_Enable/RSTN",
           "CNT_RST/RSTN",
           "AVG_Enable/RSTN",
-          "FIFO_FSM_0/RST_N"
+          "FIFO_FSM_0/RST_N",
+          "data_tagger_0/RST_N"
         ]
       },
       "negate_0_nota": {
@@ -1345,7 +1401,8 @@
         "ports": [
           "frontpanel_1/btpoa0_ep_read",
           "ila_0/probe5",
-          "enable_read_0/read"
+          "enable_read_0/read",
+          "data_tagger_0/evnt"
         ]
       },
       "enabled_binary_count_0_OUT": {
@@ -1371,8 +1428,8 @@
       "fifo_generator_0_dout": {
         "ports": [
           "fifo_generator_0/dout",
-          "frontpanel_1/btpoa0_ep_datain",
-          "ila_0/probe1"
+          "ila_0/probe1",
+          "data_tagger_0/data_in"
         ]
       },
       "fifo_generator_0_empty": {
@@ -1418,7 +1475,8 @@
           "ila_0/probe13",
           "TEST_Enable/READY",
           "CNT_RST/READY",
-          "AVG_Enable/READY"
+          "AVG_Enable/READY",
+          "data_tagger_0/DIS"
         ]
       },
       "trigger_to_level_0_READY_LVL": {
@@ -1485,6 +1543,12 @@
         "ports": [
           "FIFO_FSM_0/channelA_out",
           "ila_0/probe15"
+        ]
+      },
+      "data_tagger_0_data_out": {
+        "ports": [
+          "data_tagger_0/data_out",
+          "frontpanel_1/btpoa0_ep_datain"
         ]
       }
     },
