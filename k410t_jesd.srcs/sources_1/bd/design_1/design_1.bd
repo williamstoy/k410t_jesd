@@ -1288,6 +1288,9 @@
             "direction": "O",
             "left": "31",
             "right": "0"
+          },
+          "stuck": {
+            "direction": "O"
           }
         }
       }
