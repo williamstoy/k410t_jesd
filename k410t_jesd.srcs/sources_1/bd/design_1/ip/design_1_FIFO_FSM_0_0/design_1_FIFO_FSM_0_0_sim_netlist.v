@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Wed Feb 28 20:58:13 2024
-// Host        : linrack2.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+// Date        : Mon Mar 25 16:33:56 2024
+// Host        : linrack10.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0_sim_netlist.v
 // Design      : design_1_FIFO_FSM_0_0
@@ -29,6 +29,7 @@ module design_1_FIFO_FSM_0_0
     inB1,
     FIFO_DATA,
     WR_EN,
+    data_count,
     pad_out,
     channelA_out,
     channelB_out);
@@ -45,6 +46,7 @@ module design_1_FIFO_FSM_0_0
   input [13:0]inB1;
   output [31:0]FIFO_DATA;
   output WR_EN;
+  output data_count;
   output [31:0]pad_out;
   output [13:0]channelA_out;
   output [13:0]channelB_out;
@@ -59,6 +61,7 @@ module design_1_FIFO_FSM_0_0
   wire WR_EN;
   wire [13:0]channelA_out;
   wire [13:0]channelB_out;
+  wire data_count;
   wire [13:0]inA0;
   wire [13:0]inA1;
   wire [13:0]inB0;
@@ -77,6 +80,7 @@ module design_1_FIFO_FSM_0_0
         .WR_EN(WR_EN),
         .channelA_out(channelA_out),
         .channelB_out(channelB_out),
+        .data_count(data_count),
         .inA0(inA0),
         .inA1(inA1),
         .inB0(inB0),
@@ -87,7 +91,8 @@ endmodule
 
 (* ORIG_REF_NAME = "FIFO_FSM" *) 
 module design_1_FIFO_FSM_0_0_FIFO_FSM
-   (FIFO_DATA,
+   (data_count,
+    FIFO_DATA,
     pad_out,
     WR_EN,
     channelA_out,
@@ -103,6 +108,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
     CLK,
     test_data,
     AVG);
+  output data_count;
   output [31:0]FIFO_DATA;
   output [31:0]pad_out;
   output WR_EN;

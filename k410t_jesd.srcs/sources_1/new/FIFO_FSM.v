@@ -36,13 +36,13 @@ module FIFO_FSM
 	
 	output reg signed [31:0] FIFO_DATA,
 	output reg WR_EN,
+	output reg data_count,
 	output wire signed [31:0] pad_out,
 	output wire signed [13:0] channelA_out,
 	output wire signed [13:0] channelB_out
 );
 
 reg signed [13:0] channelA_2, channelB_2; 
-reg data_count;
 
 //do not remove temp, or misinterprets negative + positive
 wire signed [14:0] tempA = (inA0 + inA1);

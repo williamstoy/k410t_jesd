@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 // File: design_1_frontpanel_1_0_synthesis.v
-// Creation Date: Fri 02/09/2024 at 16:18:34 EST
+// Creation Date: Mon 03/25/2024 at 16:28:57 EDT
 // IP Version: opalkelly.com:ip:frontpanel:1.0 (Rev: 5)
 // Tool Version: Vivado v2019.2 (64-bit)
 // Opal Kelly Board: XEM7350-K410T (Part: xc7k410tffg676-1)
@@ -16,6 +16,15 @@ module design_1_frontpanel_1_0(
 //----------------------------------------------------------------------------------------------------------------------------------
     (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein00 EP_DATAOUT" *)
     output wire [31:0] wi00_ep_dataout,
+
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein01 EP_DATAOUT" *)
+    output wire [31:0] wi01_ep_dataout,
+
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein02 EP_DATAOUT" *)
+    output wire [31:0] wi02_ep_dataout,
+
+    (* X_INTERFACE_INFO = "opalkelly.com:interface:wirein:1.0 wirein03 EP_DATAOUT" *)
+    output wire [31:0] wi03_ep_dataout,
 
 //----------------------------------------------------------------------------------------------------------------------------------
 // WireOuts
@@ -71,6 +80,9 @@ module design_1_frontpanel_1_0(
 
 design_1_frontpanel_1_0_wrapper_synthesis inst (
     .wi00_ep_dataout(wi00_ep_dataout),
+    .wi01_ep_dataout(wi01_ep_dataout),
+    .wi02_ep_dataout(wi02_ep_dataout),
+    .wi03_ep_dataout(wi03_ep_dataout),
     .wo20_ep_datain(wo20_ep_datain),
     .ti40_ep_trigger(ti40_ep_trigger),
     .ti40_ep_clk(ti40_ep_clk),

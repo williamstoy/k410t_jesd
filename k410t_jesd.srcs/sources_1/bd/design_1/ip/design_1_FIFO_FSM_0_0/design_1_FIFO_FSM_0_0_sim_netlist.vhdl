@@ -1,8 +1,8 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Wed Feb 28 20:58:13 2024
--- Host        : linrack2.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+-- Date        : Mon Mar 25 16:33:56 2024
+-- Host        : linrack10.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode funcsim
 --               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0_sim_netlist.vhdl
 -- Design      : design_1_FIFO_FSM_0_0
@@ -16,6 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_FIFO_FSM_0_0_FIFO_FSM is
   port (
+    data_count : out STD_LOGIC;
     FIFO_DATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
     pad_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     WR_EN : out STD_LOGIC;
@@ -46,7 +47,7 @@ architecture STRUCTURE of design_1_FIFO_FSM_0_0_FIFO_FSM is
   signal channelA_2 : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal channelB : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal channelB_2 : STD_LOGIC_VECTOR ( 13 downto 0 );
-  signal data_count : STD_LOGIC;
+  signal \^data_count\ : STD_LOGIC;
   signal data_count_i_1_n_0 : STD_LOGIC;
   signal \^pad_out\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal tempA_avg : STD_LOGIC_VECTOR ( 13 downto 1 );
@@ -243,13 +244,14 @@ architecture STRUCTURE of design_1_FIFO_FSM_0_0_FIFO_FSM is
   attribute SOFT_HLUTNM of \pad_out[8]_INST_0\ : label is "soft_lutpair20";
   attribute SOFT_HLUTNM of \pad_out[9]_INST_0\ : label is "soft_lutpair19";
 begin
+  data_count <= \^data_count\;
   pad_out(31 downto 0) <= \^pad_out\(31 downto 0);
 \FIFO_DATA[17]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00008000"
     )
         port map (
-      I0 => data_count,
+      I0 => \^data_count\,
       I1 => READY,
       I2 => VALID,
       I3 => RST_N,
@@ -264,7 +266,7 @@ begin
       I0 => RST_N,
       I1 => VALID,
       I2 => READY,
-      I3 => data_count,
+      I3 => \^data_count\,
       O => \FIFO_DATA[31]_i_1_n_0\
     );
 \FIFO_DATA_reg[0]\: unisim.vcomponents.FDRE
@@ -528,7 +530,7 @@ WR_EN0: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => data_count,
+      I0 => \^data_count\,
       I1 => READY,
       I2 => VALID,
       O => WR_EN0_n_0
@@ -1074,7 +1076,7 @@ data_count_i_1: unisim.vcomponents.LUT1
       INIT => X"1"
     )
         port map (
-      I0 => data_count,
+      I0 => \^data_count\,
       O => data_count_i_1_n_0
     );
 data_count_reg: unisim.vcomponents.FDCE
@@ -1083,7 +1085,7 @@ data_count_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => WR_EN_i_1_n_0,
       D => data_count_i_1_n_0,
-      Q => data_count
+      Q => \^data_count\
     );
 \pad_out[0]_INST_0\: unisim.vcomponents.LUT2
     generic map(
@@ -2249,6 +2251,7 @@ entity design_1_FIFO_FSM_0_0 is
     inB1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     FIFO_DATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
     WR_EN : out STD_LOGIC;
+    data_count : out STD_LOGIC;
     pad_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     channelA_out : out STD_LOGIC_VECTOR ( 13 downto 0 );
     channelB_out : out STD_LOGIC_VECTOR ( 13 downto 0 )
@@ -2285,6 +2288,7 @@ inst: entity work.design_1_FIFO_FSM_0_0_FIFO_FSM
       WR_EN => WR_EN,
       channelA_out(13 downto 0) => channelA_out(13 downto 0),
       channelB_out(13 downto 0) => channelB_out(13 downto 0),
+      data_count => data_count,
       inA0(13 downto 0) => inA0(13 downto 0),
       inA1(13 downto 0) => inA1(13 downto 0),
       inB0(13 downto 0) => inB0(13 downto 0),

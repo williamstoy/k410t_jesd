@@ -326,7 +326,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein01" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x01) || ($PARAM_VALUE.WI.ADDR_1 == 0x01) || ($PARAM_VALUE.WI.ADDR_2 == 0x01) || ($PARAM_VALUE.WI.ADDR_3 == 0x01) || ($PARAM_VALUE.WI.ADDR_4 == 0x01) || ($PARAM_VALUE.WI.ADDR_5 == 0x01) || ($PARAM_VALUE.WI.ADDR_6 == 0x01) || ($PARAM_VALUE.WI.ADDR_7 == 0x01) || ($PARAM_VALUE.WI.ADDR_8 == 0x01) || ($PARAM_VALUE.WI.ADDR_9 == 0x01) || ($PARAM_VALUE.WI.ADDR_10 == 0x01) || ($PARAM_VALUE.WI.ADDR_11 == 0x01) || ($PARAM_VALUE.WI.ADDR_12 == 0x01) || ($PARAM_VALUE.WI.ADDR_13 == 0x01) || ($PARAM_VALUE.WI.ADDR_14 == 0x01) || ($PARAM_VALUE.WI.ADDR_15 == 0x01) || ($PARAM_VALUE.WI.ADDR_16 == 0x01) || ($PARAM_VALUE.WI.ADDR_17 == 0x01) || ($PARAM_VALUE.WI.ADDR_18 == 0x01) || ($PARAM_VALUE.WI.ADDR_19 == 0x01) || ($PARAM_VALUE.WI.ADDR_20 == 0x01) || ($PARAM_VALUE.WI.ADDR_21 == 0x01) || ($PARAM_VALUE.WI.ADDR_22 == 0x01) || ($PARAM_VALUE.WI.ADDR_23 == 0x01) || ($PARAM_VALUE.WI.ADDR_24 == 0x01) || ($PARAM_VALUE.WI.ADDR_25 == 0x01) || ($PARAM_VALUE.WI.ADDR_26 == 0x01) || ($PARAM_VALUE.WI.ADDR_27 == 0x01) || ($PARAM_VALUE.WI.ADDR_28 == 0x01) || ($PARAM_VALUE.WI.ADDR_29 == 0x01) || ($PARAM_VALUE.WI.ADDR_30 == 0x01) || ($PARAM_VALUE.WI.ADDR_31 == 0x01)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein01" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x01) || ($PARAM_VALUE.WI.ADDR_1 == 0x01) || ($PARAM_VALUE.WI.ADDR_2 == 0x01) || ($PARAM_VALUE.WI.ADDR_3 == 0x01) || ($PARAM_VALUE.WI.ADDR_4 == 0x01) || ($PARAM_VALUE.WI.ADDR_5 == 0x01) || ($PARAM_VALUE.WI.ADDR_6 == 0x01) || ($PARAM_VALUE.WI.ADDR_7 == 0x01) || ($PARAM_VALUE.WI.ADDR_8 == 0x01) || ($PARAM_VALUE.WI.ADDR_9 == 0x01) || ($PARAM_VALUE.WI.ADDR_10 == 0x01) || ($PARAM_VALUE.WI.ADDR_11 == 0x01) || ($PARAM_VALUE.WI.ADDR_12 == 0x01) || ($PARAM_VALUE.WI.ADDR_13 == 0x01) || ($PARAM_VALUE.WI.ADDR_14 == 0x01) || ($PARAM_VALUE.WI.ADDR_15 == 0x01) || ($PARAM_VALUE.WI.ADDR_16 == 0x01) || ($PARAM_VALUE.WI.ADDR_17 == 0x01) || ($PARAM_VALUE.WI.ADDR_18 == 0x01) || ($PARAM_VALUE.WI.ADDR_19 == 0x01) || ($PARAM_VALUE.WI.ADDR_20 == 0x01) || ($PARAM_VALUE.WI.ADDR_21 == 0x01) || ($PARAM_VALUE.WI.ADDR_22 == 0x01) || ($PARAM_VALUE.WI.ADDR_23 == 0x01) || ($PARAM_VALUE.WI.ADDR_24 == 0x01) || ($PARAM_VALUE.WI.ADDR_25 == 0x01) || ($PARAM_VALUE.WI.ADDR_26 == 0x01) || ($PARAM_VALUE.WI.ADDR_27 == 0x01) || ($PARAM_VALUE.WI.ADDR_28 == 0x01) || ($PARAM_VALUE.WI.ADDR_29 == 0x01) || ($PARAM_VALUE.WI.ADDR_30 == 0x01) || ($PARAM_VALUE.WI.ADDR_31 == 0x01)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -351,7 +351,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein02" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x02) || ($PARAM_VALUE.WI.ADDR_1 == 0x02) || ($PARAM_VALUE.WI.ADDR_2 == 0x02) || ($PARAM_VALUE.WI.ADDR_3 == 0x02) || ($PARAM_VALUE.WI.ADDR_4 == 0x02) || ($PARAM_VALUE.WI.ADDR_5 == 0x02) || ($PARAM_VALUE.WI.ADDR_6 == 0x02) || ($PARAM_VALUE.WI.ADDR_7 == 0x02) || ($PARAM_VALUE.WI.ADDR_8 == 0x02) || ($PARAM_VALUE.WI.ADDR_9 == 0x02) || ($PARAM_VALUE.WI.ADDR_10 == 0x02) || ($PARAM_VALUE.WI.ADDR_11 == 0x02) || ($PARAM_VALUE.WI.ADDR_12 == 0x02) || ($PARAM_VALUE.WI.ADDR_13 == 0x02) || ($PARAM_VALUE.WI.ADDR_14 == 0x02) || ($PARAM_VALUE.WI.ADDR_15 == 0x02) || ($PARAM_VALUE.WI.ADDR_16 == 0x02) || ($PARAM_VALUE.WI.ADDR_17 == 0x02) || ($PARAM_VALUE.WI.ADDR_18 == 0x02) || ($PARAM_VALUE.WI.ADDR_19 == 0x02) || ($PARAM_VALUE.WI.ADDR_20 == 0x02) || ($PARAM_VALUE.WI.ADDR_21 == 0x02) || ($PARAM_VALUE.WI.ADDR_22 == 0x02) || ($PARAM_VALUE.WI.ADDR_23 == 0x02) || ($PARAM_VALUE.WI.ADDR_24 == 0x02) || ($PARAM_VALUE.WI.ADDR_25 == 0x02) || ($PARAM_VALUE.WI.ADDR_26 == 0x02) || ($PARAM_VALUE.WI.ADDR_27 == 0x02) || ($PARAM_VALUE.WI.ADDR_28 == 0x02) || ($PARAM_VALUE.WI.ADDR_29 == 0x02) || ($PARAM_VALUE.WI.ADDR_30 == 0x02) || ($PARAM_VALUE.WI.ADDR_31 == 0x02)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein02" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x02) || ($PARAM_VALUE.WI.ADDR_1 == 0x02) || ($PARAM_VALUE.WI.ADDR_2 == 0x02) || ($PARAM_VALUE.WI.ADDR_3 == 0x02) || ($PARAM_VALUE.WI.ADDR_4 == 0x02) || ($PARAM_VALUE.WI.ADDR_5 == 0x02) || ($PARAM_VALUE.WI.ADDR_6 == 0x02) || ($PARAM_VALUE.WI.ADDR_7 == 0x02) || ($PARAM_VALUE.WI.ADDR_8 == 0x02) || ($PARAM_VALUE.WI.ADDR_9 == 0x02) || ($PARAM_VALUE.WI.ADDR_10 == 0x02) || ($PARAM_VALUE.WI.ADDR_11 == 0x02) || ($PARAM_VALUE.WI.ADDR_12 == 0x02) || ($PARAM_VALUE.WI.ADDR_13 == 0x02) || ($PARAM_VALUE.WI.ADDR_14 == 0x02) || ($PARAM_VALUE.WI.ADDR_15 == 0x02) || ($PARAM_VALUE.WI.ADDR_16 == 0x02) || ($PARAM_VALUE.WI.ADDR_17 == 0x02) || ($PARAM_VALUE.WI.ADDR_18 == 0x02) || ($PARAM_VALUE.WI.ADDR_19 == 0x02) || ($PARAM_VALUE.WI.ADDR_20 == 0x02) || ($PARAM_VALUE.WI.ADDR_21 == 0x02) || ($PARAM_VALUE.WI.ADDR_22 == 0x02) || ($PARAM_VALUE.WI.ADDR_23 == 0x02) || ($PARAM_VALUE.WI.ADDR_24 == 0x02) || ($PARAM_VALUE.WI.ADDR_25 == 0x02) || ($PARAM_VALUE.WI.ADDR_26 == 0x02) || ($PARAM_VALUE.WI.ADDR_27 == 0x02) || ($PARAM_VALUE.WI.ADDR_28 == 0x02) || ($PARAM_VALUE.WI.ADDR_29 == 0x02) || ($PARAM_VALUE.WI.ADDR_30 == 0x02) || ($PARAM_VALUE.WI.ADDR_31 == 0x02)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -376,7 +376,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein03" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x03) || ($PARAM_VALUE.WI.ADDR_1 == 0x03) || ($PARAM_VALUE.WI.ADDR_2 == 0x03) || ($PARAM_VALUE.WI.ADDR_3 == 0x03) || ($PARAM_VALUE.WI.ADDR_4 == 0x03) || ($PARAM_VALUE.WI.ADDR_5 == 0x03) || ($PARAM_VALUE.WI.ADDR_6 == 0x03) || ($PARAM_VALUE.WI.ADDR_7 == 0x03) || ($PARAM_VALUE.WI.ADDR_8 == 0x03) || ($PARAM_VALUE.WI.ADDR_9 == 0x03) || ($PARAM_VALUE.WI.ADDR_10 == 0x03) || ($PARAM_VALUE.WI.ADDR_11 == 0x03) || ($PARAM_VALUE.WI.ADDR_12 == 0x03) || ($PARAM_VALUE.WI.ADDR_13 == 0x03) || ($PARAM_VALUE.WI.ADDR_14 == 0x03) || ($PARAM_VALUE.WI.ADDR_15 == 0x03) || ($PARAM_VALUE.WI.ADDR_16 == 0x03) || ($PARAM_VALUE.WI.ADDR_17 == 0x03) || ($PARAM_VALUE.WI.ADDR_18 == 0x03) || ($PARAM_VALUE.WI.ADDR_19 == 0x03) || ($PARAM_VALUE.WI.ADDR_20 == 0x03) || ($PARAM_VALUE.WI.ADDR_21 == 0x03) || ($PARAM_VALUE.WI.ADDR_22 == 0x03) || ($PARAM_VALUE.WI.ADDR_23 == 0x03) || ($PARAM_VALUE.WI.ADDR_24 == 0x03) || ($PARAM_VALUE.WI.ADDR_25 == 0x03) || ($PARAM_VALUE.WI.ADDR_26 == 0x03) || ($PARAM_VALUE.WI.ADDR_27 == 0x03) || ($PARAM_VALUE.WI.ADDR_28 == 0x03) || ($PARAM_VALUE.WI.ADDR_29 == 0x03) || ($PARAM_VALUE.WI.ADDR_30 == 0x03) || ($PARAM_VALUE.WI.ADDR_31 == 0x03)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.wirein03" xilinx:dependency="($PARAM_VALUE.WI.ADDR_0 == 0x03) || ($PARAM_VALUE.WI.ADDR_1 == 0x03) || ($PARAM_VALUE.WI.ADDR_2 == 0x03) || ($PARAM_VALUE.WI.ADDR_3 == 0x03) || ($PARAM_VALUE.WI.ADDR_4 == 0x03) || ($PARAM_VALUE.WI.ADDR_5 == 0x03) || ($PARAM_VALUE.WI.ADDR_6 == 0x03) || ($PARAM_VALUE.WI.ADDR_7 == 0x03) || ($PARAM_VALUE.WI.ADDR_8 == 0x03) || ($PARAM_VALUE.WI.ADDR_9 == 0x03) || ($PARAM_VALUE.WI.ADDR_10 == 0x03) || ($PARAM_VALUE.WI.ADDR_11 == 0x03) || ($PARAM_VALUE.WI.ADDR_12 == 0x03) || ($PARAM_VALUE.WI.ADDR_13 == 0x03) || ($PARAM_VALUE.WI.ADDR_14 == 0x03) || ($PARAM_VALUE.WI.ADDR_15 == 0x03) || ($PARAM_VALUE.WI.ADDR_16 == 0x03) || ($PARAM_VALUE.WI.ADDR_17 == 0x03) || ($PARAM_VALUE.WI.ADDR_18 == 0x03) || ($PARAM_VALUE.WI.ADDR_19 == 0x03) || ($PARAM_VALUE.WI.ADDR_20 == 0x03) || ($PARAM_VALUE.WI.ADDR_21 == 0x03) || ($PARAM_VALUE.WI.ADDR_22 == 0x03) || ($PARAM_VALUE.WI.ADDR_23 == 0x03) || ($PARAM_VALUE.WI.ADDR_24 == 0x03) || ($PARAM_VALUE.WI.ADDR_25 == 0x03) || ($PARAM_VALUE.WI.ADDR_26 == 0x03) || ($PARAM_VALUE.WI.ADDR_27 == 0x03) || ($PARAM_VALUE.WI.ADDR_28 == 0x03) || ($PARAM_VALUE.WI.ADDR_29 == 0x03) || ($PARAM_VALUE.WI.ADDR_30 == 0x03) || ($PARAM_VALUE.WI.ADDR_31 == 0x03)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -18327,11 +18327,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 21:18:34 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 20:28:57 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:26df78c0</spirit:value>
+            <spirit:value>9:113fa24a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18345,11 +18345,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 21:18:34 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 20:28:57 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:26df78c0</spirit:value>
+            <spirit:value>9:113fa24a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18364,11 +18364,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 21:18:34 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 20:28:57 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:26df78c0</spirit:value>
+            <spirit:value>9:113fa24a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18384,11 +18384,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 21:18:35 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 20:28:58 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0f2a9c7e</spirit:value>
+            <spirit:value>9:af86d61f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18403,11 +18403,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 21:18:35 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 20:28:58 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0f2a9c7e</spirit:value>
+            <spirit:value>9:af86d61f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18421,11 +18421,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 09 21:18:35 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 20:28:58 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:26df78c0</spirit:value>
+            <spirit:value>9:113fa24a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18439,11 +18439,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Feb 21 23:55:01 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 20:39:16 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:26df78c0</spirit:value>
+            <spirit:value>9:113fa24a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -18718,13 +18718,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.wi01_ep_dataout">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>wi02_ep_dataout</spirit:name>
@@ -18742,13 +18735,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.wi02_ep_dataout">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>wi03_ep_dataout</spirit:name>
@@ -18766,13 +18752,6 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.wi03_ep_dataout">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>wi04_ep_dataout</spirit:name>
@@ -44179,7 +44158,7 @@
     <spirit:parameter>
       <spirit:name>WI.COUNT</spirit:name>
       <spirit:displayName>WireIn</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.COUNT" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.COUNT" spirit:minimum="0" spirit:maximum="32" spirit:rangeType="long">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WI.ADDR_0</spirit:name>
@@ -44189,17 +44168,17 @@
     <spirit:parameter>
       <spirit:name>WI.ADDR_1</spirit:name>
       <spirit:displayName>WireIn 1 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_1" spirit:bitStringLength="8">0xff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_1" spirit:bitStringLength="8">0x01</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WI.ADDR_2</spirit:name>
       <spirit:displayName>WireIn 2 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_2" spirit:bitStringLength="8">0xff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_2" spirit:bitStringLength="8">0x02</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WI.ADDR_3</spirit:name>
       <spirit:displayName>WireIn 3 address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_3" spirit:bitStringLength="8">0xff</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.WI.ADDR_3" spirit:bitStringLength="8">0x03</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>WI.ADDR_4</spirit:name>
