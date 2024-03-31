@@ -57,17 +57,14 @@
 module design_1_FIFO_FSM_0_0 (
   RST_N,
   CLK,
-  READY,
   TEST_MODE,
   AVG,
-  VALID,
   test_data,
   inA0,
   inA1,
   inB0,
   inB1,
   FIFO_DATA,
-  WR_EN,
   data_count,
   pad_out,
   channelA_out,
@@ -80,17 +77,14 @@ input wire RST_N;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_jesd204_0_0_rx_core_clk_out, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *)
 input wire CLK;
-input wire READY;
 input wire TEST_MODE;
 input wire AVG;
-input wire VALID;
 input wire [31 : 0] test_data;
 input wire [13 : 0] inA0;
 input wire [13 : 0] inA1;
 input wire [13 : 0] inB0;
 input wire [13 : 0] inB1;
 output wire [31 : 0] FIFO_DATA;
-output wire WR_EN;
 output wire data_count;
 output wire [31 : 0] pad_out;
 output wire [13 : 0] channelA_out;
@@ -99,17 +93,14 @@ output wire [13 : 0] channelB_out;
   FIFO_FSM inst (
     .RST_N(RST_N),
     .CLK(CLK),
-    .READY(READY),
     .TEST_MODE(TEST_MODE),
     .AVG(AVG),
-    .VALID(VALID),
     .test_data(test_data),
     .inA0(inA0),
     .inA1(inA1),
     .inB0(inB0),
     .inB1(inB1),
     .FIFO_DATA(FIFO_DATA),
-    .WR_EN(WR_EN),
     .data_count(data_count),
     .pad_out(pad_out),
     .channelA_out(channelA_out),

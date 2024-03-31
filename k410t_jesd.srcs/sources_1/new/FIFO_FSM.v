@@ -70,7 +70,7 @@ always @(negedge RST_N, posedge CLK) begin
         channelA_2 <= channelA;
         channelB_2 <= channelB;
     
-        FIFO_DATA <= data_count ? FIFO_DATA : pad_out;    
+        FIFO_DATA <= data_count ? pad_out : FIFO_DATA;    
     end
 end
 

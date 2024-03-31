@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Mon Mar 25 16:33:56 2024
-// Host        : linrack10.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+// Date        : Sun Mar 31 15:40:11 2024
+// Host        : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 // Command     : write_verilog -force -mode funcsim
 //               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0_sim_netlist.v
 // Design      : design_1_FIFO_FSM_0_0
@@ -18,34 +18,28 @@
 module design_1_FIFO_FSM_0_0
    (RST_N,
     CLK,
-    READY,
     TEST_MODE,
     AVG,
-    VALID,
     test_data,
     inA0,
     inA1,
     inB0,
     inB1,
     FIFO_DATA,
-    WR_EN,
     data_count,
     pad_out,
     channelA_out,
     channelB_out);
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input RST_N;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_jesd204_0_0_rx_core_clk_out, INSERT_VIP 0" *) input CLK;
-  input READY;
   input TEST_MODE;
   input AVG;
-  input VALID;
   input [31:0]test_data;
   input [13:0]inA0;
   input [13:0]inA1;
   input [13:0]inB0;
   input [13:0]inB1;
   output [31:0]FIFO_DATA;
-  output WR_EN;
   output data_count;
   output [31:0]pad_out;
   output [13:0]channelA_out;
@@ -54,11 +48,8 @@ module design_1_FIFO_FSM_0_0
   wire AVG;
   wire CLK;
   wire [31:0]FIFO_DATA;
-  wire READY;
   wire RST_N;
   wire TEST_MODE;
-  wire VALID;
-  wire WR_EN;
   wire [13:0]channelA_out;
   wire [13:0]channelB_out;
   wire data_count;
@@ -73,11 +64,8 @@ module design_1_FIFO_FSM_0_0
        (.AVG(AVG),
         .CLK(CLK),
         .FIFO_DATA(FIFO_DATA),
-        .READY(READY),
         .RST_N(RST_N),
         .TEST_MODE(TEST_MODE),
-        .VALID(VALID),
-        .WR_EN(WR_EN),
         .channelA_out(channelA_out),
         .channelB_out(channelB_out),
         .data_count(data_count),
@@ -94,11 +82,8 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
    (data_count,
     FIFO_DATA,
     pad_out,
-    WR_EN,
     channelA_out,
     channelB_out,
-    READY,
-    VALID,
     RST_N,
     TEST_MODE,
     inA0,
@@ -111,11 +96,8 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   output data_count;
   output [31:0]FIFO_DATA;
   output [31:0]pad_out;
-  output WR_EN;
   output [13:0]channelA_out;
   output [13:0]channelB_out;
-  input READY;
-  input VALID;
   input RST_N;
   input TEST_MODE;
   input [13:0]inA0;
@@ -131,13 +113,8 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   wire [31:0]FIFO_DATA;
   wire \FIFO_DATA[17]_i_1_n_0 ;
   wire \FIFO_DATA[31]_i_1_n_0 ;
-  wire READY;
   wire RST_N;
   wire TEST_MODE;
-  wire VALID;
-  wire WR_EN;
-  wire WR_EN0_n_0;
-  wire WR_EN_i_1_n_0;
   wire [13:0]channelA;
   wire [13:0]channelA_2;
   wire [13:0]channelA_out;
@@ -146,6 +123,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   wire [13:0]channelB_out;
   wire data_count;
   wire data_count_i_1_n_0;
+  wire data_count_i_2_n_0;
   wire [13:0]inA0;
   wire [13:0]inA1;
   wire [13:0]inB0;
@@ -283,22 +261,18 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   wire [3:1]NLW_tempB_carry__2_CO_UNCONNECTED;
   wire [3:2]NLW_tempB_carry__2_O_UNCONNECTED;
 
-  LUT5 #(
-    .INIT(32'h00008000)) 
+  LUT3 #(
+    .INIT(8'h08)) 
     \FIFO_DATA[17]_i_1 
        (.I0(data_count),
-        .I1(READY),
-        .I2(VALID),
-        .I3(RST_N),
-        .I4(TEST_MODE),
+        .I1(RST_N),
+        .I2(TEST_MODE),
         .O(\FIFO_DATA[17]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8000)) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \FIFO_DATA[31]_i_1 
        (.I0(RST_N),
-        .I1(VALID),
-        .I2(READY),
-        .I3(data_count),
+        .I1(data_count),
         .O(\FIFO_DATA[31]_i_1_n_0 ));
   FDRE \FIFO_DATA_reg[0] 
        (.C(CLK),
@@ -492,25 +466,6 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .D(pad_out[9]),
         .Q(FIFO_DATA[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    WR_EN0
-       (.I0(data_count),
-        .I1(READY),
-        .I2(VALID),
-        .O(WR_EN0_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    WR_EN_i_1
-       (.I0(RST_N),
-        .O(WR_EN_i_1_n_0));
-  FDCE WR_EN_reg
-       (.C(CLK),
-        .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
-        .D(WR_EN0_n_0),
-        .Q(WR_EN));
   LUT1 #(
     .INIT(2'h1)) 
     \channelA_2[13]_i_1 
@@ -519,88 +474,88 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   FDCE \channelA_2_reg[0] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[0]),
         .Q(channelA_2[0]));
   FDCE \channelA_2_reg[10] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[10]),
         .Q(channelA_2[10]));
   FDCE \channelA_2_reg[11] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[11]),
         .Q(channelA_2[11]));
   FDCE \channelA_2_reg[12] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[12]),
         .Q(channelA_2[12]));
   FDCE \channelA_2_reg[13] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[13]),
         .Q(channelA_2[13]));
   FDCE \channelA_2_reg[1] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[1]),
         .Q(channelA_2[1]));
   FDCE \channelA_2_reg[2] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[2]),
         .Q(channelA_2[2]));
   FDCE \channelA_2_reg[3] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[3]),
         .Q(channelA_2[3]));
   FDCE \channelA_2_reg[4] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[4]),
         .Q(channelA_2[4]));
   FDCE \channelA_2_reg[5] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[5]),
         .Q(channelA_2[5]));
   FDCE \channelA_2_reg[6] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[6]),
         .Q(channelA_2[6]));
   FDCE \channelA_2_reg[7] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[7]),
         .Q(channelA_2[7]));
   FDCE \channelA_2_reg[8] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[8]),
         .Q(channelA_2[8]));
   FDCE \channelA_2_reg[9] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelA[9]),
         .Q(channelA_2[9]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[0]_INST_0 
@@ -608,7 +563,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[0]),
         .O(channelA_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[10]_INST_0 
@@ -616,7 +571,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[10]),
         .O(channelA_out[10]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[11]_INST_0 
@@ -624,7 +579,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[11]),
         .O(channelA_out[11]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[12]_INST_0 
@@ -632,7 +587,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[12]),
         .O(channelA_out[12]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[13]_INST_0 
@@ -640,7 +595,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[13]),
         .O(channelA_out[13]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[1]_INST_0 
@@ -656,7 +611,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[2]),
         .O(channelA_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[3]_INST_0 
@@ -664,7 +619,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[3]),
         .O(channelA_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[4]_INST_0 
@@ -672,7 +627,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[4]),
         .O(channelA_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[5]_INST_0 
@@ -680,7 +635,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[5]),
         .O(channelA_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[6]_INST_0 
@@ -688,7 +643,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[6]),
         .O(channelA_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[7]_INST_0 
@@ -696,7 +651,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[7]),
         .O(channelA_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[8]_INST_0 
@@ -704,7 +659,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inA0[8]),
         .O(channelA_out[8]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelA_out[9]_INST_0 
@@ -720,88 +675,88 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
   FDCE \channelB_2_reg[0] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[0]),
         .Q(channelB_2[0]));
   FDCE \channelB_2_reg[10] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[10]),
         .Q(channelB_2[10]));
   FDCE \channelB_2_reg[11] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[11]),
         .Q(channelB_2[11]));
   FDCE \channelB_2_reg[12] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[12]),
         .Q(channelB_2[12]));
   FDCE \channelB_2_reg[13] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[13]),
         .Q(channelB_2[13]));
   FDCE \channelB_2_reg[1] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[1]),
         .Q(channelB_2[1]));
   FDCE \channelB_2_reg[2] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[2]),
         .Q(channelB_2[2]));
   FDCE \channelB_2_reg[3] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[3]),
         .Q(channelB_2[3]));
   FDCE \channelB_2_reg[4] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[4]),
         .Q(channelB_2[4]));
   FDCE \channelB_2_reg[5] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[5]),
         .Q(channelB_2[5]));
   FDCE \channelB_2_reg[6] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[6]),
         .Q(channelB_2[6]));
   FDCE \channelB_2_reg[7] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[7]),
         .Q(channelB_2[7]));
   FDCE \channelB_2_reg[8] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[8]),
         .Q(channelB_2[8]));
   FDCE \channelB_2_reg[9] 
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(channelB[9]),
         .Q(channelB_2[9]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[0]_INST_0 
@@ -809,7 +764,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[0]),
         .O(channelB_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[10]_INST_0 
@@ -817,7 +772,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[10]),
         .O(channelB_out[10]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[11]_INST_0 
@@ -825,7 +780,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[11]),
         .O(channelB_out[11]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[12]_INST_0 
@@ -833,7 +788,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[12]),
         .O(channelB_out[12]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[13]_INST_0 
@@ -841,7 +796,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[13]),
         .O(channelB_out[13]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[1]_INST_0 
@@ -849,7 +804,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[1]),
         .O(channelB_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[2]_INST_0 
@@ -857,7 +812,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[2]),
         .O(channelB_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[3]_INST_0 
@@ -865,7 +820,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[3]),
         .O(channelB_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[4]_INST_0 
@@ -873,7 +828,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[4]),
         .O(channelB_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[5]_INST_0 
@@ -881,7 +836,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[5]),
         .O(channelB_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[6]_INST_0 
@@ -889,7 +844,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[6]),
         .O(channelB_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[7]_INST_0 
@@ -897,7 +852,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[7]),
         .O(channelB_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[8]_INST_0 
@@ -905,7 +860,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[8]),
         .O(channelB_out[8]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \channelB_out[9]_INST_0 
@@ -913,26 +868,30 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I1(AVG),
         .I2(inB0[9]),
         .O(channelB_out[9]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT1 #(
     .INIT(2'h1)) 
     data_count_i_1
        (.I0(data_count),
         .O(data_count_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    data_count_i_2
+       (.I0(RST_N),
+        .O(data_count_i_2_n_0));
   FDCE data_count_reg
        (.C(CLK),
         .CE(1'b1),
-        .CLR(WR_EN_i_1_n_0),
+        .CLR(data_count_i_2_n_0),
         .D(data_count_i_1_n_0),
         .Q(data_count));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[0]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[0]),
         .O(pad_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[10]_INST_0 
@@ -942,7 +901,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[8]),
         .O(pad_out[10]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[11]_INST_0 
@@ -952,7 +911,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[9]),
         .O(pad_out[11]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[12]_INST_0 
@@ -962,7 +921,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[10]),
         .O(pad_out[12]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[13]_INST_0 
@@ -972,7 +931,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[11]),
         .O(pad_out[13]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[14]_INST_0 
@@ -982,7 +941,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[12]),
         .O(pad_out[14]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[15]_INST_0 
@@ -999,14 +958,14 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
        (.I0(TEST_MODE),
         .I1(test_data[16]),
         .O(pad_out[16]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[17]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[17]),
         .O(pad_out[17]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[18]_INST_0 
@@ -1016,7 +975,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[0]),
         .O(pad_out[18]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[19]_INST_0 
@@ -1026,14 +985,14 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[1]),
         .O(pad_out[19]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pad_out[1]_INST_0 
        (.I0(TEST_MODE),
         .I1(test_data[1]),
         .O(pad_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[20]_INST_0 
@@ -1043,7 +1002,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[2]),
         .O(pad_out[20]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[21]_INST_0 
@@ -1053,7 +1012,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[3]),
         .O(pad_out[21]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[22]_INST_0 
@@ -1063,7 +1022,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[4]),
         .O(pad_out[22]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[23]_INST_0 
@@ -1073,7 +1032,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[5]),
         .O(pad_out[23]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[24]_INST_0 
@@ -1083,7 +1042,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[6]),
         .O(pad_out[24]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[25]_INST_0 
@@ -1093,7 +1052,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[7]),
         .O(pad_out[25]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[26]_INST_0 
@@ -1103,7 +1062,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[8]),
         .O(pad_out[26]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[27]_INST_0 
@@ -1113,7 +1072,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[9]),
         .O(pad_out[27]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[28]_INST_0 
@@ -1123,7 +1082,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[10]),
         .O(pad_out[28]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[29]_INST_0 
@@ -1133,7 +1092,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[11]),
         .O(pad_out[29]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[2]_INST_0 
@@ -1143,7 +1102,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[0]),
         .O(pad_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[30]_INST_0 
@@ -1153,7 +1112,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[12]),
         .O(pad_out[30]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[31]_INST_0 
@@ -1163,7 +1122,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inB0[13]),
         .O(pad_out[31]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[3]_INST_0 
@@ -1183,7 +1142,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[2]),
         .O(pad_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[5]_INST_0 
@@ -1193,7 +1152,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[3]),
         .O(pad_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[6]_INST_0 
@@ -1203,7 +1162,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[4]),
         .O(pad_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[7]_INST_0 
@@ -1213,7 +1172,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[5]),
         .O(pad_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[8]_INST_0 
@@ -1223,7 +1182,7 @@ module design_1_FIFO_FSM_0_0_FIFO_FSM
         .I3(AVG),
         .I4(inA0[6]),
         .O(pad_out[8]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \pad_out[9]_INST_0 

@@ -25,8 +25,8 @@
       "TEST_Enable": "",
       "CNT_RST": "",
       "AVG_Enable": "",
-      "data_tagger_0": "",
-      "FIFO_FSM_0": "",
+      "DATA_TO_FIFO_0": "",
+      "DATA_PREP": "",
       "dpu_0": ""
     },
     "interface_ports": {
@@ -208,7 +208,7 @@
             "value": "false"
           },
           "Empty_Threshold_Assert_Value": {
-            "value": "8000"
+            "value": "65530"
           },
           "Enable_Safety_Circuit": {
             "value": "true"
@@ -229,7 +229,7 @@
             "value": "1"
           },
           "Full_Threshold_Assert_Value": {
-            "value": "4128"
+            "value": "3912"
           },
           "Full_Threshold_Negate_Value": {
             "value": "32"
@@ -241,7 +241,7 @@
             "value": "32"
           },
           "Input_Depth": {
-            "value": "8192"
+            "value": "65536"
           },
           "Output_Data_Width": {
             "value": "32"
@@ -277,7 +277,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "17"
+            "value": "20"
           },
           "C_PROBE10_WIDTH": {
             "value": "32"
@@ -295,10 +295,13 @@
             "value": "14"
           },
           "C_PROBE17_WIDTH": {
-            "value": "1"
+            "value": "2"
           },
           "C_PROBE18_WIDTH": {
             "value": "1"
+          },
+          "C_PROBE19_WIDTH": {
+            "value": "32"
           },
           "C_PROBE2_WIDTH": {
             "value": "1"
@@ -857,8 +860,11 @@
           "WI.ADDR_3": {
             "value": "0x03"
           },
+          "WI.ADDR_4": {
+            "value": "0x04"
+          },
           "WI.COUNT": {
-            "value": "4"
+            "value": "5"
           },
           "WO.ADDR_0": {
             "value": "0x20"
@@ -1071,12 +1077,12 @@
           }
         }
       },
-      "data_tagger_0": {
-        "vlnv": "xilinx.com:module_ref:data_tagger:1.0",
-        "xci_name": "design_1_data_tagger_0_0",
+      "DATA_TO_FIFO_0": {
+        "vlnv": "xilinx.com:module_ref:DATA_TO_FIFO:1.0",
+        "xci_name": "design_1_DATA_TO_FIFO_0_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "data_tagger",
+          "ref_name": "DATA_TO_FIFO",
           "boundary_crc": "0x0"
         },
         "ports": {
@@ -1085,24 +1091,16 @@
             "direction": "I",
             "parameters": {
               "CLK_DOMAIN": {
-                "value": "design_1_frontpanel_1_0_okClk",
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
                 "value_src": "default_prop"
               },
               "FREQ_HZ": {
-                "value": "100800000",
-                "value_src": "default_prop"
+                "value": "100000000",
+                "value_src": "ip_prop"
               }
             }
           },
-          "evnt": {
-            "direction": "I"
-          },
-          "DIS": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "RST_N": {
+          "rst_n": {
             "type": "rst",
             "direction": "I",
             "parameters": {
@@ -1112,19 +1110,29 @@
               }
             }
           },
+          "en": {
+            "direction": "I"
+          },
+          "jesd_valid": {
+            "direction": "I"
+          },
+          "fifo_ready": {
+            "direction": "I"
+          },
           "data_in": {
             "direction": "I",
             "left": "31",
             "right": "0"
           },
+          "wr_en": {
+            "direction": "O"
+          },
           "data_out": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
+            "direction": "O"
           }
         }
       },
-      "FIFO_FSM_0": {
+      "DATA_PREP": {
         "vlnv": "xilinx.com:module_ref:FIFO_FSM:1.0",
         "xci_name": "design_1_FIFO_FSM_0_0",
         "reference_info": {
@@ -1157,16 +1165,10 @@
               }
             }
           },
-          "READY": {
-            "direction": "I"
-          },
           "TEST_MODE": {
             "direction": "I"
           },
           "AVG": {
-            "direction": "I"
-          },
-          "VALID": {
             "direction": "I"
           },
           "test_data": {
@@ -1198,9 +1200,6 @@
             "direction": "O",
             "left": "31",
             "right": "0"
-          },
-          "WR_EN": {
-            "direction": "O"
           },
           "data_count": {
             "direction": "O"
@@ -1248,7 +1247,12 @@
           "en": {
             "direction": "I"
           },
-          "V_threshold": {
+          "V_thresholdA": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "V_thresholdB": {
             "direction": "I",
             "left": "31",
             "right": "0"
@@ -1291,6 +1295,19 @@
           },
           "stuck": {
             "direction": "O"
+          },
+          "event_state": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "event_detected": {
+            "direction": "O"
+          },
+          "time_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         }
       }
@@ -1341,8 +1358,7 @@
           "ila_0/clk",
           "okAXI4LiteInterface_0/okClkIn",
           "frontpanel_1/ti40_ep_clk",
-          "enable_read_0/clk",
-          "data_tagger_0/clk"
+          "enable_read_0/clk"
         ]
       },
       "okAXI4LiteInterface_0_m_axi_aresetn": {
@@ -1406,7 +1422,7 @@
           "util_ds_buf_1/OBUF_IN",
           "util_ds_buf_2/OBUF_IN",
           "ila_0/probe3",
-          "FIFO_FSM_0/VALID"
+          "DATA_TO_FIFO_0/jesd_valid"
         ]
       },
       "jesd204_0_rx_core_clk_out": {
@@ -1415,7 +1431,8 @@
           "jesd204_0_transport_0/clk",
           "fifo_generator_0/wr_clk",
           "enabled_binary_count_0/CLK",
-          "FIFO_FSM_0/CLK",
+          "DATA_TO_FIFO_0/clk",
+          "DATA_PREP/CLK",
           "dpu_0/clk"
         ]
       },
@@ -1458,8 +1475,8 @@
           "TEST_Enable/RSTN",
           "CNT_RST/RSTN",
           "AVG_Enable/RSTN",
-          "data_tagger_0/RST_N",
-          "FIFO_FSM_0/RST_N",
+          "DATA_TO_FIFO_0/rst_n",
+          "DATA_PREP/RST_N",
           "dpu_0/rst_n"
         ]
       },
@@ -1479,20 +1496,19 @@
         "ports": [
           "frontpanel_1/btpoa0_ep_read",
           "ila_0/probe5",
-          "enable_read_0/read",
-          "data_tagger_0/evnt"
+          "enable_read_0/read"
         ]
       },
       "enabled_binary_count_0_OUT": {
         "ports": [
-          "FIFO_FSM_0/FIFO_DATA",
+          "DATA_PREP/FIFO_DATA",
           "ila_0/probe0",
           "dpu_0/data_in"
         ]
       },
       "enable_write_0_wr_en": {
         "ports": [
-          "FIFO_FSM_0/WR_EN",
+          "DATA_TO_FIFO_0/wr_en",
           "fifo_generator_0/wr_en",
           "ila_0/probe2"
         ]
@@ -1507,7 +1523,7 @@
         "ports": [
           "fifo_generator_0/dout",
           "ila_0/probe1",
-          "data_tagger_0/data_in"
+          "frontpanel_1/btpoa0_ep_datain"
         ]
       },
       "fifo_generator_0_empty": {
@@ -1519,31 +1535,31 @@
       "fifo_generator_0_prog_empty": {
         "ports": [
           "fifo_generator_0/prog_empty",
-          "FIFO_FSM_0/READY"
+          "DATA_TO_FIFO_0/fifo_ready"
         ]
       },
       "jesd204_0_transport_0_signalA_sampl0": {
         "ports": [
           "jesd204_0_transport_0/signalA_sampl0",
-          "FIFO_FSM_0/inA0"
+          "DATA_PREP/inA0"
         ]
       },
       "jesd204_0_transport_0_signalA_sampl1": {
         "ports": [
           "jesd204_0_transport_0/signalA_sampl1",
-          "FIFO_FSM_0/inA1"
+          "DATA_PREP/inA1"
         ]
       },
       "jesd204_0_transport_0_signalB_sampl0": {
         "ports": [
           "jesd204_0_transport_0/signalB_sampl0",
-          "FIFO_FSM_0/inB0"
+          "DATA_PREP/inB0"
         ]
       },
       "jesd204_0_transport_0_signalB_sampl1": {
         "ports": [
           "jesd204_0_transport_0/signalB_sampl1",
-          "FIFO_FSM_0/inB1"
+          "DATA_PREP/inB1"
         ]
       },
       "frontpanel_1_ti40_ep_trigger": {
@@ -1551,8 +1567,7 @@
           "frontpanel_1/ti40_ep_trigger",
           "TEST_Enable/READY",
           "CNT_RST/READY",
-          "AVG_Enable/READY",
-          "data_tagger_0/DIS"
+          "AVG_Enable/READY"
         ]
       },
       "trigger_to_level_0_READY_LVL": {
@@ -1560,14 +1575,14 @@
           "TEST_Enable/READY_LVL",
           "ila_0/probe11",
           "enabled_binary_count_0/EN",
-          "FIFO_FSM_0/TEST_MODE"
+          "DATA_PREP/TEST_MODE"
         ]
       },
       "enabled_binary_count_0_count": {
         "ports": [
           "enabled_binary_count_0/count",
           "ila_0/probe10",
-          "FIFO_FSM_0/test_data"
+          "DATA_PREP/test_data"
         ]
       },
       "fifo_generator_0_prog_full": {
@@ -1598,45 +1613,40 @@
       },
       "FIFO_FSM_0_pad_out": {
         "ports": [
-          "FIFO_FSM_0/pad_out",
+          "DATA_PREP/pad_out",
           "ila_0/probe14"
         ]
       },
       "trigger_to_level_2_READY_LVL": {
         "ports": [
           "AVG_Enable/READY_LVL",
-          "FIFO_FSM_0/AVG"
+          "DATA_PREP/AVG"
         ]
       },
       "FIFO_FSM_0_channelB_out": {
         "ports": [
-          "FIFO_FSM_0/channelB_out",
+          "DATA_PREP/channelB_out",
           "ila_0/probe16"
         ]
       },
       "FIFO_FSM_0_channelA_out": {
         "ports": [
-          "FIFO_FSM_0/channelA_out",
+          "DATA_PREP/channelA_out",
           "ila_0/probe15"
-        ]
-      },
-      "data_tagger_0_data_out": {
-        "ports": [
-          "data_tagger_0/data_out",
-          "frontpanel_1/btpoa0_ep_datain"
         ]
       },
       "FIFO_FSM_0_data_count": {
         "ports": [
-          "FIFO_FSM_0/data_count",
+          "DATA_PREP/data_count",
+          "DATA_TO_FIFO_0/en",
           "dpu_0/en"
         ]
       },
       "dpu_0_data_out": {
         "ports": [
           "dpu_0/data_out",
-          "fifo_generator_0/din",
-          "ila_0/probe13"
+          "ila_0/probe13",
+          "DATA_TO_FIFO_0/data_in"
         ]
       },
       "frontpanel_1_wi01_ep_dataout": {
@@ -1651,12 +1661,6 @@
           "dpu_0/time_max"
         ]
       },
-      "frontpanel_1_wi03_ep_dataout": {
-        "ports": [
-          "frontpanel_1/wi03_ep_dataout",
-          "dpu_0/V_threshold"
-        ]
-      },
       "dpu_0_event_A": {
         "ports": [
           "dpu_0/event_A",
@@ -1667,6 +1671,42 @@
         "ports": [
           "dpu_0/event_B",
           "ila_0/probe7"
+        ]
+      },
+      "frontpanel_1_wi03_ep_dataout": {
+        "ports": [
+          "frontpanel_1/wi03_ep_dataout",
+          "dpu_0/V_thresholdA"
+        ]
+      },
+      "frontpanel_1_wi04_ep_dataout": {
+        "ports": [
+          "frontpanel_1/wi04_ep_dataout",
+          "dpu_0/V_thresholdB"
+        ]
+      },
+      "DATA_TO_FIFO_0_data_out": {
+        "ports": [
+          "DATA_TO_FIFO_0/data_out",
+          "fifo_generator_0/din"
+        ]
+      },
+      "dpu_0_event_state": {
+        "ports": [
+          "dpu_0/event_state",
+          "ila_0/probe17"
+        ]
+      },
+      "dpu_0_event_detected": {
+        "ports": [
+          "dpu_0/event_detected",
+          "ila_0/probe18"
+        ]
+      },
+      "dpu_0_time_out": {
+        "ports": [
+          "dpu_0/time_out",
+          "ila_0/probe19"
         ]
       }
     },

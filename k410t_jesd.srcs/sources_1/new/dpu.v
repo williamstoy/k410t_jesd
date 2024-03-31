@@ -15,32 +15,35 @@ module dpu#(parameter START_OF_FRAME = 40,
 (
     input wire clk,
     input wire en,
-    input wire [31:0] V_thresholdA,
-    input wire [31:0] V_thresholdB,
+    input wire signed [31:0] V_thresholdA,
+    input wire signed [31:0] V_thresholdB,
     input wire [31:0] time_min, 
     input wire [31:0] time_max,
     input wire        rst_n,
-    input wire [31:0] data_in,
+    input wire signed [31:0] data_in,
     output wire       event_A,
     output wire       event_B,
-    output reg [31:0] data_out,
-    output wire stuck
+    output reg signed [31:0] data_out,
+    output wire stuck, //underneath are debug outputs
+    output reg [1:0] event_state,
+    output wire event_detected,
+    output reg [31:0] time_out
 );
 
 //State Machine Regs
-reg [1:0] event_state;
+
 
 //counters
 reg [31:0] counter;
 reg [127:0] abs_counter; //absolute time
 reg [31:0] event_cnt;
-reg [31:0] time_out;
+//reg [31:0] time_out;
 
 //event array
 reg [31:0] events [EVENT_DEPTH-1:0]; 
 
 //wire out
-wire [15:0] channelB, channelA;
+wire signed [15:0] channelB, channelA;
 assign channelB = data_in[31:16];
 assign channelA = data_in[15:0];
 
@@ -52,14 +55,14 @@ reg event_trig;
 assign event_detA = (channelA < V_thresholdA);
 assign event_detB = (channelB < V_thresholdB);
 
-wire event_detected = (event_detA || event_detB);
+assign event_detected = (event_detA || event_detB);
 assign stuck = (event_detected && counter>time_max);
 assign go_to_idle = (stuck) || (~event_detected && time_out>time_min);
 
 assign event_A = event_detA && event_trig;
 assign event_B = event_detB && event_trig;
 
-//
+
 
 integer i;
 

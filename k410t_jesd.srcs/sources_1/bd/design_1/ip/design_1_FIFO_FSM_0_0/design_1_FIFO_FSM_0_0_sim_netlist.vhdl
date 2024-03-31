@@ -1,8 +1,8 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Mon Mar 25 16:33:56 2024
--- Host        : linrack10.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
+-- Date        : Sun Mar 31 15:40:11 2024
+-- Host        : linrack11.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 -- Command     : write_vhdl -force -mode funcsim
 --               /users/nalarcon/k410t_jesd/k410t_jesd.srcs/sources_1/bd/design_1/ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0_sim_netlist.vhdl
 -- Design      : design_1_FIFO_FSM_0_0
@@ -19,11 +19,8 @@ entity design_1_FIFO_FSM_0_0_FIFO_FSM is
     data_count : out STD_LOGIC;
     FIFO_DATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
     pad_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    WR_EN : out STD_LOGIC;
     channelA_out : out STD_LOGIC_VECTOR ( 13 downto 0 );
     channelB_out : out STD_LOGIC_VECTOR ( 13 downto 0 );
-    READY : in STD_LOGIC;
-    VALID : in STD_LOGIC;
     RST_N : in STD_LOGIC;
     TEST_MODE : in STD_LOGIC;
     inA0 : in STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -41,14 +38,13 @@ end design_1_FIFO_FSM_0_0_FIFO_FSM;
 architecture STRUCTURE of design_1_FIFO_FSM_0_0_FIFO_FSM is
   signal \FIFO_DATA[17]_i_1_n_0\ : STD_LOGIC;
   signal \FIFO_DATA[31]_i_1_n_0\ : STD_LOGIC;
-  signal WR_EN0_n_0 : STD_LOGIC;
-  signal WR_EN_i_1_n_0 : STD_LOGIC;
   signal channelA : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal channelA_2 : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal channelB : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal channelB_2 : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal \^data_count\ : STD_LOGIC;
   signal data_count_i_1_n_0 : STD_LOGIC;
+  signal data_count_i_2_n_0 : STD_LOGIC;
   signal \^pad_out\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal tempA_avg : STD_LOGIC_VECTOR ( 13 downto 1 );
   signal \tempA_avg__0\ : STD_LOGIC_VECTOR ( 14 to 14 );
@@ -181,92 +177,86 @@ architecture STRUCTURE of design_1_FIFO_FSM_0_0_FIFO_FSM is
   signal \NLW_tempB_carry__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_tempB_carry__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of WR_EN0 : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \channelA_out[0]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \channelA_out[10]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \channelA_out[11]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \channelA_out[12]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \channelA_out[13]_INST_0\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \channelA_out[1]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \channelA_out[0]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \channelA_out[10]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \channelA_out[11]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \channelA_out[12]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \channelA_out[13]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \channelA_out[1]_INST_0\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \channelA_out[2]_INST_0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \channelA_out[3]_INST_0\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \channelA_out[4]_INST_0\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \channelA_out[5]_INST_0\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \channelA_out[6]_INST_0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \channelA_out[7]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \channelA_out[8]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \channelA_out[9]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \channelB_out[0]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \channelB_out[10]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \channelB_out[11]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \channelB_out[12]_INST_0\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \channelB_out[13]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \channelB_out[1]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \channelB_out[2]_INST_0\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \channelB_out[3]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \channelB_out[4]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \channelB_out[5]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \channelB_out[6]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \channelB_out[7]_INST_0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \channelB_out[8]_INST_0\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \channelB_out[9]_INST_0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of data_count_i_1 : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \pad_out[0]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \pad_out[10]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \pad_out[11]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \pad_out[12]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \pad_out[13]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \pad_out[14]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \pad_out[15]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \channelA_out[3]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \channelA_out[4]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \channelA_out[5]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \channelA_out[6]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \channelA_out[7]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \channelA_out[8]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \channelA_out[9]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \channelB_out[0]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \channelB_out[10]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \channelB_out[11]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \channelB_out[12]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \channelB_out[13]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \channelB_out[1]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \channelB_out[2]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \channelB_out[3]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \channelB_out[4]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \channelB_out[5]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \channelB_out[6]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \channelB_out[7]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \channelB_out[8]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \channelB_out[9]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \pad_out[0]_INST_0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \pad_out[10]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \pad_out[11]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \pad_out[12]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \pad_out[13]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \pad_out[14]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \pad_out[15]_INST_0\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of \pad_out[16]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \pad_out[17]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \pad_out[18]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \pad_out[19]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \pad_out[1]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \pad_out[20]_INST_0\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \pad_out[21]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \pad_out[22]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \pad_out[23]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \pad_out[24]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \pad_out[25]_INST_0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \pad_out[26]_INST_0\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \pad_out[27]_INST_0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \pad_out[28]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \pad_out[29]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \pad_out[2]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \pad_out[30]_INST_0\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \pad_out[31]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \pad_out[3]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \pad_out[17]_INST_0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \pad_out[18]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \pad_out[19]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \pad_out[1]_INST_0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \pad_out[20]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \pad_out[21]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \pad_out[22]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \pad_out[23]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \pad_out[24]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \pad_out[25]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \pad_out[26]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \pad_out[27]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \pad_out[28]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \pad_out[29]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \pad_out[2]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \pad_out[30]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \pad_out[31]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \pad_out[3]_INST_0\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \pad_out[4]_INST_0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \pad_out[5]_INST_0\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \pad_out[6]_INST_0\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \pad_out[7]_INST_0\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \pad_out[8]_INST_0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \pad_out[9]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \pad_out[5]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \pad_out[6]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \pad_out[7]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \pad_out[8]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \pad_out[9]_INST_0\ : label is "soft_lutpair22";
 begin
   data_count <= \^data_count\;
   pad_out(31 downto 0) <= \^pad_out\(31 downto 0);
-\FIFO_DATA[17]_i_1\: unisim.vcomponents.LUT5
+\FIFO_DATA[17]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"00008000"
+      INIT => X"08"
     )
         port map (
       I0 => \^data_count\,
-      I1 => READY,
-      I2 => VALID,
-      I3 => RST_N,
-      I4 => TEST_MODE,
+      I1 => RST_N,
+      I2 => TEST_MODE,
       O => \FIFO_DATA[17]_i_1_n_0\
     );
-\FIFO_DATA[31]_i_1\: unisim.vcomponents.LUT4
+\FIFO_DATA[31]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"8000"
+      INIT => X"8"
     )
         port map (
       I0 => RST_N,
-      I1 => VALID,
-      I2 => READY,
-      I3 => \^data_count\,
+      I1 => \^data_count\,
       O => \FIFO_DATA[31]_i_1_n_0\
     );
 \FIFO_DATA_reg[0]\: unisim.vcomponents.FDRE
@@ -525,32 +515,6 @@ begin
       Q => FIFO_DATA(9),
       R => '0'
     );
-WR_EN0: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => \^data_count\,
-      I1 => READY,
-      I2 => VALID,
-      O => WR_EN0_n_0
-    );
-WR_EN_i_1: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => RST_N,
-      O => WR_EN_i_1_n_0
-    );
-WR_EN_reg: unisim.vcomponents.FDCE
-     port map (
-      C => CLK,
-      CE => '1',
-      CLR => WR_EN_i_1_n_0,
-      D => WR_EN0_n_0,
-      Q => WR_EN
-    );
 \channelA_2[13]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -563,7 +527,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(0),
       Q => channelA_2(0)
     );
@@ -571,7 +535,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(10),
       Q => channelA_2(10)
     );
@@ -579,7 +543,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(11),
       Q => channelA_2(11)
     );
@@ -587,7 +551,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(12),
       Q => channelA_2(12)
     );
@@ -595,7 +559,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(13),
       Q => channelA_2(13)
     );
@@ -603,7 +567,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(1),
       Q => channelA_2(1)
     );
@@ -611,7 +575,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(2),
       Q => channelA_2(2)
     );
@@ -619,7 +583,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(3),
       Q => channelA_2(3)
     );
@@ -627,7 +591,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(4),
       Q => channelA_2(4)
     );
@@ -635,7 +599,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(5),
       Q => channelA_2(5)
     );
@@ -643,7 +607,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(6),
       Q => channelA_2(6)
     );
@@ -651,7 +615,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(7),
       Q => channelA_2(7)
     );
@@ -659,7 +623,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(8),
       Q => channelA_2(8)
     );
@@ -667,7 +631,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelA(9),
       Q => channelA_2(9)
     );
@@ -823,7 +787,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(0),
       Q => channelB_2(0)
     );
@@ -831,7 +795,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(10),
       Q => channelB_2(10)
     );
@@ -839,7 +803,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(11),
       Q => channelB_2(11)
     );
@@ -847,7 +811,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(12),
       Q => channelB_2(12)
     );
@@ -855,7 +819,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(13),
       Q => channelB_2(13)
     );
@@ -863,7 +827,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(1),
       Q => channelB_2(1)
     );
@@ -871,7 +835,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(2),
       Q => channelB_2(2)
     );
@@ -879,7 +843,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(3),
       Q => channelB_2(3)
     );
@@ -887,7 +851,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(4),
       Q => channelB_2(4)
     );
@@ -895,7 +859,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(5),
       Q => channelB_2(5)
     );
@@ -903,7 +867,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(6),
       Q => channelB_2(6)
     );
@@ -911,7 +875,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(7),
       Q => channelB_2(7)
     );
@@ -919,7 +883,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(8),
       Q => channelB_2(8)
     );
@@ -927,7 +891,7 @@ WR_EN_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => channelB(9),
       Q => channelB_2(9)
     );
@@ -1079,11 +1043,19 @@ data_count_i_1: unisim.vcomponents.LUT1
       I0 => \^data_count\,
       O => data_count_i_1_n_0
     );
+data_count_i_2: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => RST_N,
+      O => data_count_i_2_n_0
+    );
 data_count_reg: unisim.vcomponents.FDCE
      port map (
       C => CLK,
       CE => '1',
-      CLR => WR_EN_i_1_n_0,
+      CLR => data_count_i_2_n_0,
       D => data_count_i_1_n_0,
       Q => \^data_count\
     );
@@ -2240,17 +2212,14 @@ entity design_1_FIFO_FSM_0_0 is
   port (
     RST_N : in STD_LOGIC;
     CLK : in STD_LOGIC;
-    READY : in STD_LOGIC;
     TEST_MODE : in STD_LOGIC;
     AVG : in STD_LOGIC;
-    VALID : in STD_LOGIC;
     test_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
     inA0 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     inA1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     inB0 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     inB1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     FIFO_DATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    WR_EN : out STD_LOGIC;
     data_count : out STD_LOGIC;
     pad_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     channelA_out : out STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -2281,11 +2250,8 @@ inst: entity work.design_1_FIFO_FSM_0_0_FIFO_FSM
       AVG => AVG,
       CLK => CLK,
       FIFO_DATA(31 downto 0) => FIFO_DATA(31 downto 0),
-      READY => READY,
       RST_N => RST_N,
       TEST_MODE => TEST_MODE,
-      VALID => VALID,
-      WR_EN => WR_EN,
       channelA_out(13 downto 0) => channelA_out(13 downto 0),
       channelB_out(13 downto 0) => channelB_out(13 downto 0),
       data_count => data_count,

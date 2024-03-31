@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------
 // File: design_1_frontpanel_1_0_wrapper_synthesis.v
-// Creation Date: Mon 03/25/2024 at 16:28:49 EDT
+// Creation Date: Wed 03/27/2024 at 18:10:20 EDT
 // IP Version: opalkelly.com:ip:frontpanel:1.0 (Rev: 5)
 // Tool Version: Vivado v2019.2 (64-bit)
 // Opal Kelly Board: XEM7350-K410T (Part: xc7k410tffg676-1)
@@ -39,6 +39,7 @@ okWireIn     wi00   (.okHE(okHE),                             .ep_addr(8'h00), .
 okWireIn     wi01   (.okHE(okHE),                             .ep_addr(8'h01), .ep_dataout(wi01_ep_dataout));
 okWireIn     wi02   (.okHE(okHE),                             .ep_addr(8'h02), .ep_dataout(wi02_ep_dataout));
 okWireIn     wi03   (.okHE(okHE),                             .ep_addr(8'h03), .ep_dataout(wi03_ep_dataout));
+okWireIn     wi04   (.okHE(okHE),                             .ep_addr(8'h04), .ep_dataout(wi04_ep_dataout));
 okWireOut    wo20   (.okHE(okHE), .okEH(okEHx[ 0*65 +: 65 ]), .ep_addr(8'h20), .ep_datain(wo20_ep_datain));
 okTriggerIn  ti40   (.okHE(okHE),                             .ep_addr(8'h40), .ep_clk(ti40_ep_clk), .ep_trigger(ti40_ep_trigger));
 okBTPipeIn   btpi80 (.okHE(okHE), .okEH(okEHx[ 1*65 +: 65 ]), .ep_addr(8'h80), .ep_write(btpi80_ep_write), .ep_blockstrobe(btpi80_ep_blockstrobe), .ep_dataout(btpi80_ep_dataout), .ep_ready(btpi80_ep_ready));
