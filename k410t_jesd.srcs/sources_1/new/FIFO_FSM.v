@@ -24,10 +24,8 @@ module FIFO_FSM
 	
 	input wire RST_N,
 	input wire CLK, // FIFO CLK
-	input wire READY,
 	input wire TEST_MODE,
 	input wire AVG,
-	input wire VALID,
 	input signed [31:0] test_data,
 	input signed [13:0] inA0,
 	input signed [13:0] inA1,
@@ -35,7 +33,6 @@ module FIFO_FSM
 	input signed [13:0] inB1,
 	
 	output reg signed [31:0] FIFO_DATA,
-	output reg WR_EN,
 	output reg data_count,
 	output wire signed [31:0] pad_out,
 	output wire signed [13:0] channelA_out,
@@ -64,7 +61,6 @@ assign pad_out = TEST_MODE ?  test_data : {channelB_out, 2'b00, channelA_out, 2'
 always @(negedge RST_N, posedge CLK) begin
     
     if(!RST_N) begin
-        WR_EN <= 1'b0;
         data_count <= 1'b0;
         channelA_2 <= 14'b0;
         channelB_2 <= 14'b0;
@@ -73,13 +69,8 @@ always @(negedge RST_N, posedge CLK) begin
         data_count <= ~data_count;
         channelA_2 <= channelA;
         channelB_2 <= channelB;
-        WR_EN <= 1'b0;
     
-        if(data_count & READY & VALID) begin
-                WR_EN <= 1'b1;
-                FIFO_DATA <= pad_out;
-        end
-        
+        FIFO_DATA <= data_count ? FIFO_DATA : pad_out;    
     end
 end
 
