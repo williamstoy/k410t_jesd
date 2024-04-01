@@ -25,9 +25,9 @@
       "TEST_Enable": "",
       "CNT_RST": "",
       "AVG_Enable": "",
-      "DATA_TO_FIFO_0": "",
       "DATA_PREP": "",
-      "dpu_0": ""
+      "dpu_0": "",
+      "DATA_TO_FIFO_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -863,8 +863,11 @@
           "WI.ADDR_4": {
             "value": "0x04"
           },
+          "WI.ADDR_5": {
+            "value": "0x05"
+          },
           "WI.COUNT": {
-            "value": "5"
+            "value": "6"
           },
           "WO.ADDR_0": {
             "value": "0x20"
@@ -1077,61 +1080,6 @@
           }
         }
       },
-      "DATA_TO_FIFO_0": {
-        "vlnv": "xilinx.com:module_ref:DATA_TO_FIFO:1.0",
-        "xci_name": "design_1_DATA_TO_FIFO_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "DATA_TO_FIFO",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "en": {
-            "direction": "I"
-          },
-          "jesd_valid": {
-            "direction": "I"
-          },
-          "fifo_ready": {
-            "direction": "I"
-          },
-          "data_in": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_en": {
-            "direction": "O"
-          },
-          "data_out": {
-            "direction": "O"
-          }
-        }
-      },
       "DATA_PREP": {
         "vlnv": "xilinx.com:module_ref:FIFO_FSM:1.0",
         "xci_name": "design_1_FIFO_FSM_0_0",
@@ -1310,6 +1258,66 @@
             "right": "0"
           }
         }
+      },
+      "DATA_TO_FIFO_0": {
+        "vlnv": "xilinx.com:module_ref:DATA_TO_FIFO:1.0",
+        "xci_name": "design_1_DATA_TO_FIFO_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DATA_TO_FIFO",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "jesd_valid": {
+            "direction": "I"
+          },
+          "fifo_ready": {
+            "direction": "I"
+          },
+          "samples_per_event": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_en": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1431,9 +1439,9 @@
           "jesd204_0_transport_0/clk",
           "fifo_generator_0/wr_clk",
           "enabled_binary_count_0/CLK",
-          "DATA_TO_FIFO_0/clk",
           "DATA_PREP/CLK",
-          "dpu_0/clk"
+          "dpu_0/clk",
+          "DATA_TO_FIFO_0/clk"
         ]
       },
       "wireoutbreakout_0_rx_reset": {
@@ -1475,9 +1483,9 @@
           "TEST_Enable/RSTN",
           "CNT_RST/RSTN",
           "AVG_Enable/RSTN",
-          "DATA_TO_FIFO_0/rst_n",
           "DATA_PREP/RST_N",
-          "dpu_0/rst_n"
+          "dpu_0/rst_n",
+          "DATA_TO_FIFO_0/rst_n"
         ]
       },
       "negate_0_nota": {
@@ -1638,8 +1646,8 @@
       "FIFO_FSM_0_data_count": {
         "ports": [
           "DATA_PREP/data_count",
-          "DATA_TO_FIFO_0/en",
-          "dpu_0/en"
+          "dpu_0/en",
+          "DATA_TO_FIFO_0/en"
         ]
       },
       "dpu_0_data_out": {
@@ -1707,6 +1715,12 @@
         "ports": [
           "dpu_0/time_out",
           "ila_0/probe19"
+        ]
+      },
+      "frontpanel_1_wi05_ep_dataout": {
+        "ports": [
+          "frontpanel_1/wi05_ep_dataout",
+          "DATA_TO_FIFO_0/samples_per_event"
         ]
       }
     },
