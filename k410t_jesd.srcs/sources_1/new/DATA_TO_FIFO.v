@@ -16,7 +16,7 @@ module DATA_TO_FIFO #(parameter SAMPLES_PER_EVENT = 3880)
     input wire [31:0] samples_per_event,
     input wire [31:0] data_in,
     output reg wr_en,
-    output reg data_out
+    output reg [31:0] data_out
 );
 
 reg [31:0] event_counter;

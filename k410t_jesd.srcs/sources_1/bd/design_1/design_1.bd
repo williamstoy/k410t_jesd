@@ -1315,16 +1315,18 @@
             "direction": "O"
           },
           "data_out": {
-            "direction": "O"
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         }
       }
     },
     "interface_nets": {
-      "jesd204_0_m_axis_rx": {
+      "okAXI4LiteInterface_0_m_axi": {
         "interface_ports": [
-          "jesd204_0_transport_0/rx",
-          "jesd204_0/m_axis_rx"
+          "okAXI4LiteInterface_0/m_axi",
+          "jesd204_0/s_axi"
         ]
       },
       "frontpanel_1_btpipein80": {
@@ -1333,28 +1335,28 @@
           "frontpanel_1/btpipein80"
         ]
       },
-      "okAXI4LiteInterface_0_m_axi": {
-        "interface_ports": [
-          "okAXI4LiteInterface_0/m_axi",
-          "jesd204_0/s_axi"
-        ]
-      },
-      "host_interface_1": {
-        "interface_ports": [
-          "host_interface",
-          "frontpanel_1/host_interface"
-        ]
-      },
       "frontpanel_1_wirein00": {
         "interface_ports": [
           "wireoutbreakout_0/wirein_READDATA",
           "frontpanel_1/wirein00"
         ]
       },
+      "jesd204_0_m_axis_rx": {
+        "interface_ports": [
+          "jesd204_0_transport_0/rx",
+          "jesd204_0/m_axis_rx"
+        ]
+      },
       "frontpanel_1_wireout20": {
         "interface_ports": [
           "okAXI4LiteInterface_0/wireout_READDATA",
           "frontpanel_1/wireout20"
+        ]
+      },
+      "host_interface_1": {
+        "interface_ports": [
+          "host_interface",
+          "frontpanel_1/host_interface"
         ]
       }
     },

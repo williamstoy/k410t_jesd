@@ -142,21 +142,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_trigger_to_level_0_0/design_1_trigger_to_level_0_0.xci">
-          <Proxy FileSetName="design_1_trigger_to_level_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_enabled_binary_count_0_0/design_1_enabled_binary_count_0_0.xci">
-          <Proxy FileSetName="design_1_enabled_binary_count_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_enable_read_0_0/design_1_enable_read_0_0.xci">
-          <Proxy FileSetName="design_1_enable_read_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_trigger_to_level_1_0/design_1_trigger_to_level_1_0.xci">
-          <Proxy FileSetName="design_1_trigger_to_level_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_trigger_to_level_2_0/design_1_trigger_to_level_2_0.xci">
-          <Proxy FileSetName="design_1_trigger_to_level_2_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_jesd204_0_0/design_1_jesd204_0_0.xci">
           <Proxy FileSetName="design_1_jesd204_0_0"/>
         </CompFileExtendedInfo>
@@ -183,6 +168,21 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_FIFO_FSM_0_0/design_1_FIFO_FSM_0_0.xci">
           <Proxy FileSetName="design_1_FIFO_FSM_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_trigger_to_level_0_0/design_1_trigger_to_level_0_0.xci">
+          <Proxy FileSetName="design_1_trigger_to_level_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_enabled_binary_count_0_0/design_1_enabled_binary_count_0_0.xci">
+          <Proxy FileSetName="design_1_enabled_binary_count_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_enable_read_0_0/design_1_enable_read_0_0.xci">
+          <Proxy FileSetName="design_1_enable_read_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_trigger_to_level_1_0/design_1_trigger_to_level_1_0.xci">
+          <Proxy FileSetName="design_1_trigger_to_level_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_trigger_to_level_2_0/design_1_trigger_to_level_2_0.xci">
+          <Proxy FileSetName="design_1_trigger_to_level_2_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_dpu_0_0/design_1_dpu_0_0.xci">
           <Proxy FileSetName="design_1_dpu_0_0"/>
@@ -541,9 +541,7 @@
     </Run>
     <Run Id="design_1_FIFO_FSM_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_FIFO_FSM_0_0" Part="xc7k410tffg676-1" ConstrsSet="design_1_FIFO_FSM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_FIFO_FSM_0_0_synth_1" IncludeInArchive="true" ClusterConfiguration="slurm">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -553,9 +551,7 @@
     </Run>
     <Run Id="design_1_dpu_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_dpu_0_0" Part="xc7k410tffg676-1" ConstrsSet="design_1_dpu_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_dpu_0_0_synth_1" IncludeInArchive="true" ClusterConfiguration="slurm">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -816,9 +812,7 @@
     </Run>
     <Run Id="design_1_FIFO_FSM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_FIFO_FSM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_FIFO_FSM_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -835,9 +829,7 @@
     </Run>
     <Run Id="design_1_dpu_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k410tffg676-1" ConstrsSet="design_1_dpu_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_dpu_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -886,6 +878,21 @@
     <MsgAttr Name="Author" Val=""/>
     <MsgAttr Name="CreatedTimestamp" Val=""/>
     <MsgAttr Name="StringsToMatch" Val="board file"/>
+  </MsgRule>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="Coretcl 2-1280"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="8"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+    <MsgAttr Name="RuleId" Val="2"/>
+    <MsgAttr Name="Note" Val=""/>
+    <MsgAttr Name="Author" Val=""/>
+    <MsgAttr Name="CreatedTimestamp" Val=""/>
+    <MsgAttr Name="StringsToMatch" Val="CRITICAL WARNING: [Coretcl 2-1280] The upgrade of &apos;design_1_DATA_TO_FIFO_0_0&apos; has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages."/>
   </MsgRule>
   <Board>
     <Jumpers/>
