@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Wed Apr  3 17:13:19 2024
+| Date         : Wed Apr  3 19:12:12 2024
 | Host         : linrack7.bioeelocal running 64-bit Red Hat Enterprise Linux Server release 7.9 (Maipo)
 | Command      : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
 | Design       : design_1_wrapper
@@ -27,11 +27,10 @@ Table of Contents
 11. Device Cell Placement Summary for Global Clock g4
 12. Clock Region Cell Placement per Global Clock: Region X0Y1
 13. Clock Region Cell Placement per Global Clock: Region X0Y2
-14. Clock Region Cell Placement per Global Clock: Region X1Y2
-15. Clock Region Cell Placement per Global Clock: Region X0Y3
-16. Clock Region Cell Placement per Global Clock: Region X1Y3
-17. Clock Region Cell Placement per Global Clock: Region X0Y4
-18. Clock Region Cell Placement per Global Clock: Region X1Y4
+14. Clock Region Cell Placement per Global Clock: Region X0Y3
+15. Clock Region Cell Placement per Global Clock: Region X1Y3
+16. Clock Region Cell Placement per Global Clock: Region X0Y4
+17. Clock Region Cell Placement per Global Clock: Region X1Y4
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -55,10 +54,10 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                      | Driver Pin                                                                                                                                                   | Net                                                                                                                                                            |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 6 |        5925 |               0 |        9.920 | mmcm0_clk0                                                                                 | design_1_i/frontpanel_1/inst/okHI/mmcm0_bufg/O                                                                                                               | design_1_i/frontpanel_1/inst/okHI/okClk                                                                                                                        |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 6 |        6101 |               0 |        9.920 | mmcm0_clk0                                                                                 | design_1_i/frontpanel_1/inst/okHI/mmcm0_bufg/O                                                                                                               | design_1_i/frontpanel_1/inst/okHI/okClk                                                                                                                        |
 | g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 5 |        4254 |               0 |              |                                                                                            | design_1_i/jesd204_0/inst/i_shared_clocks/refclk_buf/O                                                                                                       | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0                                                                                                     |
 | g2        | src1      | BUFH/O          | None       | BUFHCE_X0Y48   | X0Y4         |                 1 |           9 |               0 |              |                                                                                            | design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst/design_1_jesd204_0_0_phy_gt_i/cpll_railing0_i/refclk_buf/O | design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst/design_1_jesd204_0_0_phy_gt_i/cpll_railing0_i/refclk_buf_n_0 |
-| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 2 |         461 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O                                                                                         | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                                                                                         |
+| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 1 |         461 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O                                                                                         | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                                                                                         |
 | g4        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 1 |           1 |               0 |        9.920 | mmcm0_clkfb                                                                                | design_1_i/frontpanel_1/inst/okHI/mmcm0fb_bufg/O                                                                                                             | design_1_i/frontpanel_1/inst/okHI/mmcm0_clkfb_bufg                                                                                                             |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -83,11 +82,11 @@ Table of Contents
 4. Local Clock Details
 ----------------------
 
-+----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+
-| Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                                                     | Net                                                                                   |
-+----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------||
-| 0        | FDPE/Q          | None       | SLICE_X37Y127/AFF | X0Y2         |           1 |               6 |              |       | design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/d0/lc4da648cb12eeeb24e4d199c1195ed93_reg[4]/Q | design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/d0/l380f95c05ffaf9f64e84defb5d30e949 - Static -
-+----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------||
++----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL           | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                                                     | Net                                                                                   |
++----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------||
+| 0        | FDPE/Q          | None       | SLICE_X40Y126/A5FF | X0Y2         |           1 |               6 |              |       | design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/d0/lc4da648cb12eeeb24e4d199c1195ed93_reg[4]/Q | design_1_i/frontpanel_1/inst/okHI/core0/core0/a0/d0/l380f95c05ffaf9f64e84defb5d30e949 - Static -
++----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
 *** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -103,14 +102,14 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5000 |    0 |  1700 |    0 |   120 |    0 |    60 |    0 |   120 |
 | X1Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4500 |    0 |  1600 |    0 |   120 |    0 |    60 |    0 |   100 |
-| X0Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  642 |  5000 |  300 |  1700 |    0 |   120 |    9 |    60 |    0 |   120 |
+| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    1 |  5000 |    0 |  1700 |    0 |   120 |    2 |    60 |    0 |   120 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4500 |    0 |  1600 |    0 |   120 |    0 |    60 |    0 |   100 |
-| X0Y2              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |   36 |    50 |   67 |    50 | 6321 |  4400 | 2461 |  1700 |    0 |   120 |   45 |    60 |    0 |   120 |
-| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4500 |    0 |  1600 |    0 |   120 |    4 |    60 |    0 |   100 |
-| X0Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2357 |  4400 |  841 |  1700 |    0 |   120 |   27 |    60 |    0 |   120 |
-| X1Y3              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |  134 |  3950 |   50 |  1450 |    0 |    90 |    0 |    45 |    0 |   100 |
-| X0Y4              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    2 |  5000 |    9 |  1700 |    0 |   120 |    0 |    60 |    0 |   120 |
-| X1Y4              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    4 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |  300 |  4100 |  102 |  1500 |    0 |   100 |    0 |    50 |    0 |   100 |
+| X0Y2              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |   36 |    50 |   67 |    50 | 4918 |  4400 | 2156 |  1700 |    1 |   120 |   33 |    60 |    0 |   120 |
+| X1Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4500 |    0 |  1600 |    0 |   120 |    0 |    60 |    0 |   100 |
+| X0Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4336 |  4400 | 1419 |  1700 |    0 |   120 |   45 |    60 |    0 |   120 |
+| X1Y3              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |  138 |  3950 |   60 |  1450 |    0 |    90 |    0 |    45 |    0 |   100 |
+| X0Y4              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  198 |  5000 |  117 |  1700 |    0 |   120 |    8 |    60 |    0 |   120 |
+| X1Y4              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    4 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |  290 |  4100 |   47 |  1500 |    0 |   100 |    0 |    50 |    0 |   100 |
 | X0Y5              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5000 |    0 |  1700 |    0 |   120 |    0 |    60 |    0 |   120 |
 | X1Y5              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  4100 |    0 |  1500 |    0 |   100 |    0 |    50 |    0 |   100 |
 | X0Y6              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5000 |    0 |  1700 |    0 |   120 |    0 |    60 |    0 |   120 |
@@ -128,10 +127,10 @@ All Modules
 +----+----+----+
 | Y6 |  0 |  0 |
 | Y5 |  0 |  0 |
-| Y4 |  1 |  2 |
+| Y4 |  3 |  2 |
 | Y3 |  2 |  2 |
-| Y2 |  4 |  2 |
-| Y1 |  2 |  0 |
+| Y2 |  4 |  0 |
+| Y1 |  1 |  0 |
 | Y0 |  0 |  0 |
 +----+----+----+
 
@@ -142,7 +141,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                     |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------+
-| g0        | BUFG/O          | n/a               | mmcm0_clk0 |       9.920 | {1.488 6.448} |        5682 |        0 |              0 |        4 | design_1_i/frontpanel_1/inst/okHI/okClk |
+| g0        | BUFG/O          | n/a               | mmcm0_clk0 |       9.920 | {1.488 6.448} |        5842 |        0 |              0 |        4 | design_1_i/frontpanel_1/inst/okHI/okClk |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -155,10 +154,10 @@ All Modules
 +----+-------+------+
 | Y6 |     0 |    0 |
 | Y5 |     0 |    0 |
-| Y4 |     0 |  259 |
-| Y3 |   323 |  118 |
-| Y2 |  4455 |    4 |
-| Y1 |   527 |    0 |
+| Y4 |     8 |  258 |
+| Y3 |  1242 |  113 |
+| Y2 |  4222 |    0 |
+| Y1 |     3 |    0 |
 | Y0 |     0 |    0 |
 +----+-------+------+
 
@@ -182,9 +181,9 @@ All Modules
 +----+-------+-----+
 | Y6 |     0 |   0 |
 | Y5 |     0 |   0 |
-| Y4 |     0 |  49 |
-| Y3 |  2090 |  16 |
-| Y2 |  1950 |   4 |
+| Y4 |   204 |  40 |
+| Y3 |  3198 |  25 |
+| Y2 |   642 |   0 |
 | Y1 |     0 |   0 |
 | Y0 |     0 |   0 |
 +----+-------+-----+
@@ -238,8 +237,8 @@ All Modules
 | Y5 |    0 |  0 |
 | Y4 |    0 |  0 |
 | Y3 |    0 |  0 |
-| Y2 |  308 |  0 |
-| Y1 |  150 |  0 |
+| Y2 |  458 |  0 |
+| Y1 |    0 |  0 |
 | Y0 |    0 |  0 |
 +----+------+----+
 
@@ -274,12 +273,11 @@ All Modules
 12. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                     |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         527 |               0 | 492 |     24 |    9 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk |
-| g3        | n/a   | BUFG/O          | None       |         150 |               0 | 150 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i  |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                     |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |           3 |               0 |  1 |      0 |    2 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -291,9 +289,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        4455 |               0 | 4154 |    256 |   45 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
-| g1        | n/a   | BUFG/O          | None       |        1950 |               0 | 1859 |     64 |   27 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
-| g3        | n/a   | BUFG/O          | None       |         308 |               0 |  308 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                     |
+| g0        | n/a   | BUFG/O          | None       |        4222 |               0 | 3887 |    299 |   34 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
+| g1        | n/a   | BUFG/O          | None       |         642 |               0 |  573 |     64 |    5 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
+| g3        | n/a   | BUFG/O          | None       |         458 |               0 |  458 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                     |
 | g4        | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/mmcm0_clkfb_bufg         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -301,69 +299,57 @@ All Modules
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-14. Clock Region Cell Placement per Global Clock: Region X1Y2
--------------------------------------------------------------
-
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                        |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |           4 |               0 |  0 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
-| g1        | n/a   | BUFG/O          | None       |           4 |               0 |  0 |      0 |    4 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
-* Clock Loads column represents the clock pin loads (pin count)
-** Non-Clock Loads column represents the non-clock pin loads (pin count)
-*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-
-
-15. Clock Region Cell Placement per Global Clock: Region X0Y3
+14. Clock Region Cell Placement per Global Clock: Region X0Y3
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         323 |               0 |  295 |      1 |   27 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
-| g1        | n/a   | BUFG/O          | None       |        2090 |               0 | 2062 |      1 |   27 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
+| g0        | n/a   | BUFG/O          | None       |        1242 |               0 | 1184 |     13 |   45 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
+| g1        | n/a   | BUFG/O          | None       |        3198 |               0 | 3152 |      1 |   45 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-16. Clock Region Cell Placement per Global Clock: Region X1Y3
+15. Clock Region Cell Placement per Global Clock: Region X1Y3
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         118 |               0 | 118 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
-| g1        | n/a   | BUFG/O          | None       |          16 |               0 |  16 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
+| g0        | n/a   | BUFG/O          | None       |         113 |               0 | 113 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
+| g1        | n/a   | BUFG/O          | None       |          25 |               0 |  25 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-17. Clock Region Cell Placement per Global Clock: Region X0Y4
+16. Clock Region Cell Placement per Global Clock: Region X0Y4
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g2        | n/a   | BUFH/O          | None       |           9 |               0 |  2 |      7 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst/design_1_jesd204_0_0_phy_gt_i/cpll_railing0_i/refclk_buf_n_0 |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                            |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |           8 |               0 |   0 |      0 |    8 |   0 |  0 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                                                                                                                        |
+| g1        | n/a   | BUFG/O          | None       |         204 |               0 | 196 |      0 |    8 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0                                                                                                     |
+| g2        | n/a   | BUFH/O          | None       |           9 |               0 |   2 |      7 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst/design_1_jesd204_0_0_phy_gt_i/cpll_railing0_i/refclk_buf_n_0 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-18. Clock Region Cell Placement per Global Clock: Region X1Y4
+17. Clock Region Cell Placement per Global Clock: Region X1Y4
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         259 |               0 | 255 |      0 |    0 |   0 |  4 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
-| g1        | n/a   | BUFG/O          | None       |          49 |               0 |  45 |      0 |    0 |   0 |  4 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
+| g0        | n/a   | BUFG/O          | None       |         258 |               0 | 254 |      0 |    0 |   0 |  4 |    0 |   0 |       0 | design_1_i/frontpanel_1/inst/okHI/okClk                    |
+| g1        | n/a   | BUFG/O          | None       |          40 |               0 |  36 |      0 |    0 |   0 |  4 |    0 |   0 |       0 | design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -391,7 +377,7 @@ set_property LOC IOB_X0Y126 [get_ports host_interface_okuh[0]]
 #startgroup
 create_pblock {CLKAG_design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+resize_pblock [get_pblocks {CLKAG_design_1_i/jesd204_0/inst/i_shared_clocks/ibufds_refclk0_0}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
 # Clock net "design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst/design_1_jesd204_0_0_phy_gt_i/cpll_railing0_i/refclk_buf_n_0" driven by instance "design_1_i/jesd204_0/inst/i_jesd204_phy/inst/jesd204_phy_block_i/design_1_jesd204_0_0_phy_gt/inst/design_1_jesd204_0_0_phy_gt_i/cpll_railing0_i/refclk_buf" located at site "BUFHCE_X0Y48"
@@ -405,12 +391,12 @@ resize_pblock [get_pblocks {CLKAG_design_1_i/jesd204_0/inst/i_jesd204_phy/inst/j
 #startgroup
 create_pblock {CLKAG_design_1_i/frontpanel_1/inst/okHI/okClk}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/frontpanel_1/inst/okHI/okClk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/frontpanel_1/inst/okHI/okClk"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/frontpanel_1/inst/okHI/okClk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+resize_pblock [get_pblocks {CLKAG_design_1_i/frontpanel_1/inst/okHI/okClk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
 # Clock net "dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i" driven by instance "dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck" located at site "BUFGCTRL_X0Y1"
 #startgroup
 create_pblock {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}
 add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i"}]]]
-resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
+resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2}
 #endgroup

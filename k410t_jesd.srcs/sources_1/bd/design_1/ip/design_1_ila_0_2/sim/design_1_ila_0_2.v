@@ -93,7 +93,7 @@ input [31 : 0] probe14;
 input [13 : 0] probe15;
 input [13 : 0] probe16;
 input [1 : 0] probe17;
-input [0 : 0] probe18;
+input [31 : 0] probe18;
 input [31 : 0] probe19;
 
 

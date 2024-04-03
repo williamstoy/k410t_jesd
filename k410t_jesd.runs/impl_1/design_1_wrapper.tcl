@@ -62,6 +62,7 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -string {{board file}}  -suppress 
+set_msg_config  -id {Coretcl 2-1280}  -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_DATA_TO_FIFO_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.}}  -suppress 
 
 start_step init_design
 set ACTIVE_STEP init_design

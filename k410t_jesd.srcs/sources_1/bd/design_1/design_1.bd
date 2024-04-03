@@ -26,8 +26,8 @@
       "CNT_RST": "",
       "AVG_Enable": "",
       "DATA_PREP": "",
-      "dpu_0": "",
-      "DATA_TO_FIFO_0": ""
+      "DATA_TO_FIFO_0": "",
+      "dpu_0": ""
     },
     "interface_ports": {
       "host_interface": {
@@ -298,7 +298,7 @@
             "value": "2"
           },
           "C_PROBE18_WIDTH": {
-            "value": "1"
+            "value": "32"
           },
           "C_PROBE19_WIDTH": {
             "value": "32"
@@ -1169,6 +1169,68 @@
           }
         }
       },
+      "DATA_TO_FIFO_0": {
+        "vlnv": "xilinx.com:module_ref:DATA_TO_FIFO:1.0",
+        "xci_name": "design_1_DATA_TO_FIFO_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DATA_TO_FIFO",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_jesd204_0_0_rx_core_clk_out",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "jesd_valid": {
+            "direction": "I"
+          },
+          "fifo_ready": {
+            "direction": "I"
+          },
+          "samples_per_event": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wr_en": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
       "dpu_0": {
         "vlnv": "xilinx.com:module_ref:dpu:1.0",
         "xci_name": "design_1_dpu_0_0",
@@ -1241,80 +1303,22 @@
             "left": "31",
             "right": "0"
           },
-          "stuck": {
-            "direction": "O"
-          },
-          "event_state": {
+          "event_stateA": {
             "direction": "O",
             "left": "1",
             "right": "0"
           },
-          "event_detected": {
-            "direction": "O"
+          "event_stateB": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
           },
-          "time_out": {
+          "time_outA": {
             "direction": "O",
             "left": "31",
             "right": "0"
-          }
-        }
-      },
-      "DATA_TO_FIFO_0": {
-        "vlnv": "xilinx.com:module_ref:DATA_TO_FIFO:1.0",
-        "xci_name": "design_1_DATA_TO_FIFO_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "DATA_TO_FIFO",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_1_jesd204_0_0_rx_core_clk_out",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              }
-            }
           },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "en": {
-            "direction": "I"
-          },
-          "jesd_valid": {
-            "direction": "I"
-          },
-          "fifo_ready": {
-            "direction": "I"
-          },
-          "samples_per_event": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "data_in": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "wr_en": {
-            "direction": "O"
-          },
-          "data_out": {
+          "time_outB": {
             "direction": "O",
             "left": "31",
             "right": "0"
@@ -1442,8 +1446,8 @@
           "fifo_generator_0/wr_clk",
           "enabled_binary_count_0/CLK",
           "DATA_PREP/CLK",
-          "dpu_0/clk",
-          "DATA_TO_FIFO_0/clk"
+          "DATA_TO_FIFO_0/clk",
+          "dpu_0/clk"
         ]
       },
       "wireoutbreakout_0_rx_reset": {
@@ -1486,8 +1490,8 @@
           "CNT_RST/RSTN",
           "AVG_Enable/RSTN",
           "DATA_PREP/RST_N",
-          "dpu_0/rst_n",
-          "DATA_TO_FIFO_0/rst_n"
+          "DATA_TO_FIFO_0/rst_n",
+          "dpu_0/rst_n"
         ]
       },
       "negate_0_nota": {
@@ -1648,8 +1652,8 @@
       "FIFO_FSM_0_data_count": {
         "ports": [
           "DATA_PREP/data_count",
-          "dpu_0/en",
-          "DATA_TO_FIFO_0/en"
+          "DATA_TO_FIFO_0/en",
+          "dpu_0/en"
         ]
       },
       "dpu_0_data_out": {
@@ -1686,7 +1690,8 @@
       "frontpanel_1_wi03_ep_dataout": {
         "ports": [
           "frontpanel_1/wi03_ep_dataout",
-          "dpu_0/V_thresholdA"
+          "dpu_0/V_thresholdA",
+          "ila_0/probe18"
         ]
       },
       "frontpanel_1_wi04_ep_dataout": {
@@ -1701,21 +1706,9 @@
           "fifo_generator_0/din"
         ]
       },
-      "dpu_0_event_state": {
-        "ports": [
-          "dpu_0/event_state",
-          "ila_0/probe17"
-        ]
-      },
-      "dpu_0_event_detected": {
-        "ports": [
-          "dpu_0/event_detected",
-          "ila_0/probe18"
-        ]
-      },
       "dpu_0_time_out": {
         "ports": [
-          "dpu_0/time_out",
+          "dpu_0/time_outA",
           "ila_0/probe19"
         ]
       },
@@ -1723,6 +1716,12 @@
         "ports": [
           "frontpanel_1/wi05_ep_dataout",
           "DATA_TO_FIFO_0/samples_per_event"
+        ]
+      },
+      "dpu_0_event_stateA": {
+        "ports": [
+          "dpu_0/event_stateA",
+          "ila_0/probe17"
         ]
       }
     },
